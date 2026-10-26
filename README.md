@@ -1,5 +1,9 @@
 # 📘 Digital SAT Bluebook Practice App — October 2026 (INT-B)
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Digital SAT](https://img.shields.io/badge/Exam-Digital%20SAT%202026-orange.svg)](https://hocsat.com/)
+[![College Board Bluebook](https://img.shields.io/badge/UI-College%20Board%20Bluebook-0056b3.svg)](https://bluebook.collegeboard.org/)
+
 > Ứng dụng luyện thi **Digital SAT** theo giao diện chuẩn **College Board Bluebook**, kết nối trực tiếp file đề PDF gốc và bộ câu hỏi 98 câu (Reading & Writing + Math), hỗ trợ chia sẻ cho cả lớp học làm bài độc lập qua Cloudflare Tunnel.  
 > 
 > 📚 **Nguồn tài liệu tham khảo & câu hỏi:** Dữ liệu đề thi và câu hỏi được tổng hợp và tham khảo từ [hocsat.com](https://hocsat.com/).
@@ -163,4 +167,14 @@ git push -u origin main
 - **Nguồn tài liệu:** Toàn bộ dữ liệu đề thi, câu hỏi và tài liệu tham khảo trong ứng dụng này được tổng hợp và tham khảo từ hệ thống **[Học SAT](https://hocsat.com/)** (`https://hocsat.com/`).
 - **Lời cảm ơn:** Trân trọng cảm ơn đội ngũ phát triển **Học SAT** đã xây dựng và chia sẻ nguồn tài liệu Digital SAT chất lượng cho cộng đồng giáo viên và học sinh.
 - **Mục đích sử dụng:** Ứng dụng được thiết kế nhằm mục đích phi thương mại, phục vụ nghiên cứu, giảng dạy, ôn luyện thi nội bộ và nâng cao trải nghiệm làm bài tương tác chuẩn Bluebook cho học sinh.
+
+---
+
+## ⚖️ Giấy Phép & Bản Quyền (License & Disclaimer)
+
+- **Mã nguồn (Source Code):** Phát hành theo giấy phép **[MIT License](LICENSE)**. Bạn được toàn quyền sử dụng, sửa đổi, phân phối và tích hợp vào các dự án cá nhân hoặc giảng dạy.
+- **Tài liệu câu hỏi & Thương hiệu:**
+  - Nội dung câu hỏi và đề thi thuộc bản quyền của các tác giả/đơn vị liên quan (tham khảo từ [hocsat.com](https://hocsat.com/)).
+  - SAT® là nhãn hiệu đã đăng ký của College Board, tổ chức này không liên kết và không tài trợ cho dự án mã nguồn mở này.
+
 

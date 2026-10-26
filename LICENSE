@@ -1,0 +1,40 @@
+MIT License
+
+Copyright (c) 2026 Mike Pham (SAT Coach)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+### Educational Content & Trademark Disclaimer
+
+1. Scope of License:
+   The MIT License above applies strictly to the source code, user interface designs,
+   client-side application scripts, data extraction utilities, and deployment tooling
+   developed for this repository.
+
+2. Educational Fair Use & Source Attribution:
+   The examination questions, passages, and pedagogical hints contained herein are
+   compiled for non-commercial educational practice, research, and classroom instruction
+   under fair use principles, with primary data attribution to https://hocsat.com/.
+   The author does not claim exclusive copyright over underlying official test items.
+
+3. Trademark Notice:
+   SAT® is a registered trademark of the College Board, which is not affiliated with,
+   and does not endorse or sponsor, this open-source project.
