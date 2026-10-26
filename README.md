@@ -74,92 +74,122 @@ Khi nhiều học sinh cùng vào làm bài qua mạng:
 
 ---
 
-## 🚀 Hướng Dẫn Sử Dụng
+## 🚀 Hướng Dẫn Cài Đặt & Triển Khai (Deployment Guide)
 
-### Cách 1: Chạy cục bộ trên máy của Thầy (Localhost)
-Dành cho Thầy tự luyện tập hoặc dùng trên lớp chiếu máy chiếu:
-```bash
-cd "/Users/mike/Library/CloudStorage/GoogleDrive-mikepham358@gmail.com/My Drive/A Vinschool by Mike Pham/SAT Coach/BluebookOct2026App"
-./start.sh
-```
-Trình duyệt sẽ tự động mở tại địa chỉ: `http://localhost:8085`.
+Bất kỳ giáo viên, học sinh hoặc lập trình viên nào cũng có thể tải về và triển khai ứng dụng này trên máy tính của mình chỉ trong 3 phút:
+
+### 1. Yêu cầu hệ thống (Prerequisites)
+- **Python**: Phiên bản `3.8` trở lên (Kiểm tra bằng lệnh: `python3 --version`).
+- **Trình duyệt**: Google Chrome, Safari, Microsoft Edge, hoặc Mozilla Firefox hiện đại.
+- *Hoàn toàn không cần cài đặt cơ sở dữ liệu (Database), không cần Docker hay môi trường Node.js/npm phức tạp.*
 
 ---
 
-### Cách 2: Phát sóng cho học sinh cả lớp làm bài (Cloudflare Tunnel - Miễn phí)
-Dành cho buổi học có 20–50 học sinh dùng laptop, iPad, hoặc điện thoại:
+### 2. Tải mã nguồn về máy (Clone hoặc Tải ZIP)
+
+Mở Terminal (trên macOS/Linux) hoặc Command Prompt / PowerShell (trên Windows) và chạy:
+
 ```bash
-cd "/Users/mike/Library/CloudStorage/GoogleDrive-mikepham358@gmail.com/My Drive/A Vinschool by Mike Pham/SAT Coach/BluebookOct2026App"
-./tunnel.sh
+# Clone dự án từ GitHub
+git clone https://github.com/mikepham358/sat-test-practice-app-oct2026.git
+
+# Di chuyển vào thư mục dự án
+cd sat-test-practice-app-oct2026
 ```
-1. Script sẽ khởi động ứng dụng và kết nối đến Cloudflare.
-2. Trên màn hình Terminal sẽ xuất hiện đường link công khai:
-   ```text
-   https://xxxx-xxxx-xxxx.trycloudflare.com
-   ```
-3. Thầy chỉ cần copy đường link này gửi lên nhóm Zalo / Google Classroom.
-4. Học sinh bấm vào link là bắt đầu làm bài ngay lập tức:
-   - Không cần tạo tài khoản hay đăng nhập.
-   - Kết nối HTTPS an toàn, vượt qua mọi tường lửa và mạng 4G/Wifi.
-   - Mỗi em có một bảng điểm và lịch sử làm bài hoàn toàn độc lập.
+
+*(Hoặc bấm vào nút **Code** màu xanh ở đầu trang GitHub $\rightarrow$ chọn **Download ZIP**, sau đó giải nén ra thư mục trên máy tính).*
+
+---
+
+### 3. Cài đặt thư viện bổ trợ (Tùy chọn)
+
+Nếu bạn muốn sử dụng tính năng xuất file Excel bài làm cá nhân hóa tự động cho học sinh:
+```bash
+pip install openpyxl
+```
+
+---
+
+### 4. Khởi chạy ứng dụng
+
+Tùy theo nhu cầu sử dụng và hệ điều hành, bạn có thể lựa chọn 1 trong 2 cách sau:
+
+#### 💻 Cách 1: Chạy nội bộ trên máy cá nhân (Localhost)
+*Phù hợp cho học sinh tự luyện tập hoặc giáo viên chiếu đề bài trên máy chiếu lớp học:*
+
+- **Trên macOS / Linux:**
+  ```bash
+  ./start.sh
+  ```
+  *(Script sẽ tự động tìm cổng mạng khả dụng và mở trình duyệt tại `http://localhost:8085`).*
+
+- **Trên Windows:**
+  ```cmd
+  python server.py 8085
+  ```
+  Sau đó mở trình duyệt và truy cập: `http://localhost:8085`
+
+---
+
+#### 🌐 Cách 2: Phát sóng Online miễn phí cho cả lớp vào thi (Cloudflare Tunnel)
+*Phù hợp cho buổi kiểm tra trực tuyến hoặc giao bài tập về nhà cho 20–50+ học sinh cùng làm bài từ xa trên điện thoại, iPad, laptop:*
+
+- **Trên macOS / Linux:**
+  ```bash
+  ./tunnel.sh
+  ```
+- **Cơ chế hoạt động:**
+  1. Script tự động tải công cụ Cloudflare siêu nhẹ (nếu chưa có) và kết nối máy chủ nội bộ ra Internet.
+  2. Màn hình Terminal sẽ hiển thị đường dẫn HTTPS công khai miễn phí:
+     ```text
+     https://xxxx-xxxx-xxxx.trycloudflare.com
+     ```
+  3. Thầy/Cô chỉ việc copy đường link này gửi vào Zalo / Google Classroom / Messenger cho học sinh.
+  4. Học sinh nhấn vào link là vào làm bài ngay lập tức:
+     - **Không cần tạo tài khoản hay đăng nhập.**
+     - **Kết nối HTTPS bảo mật**, vượt qua mọi tường lửa mạng trường học và 4G/5G.
+     - **Bộ nhớ độc lập 100% (`localStorage`):** Cả lớp làm cùng lúc trên 1 đường link mà hoàn toàn không bị trùng lặp hay ghi đè dữ liệu của nhau.
+
+---
+
+### 5. Cấu hình Email Giáo viên nhận bảng điểm (`email_config.json`)
+
+Mở file `email_config.json` để thay đổi địa chỉ email của Thầy/Cô:
+```json
+{
+  "teacher_email": "thay_co@gmail.com",
+  "smtp_host": "smtp.gmail.com",
+  "smtp_port": 465,
+  "smtp_user": "thay_co@gmail.com",
+  "smtp_pass": "xxxx xxxx xxxx xxxx"
+}
+```
+> 💡 **Ghi chú về gửi mail tự động qua Gmail:**
+> - `smtp_pass` là **Mật khẩu ứng dụng (App Password)** gồm 16 ký tự do Google cấp (xem hướng dẫn tạo tại [myaccount.google.com/apppasswords](https://myaccount.google.com/apppasswords)).
+> - *Nếu chưa điền `smtp_pass`*: Ứng dụng vẫn hoạt động bình thường 100% thông qua tính năng tự động kích hoạt trình duyệt Mail (`mailto:`) trên thiết bị cá nhân của học sinh kèm tùy chọn tải trực tiếp file Excel về máy.
 
 ---
 
 ## 📁 Cấu Trúc Mã Nguồn
 
 ```text
-BluebookOct2026App/
+sat-test-practice-app-oct2026/
 ├── .gitignore            # Loại trừ file nhị phân nặng, file rác và bài làm học sinh
-├── start.sh              # Script 1-click chạy máy chủ cục bộ
+├── LICENSE               # Giấy phép MIT License và Điều khoản giáo dục
+├── start.sh              # Script 1-click chạy máy chủ cục bộ (macOS/Linux)
 ├── tunnel.sh             # Script 1-click phát sóng qua Cloudflare Tunnel
 ├── server.py             # Máy chủ Python HTTP (Hỗ trợ PDF streaming HTTP 206 & Export Excel)
 ├── extract_data.py       # Script trích xuất và map câu hỏi từ PDF và Excel v5
 ├── database.json         # Cơ sở dữ liệu 98 câu hỏi với 4 tầng phản hồi Socratic
+├── email_config.json     # Cấu hình email giáo viên nhận kết quả
 ├── bin/
 │   └── cloudflared       # File thực thi Cloudflare Tunnel độc lập (tự tải)
 ├── static/
 │   ├── index.html        # Giao diện thi Digital SAT Bluebook & Google UX Landing Page
 │   ├── styles.css        # Phong cách Luxury Minimalist + Obsidian Dark Header
-│   └── app.js            # Trình quản lý trạng thái 4 tầng phản hồi + localStorage
+│   ├── app.js            # Trình quản lý trạng thái 4 tầng phản hồi + localStorage
+│   └── poster.png        # Poster đề thi chất lượng cao
 └── README.md             # Hướng dẫn chi tiết
-```
-
----
-
-## 🐙 Hướng Dẫn Đẩy Dự Án Lên GitHub
-
-Thầy có thể lưu trữ dự án lên GitHub chỉ với các bước đơn giản sau:
-
-### 1. Tạo kho lưu trữ (Repository) trên GitHub
-- Vào [github.com/new](https://github.com/new).
-- Đặt tên Repository (Ví dụ: `sat-bluebook-oct2026`).
-- Chọn **Public** hoặc **Private** tùy ý.
-- **Không** tích chọn bất kỳ ô nào (README, .gitignore).
-- Bấm **Create repository**.
-
-### 2. Chạy lệnh đẩy mã nguồn từ máy Mac
-Mở Terminal và gõ:
-
-```bash
-cd "/Users/mike/Library/CloudStorage/GoogleDrive-mikepham358@gmail.com/My Drive/A Vinschool by Mike Pham/SAT Coach/BluebookOct2026App"
-
-# Khởi tạo Git
-git init
-
-# Thêm tất cả tệp (.gitignore đã tự động loại bỏ file nặng và bài nộp riêng tư)
-git add .
-
-# Tạo commit đầu tiên
-git commit -m "feat: initial release of Digital SAT Bluebook Oct 2026 App"
-
-# Chuyển nhánh chính thành main
-git branch -M main
-
-# Liên kết với kho GitHub của Thầy (thay username và repo của Thầy vào)
-git remote add origin https://github.com/<YOUR_USERNAME>/sat-bluebook-oct2026.git
-
-# Đẩy lên GitHub
-git push -u origin main
 ```
 
 ---
