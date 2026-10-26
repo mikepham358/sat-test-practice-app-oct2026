@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bluebook Digital SAT Practice Test — October 2026 (INT-B)</title>
+  <!-- KaTeX for crisp math rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-bluebook">
+
+  <!-- ================= VIEW 1: GOOGLE MATERIAL DESIGN HOME PAGE ================= -->
+  <div class="view-home" id="view-home">
+    
+    <!-- Top Google Workspace App Bar -->
+    <header class="home-nav">
+      <div class="home-nav-container">
+        <div class="home-brand">
+          <div class="google-sat-badge">
+            <span class="badge-letter g-blue">S</span>
+            <span class="badge-letter g-red">A</span>
+            <span class="badge-letter g-yellow">T</span>
+          </div>
+          <div class="brand-text">
+            <span class="brand-title">Digital SAT Practice Engine</span>
+            <span class="brand-badge">October 2026 • Real Test B</span>
+          </div>
+        </div>
+
+        <div class="home-nav-actions">
+          <div class="user-chip" id="home-user-chip" title="Học sinh đang tham gia">
+            <span class="chip-avatar">👤</span>
+            <span class="chip-name" id="home-student-name-chip">Chưa đăng ký</span>
+          </div>
+          <button class="btn-google-primary" id="btn-hero-enter-test">
+            <span>Vào Thi Ngay ➔</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Home Section (Pure White Canvas) -->
+    <main class="home-main">
+      <div class="home-container">
+        
+        <!-- Hero Section: Left Content & Right Poster -->
+        <section class="hero-grid">
+          
+          <!-- Left: Hero Headline & Material Form -->
+          <div class="hero-content">
+            <div class="hero-eyebrow">
+              <span class="pill-sparkle">✨ HỆ THỐNG LUYỆN THI CHUẨN GOOGLE UX & BLUEBOOK</span>
+            </div>
+            
+            <h1 class="hero-title">
+              Luyện Thi Digital SAT<br>
+              <span class="text-gradient">Real Test October 2026</span>
+            </h1>
+            
+            <p class="hero-desc">
+              Hệ thống tương tác chuẩn College Board: Đọc đề thi gốc trên Google Drive, làm bài kèm máy tính Desmos, hỗ trợ câu hỏi Grid-in và hệ thống gợi ý Socratic 3 cấp độ.
+            </p>
+
+            <!-- Material 3 Student Profile Card -->
+            <div class="material-card hero-form-card">
+              <div class="card-header-clean">
+                <h3>Thông Tin Thí Sinh</h3>
+                <span class="secure-badge">🔒 Lưu 100% trên thiết bị cá nhân</span>
+              </div>
+
+              <form class="hero-form" id="form-home-profile" onsubmit="return false;">
+                <div class="form-row">
+                  <div class="m3-input-field">
+                    <label for="home-input-name">Họ và tên thí sinh <span class="req">*</span></label>
+                    <input type="text" id="home-input-name" placeholder="Ví dụ: Nguyễn Văn An" autocomplete="name" required>
+                  </div>
+                  <div class="m3-input-field">
+                    <label for="home-input-email">Địa chỉ Email <span class="req">*</span></label>
+                    <input type="email" id="home-input-email" placeholder="Ví dụ: an.nguyen@gmail.com" autocomplete="email" required>
+                  </div>
+                </div>
+
+                <div class="m3-target-selector">
+                  <label class="target-label">Mục tiêu điểm số:</label>
+                  <div class="target-chips" id="target-chips-container">
+                    <button type="button" class="target-chip" data-val="1300+">🎯 1300+</button>
+                    <button type="button" class="target-chip active" data-val="1400+">🎯 1400+ Top 50</button>
+                    <button type="button" class="target-chip" data-val="1500+">🎯 1500+ Ivy League</button>
+                  </div>
+                </div>
+
+                <div class="hero-actions">
+                  <button type="button" class="btn-google-primary btn-large" id="btn-home-start-practice">
+                    <span>Bắt Đầu Làm Bài Ngay 🚀</span>
+                  </button>
+                  <button type="button" class="btn-google-tonal btn-large" id="btn-home-view-guide">
+                    <span>📖 Quy Tắc & Hướng Dẫn</span>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- Right: Hero Poster Showcase -->
+          <div class="hero-poster-wrapper">
+            <div class="poster-card">
+              <div class="poster-img-container">
+                <img src="poster.png" alt="Digital SAT October 2026 Poster" class="hero-poster-img" onerror="this.src='https://lh3.googleusercontent.com/d/1lcpAwjHzS6554fQL49gGjoY1O95KnFJ7=w1600'">
+                <div class="poster-overlay-tag">
+                  <span>📄 Đề Thi Gốc October 2026 (INT-B) • 44 Trang PDF</span>
+                </div>
+              </div>
+              <div class="poster-caption">
+                <div class="caption-info">
+                  <strong>Khóa Học SAT Coach by Mike Pham</strong>
+                  <span>Tài liệu & Đề thi bản quyền dành riêng cho học sinh</span>
+                </div>
+                <a href="https://drive.google.com/file/d/1lcpAwjHzS6554fQL49gGjoY1O95KnFJ7/view" target="_blank" class="btn-open-drive-pill">
+                  ↗️ Mở Drive Poster
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- Section: 4 Modules Selector Cards -->
+        <section class="home-section modules-section">
+          <div class="section-header">
+            <span class="section-tag">CẤU TRÚC ĐỀ THI</span>
+            <h2>Chọn Module Để Bắt Đầu Luyện Tập</h2>
+            <p>Em có thể chọn luyện tập từng phần riêng biệt hoặc làm liên tục toàn bộ 98 câu.</p>
+          </div>
+
+          <div class="modules-grid">
+            
+            <!-- RW Module 1 -->
+            <div class="module-card" data-module="RW_Module1">
+              <div class="mod-card-header">
+                <span class="mod-pill mod-rw">Reading & Writing</span>
+                <span class="mod-time">⏱️ 32 Phút</span>
+              </div>
+              <h3>Module 1: Đọc & Viết Chuẩn</h3>
+              <p>27 câu hỏi trắc nghiệm kiểm tra từ vựng ngữ cảnh, cấu trúc văn bản, suy luận và ngữ pháp chuẩn.</p>
+              <div class="mod-meta">
+                <span>📖 Trang 3 – 14</span>
+                <span class="mod-stat" id="stat-mod-rw1">27 Câu</span>
+              </div>
+              <button class="btn-module-jump" data-module="RW_Module1">Vào Thi Module 1 ➔</button>
+            </div>
+
+            <!-- RW Module 2 -->
+            <div class="module-card" data-module="RW_Module2">
+              <div class="mod-card-header">
+                <span class="mod-pill mod-rw">Reading & Writing</span>
+                <span class="mod-time">⏱️ 32 Phút</span>
+              </div>
+              <h3>Module 2: Đọc & Viết Phân Hóa</h3>
+              <p>27 câu hỏi nâng cao với các đoạn văn khoa học phức tạp, biểu đồ dữ liệu và cặp văn bản đối chiếu.</p>
+              <div class="mod-meta">
+                <span>📖 Trang 16 – 25</span>
+                <span class="mod-stat" id="stat-mod-rw2">27 Câu</span>
+              </div>
+              <button class="btn-module-jump" data-module="RW_Module2">Vào Thi Module 2 ➔</button>
+            </div>
+
+            <!-- Math Module 1 -->
+            <div class="module-card" data-module="Math_Module1">
+              <div class="mod-card-header">
+                <span class="mod-pill mod-math">Math</span>
+                <span class="mod-time">⏱️ 35 Phút</span>
+              </div>
+              <h3>Module 1: Toán Chuẩn</h3>
+              <p>22 câu hỏi đại số tuyến tính, phương trình bậc hai, hình học và thống kê kèm máy tính Desmos.</p>
+              <div class="mod-meta">
+                <span>📖 Trang 29 – 35</span>
+                <span class="mod-stat" id="stat-mod-math1">22 Câu</span>
+              </div>
+              <button class="btn-module-jump" data-module="Math_Module1">Vào Thi Module 1 ➔</button>
+            </div>
+
+            <!-- Math Module 2 -->
+            <div class="module-card" data-module="Math_Module2">
+              <div class="mod-card-header">
+                <span class="mod-pill mod-math">Math</span>
+                <span class="mod-time">⏱️ 35 Phút</span>
+              </div>
+              <h3>Module 2: Toán Nâng Cao</h3>
+              <p>22 câu hỏi phân hóa đỉnh cao với hàm phi tuyến tính, hình học không gian và các câu điền số Grid-in.</p>
+              <div class="mod-meta">
+                <span>📖 Trang 38 – 44</span>
+                <span class="mod-stat" id="stat-mod-math2">22 Câu</span>
+              </div>
+              <button class="btn-module-jump" data-module="Math_Module2">Vào Thi Module 2 ➔</button>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Section: Features Highlights -->
+        <section class="home-section features-section">
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feat-icon-wrap bg-blue-tint">🧮</div>
+              <h4>Desmos & Công Cụ Chuẩn Bluebook</h4>
+              <p>Tích hợp máy tính vẽ đồ thị Desmos chính thức và bảng công thức hình học chuẩn College Board.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feat-icon-wrap bg-green-tint">🎯</div>
+              <h4>Gợi Ý Socratic 3 Cấp Độ</h4>
+              <p>Định hướng tư duy tự nhiên ở lần 1, cung cấp công thức ở lần 2 và phân tích giải thích ở lần 3.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feat-icon-wrap bg-amber-tint">📝</div>
+              <h4>Sổ Tay Lỗi Sai Bắt Buộc</h4>
+              <p>Tự động phát hiện câu sai và hướng dẫn phản tư bẫy SAT trước khi mở khóa câu tiếp theo.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feat-icon-wrap bg-purple-tint">☁️</div>
+              <h4>100% Độc Lập Cho Từng Học Sinh</h4>
+              <p>Toàn bộ tiến độ lưu trong trình duyệt cá nhân, kích hoạt ứng dụng Mail trên máy gửi kết quả.</p>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+    <!-- Google Minimal Footer -->
+    <footer class="home-footer">
+      <div class="footer-container">
+        <div class="footer-left">
+          <span>Digital SAT Bluebook Practice App • Lớp học SAT Thầy Mike Pham</span>
+        </div>
+        <div class="footer-right">
+          <span>Hỗ trợ giáo viên: <code>mikepham358@gmail.com</code></span>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- ================= VIEW 2: BLUEBOOK SPLIT PRACTICE WORKSPACE ================= -->
+  <div class="view-practice hidden" id="view-practice">
+
+    <!-- Top Bluebook App Bar -->
+    <header class="bluebook-header">
+      <div class="header-section-info">
+        <button class="btn-home" id="btn-home" title="Về trang chủ / Hướng dẫn làm bài">
+          <span>🏠 Trang chủ</span>
+        </button>
+        <div class="test-badge">DIGITAL SAT</div>
+        <div class="module-selector-wrap">
+          <select id="select-active-module">
+            <option value="RW_Module1">Reading & Writing: Module 1 (27 Qs)</option>
+            <option value="RW_Module2">Reading & Writing: Module 2 (27 Qs)</option>
+            <option value="Math_Module1">Math: Module 1 (22 Qs)</option>
+            <option value="Math_Module2">Math: Module 2 (22 Qs)</option>
+            <option value="ALL">Full Test: All 98 Questions</option>
+          </select>
+        </div>
+      </div>
+
+    <!-- Center Timer with Hide/Show Toggle (Digital SAT Standard) -->
+    <div class="header-timer">
+      <div class="timer-display" id="timer-display">32:00</div>
+      <button class="btn-timer-action" id="btn-timer-toggle-view" title="Ẩn / Hiện đồng hồ">Hide</button>
+      <button class="btn-timer-action" id="btn-timer-pause" title="Tạm dừng / Tiếp tục">⏸️</button>
+    </div>
+
+    <!-- Right Utility Tools -->
+    <div class="header-tools">
+      <button class="tool-btn" id="btn-open-calc" title="Mở máy tính vẽ đồ thị Desmos">
+        <span>🧮 Calculator</span>
+      </button>
+      <button class="tool-btn" id="btn-open-ref" title="Mở bảng công thức Toán SAT">
+        <span>📐 Reference</span>
+      </button>
+      <button class="tool-btn" id="btn-toggle-scratchpad" title="Bảng nháp Whiteboard">
+        <span>✏️ Scratchpad</span>
+      </button>
+      <button class="tool-btn" id="btn-open-error-log" title="Sổ tay Lỗi sai Socratic">
+        <span>🎯 Sổ lỗi</span>
+        <span class="badge" id="badge-error-count">0</span>
+      </button>
+      <button class="tool-btn" id="btn-open-strategies" title="Bí kíp chiến lược đề thi">
+        <span>⚡ Chiến thuật</span>
+      </button>
+      <button class="tool-btn btn-export" id="btn-export-excel" title="Xuất kết quả riêng của em ra Excel">
+        <span>📥 Xuất Excel</span>
+      </button>
+      <button class="tool-btn btn-reset-test" id="btn-reset-test" title="Đặt lại và làm lại bài thi từ đầu">
+        <span>🔄 Làm lại</span>
+      </button>
+      <button class="tool-btn btn-finish-test" id="btn-finish-test" title="Hoàn thành bài thi và gửi báo cáo về email">
+        <span>🏁 Hoàn thành</span>
+      </button>
+      <div class="header-student-badge" id="header-student-badge" title="Thông tin học sinh (Bấm để chỉnh sửa)">
+        <span class="badge-icon">👤</span>
+        <span class="badge-name" id="header-student-name">Học sinh</span>
+        <button class="btn-edit-student" id="btn-edit-student" title="Sửa tên / email">✏️</button>
+      </div>
+      <button class="btn-icon-mode" id="btn-theme-toggle" title="Đổi giao diện">🌓</button>
+    </div>
+  </header>
+
+  <!-- ================= MAIN WORKSPACE (SPLIT SCREEN) ================= -->
+  <main class="split-container" id="split-container">
+    
+    <!-- LEFT PANE: Synchronized Test PDF Viewer (Google Drive & Local Dual Mode) -->
+    <section class="pane pane-pdf" id="pane-pdf">
+      <div class="pdf-toolbar">
+        <div class="pdf-toolbar-left">
+          <span class="pdf-doc-title">📄 Đề thi Gốc (Oct 2026 INT-B)</span>
+          <div class="pdf-page-badge" id="pdf-page-badge" title="Số trang câu hỏi này trong đề thi">
+            📖 Câu này ở <strong>Trang <span id="pdf-sync-page-num">3</span></strong>
+          </div>
+        </div>
+        <div class="pdf-toolbar-center">
+          <div class="pdf-viewer-mode-switch">
+            <button class="btn-mode-toggle active" id="btn-mode-drive" title="Google Drive Viewer (Hiển thị mượt mà trên iPad, iPhone, Android, Laptop)">☁️ Google Drive</button>
+            <button class="btn-mode-toggle" id="btn-mode-local" title="Trình đọc PDF nội bộ (Tự động nhảy trang trên Laptop / PC)">💻 PDF Nội bộ</button>
+          </div>
+          <!-- Local PDF controls (visible when in local mode) -->
+          <div class="local-pdf-controls hidden" id="local-pdf-controls">
+            <button class="btn-icon-sub" id="btn-pdf-prev" title="Trang trước">◀</button>
+            <div class="page-indicator">
+              <span>Trang</span>
+              <input type="number" id="input-pdf-page" min="1" max="44" value="3">
+              <span>/ 44</span>
+            </div>
+            <button class="btn-icon-sub" id="btn-pdf-next" title="Trang sau">▶</button>
+          </div>
+        </div>
+        <div class="pdf-toolbar-right">
+          <button class="btn-icon-sub btn-external-drive" id="btn-pdf-external" title="Mở file đề Google Drive trong tab mới (Rất tiện chia đôi màn hình trên iPad)">
+            ↗️ Mở Drive
+          </button>
+        </div>
+      </div>
+      <div class="pdf-viewport" id="pdf-viewport">
+        <iframe id="pdf-frame" 
+                src="https://drive.google.com/file/d/1Qiu34_dltehpEVmfHvOivjAvf8Zkd77b/preview" 
+                allow="autoplay; fullscreen" 
+                allowfullscreen="true">
+        </iframe>
+      </div>
+    </section>
+
+    <!-- RESIZABLE DIVIDER -->
+    <div class="split-divider" id="split-divider" title="Kéo để điều chỉnh độ rộng màn hình">
+      <div class="divider-handle"></div>
+    </div>
+
+    <!-- RIGHT PANE: Question & Bluebook Interaction -->
+    <section class="pane pane-content" id="pane-content">
+      
+      <!-- Bluebook Question Header -->
+      <div class="question-top-bar">
+        <div class="q-title-meta">
+          <span class="q-number-label" id="q-number-label">Question 1 of 27</span>
+          <span class="q-topic-badge" id="q-topic-badge">Vocabulary in Context</span>
+          <span class="q-domain-badge" id="q-domain-badge">Craft & Structure</span>
+        </div>
+        <div class="q-actions-meta">
+          <!-- Bluebook Mark for Review -->
+          <label class="mark-review-label">
+            <input type="checkbox" id="chk-mark-review">
+            <span class="bookmark-icon">🔖</span>
+            <span>Mark for Review</span>
+          </label>
+          <!-- Bluebook Eliminator Mode [ABC] -->
+          <button class="btn-eliminator" id="btn-toggle-eliminator" title="Chế độ gạch bỏ phương án sai (Eliminator)">
+            <span class="cross-icon">⨉</span>
+            <span>Eliminate Choices</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Question Main Card -->
+      <div class="question-main-scroll">
+        
+        <!-- Optional Stimulus / Excerpt Toggle -->
+        <div class="excerpt-accordion">
+          <div class="excerpt-header" id="excerpt-header">
+            <span>📄 Xem trích đoạn văn bản & câu hỏi (Thu gọn / Mở rộng)</span>
+            <span id="excerpt-toggle-icon">▼</span>
+          </div>
+          <div class="excerpt-body collapsed" id="excerpt-body">
+            <div class="excerpt-passage" id="excerpt-passage">Đang tải đoạn văn...</div>
+            <div class="excerpt-prompt" id="excerpt-prompt">Đang tải câu hỏi...</div>
+          </div>
+        </div>
+
+        <!-- ================= RESPONSE INPUT AREA ================= -->
+        <!-- 1. Multiple-Choice Response Area (A, B, C, D) -->
+        <div class="response-area" id="mcq-response-area">
+          <div class="response-instruction">
+            Đọc đề bài trên trang sách PDF bên trái và chọn đáp án đúng:
+          </div>
+          <div class="options-container" id="options-container">
+            <!-- Dynamically populated options A, B, C, D -->
+          </div>
+        </div>
+
+        <!-- 2. Student-Produced Response Area (Grid-in Numeric Input for Math) -->
+        <div class="response-area hidden" id="gridin-response-area">
+          <div class="gridin-box">
+            <div class="gridin-title">Student-Produced Response (Grid-in)</div>
+            <p class="gridin-desc">Enter your numeric answer as an integer, decimal, or improper fraction (e.g., 15, 0.75, 3/4).</p>
+            <div class="gridin-input-wrap">
+              <input type="text" id="gridin-input" placeholder="Enter answer..." autocomplete="off">
+            </div>
+          </div>
+        </div>
+
+        <!-- Attempt Tracker & Feedback Bar (Practice Scored Mode) -->
+        <div class="attempt-bar" id="attempt-bar">
+          <div class="attempt-slots">
+            <div class="slot" id="slot-l1">
+              <span class="slot-name">Lần 1</span>
+              <span class="slot-text">-</span>
+            </div>
+            <div class="slot" id="slot-l2">
+              <span class="slot-name">Lần 2</span>
+              <span class="slot-text">-</span>
+            </div>
+            <div class="slot" id="slot-l3">
+              <span class="slot-name">Lần 3</span>
+              <span class="slot-text">-</span>
+            </div>
+            <div class="eff-badge" id="eff-badge">Hiệu suất: <strong id="eff-val">0%</strong></div>
+          </div>
+          <div class="submit-wrap">
+            <button class="btn-submit" id="btn-check-answer" disabled>Check Answer (Enter)</button>
+          </div>
+        </div>
+
+        <!-- Alert Status Banner -->
+        <div class="status-alert hidden" id="status-alert">
+          <span class="alert-icon" id="alert-icon">✅</span>
+          <span class="alert-text" id="alert-text">Kết quả kiểm tra</span>
+        </div>
+
+        <!-- Progressive Hints Accordion (4 Tiers from Dataset v5) -->
+        <div class="hints-accordion">
+          <!-- Tier 1: Context & Thinking Direction -->
+          <div class="hint-card hint-t1" id="hint-card-1">
+            <div class="hint-head" id="hint-head-1">
+              <span class="hint-title">💡 Tầng 1: Định hướng bối cảnh & Tư duy tổng quan</span>
+              <span class="hint-icon">▼</span>
+            </div>
+            <div class="hint-content collapsed" id="hint-content-1">
+              <div id="hint-text-1">Làm thử lần 1 để mở khóa gợi ý định hướng.</div>
+            </div>
+          </div>
+
+          <!-- Tier 2: Structural Clues & Elimination -->
+          <div class="hint-card hint-t2" id="hint-card-2">
+            <div class="hint-head" id="hint-head-2">
+              <span class="hint-title">🔍 Tầng 2: Manh mối cấu trúc & Phân tích loại trừ</span>
+              <span class="hint-icon">▼</span>
+            </div>
+            <div class="hint-content collapsed" id="hint-content-2">
+              <div id="hint-text-2">Nếu chưa đúng ở lần 1, manh mối cấu trúc sẽ mở ở lần 2.</div>
+            </div>
+          </div>
+
+          <!-- Tier 3: Method Lock & Full Solution -->
+          <div class="hint-card hint-t3" id="hint-card-3">
+            <div class="hint-head" id="hint-head-3">
+              <span class="hint-title">🎯 Tầng 3: Chốt phương pháp & Lời giải chi tiết</span>
+              <span class="hint-icon">▼</span>
+            </div>
+            <div class="hint-content collapsed" id="hint-content-3">
+              <div id="hint-text-3">Hiển thị chốt phương pháp sau 3 lần thử hoặc khi làm đúng.</div>
+            </div>
+          </div>
+
+          <!-- Tier 4: Strategic Tip & Formula -->
+          <div class="hint-card hint-t4" id="hint-card-4">
+            <div class="hint-head" id="hint-head-4">
+              <span class="hint-title">✨ Strategic Tip & Công thức chuẩn College Board</span>
+              <span class="hint-icon">▼</span>
+            </div>
+            <div class="hint-content collapsed" id="hint-content-4">
+              <div id="hint-text-4">Trả lời đúng để mở khóa bí kíp chiến thuật.</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= BLUEBOOK BOTTOM DOCK ================= -->
+  <footer class="bluebook-footer">
+    <div class="footer-left">
+      <div class="student-profile-badge">
+        <span class="profile-icon">👤</span>
+        <input type="text" id="input-student-name" placeholder="Nhập tên học sinh..." title="Tên học sinh để xuất file Excel">
+      </div>
+      <div class="storage-indicator" title="Tiến độ đang được lưu trữ an toàn trong trình duyệt của riêng em">
+        <span class="pulse-dot"></span>
+        <span>Saved in LocalStorage</span>
+      </div>
+    </div>
+
+    <!-- Bluebook Question Review Navigator Button -->
+    <div class="footer-center">
+      <button class="btn-question-navigator" id="btn-open-navigator">
+        <span>Question <strong id="nav-current-label">1</strong> of <span id="nav-total-label">27</span></span>
+        <span class="nav-arrow-up">▲</span>
+      </button>
+    </div>
+
+    <!-- Navigation Buttons Back & Next -->
+    <div class="footer-right">
+      <button class="btn-dock-nav" id="btn-nav-back">Back</button>
+      <button class="btn-dock-nav btn-dock-next" id="btn-nav-next">Next</button>
+    </div>
+  </footer>
+  </div> <!-- end view-practice -->
+
+  <!-- ================= BLUEBOOK QUESTION NAVIGATOR POPUP ================= -->
+  <div class="navigator-modal-overlay hidden" id="navigator-modal-overlay">
+    <div class="navigator-modal">
+      <div class="nav-modal-header">
+        <div class="nav-modal-title">
+          <span id="nav-modal-module-title">Section 1, Module 1: Reading and Writing Questions</span>
+        </div>
+        <button class="btn-close-modal" id="btn-close-navigator">✕</button>
+      </div>
+
+      <div class="nav-modal-legend">
+        <div class="legend-item"><span class="legend-box legend-current"></span> Current</div>
+        <div class="legend-item"><span class="legend-box legend-answered"></span> Answered</div>
+        <div class="legend-item"><span class="legend-box legend-unanswered"></span> Unanswered</div>
+        <div class="legend-item"><span class="legend-bookmark">🔖</span> For Review</div>
+      </div>
+
+      <div class="nav-tiles-grid" id="nav-tiles-grid">
+        <!-- Rendered dynamically e.g. 1 to 27 tiles -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MODAL: DESMOS GRAPHING CALCULATOR ================= -->
+  <div class="draggable-calc-modal hidden" id="modal-calculator">
+    <div class="calc-modal-header">
+      <span>🧮 Desmos | Graphing Calculator (Digital SAT Standard)</span>
+      <button class="btn-close-modal" id="btn-close-calculator">✕</button>
+    </div>
+    <div class="calc-modal-body">
+      <iframe src="https://www.desmos.com/calculator" frameborder="0"></iframe>
+    </div>
+  </div>
+
+  <!-- ================= MODAL: SAT MATH REFERENCE SHEET ================= -->
+  <div class="modal-overlay hidden" id="modal-reference">
+    <div class="modal-card ref-modal-card">
+      <div class="modal-card-header">
+        <h3>📐 College Board Digital SAT Math Reference Sheet</h3>
+        <button class="btn-close-modal" id="btn-close-reference">✕</button>
+      </div>
+      <div class="modal-card-body ref-content">
+        <div class="ref-grid">
+          <div class="ref-box">
+            <h4>Circle</h4>
+            <p>Area: \( A = \pi r^2 \)</p>
+            <p>Circumference: \( C = 2\pi r \)</p>
+          </div>
+          <div class="ref-box">
+            <h4>Rectangle & Triangle</h4>
+            <p>Rectangle Area: \( A = lw \)</p>
+            <p>Triangle Area: \( A = \frac{1}{2}bh \)</p>
+          </div>
+          <div class="ref-box">
+            <h4>Pythagorean Theorem</h4>
+            <p>\( c^2 = a^2 + b^2 \)</p>
+          </div>
+          <div class="ref-box">
+            <h4>Special Right Triangles</h4>
+            <p>\( 45^\circ - 45^\circ - 90^\circ \): \( x : x : x\sqrt{2} \)</p>
+            <p>\( 30^\circ - 60^\circ - 90^\circ \): \( x : x\sqrt{3} : 2x \)</p>
+          </div>
+          <div class="ref-box">
+            <h4>Volume Formulas</h4>
+            <p>Rectangular Prism: \( V = lwh \)</p>
+            <p>Cylinder: \( V = \pi r^2 h \)</p>
+            <p>Sphere: \( V = \frac{4}{3}\pi r^3 \)</p>
+            <p>Cone: \( V = \frac{1}{3}\pi r^2 h \)</p>
+            <p>Pyramid: \( V = \frac{1}{3}lwh \)</p>
+          </div>
+          <div class="ref-box">
+            <h4>Key Facts</h4>
+            <p>• The number of degrees of arc in a circle is 360.</p>
+            <p>• The number of radians of arc in a circle is \( 2\pi \).</p>
+            <p>• The sum of the measures in degrees of the angles of a triangle is 180.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MODAL: SOCRATIC ERROR LOG ================= -->
+  <div class="modal-overlay hidden" id="modal-error-log">
+    <div class="modal-card error-modal-card">
+      <div class="modal-card-header">
+        <h3>🎯 Sổ tay Lỗi sai Socratic (Lưu trên máy của em)</h3>
+        <button class="btn-close-modal" id="btn-close-error-log">✕</button>
+      </div>
+      <div class="modal-card-body">
+        <div class="error-log-toolbar">
+          <select id="select-filter-err-status">
+            <option value="all">Tất cả tình trạng</option>
+            <option value="Chưa xử lý">⏳ Chưa xử lý</option>
+            <option value="Đang theo dõi">🔄 Đang theo dõi</option>
+            <option value="Đã triệt tiêu">✅ Đã triệt tiêu</option>
+          </select>
+          <button class="btn-pill" id="btn-add-new-error">➕ Ghi chép lỗi câu hiện tại</button>
+        </div>
+        <div class="error-log-list" id="error-log-list">
+          <!-- Dynamically populated from localStorage -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MODAL: MANDATORY ERROR REFLECTION ================= -->
+  <div class="modal-overlay hidden" id="modal-mandatory-reflection">
+    <div class="modal-card reflection-modal-card">
+      <div class="reflection-header">
+        <div class="reflection-badge">⚠️ BẮT BUỘC GHI CHÉP SỔ LỖI SAI</div>
+        <h3>Phân Tích Lỗi Sai: <span id="refl-q-label">Question 1</span></h3>
+        <p class="reflection-subtitle">Chủ đề: <strong id="refl-q-topic">Reading</strong> (<span id="refl-q-module">Module 1</span>)</p>
+      </div>
+
+      <div class="reflection-body">
+        <div class="reflection-info-box">
+          <div class="info-row">
+            <span class="lbl">Đáp án đúng của đề:</span>
+            <span class="val val-correct" id="refl-correct-ans">B</span>
+          </div>
+          <div class="info-row">
+            <span class="lbl">Các lần em chọn sai:</span>
+            <span class="val val-wrong" id="refl-wrong-picks">Lần 1: C</span>
+          </div>
+          <div class="info-hint" id="refl-hint-box">
+            <!-- Socratic Hint -->
+          </div>
+        </div>
+
+        <form class="reflection-form" id="form-mandatory-reflection" onsubmit="return false;">
+          <div class="form-group">
+            <label for="select-refl-trap">1. Nhóm bẫy SAT em đã mắc phải <span class="req">*</span></label>
+            <select id="select-refl-trap" required>
+              <option value="">-- Chọn nhóm bẫy SAT em gặp phải --</option>
+              <option value="Bẫy từ vựng & Nghĩa trong ngữ cảnh (Context Clues)">📖 Bẫy từ vựng & Nghĩa trong ngữ cảnh (Context Clues)</option>
+              <option value="Bẫy đảo cực & Từ tuyệt đối (Extreme Words: always, never, only...)">⚠️ Bẫy đảo cực & Từ tuyệt đối (Extreme Words: always, never, only...)</option>
+              <option value="Bẫy tương phản giả & Cụm nối (However, Although, But...)">⚡ Bẫy tương phản giả & Cụm nối (However, Although, But...)</option>
+              <option value="Bẫy suy diễn quá xa / Lạc đề (Out of Scope / Assumption)">🔍 Bẫy suy diễn quá xa / Lạc đề (Out of Scope / Assumption)</option>
+              <option value="Bẫy đọc lướt sót từ khóa quan trọng (Careless Reading)">👀 Bẫy đọc lướt sót từ khóa quan trọng (Careless Reading)</option>
+              <option value="Bẫy đại số / Đổi dấu / Chuyển vế nhầm (Algebra / Sign Trap)">🧮 Bẫy đại số / Đổi dấu / Chuyển vế nhầm (Algebra / Sign Trap)</option>
+              <option value="Bẫy đọc nhầm câu hỏi (Đề hỏi y nhưng giải ra x)">🎯 Bẫy đọc nhầm câu hỏi (Đề hỏi y nhưng giải ra x)</option>
+              <option value="Bẫy làm tròn số / Phân số / Đơn vị đo (Fractions / Units)">📏 Bẫy làm tròn số / Phân số / Đơn vị đo (Fractions / Units)</option>
+              <option value="Chưa nắm chắc công thức / lý thuyết cốt lõi">📚 Chưa nắm chắc công thức / lý thuyết cốt lõi</option>
+              <option value="Khác">💡 Bẫy khác...</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="input-refl-detail">2. Phân tích nguyên nhân sai & Bài học rút ra <span class="req">*</span></label>
+            <textarea id="input-refl-detail" rows="3" placeholder="Tại sao em lại chọn nhầm? Em đã nhìn nhận sót chỗ nào và lần sau gặp dạng bài này em sẽ chú ý điều gì? (Tối thiểu 5 ký tự)" required minlength="5"></textarea>
+          </div>
+
+          <div class="reflection-actions">
+            <button type="button" class="btn-primary-ob" id="btn-save-mandatory-reflection">
+              💾 Lưu Vào Sổ Lỗi & Mở Khóa Câu Tiếp Theo ➔
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MODAL: STRATEGIES & COMMON TRAPS ================= -->
+  <div class="modal-overlay hidden" id="modal-strategies">
+    <div class="modal-card strat-modal-card">
+      <div class="modal-card-header">
+        <h3>⚡ Cấu trúc & Bẫy Đề thi Digital SAT (October 2026 INT-B)</h3>
+        <button class="btn-close-modal" id="btn-close-strategies">✕</button>
+      </div>
+      <div class="modal-card-body" id="strategies-content">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= FLOATING SCRATCHPAD CANVAS ================= -->
+  <div class="scratchpad-drawer hidden" id="scratchpad-drawer">
+    <div class="scratchpad-header">
+      <span>✏️ Bluebook Whiteboard Scratchpad</span>
+      <div class="scratchpad-tools">
+        <button class="color-btn active" data-color="#0f172a" style="background: #0f172a;"></button>
+        <button class="color-btn" data-color="#2563eb" style="background: #2563eb;"></button>
+        <button class="color-btn" data-color="#dc2626" style="background: #dc2626;"></button>
+        <button class="color-btn" data-color="#16a34a" style="background: #16a34a;"></button>
+        <button class="btn-sm" id="btn-scratch-clear">🗑️ Xóa</button>
+        <button class="btn-sm" id="btn-scratch-close">✕</button>
+      </div>
+    </div>
+    <canvas id="scratchpad-canvas"></canvas>
+  </div>
+
+  <!-- ================= MODAL: PRACTICE RULES & GUIDE ================= -->
+  <div class="modal-overlay hidden" id="modal-onboarding">
+    <div class="modal-card onboarding-modal-card" style="position: relative; max-width: 640px;">
+      <button class="btn-close-modal" id="btn-close-onboarding" title="Đóng hướng dẫn" style="position: absolute; top: 16px; right: 16px; font-size: 20px; z-index: 10;">✕</button>
+      
+      <!-- Practice Instructions Guide Only -->
+      <div class="onboarding-step" id="onboarding-step-2">
+        <div class="onboarding-header">
+          <div class="onboarding-logo">📖 Hướng Dẫn Luyện Thi Chuẩn Bluebook</div>
+          <h2>Quy Tắc & Công Cụ Làm Bài</h2>
+          <p class="onboarding-subtitle">Học sinh: <strong id="ob-preview-name">Học sinh</strong> (<span id="ob-preview-email">email</span>)</p>
+        </div>
+
+        <div class="guide-grid">
+          <div class="guide-item">
+            <div class="guide-icon">⏱️</div>
+            <div class="guide-text">
+              <h4>Thời gian từng Module</h4>
+              <p>Mỗi Module RW: <strong>32 phút</strong> (27 câu). Mỗi Module Math: <strong>35 phút</strong> (22 câu). Có đồng hồ đếm ngược và nút <em>Hide</em> như thi thật.</p>
+            </div>
+          </div>
+
+          <div class="guide-item">
+            <div class="guide-icon">📄</div>
+            <div class="guide-text">
+              <h4>Đề thi Google Drive</h4>
+              <p>Trình đọc PDF bên trái kết nối trực tiếp Google Drive, góc trên luôn ghi rõ <strong>📖 Câu này ở Trang X</strong> để em lướt tới nhanh nhất.</p>
+            </div>
+          </div>
+
+          <div class="guide-item">
+            <div class="guide-icon">🧮</div>
+            <div class="guide-text">
+              <h4>Công cụ thi chính thức</h4>
+              <p>Sử dụng <strong>Máy tính Desmos</strong>, <strong>Bảng công thức Reference</strong>, và <strong>Bảng nháp Scratchpad</strong> trên thanh công cụ.</p>
+            </div>
+          </div>
+
+          <div class="guide-item">
+            <div class="guide-icon">🎯</div>
+            <div class="guide-text">
+              <h4>Hệ thống 3 lần thử & Gợi ý</h4>
+              <p>Lần 1: <strong>100%</strong> điểm. Nếu sai, hệ thống mở khóa gợi ý chiến thuật cho Lần 2 (<strong>66.7%</strong>) và Lần 3 (<strong>33.3%</strong>). Gợi ý không làm lộ đáp án.</p>
+            </div>
+          </div>
+
+          <div class="guide-item">
+            <div class="guide-icon">📝</div>
+            <div class="guide-text">
+              <h4>Sổ tay lỗi sai bắt buộc</h4>
+              <p>Khi trả lời sai, hệ thống yêu cầu học sinh ghi chép bẫy SAT và giải pháp phản tư trước khi mở khóa câu tiếp theo.</p>
+            </div>
+          </div>
+
+          <div class="guide-item">
+            <div class="guide-icon">🏁</div>
+            <div class="guide-text">
+              <h4>Hoàn thành & Báo cáo kết quả</h4>
+              <p>Khi làm xong, bấm nút <strong>🏁 Hoàn thành</strong> để nộp bài. Hệ thống kích hoạt ứng dụng Mail trên máy để gửi kết quả về email của em và Thầy Mike!</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="onboarding-actions" style="display: flex; justify-content: flex-end; gap: 12px; margin-top: 24px;">
+          <button type="button" class="btn-sub-ob" id="btn-guide-dismiss" style="padding: 10px 18px; border-radius: 20px; border: 1px solid #dadce0; background: #fff; cursor: pointer; font-weight: 600;">✕ Đóng Hướng Dẫn</button>
+          <button type="button" class="btn-primary-ob" id="btn-ob-start" style="padding: 10px 22px; border-radius: 20px; border: none; background: #1a73e8; color: #fff; cursor: pointer; font-weight: 700;">
+            Bắt Đầu Làm Bài Ngay 🚀
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================= MODAL: FINISH TEST & SUBMISSION ================= -->
+  <div class="modal-overlay hidden" id="modal-finish-test">
+    <div class="modal-card finish-modal-card">
+      <div class="modal-card-header">
+        <h3>🏁 Hoàn Thành & Nộp Bài Thi Digital SAT</h3>
+        <button class="btn-close-modal" id="btn-close-finish">✕</button>
+      </div>
+      <div class="modal-card-body">
+        
+        <div class="finish-student-info">
+          <div>Học sinh: <strong id="finish-student-name">Nguyen Van A</strong></div>
+          <div>Email: <strong id="finish-student-email">email@test.com</strong></div>
+        </div>
+
+        <!-- Score & Answered Summary Cards -->
+        <div class="finish-stats-grid">
+          <div class="stat-card">
+            <span class="stat-lbl">Số câu đã làm</span>
+            <span class="stat-val" id="stat-answered">0 / 98</span>
+          </div>
+          <div class="stat-card stat-eff">
+            <span class="stat-lbl">Hiệu suất điểm</span>
+            <span class="stat-val" id="stat-score-pct">0%</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-lbl">Đúng Lần 1 (100%)</span>
+            <span class="stat-val stat-green" id="stat-l1-correct">0</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-lbl">Đúng Lần 2 (66.7%)</span>
+            <span class="stat-val stat-yellow" id="stat-l2-correct">0</span>
+          </div>
+        </div>
+
+        <!-- Unanswered Alert (if any) -->
+        <div class="unanswered-alert hidden" id="unanswered-alert">
+          ⚠️ Em còn <strong id="unanswered-count">0</strong> câu chưa trả lời. Em có thể nộp ngay hoặc quay lại kiểm tra trước khi hoàn thành.
+        </div>
+
+        <!-- Target Email Notice -->
+        <div class="finish-email-notice">
+          <div class="notice-icon">✉️</div>
+          <div class="notice-body">
+            <strong>Báo cáo kết quả và File Excel chi tiết sẽ được gửi về:</strong>
+            <ul>
+              <li>👨‍🏫 Thầy Mike: <code>mikepham358@gmail.com</code> (Mặc định)</li>
+              <li>🎓 Học sinh: <code id="notice-student-email">email@test.com</code></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Submission Actions -->
+        <div class="finish-actions">
+          <button class="btn-submit-test-final" id="btn-submit-test-confirm">
+            <span id="btn-submit-text">📤 Xác Nhận Hoàn Thành & Gửi Báo Cáo Email</span>
+            <span class="spinner hidden" id="submit-spinner"></span>
+          </button>
+          <div class="secondary-actions">
+            <button class="btn-action-sub" id="btn-download-excel-direct">📥 Tải File Excel Về Máy</button>
+            <button class="btn-action-sub" id="btn-cancel-finish">Quay Lại Làm Tiếp</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MODAL: SUBMISSION SUCCESS & EMAIL LAUNCH ================= -->
+  <div class="modal-overlay hidden" id="modal-submit-success">
+    <div class="modal-card success-modal-card">
+      <div class="success-icon">✉️</div>
+      <h2>Ứng Dụng Email Đã Được Mở!</h2>
+      <p class="success-message" id="success-status-text">
+        Nội dung báo cáo điểm đã được tự động điền sẵn trong ứng dụng Email trên thiết bị của em.
+      </p>
+
+      <div class="email-instruction-steps">
+        <div class="step-card">
+          <span class="step-num">1</span>
+          <span class="step-text">File Excel bài làm chi tiết (<strong><span id="success-filename">October_2026_SAT...xlsx</span></strong>) đã được tải về mục <em>Downloads</em>.</span>
+        </div>
+        <div class="step-card">
+          <span class="step-num">2</span>
+          <span class="step-text">Trong ứng dụng Mail vừa mở, em bấm vào biểu tượng kẹp ghim (📎 Đính kèm) và chọn file Excel vừa tải.</span>
+        </div>
+        <div class="step-card">
+          <span class="step-num">3</span>
+          <span class="step-text">Bấm <strong>Gửi (Send)</strong> tới Thầy Mike (<code>mikepham358@gmail.com</code>) để hoàn tất!</span>
+        </div>
+      </div>
+
+      <div class="success-actions">
+        <button class="btn-primary-ob" id="btn-relaunch-mail">
+          ✉️ Mở Lại Ứng Dụng Email
+        </button>
+        <a class="btn-sub-ob" id="btn-download-submitted-file" href="#" download>
+          📥 Tải Lại File Excel
+        </a>
+        <button class="btn-sub-ob" id="btn-close-success">
+          Đóng & Xem Lại Bài Thi
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MODAL: RESET CONFIRMATION ================= -->
+  <div class="modal-overlay hidden" id="modal-reset-confirm">
+    <div class="modal-card reset-modal-card">
+      <div class="reset-icon">🔄</div>
+      <h3>Làm Lại Bài Thi Từ Đầu?</h3>
+      <p class="reset-desc">Thao tác này sẽ đặt lại đáp án, điểm số và đồng hồ để em làm lại bài thi một cách độc lập từ câu 1.</p>
+
+      <div class="reset-options-box">
+        <label class="reset-chk-label">
+          <input type="checkbox" id="chk-reset-answers" checked disabled>
+          <span>Đặt lại đáp án & điểm số tất cả 98 câu hỏi</span>
+        </label>
+        <label class="reset-chk-label">
+          <input type="checkbox" id="chk-reset-timer" checked>
+          <span>Đặt lại đồng hồ đếm ngược về thời gian ban đầu</span>
+        </label>
+        <label class="reset-chk-label">
+          <input type="checkbox" id="chk-reset-errors">
+          <span>Xoá toàn bộ ghi chép trong Sổ lỗi (Mặc định giữ lại để ôn tập)</span>
+        </label>
+      </div>
+
+      <div class="reset-modal-actions">
+        <button type="button" class="btn-danger-confirm" id="btn-confirm-do-reset">
+          🔄 Xác Nhận Làm Lại Từ Đầu
+        </button>
+        <button type="button" class="btn-sub-ob" id="btn-cancel-reset">
+          Hủy Bỏ
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="app.js"></script>
+</body>
+</html>

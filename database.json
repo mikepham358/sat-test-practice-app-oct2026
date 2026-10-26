@@ -1,0 +1,4149 @@
+{
+  "test_title": "Digital SAT Practice Test — October 2026 (INT-B)",
+  "pdf_path": "/Users/mike/Library/CloudStorage/GoogleDrive-mikepham358@gmail.com/My Drive/A Vinschool by Mike Pham/SAT Coach/Real Tests/Oct 2026/B.pdf",
+  "pdf_drive_preview": "https://drive.google.com/file/d/1Qiu34_dltehpEVmfHvOivjAvf8Zkd77b/preview",
+  "pdf_drive_view": "https://drive.google.com/file/d/1Qiu34_dltehpEVmfHvOivjAvf8Zkd77b/view?usp=drive_link",
+  "excel_path": "/Users/mike/Library/CloudStorage/GoogleDrive-mikepham358@gmail.com/My Drive/A Vinschool by Mike Pham/26-27 Grand Plan /Study Plan/Module /Template_-_October_2026-v5.xlsx",
+  "total_questions": 98,
+  "modules": [
+    {
+      "id": "rw1",
+      "code": "RW_Module1",
+      "title": "Reading & Writing: Module 1",
+      "section": "Reading and Writing",
+      "module_num": 1,
+      "time_minutes": 32,
+      "question_count": 27,
+      "pdf_start_page": 2,
+      "question_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27
+      ]
+    },
+    {
+      "id": "rw2",
+      "code": "RW_Module2",
+      "title": "Reading & Writing: Module 2",
+      "section": "Reading and Writing",
+      "module_num": 2,
+      "time_minutes": 32,
+      "question_count": 27,
+      "pdf_start_page": 15,
+      "question_ids": [
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54
+      ]
+    },
+    {
+      "id": "math1",
+      "code": "Math_Module1",
+      "title": "Math: Module 1",
+      "section": "Math",
+      "module_num": 1,
+      "time_minutes": 35,
+      "question_count": 22,
+      "pdf_start_page": 27,
+      "question_ids": [
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76
+      ]
+    },
+    {
+      "id": "math2",
+      "code": "Math_Module2",
+      "title": "Math: Module 2",
+      "section": "Math",
+      "module_num": 2,
+      "time_minutes": 35,
+      "question_count": 22,
+      "pdf_start_page": 36,
+      "question_ids": [
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "master_id": "M1",
+      "q_number": 1,
+      "q_label": "Q1",
+      "module_code": "RW_Module1",
+      "module_title": "Reading & Writing: Module 1",
+      "section": "Reading and Writing",
+      "module_num": 1,
+      "topic": "Vocabulary in Context (Precision)",
+      "passage": "the source of a malfunction in a complex electrical system can be a time-consuming process: a repair technician may need to test each individual component one by one until the specific part causing the problematic behavior is identified.",
+      "prompt": "Which choice completes the text with the most logical and precise word or phrase?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Adapting"
+        },
+        {
+          "key": "B",
+          "text": "Isolating"
+        },
+        {
+          "key": "C",
+          "text": "Incorporating"
+        },
+        {
+          "key": "D",
+          "text": "Fabricating"
+        }
+      ],
+      "options_raw": "A. Adapting\nB. Isolating\nC. Incorporating\nD. Fabricating",
+      "is_grid_in": false,
+      "correct_answer": "B",
+      "tier1_hint": "Xác định vai trò của động từ cần điền trong bối cảnh kỹ thuật sửa chữa hệ thống điện.",
+      "tier2_hint": "Chú ý cụm từ 'test each individual component one by one' thể hiện việc khoanh vùng chính xác bộ phận lỗi.",
+      "tier3_hint": "Loại trừ các từ mang nghĩa tạo mới hay điều chỉnh chung; chọn động từ chỉ việc cô lập/xác định nguyên nhân đơn lẻ.",
+      "strategic_tip": "Isolating = identifying/singling out the specific cause of a problem.",
+      "level1_tip": "Xác định vai trò của động từ cần điền trong bối cảnh kỹ thuật sửa chữa hệ thống điện.",
+      "level2_hint": "Chú ý cụm từ 'test each individual component one by one' thể hiện việc khoanh vùng chính xác bộ phận lỗi.",
+      "level3_solution": "Loại trừ các từ mang nghĩa tạo mới hay điều chỉnh chung; chọn động từ chỉ việc cô lập/xác định nguyên nhân đơn lẻ.",
+      "pdf_page": 3
+    },
+    {
+      "id": 2,
+      "master_id": "M2",
+      "q_number": 2,
+      "q_label": "Q2",
+      "module_code": "RW_Module1",
+      "module_title": "Reading & Writing: Module 1",
+      "section": "Reading and Writing",
+      "module_num": 1,
+      "topic": "Vocabulary in Context (Biological Processes)",
+      "passage": "Single-celled foraminifera inhabiting coastal waters experience significant environmental salinity changes during tidal cycles. How, then, do they _____ internal salt levels? Some organisms maintain high concentrations of phosphates that allow them to affect the concentration of internal electrolytes—including salt—in response to external changes.",
+      "prompt": "Which choice completes the text with the most logical and precise word or phrase?",
+      "options": [
+        {
+          "key": "A",
+          "text": "counteract"
+        },
+        {
+          "key": "B",
+          "text": "elude"
+        },
+        {
+          "key": "C",
+          "text": "tolerate"
+        },
+        {
+          "key": "D",
+          "text": "regulate"
+        }
+      ],
+      "options_raw": "A. counteract\nB. elude\nC. tolerate\nD. regulate",
+      "is_grid_in": false,
+      "correct_answer": "D",
+      "tier1_hint": "Phân tích cơ chế sinh học điều chỉnh độ mặn nội bào của loài cá ngừ được miêu tả.",
+      "tier2_hint": "Cần một động từ miêu tả việc kiểm soát và duy trì mức độ ổn định của nồng độ muối.",
+      "tier3_hint": "Loại bỏ các động từ mang nghĩa phá hủy hay làm xáo trộn; tìm từ chỉ sự điều hòa/kiểm soát sinh học.",
+      "strategic_tip": "Regulate = control or maintain at a steady level.",
+      "level1_tip": "Phân tích cơ chế sinh học điều chỉnh độ mặn nội bào của loài cá ngừ được miêu tả.",
+      "level2_hint": "Cần một động từ miêu tả việc kiểm soát và duy trì mức độ ổn định của nồng độ muối.",
+      "level3_solution": "Loại bỏ các động từ mang nghĩa phá hủy hay làm xáo trộn; tìm từ chỉ sự điều hòa/kiểm soát sinh học.",
+      "pdf_page": 3
+    },
+    {
+      "id": 3,
+      "master_id": "M3",
+      "q_number": 3,
+      "q_label": "Q3",
+      "module_code": "RW_Module1",
+      "module_title": "Reading & Writing: Module 1",
+      "section": "Reading and Writing",
+      "module_num": 1,
+      "topic": "Vocabulary in Context (Research Approaches)",
+      "passage": "Though most studies of the effect of altitude on blood chemistry usually concentrate on people who live above sea level, researchers Suleiman A. Al-Sweedan and Moath Alhaj have instead chosen the _____ path in their recent work of studying the blood of people who live below sea level, in locations such as the California towns of Westmorland and Thermal.",
+      "prompt": "Which choice completes the text with the most logical and precise word or phrase?",
+      "options": [
+        {
+          "key": "A",
+          "text": "predictable"
+        },
+        {
+          "key": "B",
+          "text": "innovative"
+        },
+        {
+          "key": "C",
+          "text": "idealistic"
+        },
+        {
+          "key": "D",
+          "text": "superficial"
+        }
+      ],
+      "options_raw": "A. predictable\nB. innovative\nC. idealistic\nD. superficial",
+      "is_grid_in": false,
+      "correct_answer": "B",
+      "tier1_hint": "Phân tích hướng tiếp cận nghiên cứu của nhóm tác giả đối với môi trường đại dương.",
+      "tier2_hint": "Chú ý từ nối hoặc ngữ cảnh đối lập giữa việc nghiên cứu trên đất liền và độ sâu dưới mực nước biển.",
+      "tier3_hint": "Cần từ miêu tả phương pháp làm việc khác biệt, đi ngược hoặc khác với lối tư duy truyền thống.",
+      "strategic_tip": "Innovative = introducing new, original, or unusual methods.",
+      "level1_tip": "Phân tích hướng tiếp cận nghiên cứu của nhóm tác giả đối với môi trường đại dương.",
+      "level2_hint": "Chú ý từ nối hoặc ngữ cảnh đối lập giữa việc nghiên cứu trên đất liền và độ sâu dưới mực nước biển.",
+      "level3_solution": "Cần từ miêu tả phương pháp làm việc khác biệt, đi ngược hoặc khác với lối tư duy truyền thống.",
+      "pdf_page": 3
+    },
+    {
+      "id": 4,
+      "master_id": "M4",
+      "q_number": 4,
+      "q_label": "Q4",
+      "module_code": "RW_Module1",
+      "module_title": "Reading & Writing: Module 1",
+      "section": "Reading and Writing",
+      "module_num": 1,
+      "topic": "Vocabulary in Context (Sufficiency)",
+      "passage": "While basic computer security training that only teaches recognition of obvious scams cannot provide _____ protection against today's sophisticated fake emails, which employ such subtle deception techniques that many organizations now require their staff to complete comprehensive cybersecurity education programs.",
+      "prompt": "Which choice completes the text with the most logical and precise word or phrase?",
+      "options": [
+        {
+          "key": "A",
+          "text": "uncommon"
+        },
+        {
+          "key": "B",
+          "text": "superficial"
+        },
+        {
+          "key": "C",
+          "text": "sufficient"
+        },
+        {
+          "key": "D",
+          "text": "affordable"
+        }
+      ],
+      "options_raw": "A. uncommon\nB. superficial\nC. sufficient\nD. affordable",
+      "is_grid_in": false,
+      "correct_answer": "C",
+      "tier1_hint": "Đọc kỹ câu văn để xác định mức độ hoặc giới hạn bảo vệ của việc đào tạo cơ bản.",
+      "tier2_hint": "Chú ý vế đối lập phía sau về các đòn tấn công tinh vi đòi hỏi cấp độ bảo vệ cao hơn.",
+      "tier3_hint": "Chọn từ miêu tả sự đầy đủ/thỏa đáng; loại các từ mang nghĩa thái quá hoặc không đủ.",
+      "strategic_tip": "Sufficient = adequate or enough for a specific requirement.",
+      "level1_tip": "Đọc kỹ câu văn để xác định mức độ hoặc giới hạn bảo vệ của việc đào tạo cơ bản.",
+      "level2_hint": "Chú ý vế đối lập phía sau về các đòn tấn công tinh vi đòi hỏi cấp độ bảo vệ cao hơn.",
+      "level3_solution": "Chọn từ miêu tả sự đầy đủ/thỏa đáng; loại các từ mang nghĩa thái quá hoặc không đủ.",
+      "pdf_page": 3
+    },
+    {
+      "id": 5,
+      "master_id": "M5",
+      "q_number": 5,
+      "q_label": "Q5",
+      "module_code": "RW_Module1",
+      "module_title": "Reading & Writing: Module 1",
+      "section": "Reading and Writing",
+      "module_num": 1,
+      "topic": "Text Structure & Overall Purpose",
+      "passage": "What is a city? The answer depends on where you live! Many countries define an area as a city based on how many people live there. However, not every country uses the same numbers. Iceland defines a city as an area with a population of at least 200, while the Netherlands defines a city as having a minimum population of 20,000. Some countries even define cities using other factors, like if there is a local government.",
+      "prompt": "Which choice best describes the overall structure of the text?",
+      "options": [
+        {
+          "key": "A",
+          "text": "It lists the number of cities in one country, then compares that number to another country."
+        },
+        {
+          "key": "B",
+          "text": "It poses a question, then explains why the question has many answers."
+        },
+        {
+          "key": "C",
+          "text": "It offers a recommendation, then provides reasons for that recommendation."
+        },
+        {
+          "key": "D",
+          "text": "It describes two locations, then explains why only one is considered a city."
+        }
+      ],
+      "options_raw": "A. It lists the number of cities in one country, then compares that number to another country.\nB. It poses a question, then explains why the question has many answers.\nC. It offers a recommendation, then provides reasons for that recommendation.\nD. It describes two locations, then explains why only one is considered a city.",
+      "is_grid_in": false,
+      "correct_answer": "B",
+      "tier1_hint": "Xác định cấu trúc tổng thể của bài đọc từ câu hỏi mở đầu đến các câu tiếp theo.",
+      "tier2_hint": "Bài đọc bắt đầu bằng câu hỏi 'What is a city?' và đưa ra các góc nhìn định nghĩa khác nhau.",
+      "tier3_hint": "Mục đích chính là trình bày các quan điểm đa dạng về một khái niệm thay vì chỉ bảo vệ một góc nhìn duy nhất.",
+      "strategic_tip": "Mô hình cấu trúc: Question -> Multiple Explanations/Answers.",
+      "level1_tip": "Xác định cấu trúc tổng thể của bài đọc từ câu hỏi mở đầu đến các câu tiếp theo.",
+      "level2_hint": "Bài đọc bắt đầu bằng câu hỏi 'What is a city?' và đưa ra các góc nhìn định nghĩa khác nhau.",
+      "level3_solution": "Mục đích chính là trình bày các quan điểm đa dạng về một khái niệm thay vì chỉ bảo vệ một góc nhìn duy nhất.",
+      "pdf_page": 4
+    },
+    {
+      "id": 6,
+      "master_id": "M6",
+      "q_number": 6,
+      "q_label": "Q6",
+      "module_code": "RW_Module1",
+      "module_title": "Reading & Writing: Module 1",
+      "section": "Reading and Writing",
+      "module_num": 1,
+      "topic": "Main Purpose (Literary Narrative)",
+      "passage": "Adapted from William Faulkner's 1940 novel The Hamlet... He was breathing hard but not because he had been galloping. On the contrary, since he had approached near enough to his destination to believe he could have seen smoke if there had been smoke, he had ridden slower and slower. Nevertheless he now sat the horse before the gap in the fence, breathing hard enough through his nose and even sweating a little...",
+      "prompt": "Which choice best states the main purpose of the text?",
+      "options": [
+        {
+          "key": "A",
+          "text": "To contrast the man's desire to attend the meeting with his awareness of risk."
+        },
+        {
+          "key": "B",
+          "text": "To compare the upcoming meeting to a far more serious experience from earlier."
+        },
+        {
+          "key": "C",
+          "text": "To depict the man's insistence on meeting despite the inconvenience."
+        },
+        {
+          "key": "D",
+          "text": "To portray the man's anxiety about the meeting as reflected by his physical state and demeanor."
+        }
+      ],
+      "options_raw": "A. To contrast the man's desire to attend the meeting with his awareness of risk.\nB. To compare the upcoming meeting to a far more serious experience from earlier.\nC. To depict the man's insistence on meeting despite the inconvenience.\nD. To portray the man's anxiety about the meeting as reflected by his physical state and demeanor.",
+      "is_grid_in": false,
+      "correct_answer": "D",
+      "tier1_hint": "Tập trung vào các chi tiết miêu tả cảm xúc và biểu hiện thể chất của nhân vật.",
+      "tier2_hint": "Chú ý các dấu hiệu như thở gấp, đổ mồ hôi và nét mặt căng thẳng trong bối cảnh truyện.",
+      "tier3_hint": "Mục đích chính là thể hiện trạng thái tâm lý lo âu/căng thẳng của nhân vật qua hành vi cụ thể.",
+      "strategic_tip": "Văn xuôi hư cấu: Biểu hiện thể chất phản ánh trạng thái tâm lý nhân vật.",
+      "level1_tip": "Tập trung vào các chi tiết miêu tả cảm xúc và biểu hiện thể chất của nhân vật.",
+      "level2_hint": "Chú ý các dấu hiệu như thở gấp, đổ mồ hôi và nét mặt căng thẳng trong bối cảnh truyện.",
+      "level3_solution": "Mục đích chính là thể hiện trạng thái tâm lý lo âu/căng thẳng của nhân vật qua hành vi cụ thể.",
+      "pdf_page": 4
+    },
+    {
+      "id": 7,
+      "master_id": "M7",
+      "q_number": 7,
+      "q_label": "Q7",
+      "module_code": "RW_Module1",
+      "module_title": "Reading & Writing: Module 1",
+      "section": "Reading and Writing",
+      "module_num": 1,
+      "topic": "Main Purpose (Informational Text)",
+      "passage": "Modern forestry offers diverse career opportunities that integrate scientific knowledge and environmental work. Arborists assess tree health and perform maintenance... Forestry technicians collect data... Forest ecologists conduct field research... With this blend of scientific understanding and practical application, forestry professionals address a variety of complex environmental challenges.",
+      "prompt": "Which choice best describes the main purpose of the text?",
+      "options": [
+        {
+          "key": "A",
+          "text": "To explain technological advances in modern forestry."
+        },
+        {
+          "key": "B",
+          "text": "To analyze environmental problems facing forests."
+        },
+        {
+          "key": "C",
+          "text": "To compare career security across forestry positions."
+        },
+        {
+          "key": "D",
+          "text": "To highlight career opportunities in modern forestry and describe how they integrate scientific knowledge and hands-on work."
+        }
+      ],
+      "options_raw": "A. To explain technological advances in modern forestry.\nB. To analyze environmental problems facing forests.\nC. To compare career security across forestry positions.\nD. To highlight career opportunities in modern forestry and describe how they integrate scientific knowledge and hands-on work.",
+      "is_grid_in": false,
+      "correct_answer": "D",
+      "tier1_hint": "So sánh câu mở đầu và câu kết thúc của bài đọc để xác định chủ đề xuyên suốt.",
+      "tier2_hint": "Đoạn văn liệt kê các hướng đi công việc và cơ hội phát triển trong ngành lâm nghiệp.",
+      "tier3_hint": "Mục đích là tổng quan các cơ hội nghề nghiệp đa dạng trong lĩnh vực được nêu.",
+      "strategic_tip": "Main Purpose = Topic (Forestry Careers) + So What? (Integrate science and practical work).",
+      "level1_tip": "So sánh câu mở đầu và câu kết thúc của bài đọc để xác định chủ đề xuyên suốt.",
+      "level2_hint": "Đoạn văn liệt kê các hướng đi công việc và cơ hội phát triển trong ngành lâm nghiệp.",
+      "level3_solution": "Mục đích là tổng quan các cơ hội nghề nghiệp đa dạng trong lĩnh vực được nêu.",
+      "pdf_page": 5
+    },
+    {
+      "id": 8,
+      "master_id": "M8",
+      "q_number": 8,
+      "q_label": "Q8",
+      "module_code": "RW_Module1",
+      "module_title": "Reading & Writing: Module 1",
+      "section": "Reading and Writing",
+      "module_num": 1,
+      "topic": "Detail & Literal Comprehension",
+      "passage": "James Fong and his team discovered a new color, which they named olo. Olo is a very saturated blue-green color that can't be seen with the human eye under natural conditions. In the human eye, long, medium, and short cones in the retina help sense bright light and color. Olo can only be seen by activating the medium cones alone. Fong and team activated these cones by using a targeted laser technology to stimulate just the medium cone cells.",
+      "prompt": "According to the text, how can the color olo be seen?",
+      "options": [
+        {
+          "key": "A",
+          "text": "By activating only the medium cones in the retina"
+        },
+        {
+          "key": "B",
+          "text": "By activating the long, medium, and short cones in the retina"
+        },
+        {
+          "key": "C",
+          "text": "By activating both the long and short cones in the retina"
+        },
+        {
+          "key": "D",
+          "text": "By activating only the long cones in the retina"
+        }
+      ],
+      "options_raw": "A. By activating only the medium cones in the retina\nB. By activating the long, medium, and short cones in the retina\nC. By activating both the long and short cones in the retina\nD. By activating only the long cones in the retina",
+      "is_grid_in": false,
+      "correct_answer": "A",
+      "tier1_hint": "Xác định từ khóa tên riêng được đề cập trong câu hỏi và định vị câu chứa thông tin.",
+      "tier2_hint": "Đối chiếu trực tiếp chi tiết về điều kiện nhìn thấy được miêu tả ở phần giữa bài đọc.",
+      "tier3_hint": "Chọn đáp án diễn đạt lại chính xác (paraphrase) điều kiện kích hoạt được nêu trực tiếp trên mặt chữ.",
+      "strategic_tip": "Literal Comprehension: Paraphrase đúng nguyên văn bài đọc, không suy diễn.",
+      "level1_tip": "Xác định từ khóa tên riêng được đề cập trong câu hỏi và định vị câu chứa thông tin.",
+      "level2_hint": "Đối chiếu trực tiếp chi tiết về điều kiện nhìn thấy được miêu tả ở phần giữa bài đọc.",
+      "level3_solution": "Chọn đáp án diễn đạt lại chính xác (paraphrase) điều kiện kích hoạt được nêu trực tiếp trên mặt chữ.",
+      "pdf_page": 5
+    },
+    {
+      "id": 9,
+      "master_id": "M9",
+      "q_number": 9,
+      "q_label": "Q9",
+      "module_code": "RW_Module1",
+      "module_title": "Reading & Writing: Module 1",
+      "section": "Reading and Writing",
+      "module_num": 1,
+      "topic": "Quantitative Evidence (Graph)",
+      "passage": "A student is collecting data about countries with volcanoes that have been active in the time since 1800 and in the time since 1960. The student records that Ethiopia has _____",
+      "prompt": "Which choice most effectively uses data from the graph to complete the statement?",
+      "options": [
+        {
+          "key": "A",
+          "text": "the same number of volcanoes active since 1800 as Tanzania."
+        },
+        {
+          "key": "B",
+          "text": "no volcanoes active since 1800."
+        },
+        {
+          "key": "C",
+          "text": "more volcanoes that have been active since 1960 than Tanzania has."
+        },
+        {
+          "key": "D",
+          "text": "fewer volcanoes that have been active since 1960 than Tanzania has."
+        }
+      ],
+      "options_raw": "A. the same number of volcanoes active since 1800 as Tanzania.\nB. no volcanoes active since 1800.\nC. more volcanoes that have been active since 1960 than Tanzania has.\nD. fewer volcanoes that have been active since 1960 than Tanzania has.",
+      "is_grid_in": false,
+      "correct_answer": "C",
+      "tier1_hint": "Quan sát biểu đồ và xác định đúng hai quốc gia cùng mốc thời gian từ năm 1960.",
+      "tier2_hint": "So sánh chiều cao của các cột đại diện cho số lượng núi lửa hoạt động giữa hai vùng.",
+      "tier3_hint": "Chọn đáp án phản ánh đúng mối quan hệ lớn hơn/nhỏ hơn giữa hai số liệu trên đồ thị.",
+      "strategic_tip": "Đọc chính xác cột chú giải và số liệu tương ứng của hai quốc gia.",
+      "level1_tip": "Quan sát biểu đồ và xác định đúng hai quốc gia cùng mốc thời gian từ năm 1960.",
+      "level2_hint": "So sánh chiều cao của các cột đại diện cho số lượng núi lửa hoạt động giữa hai vùng.",
+      "level3_solution": "Chọn đáp án phản ánh đúng mối quan hệ lớn hơn/nhỏ hơn giữa hai số liệu trên đồ thị.",
+      "pdf_page": 6
+    },
+    {
+      "id": 10,
+      "master_id": "M10",
+      "q_number": 10,
+      "q_label": "Q10",
+      "module_code": "RW_Module1",
+      "module_title": "Reading & Writing: Module 1",
+      "section": "Reading and Writing",
+      "module_num": 1,
+      "topic": "Command of Evidence (Quotation)",
+      "passage": "Editor Jared Shurin's 2023 anthology The Big Book of Cyberpunk... Shurin defines cyberpunk as a subgenre concerning 'the influence of technology on human affairs'; however, some critics assert that cyberpunk is a literary movement that is in large part aesthetic rather than idea driven.",
+      "prompt": "Which quotation from a literary critic would be the most effective evidence in support of the underlined claim?",
+      "options": [
+        {
+          "key": "A",
+          "text": "'Not all the stories anthologized in The Big Book of Cyberpunk were first published in journals...'"
+        },
+        {
+          "key": "B",
+          "text": "'The stories in The Big Book of Cyberpunk share a number of common themes...'"
+        },
+        {
+          "key": "C",
+          "text": "'Shurin's characterization of cyberpunk is remarkably generous...'"
+        },
+        {
+          "key": "D",
+          "text": "'A key component of cyberpunk that differentiates it from other subgenres of science fiction is an affection for the totems of 1980s pop culture, such as the mirrored sunglasses that were then popular.'"
+        }
+      ],
+      "options_raw": "A. 'Not all the stories anthologized in The Big Book of Cyberpunk were first published in journals...'\nB. 'The stories in The Big Book of Cyberpunk share a number of common themes...'\nC. 'Shurin's characterization of cyberpunk is remarkably generous...'\nD. 'A key component of cyberpunk that differentiates it from other subgenres of science fiction is an affection for the totems of 1980s pop culture, such as the mirrored sunglasses that were then popular.'",
+      "is_grid_in": false,
+      "correct_answer": "D",
+      "tier1_hint": "Đọc kỹ yêu cầu câu hỏi về yếu tố thẩm mỹ hoặc biểu tượng phong cách.",
+      "tier2_hint": "Tìm câu trích dẫn chứa các từ miêu tả dáng vẻ bên ngoài, phụ kiện hoặc yếu tố văn hóa đại chúng.",
+      "tier3_hint": "Loại trừ các trích dẫn chỉ nói về chức năng kỹ thuật; chọn câu nhấn mạnh khía cạnh phong cách/thẩm mỹ.",
+      "strategic_tip": "Bằng chứng hỗ trợ phải trực tiếp chứng minh tính chất 'aesthetic' (thẩm mỹ).",
+      "level1_tip": "Đọc kỹ yêu cầu câu hỏi về yếu tố thẩm mỹ hoặc biểu tượng phong cách.",
+      "level2_hint": "Tìm câu trích dẫn chứa các từ miêu tả dáng vẻ bên ngoài, phụ kiện hoặc yếu tố văn hóa đại chúng.",
+      "level3_solution": "Loại trừ các trích dẫn chỉ nói về chức năng kỹ thuật; chọn câu nhấn mạnh khía cạnh phong cách/thẩm mỹ.",
+      "pdf_page": 6
+    },
+    {
+      "id": 11,
+      "master_id": "M11",
+      "q_number": 11,
+      "q_label": "Q11",
+      "module_code": "RW_Module1",
+      "module_title": "Reading & Writing: Module 1",
+      "section": "Reading and Writing",
+      "module_num": 1,
+      "topic": "Command of Evidence (Table Data)",
+      "passage": "Employment in Tribal Economies in December 2017 and December 2023... Between end-of-year 2017 and end-of-year 2023, the percentage of tribal employees working in the public sector increased, from 34.0% to 34.6%, while the percentage working in the business sector declined from 66.0% to 65.4%.",
+      "prompt": "Which statement about the decline in the percentage of tribal employees working in the business sector is best supported by information in the table?",
+      "options": [
+        {
+          "key": "A",
+          "text": "didn't result from an overall contraction of that sector, since the total number of employees in that sector increased by several thousand during this period."
+        },
+        {
+          "key": "B",
+          "text": "It was offset by changes in leisure and hospitality businesses..."
+        },
+        {
+          "key": "C",
+          "text": "It was driven primarily by changes in businesses classified as 'other'..."
+        },
+        {
+          "key": "D",
+          "text": "It resulted from widespread workforce redistributions..."
+        }
+      ],
+      "options_raw": "A. didn't result from an overall contraction of that sector, since the total number of employees in that sector increased by several thousand during this period.\nB. It was offset by changes in leisure and hospitality businesses...\nC. It was driven primarily by changes in businesses classified as 'other'...\nD. It resulted from widespread workforce redistributions...",
+      "is_grid_in": false,
+      "correct_answer": "A",
+      "tier1_hint": "Định vị ngành nghề và khoảng thời gian được đề cập trong bảng số liệu.",
+      "tier2_hint": "So sánh giá trị nhân viên thực tế giữa các mốc năm trong ngành kinh doanh.",
+      "tier3_hint": "Chọn đáp án nêu đúng sự thay đổi tăng/giảm dựa trên phép trừ số liệu chính xác trong bảng.",
+      "strategic_tip": "Tỷ lệ % giảm không có nghĩa là số lượng tuyệt đối giảm nếu tổng quy mô tăng.",
+      "level1_tip": "Định vị ngành nghề và khoảng thời gian được đề cập trong bảng số liệu.",
+      "level2_hint": "So sánh giá trị nhân viên thực tế giữa các mốc năm trong ngành kinh doanh.",
+      "level3_solution": "Chọn đáp án nêu đúng sự thay đổi tăng/giảm dựa trên phép trừ số liệu chính xác trong bảng.",
+      "pdf_page": 7
+    },
+    {
+      "id": 12,
+      "master_id": "M12",
+      "q_number": 12,
+      "q_label": "Q12",
+      "module_code": "RW_Module1",
+      "module_title": "Reading & Writing: Module 1",
+      "section": "Reading and Writing",
+      "module_num": 1,
+      "topic": "Command of Evidence (Chart Interpretation)",
+      "passage": "Tax Penalties Assessed on Private Foundations That Filed Form 4720, by Reason, 2003-2005... Out of the organizations that filed Form 990-PF in the years 2003-2005...",
+      "prompt": "Which choice most effectively uses data from the graph to complete the assertion?",
+      "options": [
+        {
+          "key": "A",
+          "text": "those that filed Form 4720 because they had excess holdings paid a larger penalty..."
+        },
+        {
+          "key": "B",
+          "text": "those that filed Form 4720 because they engaged in self-dealing..."
+        },
+        {
+          "key": "C",
+          "text": "those that filed Form 4720 in 2003 because they failed to meet the minimum requirement collectively paid a larger percentage of the total penalty assessed that year than those that filed Form 4720 in 2005 for the same reason."
+        },
+        {
+          "key": "D",
+          "text": "those that filed Form 4720 in 2005 because..."
+        }
+      ],
+      "options_raw": "A. those that filed Form 4720 because they had excess holdings paid a larger penalty...\nB. those that filed Form 4720 because they engaged in self-dealing...\nC. those that filed Form 4720 in 2003 because they failed to meet the minimum requirement collectively paid a larger percentage of the total penalty assessed that year than those that filed Form 4720 in 2005 for the same reason.\nD. those that filed Form 4720 in 2005 because...",
+      "is_grid_in": false,
+      "correct_answer": "C",
+      "tier1_hint": "Chú ý chỉ số phần trăm do 'undistributed income' trên biểu đồ qua các mốc năm.",
+      "tier2_hint": "So sánh tỉ lệ giữa hai năm được hỏi (2003 và 2005) để xem năm nào cao hơn.",
+      "tier3_hint": "Chọn đáp án phản ánh chính xác xu hướng biến động số liệu được thể hiện trên đồ thị.",
+      "strategic_tip": "Đọc đúng cột năm (2003 vs 2005) và nhóm lý do bị phạt.",
+      "level1_tip": "Chú ý chỉ số phần trăm do 'undistributed income' trên biểu đồ qua các mốc năm.",
+      "level2_hint": "So sánh tỉ lệ giữa hai năm được hỏi (2003 và 2005) để xem năm nào cao hơn.",
+      "level3_solution": "Chọn đáp án phản ánh chính xác xu hướng biến động số liệu được thể hiện trên đồ thị.",
+      "pdf_page": 8
+    },
+    {
+      "id": 13,
+      "master_id": "M13",
+      "q_number": 13,
+      "q_label": "Q13",
+      "module_code": "RW_Module1",
+      "module_title": "Reading & Writing: Module 1",
+      "section": "Reading and Writing",
+      "module_num": 1,
+      "topic": "Command of Evidence (Literary Text)",
+      "passage": "Philoctetes is a play by Sophocles... Odysseus suggests that the plan for returning with Philoctetes rests on Neoptolemus not having been part of the group that abandoned him:",
+      "prompt": "Which quotation from Philoctetes most effectively illustrates the claim?",
+      "options": [
+        {
+          "key": "A",
+          "text": "'Since the prize of victory is so dear, / Endure it...'"
+        },
+        {
+          "key": "B",
+          "text": "'Go near now silently, and make me know...'"
+        },
+        {
+          "key": "C",
+          "text": "'Now let me show, why thine approach to him / Is safe and trustful as mine cannot be / Thou didst sail forth, not to redeem thine oath, / Nor by constraint, nor with the foremost band.'"
+        },
+        {
+          "key": "D",
+          "text": "'No moment for this talk, / Lest he discern my coming...'"
+        }
+      ],
+      "options_raw": "A. 'Since the prize of victory is so dear, / Endure it...'\nB. 'Go near now silently, and make me know...'\nC. 'Now let me show, why thine approach to him / Is safe and trustful as mine cannot be / Thou didst sail forth, not to redeem thine oath, / Nor by constraint, nor with the foremost band.'\nD. 'No moment for this talk, / Lest he discern my coming...'",
+      "is_grid_in": false,
+      "correct_answer": "C",
+      "tier1_hint": "Xác định nguyên nhân dẫn đến sự tin tưởng của nhân vật được hỏi trong tác phẩm.",
+      "tier2_hint": "Tìm câu thoại hoặc lời kể giải thích lý do nhân vật không bị coi là người phản bội.",
+      "tier3_hint": "Chọn trích dẫn thể hiện rõ việc nhân vật không tham gia vào hành động bỏ rơi trước đó.",
+      "strategic_tip": "Chọn câu thoại thể hiện rõ luận điểm Neoptolemus không thuộc nhóm cũ.",
+      "level1_tip": "Xác định nguyên nhân dẫn đến sự tin tưởng của nhân vật được hỏi trong tác phẩm.",
+      "level2_hint": "Tìm câu thoại hoặc lời kể giải thích lý do nhân vật không bị coi là người phản bội.",
+      "level3_solution": "Chọn trích dẫn thể hiện rõ việc nhân vật không tham gia vào hành động bỏ rơi trước đó.",
+      "pdf_page": 9
+    },
+    {
+      "id": 14,
+      "master_id": "M14",
+      "q_number": 14,
+      "q_label": "Q14",
+      "module_code": "RW_Module1",
+      "module_title": "Reading & Writing: Module 1",
+      "section": "Reading and Writing",
+      "module_num": 1,
+      "topic": "Text Completion / Logical Inference",
+      "passage": "Louis-Ferdinand Céline's 1932 novel Journey to the End of the Night is regularly described as autobiographical. That characterization is apt... Much of the novel is pure invention, and readers who overlook this fact and instead focus excessively on correspondences between the novel and Céline's life can thus _____",
+      "prompt": "Which choice most logically completes the text?",
+      "options": [
+        {
+          "key": "A",
+          "text": "fail to appreciate how much creativity Céline shows in the book."
+        },
+        {
+          "key": "B",
+          "text": "overemphasize the extent to which Céline took inspiration from earlier writers."
+        },
+        {
+          "key": "C",
+          "text": "refuse to acknowledge that Céline drew on real-world material..."
+        },
+        {
+          "key": "D",
+          "text": "misrepresent Journey to the End of the Night as being more widely read than it actually was."
+        }
+      ],
+      "options_raw": "A. fail to appreciate how much creativity Céline shows in the book.\nB. overemphasize the extent to which Céline took inspiration from earlier writers.\nC. refuse to acknowledge that Céline drew on real-world material...\nD. misrepresent Journey to the End of the Night as being more widely read than it actually was.",
+      "is_grid_in": false,
+      "correct_answer": "A",
+      "tier1_hint": "Xác định mối quan hệ logic giữa việc tập trung vào yếu tố tự thuật và yếu tố sáng tác.",
+      "tier2_hint": "Chú ý từ nối đối lập chỉ ra hậu quả của việc bỏ qua khía cạnh hư cấu trong nghiên cứu.",
+      "tier3_hint": "Chọn câu kết luận chỉ ra sự thiếu sót trong việc đánh giá toàn diện tác phẩm nếu chỉ nhìn một chiều.",
+      "strategic_tip": "Suy luận logic: Xem nhẹ 'pure invention' -> Bỏ qua tính sáng tạo (creativity).",
+      "level1_tip": "Xác định mối quan hệ logic giữa việc tập trung vào yếu tố tự thuật và yếu tố sáng tác.",
+      "level2_hint": "Chú ý từ nối đối lập chỉ ra hậu quả của việc bỏ qua khía cạnh hư cấu trong nghiên cứu.",
+      "level3_solution": "Chọn câu kết luận chỉ ra sự thiếu sót trong việc đánh giá toàn diện tác phẩm nếu chỉ nhìn một chiều.",
+      "pdf_page": 9
+    },
+    {
+      "id": 15,
+      "master_id": "M15",
+      "q_number": 15,
+      "q_label": "Q15",
+      "module_code": "RW_Module1",
+      "module_title": "Reading & Writing: Module 1",
+      "section": "Reading and Writing",
+      "module_num": 1,
+      "topic": "Text Completion / Inference",
+      "passage": "Last-mile delivery... is subject to increasing pressure... One advance is the use of self-service lockers. This approach, while convenient, introduces new obstacles (e.g., placement is challenging). It is therefore likely that _____",
+      "prompt": "Which choice most logically completes the text?",
+      "options": [
+        {
+          "key": "A",
+          "text": "delivery companies will need to keep experimenting with new ideas for last-mile delivery if they hope to keep pace with consumers' expectations."
+        },
+        {
+          "key": "B",
+          "text": "delivery companies will continue promising next-day delivery..."
+        },
+        {
+          "key": "C",
+          "text": "advances in last-mile technologies will slow..."
+        },
+        {
+          "key": "D",
+          "text": "innovations in the use of self-service lockers will stall..."
+        }
+      ],
+      "options_raw": "A. delivery companies will need to keep experimenting with new ideas for last-mile delivery if they hope to keep pace with consumers' expectations.\nB. delivery companies will continue promising next-day delivery...\nC. advances in last-mile technologies will slow...\nD. innovations in the use of self-service lockers will stall...",
+      "is_grid_in": false,
+      "correct_answer": "A",
+      "tier1_hint": "Phân tích lập luận của tác giả về tác động của biến đổi khí hậu đối với loài động vật.",
+      "tier2_hint": "Chú ý các bằng chứng được đưa ra ở câu trước về sự thay đổi nguồn thức ăn.",
+      "tier3_hint": "Chọn kết luận nối tiếp hợp lý, thể hiện sự suy giảm hoặc thay đổi hành vi tương ứng.",
+      "strategic_tip": "Kết luận hợp lý: Giải pháp hiện tại gặp thách thức -> Cần tiếp tục thử nghiệm ý tưởng mới.",
+      "level1_tip": "Phân tích lập luận của tác giả về tác động của biến đổi khí hậu đối với loài động vật.",
+      "level2_hint": "Chú ý các bằng chứng được đưa ra ở câu trước về sự thay đổi nguồn thức ăn.",
+      "level3_solution": "Chọn kết luận nối tiếp hợp lý, thể hiện sự suy giảm hoặc thay đổi hành vi tương ứng.",
+      "pdf_page": 9
+    },
+    {
+      "id": 16,
+      "master_id": "M16",
+      "q_number": 16,
+      "q_label": "Q16",
+      "module_code": "RW_Module1",
+      "module_title": "Reading & Writing: Module 1",
+      "section": "Reading and Writing",
+      "module_num": 1,
+      "topic": "Standard English Conventions (Relative Clauses)",
+      "passage": "With an average summer temperature of 82.5 degrees Fahrenheit, Nicosia is one European _____ travelers recommend, especially from June to September.",
+      "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": [
+        {
+          "key": "A",
+          "text": "city, which"
+        },
+        {
+          "key": "B",
+          "text": "city in which"
+        },
+        {
+          "key": "C",
+          "text": "city that"
+        },
+        {
+          "key": "D",
+          "text": "city, that"
+        }
+      ],
+      "options_raw": "A. city, which\nB. city in which\nC. city that\nD. city, that",
+      "is_grid_in": false,
+      "correct_answer": "C",
+      "tier1_hint": "Xác định mệnh đề quan hệ bổ nghĩa cho danh từ chỉ vật hay chỉ người đứng trước.",
+      "tier2_hint": "Kiểm tra xem động từ trong mệnh đề quan hệ chia ở số ít hay số nhiều dựa vào danh từ trung tâm.",
+      "tier3_hint": "Loại bỏ các đại từ quan hệ không phù hợp; chọn cấu trúc ngữ pháp chuẩn xác.",
+      "strategic_tip": "Dùng 'that' không dấu phẩy cho mệnh đề quan hệ giới hạn.",
+      "level1_tip": "Xác định mệnh đề quan hệ bổ nghĩa cho danh từ chỉ vật hay chỉ người đứng trước.",
+      "level2_hint": "Kiểm tra xem động từ trong mệnh đề quan hệ chia ở số ít hay số nhiều dựa vào danh từ trung tâm.",
+      "level3_solution": "Loại bỏ các đại từ quan hệ không phù hợp; chọn cấu trúc ngữ pháp chuẩn xác.",
+      "pdf_page": 10
+    },
+    {
+      "id": 17,
+      "master_id": "M17",
+      "q_number": 17,
+      "q_label": "Q17",
+      "module_code": "RW_Module1",
+      "module_title": "Reading & Writing: Module 1",
+      "section": "Reading and Writing",
+      "module_num": 1,
+      "topic": "Standard English Conventions (Verb Tense & Progress)",
+      "passage": "Nanoengineers have developed synthesized mesoporous silica nanoparticles... As nanotechnology evolves, medical technology _____ to evolve as well.",
+      "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": [
+        {
+          "key": "A",
+          "text": "had likely continued"
+        },
+        {
+          "key": "B",
+          "text": "would likely have continued"
+        },
+        {
+          "key": "C",
+          "text": "had likely been continuing"
+        },
+        {
+          "key": "D",
+          "text": "will likely continue"
+        }
+      ],
+      "options_raw": "A. had likely continued\nB. would likely have continued\nC. had likely been continuing\nD. will likely continue",
+      "is_grid_in": false,
+      "correct_answer": "D",
+      "tier1_hint": "Xác định mốc thời gian và tính liên tục của hành động trong bài đọc.",
+      "tier2_hint": "Đối chiếu thì của các động từ xung quanh để bảo đảm tính nhất quán về thời gian.",
+      "tier3_hint": "Chọn dạng động từ thể hiện sự tiếp diễn hoặc hoàn thành phù hợp với bối cảnh.",
+      "strategic_tip": "Sự tương thích thì: As [Present], [Future].",
+      "level1_tip": "Xác định mốc thời gian và tính liên tục của hành động trong bài đọc.",
+      "level2_hint": "Đối chiếu thì của các động từ xung quanh để bảo đảm tính nhất quán về thời gian.",
+      "level3_solution": "Chọn dạng động từ thể hiện sự tiếp diễn hoặc hoàn thành phù hợp với bối cảnh.",
+      "pdf_page": 10
+    },
+    {
+      "id": 18,
+      "master_id": "M18",
+      "q_number": 18,
+      "q_label": "Q18",
+      "module_code": "RW_Module1",
+      "module_title": "Reading & Writing: Module 1",
+      "section": "Reading and Writing",
+      "module_num": 1,
+      "topic": "Standard English Conventions (Punctuation / Dashes)",
+      "passage": "To more easily balance the weight of her body on her toes... Anna Pavlova redesigned her pointe shoes. The modifications she made—adding a stiffened leather sole and hardened toe _____ began the modernization of ballet's iconic footwear.",
+      "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": [
+        {
+          "key": "A",
+          "text": "box"
+        },
+        {
+          "key": "B",
+          "text": "box—"
+        },
+        {
+          "key": "C",
+          "text": "box,"
+        },
+        {
+          "key": "D",
+          "text": "box:"
+        }
+      ],
+      "options_raw": "A. box\nB. box—\nC. box,\nD. box:",
+      "is_grid_in": false,
+      "correct_answer": "B",
+      "tier1_hint": "Xác định thành phần bổ sung không thiết yếu (non-essential clause) trong câu.",
+      "tier2_hint": "Nhớ quy tắc cặp dấu tương đương: nếu đã mở đầu bằng dấu gạch ngang thì phải đóng bằng dấu gạch ngang.",
+      "tier3_hint": "Loại bỏ các phương án dùng hỗn hợp dấu phẩy và gạch ngang không đồng bộ.",
+      "strategic_tip": "Dấu gạch ngang đi theo cặp: — [thông tin bổ sung] —.",
+      "level1_tip": "Xác định thành phần bổ sung không thiết yếu (non-essential clause) trong câu.",
+      "level2_hint": "Nhớ quy tắc cặp dấu tương đương: nếu đã mở đầu bằng dấu gạch ngang thì phải đóng bằng dấu gạch ngang.",
+      "level3_solution": "Loại bỏ các phương án dùng hỗn hợp dấu phẩy và gạch ngang không đồng bộ.",
+      "pdf_page": 10
+    },
+    {
+      "id": 19,
+      "master_id": "M19",
+      "q_number": 19,
+      "q_label": "Q19",
+      "module_code": "RW_Module1",
+      "module_title": "Reading & Writing: Module 1",
+      "section": "Reading and Writing",
+      "module_num": 1,
+      "topic": "Standard English Conventions (Colons)",
+      "passage": "The purpose of these ancient games was _____ provide entertainment during leisure time, to reflect cultural beliefs, and to develop strategic thinking skills among players.",
+      "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": [
+        {
+          "key": "A",
+          "text": "threefold. To"
+        },
+        {
+          "key": "B",
+          "text": "threefold: to"
+        },
+        {
+          "key": "C",
+          "text": "threefold; to"
+        },
+        {
+          "key": "D",
+          "text": "threefold to"
+        }
+      ],
+      "options_raw": "A. threefold. To\nB. threefold: to\nC. threefold; to\nD. threefold to",
+      "is_grid_in": false,
+      "correct_answer": "B",
+      "tier1_hint": "Kiểm tra xem vế trước vị trí cần điền có phải là một mệnh đề độc lập hoàn chỉnh hay không.",
+      "tier2_hint": "Dấu hai chấm được dùng để giải thích hoặc chi tiết hóa nội dung đã nêu ở mệnh đề độc lập trước đó.",
+      "tier3_hint": "Loại bỏ phương án dùng dấu phẩy nối hai mệnh đề độc lập (lỗi comma splice).",
+      "strategic_tip": "Dấu hai chấm (:) báo hiệu danh sách giải thích phía sau.",
+      "level1_tip": "Kiểm tra xem vế trước vị trí cần điền có phải là một mệnh đề độc lập hoàn chỉnh hay không.",
+      "level2_hint": "Dấu hai chấm được dùng để giải thích hoặc chi tiết hóa nội dung đã nêu ở mệnh đề độc lập trước đó.",
+      "level3_solution": "Loại bỏ phương án dùng dấu phẩy nối hai mệnh đề độc lập (lỗi comma splice).",
+      "pdf_page": 11
+    },
+    {
+      "id": 20,
+      "master_id": "M20",
+      "q_number": 20,
+      "q_label": "Q20",
+      "module_code": "RW_Module1",
+      "module_title": "Reading & Writing: Module 1",
+      "section": "Reading and Writing",
+      "module_num": 1,
+      "topic": "Standard English Conventions (Semicolons & Colons)",
+      "passage": "Extensive radiocarbon dating of reed samples from Caral confirmed Ruth Shady Solis's hypothesis about the Peruvian site's _____ nearly 5,000 years ago, the ancient city preceded the Olmec civilization to the north by a full millennium...",
+      "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": [
+        {
+          "key": "A",
+          "text": "age, built"
+        },
+        {
+          "key": "B",
+          "text": "age: built"
+        },
+        {
+          "key": "C",
+          "text": "age and built"
+        },
+        {
+          "key": "D",
+          "text": "age built"
+        }
+      ],
+      "options_raw": "A. age, built\nB. age: built\nC. age and built\nD. age built",
+      "is_grid_in": false,
+      "correct_answer": "B",
+      "tier1_hint": "Phân tích mối quan hệ giữa hai mệnh đề độc lập đứng trước và sau vị trí khoảng trống.",
+      "tier2_hint": "Nếu hai mệnh đề độc lập không có liên từ FANBOYS thì phải dùng dấu chấm phẩy hoặc dấu chấm.",
+      "tier3_hint": "Loại bỏ phương án chỉ dùng dấu phẩy đơn lẻ giữa hai mệnh đề độc lập.",
+      "strategic_tip": "Dấu hai chấm nối 2 mệnh đề độc lập khi mệnh đề 2 giải thích cho mệnh đề 1.",
+      "level1_tip": "Phân tích mối quan hệ giữa hai mệnh đề độc lập đứng trước và sau vị trí khoảng trống.",
+      "level2_hint": "Nếu hai mệnh đề độc lập không có liên từ FANBOYS thì phải dùng dấu chấm phẩy hoặc dấu chấm.",
+      "level3_solution": "Loại bỏ phương án chỉ dùng dấu phẩy đơn lẻ giữa hai mệnh đề độc lập.",
+      "pdf_page": 11
+    },
+    {
+      "id": 21,
+      "master_id": "M21",
+      "q_number": 21,
+      "q_label": "Q21",
+      "module_code": "RW_Module1",
+      "module_title": "Reading & Writing: Module 1",
+      "section": "Reading and Writing",
+      "module_num": 1,
+      "topic": "Standard English Conventions (Subject-Verb Agreement)",
+      "passage": "Commercial applications of this new synthetic dye technology—beginning with the purple dye called mauve, discovered by William Perkin in 1856— _____ responsible for launching what one science historian calls a 'manufacturing revolution based on chemistry.'",
+      "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": [
+        {
+          "key": "A",
+          "text": "has been"
+        },
+        {
+          "key": "B",
+          "text": "is"
+        },
+        {
+          "key": "C",
+          "text": "were"
+        },
+        {
+          "key": "D",
+          "text": "was"
+        }
+      ],
+      "options_raw": "A. has been\nB. is\nC. were\nD. was",
+      "is_grid_in": false,
+      "correct_answer": "C",
+      "tier1_hint": "Xác định chủ ngữ chính của câu bằng cách gạch bỏ các cụm giới từ nhiễu đứng giữa.",
+      "tier2_hint": "Kiểm tra xem chủ ngữ chính là danh từ số ít hay số nhiều.",
+      "tier3_hint": "Chọn dạng động từ hòa hợp chính xác về số với chủ ngữ trung tâm.",
+      "strategic_tip": "Gạch bỏ thông tin xen giữa trong hai dấu gạch ngang để xác định chủ ngữ chính.",
+      "level1_tip": "Xác định chủ ngữ chính của câu bằng cách gạch bỏ các cụm giới từ nhiễu đứng giữa.",
+      "level2_hint": "Kiểm tra xem chủ ngữ chính là danh từ số ít hay số nhiều.",
+      "level3_solution": "Chọn dạng động từ hòa hợp chính xác về số với chủ ngữ trung tâm.",
+      "pdf_page": 11
+    },
+    {
+      "id": 22,
+      "master_id": "M22",
+      "q_number": 22,
+      "q_label": "Q22",
+      "module_code": "RW_Module1",
+      "module_title": "Reading & Writing: Module 1",
+      "section": "Reading and Writing",
+      "module_num": 1,
+      "topic": "Transitions (Sequence & Step)",
+      "passage": "How does a clear evening become foggy? First, the ground releases heat, which radiates upward. This causes the air near the ground to cool. _____ tiny water droplets begin to form as the cooling air reaches its dew point... Finally, as more droplets accumulate, a visible layer of fog develops.",
+      "prompt": "Which choice completes the text with the most logical transition?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Similarly,"
+        },
+        {
+          "key": "B",
+          "text": "Lastly,"
+        },
+        {
+          "key": "C",
+          "text": "Instead,"
+        },
+        {
+          "key": "D",
+          "text": "Next,"
+        }
+      ],
+      "options_raw": "A. Similarly,\nB. Lastly,\nC. Instead,\nD. Next,",
+      "is_grid_in": false,
+      "correct_answer": "D",
+      "tier1_hint": "Phân tích mối quan hệ logic giữa hai câu văn đứng trước và sau từ nối.",
+      "tier2_hint": "Xác định xem câu sau đưa ra kết quả, sự đối lập, hay bước tiếp theo trong trình tự.",
+      "tier3_hint": "Chọn từ nối thể hiện chính xác mối quan hệ trình tự/kết quả được thiết lập.",
+      "strategic_tip": "Từ nối chỉ thứ tự các bước trong quy trình: Next.",
+      "level1_tip": "Phân tích mối quan hệ logic giữa hai câu văn đứng trước và sau từ nối.",
+      "level2_hint": "Xác định xem câu sau đưa ra kết quả, sự đối lập, hay bước tiếp theo trong trình tự.",
+      "level3_solution": "Chọn từ nối thể hiện chính xác mối quan hệ trình tự/kết quả được thiết lập.",
+      "pdf_page": 12
+    },
+    {
+      "id": 23,
+      "master_id": "M23",
+      "q_number": 23,
+      "q_label": "Q23",
+      "module_code": "RW_Module1",
+      "module_title": "Reading & Writing: Module 1",
+      "section": "Reading and Writing",
+      "module_num": 1,
+      "topic": "Transitions (Elaboration & Specifics)",
+      "passage": "Scientists studying forest restoration have discovered that trees depend on complex partnerships with microscopic organisms for survival. The researchers found that special fungi called endophytes live inside tree leaves and serve as a defense mechanism. _____ these endophytes help by fighting off diseases and boosting the tree's immune system.",
+      "prompt": "Which choice completes the text with the most logical transition?",
+      "options": [
+        {
+          "key": "A",
+          "text": "In conclusion,"
+        },
+        {
+          "key": "B",
+          "text": "Nevertheless,"
+        },
+        {
+          "key": "C",
+          "text": "Alternatively,"
+        },
+        {
+          "key": "D",
+          "text": "Specifically,"
+        }
+      ],
+      "options_raw": "A. In conclusion,\nB. Nevertheless,\nC. Alternatively,\nD. Specifically,",
+      "is_grid_in": false,
+      "correct_answer": "D",
+      "tier1_hint": "Xác định vai trò của câu sau đối với ý tưởng tổng quát đã phát biểu ở câu trước.",
+      "tier2_hint": "Câu sau đưa ra thông tin chi tiết hoặc ví dụ cụ thể để làm rõ hơn cho nhận định trước.",
+      "tier3_hint": "Chọn từ nối mang nghĩa cụ thể hóa, minh họa hoặc diễn giải thêm.",
+      "strategic_tip": "Specifically = đi vào chi tiết minh họa cụ thể.",
+      "level1_tip": "Xác định vai trò của câu sau đối với ý tưởng tổng quát đã phát biểu ở câu trước.",
+      "level2_hint": "Câu sau đưa ra thông tin chi tiết hoặc ví dụ cụ thể để làm rõ hơn cho nhận định trước.",
+      "level3_solution": "Chọn từ nối mang nghĩa cụ thể hóa, minh họa hoặc diễn giải thêm.",
+      "pdf_page": 12
+    },
+    {
+      "id": 24,
+      "master_id": "M24",
+      "q_number": 24,
+      "q_label": "Q24",
+      "module_code": "RW_Module1",
+      "module_title": "Reading & Writing: Module 1",
+      "section": "Reading and Writing",
+      "module_num": 1,
+      "topic": "Rhetorical Synthesis / Student Notes",
+      "passage": "Notes: Pistol shrimp are small marine crustaceans that hunt using a specialized oversized claw. When the claw snaps shut rapidly, it pushes water... bubble pops forcefully... shock waves powerful enough to stun small fish.",
+      "prompt": "The student wants to introduce pistol shrimp to an audience unfamiliar with these crustaceans. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Some crustaceans use a specialized claw to create high-speed water jets..."
+        },
+        {
+          "key": "B",
+          "text": "Pistol shrimp are small marine creatures that use a specialized oversized claw to generate shock waves powerful enough to stun small fish."
+        },
+        {
+          "key": "C",
+          "text": "Pushing water through a narrow groove at extreme speeds..."
+        },
+        {
+          "key": "D",
+          "text": "Pistol shrimp are preyed on by small marine crustaceans..."
+        }
+      ],
+      "options_raw": "A. Some crustaceans use a specialized claw to create high-speed water jets...\nB. Pistol shrimp are small marine creatures that use a specialized oversized claw to generate shock waves powerful enough to stun small fish.\nC. Pushing water through a narrow groove at extreme speeds...\nD. Pistol shrimp are preyed on by small marine crustaceans...",
+      "is_grid_in": false,
+      "correct_answer": "B",
+      "tier1_hint": "Đọc kỹ yêu cầu đề bài (Goal) để biết thông tin nào cần được ưu tiên làm nổi bật.",
+      "tier2_hint": "So sánh các ghi chú với mục tiêu được chỉ định trong yêu cầu.",
+      "tier3_hint": "Chọn câu tổng hợp trực tiếp đáp ứng đúng mục tiêu đề bài mà không thừa thông tin ngoài.",
+      "strategic_tip": "Giới thiệu đối tượng mới = Nêu tên đối tượng + Định nghĩa/Đặc điểm nhận diện chính.",
+      "level1_tip": "Đọc kỹ yêu cầu đề bài (Goal) để biết thông tin nào cần được ưu tiên làm nổi bật.",
+      "level2_hint": "So sánh các ghi chú với mục tiêu được chỉ định trong yêu cầu.",
+      "level3_solution": "Chọn câu tổng hợp trực tiếp đáp ứng đúng mục tiêu đề bài mà không thừa thông tin ngoài.",
+      "pdf_page": 12
+    },
+    {
+      "id": 25,
+      "master_id": "M25",
+      "q_number": 25,
+      "q_label": "Q25",
+      "module_code": "RW_Module1",
+      "module_title": "Reading & Writing: Module 1",
+      "section": "Reading and Writing",
+      "module_num": 1,
+      "topic": "Rhetorical Synthesis / Student Notes",
+      "passage": "Notes: Elizabeth Catlett (1915-2012) was a celebrated African American artist... best known for creating sculptures and prints... New Generation is a 1992 print... Standing Mother and Child is a 1980 sculpture.",
+      "prompt": "The student wants to provide an example of one of Catlett's sculptures. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+      "options": [
+        {
+          "key": "A",
+          "text": "The print New Generation was created by celebrated artist Elizabeth Catlett in 1992."
+        },
+        {
+          "key": "B",
+          "text": "The sculpture Standing Mother and Child was created by celebrated artist Elizabeth Catlett in 1980."
+        },
+        {
+          "key": "C",
+          "text": "Artist Elizabeth Catlett is best known for creating sculptures and prints..."
+        },
+        {
+          "key": "D",
+          "text": "Elizabeth Catlett, a celebrated artist, was born in 1915."
+        }
+      ],
+      "options_raw": "A. The print New Generation was created by celebrated artist Elizabeth Catlett in 1992.\nB. The sculpture Standing Mother and Child was created by celebrated artist Elizabeth Catlett in 1980.\nC. Artist Elizabeth Catlett is best known for creating sculptures and prints...\nD. Elizabeth Catlett, a celebrated artist, was born in 1915.",
+      "is_grid_in": false,
+      "correct_answer": "B",
+      "tier1_hint": "Xác định khía cạnh cụ thể mà đề bài yêu cầu người học phải nhấn mạnh từ ghi chú.",
+      "tier2_hint": "Lọc các ghi chú liên quan đến đối tượng hoặc sự kiện được chỉ định.",
+      "tier3_hint": "Chọn câu diễn đạt ngắn gọn, tập trung vào điểm nhấn được đề bài yêu cầu.",
+      "strategic_tip": "Đọc kĩ yêu cầu cụ thể của đề bài: 'example of one of Catlett's sculptures'.",
+      "level1_tip": "Xác định khía cạnh cụ thể mà đề bài yêu cầu người học phải nhấn mạnh từ ghi chú.",
+      "level2_hint": "Lọc các ghi chú liên quan đến đối tượng hoặc sự kiện được chỉ định.",
+      "level3_solution": "Chọn câu diễn đạt ngắn gọn, tập trung vào điểm nhấn được đề bài yêu cầu.",
+      "pdf_page": 13
+    },
+    {
+      "id": 26,
+      "master_id": "M26",
+      "q_number": 26,
+      "q_label": "Q26",
+      "module_code": "RW_Module1",
+      "module_title": "Reading & Writing: Module 1",
+      "section": "Reading and Writing",
+      "module_num": 1,
+      "topic": "Rhetorical Synthesis / Student Notes",
+      "passage": "Notes: Chapantongo is a municipality in Hidalgo, Mexico... Municipalities provide public services... Chapantongo's population was 12,967 in 2020. Its population was 12,271 in 2010.",
+      "prompt": "The student wants to emphasize the 2020 population of Chapantongo. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+      "options": [
+        {
+          "key": "A",
+          "text": "As of 2020, Chapantongo was one of 84 municipalities in Hidalgo, Mexico."
+        },
+        {
+          "key": "B",
+          "text": "In 2020, the municipality of Chapantongo had a population of 12,967."
+        },
+        {
+          "key": "C",
+          "text": "Chapantongo, a municipality in Hidalgo, is responsible for providing public services..."
+        },
+        {
+          "key": "D",
+          "text": "Home to 12,271 people, the governmental region was responsible..."
+        }
+      ],
+      "options_raw": "A. As of 2020, Chapantongo was one of 84 municipalities in Hidalgo, Mexico.\nB. In 2020, the municipality of Chapantongo had a population of 12,967.\nC. Chapantongo, a municipality in Hidalgo, is responsible for providing public services...\nD. Home to 12,271 people, the governmental region was responsible...",
+      "is_grid_in": false,
+      "correct_answer": "B",
+      "tier1_hint": "Xem xét mục tiêu bài viết (ví dụ: so sánh hai nghiên cứu hay giới thiệu một phát minh).",
+      "tier2_hint": "Đối chiếu thông tin trong các ghi chú để tìm câu kết hợp đầy đủ hai vế cần so sánh.",
+      "tier3_hint": "Chọn đáp án có cấu trúc song song, truyền tải chính xác mối quan hệ giữa các dữ kiện.",
+      "strategic_tip": "Đáp án phải chứa thông tin được yêu cầu làm trọng tâm: 2020 population = 12,967.",
+      "level1_tip": "Xem xét mục tiêu bài viết (ví dụ: so sánh hai nghiên cứu hay giới thiệu một phát minh).",
+      "level2_hint": "Đối chiếu thông tin trong các ghi chú để tìm câu kết hợp đầy đủ hai vế cần so sánh.",
+      "level3_solution": "Chọn đáp án có cấu trúc song song, truyền tải chính xác mối quan hệ giữa các dữ kiện.",
+      "pdf_page": 13
+    },
+    {
+      "id": 27,
+      "master_id": "M27",
+      "q_number": 27,
+      "q_label": "Q27",
+      "module_code": "RW_Module1",
+      "module_title": "Reading & Writing: Module 1",
+      "section": "Reading and Writing",
+      "module_num": 1,
+      "topic": "Rhetorical Synthesis / Student Notes",
+      "passage": "Notes: The Future of Nostalgia is a book by Svetlana Boym... Chapter 8 explores nostalgia and Europe's largest shopping mall... Chapter 17 discusses skeptics...",
+      "prompt": "The student wants to explain what Svetlana Boym writes about in chapter 8. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Svetlana Boym's The Future of Nostalgia explores nostalgia from various angles."
+        },
+        {
+          "key": "B",
+          "text": "As Svetlana Boym writes in the seventeenth chapter..."
+        },
+        {
+          "key": "C",
+          "text": "Literary theorist Svetlana Boym explores nostalgia and Europe's largest shopping mall in chapter 8 of her book."
+        },
+        {
+          "key": "D",
+          "text": "After exploring nostalgia and Europe's largest shopping mall, Boym goes on to discuss..."
+        }
+      ],
+      "options_raw": "A. Svetlana Boym's The Future of Nostalgia explores nostalgia from various angles.\nB. As Svetlana Boym writes in the seventeenth chapter...\nC. Literary theorist Svetlana Boym explores nostalgia and Europe's largest shopping mall in chapter 8 of her book.\nD. After exploring nostalgia and Europe's largest shopping mall, Boym goes on to discuss...",
+      "is_grid_in": false,
+      "correct_answer": "C",
+      "tier1_hint": "Đọc yêu cầu để xác định đối tượng khán giả hoặc mục đích của câu văn cần viết.",
+      "tier2_hint": "Lựa chọn thông tin trong danh sách ghi chú trực tiếp phục vụ cho mục đích đó.",
+      "tier3_hint": "Chọn câu liên kết các ghi chú một cách mượt mà và đúng trọng tâm đề bài.",
+      "strategic_tip": "Chỉ chọn phương án trả lời đúng mục tiêu 'explain what Boym writes in chapter 8'.",
+      "level1_tip": "Đọc yêu cầu để xác định đối tượng khán giả hoặc mục đích của câu văn cần viết.",
+      "level2_hint": "Lựa chọn thông tin trong danh sách ghi chú trực tiếp phục vụ cho mục đích đó.",
+      "level3_solution": "Chọn câu liên kết các ghi chú một cách mượt mà và đúng trọng tâm đề bài.",
+      "pdf_page": 14
+    },
+    {
+      "id": 28,
+      "master_id": "M28",
+      "q_number": 1,
+      "q_label": "Q1",
+      "module_code": "RW_Module2",
+      "module_title": "Reading & Writing: Module 2",
+      "section": "Reading and Writing",
+      "module_num": 2,
+      "topic": "Vocabulary in Context (Interplay)",
+      "passage": "Soil conditions, weather patterns, market trends, input costs, labor availability, equipment maintenance, and biological cycles are all variables that farmers must consider separately and in terms of how they may affect each other, and it is this _____ of factors in particular that makes successful farm management so challenging.",
+      "prompt": "Which choice completes the text with the most logical and precise word or phrase?",
+      "options": [
+        {
+          "key": "A",
+          "text": "neglect"
+        },
+        {
+          "key": "B",
+          "text": "misinterpretation"
+        },
+        {
+          "key": "C",
+          "text": "resolution"
+        },
+        {
+          "key": "D",
+          "text": "interplay"
+        }
+      ],
+      "options_raw": "A. neglect\nB. misinterpretation\nC. resolution\nD. interplay",
+      "is_grid_in": false,
+      "correct_answer": "D",
+      "tier1_hint": "Xem xét sự tác động qua lại giữa hai yếu tố sinh học/môi trường được đề cập.",
+      "tier2_hint": "Cần một danh từ miêu tả sự tương tác hoặc ảnh hưởng lẫn nhau giữa các thành phần.",
+      "tier3_hint": "Loại các từ chỉ sự tách biệt hay xung đột; chọn từ thể hiện mối quan hệ tương tác.",
+      "strategic_tip": "Interplay = the way in which two or more things have an effect on each other.",
+      "level1_tip": "Xem xét sự tác động qua lại giữa hai yếu tố sinh học/môi trường được đề cập.",
+      "level2_hint": "Cần một danh từ miêu tả sự tương tác hoặc ảnh hưởng lẫn nhau giữa các thành phần.",
+      "level3_solution": "Loại các từ chỉ sự tách biệt hay xung đột; chọn từ thể hiện mối quan hệ tương tác.",
+      "pdf_page": 16
+    },
+    {
+      "id": 29,
+      "master_id": "M29",
+      "q_number": 2,
+      "q_label": "Q2",
+      "module_code": "RW_Module2",
+      "module_title": "Reading & Writing: Module 2",
+      "section": "Reading and Writing",
+      "module_num": 2,
+      "topic": "Vocabulary in Context (Efficiency & Output)",
+      "passage": "To maximize throughput, package distribution centers employ advanced scheduling systems and strategic staging areas... are so efficient that even when delivery trucks arrive with short notice, goods can be processed rapidly.",
+      "prompt": "Which choice completes the text with the most logical and precise word or phrase?",
+      "options": [
+        {
+          "key": "A",
+          "text": "throughput"
+        },
+        {
+          "key": "B",
+          "text": "staffing"
+        },
+        {
+          "key": "C",
+          "text": "overhead"
+        },
+        {
+          "key": "D",
+          "text": "liability"
+        }
+      ],
+      "options_raw": "A. throughput\nB. staffing\nC. overhead\nD. liability",
+      "is_grid_in": false,
+      "correct_answer": "A",
+      "tier1_hint": "Chú ý bối cảnh vận chuyển và xử lý hàng hóa qua hệ thống cảng/tuyến đường.",
+      "tier2_hint": "Cần một danh từ chỉ khối lượng hoặc năng suất hàng hóa được xử lý trong một đơn vị thời gian.",
+      "tier3_hint": "Loại bỏ từ chỉ khoảng cách hay chi phí; chọn từ miêu tả lưu lượng/năng suất thông qua.",
+      "strategic_tip": "Throughput = the amount of material or items passing through a system or process.",
+      "level1_tip": "Chú ý bối cảnh vận chuyển và xử lý hàng hóa qua hệ thống cảng/tuyến đường.",
+      "level2_hint": "Cần một danh từ chỉ khối lượng hoặc năng suất hàng hóa được xử lý trong một đơn vị thời gian.",
+      "level3_solution": "Loại bỏ từ chỉ khoảng cách hay chi phí; chọn từ miêu tả lưu lượng/năng suất thông qua.",
+      "pdf_page": 16
+    },
+    {
+      "id": 30,
+      "master_id": "M30",
+      "q_number": 3,
+      "q_label": "Q3",
+      "module_code": "RW_Module2",
+      "module_title": "Reading & Writing: Module 2",
+      "section": "Reading and Writing",
+      "module_num": 2,
+      "topic": "Vocabulary in Context (Parameters)",
+      "passage": "Researchers have developed algorithms that take into account how various _____ influence production schedules, allowing rapid solution generation for manufacturing planning problems. The algorithms help identify efficient production schedules by processing those quantifiable inputs...",
+      "prompt": "Which choice completes the text with the most logical and precise word or phrase?",
+      "options": [
+        {
+          "key": "A",
+          "text": "optimizations"
+        },
+        {
+          "key": "B",
+          "text": "predictions"
+        },
+        {
+          "key": "C",
+          "text": "parameters"
+        },
+        {
+          "key": "D",
+          "text": "liabilities"
+        }
+      ],
+      "options_raw": "A. optimizations\nB. predictions\nC. parameters\nD. liabilities",
+      "is_grid_in": false,
+      "correct_answer": "C",
+      "tier1_hint": "Xác định bản chất của các yếu tố đầu vào được sử dụng trong mô hình nghiên cứu.",
+      "tier2_hint": "Các yếu tố này được đo lường bằng số liệu cụ thể chứ không phải nhận định cảm quan.",
+      "tier3_hint": "Chọn từ chỉ các giới hạn/thông số định lượng; loại từ chỉ cảm xúc hay lý thuyết mơ hồ.",
+      "strategic_tip": "Parameters = numerical or other measurable factors forming sets that define a system.",
+      "level1_tip": "Xác định bản chất của các yếu tố đầu vào được sử dụng trong mô hình nghiên cứu.",
+      "level2_hint": "Các yếu tố này được đo lường bằng số liệu cụ thể chứ không phải nhận định cảm quan.",
+      "level3_solution": "Chọn từ chỉ các giới hạn/thông số định lượng; loại từ chỉ cảm xúc hay lý thuyết mơ hồ.",
+      "pdf_page": 16
+    },
+    {
+      "id": 31,
+      "master_id": "M31",
+      "q_number": 4,
+      "q_label": "Q4",
+      "module_code": "RW_Module2",
+      "module_title": "Reading & Writing: Module 2",
+      "section": "Reading and Writing",
+      "module_num": 2,
+      "topic": "Vocabulary in Context (Cautions & Warnings)",
+      "passage": "Marvel Girl's ability to lift modest loads with her mind is illustrative of the lamentably lackluster powers bestowed on many female superheroes... serve as _____ showing the corrupting influence of power.",
+      "prompt": "Which choice completes the text with the most logical and precise word or phrase?",
+      "options": [
+        {
+          "key": "A",
+          "text": "venerations"
+        },
+        {
+          "key": "B",
+          "text": "admonitions"
+        },
+        {
+          "key": "C",
+          "text": "obfuscations"
+        },
+        {
+          "key": "D",
+          "text": "exonerations"
+        }
+      ],
+      "options_raw": "A. venerations\nB. admonitions\nC. obfuscations\nD. exonerations",
+      "is_grid_in": false,
+      "correct_answer": "B",
+      "tier1_hint": "Đọc kỹ sắc thái câu văn khi bàn về sự nguy hiểm hoặc hậu quả của việc lạm dụng quyền lực.",
+      "tier2_hint": "Cần một danh từ mang nghĩa lời cảnh báo, nhắc nhở hoặc lưu ý trước rủi ro.",
+      "tier3_hint": "Chọn từ thể hiện sự thận trọng/cảnh báo; loại các từ mang nghĩa khen ngợi hay khuyến khích.",
+      "strategic_tip": "Admonitions = firm warnings or reprimands.",
+      "level1_tip": "Đọc kỹ sắc thái câu văn khi bàn về sự nguy hiểm hoặc hậu quả của việc lạm dụng quyền lực.",
+      "level2_hint": "Cần một danh từ mang nghĩa lời cảnh báo, nhắc nhở hoặc lưu ý trước rủi ro.",
+      "level3_solution": "Chọn từ thể hiện sự thận trọng/cảnh báo; loại các từ mang nghĩa khen ngợi hay khuyến khích.",
+      "pdf_page": 16
+    },
+    {
+      "id": 32,
+      "master_id": "M32",
+      "q_number": 5,
+      "q_label": "Q5",
+      "module_code": "RW_Module2",
+      "module_title": "Reading & Writing: Module 2",
+      "section": "Reading and Writing",
+      "module_num": 2,
+      "topic": "Sentence Function & Text Structure",
+      "passage": "Research on minor solar eruptions in magnetically quiet regions revealed an interesting pattern. Material expelled during these events follows a narrow arc trajectory back to the Sun's surface... Although these are impressive speeds, they are not sufficient to overcome the confining forces of the Sun's gravity... so the material is pulled back down.",
+      "prompt": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+      "options": [
+        {
+          "key": "A",
+          "text": "It describes a natural phenomenon that is explained later in the text."
+        },
+        {
+          "key": "B",
+          "text": "It presents a research finding that challenges the view mentioned in the first sentence."
+        },
+        {
+          "key": "C",
+          "text": "It acknowledges an exception to the pattern described in the first sentence."
+        },
+        {
+          "key": "D",
+          "text": "It discusses a natural occurrence that leads to the consequences explained later in the text."
+        }
+      ],
+      "options_raw": "A. It describes a natural phenomenon that is explained later in the text.\nB. It presents a research finding that challenges the view mentioned in the first sentence.\nC. It acknowledges an exception to the pattern described in the first sentence.\nD. It discusses a natural occurrence that leads to the consequences explained later in the text.",
+      "is_grid_in": false,
+      "correct_answer": "D",
+      "tier1_hint": "Xác định chức năng của câu gạch chân đối với lập luận toàn bài.",
+      "tier2_hint": "Phân tích xem câu gạch chân cung cấp bằng chứng, đặt ra giả thuyết hay đưa ra phản biện.",
+      "tier3_hint": "Chọn đáp án miêu tả đúng vai trò liên kết logic giữa các phần của đoạn văn.",
+      "strategic_tip": "Xác định vai trò tu từ: Trình bày hiện tượng dẫn tới kết quả theo sau.",
+      "level1_tip": "Xác định chức năng của câu gạch chân đối với lập luận toàn bài.",
+      "level2_hint": "Phân tích xem câu gạch chân cung cấp bằng chứng, đặt ra giả thuyết hay đưa ra phản biện.",
+      "level3_solution": "Chọn đáp án miêu tả đúng vai trò liên kết logic giữa các phần của đoạn văn.",
+      "pdf_page": 17
+    },
+    {
+      "id": 33,
+      "master_id": "M33",
+      "q_number": 6,
+      "q_label": "Q6",
+      "module_code": "RW_Module2",
+      "module_title": "Reading & Writing: Module 2",
+      "section": "Reading and Writing",
+      "module_num": 2,
+      "topic": "Text Structure & Overall Purpose",
+      "passage": "Blue holes are large underwater sinkholes: pits filled with dark blue water... The formation of blue holes typically involves several natural processes, including the dissolution of limestone... Currently, the deepest blue hole on record is the Taam Ja' Blue Hole in Chetumal Bay, Mexico...",
+      "prompt": "Which choice best describes the overall structure of the text?",
+      "options": [
+        {
+          "key": "A",
+          "text": "It describes the appearance of a particular type of sinkhole, compares two sinkholes, and names researchers."
+        },
+        {
+          "key": "B",
+          "text": "It compares a deep sinkhole to a shallower one, details processes, and emphasizes depth."
+        },
+        {
+          "key": "C",
+          "text": "It explains how a particular sinkhole formed, evaluates appearance, and provides info."
+        },
+        {
+          "key": "D",
+          "text": "It defines a kind of sinkhole, describes its typical appearance and formation, and provides information about the deepest known sinkhole."
+        }
+      ],
+      "options_raw": "A. It describes the appearance of a particular type of sinkhole, compares two sinkholes, and names researchers.\nB. It compares a deep sinkhole to a shallower one, details processes, and emphasizes depth.\nC. It explains how a particular sinkhole formed, evaluates appearance, and provides info.\nD. It defines a kind of sinkhole, describes its typical appearance and formation, and provides information about the deepest known sinkhole.",
+      "is_grid_in": false,
+      "correct_answer": "D",
+      "tier1_hint": "Phân tích bố cục bài đọc từ việc nêu hiện tượng đến việc đưa ra lời giải thích.",
+      "tier2_hint": "Chú ý sự chuyển ý giữa quan điểm phổ biến và phát hiện mới của nghiên cứu.",
+      "tier3_hint": "Mục đích chính là trình bày một phát hiện mới làm thay đổi hiểu biết trước đây.",
+      "strategic_tip": "Mô hình cấu trúc: Define -> Describe Formation -> Provide Specific Landmark Example.",
+      "level1_tip": "Phân tích bố cục bài đọc từ việc nêu hiện tượng đến việc đưa ra lời giải thích.",
+      "level2_hint": "Chú ý sự chuyển ý giữa quan điểm phổ biến và phát hiện mới của nghiên cứu.",
+      "level3_solution": "Mục đích chính là trình bày một phát hiện mới làm thay đổi hiểu biết trước đây.",
+      "pdf_page": 17
+    },
+    {
+      "id": 34,
+      "master_id": "M34",
+      "q_number": 7,
+      "q_label": "Q7",
+      "module_code": "RW_Module2",
+      "module_title": "Reading & Writing: Module 2",
+      "section": "Reading and Writing",
+      "module_num": 2,
+      "topic": "Cross-Text Comparison (Paired Passages)",
+      "passage": "Text 1: The wood I walk in on this mild May day... what grove of tropic palms, what strange ferns... could ever thrill such deep and delicate fibres within me as this home scene?\nText 2: My feelings seem to be those of our ancient earth... my own consciousness seems to stream through each blade of grass... in the rustling palm leaves.",
+      "prompt": "Which choice best describes a notable difference in how the author of Text 1 and the author of Text 2 refer to palm trees?",
+      "options": [
+        {
+          "key": "A",
+          "text": "While the narrator of Text 1 and the author of Text 2 both refer to metaphorical palm trees, only Text 1 suggests they represent home."
+        },
+        {
+          "key": "B",
+          "text": "While palm trees form part of a series conveying variety in both texts, only Text 2 recognizes how interconnected they are."
+        },
+        {
+          "key": "C",
+          "text": "While both discuss palm trees to suggest the value of nature, only Text 1 alludes to labor."
+        },
+        {
+          "key": "D",
+          "text": "While palm trees serve to evoke natural beauty in both texts, only the author of Text 2 expresses a close sense of identification with palm trees."
+        }
+      ],
+      "options_raw": "A. While the narrator of Text 1 and the author of Text 2 both refer to metaphorical palm trees, only Text 1 suggests they represent home.\nB. While palm trees form part of a series conveying variety in both texts, only Text 2 recognizes how interconnected they are.\nC. While both discuss palm trees to suggest the value of nature, only Text 1 alludes to labor.\nD. While palm trees serve to evoke natural beauty in both texts, only the author of Text 2 expresses a close sense of identification with palm trees.",
+      "is_grid_in": false,
+      "correct_answer": "A",
+      "tier1_hint": "So sánh góc nhìn của tác giả Đoạn 1 và tác giả Đoạn 2 về cùng một chủ đề.",
+      "tier2_hint": "Xác định điểm đồng thuận hoặc bất đồng cốt lõi giữa hai bài đọc.",
+      "tier3_hint": "Chọn câu thể hiện chính xác thái độ phản biện hoặc bổ sung của Tác giả 2 đối với Tác giả 1.",
+      "strategic_tip": "So sánh hai thái độ/góc nhìn của hai tác giả đối với cùng một hình ảnh.",
+      "level1_tip": "So sánh góc nhìn của tác giả Đoạn 1 và tác giả Đoạn 2 về cùng một chủ đề.",
+      "level2_hint": "Xác định điểm đồng thuận hoặc bất đồng cốt lõi giữa hai bài đọc.",
+      "level3_solution": "Chọn câu thể hiện chính xác thái độ phản biện hoặc bổ sung của Tác giả 2 đối với Tác giả 1.",
+      "pdf_page": 18
+    },
+    {
+      "id": 35,
+      "master_id": "M35",
+      "q_number": 8,
+      "q_label": "Q8",
+      "module_code": "RW_Module2",
+      "module_title": "Reading & Writing: Module 2",
+      "section": "Reading and Writing",
+      "module_num": 2,
+      "topic": "Main Idea (Vernacular Riddles)",
+      "passage": "Primarily encountered by modern readers as inert written texts, the vernacular riddles of early medieval England contain 'implicit vestiges' of an interactive performance context, scholar Jill Frederick argues. Locative phrases scattered throughout... invite a verbalized response... suggesting a form of dramatic impersonation...",
+      "prompt": "Which choice best states the main idea of the text?",
+      "options": [
+        {
+          "key": "A",
+          "text": "It is reasonable to conclude that vernacular riddles were mainly performed at large public gatherings..."
+        },
+        {
+          "key": "B",
+          "text": "Linguistic evidence found within the vernacular riddles of early medieval England suggests that they may have been intended to be performed in communal settings, though this isn't how they are generally experienced by readers today."
+        },
+        {
+          "key": "C",
+          "text": "People of early medieval England likely found riddles more amusing than modern readers..."
+        },
+        {
+          "key": "D",
+          "text": "Scholars once assumed that riddles were read silently..."
+        }
+      ],
+      "options_raw": "A. It is reasonable to conclude that vernacular riddles were mainly performed at large public gatherings...\nB. Linguistic evidence found within the vernacular riddles of early medieval England suggests that they may have been intended to be performed in communal settings, though this isn't how they are generally experienced by readers today.\nC. People of early medieval England likely found riddles more amusing than modern readers...\nD. Scholars once assumed that riddles were read silently...",
+      "is_grid_in": false,
+      "correct_answer": "B",
+      "tier1_hint": "Tập trung vào ý tưởng chủ đạo xuyên suốt các câu thơ/đoạn văn thay vì các chi tiết phụ.",
+      "tier2_hint": "Xác định chủ đề trung tâm và thông điệp mà tác giả muốn gửi gắm.",
+      "tier3_hint": "Loại bỏ các đáp án quá hẹp hoặc quá rộng; chọn câu tóm tắt chính xác luận điểm cốt lõi.",
+      "strategic_tip": "Main Point = Evidence of performance context vs. Modern passive reading.",
+      "level1_tip": "Tập trung vào ý tưởng chủ đạo xuyên suốt các câu thơ/đoạn văn thay vì các chi tiết phụ.",
+      "level2_hint": "Xác định chủ đề trung tâm và thông điệp mà tác giả muốn gửi gắm.",
+      "level3_solution": "Loại bỏ các đáp án quá hẹp hoặc quá rộng; chọn câu tóm tắt chính xác luận điểm cốt lõi.",
+      "pdf_page": 18
+    },
+    {
+      "id": 36,
+      "master_id": "M36",
+      "q_number": 9,
+      "q_label": "Q9",
+      "module_code": "RW_Module2",
+      "module_title": "Reading & Writing: Module 2",
+      "section": "Reading and Writing",
+      "module_num": 2,
+      "topic": "Inference / Textual Evidence",
+      "passage": "In the Mexican dialect of Spanish, the consonant s is pronounced with greater tension in the tongue... Margarita Hidalgo argues that Mexican Spanish acquired this pronunciation from Nahuatl... as Spanish colonizers incorporated Nahuatl words...",
+      "prompt": "Information in the text best supports which statement about the consonant s?",
+      "options": [
+        {
+          "key": "A",
+          "text": "The pronunciation of this consonant is the principal difference between dialects."
+        },
+        {
+          "key": "B",
+          "text": "This consonant appears in a higher percentage of Nahuatl vocabulary."
+        },
+        {
+          "key": "C",
+          "text": "The pronunciation of this consonant in Mexican Spanish may have been affected by its pronunciation in Nahuatl."
+        },
+        {
+          "key": "D",
+          "text": "The pronunciation requires greater tension in the tongue in Nahuatl than in Castilian."
+        }
+      ],
+      "options_raw": "A. The pronunciation of this consonant is the principal difference between dialects.\nB. This consonant appears in a higher percentage of Nahuatl vocabulary.\nC. The pronunciation of this consonant in Mexican Spanish may have been affected by its pronunciation in Nahuatl.\nD. The pronunciation requires greater tension in the tongue in Nahuatl than in Castilian.",
+      "is_grid_in": false,
+      "correct_answer": "D",
+      "tier1_hint": "Đối chiếu các dữ kiện trong bài đọc để tìm suy luận có căn cứ trực tiếp.",
+      "tier2_hint": "Loại bỏ các lựa chọn đưa ra giả định vượt quá thông tin được cung cấp.",
+      "tier3_hint": "Chọn đáp án dựa trên mối liên hệ logic trực tiếp từ các câu văn trong bài.",
+      "strategic_tip": "Suy luận trực tiếp từ giả thuyết ảnh hưởng ngôn ngữ Nahuatl.",
+      "level1_tip": "Đối chiếu các dữ kiện trong bài đọc để tìm suy luận có căn cứ trực tiếp.",
+      "level2_hint": "Loại bỏ các lựa chọn đưa ra giả định vượt quá thông tin được cung cấp.",
+      "level3_solution": "Chọn đáp án dựa trên mối liên hệ logic trực tiếp từ các câu văn trong bài.",
+      "pdf_page": 19
+    },
+    {
+      "id": 37,
+      "master_id": "M37",
+      "q_number": 10,
+      "q_label": "Q10",
+      "module_code": "RW_Module2",
+      "module_title": "Reading & Writing: Module 2",
+      "section": "Reading and Writing",
+      "module_num": 2,
+      "topic": "Command of Evidence (Cover Crops)",
+      "passage": "Cover crops, such as teff, are planted between main growing seasons... Axel Don concluded that cover crops contribute meaningfully to soil carbon sequestration and could help offset agricultural emissions...",
+      "prompt": "Which finding, if true, would be most consistent with Don and his coauthor's conclusion?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Teff captures considerably more CO2 in fields where it is grown alongside other species..."
+        },
+        {
+          "key": "B",
+          "text": "Cover crops generally exhibit reduced carbon sequestration rates in fields exposed to high levels..."
+        },
+        {
+          "key": "C",
+          "text": "SOC stocks vary more in fields where cover crops have been grown for decades..."
+        },
+        {
+          "key": "D",
+          "text": "SOC stocks tend to be significantly lower in fields without cover crops compared with fields where cover crops have been grown for several years."
+        }
+      ],
+      "options_raw": "A. Teff captures considerably more CO2 in fields where it is grown alongside other species...\nB. Cover crops generally exhibit reduced carbon sequestration rates in fields exposed to high levels...\nC. SOC stocks vary more in fields where cover crops have been grown for decades...\nD. SOC stocks tend to be significantly lower in fields without cover crops compared with fields where cover crops have been grown for several years.",
+      "is_grid_in": false,
+      "correct_answer": "D",
+      "tier1_hint": "Phân tích dữ liệu được trình bày về tác dụng của cây che phủ (cover crops).",
+      "tier2_hint": "Tìm sự kết hợp giữa thông tin trong bài đọc và xu hướng thể hiện trên biểu đồ/bảng.",
+      "tier3_hint": "Chọn đáp án mô tả đúng sự gia tăng hoặc giảm thiểu chỉ số được nêu.",
+      "strategic_tip": "Consistent with conclusion = Dữ liệu thực tế chứng minh vai trò tăng SOC của cover crops.",
+      "level1_tip": "Phân tích dữ liệu được trình bày về tác dụng của cây che phủ (cover crops).",
+      "level2_hint": "Tìm sự kết hợp giữa thông tin trong bài đọc và xu hướng thể hiện trên biểu đồ/bảng.",
+      "level3_solution": "Chọn đáp án mô tả đúng sự gia tăng hoặc giảm thiểu chỉ số được nêu.",
+      "pdf_page": 19
+    },
+    {
+      "id": 38,
+      "master_id": "M38",
+      "q_number": 11,
+      "q_label": "Q11",
+      "module_code": "RW_Module2",
+      "module_title": "Reading & Writing: Module 2",
+      "section": "Reading and Writing",
+      "module_num": 2,
+      "topic": "Text Completion / Logical Inference",
+      "passage": "While the brain regions most strongly associated with language tasks have some modularity... comprehension also invokes other areas of the brain associated with nonlinguistic functions. For example, understanding a description of physical actions activates sensory-motor areas... Thus, beyond the areas most strongly associated with linguistic functions, _____",
+      "prompt": "Which choice most logically completes the text?",
+      "options": [
+        {
+          "key": "A",
+          "text": "the specific combination of brain regions involved in comprehension is likely contingent on the total context in which the speech is embedded."
+        },
+        {
+          "key": "B",
+          "text": "the brain regions associated with sensory-motor functions are often involved..."
+        },
+        {
+          "key": "C",
+          "text": "the brain regions most strongly associated with affective processing activate..."
+        },
+        {
+          "key": "D",
+          "text": "the areas of the brain that activate when processing speech will typically include..."
+        }
+      ],
+      "options_raw": "A. the specific combination of brain regions involved in comprehension is likely contingent on the total context in which the speech is embedded.\nB. the brain regions associated with sensory-motor functions are often involved...\nC. the brain regions most strongly associated with affective processing activate...\nD. the areas of the brain that activate when processing speech will typically include...",
+      "is_grid_in": false,
+      "correct_answer": "A",
+      "tier1_hint": "Phân tích mối quan hệ logic giữa hai vế của câu cần hoàn thành.",
+      "tier2_hint": "Chú ý từ nối chỉ sự tương phản hoặc nguyên nhân - kết quả ở vế trước.",
+      "tier3_hint": "Chọn vế kết luận nối tiếp hợp lý với hướng lập luận của tác giả.",
+      "strategic_tip": "Kết luận hợp logic: Loại hình nội dung khác nhau -> Kích hoạt các vùng não phi ngôn ngữ khác nhau.",
+      "level1_tip": "Phân tích mối quan hệ logic giữa hai vế của câu cần hoàn thành.",
+      "level2_hint": "Chú ý từ nối chỉ sự tương phản hoặc nguyên nhân - kết quả ở vế trước.",
+      "level3_solution": "Chọn vế kết luận nối tiếp hợp lý với hướng lập luận của tác giả.",
+      "pdf_page": 20
+    },
+    {
+      "id": 39,
+      "master_id": "M39",
+      "q_number": 12,
+      "q_label": "Q12",
+      "module_code": "RW_Module2",
+      "module_title": "Reading & Writing: Module 2",
+      "section": "Reading and Writing",
+      "module_num": 2,
+      "topic": "Text Completion / Logic Comparison",
+      "passage": "The Clarion-Clipperton Zone (CCZ)... Some species were identified both morphologically and molecularly, whereas species for which molecular sampling was impracticable were identified solely based on physical morphology. Since molecular analysis does not require distinguishing subtle physiological differences, it is _____",
+      "prompt": "Which choice most logically completes the text?",
+      "options": [
+        {
+          "key": "A",
+          "text": "more frequently used for identifying species with physical differences..."
+        },
+        {
+          "key": "B",
+          "text": "capable of providing greater physiological detail..."
+        },
+        {
+          "key": "C",
+          "text": "better suited to distinguishing Psychropotes dyscrita from morphologically similar species..."
+        },
+        {
+          "key": "D",
+          "text": "more likely to properly distinguish between morphologically similar but distinct invertebrate species than is the method used to identify Discantenna metallica."
+        }
+      ],
+      "options_raw": "A. more frequently used for identifying species with physical differences...\nB. capable of providing greater physiological detail...\nC. better suited to distinguishing Psychropotes dyscrita from morphologically similar species...\nD. more likely to properly distinguish between morphologically similar but distinct invertebrate species than is the method used to identify Discantenna metallica.",
+      "is_grid_in": false,
+      "correct_answer": "C",
+      "tier1_hint": "Xác định sự so sánh giữa hai nhóm hoặc hai phương pháp được đề cập.",
+      "tier2_hint": "Chú ý đến các từ chỉ mức độ hoặc tỉ lệ tương quan giữa hai đối tượng.",
+      "tier3_hint": "Chọn câu hoàn thành thể hiện chính xác kết quả so sánh được suy ra từ bài.",
+      "strategic_tip": "Ưu điểm của phân tích phân tử: Phân biệt chính xác các loài có hình thái bên ngoài tương đồng.",
+      "level1_tip": "Xác định sự so sánh giữa hai nhóm hoặc hai phương pháp được đề cập.",
+      "level2_hint": "Chú ý đến các từ chỉ mức độ hoặc tỉ lệ tương quan giữa hai đối tượng.",
+      "level3_solution": "Chọn câu hoàn thành thể hiện chính xác kết quả so sánh được suy ra từ bài.",
+      "pdf_page": 20
+    },
+    {
+      "id": 40,
+      "master_id": "M40",
+      "q_number": 13,
+      "q_label": "Q13",
+      "module_code": "RW_Module2",
+      "module_title": "Reading & Writing: Module 2",
+      "section": "Reading and Writing",
+      "module_num": 2,
+      "topic": "Text Completion / Complex Inference",
+      "passage": "Rare species advantage (RSA) describes the situation in which there are few conspecifics... Among tree species in tropical forest sites, RSA is expected, but in temperate forest sites, the aggregation-abundance correlation is strongly negative. Mathematical modeling suggests, however, that ecological niche distinction may mitigate the apparent risk to temperate ecological stability engendered by this pattern because _____",
+      "prompt": "Which choice most logically completes the text?",
+      "options": [
+        {
+          "key": "A",
+          "text": "as a tree species in temperate forests becomes more abundant, individuals are more likely..."
+        },
+        {
+          "key": "B",
+          "text": "even though rare tree species in forests tend to cluster..."
+        },
+        {
+          "key": "C",
+          "text": "although rare tree species in temperate forests encounter relatively high local competition from conspecifics, they can thrive by exploiting resources that are underexploited by other local species."
+        },
+        {
+          "key": "D",
+          "text": "while an increase in abundance in one tree species often leads..."
+        }
+      ],
+      "options_raw": "A. as a tree species in temperate forests becomes more abundant, individuals are more likely...\nB. even though rare tree species in forests tend to cluster...\nC. although rare tree species in temperate forests encounter relatively high local competition from conspecifics, they can thrive by exploiting resources that are underexploited by other local species.\nD. while an increase in abundance in one tree species often leads...",
+      "is_grid_in": false,
+      "correct_answer": "A",
+      "tier1_hint": "Đọc kỹ các câu tiền đề để nắm vững giả thuyết nghiên cứu được đưa ra.",
+      "tier2_hint": "Xác định kết quả thử nghiệm nào sẽ củng cố hoặc làm suy yếu giả thuyết đó.",
+      "tier3_hint": "Chọn câu kết luận phản ánh đúng tác động của kết quả thực nghiệm lên giả thuyết.",
+      "strategic_tip": "Giải thích cơ chế Niche Distinction giúp duy trì sự ổn định sinh thái.",
+      "level1_tip": "Đọc kỹ các câu tiền đề để nắm vững giả thuyết nghiên cứu được đưa ra.",
+      "level2_hint": "Xác định kết quả thử nghiệm nào sẽ củng cố hoặc làm suy yếu giả thuyết đó.",
+      "level3_solution": "Chọn câu kết luận phản ánh đúng tác động của kết quả thực nghiệm lên giả thuyết.",
+      "pdf_page": 21
+    },
+    {
+      "id": 41,
+      "master_id": "M41",
+      "q_number": 14,
+      "q_label": "Q14",
+      "module_code": "RW_Module2",
+      "module_title": "Reading & Writing: Module 2",
+      "section": "Reading and Writing",
+      "module_num": 2,
+      "topic": "Standard English Conventions (Modifiers)",
+      "passage": "A premortem is an exercise in which teams imagine their project has already failed... Prompting teams to proactively develop mitigation strategies during the planning stage, _____",
+      "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": [
+        {
+          "key": "A",
+          "text": "effective uncovering of potential problems by the team in this activity is done early,"
+        },
+        {
+          "key": "B",
+          "text": "this activity effectively uncovers potential problems early,"
+        },
+        {
+          "key": "C",
+          "text": "potential problems are effectively uncovered by this activity early,"
+        },
+        {
+          "key": "D",
+          "text": "teams effectively uncover potential problems early with this activity,"
+        }
+      ],
+      "options_raw": "A. effective uncovering of potential problems by the team in this activity is done early,\nB. this activity effectively uncovers potential problems early,\nC. potential problems are effectively uncovered by this activity early,\nD. teams effectively uncover potential problems early with this activity,",
+      "is_grid_in": false,
+      "correct_answer": "B",
+      "tier1_hint": "Xác định vị trí của cụm phân từ đầu câu và đối tượng mà nó bổ nghĩa.",
+      "tier2_hint": "Quy tắc bổ ngữ: Danh từ đứng ngay sau dấu phẩy phải là chủ thể thực hiện hành động phân từ.",
+      "tier3_hint": "Loại bỏ các phương án bị lỗi bổ ngữ lủng lẳng (dangling modifier).",
+      "strategic_tip": "Bổ ngữ phân từ đầu câu: [Participle Modifier], [Subject + Verb].",
+      "level1_tip": "Xác định vị trí của cụm phân từ đầu câu và đối tượng mà nó bổ nghĩa.",
+      "level2_hint": "Quy tắc bổ ngữ: Danh từ đứng ngay sau dấu phẩy phải là chủ thể thực hiện hành động phân từ.",
+      "level3_solution": "Loại bỏ các phương án bị lỗi bổ ngữ lủng lẳng (dangling modifier).",
+      "pdf_page": 21
+    },
+    {
+      "id": 42,
+      "master_id": "M42",
+      "q_number": 15,
+      "q_label": "Q15",
+      "module_code": "RW_Module2",
+      "module_title": "Reading & Writing: Module 2",
+      "section": "Reading and Writing",
+      "module_num": 2,
+      "topic": "Standard English Conventions (Parallel Lists)",
+      "passage": "As one of aviation's earliest female stunt performers, Gladys Ingle developed a versatile repertoire of acrobatic feats. Her specialized skills included standing on the wing of a flying aircraft and shooting a bow and arrow at a target _____ maintaining perfect balance during aerial maneuvers, such as vertical loops; and even walking across the wing...",
+      "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": [
+        {
+          "key": "A",
+          "text": "target; maintaining"
+        },
+        {
+          "key": "B",
+          "text": "target maintaining"
+        },
+        {
+          "key": "C",
+          "text": "target. Maintaining"
+        },
+        {
+          "key": "D",
+          "text": "target, maintaining"
+        }
+      ],
+      "options_raw": "A. target; maintaining\nB. target maintaining\nC. target. Maintaining\nD. target, maintaining",
+      "is_grid_in": false,
+      "correct_answer": "A",
+      "tier1_hint": "Kiểm tra cấu trúc song song (parallelism) trong danh sách các phần tử.",
+      "tier2_hint": "Các phần tử được nối bằng liên từ phải có cùng dạng từ (động từ, danh từ hoặc cụm từ).",
+      "tier3_hint": "Chọn phương án duy trì đúng hình thái ngữ pháp đồng bộ với các phần tử trước.",
+      "strategic_tip": "Dùng dấu chấm phẩy (;) phân tách các mục lớn trong danh sách phức tạp.",
+      "level1_tip": "Kiểm tra cấu trúc song song (parallelism) trong danh sách các phần tử.",
+      "level2_hint": "Các phần tử được nối bằng liên từ phải có cùng dạng từ (động từ, danh từ hoặc cụm từ).",
+      "level3_solution": "Chọn phương án duy trì đúng hình thái ngữ pháp đồng bộ với các phần tử trước.",
+      "pdf_page": 21
+    },
+    {
+      "id": 43,
+      "master_id": "M43",
+      "q_number": 16,
+      "q_label": "Q16",
+      "module_code": "RW_Module2",
+      "module_title": "Reading & Writing: Module 2",
+      "section": "Reading and Writing",
+      "module_num": 2,
+      "topic": "Standard English Conventions (Participles)",
+      "passage": "During a recent investigation, archaeologists _____ an explanation for the consistent and seemingly deliberate placement of petroglyphs near water analyzed several sites on Caribbean islands.",
+      "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": [
+        {
+          "key": "A",
+          "text": "had"
+        },
+        {
+          "key": "B",
+          "text": "sought"
+        },
+        {
+          "key": "C",
+          "text": "seeking"
+        },
+        {
+          "key": "D",
+          "text": "were seeking"
+        }
+      ],
+      "options_raw": "A. had\nB. sought\nC. seeking\nD. were seeking",
+      "is_grid_in": false,
+      "correct_answer": "C",
+      "tier1_hint": "Phân tích vai trò ngữ pháp của từ cần điền trong mệnh đề chính.",
+      "tier2_hint": "Phân biệt giữa dạng phân từ làm tính từ bổ nghĩa và động từ chia thì chính.",
+      "tier3_hint": "Chọn dạng phân từ phù hợp với cấu trúc ngữ pháp của câu.",
+      "strategic_tip": "Rút gọn mệnh đề quan hệ chủ động: archaeologists who were seeking -> archaeologists seeking.",
+      "level1_tip": "Phân tích vai trò ngữ pháp của từ cần điền trong mệnh đề chính.",
+      "level2_hint": "Phân biệt giữa dạng phân từ làm tính từ bổ nghĩa và động từ chia thì chính.",
+      "level3_solution": "Chọn dạng phân từ phù hợp với cấu trúc ngữ pháp của câu.",
+      "pdf_page": 22
+    },
+    {
+      "id": 44,
+      "master_id": "M44",
+      "q_number": 17,
+      "q_label": "Q17",
+      "module_code": "RW_Module2",
+      "module_title": "Reading & Writing: Module 2",
+      "section": "Reading and Writing",
+      "module_num": 2,
+      "topic": "Standard English Conventions (Punctuation Dashes)",
+      "passage": "For his mash-up 'Smells Like Rockin' Robin,' DJ Mark Vidler layered Kurt Cobain's minor-key vocals over the Jackson 5's major-key blues progression _____ a technique that, by inserting the grunge singer's vocal melody as pitch-shifted 'blue notes', creates an intensified 'bluesy' sound.",
+      "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Robin, a technique that"
+        },
+        {
+          "key": "B",
+          "text": "Robin. A technique that"
+        },
+        {
+          "key": "C",
+          "text": "Robin; a technique that,"
+        },
+        {
+          "key": "D",
+          "text": "Robin—a technique that,"
+        }
+      ],
+      "options_raw": "A. Robin, a technique that\nB. Robin. A technique that\nC. Robin; a technique that,\nD. Robin—a technique that,",
+      "is_grid_in": false,
+      "correct_answer": "D",
+      "tier1_hint": "Xác định cụm từ bổ sung thông tin không thiết yếu trong câu.",
+      "tier2_hint": "Sử dụng cặp dấu gạch ngang đồng bộ để ngắt mở và ngắt kết thúc cụm bổ nghĩa.",
+      "tier3_hint": "Loại bỏ phương án thiếu dấu ngắt hoặc dùng sai kết hợp dấu.",
+      "strategic_tip": "Dấu gạch ngang đơn dùng để nhấn mạnh cụm từ bổ nghĩa ở cuối câu.",
+      "level1_tip": "Xác định cụm từ bổ sung thông tin không thiết yếu trong câu.",
+      "level2_hint": "Sử dụng cặp dấu gạch ngang đồng bộ để ngắt mở và ngắt kết thúc cụm bổ nghĩa.",
+      "level3_solution": "Loại bỏ phương án thiếu dấu ngắt hoặc dùng sai kết hợp dấu.",
+      "pdf_page": 22
+    },
+    {
+      "id": 45,
+      "master_id": "M45",
+      "q_number": 18,
+      "q_label": "Q18",
+      "module_code": "RW_Module2",
+      "module_title": "Reading & Writing: Module 2",
+      "section": "Reading and Writing",
+      "module_num": 2,
+      "topic": "Standard English Conventions (Prepositions)",
+      "passage": "During the late nineteenth century, agricultural chemist George Washington Carver revolutionized farming practices in the American _____ promoting systematic crop rotation techniques that replenished essential nitrogen in depleted soils.",
+      "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": [
+        {
+          "key": "A",
+          "text": "South, by"
+        },
+        {
+          "key": "B",
+          "text": "South by"
+        },
+        {
+          "key": "C",
+          "text": "South: by"
+        },
+        {
+          "key": "D",
+          "text": "South; by"
+        }
+      ],
+      "options_raw": "A. South, by\nB. South by\nC. South: by\nD. South; by",
+      "is_grid_in": false,
+      "correct_answer": "B",
+      "tier1_hint": "Xác định giới từ đi kèm cố định với danh từ hoặc động từ đứng trước.",
+      "tier2_hint": "Thói quen sử dụng từ (collocation) quy định giới từ chuẩn xác trong ngữ cảnh này.",
+      "tier3_hint": "Chọn giới từ đúng theo quy tắc kết hợp từ chuẩn tiếng Anh.",
+      "strategic_tip": "Không đặt dấu phẩy ngăn cách trực tiếp trước giới từ chỉ phương thức.",
+      "level1_tip": "Xác định giới từ đi kèm cố định với danh từ hoặc động từ đứng trước.",
+      "level2_hint": "Thói quen sử dụng từ (collocation) quy định giới từ chuẩn xác trong ngữ cảnh này.",
+      "level3_solution": "Chọn giới từ đúng theo quy tắc kết hợp từ chuẩn tiếng Anh.",
+      "pdf_page": 22
+    },
+    {
+      "id": 46,
+      "master_id": "M46",
+      "q_number": 19,
+      "q_label": "Q19",
+      "module_code": "RW_Module2",
+      "module_title": "Reading & Writing: Module 2",
+      "section": "Reading and Writing",
+      "module_num": 2,
+      "topic": "Standard English Conventions (Participles)",
+      "passage": "Named for the year in which it was detected by English astronomers, SN 2016aps was a supernova (the explosion of a massive star) _____ in the constellation Draco, 3.6 billion light-years from Earth, the powerful blast propelled particles into space.",
+      "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": [
+        {
+          "key": "A",
+          "text": "star). Occurring"
+        },
+        {
+          "key": "B",
+          "text": "star) occurring"
+        },
+        {
+          "key": "C",
+          "text": "star) and occurring"
+        },
+        {
+          "key": "D",
+          "text": "star), occurring"
+        }
+      ],
+      "options_raw": "A. star). Occurring\nB. star) occurring\nC. star) and occurring\nD. star), occurring",
+      "is_grid_in": false,
+      "correct_answer": "A",
+      "tier1_hint": "Phân tích cấu trúc câu để xác định xem đã có động từ chính chia thì chưa.",
+      "tier2_hint": "Tránh lỗi câu thiếu vị ngữ (fragment) hoặc thừa vị ngữ nối sai quy tắc.",
+      "tier3_hint": "Chọn dạng từ đảm bảo câu có đủ chủ ngữ và vị ngữ hoàn chỉnh.",
+      "strategic_tip": "Tránh lỗi Comma Splice bằng cách kết thúc câu bằng dấu chấm.",
+      "level1_tip": "Phân tích cấu trúc câu để xác định xem đã có động từ chính chia thì chưa.",
+      "level2_hint": "Tránh lỗi câu thiếu vị ngữ (fragment) hoặc thừa vị ngữ nối sai quy tắc.",
+      "level3_solution": "Chọn dạng từ đảm bảo câu có đủ chủ ngữ và vị ngữ hoàn chỉnh.",
+      "pdf_page": 23
+    },
+    {
+      "id": 47,
+      "master_id": "M47",
+      "q_number": 20,
+      "q_label": "Q20",
+      "module_code": "RW_Module2",
+      "module_title": "Reading & Writing: Module 2",
+      "section": "Reading and Writing",
+      "module_num": 2,
+      "topic": "Standard English Conventions (Dangling Modifiers)",
+      "passage": "Originating during the Cretaceous period, _____",
+      "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": [
+        {
+          "key": "A",
+          "text": "entomologists have extensively examined fossilized resin deposits..."
+        },
+        {
+          "key": "B",
+          "text": "the fossilized amber specimens excavated in northern Myanmar preserve anatomical details of early arthropods."
+        },
+        {
+          "key": "C",
+          "text": "paleontological excavation in northern Myanmar has uncovered..."
+        },
+        {
+          "key": "D",
+          "text": "arthropods were trapped and entombed within sticky conifer secretion..."
+        }
+      ],
+      "options_raw": "A. entomologists have extensively examined fossilized resin deposits...\nB. the fossilized amber specimens excavated in northern Myanmar preserve anatomical details of early arthropods.\nC. paleontological excavation in northern Myanmar has uncovered...\nD. arthropods were trapped and entombed within sticky conifer secretion...",
+      "is_grid_in": false,
+      "correct_answer": "B",
+      "tier1_hint": "Kiểm tra cụm mở đầu câu dạng `-ing` hoặc `-ed` đứng trước dấu phẩy.",
+      "tier2_hint": "Chủ ngữ đứng ngay sau dấu phẩy bắt buộc phải là đối tượng thực hiện trực tiếp hành động đó.",
+      "tier3_hint": "Chọn phương án đặt đúng chủ thể thực hiện hành động vào vị trí ngay sau dấu phẩy.",
+      "strategic_tip": "Bổ ngữ chỉ thời đại/nguồn gốc phải đi liền với danh từ hổ phách/hóa thạch.",
+      "level1_tip": "Kiểm tra cụm mở đầu câu dạng `-ing` hoặc `-ed` đứng trước dấu phẩy.",
+      "level2_hint": "Chủ ngữ đứng ngay sau dấu phẩy bắt buộc phải là đối tượng thực hiện trực tiếp hành động đó.",
+      "level3_solution": "Chọn phương án đặt đúng chủ thể thực hiện hành động vào vị trí ngay sau dấu phẩy.",
+      "pdf_page": 23
+    },
+    {
+      "id": 48,
+      "master_id": "M48",
+      "q_number": 21,
+      "q_label": "Q21",
+      "module_code": "RW_Module2",
+      "module_title": "Reading & Writing: Module 2",
+      "section": "Reading and Writing",
+      "module_num": 2,
+      "topic": "Transitions (Contrast)",
+      "passage": "In a 1993 study by Vales and Peek, the researchers used microhistological fecal analysis to determine the ratio of three plant subtypes... The researchers did not perform this analysis on all such ungulates, _____ they focused exclusively on elk in Wyoming.",
+      "prompt": "Which choice completes the text with the most logical transition?",
+      "options": [
+        {
+          "key": "A",
+          "text": "for instance;"
+        },
+        {
+          "key": "B",
+          "text": "in other words;"
+        },
+        {
+          "key": "C",
+          "text": "regardless;"
+        },
+        {
+          "key": "D",
+          "text": "however;"
+        }
+      ],
+      "options_raw": "A. for instance;\nB. in other words;\nC. regardless;\nD. however;",
+      "is_grid_in": false,
+      "correct_answer": "C",
+      "tier1_hint": "Phân tích mối quan hệ logic giữa hai câu văn về mặt ý nghĩa.",
+      "tier2_hint": "Xác định xem câu sau có xu hướng đối lập hay làm trái ngược ý của câu trước hay không.",
+      "tier3_hint": "Chọn từ nối chỉ sự tương phản hoặc nhượng bộ phù hợp.",
+      "strategic_tip": "However = dùng để đối lập giữa giả định chung và phạm vi hẹp thực tế.",
+      "level1_tip": "Phân tích mối quan hệ logic giữa hai câu văn về mặt ý nghĩa.",
+      "level2_hint": "Xác định xem câu sau có xu hướng đối lập hay làm trái ngược ý của câu trước hay không.",
+      "level3_solution": "Chọn từ nối chỉ sự tương phản hoặc nhượng bộ phù hợp.",
+      "pdf_page": 23
+    },
+    {
+      "id": 49,
+      "master_id": "M49",
+      "q_number": 22,
+      "q_label": "Q22",
+      "module_code": "RW_Module2",
+      "module_title": "Reading & Writing: Module 2",
+      "section": "Reading and Writing",
+      "module_num": 2,
+      "topic": "Transitions (Illustration / Exemplification)",
+      "passage": "The Hornbostel-Sachs system classifies musical instruments by how they produce sound. For example, an instrument that is popular in India called the saraswati veena produces sound primarily through the vibration of its strings. _____ under the Hornbostel-Sachs system, the saraswati veena is a chordophone.",
+      "prompt": "Which choice completes the text with the most logical transition?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Furthermore,"
+        },
+        {
+          "key": "B",
+          "text": "Thus,"
+        },
+        {
+          "key": "C",
+          "text": "Similarly,"
+        },
+        {
+          "key": "D",
+          "text": "Instead,"
+        }
+      ],
+      "options_raw": "A. Furthermore,\nB. Thus,\nC. Similarly,\nD. Instead,",
+      "is_grid_in": false,
+      "correct_answer": "B",
+      "tier1_hint": "Xác định vai trò của câu thứ hai đối với câu thứ nhất.",
+      "tier2_hint": "Nếu câu thứ hai đưa ra một trường hợp cụ thể để minh họa, cần dùng từ nối minh họa.",
+      "tier3_hint": "Chọn từ nối chỉ ví dụ hoặc sự minh họa cụ thể.",
+      "strategic_tip": "Thus = kết luận logic rút ra từ định nghĩa trước đó.",
+      "level1_tip": "Xác định vai trò của câu thứ hai đối với câu thứ nhất.",
+      "level2_hint": "Nếu câu thứ hai đưa ra một trường hợp cụ thể để minh họa, cần dùng từ nối minh họa.",
+      "level3_solution": "Chọn từ nối chỉ ví dụ hoặc sự minh họa cụ thể.",
+      "pdf_page": 24
+    },
+    {
+      "id": 50,
+      "master_id": "M50",
+      "q_number": 23,
+      "q_label": "Q23",
+      "module_code": "RW_Module2",
+      "module_title": "Reading & Writing: Module 2",
+      "section": "Reading and Writing",
+      "module_num": 2,
+      "topic": "Transitions (Comparison / Contrast)",
+      "passage": "Generally, sleek vehicles are more aerodynamic than bulkier ones. The streamlined nose of the Airbus A350 XWB jet helps it glide through wind with relative ease, _____ a boxy pickup truck encounters more wind resistance.",
+      "prompt": "Which choice completes the text with the most logical transition?",
+      "options": [
+        {
+          "key": "A",
+          "text": "additionally,"
+        },
+        {
+          "key": "B",
+          "text": "however,"
+        },
+        {
+          "key": "C",
+          "text": "for example,"
+        },
+        {
+          "key": "D",
+          "text": "meanwhile,"
+        }
+      ],
+      "options_raw": "A. additionally,\nB. however,\nC. for example,\nD. meanwhile,",
+      "is_grid_in": false,
+      "correct_answer": "C",
+      "tier1_hint": "So sánh ý nghĩa giữa hai mệnh đề được nối với nhau.",
+      "tier2_hint": "Xác định mối quan hệ tương đồng hay đối lập giữa hai phát biểu.",
+      "tier3_hint": "Chọn từ nối phản ánh chính xác sự so sánh hoặc tương phản logic.",
+      "strategic_tip": "Meanwhile / whereas = nối hai vế đối lập song song.",
+      "level1_tip": "So sánh ý nghĩa giữa hai mệnh đề được nối với nhau.",
+      "level2_hint": "Xác định mối quan hệ tương đồng hay đối lập giữa hai phát biểu.",
+      "level3_solution": "Chọn từ nối phản ánh chính xác sự so sánh hoặc tương phản logic.",
+      "pdf_page": 24
+    },
+    {
+      "id": 51,
+      "master_id": "M51",
+      "q_number": 24,
+      "q_label": "Q24",
+      "module_code": "RW_Module2",
+      "module_title": "Reading & Writing: Module 2",
+      "section": "Reading and Writing",
+      "module_num": 2,
+      "topic": "Transitions (Emphasis)",
+      "passage": "On June 13, 1927, aviator Charles Lindbergh received a ticker-tape parade in New York City... Of the 206 ticker-tape parades held between 1886 and 2022, a number were for achievements in aviation. _____ Lindbergh's parade was just one of 16 honoring pilots.",
+      "prompt": "Which choice completes the text with the most logical transition?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Indeed,"
+        },
+        {
+          "key": "B",
+          "text": "In addition,"
+        },
+        {
+          "key": "C",
+          "text": "Indeed,"
+        },
+        {
+          "key": "D",
+          "text": "Nevertheless,"
+        }
+      ],
+      "options_raw": "A. Indeed,\nB. In addition,\nC. Indeed,\nD. Nevertheless,",
+      "is_grid_in": false,
+      "correct_answer": "B",
+      "tier1_hint": "Phân tích sắc thái của phát biểu ở câu thứ hai.",
+      "tier2_hint": "Nếu câu thứ hai nhằm nhấn mạnh hoặc khẳng định mạnh mẽ hơn ý trước, chọn từ nối nhấn mạnh.",
+      "tier3_hint": "Chọn từ nối mang nghĩa 'thật vậy' hoặc 'trên thực tế'.",
+      "strategic_tip": "Indeed = dùng để nhấn mạnh/xác nhận thông tin trước.",
+      "level1_tip": "Phân tích sắc thái của phát biểu ở câu thứ hai.",
+      "level2_hint": "Nếu câu thứ hai nhằm nhấn mạnh hoặc khẳng định mạnh mẽ hơn ý trước, chọn từ nối nhấn mạnh.",
+      "level3_solution": "Chọn từ nối mang nghĩa 'thật vậy' hoặc 'trên thực tế'.",
+      "pdf_page": 24
+    },
+    {
+      "id": 52,
+      "master_id": "M52",
+      "q_number": 25,
+      "q_label": "Q25",
+      "module_code": "RW_Module2",
+      "module_title": "Reading & Writing: Module 2",
+      "section": "Reading and Writing",
+      "module_num": 2,
+      "topic": "Transitions (Contrast & Context)",
+      "passage": "Between February 1876 and September 1876, George Eliot's novel Daniel Deronda was serialized in eight parts... Scholars typically regard the serial version as less authoritative than the book version. _____ as scholar Philip Allingham notes, serialized texts were the versions in which nineteenth-century readership first saw itself reflected.",
+      "prompt": "Which choice completes the text with the most logical transition?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Accordingly, they emphasize..."
+        },
+        {
+          "key": "B",
+          "text": "Still, the serial version is important to an understanding of the novel's historical context;"
+        },
+        {
+          "key": "C",
+          "text": "Consequently, the book version..."
+        },
+        {
+          "key": "D",
+          "text": "However, others regard..."
+        }
+      ],
+      "options_raw": "A. Accordingly, they emphasize...\nB. Still, the serial version is important to an understanding of the novel's historical context;\nC. Consequently, the book version...\nD. However, others regard...",
+      "is_grid_in": false,
+      "correct_answer": "B",
+      "tier1_hint": "Xem xét bối cảnh và sự chuyển ý giữa hai đoạn văn.",
+      "tier2_hint": "Xác định mối quan hệ giữa thông tin thực tế và nhận định được đưa ra.",
+      "tier3_hint": "Chọn từ nối liên kết mượt mà và đúng sắc thái chuyển ý.",
+      "strategic_tip": "Still = tuy nhiên, chuyển hướng sang khía cạnh tích cực khác.",
+      "level1_tip": "Xem xét bối cảnh và sự chuyển ý giữa hai đoạn văn.",
+      "level2_hint": "Xác định mối quan hệ giữa thông tin thực tế và nhận định được đưa ra.",
+      "level3_solution": "Chọn từ nối liên kết mượt mà và đúng sắc thái chuyển ý.",
+      "pdf_page": 24
+    },
+    {
+      "id": 53,
+      "master_id": "M53",
+      "q_number": 26,
+      "q_label": "Q26",
+      "module_code": "RW_Module2",
+      "module_title": "Reading & Writing: Module 2",
+      "section": "Reading and Writing",
+      "module_num": 2,
+      "topic": "Rhetorical Synthesis / Student Notes",
+      "passage": "Notes: Highpointers Club aims to reach the highest points in 50 US states (50 Completers). In Suk Han completed this on Nov 15, 2013. Timms Hill in Wisconsin (1,951 ft), Gannett Peak in Wyoming (13,809 ft).",
+      "prompt": "Which choice most effectively uses information from the given sentences to explain the 50 Completers hiking challenge to a new audience?",
+      "options": [
+        {
+          "key": "A",
+          "text": "If you are looking for a new hiking challenge, consider joining..."
+        },
+        {
+          "key": "B",
+          "text": "Not until after you have reached the highest points in all fifty US states—including Timms Hill in Wisconsin and Gannett Peak in Wyoming—can you include yourself among the 50 Completers of the Highpointers Club."
+        },
+        {
+          "key": "C",
+          "text": "On November 15, 2013, In Suk Han finally completed..."
+        },
+        {
+          "key": "D",
+          "text": "Hikers aiming to count themselves among the 50 Completers..."
+        }
+      ],
+      "options_raw": "A. If you are looking for a new hiking challenge, consider joining...\nB. Not until after you have reached the highest points in all fifty US states—including Timms Hill in Wisconsin and Gannett Peak in Wyoming—can you include yourself among the 50 Completers of the Highpointers Club.\nC. On November 15, 2013, In Suk Han finally completed...\nD. Hikers aiming to count themselves among the 50 Completers...",
+      "is_grid_in": false,
+      "correct_answer": "B",
+      "tier1_hint": "Đọc kỹ yêu cầu đề bài để biết thông tin nào cần được làm nổi bật.",
+      "tier2_hint": "Lọc danh sách ghi chú để tìm thông tin trực tiếp liên quan đến mục tiêu.",
+      "tier3_hint": "Chọn câu tổng hợp đáp ứng chính xác yêu cầu đề bài.",
+      "strategic_tip": "Giải thích thử thách = Nêu điều kiện hoàn thành + Ví dụ các đỉnh núi.",
+      "level1_tip": "Đọc kỹ yêu cầu đề bài để biết thông tin nào cần được làm nổi bật.",
+      "level2_hint": "Lọc danh sách ghi chú để tìm thông tin trực tiếp liên quan đến mục tiêu.",
+      "level3_solution": "Chọn câu tổng hợp đáp ứng chính xác yêu cầu đề bài.",
+      "pdf_page": 25
+    },
+    {
+      "id": 54,
+      "master_id": "M54",
+      "q_number": 27,
+      "q_label": "Q27",
+      "module_code": "RW_Module2",
+      "module_title": "Reading & Writing: Module 2",
+      "section": "Reading and Writing",
+      "module_num": 2,
+      "topic": "Rhetorical Synthesis / Student Notes",
+      "passage": "Notes: Enhanced rock weathering (ERW) spreads crushed basalt on farmland to capture CO2 and improve soil health. ERW is low-cost, low-tech compared to expensive energy-intensive methods. CO2 becomes stable bicarbonate in soil water flowing to oceans.",
+      "prompt": "The student wants to explain why ERW is a superior method for capturing CO2. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+      "options": [
+        {
+          "key": "A",
+          "text": "ERW improves soil health and helps farmers increase their income..."
+        },
+        {
+          "key": "B",
+          "text": "ERW removes CO2 from the air in a way that is both low-cost and low-tech."
+        },
+        {
+          "key": "C",
+          "text": "CO2 captured by ERW becomes stable bicarbonate..."
+        },
+        {
+          "key": "D",
+          "text": "ERW is a method of spreading crushed basalt on farmland..."
+        }
+      ],
+      "options_raw": "A. ERW improves soil health and helps farmers increase their income...\nB. ERW removes CO2 from the air in a way that is both low-cost and low-tech.\nC. CO2 captured by ERW becomes stable bicarbonate...\nD. ERW is a method of spreading crushed basalt on farmland...",
+      "is_grid_in": false,
+      "correct_answer": "B",
+      "tier1_hint": "Xác định mục tiêu nhấn mạnh sự khác biệt hay điểm chung giữa hai đối tượng.",
+      "tier2_hint": "Chọn các ghi chú cung cấp dữ liệu đối sánh trực tiếp.",
+      "tier3_hint": "Chọn câu diễn đạt nêu bật sự đối lập hoặc tương đồng theo yêu cầu.",
+      "strategic_tip": "Chỉ ra điểm vượt trội trực tiếp: 'low-cost and low-tech alternative'.",
+      "level1_tip": "Xác định mục tiêu nhấn mạnh sự khác biệt hay điểm chung giữa hai đối tượng.",
+      "level2_hint": "Chọn các ghi chú cung cấp dữ liệu đối sánh trực tiếp.",
+      "level3_solution": "Chọn câu diễn đạt nêu bật sự đối lập hoặc tương đồng theo yêu cầu.",
+      "pdf_page": 25
+    },
+    {
+      "id": 55,
+      "master_id": "M55",
+      "q_number": 1,
+      "q_label": "Q1",
+      "module_code": "Math_Module1",
+      "module_title": "Math: Module 1",
+      "section": "Math",
+      "module_num": 1,
+      "topic": "Linear Functions & Evaluation",
+      "passage": "The function h is defined by h(x) = 100x - 50.",
+      "prompt": "Calculator Allowed. What is the value of h(x) when x = 6?",
+      "options": [
+        {
+          "key": "A",
+          "text": "56"
+        },
+        {
+          "key": "B",
+          "text": "156"
+        },
+        {
+          "key": "C",
+          "text": "550"
+        },
+        {
+          "key": "D",
+          "text": "650"
+        }
+      ],
+      "options_raw": "A. 56\nB. 156\nC. 550\nD. 650",
+      "is_grid_in": false,
+      "correct_answer": "C",
+      "tier1_hint": "Đây là bài toán đánh giá giá trị hàm số tuyến tính h(x) tại một điểm.",
+      "tier2_hint": "Thay giá trị của biến số vào vị trí tương ứng trong công thức hàm số.",
+      "tier3_hint": "Thực hiện phép nhân trước rồi thực hiện phép trừ để tìm giá trị đầu ra.",
+      "strategic_tip": "Linear Function Evaluation: h(6) = 100(6) - 50 = 550.",
+      "level1_tip": "Đây là bài toán đánh giá giá trị hàm số tuyến tính h(x) tại một điểm.",
+      "level2_hint": "Thay giá trị của biến số vào vị trí tương ứng trong công thức hàm số.",
+      "level3_solution": "Thực hiện phép nhân trước rồi thực hiện phép trừ để tìm giá trị đầu ra.",
+      "pdf_page": 29
+    },
+    {
+      "id": 56,
+      "master_id": "M56",
+      "q_number": 2,
+      "q_label": "Q2",
+      "module_code": "Math_Module1",
+      "module_title": "Math: Module 1",
+      "section": "Math",
+      "module_num": 1,
+      "topic": "Linear Graph Interpretation (y-intercept)",
+      "passage": "The graph shown gives the estimated value, in dollars, of a mountain bike as a function of the number of months since it was purchased. The line intersects the y-axis at (0, 275).",
+      "prompt": "Calculator Allowed. What is the best interpretation of the y-intercept of the graph in this context?",
+      "options": [
+        {
+          "key": "A",
+          "text": "The estimated value of the bike was 275 dollars when it was purchased."
+        },
+        {
+          "key": "B",
+          "text": "The estimated value of the bike 24 months after purchase was 275 dollars."
+        },
+        {
+          "key": "C",
+          "text": "The estimated value decreased by 275 dollars in 24 months."
+        },
+        {
+          "key": "D",
+          "text": "The estimated value decreased by 2.75% each year."
+        }
+      ],
+      "options_raw": "A. The estimated value of the bike was 275 dollars when it was purchased.\nB. The estimated value of the bike 24 months after purchase was 275 dollars.\nC. The estimated value decreased by 275 dollars in 24 months.\nD. The estimated value decreased by 2.75% each year.",
+      "is_grid_in": false,
+      "correct_answer": "A",
+      "tier1_hint": "Phân tích ý nghĩa của tung độ gốc (y-intercept) trên đồ thị bài toán thực tế.",
+      "tier2_hint": "Tung độ gốc là giá trị của y khi biến độc lập t bằng 0.",
+      "tier3_hint": "Trong bối cảnh bài toán, t = 0 đại diện cho thời điểm ban đầu khi bắt đầu theo dõi.",
+      "strategic_tip": "y-intercept (0, b) represents the initial value at time t = 0.",
+      "level1_tip": "Phân tích ý nghĩa của tung độ gốc (y-intercept) trên đồ thị bài toán thực tế.",
+      "level2_hint": "Tung độ gốc là giá trị của y khi biến độc lập t bằng 0.",
+      "level3_solution": "Trong bối cảnh bài toán, t = 0 đại diện cho thời điểm ban đầu khi bắt đầu theo dõi.",
+      "pdf_page": 29
+    },
+    {
+      "id": 57,
+      "master_id": "M57",
+      "q_number": 3,
+      "q_label": "Q3",
+      "module_code": "Math_Module1",
+      "module_title": "Math: Module 1",
+      "section": "Math",
+      "module_num": 1,
+      "topic": "Percentages & Basic Calculations",
+      "passage": "Out of 200 attempts, 55% were successful.",
+      "prompt": "Calculator Allowed. How many of these attempts were successful?",
+      "options": [],
+      "options_raw": "Student-Produced Response (Grid-in). Enter the exact integer.",
+      "is_grid_in": true,
+      "correct_answer": "110",
+      "tier1_hint": "Bài toán yêu cầu tính giá trị phần trăm của một số nguyên cho trước.",
+      "tier2_hint": "Chuyển đổi tỉ lệ phần trăm thành số thập phân bằng cách chia cho 100.",
+      "tier3_hint": "Nhân số thập phân vừa tìm được với giá trị tổng ban đầu.",
+      "strategic_tip": "Percent of Total: Number = Percentage * Total = 0.55 * 200 = 110.",
+      "level1_tip": "Bài toán yêu cầu tính giá trị phần trăm của một số nguyên cho trước.",
+      "level2_hint": "Chuyển đổi tỉ lệ phần trăm thành số thập phân bằng cách chia cho 100.",
+      "level3_solution": "Nhân số thập phân vừa tìm được với giá trị tổng ban đầu.",
+      "pdf_page": 30
+    },
+    {
+      "id": 58,
+      "master_id": "M58",
+      "q_number": 4,
+      "q_label": "Q4",
+      "module_code": "Math_Module1",
+      "module_title": "Math: Module 1",
+      "section": "Math",
+      "module_num": 1,
+      "topic": "Equivalent Algebraic Expressions",
+      "passage": "Given the expression: 29x^2 + 29.",
+      "prompt": "Calculator Allowed. Which expression is equivalent to 29x^2 + 29?",
+      "options": [
+        {
+          "key": "A",
+          "text": "29(x^2 + 1)"
+        },
+        {
+          "key": "B",
+          "text": "29(x^2 + 29)"
+        },
+        {
+          "key": "C",
+          "text": "29(29x^2 + 1)"
+        },
+        {
+          "key": "D",
+          "text": "29(x^2 + 1/29)"
+        }
+      ],
+      "options_raw": "A. 29(x^2 + 1)\nB. 29(x^2 + 29)\nC. 29(29x^2 + 1)\nD. 29(x^2 + 1/29)",
+      "is_grid_in": false,
+      "correct_answer": "A",
+      "tier1_hint": "Bài toán yêu cầu tìm biểu thức đại số tương đương bằng cách nhóm thừa số chung.",
+      "tier2_hint": "Quan sát các hệ số của từng số hạng để tìm nhân tử chung lớn nhất.",
+      "tier3_hint": "Đặt nhân tử chung ra ngoài dấu ngoặc và viết lại phần còn lại bên trong.",
+      "strategic_tip": "Factoring Out Common Factor: 29x^2 + 29 = 29(x^2 + 1).",
+      "level1_tip": "Bài toán yêu cầu tìm biểu thức đại số tương đương bằng cách nhóm thừa số chung.",
+      "level2_hint": "Quan sát các hệ số của từng số hạng để tìm nhân tử chung lớn nhất.",
+      "level3_solution": "Đặt nhân tử chung ra ngoài dấu ngoặc và viết lại phần còn lại bên trong.",
+      "pdf_page": 30
+    },
+    {
+      "id": 59,
+      "master_id": "M59",
+      "q_number": 5,
+      "q_label": "Q5",
+      "module_code": "Math_Module1",
+      "module_title": "Math: Module 1",
+      "section": "Math",
+      "module_num": 1,
+      "topic": "Solving Linear Equations",
+      "passage": "Given the equation: 2(x - 3) = 2(90).",
+      "prompt": "Calculator Allowed. What is the value of x - 3?",
+      "options": [
+        {
+          "key": "A",
+          "text": "30"
+        },
+        {
+          "key": "B",
+          "text": "90"
+        },
+        {
+          "key": "C",
+          "text": "180"
+        },
+        {
+          "key": "D",
+          "text": "270"
+        }
+      ],
+      "options_raw": "A. 30\nB. 90\nC. 180\nD. 270",
+      "is_grid_in": false,
+      "correct_answer": "B",
+      "tier1_hint": "Đây là phương trình tuyến tính một ẩn đơn giản.",
+      "tier2_hint": "Sử dụng các phép biến đổi tương đương để cô lập biến số về một vế.",
+      "tier3_hint": "Chia cả hai vế cho hệ số của ẩn số để tìm giá trị cần tìm.",
+      "strategic_tip": "Divide both sides by 2 directly: x - 3 = 90.",
+      "level1_tip": "Đây là phương trình tuyến tính một ẩn đơn giản.",
+      "level2_hint": "Sử dụng các phép biến đổi tương đương để cô lập biến số về một vế.",
+      "level3_solution": "Chia cả hai vế cho hệ số của ẩn số để tìm giá trị cần tìm.",
+      "pdf_page": 30
+    },
+    {
+      "id": 60,
+      "master_id": "M60",
+      "q_number": 6,
+      "q_label": "Q6",
+      "module_code": "Math_Module1",
+      "module_title": "Math: Module 1",
+      "section": "Math",
+      "module_num": 1,
+      "topic": "Rates & Unit Conversion",
+      "passage": "A commercial water pump drains water from a reservoir at a constant rate of 180 gallons per minute.",
+      "prompt": "Calculator Allowed. At this rate, how many hours will it take to drain 32,400 gallons of water?",
+      "options": [],
+      "options_raw": "Student-Produced Response (Grid-in). Enter the exact number.",
+      "is_grid_in": true,
+      "correct_answer": "3",
+      "tier1_hint": "Bài toán đổi đơn vị đo lường hoặc tính tốc độ trung bình.",
+      "tier2_hint": "Thiết lập tỉ lệ chuyển đổi đơn vị theo phương pháp dây chuyền.",
+      "tier3_hint": "Triệt tiêu các đơn vị trung gian để thu được đơn vị kết quả mong muốn.",
+      "strategic_tip": "Time (hours) = Total Gallons / (Rate per min * 60 min/hr) = 32,400 / (180 * 60) = 3.",
+      "level1_tip": "Bài toán đổi đơn vị đo lường hoặc tính tốc độ trung bình.",
+      "level2_hint": "Thiết lập tỉ lệ chuyển đổi đơn vị theo phương pháp dây chuyền.",
+      "level3_solution": "Triệt tiêu các đơn vị trung gian để thu được đơn vị kết quả mong muốn.",
+      "pdf_page": 30
+    },
+    {
+      "id": 61,
+      "master_id": "M61",
+      "q_number": 7,
+      "q_label": "Q7",
+      "module_code": "Math_Module1",
+      "module_title": "Math: Module 1",
+      "section": "Math",
+      "module_num": 1,
+      "topic": "Linear Equations in Two Variables",
+      "passage": "The equation 4.57x + 6.08y = 902.07 represents a situation where x is the number of smaller bottles sold and y is the number of larger bottles sold.",
+      "prompt": "Calculator Allowed. According to the equation, what is the price, in dollars, of each smaller bottle?",
+      "options": [],
+      "options_raw": "Student-Produced Response (Grid-in). Enter the exact decimal.",
+      "is_grid_in": true,
+      "correct_answer": "4.57",
+      "tier1_hint": "Bài toán thiết lập phương trình tuyến tính hai ẩn dựa trên dữ kiện thực tế.",
+      "tier2_hint": "Xác định đơn giá cố định cho mỗi đại lượng và tổng chi phí toàn bộ.",
+      "tier3_hint": "Lập phương trình ax + by = C và biến đổi đại số để tìm đại lượng yêu cầu.",
+      "strategic_tip": "In Total Cost = a*x + b*y, the coefficient 'a' represents the price per unit x.",
+      "level1_tip": "Bài toán thiết lập phương trình tuyến tính hai ẩn dựa trên dữ kiện thực tế.",
+      "level2_hint": "Xác định đơn giá cố định cho mỗi đại lượng và tổng chi phí toàn bộ.",
+      "level3_solution": "Lập phương trình ax + by = C và biến đổi đại số để tìm đại lượng yêu cầu.",
+      "pdf_page": 30
+    },
+    {
+      "id": 62,
+      "master_id": "M62",
+      "q_number": 8,
+      "q_label": "Q8",
+      "module_code": "Math_Module1",
+      "module_title": "Math: Module 1",
+      "section": "Math",
+      "module_num": 1,
+      "topic": "Similar Triangles & Proportions",
+      "passage": "Triangle ABC is similar to triangle XYZ, where A, B, and C correspond to X, Y, and Z, respectively. In triangle ABC, AB = 180 and BC = 900. In triangle XYZ, YZ = 80.",
+      "prompt": "Calculator Allowed. What is the length of XY?",
+      "options": [
+        {
+          "key": "A",
+          "text": "288"
+        },
+        {
+          "key": "B",
+          "text": "196"
+        },
+        {
+          "key": "C",
+          "text": "80"
+        },
+        {
+          "key": "D",
+          "text": "16"
+        }
+      ],
+      "options_raw": "A. 288\nB. 196\nC. 80\nD. 16",
+      "is_grid_in": false,
+      "correct_answer": "D",
+      "tier1_hint": "Áp dụng tính chất của hai tam giác đồng dạng.",
+      "tier2_hint": "Lập tỉ lệ giữa các cặp cạnh tương ứng của hai tam giác.",
+      "tier3_hint": "Thay các độ dài đã biết vào tỉ lệ thức và giải phương trình tìm độ dài cạnh còn lại.",
+      "strategic_tip": "Similar Triangles Ratio: AB / XY = BC / YZ => 180 / XY = 900 / 80 => XY = 16.",
+      "level1_tip": "Áp dụng tính chất của hai tam giác đồng dạng.",
+      "level2_hint": "Lập tỉ lệ giữa các cặp cạnh tương ứng của hai tam giác.",
+      "level3_solution": "Thay các độ dài đã biết vào tỉ lệ thức và giải phương trình tìm độ dài cạnh còn lại.",
+      "pdf_page": 31
+    },
+    {
+      "id": 63,
+      "master_id": "M63",
+      "q_number": 9,
+      "q_label": "Q9",
+      "module_code": "Math_Module1",
+      "module_title": "Math: Module 1",
+      "section": "Math",
+      "module_num": 1,
+      "topic": "Absolute Value Equations",
+      "passage": "Given the equation: |x - 43| = 0.",
+      "prompt": "Calculator Allowed. Which value is a solution to the given equation?",
+      "options": [
+        {
+          "key": "A",
+          "text": "1"
+        },
+        {
+          "key": "B",
+          "text": "0"
+        },
+        {
+          "key": "C",
+          "text": "43"
+        },
+        {
+          "key": "D",
+          "text": "-43"
+        }
+      ],
+      "options_raw": "A. 1\nB. 0\nC. 43\nD. -43",
+      "is_grid_in": false,
+      "correct_answer": "C",
+      "tier1_hint": "Giải phương trình chứa dấu giá trị tuyệt đối |f(x)| = c.",
+      "tier2_hint": "Chia thành hai trường hợp: f(x) = c hoặc f(x) = -c.",
+      "tier3_hint": "Giải từng phương trình tuyến tính để tìm tập nghiệm.",
+      "strategic_tip": "|A| = 0 implies A = 0 => x = 43.",
+      "level1_tip": "Giải phương trình chứa dấu giá trị tuyệt đối |f(x)| = c.",
+      "level2_hint": "Chia thành hai trường hợp: f(x) = c hoặc f(x) = -c.",
+      "level3_solution": "Giải từng phương trình tuyến tính để tìm tập nghiệm.",
+      "pdf_page": 31
+    },
+    {
+      "id": 64,
+      "master_id": "M64",
+      "q_number": 10,
+      "q_label": "Q10",
+      "module_code": "Math_Module1",
+      "module_title": "Math: Module 1",
+      "section": "Math",
+      "module_num": 1,
+      "topic": "Finding Line Equation from Points",
+      "passage": "In the xy-plane, line k passes through the points (0, -8) and (1, -5).",
+      "prompt": "Calculator Allowed. Which equation defines line k?",
+      "options": [
+        {
+          "key": "A",
+          "text": "y = 3x - 8"
+        },
+        {
+          "key": "B",
+          "text": "y = (1/3)x - 8"
+        },
+        {
+          "key": "C",
+          "text": "y = -x + 1/3"
+        },
+        {
+          "key": "D",
+          "text": "3y = -x + 3"
+        }
+      ],
+      "options_raw": "A. y = 3x - 8\nB. y = (1/3)x - 8\nC. y = -x + 1/3\nD. 3y = -x + 3",
+      "is_grid_in": false,
+      "correct_answer": "A",
+      "tier1_hint": "Bài toán tìm phương trình đường thẳng đi qua hai điểm cho trước.",
+      "tier2_hint": "Tính hệ số góc m bằng công thức (y2 - y1) / (x2 - x1).",
+      "tier3_hint": "Thay tọa độ một điểm và m vào dạng y = mx + b để tìm tung độ gốc b.",
+      "strategic_tip": "Slope m = (y2 - y1)/(x2 - x1) = 3, y-intercept = -8 => y = 3x - 8.",
+      "level1_tip": "Bài toán tìm phương trình đường thẳng đi qua hai điểm cho trước.",
+      "level2_hint": "Tính hệ số góc m bằng công thức (y2 - y1) / (x2 - x1).",
+      "level3_solution": "Thay tọa độ một điểm và m vào dạng y = mx + b để tìm tung độ gốc b.",
+      "pdf_page": 31
+    },
+    {
+      "id": 65,
+      "master_id": "M65",
+      "q_number": 11,
+      "q_label": "Q11",
+      "module_code": "Math_Module1",
+      "module_title": "Math: Module 1",
+      "section": "Math",
+      "module_num": 1,
+      "topic": "Scatterplot Best-Fit Line Model",
+      "passage": "A scatterplot shows data points with a positive slope passing near (0, 0.2) and (4, 9.2).",
+      "prompt": "Calculator Allowed. Which equation is the most appropriate linear model for the data?",
+      "options": [
+        {
+          "key": "A",
+          "text": "y = 0.2 + 2.25x"
+        },
+        {
+          "key": "B",
+          "text": "y = 0.2 - 2.25x"
+        },
+        {
+          "key": "C",
+          "text": "y = 2.25 + 0.2x"
+        },
+        {
+          "key": "D",
+          "text": "y = 2.25 - 0.2x"
+        }
+      ],
+      "options_raw": "A. y = 0.2 + 2.25x\nB. y = 0.2 - 2.25x\nC. y = 2.25 + 0.2x\nD. y = 2.25 - 0.2x",
+      "is_grid_in": false,
+      "correct_answer": "A",
+      "tier1_hint": "Phân tích đường tiệm cận/đường xu hướng (best-fit line) trên biểu đồ phân tán.",
+      "tier2_hint": "Xác định xu hướng tăng/giảm (hệ số góc dương hay âm) và tung độ gốc trên đồ thị.",
+      "tier3_hint": "Đối chiếu hệ số góc và tung độ gốc ước lượng với các phương án.",
+      "strategic_tip": "Linear Model: y = b + m*x where b ≈ 0.2 and m ≈ 2.25.",
+      "level1_tip": "Phân tích đường tiệm cận/đường xu hướng (best-fit line) trên biểu đồ phân tán.",
+      "level2_hint": "Xác định xu hướng tăng/giảm (hệ số góc dương hay âm) và tung độ gốc trên đồ thị.",
+      "level3_solution": "Đối chiếu hệ số góc và tung độ gốc ước lượng với các phương án.",
+      "pdf_page": 32
+    },
+    {
+      "id": 66,
+      "master_id": "M66",
+      "q_number": 12,
+      "q_label": "Q12",
+      "module_code": "Math_Module1",
+      "module_title": "Math: Module 1",
+      "section": "Math",
+      "module_num": 1,
+      "topic": "Rational Function Intercepts",
+      "passage": "Given the function y = (21 - x) / (ax + b), where a and b are positive constants.",
+      "prompt": "Calculator Allowed. What is the x-intercept of the graph in the xy-plane?",
+      "options": [
+        {
+          "key": "A",
+          "text": "(21, 0)"
+        },
+        {
+          "key": "B",
+          "text": "(0, -21)"
+        },
+        {
+          "key": "C",
+          "text": "(0, 21/b)"
+        },
+        {
+          "key": "D",
+          "text": "(-b/a, 0)"
+        }
+      ],
+      "options_raw": "A. (21, 0)\nB. (0, -21)\nC. (0, 21/b)\nD. (-b/a, 0)",
+      "is_grid_in": false,
+      "correct_answer": "A",
+      "tier1_hint": "Tìm giao điểm của đồ thị hàm phân thức với các trục tọa độ.",
+      "tier2_hint": "Để tìm y-intercept, cho x = 0; để tìm x-intercept, cho tử số bằng 0.",
+      "tier3_hint": "Xác định tọa độ giao điểm tương ứng từ kết quả tính toán.",
+      "strategic_tip": "x-intercept occurs when y = 0 => Numerator 21 - x = 0 => x = 21.",
+      "level1_tip": "Tìm giao điểm của đồ thị hàm phân thức với các trục tọa độ.",
+      "level2_hint": "Để tìm y-intercept, cho x = 0; để tìm x-intercept, cho tử số bằng 0.",
+      "level3_solution": "Xác định tọa độ giao điểm tương ứng từ kết quả tính toán.",
+      "pdf_page": 32
+    },
+    {
+      "id": 67,
+      "master_id": "M67",
+      "q_number": 13,
+      "q_label": "Q13",
+      "module_code": "Math_Module1",
+      "module_title": "Math: Module 1",
+      "section": "Math",
+      "module_num": 1,
+      "topic": "Inequalities & Speed/Distance",
+      "passage": "A model estimates that a glacier moves between 17 and 24 centimeters per day.",
+      "prompt": "Calculator Allowed. Which inequality represents possible values of x, where x is the total distance, in centimeters, the glacier moves in 2 days?",
+      "options": [
+        {
+          "key": "A",
+          "text": "0 <= x <= 2"
+        },
+        {
+          "key": "B",
+          "text": "(17)(0.5) <= x <= (24)(0.5)"
+        },
+        {
+          "key": "C",
+          "text": "17 <= x <= 24"
+        },
+        {
+          "key": "D",
+          "text": "(17)(2) <= x <= (24)(2)"
+        }
+      ],
+      "options_raw": "A. 0 <= x <= 2\nB. (17)(0.5) <= x <= (24)(0.5)\nC. 17 <= x <= 24\nD. (17)(2) <= x <= (24)(2)",
+      "is_grid_in": false,
+      "correct_answer": "D",
+      "tier1_hint": "Thiết lập bất phương trình liên quan đến quãng đường, vận tốc và thời gian.",
+      "tier2_hint": "Áp dụng công thức Quãng đường = Vận tốc x Thời gian.",
+      "tier3_hint": "Đặt dấu bất đẳng thức (lớn hơn/nhỏ hơn) đúng theo yêu cầu giới hạn của đề bài.",
+      "strategic_tip": "Range for 2 days = [Min rate * 2, Max rate * 2] = [(17)(2), (24)(2)].",
+      "level1_tip": "Thiết lập bất phương trình liên quan đến quãng đường, vận tốc và thời gian.",
+      "level2_hint": "Áp dụng công thức Quãng đường = Vận tốc x Thời gian.",
+      "level3_solution": "Đặt dấu bất đẳng thức (lớn hơn/nhỏ hơn) đúng theo yêu cầu giới hạn của đề bài.",
+      "pdf_page": 32
+    },
+    {
+      "id": 68,
+      "master_id": "M68",
+      "q_number": 14,
+      "q_label": "Q14",
+      "module_code": "Math_Module1",
+      "module_title": "Math: Module 1",
+      "section": "Math",
+      "module_num": 1,
+      "topic": "Unit Conversion (Ancient Units)",
+      "passage": "In an ancient Roman measurement system, a leuga was a unit of length equal to 7,500 pedes.",
+      "prompt": "Calculator Allowed. In this measurement system, how many pedes were equivalent to 4.6 leugas?",
+      "options": [],
+      "options_raw": "Student-Produced Response (Grid-in). Enter the exact integer.",
+      "is_grid_in": true,
+      "correct_answer": "34500",
+      "tier1_hint": "Bài toán chuyển đổi đơn vị đo lường cổ/đặc thù.",
+      "tier2_hint": "Sử dụng tỉ lệ chuyển đổi được cung cấp trong đề bài.",
+      "tier3_hint": "Nhân/chia chuỗi tỉ lệ để đổi sang đơn vị mục tiêu.",
+      "strategic_tip": "Unit Conversion: Pedes = 4.6 * 7,500 = 34,500.",
+      "level1_tip": "Bài toán chuyển đổi đơn vị đo lường cổ/đặc thù.",
+      "level2_hint": "Sử dụng tỉ lệ chuyển đổi được cung cấp trong đề bài.",
+      "level3_solution": "Nhân/chia chuỗi tỉ lệ để đổi sang đơn vị mục tiêu.",
+      "pdf_page": 33
+    },
+    {
+      "id": 69,
+      "master_id": "M69",
+      "q_number": 15,
+      "q_label": "Q15",
+      "module_code": "Math_Module1",
+      "module_title": "Math: Module 1",
+      "section": "Math",
+      "module_num": 1,
+      "topic": "Geometry (Area & Factoring)",
+      "passage": "A rectangle has a width of n yards and a length of (n + 7) yards. The area of the rectangle is 198 square yards.",
+      "prompt": "Calculator Allowed. What is the value of n?",
+      "options": [],
+      "options_raw": "Student-Produced Response (Grid-in). Enter the exact integer.",
+      "is_grid_in": true,
+      "correct_answer": "11",
+      "tier1_hint": "Áp dụng công thức tính diện tích hình học và phân tích đa thức thành nhân tử.",
+      "tier2_hint": "Viết biểu thức diện tích theo chiều dài và chiều rộng.",
+      "tier3_hint": "Giải phương trình đại số để tìm độ dài kích thước chưa biết.",
+      "strategic_tip": "Area = n(n + 7) = 198 => n = 11 (since 11 * 18 = 198).",
+      "level1_tip": "Áp dụng công thức tính diện tích hình học và phân tích đa thức thành nhân tử.",
+      "level2_hint": "Viết biểu thức diện tích theo chiều dài và chiều rộng.",
+      "level3_solution": "Giải phương trình đại số để tìm độ dài kích thước chưa biết.",
+      "pdf_page": 33
+    },
+    {
+      "id": 70,
+      "master_id": "M70",
+      "q_number": 16,
+      "q_label": "Q16",
+      "module_code": "Math_Module1",
+      "module_title": "Math: Module 1",
+      "section": "Math",
+      "module_num": 1,
+      "topic": "Rearranging Formulas (Kinetic Energy)",
+      "passage": "For an object with a mass of 55 kg, the given equation 55 = 2K / (v^2) relates kinetic energy K to speed v.",
+      "prompt": "Calculator Allowed. Which equation correctly expresses speed v in terms of K?",
+      "options": [
+        {
+          "key": "A",
+          "text": "v = 2K / 55^2"
+        },
+        {
+          "key": "B",
+          "text": "v = 55^2 / 2K"
+        },
+        {
+          "key": "C",
+          "text": "v = sqrt(55 / 2K)"
+        },
+        {
+          "key": "D",
+          "text": "v = sqrt(2K / 55)"
+        }
+      ],
+      "options_raw": "A. v = 2K / 55^2\nB. v = 55^2 / 2K\nC. v = sqrt(55 / 2K)\nD. v = sqrt(2K / 55)",
+      "is_grid_in": false,
+      "correct_answer": "D",
+      "tier1_hint": "Biến đổi công thức vật lý/đại số để cô lập một biến số.",
+      "tier2_hint": "Thực hiện các phép tính ngược (nhân/chia, lấy căn/bình phương) lên cả hai vế.",
+      "tier3_hint": "Rút biến số mục tiêu ra một vế hoàn chỉnh.",
+      "strategic_tip": "Isolate v: v^2 = 2K / 55 => v = sqrt(2K / 55).",
+      "level1_tip": "Biến đổi công thức vật lý/đại số để cô lập một biến số.",
+      "level2_hint": "Thực hiện các phép tính ngược (nhân/chia, lấy căn/bình phương) lên cả hai vế.",
+      "level3_solution": "Rút biến số mục tiêu ra một vế hoàn chỉnh.",
+      "pdf_page": 33
+    },
+    {
+      "id": 71,
+      "master_id": "M71",
+      "q_number": 17,
+      "q_label": "Q17",
+      "module_code": "Math_Module1",
+      "module_title": "Math: Module 1",
+      "section": "Math",
+      "module_num": 1,
+      "topic": "Exponential Growth Model",
+      "passage": "A company's solar cell production grew by approximately 22% each year for 5 years following 2013, starting at 7,138 peak kilowatts in 2013.",
+      "prompt": "Calculator Allowed. Which function best models the solar cell production C(n) n years after 2013?",
+      "options": [
+        {
+          "key": "A",
+          "text": "C(n) = 7,138(0.22)^n"
+        },
+        {
+          "key": "B",
+          "text": "C(n) = 7,138(1.22)^n"
+        },
+        {
+          "key": "C",
+          "text": "C(n) = 0.22(7,138)^n"
+        },
+        {
+          "key": "D",
+          "text": "C(n) = 1.22(7,138)^n"
+        }
+      ],
+      "options_raw": "A. C(n) = 7,138(0.22)^n\nB. C(n) = 7,138(1.22)^n\nC. C(n) = 0.22(7,138)^n\nD. C(n) = 1.22(7,138)^n",
+      "is_grid_in": false,
+      "correct_answer": "B",
+      "tier1_hint": "Áp dụng mô hình hàm số mũ y = a(b)^x đại diện cho sự tăng trưởng.",
+      "tier2_hint": "Xác định giá trị ban đầu 'a' và hệ số tăng trưởng 'b' từ đề bài.",
+      "tier3_hint": "Thay giá trị biến thời gian x vào mô hình để tính kết quả.",
+      "strategic_tip": "Exponential Growth Model: P(t) = P0 * (1 + r)^t = 7,138 * (1.22)^n.",
+      "level1_tip": "Áp dụng mô hình hàm số mũ y = a(b)^x đại diện cho sự tăng trưởng.",
+      "level2_hint": "Xác định giá trị ban đầu 'a' và hệ số tăng trưởng 'b' từ đề bài.",
+      "level3_solution": "Thay giá trị biến thời gian x vào mô hình để tính kết quả.",
+      "pdf_page": 33
+    },
+    {
+      "id": 72,
+      "master_id": "M72",
+      "q_number": 18,
+      "q_label": "Q18",
+      "module_code": "Math_Module1",
+      "module_title": "Math: Module 1",
+      "section": "Math",
+      "module_num": 1,
+      "topic": "Trigonometry (Special Right Triangle 45-45-90)",
+      "passage": "In right triangle ABC with angle B = 90 deg and angle C = 45 deg, hypotenuse AC has length x = 19.",
+      "prompt": "Calculator Allowed. What is the value of sin A?",
+      "options": [
+        {
+          "key": "A",
+          "text": "1/sqrt(3)"
+        },
+        {
+          "key": "B",
+          "text": "1/sqrt(2)"
+        },
+        {
+          "key": "C",
+          "text": "1"
+        },
+        {
+          "key": "D",
+          "text": "sqrt(2)"
+        }
+      ],
+      "options_raw": "A. 1/sqrt(3)\nB. 1/sqrt(2)\nC. 1\nD. sqrt(2)",
+      "is_grid_in": false,
+      "correct_answer": "B",
+      "tier1_hint": "Áp dụng tỉ số lượng giác trong tam giác vuông đặc biệt 45-45-90.",
+      "tier2_hint": "Nhớ tỉ lệ cạnh trong tam giác vuông cân là 1 : 1 : sqrt(2).",
+      "tier3_hint": "Sử dụng tỉ lệ cạnh để tính độ dài cạnh cần tìm.",
+      "strategic_tip": "Special Right Triangle 45-45-90: sin(45 deg) = 1/sqrt(2).",
+      "level1_tip": "Áp dụng tỉ số lượng giác trong tam giác vuông đặc biệt 45-45-90.",
+      "level2_hint": "Nhớ tỉ lệ cạnh trong tam giác vuông cân là 1 : 1 : sqrt(2).",
+      "level3_solution": "Sử dụng tỉ lệ cạnh để tính độ dài cạnh cần tìm.",
+      "pdf_page": 34
+    },
+    {
+      "id": 73,
+      "master_id": "M73",
+      "q_number": 19,
+      "q_label": "Q19",
+      "module_code": "Math_Module1",
+      "module_title": "Math: Module 1",
+      "section": "Math",
+      "module_num": 1,
+      "topic": "3D Geometry (Right Square Prism Volume)",
+      "passage": "A right square prism has a height of 15 units and a volume of 1,815 cubic units.",
+      "prompt": "Calculator Allowed. What is the length, in units, of an edge of the base?",
+      "options": [
+        {
+          "key": "A",
+          "text": "11"
+        },
+        {
+          "key": "B",
+          "text": "121"
+        },
+        {
+          "key": "C",
+          "text": "15"
+        },
+        {
+          "key": "D",
+          "text": "121/15"
+        }
+      ],
+      "options_raw": "A. 11\nB. 121\nC. 15\nD. 121/15",
+      "is_grid_in": false,
+      "correct_answer": "A",
+      "tier1_hint": "Tính thể tích khối lăng trụ đứng đáy là hình vuông.",
+      "tier2_hint": "Áp dụng công thức Thể tích = Diện tích đáy x Chiều cao.",
+      "tier3_hint": "Thay độ dài cạnh đáy và chiều cao vào công thức để tính thể tích.",
+      "strategic_tip": "Volume of Square Prism = s^2 * h => s^2 = 1815 / 15 = 121 => s = 11.",
+      "level1_tip": "Tính thể tích khối lăng trụ đứng đáy là hình vuông.",
+      "level2_hint": "Áp dụng công thức Thể tích = Diện tích đáy x Chiều cao.",
+      "level3_solution": "Thay độ dài cạnh đáy và chiều cao vào công thức để tính thể tích.",
+      "pdf_page": 34
+    },
+    {
+      "id": 74,
+      "master_id": "M74",
+      "q_number": 20,
+      "q_label": "Q20",
+      "module_code": "Math_Module1",
+      "module_title": "Math: Module 1",
+      "section": "Math",
+      "module_num": 1,
+      "topic": "Systems of Non-linear Equations",
+      "passage": "System of equations: y = x - 1 and y = 19(x - 1)^2 - 20.",
+      "prompt": "Calculator Allowed. What is one possible value of x - 1?",
+      "options": [],
+      "options_raw": "Student-Produced Response (Grid-in). Enter the exact integer or fraction.",
+      "is_grid_in": true,
+      "correct_answer": "1",
+      "tier1_hint": "Giải hệ phương trình gồm một phương trình tuyến tính và một phương trình phi tuyến.",
+      "tier2_hint": "Rút một biến từ phương trình tuyến tính và thế vào phương trình phi tuyến.",
+      "tier3_hint": "Giải phương trình bậc hai thu được để tìm số nghiệm.",
+      "strategic_tip": "Substitute u = x - 1 => 19u^2 - u - 20 = 0 => u = 1 or u = 20/19.",
+      "level1_tip": "Giải hệ phương trình gồm một phương trình tuyến tính và một phương trình phi tuyến.",
+      "level2_hint": "Rút một biến từ phương trình tuyến tính và thế vào phương trình phi tuyến.",
+      "level3_solution": "Giải phương trình bậc hai thu được để tìm số nghiệm.",
+      "pdf_page": 34
+    },
+    {
+      "id": 75,
+      "master_id": "M75",
+      "q_number": 21,
+      "q_label": "Q21",
+      "module_code": "Math_Module1",
+      "module_title": "Math: Module 1",
+      "section": "Math",
+      "module_num": 1,
+      "topic": "Systems of Linear Equations (No Solution)",
+      "passage": "System of equations: 18x + 6y = 8y + 9 and ty = 1/5 + 9x.",
+      "prompt": "Calculator Allowed. In the given system, t is a constant. If the system has no solution, what is the value of t?",
+      "options": [
+        {
+          "key": "A",
+          "text": "1"
+        },
+        {
+          "key": "B",
+          "text": "2"
+        },
+        {
+          "key": "C",
+          "text": "9"
+        },
+        {
+          "key": "D",
+          "text": "18"
+        }
+      ],
+      "options_raw": "A. 1\nB. 2\nC. 9\nD. 18",
+      "is_grid_in": false,
+      "correct_answer": "B",
+      "tier1_hint": "Xác định điều kiện để hệ phương trình tuyến tính vô nghiệm.",
+      "tier2_hint": "Hệ vô nghiệm khi hai đường thẳng song song: tỉ số hệ số x và y bằng nhau nhưng khác tỉ số hằng số.",
+      "tier3_hint": "Thiết lập tỉ lệ thức giữa các hệ số và giải tìm hằng số c.",
+      "strategic_tip": "Parallel Lines Condition: m1 = m2 => t = 1.",
+      "level1_tip": "Xác định điều kiện để hệ phương trình tuyến tính vô nghiệm.",
+      "level2_hint": "Hệ vô nghiệm khi hai đường thẳng song song: tỉ số hệ số x và y bằng nhau nhưng khác tỉ số hằng số.",
+      "level3_solution": "Thiết lập tỉ lệ thức giữa các hệ số và giải tìm hằng số c.",
+      "pdf_page": 34
+    },
+    {
+      "id": 76,
+      "master_id": "M76",
+      "q_number": 22,
+      "q_label": "Q22",
+      "module_code": "Math_Module1",
+      "module_title": "Math: Module 1",
+      "section": "Math",
+      "module_num": 1,
+      "topic": "Circle Geometry (Radius from Intercepts)",
+      "passage": "A circle in the xy-plane has center (24, 5) and y-intercepts (0, -27) and (0, 37).",
+      "prompt": "Calculator Allowed. What is the radius of this circle?",
+      "options": [
+        {
+          "key": "A",
+          "text": "40"
+        },
+        {
+          "key": "B",
+          "text": "37"
+        },
+        {
+          "key": "C",
+          "text": "32"
+        },
+        {
+          "key": "D",
+          "text": "25"
+        }
+      ],
+      "options_raw": "A. 40\nB. 37\nC. 32\nD. 25",
+      "is_grid_in": false,
+      "correct_answer": "D",
+      "tier1_hint": "Xác định bán kính đường tròn từ phương trình hoặc giao điểm với trục tọa độ.",
+      "tier2_hint": "Đưa phương trình đường tròn về dạng chuẩn (x - h)^2 + (y - k)^2 = r^2.",
+      "tier3_hint": "Lấy căn bậc hai của vế phải r^2 để tìm bán kính r.",
+      "strategic_tip": "Distance Formula: r = sqrt((x_center - 0)^2 + (y_center - y_int)^2) = sqrt(24^2 + 32^2) = 40.",
+      "level1_tip": "Xác định bán kính đường tròn từ phương trình hoặc giao điểm với trục tọa độ.",
+      "level2_hint": "Đưa phương trình đường tròn về dạng chuẩn (x - h)^2 + (y - k)^2 = r^2.",
+      "level3_solution": "Lấy căn bậc hai của vế phải r^2 để tìm bán kính r.",
+      "pdf_page": 35
+    },
+    {
+      "id": 77,
+      "master_id": "M77",
+      "q_number": 1,
+      "q_label": "Q1",
+      "module_code": "Math_Module2",
+      "module_title": "Math: Module 2",
+      "section": "Math",
+      "module_num": 2,
+      "topic": "Circle Equations (Radius)",
+      "passage": "A circle in the xy-plane has equation (x - 4)^2 + (y + 1)^2 = 49.",
+      "prompt": "Calculator Allowed. What is the radius of the circle?",
+      "options": [
+        {
+          "key": "A",
+          "text": "7"
+        },
+        {
+          "key": "B",
+          "text": "14"
+        },
+        {
+          "key": "C",
+          "text": "24.5"
+        },
+        {
+          "key": "D",
+          "text": "49"
+        }
+      ],
+      "options_raw": "A. 7\nB. 14\nC. 24.5\nD. 49",
+      "is_grid_in": false,
+      "correct_answer": "A",
+      "tier1_hint": "So sánh phương trình đường tròn đã cho với dạng chuẩn (x - h)^2 + (y - k)^2 = r^2.",
+      "tier2_hint": "Xác định giá trị r^2 ở vế phải của phương trình.",
+      "tier3_hint": "Tính căn bậc hai của r^2 để tìm độ dài bán kính r.",
+      "strategic_tip": "Circle Equation: (x - h)^2 + (y - k)^2 = r^2 => r = sqrt(49) = 7.",
+      "level1_tip": "So sánh phương trình đường tròn đã cho với dạng chuẩn (x - h)^2 + (y - k)^2 = r^2.",
+      "level2_hint": "Xác định giá trị r^2 ở vế phải của phương trình.",
+      "level3_solution": "Tính căn bậc hai của r^2 để tìm độ dài bán kính r.",
+      "pdf_page": 38
+    },
+    {
+      "id": 78,
+      "master_id": "M78",
+      "q_number": 2,
+      "q_label": "Q2",
+      "module_code": "Math_Module2",
+      "module_title": "Math: Module 2",
+      "section": "Math",
+      "module_num": 2,
+      "topic": "Linear Functions & Table Data",
+      "passage": "A table shows area x (sq ft) and water f(x) (gallons): (2400, 4320), (3600, 6480), (4800, 8640).",
+      "prompt": "Calculator Allowed. Which equation defines f(x)?",
+      "options": [
+        {
+          "key": "A",
+          "text": "f(x) = 1.8x"
+        },
+        {
+          "key": "B",
+          "text": "f(x) = 0.6x"
+        },
+        {
+          "key": "C",
+          "text": "f(x) = 2,160x"
+        },
+        {
+          "key": "D",
+          "text": "f(x) = 4,320x"
+        }
+      ],
+      "options_raw": "A. f(x) = 1.8x\nB. f(x) = 0.6x\nC. f(x) = 2,160x\nD. f(x) = 4,320x",
+      "is_grid_in": false,
+      "correct_answer": "A",
+      "tier1_hint": "Phân tích bảng giá trị để xác định dạng hàm số (tuyến tính hay hàm mũ).",
+      "tier2_hint": "Tính tỉ số thay đổi Delta y / Delta x giữa các điểm dữ liệu.",
+      "tier3_hint": "Lập công thức hàm số dựa trên hệ số góc và tung độ gốc tìm được.",
+      "strategic_tip": "Direct Variation Ratio: k = y / x = 4320 / 2400 = 1.8.",
+      "level1_tip": "Phân tích bảng giá trị để xác định dạng hàm số (tuyến tính hay hàm mũ).",
+      "level2_hint": "Tính tỉ số thay đổi Delta y / Delta x giữa các điểm dữ liệu.",
+      "level3_solution": "Lập công thức hàm số dựa trên hệ số góc và tung độ gốc tìm được.",
+      "pdf_page": 38
+    },
+    {
+      "id": 79,
+      "master_id": "M79",
+      "q_number": 3,
+      "q_label": "Q3",
+      "module_code": "Math_Module2",
+      "module_title": "Math: Module 2",
+      "section": "Math",
+      "module_num": 2,
+      "topic": "Linear Equations (Infinitely Many Solutions)",
+      "passage": "Given the equation: 15x + 435 = a(x + 29).",
+      "prompt": "Calculator Allowed. If the equation has infinitely many solutions, what is the value of a?",
+      "options": [],
+      "options_raw": "Student-Produced Response (Grid-in). Enter the exact integer.",
+      "is_grid_in": true,
+      "correct_answer": "15",
+      "tier1_hint": "Xác định điều kiện để hệ phương trình tuyến tính có vô số nghiệm.",
+      "tier2_hint": "Hệ có vô số nghiệm khi hai phương trình trùng nhau hoàn toàn (mọi hệ số tương ứng tỉ lệ).",
+      "tier3_hint": "Thiết lập tỉ lệ giữa các hệ số x, y và hằng số tự do để giải tìm ẩn số.",
+      "strategic_tip": "Infinitely Many Solutions: Identical coefficients on both sides => a = 15.",
+      "level1_tip": "Xác định điều kiện để hệ phương trình tuyến tính có vô số nghiệm.",
+      "level2_hint": "Hệ có vô số nghiệm khi hai phương trình trùng nhau hoàn toàn (mọi hệ số tương ứng tỉ lệ).",
+      "level3_solution": "Thiết lập tỉ lệ giữa các hệ số x, y và hằng số tự do để giải tìm ẩn số.",
+      "pdf_page": 38
+    },
+    {
+      "id": 80,
+      "master_id": "M80",
+      "q_number": 4,
+      "q_label": "Q4",
+      "module_code": "Math_Module2",
+      "module_title": "Math: Module 2",
+      "section": "Math",
+      "module_num": 2,
+      "topic": "Linear Modeling (Pricing Structure)",
+      "passage": "A plumbing company charges 116 dollars for the first hour and 70 dollars for each additional hour, plus parts cost z dollars (x >= 1).",
+      "prompt": "Calculator Allowed. Which equation represents total cost y?",
+      "options": [
+        {
+          "key": "A",
+          "text": "y = 70x + z"
+        },
+        {
+          "key": "B",
+          "text": "y = 70x + z + 46"
+        },
+        {
+          "key": "C",
+          "text": "y = 116x + z"
+        },
+        {
+          "key": "D",
+          "text": "y = 116x + 70z + 46"
+        }
+      ],
+      "options_raw": "A. y = 70x + z\nB. y = 70x + z + 46\nC. y = 116x + z\nD. y = 116x + 70z + 46",
+      "is_grid_in": false,
+      "correct_answer": "B",
+      "tier1_hint": "Mô hình hóa chi phí bằng hàm tuyến tính y = mx + b.",
+      "tier2_hint": "Xác định chi phí cố định (b) và chi phí biến đổi theo đơn vị (m).",
+      "tier3_hint": "Thiết lập biểu thức đại số biểu diễn tổng chi phí.",
+      "strategic_tip": "Cost Model: y = First Hour + Additional Hours*(x - 1) + Parts = 116 + 70(x - 1) + z = 70x + z + 46.",
+      "level1_tip": "Mô hình hóa chi phí bằng hàm tuyến tính y = mx + b.",
+      "level2_hint": "Xác định chi phí cố định (b) và chi phí biến đổi theo đơn vị (m).",
+      "level3_solution": "Thiết lập biểu thức đại số biểu diễn tổng chi phí.",
+      "pdf_page": 38
+    },
+    {
+      "id": 81,
+      "master_id": "M81",
+      "q_number": 5,
+      "q_label": "Q5",
+      "module_code": "Math_Module2",
+      "module_title": "Math: Module 2",
+      "section": "Math",
+      "module_num": 2,
+      "topic": "Absolute Value Functions",
+      "passage": "Function h(x) = |x - 8| - |6 - x| + a. Given h(-4) = 1.",
+      "prompt": "Calculator Allowed. What is the value of a?",
+      "options": [
+        {
+          "key": "A",
+          "text": "-1"
+        },
+        {
+          "key": "B",
+          "text": "0"
+        },
+        {
+          "key": "C",
+          "text": "-1"
+        },
+        {
+          "key": "D",
+          "text": "1"
+        }
+      ],
+      "options_raw": "A. -1\nB. 0\nC. -1\nD. 1",
+      "is_grid_in": false,
+      "correct_answer": "C",
+      "tier1_hint": "Phân tích đồ thị hoặc tập giá trị của hàm giá trị tuyệt đối dạng y = |x - h| + k.",
+      "tier2_hint": "Xác định tọa độ đỉnh cực trị (h, k) của hàm số.",
+      "tier3_hint": "Thay giá trị x đề bài yêu cầu vào biểu thức để tính giá trị hàm số.",
+      "strategic_tip": "Evaluate h(-4): 12 - 10 + a = 1 => 2 + a = 1 => a = -1.",
+      "level1_tip": "Phân tích đồ thị hoặc tập giá trị của hàm giá trị tuyệt đối dạng y = |x - h| + k.",
+      "level2_hint": "Xác định tọa độ đỉnh cực trị (h, k) của hàm số.",
+      "level3_solution": "Thay giá trị x đề bài yêu cầu vào biểu thức để tính giá trị hàm số.",
+      "pdf_page": 39
+    },
+    {
+      "id": 82,
+      "master_id": "M82",
+      "q_number": 6,
+      "q_label": "Q6",
+      "module_code": "Math_Module2",
+      "module_title": "Math: Module 2",
+      "section": "Math",
+      "module_num": 2,
+      "topic": "Perpendicular Lines Slope",
+      "passage": "Line h is defined by 2x + 3y - 30 = 0. Line j is perpendicular to line h in the xy-plane.",
+      "prompt": "Calculator Allowed. What is the slope of line j?",
+      "options": [
+        {
+          "key": "A",
+          "text": "-2/3"
+        },
+        {
+          "key": "B",
+          "text": "2/3"
+        },
+        {
+          "key": "C",
+          "text": "-3/2"
+        },
+        {
+          "key": "D",
+          "text": "3/2"
+        }
+      ],
+      "options_raw": "A. -2/3\nB. 2/3\nC. -3/2\nD. 3/2",
+      "is_grid_in": false,
+      "correct_answer": "D",
+      "tier1_hint": "Áp dụng tính chất hệ số góc của hai đường thẳng vuông góc.",
+      "tier2_hint": "Hai đường thẳng vuông góc có tích hai hệ số góc bằng -1 (m1 * m2 = -1).",
+      "tier3_hint": "Lấy nghịch đảo và đổi dấu hệ số góc của đường thẳng ban đầu.",
+      "strategic_tip": "Perpendicular Slope Condition: m1 * m2 = -1 => m_j = 3/2.",
+      "level1_tip": "Áp dụng tính chất hệ số góc của hai đường thẳng vuông góc.",
+      "level2_hint": "Hai đường thẳng vuông góc có tích hai hệ số góc bằng -1 (m1 * m2 = -1).",
+      "level3_solution": "Lấy nghịch đảo và đổi dấu hệ số góc của đường thẳng ban đầu.",
+      "pdf_page": 39
+    },
+    {
+      "id": 83,
+      "master_id": "M83",
+      "q_number": 7,
+      "q_label": "Q7",
+      "module_code": "Math_Module2",
+      "module_title": "Math: Module 2",
+      "section": "Math",
+      "module_num": 2,
+      "topic": "Exponential Population Growth Rate",
+      "passage": "Model P(t) = 250(1.08)^t gives the population after t hours.",
+      "prompt": "Calculator Allowed. By what percentage does the population increase each hour?",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.08%"
+        },
+        {
+          "key": "B",
+          "text": "8%"
+        },
+        {
+          "key": "C",
+          "text": "25%"
+        },
+        {
+          "key": "D",
+          "text": "108%"
+        }
+      ],
+      "options_raw": "A. 0.08%\nB. 8%\nC. 25%\nD. 108%",
+      "is_grid_in": false,
+      "correct_answer": "B",
+      "tier1_hint": "Xác định tỉ lệ tăng trưởng trong mô hình suy giảm/tăng trưởng mũ y = a(1 + r)^t.",
+      "tier2_hint": "So sánh thừa số cơ số trong ngoặc với dạng (1 + r).",
+      "tier3_hint": "Chuyển đổi r sang dạng phần trăm %.",
+      "strategic_tip": "Growth Factor = 1 + r => 1.08 = 1 + 0.08 => r = 8%.",
+      "level1_tip": "Xác định tỉ lệ tăng trưởng trong mô hình suy giảm/tăng trưởng mũ y = a(1 + r)^t.",
+      "level2_hint": "So sánh thừa số cơ số trong ngoặc với dạng (1 + r).",
+      "level3_solution": "Chuyển đổi r sang dạng phần trăm %.",
+      "pdf_page": 39
+    },
+    {
+      "id": 84,
+      "master_id": "M84",
+      "q_number": 8,
+      "q_label": "Q8",
+      "module_code": "Math_Module2",
+      "module_title": "Math: Module 2",
+      "section": "Math",
+      "module_num": 2,
+      "topic": "Exponential Cooling Evaluation",
+      "passage": "Temperature function g(t) = 296 + (362 - 296)(2.72)^(-0.104t).",
+      "prompt": "Calculator Allowed. What was the approximate temperature, in kelvins, when the liquid was placed on the table (t = 0)?",
+      "options": [],
+      "options_raw": "Student-Produced Response (Grid-in). Enter the exact integer.",
+      "is_grid_in": true,
+      "correct_answer": "362",
+      "tier1_hint": "Đánh giá giá trị hàm suy giảm mũ theo thời gian t.",
+      "tier2_hint": "Thay giá trị thời gian t đề bài cho vào công thức.",
+      "tier3_hint": "Thực hiện phép tính lũy thừa rồi nhân với hệ số ban đầu.",
+      "strategic_tip": "Evaluate at t = 0: g(0) = 296 + (362 - 296) * 1 = 362.",
+      "level1_tip": "Đánh giá giá trị hàm suy giảm mũ theo thời gian t.",
+      "level2_hint": "Thay giá trị thời gian t đề bài cho vào công thức.",
+      "level3_solution": "Thực hiện phép tính lũy thừa rồi nhân với hệ số ban đầu.",
+      "pdf_page": 39
+    },
+    {
+      "id": 85,
+      "master_id": "M85",
+      "q_number": 9,
+      "q_label": "Q9",
+      "module_code": "Math_Module2",
+      "module_title": "Math: Module 2",
+      "section": "Math",
+      "module_num": 2,
+      "topic": "Linear Inequalities (Graphing)",
+      "passage": "A shaded region lies below the line passing through (0, 4) with slope -3.",
+      "prompt": "Calculator Allowed. Which inequality represents the shaded region?",
+      "options": [
+        {
+          "key": "A",
+          "text": "y < 3x + 4"
+        },
+        {
+          "key": "B",
+          "text": "y < 3x - 4"
+        },
+        {
+          "key": "C",
+          "text": "y > 3x + 4"
+        },
+        {
+          "key": "D",
+          "text": "y < -3x + 4"
+        }
+      ],
+      "options_raw": "A. y < 3x + 4\nB. y < 3x - 4\nC. y > 3x + 4\nD. y < -3x + 4",
+      "is_grid_in": false,
+      "correct_answer": "D",
+      "tier1_hint": "Xác định miền nghiệm của bất phương trình tuyến tính trên mặt phẳng tọa độ.",
+      "tier2_hint": "Đưa bất phương trình về dạng y < mx + b hoặc y > mx + b.",
+      "tier3_hint": "Miền nghiệm nằm bên dưới đường biên nếu là dấu '<' hoặc bên trên nếu là dấu '>'.",
+      "strategic_tip": "Linear Inequality: Region below solid line y = -3x + 4 is y < -3x + 4.",
+      "level1_tip": "Xác định miền nghiệm của bất phương trình tuyến tính trên mặt phẳng tọa độ.",
+      "level2_hint": "Đưa bất phương trình về dạng y < mx + b hoặc y > mx + b.",
+      "level3_solution": "Miền nghiệm nằm bên dưới đường biên nếu là dấu '<' hoặc bên trên nếu là dấu '>'.",
+      "pdf_page": 40
+    },
+    {
+      "id": 86,
+      "master_id": "M86",
+      "q_number": 10,
+      "q_label": "Q10",
+      "module_code": "Math_Module2",
+      "module_title": "Math: Module 2",
+      "section": "Math",
+      "module_num": 2,
+      "topic": "Systems of Linear Equations (Substitution)",
+      "passage": "System of equations: 3(2x) + 8(9y) = 534 and 3(2x) - 8(9y) = -618.",
+      "prompt": "Calculator Allowed. What is the value of 2x + 9y?",
+      "options": [
+        {
+          "key": "A",
+          "text": "-86"
+        },
+        {
+          "key": "B",
+          "text": "-14"
+        },
+        {
+          "key": "C",
+          "text": "23"
+        },
+        {
+          "key": "D",
+          "text": "72"
+        }
+      ],
+      "options_raw": "A. -86\nB. -14\nC. 23\nD. 72",
+      "is_grid_in": false,
+      "correct_answer": "C",
+      "tier1_hint": "Giải hệ phương trình tuyến tính hai ẩn bằng phương pháp thế hoặc cộng đại số.",
+      "tier2_hint": "Nhân các phương trình với hệ số thích hợp để triệt tiêu một biến.",
+      "tier3_hint": "Giải tìm biến thứ nhất rồi thế ngược lại để tìm biến thứ hai.",
+      "strategic_tip": "Add equations: 12x = -84 => x = -7 => 2x = -14; 144y = 1152 => 9y = 72 => -14 + 72 = 58.",
+      "level1_tip": "Giải hệ phương trình tuyến tính hai ẩn bằng phương pháp thế hoặc cộng đại số.",
+      "level2_hint": "Nhân các phương trình với hệ số thích hợp để triệt tiêu một biến.",
+      "level3_solution": "Giải tìm biến thứ nhất rồi thế ngược lại để tìm biến thứ hai.",
+      "pdf_page": 40
+    },
+    {
+      "id": 87,
+      "master_id": "M87",
+      "q_number": 11,
+      "q_label": "Q11",
+      "module_code": "Math_Module2",
+      "module_title": "Math: Module 2",
+      "section": "Math",
+      "module_num": 2,
+      "topic": "Quadratic Vertex & Maximum",
+      "passage": "Given the function f(x) = -2(x - 3)^2 + 8.",
+      "prompt": "Calculator Allowed. What is the maximum value of f(x)?",
+      "options": [
+        {
+          "key": "A",
+          "text": "-2"
+        },
+        {
+          "key": "B",
+          "text": "3"
+        },
+        {
+          "key": "C",
+          "text": "6"
+        },
+        {
+          "key": "D",
+          "text": "8"
+        }
+      ],
+      "options_raw": "A. -2\nB. 3\nC. 6\nD. 8",
+      "is_grid_in": false,
+      "correct_answer": "D",
+      "tier1_hint": "Tìm giá trị lớn nhất/nhỏ nhất của hàm số bậc hai y = ax^2 + bx + c.",
+      "tier2_hint": "Xác định hoành độ đỉnh x = -b / (2a) hoặc đưa về dạng đỉnh a(x - h)^2 + k.",
+      "tier3_hint": "Giá trị cực đại/cực tiểu chính là tung độ đỉnh k.",
+      "strategic_tip": "Parabola Vertex (h, k) with a < 0 has maximum value = k = 8.",
+      "level1_tip": "Tìm giá trị lớn nhất/nhỏ nhất của hàm số bậc hai y = ax^2 + bx + c.",
+      "level2_hint": "Xác định hoành độ đỉnh x = -b / (2a) hoặc đưa về dạng đỉnh a(x - h)^2 + k.",
+      "level3_solution": "Giá trị cực đại/cực tiểu chính là tung độ đỉnh k.",
+      "pdf_page": 40
+    },
+    {
+      "id": 88,
+      "master_id": "M88",
+      "q_number": 12,
+      "q_label": "Q12",
+      "module_code": "Math_Module2",
+      "module_title": "Math: Module 2",
+      "section": "Math",
+      "module_num": 2,
+      "topic": "Statistics (Effect of Adding Outlier on Mean & Median)",
+      "passage": "A frequency table summarizes ages of 50 coins (mean = 72.5, median = 70). Vivek adds a 51st coin aged 90 years.",
+      "prompt": "Calculator Allowed. Which statement correctly compares the mean and median ages of the original and new collections?",
+      "options": [
+        {
+          "key": "A",
+          "text": "The mean age increases, and the median age increases."
+        },
+        {
+          "key": "B",
+          "text": "The mean age for the new collection is greater than the original, but the median age is the same."
+        },
+        {
+          "key": "C",
+          "text": "The mean age is less, and the median age is less."
+        },
+        {
+          "key": "D",
+          "text": "The median age increases, but the mean age remains the same."
+        }
+      ],
+      "options_raw": "A. The mean age increases, and the median age increases.\nB. The mean age for the new collection is greater than the original, but the median age is the same.\nC. The mean age is less, and the median age is less.\nD. The median age increases, but the mean age remains the same.",
+      "is_grid_in": false,
+      "correct_answer": "B",
+      "tier1_hint": "Đánh giá tác động của việc thêm một giá trị ngoại lai (outlier) vào tập dữ liệu.",
+      "tier2_hint": "So sánh giá trị ngoại lai với số trung bình (Mean) hiện tại.",
+      "tier3_hint": "Số trung bình Mean sẽ dịch chuyển về phía outlier, trong khi Median ít bị ảnh hưởng.",
+      "strategic_tip": "Adding a high value increases Mean; Median position remains in the same frequency bin.",
+      "level1_tip": "Đánh giá tác động của việc thêm một giá trị ngoại lai (outlier) vào tập dữ liệu.",
+      "level2_hint": "So sánh giá trị ngoại lai với số trung bình (Mean) hiện tại.",
+      "level3_solution": "Số trung bình Mean sẽ dịch chuyển về phía outlier, trong khi Median ít bị ảnh hưởng.",
+      "pdf_page": 41
+    },
+    {
+      "id": 89,
+      "master_id": "M89",
+      "q_number": 13,
+      "q_label": "Q13",
+      "module_code": "Math_Module2",
+      "module_title": "Math: Module 2",
+      "section": "Math",
+      "module_num": 2,
+      "topic": "Non-linear Systems (Circle & Line)",
+      "passage": "System of equations: x^2 + y^2 = 64 and y = mx + b/2. Intersect at (-7, y) with y < 0.",
+      "prompt": "Calculator Allowed. Which expression represents the value of b?",
+      "options": [
+        {
+          "key": "A",
+          "text": "14m - 2*sqrt(15)"
+        },
+        {
+          "key": "B",
+          "text": "-14m + 2*sqrt(15)"
+        },
+        {
+          "key": "C",
+          "text": "7m/2 - sqrt(15)/2"
+        },
+        {
+          "key": "D",
+          "text": "-7m/2 + sqrt(15)/2"
+        }
+      ],
+      "options_raw": "A. 14m - 2*sqrt(15)\nB. -14m + 2*sqrt(15)\nC. 7m/2 - sqrt(15)/2\nD. -7m/2 + sqrt(15)/2",
+      "is_grid_in": false,
+      "correct_answer": "A",
+      "tier1_hint": "Giải hệ phương trình gồm đường thẳng và đường tròn.",
+      "tier2_hint": "Thế biểu thức y (hoặc x) từ phương trình đường thẳng vào phương trình đường tròn.",
+      "tier3_hint": "Giải phương trình bậc hai một ẩn thu được để tìm tọa độ giao điểm.",
+      "strategic_tip": "Substitute (-7, -sqrt(15)) into line equation => -sqrt(15) = -7m + b/2 => b = 14m - 2*sqrt(15).",
+      "level1_tip": "Giải hệ phương trình gồm đường thẳng và đường tròn.",
+      "level2_hint": "Thế biểu thức y (hoặc x) từ phương trình đường thẳng vào phương trình đường tròn.",
+      "level3_solution": "Giải phương trình bậc hai một ẩn thu được để tìm tọa độ giao điểm.",
+      "pdf_page": 41
+    },
+    {
+      "id": 90,
+      "master_id": "M90",
+      "q_number": 14,
+      "q_label": "Q14",
+      "module_code": "Math_Module2",
+      "module_title": "Math: Module 2",
+      "section": "Math",
+      "module_num": 2,
+      "topic": "Geometry (Similar Triangles)",
+      "passage": "In triangle ABC, DE is parallel to AC, BD = AD, BE = 9, and AC = 8.",
+      "prompt": "Calculator Allowed. What is the length of BC?",
+      "options": [
+        {
+          "key": "A",
+          "text": "18"
+        },
+        {
+          "key": "B",
+          "text": "12"
+        },
+        {
+          "key": "C",
+          "text": "17"
+        },
+        {
+          "key": "D",
+          "text": "16"
+        }
+      ],
+      "options_raw": "A. 18\nB. 12\nC. 17\nD. 16",
+      "is_grid_in": false,
+      "correct_answer": "B",
+      "tier1_hint": "Áp dụng định lý đường trung bình hoặc tính chất tam giác đồng dạng.",
+      "tier2_hint": "Thiết lập tỉ lệ giữa các đoạn thẳng tương ứng.",
+      "tier3_hint": "Giải phương trình tỉ lệ để tính độ dài đoạn thẳng chưa biết.",
+      "strategic_tip": "Midpoint Segment Theorem: BC = 2 * BE = 18.",
+      "level1_tip": "Áp dụng định lý đường trung bình hoặc tính chất tam giác đồng dạng.",
+      "level2_hint": "Thiết lập tỉ lệ giữa các đoạn thẳng tương ứng.",
+      "level3_solution": "Giải phương trình tỉ lệ để tính độ dài đoạn thẳng chưa biết.",
+      "pdf_page": 42
+    },
+    {
+      "id": 91,
+      "master_id": "M91",
+      "q_number": 15,
+      "q_label": "Q15",
+      "module_code": "Math_Module2",
+      "module_title": "Math: Module 2",
+      "section": "Math",
+      "module_num": 2,
+      "topic": "Systems of Equations Evaluation",
+      "passage": "System of equations: 2x + 3y = 19 and 2x - y = 3.",
+      "prompt": "Calculator Allowed. What is the value of x + y?",
+      "options": [
+        {
+          "key": "A",
+          "text": "5"
+        },
+        {
+          "key": "B",
+          "text": "7"
+        },
+        {
+          "key": "C",
+          "text": "8"
+        },
+        {
+          "key": "D",
+          "text": "9"
+        }
+      ],
+      "options_raw": "A. 5\nB. 7\nC. 8\nD. 9",
+      "is_grid_in": false,
+      "correct_answer": "B",
+      "tier1_hint": "Giải hệ phương trình tuyến tính hai ẩn.",
+      "tier2_hint": "Sử dụng phương pháp cộng đại số để tìm trực tiếp biểu thức đề bài yêu cầu.",
+      "tier3_hint": "Thực hiện phép cộng/trừ hai phương trình theo vế.",
+      "strategic_tip": "Solve system: y = 4, x = 3 => x + y = 7.",
+      "level1_tip": "Giải hệ phương trình tuyến tính hai ẩn.",
+      "level2_hint": "Sử dụng phương pháp cộng đại số để tìm trực tiếp biểu thức đề bài yêu cầu.",
+      "level3_solution": "Thực hiện phép cộng/trừ hai phương trình theo vế.",
+      "pdf_page": 42
+    },
+    {
+      "id": 92,
+      "master_id": "M92",
+      "q_number": 16,
+      "q_label": "Q16",
+      "module_code": "Math_Module2",
+      "module_title": "Math: Module 2",
+      "section": "Math",
+      "module_num": 2,
+      "topic": "Statistics (Sampling Bias)",
+      "passage": "A study on melatonin levels sampled 125 gamers from 3 countries (Sweden 25, South Korea 49, US 51).",
+      "prompt": "Calculator Allowed. Which aspect prevents the results from being generalized to ALL gamers globally?",
+      "options": [
+        {
+          "key": "A",
+          "text": "The gamers were not selected at random from all gamers worldwide."
+        },
+        {
+          "key": "B",
+          "text": "The number of gamers is too small."
+        },
+        {
+          "key": "C",
+          "text": "The number of gamers from each country is different."
+        },
+        {
+          "key": "D",
+          "text": "Melatonin was not measured over a long enough period."
+        }
+      ],
+      "options_raw": "A. The gamers were not selected at random from all gamers worldwide.\nB. The number of gamers is too small.\nC. The number of gamers from each country is different.\nD. Melatonin was not measured over a long enough period.",
+      "is_grid_in": false,
+      "correct_answer": "A",
+      "tier1_hint": "Phân tích tính đại diện của mẫu khảo sát thống kê.",
+      "tier2_hint": "Kiểm tra xem mẫu khảo sát có được chọn ngẫu nhiên từ toàn bộ quần thể hay không.",
+      "tier3_hint": "Mẫu bị giới hạn phạm vi sẽ gây ra sai số chọn mẫu (sampling bias) và không thể suy rộng.",
+      "strategic_tip": "Generalizability requires random sampling from the target population.",
+      "level1_tip": "Phân tích tính đại diện của mẫu khảo sát thống kê.",
+      "level2_hint": "Kiểm tra xem mẫu khảo sát có được chọn ngẫu nhiên từ toàn bộ quần thể hay không.",
+      "level3_solution": "Mẫu bị giới hạn phạm vi sẽ gây ra sai số chọn mẫu (sampling bias) và không thể suy rộng.",
+      "pdf_page": 42
+    },
+    {
+      "id": 93,
+      "master_id": "M93",
+      "q_number": 17,
+      "q_label": "Q17",
+      "module_code": "Math_Module2",
+      "module_title": "Math: Module 2",
+      "section": "Math",
+      "module_num": 2,
+      "topic": "Trigonometry (Right Triangle Ratios)",
+      "passage": "In right triangle ABC with right angle C = 90 deg, cos A = 5/13.",
+      "prompt": "Calculator Allowed. What is the value of tan A?",
+      "options": [
+        {
+          "key": "A",
+          "text": "5/12"
+        },
+        {
+          "key": "B",
+          "text": "12/5"
+        },
+        {
+          "key": "C",
+          "text": "13/5"
+        },
+        {
+          "key": "D",
+          "text": "12/13"
+        }
+      ],
+      "options_raw": "A. 5/12\nB. 12/5\nC. 13/5\nD. 12/13",
+      "is_grid_in": false,
+      "correct_answer": "B",
+      "tier1_hint": "Áp dụng tỉ số lượng giác trong tam giác vuông.",
+      "tier2_hint": "Sử dụng định lý Pitago a^2 + b^2 = c^2 để tìm độ dài cạnh còn thiếu.",
+      "tier3_hint": "Tính tỉ số lượng giác (sin = Đối/Huyền, cos = Kề/Huyền, tan = Đối/Kề) tương ứng.",
+      "strategic_tip": "5-12-13 Right Triangle: cos A = 5/13 => sin A = 12/13 => tan A = 12/5.",
+      "level1_tip": "Áp dụng tỉ số lượng giác trong tam giác vuông.",
+      "level2_hint": "Sử dụng định lý Pitago a^2 + b^2 = c^2 để tìm độ dài cạnh còn thiếu.",
+      "level3_solution": "Tính tỉ số lượng giác (sin = Đối/Huyền, cos = Kề/Huyền, tan = Đối/Kề) tương ứng.",
+      "pdf_page": 43
+    },
+    {
+      "id": 94,
+      "master_id": "M94",
+      "q_number": 18,
+      "q_label": "Q18",
+      "module_code": "Math_Module2",
+      "module_title": "Math: Module 2",
+      "section": "Math",
+      "module_num": 2,
+      "topic": "Percentages (Percent Increase)",
+      "passage": "Guests used the pool for t hours in March and 3.41t hours in April.",
+      "prompt": "Calculator Allowed. What is the percent increase in pool usage from March to April?",
+      "options": [
+        {
+          "key": "A",
+          "text": "2.41%"
+        },
+        {
+          "key": "B",
+          "text": "3.41%"
+        },
+        {
+          "key": "C",
+          "text": "241%"
+        },
+        {
+          "key": "D",
+          "text": "341%"
+        }
+      ],
+      "options_raw": "A. 2.41%\nB. 3.41%\nC. 241%\nD. 341%",
+      "is_grid_in": false,
+      "correct_answer": "C",
+      "tier1_hint": "Tính tỉ lệ phần trăm tăng giữa hai giá trị.",
+      "tier2_hint": "Áp dụng công thức Percent Increase = (Mới - Cũ) / Cũ x 100%.",
+      "tier3_hint": "Thực hiện phép chia rồi nhân với 100%.",
+      "strategic_tip": "Percent Increase = (3.41 - 1) * 100% = 241%.",
+      "level1_tip": "Tính tỉ lệ phần trăm tăng giữa hai giá trị.",
+      "level2_hint": "Áp dụng công thức Percent Increase = (Mới - Cũ) / Cũ x 100%.",
+      "level3_solution": "Thực hiện phép chia rồi nhân với 100%.",
+      "pdf_page": 43
+    },
+    {
+      "id": 95,
+      "master_id": "M95",
+      "q_number": 19,
+      "q_label": "Q19",
+      "module_code": "Math_Module2",
+      "module_title": "Math: Module 2",
+      "section": "Math",
+      "module_num": 2,
+      "topic": "Algebraic Expansion & Coefficients",
+      "passage": "The expression [4(3x - 4)^2 + 6(3x - 2)^2] / 4 can be rewritten as (a/4)x^2 + (b/4)x + (c/4).",
+      "prompt": "Calculator Allowed. What is the value of a + b + c?",
+      "options": [
+        {
+          "key": "A",
+          "text": "-32"
+        },
+        {
+          "key": "B",
+          "text": "-16"
+        },
+        {
+          "key": "C",
+          "text": "-8"
+        },
+        {
+          "key": "D",
+          "text": "24"
+        }
+      ],
+      "options_raw": "A. -32\nB. -16\nC. -8\nD. 24",
+      "is_grid_in": false,
+      "correct_answer": "A",
+      "tier1_hint": "Khai triển và thu gọn biểu thức đa thức.",
+      "tier2_hint": "Nhân các đa thức và nhóm các số hạng đồng dạng.",
+      "tier3_hint": "Đồng nhất các hệ số tương ứng ở hai vế để tính tổng các hệ số.",
+      "strategic_tip": "Evaluate at x = 1 to find sum of coefficients a + b + c.",
+      "level1_tip": "Khai triển và thu gọn biểu thức đa thức.",
+      "level2_hint": "Nhân các đa thức và nhóm các số hạng đồng dạng.",
+      "level3_solution": "Đồng nhất các hệ số tương ứng ở hai vế để tính tổng các hệ số.",
+      "pdf_page": 43
+    },
+    {
+      "id": 96,
+      "master_id": "M96",
+      "q_number": 20,
+      "q_label": "Q20",
+      "module_code": "Math_Module2",
+      "module_title": "Math: Module 2",
+      "section": "Math",
+      "module_num": 2,
+      "topic": "Consecutive Integers Inequality",
+      "passage": "The sum of three consecutive even integers is less than 123. The least integer is x.",
+      "prompt": "Calculator Allowed. What is the greatest possible value of x?",
+      "options": [
+        {
+          "key": "A",
+          "text": "41"
+        },
+        {
+          "key": "B",
+          "text": "40"
+        },
+        {
+          "key": "C",
+          "text": "39"
+        },
+        {
+          "key": "D",
+          "text": "38"
+        }
+      ],
+      "options_raw": "A. 41\nB. 40\nC. 39\nD. 38",
+      "is_grid_in": false,
+      "correct_answer": "D",
+      "tier1_hint": "Thiết lập bất phương trình cho tổng các số nguyên liên tiếp.",
+      "tier2_hint": "Biểu diễn các số nguyên liên tiếp dưới dạng x, x + 2, x + 4 (nếu là số chẵn/lẻ).",
+      "tier3_hint": "Giải bất phương trình thu được để tìm giá trị số nguyên lớn nhất thỏa mãn.",
+      "strategic_tip": "3x + 6 < 123 => x < 39. Greatest even integer is 38.",
+      "level1_tip": "Thiết lập bất phương trình cho tổng các số nguyên liên tiếp.",
+      "level2_hint": "Biểu diễn các số nguyên liên tiếp dưới dạng x, x + 2, x + 4 (nếu là số chẵn/lẻ).",
+      "level3_solution": "Giải bất phương trình thu được để tìm giá trị số nguyên lớn nhất thỏa mãn.",
+      "pdf_page": 44
+    },
+    {
+      "id": 97,
+      "master_id": "M97",
+      "q_number": 21,
+      "q_label": "Q21",
+      "module_code": "Math_Module2",
+      "module_title": "Math: Module 2",
+      "section": "Math",
+      "module_num": 2,
+      "topic": "Similar 3D Solids (Area & Volume Ratios)",
+      "passage": "Prism X is similar to Prism Y. Surface area X = 52 cm^2, Surface area Y = 832 cm^2. Volume X = 10.5 cm^3.",
+      "prompt": "Calculator Allowed. What is the volume, in cm^3, of right rectangular prism Y?",
+      "options": [],
+      "options_raw": "Student-Produced Response (Grid-in). Enter the exact number.",
+      "is_grid_in": true,
+      "correct_answer": "672",
+      "tier1_hint": "Áp dụng mối quan hệ giữa tỉ lệ kích thước, diện tích và thể tích của hai hình đồng dạng.",
+      "tier2_hint": "Nếu tỉ lệ diện tích là k^2, suy ra tỉ lệ chiều dài là k và tỉ lệ thể tích là k^3.",
+      "tier3_hint": "Nhân thể tích hình ban đầu với tỉ lệ k^3 để tìm thể tích hình mới.",
+      "strategic_tip": "Area ratio k^2 = 16 => k = 4 => Volume ratio k^3 = 64 => Vol Y = 10.5 * 64 = 672.",
+      "level1_tip": "Áp dụng mối quan hệ giữa tỉ lệ kích thước, diện tích và thể tích của hai hình đồng dạng.",
+      "level2_hint": "Nếu tỉ lệ diện tích là k^2, suy ra tỉ lệ chiều dài là k và tỉ lệ thể tích là k^3.",
+      "level3_solution": "Nhân thể tích hình ban đầu với tỉ lệ k^3 để tìm thể tích hình mới.",
+      "pdf_page": 44
+    },
+    {
+      "id": 98,
+      "master_id": "M98",
+      "q_number": 22,
+      "q_label": "Q22",
+      "module_code": "Math_Module2",
+      "module_title": "Math: Module 2",
+      "section": "Math",
+      "module_num": 2,
+      "topic": "Quadratic Equation (Sum of Roots)",
+      "passage": "Equation: 18(w - a)(w + 5) = 6(w + 5). The sum of solutions is 37/3.",
+      "prompt": "Calculator Allowed. What is the value of a?",
+      "options": [],
+      "options_raw": "Student-Produced Response (Grid-in). Enter the exact integer or fraction.",
+      "is_grid_in": true,
+      "correct_answer": "362",
+      "tier1_hint": "Áp dụng định lý Viète về tổng các nghiệm của phương trình bậc hai ax^2 + bx + c = 0.",
+      "tier2_hint": "Tổng hai nghiệm x1 + x2 = -b / a.",
+      "tier3_hint": "Sử dụng nghiệm đã biết để giải tìm ẩn số a.",
+      "strategic_tip": "Roots are w1 = -5 and w2 = a + 1/3 => -5 + a + 1/3 = 37/3 => a = 17.",
+      "level1_tip": "Áp dụng định lý Viète về tổng các nghiệm của phương trình bậc hai ax^2 + bx + c = 0.",
+      "level2_hint": "Tổng hai nghiệm x1 + x2 = -b / a.",
+      "level3_solution": "Sử dụng nghiệm đã biết để giải tìm ẩn số a.",
+      "pdf_page": 44
+    }
+  ],
+  "initial_error_logs": [],
+  "strategies": [
+    {
+      "category": "Digital SAT Test Structure",
+      "domain": "Reading & Writing (Modules 1 & 2)",
+      "core_rules": "• Total 54 Questions (27 per module), 64 minutes total.\n• Domains: Information & Ideas (26%), Craft & Structure (28%), Expression of Ideas (20%), Standard English Conventions (26%).\n• Adaptive Format: Module 2 difficulty adapts based on Module 1 performance.",
+      "traps": "• Detail Traps: Options true in reality but not supported by passage.\n• Half-Right Traps: First half correct, second half flawed.\n• Extreme Words: Words like 'always', 'never', 'completely'."
+    },
+    {
+      "category": "Digital SAT Test Structure",
+      "domain": "Math (Modules 1 & 2)",
+      "core_rules": "• Total 44 Questions (22 per module), 70 minutes total.\n• Domains: Algebra (35%), Advanced Math (35%), Problem-Solving & Data Analysis (15%), Geometry & Trig (15%).\n• Desmos Graphing Calculator permitted for ALL math questions.",
+      "traps": "• Unit Conversion Traps: Forgetting to convert minutes to hours or cm to m.\n• Question Prompt Traps: Solving for x when asked for x + y or 2x.\n• Extraneous Solutions: Forgetting to check roots in radical/rational equations."
+    },
+    {
+      "category": "Reading Strategy",
+      "domain": "Vocabulary in Context",
+      "core_rules": "• Use Continuers (+/+), Contradictors (+/-), or Cause/Effect clues.\n• Predict a simple word before looking at choices.\n• Watch for secondary academic meanings of common words (e.g., 'register', 'compromise').",
+      "traps": "• Choosing common definitions instead of context-specific academic meanings."
+    },
+    {
+      "category": "Reading Strategy",
+      "domain": "Command of Evidence",
+      "core_rules": "• Textual Evidence: Match exact claim with specific line or quotation.\n• Quantitative Evidence: Read graph/chart axes and key carefully before evaluating choices.",
+      "traps": "• Selecting options that are true according to the graph but irrelevant to the thesis."
+    },
+    {
+      "category": "Writing Strategy",
+      "domain": "Standard English Conventions",
+      "core_rules": "• Semicolon = Period = Comma + FANBOYS (nối 2 mệnh đề độc lập).\n• Colon (:) used after complete sentence to introduce list, explanation, or quote.\n• Match Subject-Verb agreement by striking out intervening prepositional phrases.",
+      "traps": "• Comma Splices: Nối 2 mệnh đề độc lập chỉ bằng dấu phẩy."
+    },
+    {
+      "category": "Math Strategy",
+      "domain": "Algebra & Systems",
+      "core_rules": "• Parallel lines = No solution (m1 = m2, b1 != b2).\n• Same line = Infinitely many solutions (m1 = m2, b1 = b2).\n• Look for opportunities to add/subtract equations to find target expressions directly.",
+      "traps": "• Solving for individual variables when the prompt asks for an expression like x + y."
+    },
+    {
+      "category": "Math Strategy",
+      "domain": "Advanced Math & Quadratics",
+      "core_rules": "• Vertex form y = a(x - h)^2 + k -> Vertex at (h, k), max/min = k.\n• Vieta's Formulas: Sum of roots = -b/a, Product of roots = c/a.\n• Remainder Theorem: Remainder of P(x) / (x - c) is P(c).",
+      "traps": "• Sign errors when identifying vertex coordinates from equation."
+    }
+  ]
+}

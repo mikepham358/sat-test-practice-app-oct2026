@@ -1,0 +1,33 @@
+# ==========================================
+# Digital SAT Bluebook App - Git Ignore Rules
+# ==========================================
+
+# macOS system files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.env
+venv/
+env/
+.pytest_cache/
+
+# Large binaries
+# cloudflared (38MB+) is automatically downloaded by tunnel.sh when needed
+bin/cloudflared
+bin/
+
+# Student private test submissions
+submissions/*
+!submissions/.gitkeep
+
+# Server logs and temporary files
+*.log
+.system_generated/

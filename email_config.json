@@ -1,0 +1,7 @@
+{
+  "teacher_email": "mikepham358@gmail.com",
+  "smtp_host": "smtp.gmail.com",
+  "smtp_port": 465,
+  "smtp_user": "mikepham358@gmail.com",
+  "smtp_pass": ""
+}
