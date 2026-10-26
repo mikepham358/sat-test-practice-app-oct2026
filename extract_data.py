@@ -266,6 +266,8 @@ def extract_all():
         
     output_data = {
         "test_title": "Digital SAT Practice Test — October 2026 (INT-B)",
+        "source_attribution": "https://hocsat.com/",
+        "credits": "Nguồn tài liệu tham khảo & câu hỏi từ hocsat.com",
         "pdf_path": PDF_PATH,
         "pdf_drive_preview": "https://drive.google.com/file/d/1Qiu34_dltehpEVmfHvOivjAvf8Zkd77b/preview",
         "pdf_drive_view": "https://drive.google.com/file/d/1Qiu34_dltehpEVmfHvOivjAvf8Zkd77b/view?usp=drive_link",

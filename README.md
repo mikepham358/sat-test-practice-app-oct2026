@@ -1,6 +1,8 @@
 # 📘 Digital SAT Bluebook Practice App — October 2026 (INT-B)
 
-> Ứng dụng luyện thi **Digital SAT** theo giao diện chuẩn **College Board Bluebook**, kết nối trực tiếp file đề PDF gốc và bộ câu hỏi 98 câu (Reading & Writing + Math), hỗ trợ chia sẻ cho cả lớp học làm bài độc lập qua Cloudflare Tunnel.
+> Ứng dụng luyện thi **Digital SAT** theo giao diện chuẩn **College Board Bluebook**, kết nối trực tiếp file đề PDF gốc và bộ câu hỏi 98 câu (Reading & Writing + Math), hỗ trợ chia sẻ cho cả lớp học làm bài độc lập qua Cloudflare Tunnel.  
+> 
+> 📚 **Nguồn tài liệu tham khảo & câu hỏi:** Dữ liệu đề thi và câu hỏi được tổng hợp và tham khảo từ [hocsat.com](https://hocsat.com/).
 
 ---
 
@@ -153,3 +155,12 @@ git remote add origin https://github.com/<YOUR_USERNAME>/sat-bluebook-oct2026.gi
 # Đẩy lên GitHub
 git push -u origin main
 ```
+
+---
+
+## 📚 Nguồn Tài Liệu & Lời Cảm Ơn (Credits & Attribution)
+
+- **Nguồn tài liệu:** Toàn bộ dữ liệu đề thi, câu hỏi và tài liệu tham khảo trong ứng dụng này được tổng hợp và tham khảo từ hệ thống **[Học SAT](https://hocsat.com/)** (`https://hocsat.com/`).
+- **Lời cảm ơn:** Trân trọng cảm ơn đội ngũ phát triển **Học SAT** đã xây dựng và chia sẻ nguồn tài liệu Digital SAT chất lượng cho cộng đồng giáo viên và học sinh.
+- **Mục đích sử dụng:** Ứng dụng được thiết kế nhằm mục đích phi thương mại, phục vụ nghiên cứu, giảng dạy, ôn luyện thi nội bộ và nâng cao trải nghiệm làm bài tương tác chuẩn Bluebook cho học sinh.
+
