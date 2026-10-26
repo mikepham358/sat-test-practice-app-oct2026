@@ -107,7 +107,7 @@ def send_submission_email(student_name, student_email, summary, excel_bytes, exc
         recipients.append(student_email)
 
     if not smtp_pass:
-        return False, "Chưa thiết lập mật khẩu ứng dụng Gmail (smtp_pass) trong email_config.json. File đã được lưu vào thư mục submissions/ trên máy của Thầy Mike.", recipients
+        return False, "Chưa thiết lập mật khẩu ứng dụng Gmail (smtp_pass) trong email_config.json. File đã được lưu vào thư mục submissions/ trên máy của Thầy Mike Pham Bá Hong Son.", recipients
 
     msg = MIMEMultipart()
     msg['From'] = f"Digital SAT Bluebook <{smtp_user}>"
@@ -178,7 +178,7 @@ def send_submission_email(student_name, student_email, summary, excel_bytes, exc
             </p>
         </div>
         <div style="text-align: center; font-size: 12px; color: #94a3b8; margin-top: 16px;">
-            Hệ thống Luyện thi Digital SAT Bluebook — Lớp học Thầy Mike Pham
+            Hệ thống Luyện thi Digital SAT Bluebook — Lớp học Thầy Mike Pham Bá Hong Son (Google for Education Innovator)
         </div>
     </body>
     </html>
@@ -201,7 +201,7 @@ def send_submission_email(student_name, student_email, summary, excel_bytes, exc
                 server.starttls()
                 server.login(smtp_user, smtp_pass)
                 server.sendmail(smtp_user, recipients, msg.as_string())
-        return True, "Email đã được gửi thành công đến cả Thầy Mike và Học sinh!", recipients
+        return True, "Email đã được gửi thành công đến cả Thầy Mike Pham Bá Hong Son và Học sinh!", recipients
     except Exception as e:
         return False, f"Lỗi gửi email qua SMTP: {str(e)}", recipients
 

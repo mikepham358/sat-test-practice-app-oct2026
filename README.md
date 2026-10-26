@@ -1,9 +1,11 @@
 # 📘 Digital SAT Bluebook Practice App — October 2026 (INT-B)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Author](https://img.shields.io/badge/Author-Mike%20Pham%20Bá%20Hong%20Son%20(Google%20for%20Education%20Innovator)-4285F4.svg)](#)
 [![Digital SAT](https://img.shields.io/badge/Exam-Digital%20SAT%202026-orange.svg)](https://hocsat.com/)
 [![College Board Bluebook](https://img.shields.io/badge/UI-College%20Board%20Bluebook-0056b3.svg)](https://bluebook.collegeboard.org/)
 
+> **Tác giả:** Mike Pham Bá Hong Son - Google for Education Innovator  
 > Ứng dụng luyện thi **Digital SAT** theo giao diện chuẩn **College Board Bluebook**, kết nối trực tiếp file đề PDF gốc và bộ câu hỏi 98 câu (Reading & Writing + Math), hỗ trợ chia sẻ cho cả lớp học làm bài độc lập qua Cloudflare Tunnel.  
 > 
 > 📚 **Nguồn tài liệu tham khảo & câu hỏi:** Dữ liệu đề thi và câu hỏi được tổng hợp và tham khảo từ [hocsat.com](https://hocsat.com/).
@@ -39,9 +41,9 @@
 - Nút bấm nổi bật ở thanh công cụ trên cùng.
 - **Bảng tổng kết:** Thống kê chi tiết số câu đã làm (trên tổng 98 câu), số câu đúng Lần 1 (100%), Lần 2 (66.7%), Lần 3 (33.3%), tỷ lệ hiệu suất điểm và cảnh báo câu chưa làm.
 - **Tự động gửi báo cáo & File Excel:**
-  - File Excel bài làm chi tiết được lưu tự động vào thư mục `submissions/` trên máy của Thầy Mike.
+  - File Excel bài làm chi tiết được lưu tự động vào thư mục `submissions/` trên máy của Thầy Mike Pham Bá Hong Son.
   - Gửi email kèm file Excel báo cáo đồng thời về:
-    1. 👨‍🏫 **Thầy Mike:** `mikepham358@gmail.com` (mặc định)
+    1. 👨‍🏫 **Thầy Mike Pham Bá Hong Son (Google for Education Innovator):** `mikepham358@gmail.com` (mặc định)
     2. 🎓 **Học sinh:** Địa chỉ email học sinh đã nhập ban đầu.
 - **Cấu hình gửi email tự động (`email_config.json`):**
   Để máy chủ tự động gửi mail qua Gmail, Thầy chỉ cần mở file `email_config.json` và điền Mật khẩu ứng dụng Gmail (16 ký tự) vào trường `smtp_pass`:

@@ -1287,7 +1287,7 @@ async function submitTestFinal() {
     const errCount = (App.studentState.error_logs || []).length;
 
     const subject = `[Digital SAT Oct 2026] Báo cáo kết quả bài làm: ${studentName} - Điểm: ${s.scorePct}%`;
-    const bodyText = `Kính gửi Thầy Mike Pham,
+    const bodyText = `Kính gửi Thầy Mike Pham Bá Hong Son (Google for Education Innovator),
 
 Em xin gửi kết quả bài làm đề thi Digital SAT Real Test October 2026 (INT-B):
 
