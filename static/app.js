@@ -448,8 +448,24 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 async function fetchDatabase() {
   try {
-    const res = await fetch("/api/data");
-    App.db = await res.json();
+    let data = null;
+    // 1. Try local/relative database.json (Works seamlessly on GitHub Pages & static hosting)
+    try {
+      const res = await fetch("database.json");
+      if (res.ok) data = await res.json();
+    } catch (err) {}
+
+    // 2. Fallback to /api/data endpoint if running via Python server
+    if (!data) {
+      try {
+        const res = await fetch("/api/data");
+        if (res.ok) data = await res.json();
+      } catch (err) {}
+    }
+
+    if (data) {
+      App.db = data;
+    }
     if (!App.studentState.error_logs) {
       App.studentState.error_logs = [];
     }
@@ -1246,15 +1262,101 @@ function saveMandatoryReflection() {
   }
 }
 
+// ================= CLIENT-SIDE EXCEL GENERATOR (FOR GITHUB PAGES & OFFLINE) =================
+function generateClientExcelBlob(studentName, summary) {
+  if (typeof XLSX === "undefined") return null;
+
+  try {
+    const wb = XLSX.utils.book_new();
+
+    // 1. Sheet: Tổng Quan
+    const overviewData = [
+      ["BÁO CÁO KẾT QUẢ DIGITAL SAT BLUEBOOK"],
+      ["Đề thi", App.db ? App.db.test_title : "Digital SAT Practice Test — October 2026 (INT-B)"],
+      ["Học sinh", studentName],
+      ["Email học sinh", App.studentState.student_email || "N/A"],
+      ["Mục tiêu điểm", App.studentState.student_target || "Chưa đặt"],
+      ["Thời gian nộp", new Date().toLocaleString("vi-VN")],
+      ["Giáo viên phụ trách", "Mike Pham Bá Hong Son (Google for Education Innovator) - mikepham358@gmail.com"],
+      ["Nguồn tài liệu", "Tham khảo từ hocsat.com"],
+      [""],
+      ["BẢNG TỔNG KẾT ĐIỂM SỐ"],
+      ["Tổng số câu", summary ? summary.total : 98],
+      ["Số câu đã làm", summary ? summary.answered : 0],
+      ["Số câu đúng Lần 1 (100%)", summary ? summary.l1Correct : 0],
+      ["Số câu đúng Lần 2 (66.7%)", summary ? summary.l2Correct : 0],
+      ["Số câu đúng Lần 3 (33.3%)", summary ? summary.l3Correct : 0],
+      ["Hiệu suất điểm", summary ? `${summary.scorePct}%` : "0%"],
+      ["Điểm ước tính", summary ? `${summary.estimatedScore || Math.round(400 + (summary.scorePct / 100) * 1200)} / 1600` : "400 / 1600"],
+      ["Số lỗi ghi sổ", (App.studentState.error_logs || []).length]
+    ];
+    const wsOverview = XLSX.utils.aoa_to_sheet(overviewData);
+    XLSX.utils.book_append_sheet(wb, wsOverview, "Tong_Quan");
+
+    // 2. Sheet: Chi Tiết Câu Hỏi
+    const detailRows = [
+      ["STT", "Module", "Dạng bài", "Kỹ năng / Topic", "Đáp án đúng", "Đáp án học sinh", "Số lần thử", "Trạng thái", "Gợi ý Tầng 1", "Chiến lược Tip"]
+    ];
+    if (App.db && App.db.questions) {
+      App.db.questions.forEach((q, idx) => {
+        const qState = App.studentState.attempts[q.id] || {};
+        detailRows.push([
+          q.q_label || `Q${idx + 1}`,
+          q.module_title || q.module_code,
+          q.is_grid_in ? "Điền số (Grid-in)" : "Trắc nghiệm",
+          q.topic || "",
+          q.correct_answer || "",
+          qState.selectedAnswer || "",
+          qState.attempts || 0,
+          qState.isCorrect ? "Đúng" : (qState.finished ? "Sai" : "Chưa làm"),
+          q.tier1_hint || "",
+          q.strategic_tip || ""
+        ]);
+      });
+    }
+    const wsDetail = XLSX.utils.aoa_to_sheet(detailRows);
+    XLSX.utils.book_append_sheet(wb, wsDetail, "Chi_Tiet_Bai_Lam");
+
+    // 3. Sheet: Sổ Lỗi Sai
+    const errRows = [
+      ["STT", "Mã câu", "Module", "Chủ đề lỗi", "Lỗi sai gặp phải (Bẫy SAT)", "Bài học rút ra", "Thời gian"]
+    ];
+    (App.studentState.error_logs || []).forEach((e, idx) => {
+      errRows.push([
+        idx + 1,
+        e.q_label || `Câu ${e.q_id}`,
+        e.module_code || "",
+        e.topic || "",
+        e.trap || "",
+        e.takeaway || "",
+        e.timestamp ? new Date(e.timestamp).toLocaleString("vi-VN") : ""
+      ]);
+    });
+    const wsErrors = XLSX.utils.aoa_to_sheet(errRows);
+    XLSX.utils.book_append_sheet(wb, wsErrors, "So_Tay_Loi_Sai");
+
+    const wbout = XLSX.write(wb, { bookType: "xlsx", type: "array" });
+    return new Blob([wbout], { type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" });
+  } catch (e) {
+    console.error("Client Excel generation failed:", e);
+    return null;
+  }
+}
+
 async function submitTestFinal() {
   const s = calculateTestSummary();
   DOM.btnSubmitTestConfirm.disabled = true;
   DOM.submitSpinner.classList.remove("hidden");
   DOM.btnSubmitText.textContent = "Đang chuẩn bị báo cáo...";
 
+  const studentEmail = App.studentState.student_email || "";
+  const studentName = App.studentState.student_name || "Hoc_Sinh";
+  const teacherEmail = "mikepham358@gmail.com";
+  const errCount = (App.studentState.error_logs || []).length;
+
   const payload = {
-    student_name: App.studentState.student_name,
-    student_email: App.studentState.student_email,
+    student_name: studentName,
+    student_email: studentEmail,
     summary: {
       answered: s.answered,
       total: s.total,
@@ -1267,27 +1369,40 @@ async function submitTestFinal() {
     attempts: App.studentState.attempts
   };
 
+  let serverData = null;
   try {
     const res = await fetch("/api/submit-test", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload)
     });
+    if (res.ok) {
+      serverData = await res.json();
+    }
+  } catch (err) {
+    // Expected on static hosting (GitHub Pages)
+  }
 
-    const data = await res.json();
-    if (!data.success) throw new Error(data.error || "Submission failed");
+  // Determine file & download URL
+  const defaultFilename = `October_2026_SAT_${studentName.replace(/\s+/g, '_')}_${Date.now()}.xlsx`;
+  const filename = (serverData && serverData.filename) ? serverData.filename : defaultFilename;
+  let fileBlobUrl = null;
 
-    // Close finish modal
-    DOM.modalFinishTest.classList.add("hidden");
+  if (serverData && serverData.download_url) {
+    fileBlobUrl = serverData.download_url;
+  } else {
+    const clientBlob = generateClientExcelBlob(studentName, s);
+    if (clientBlob) {
+      fileBlobUrl = window.URL.createObjectURL(clientBlob);
+    }
+  }
 
-    // Construct Mailto URL
-    const teacherEmail = "mikepham358@gmail.com";
-    const studentEmail = App.studentState.student_email || "";
-    const studentName = App.studentState.student_name || "Học sinh";
-    const errCount = (App.studentState.error_logs || []).length;
+  // Close finish modal
+  DOM.modalFinishTest.classList.add("hidden");
 
-    const subject = `[Digital SAT Oct 2026] Báo cáo kết quả bài làm: ${studentName} - Điểm: ${s.scorePct}%`;
-    const bodyText = `Kính gửi Thầy Mike Pham Bá Hong Son (Google for Education Innovator),
+  // Construct Mailto URL
+  const subject = `[Digital SAT Oct 2026] Báo cáo kết quả bài làm: ${studentName} - Điểm: ${s.scorePct}%`;
+  const bodyText = `Kính gửi Thầy Mike Pham Bá Hong Son (Google for Education Innovator),
 
 Em xin gửi kết quả bài làm đề thi Digital SAT Real Test October 2026 (INT-B):
 
@@ -1296,43 +1411,45 @@ Em xin gửi kết quả bài làm đề thi Digital SAT Real Test October 2026 
 - Thời gian nộp bài: ${new Date().toLocaleString("vi-VN")}
 - Tổng số câu đã làm: ${s.answered} / ${s.total}
 - Hiệu suất điểm toàn bài: ${s.scorePct}%
+- Điểm ước tính: ${s.estimatedScore || Math.round(400 + (s.scorePct / 100) * 1200)} / 1600
 - Số câu đúng ngay Lần 1 (100%): ${s.l1Correct} câu
 - Số câu đúng Lần 2 (66.7%): ${s.l2Correct} câu
 - Số câu đúng Lần 3 (33.3%): ${s.l3Correct} câu
 - Số lỗi sai đã ghi chép vào sổ lỗi: ${errCount} câu
 
-(File Excel bài làm chi tiết: ${data.filename} đã được tải về thiết bị của em và đính kèm cùng email này).
+(File Excel bài làm chi tiết: ${filename} đã được tải về thiết bị của em và đính kèm cùng email này).
 
 Em cảm ơn Thầy!`;
 
-    const mailtoUrl = `mailto:${teacherEmail}?cc=${encodeURIComponent(studentEmail)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyText)}`;
-    App.lastMailtoUrl = mailtoUrl;
+  const mailtoUrl = `mailto:${teacherEmail}?cc=${encodeURIComponent(studentEmail)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyText)}`;
+  App.lastMailtoUrl = mailtoUrl;
 
-    // 1. Download file automatically
+  // 1. Download file automatically
+  if (fileBlobUrl) {
     const a = document.createElement("a");
-    a.href = data.download_url;
-    a.download = data.filename;
+    a.href = fileBlobUrl;
+    a.download = filename;
     document.body.appendChild(a);
     a.click();
     a.remove();
-
-    // 2. Launch Mail client on student's personal device
-    setTimeout(() => {
-      window.location.href = mailtoUrl;
-    }, 600);
-
-    // 3. Populate and show instructional Success Modal
-    DOM.successFilename.textContent = data.filename;
-    DOM.btnDownloadSubmittedFile.href = data.download_url;
-    DOM.btnDownloadSubmittedFile.setAttribute("download", data.filename);
-    DOM.modalSubmitSuccess.classList.remove("hidden");
-  } catch (err) {
-    alert("Có lỗi khi tạo báo cáo: " + err.message);
-  } finally {
-    DOM.btnSubmitTestConfirm.disabled = false;
-    DOM.submitSpinner.classList.add("hidden");
-    DOM.btnSubmitText.textContent = "📤 Xác Nhận Hoàn Thành & Gửi Báo Cáo Email";
   }
+
+  // 2. Launch Mail client on student's personal device
+  setTimeout(() => {
+    window.location.href = mailtoUrl;
+  }, 600);
+
+  // 3. Populate and show instructional Success Modal
+  DOM.successFilename.textContent = filename;
+  if (fileBlobUrl) {
+    DOM.btnDownloadSubmittedFile.href = fileBlobUrl;
+    DOM.btnDownloadSubmittedFile.setAttribute("download", filename);
+  }
+  DOM.modalSubmitSuccess.classList.remove("hidden");
+
+  DOM.btnSubmitTestConfirm.disabled = false;
+  DOM.submitSpinner.classList.add("hidden");
+  DOM.btnSubmitText.textContent = "📤 Xác Nhận Hoàn Thành & Gửi Báo Cáo Email";
 }
 
 // ================= EXPORT EXCEL (SENDS STUDENT'S LOCALSTORAGE) =================
@@ -1347,6 +1464,7 @@ async function exportExcelPersonalized() {
     attempts: App.studentState.attempts
   };
 
+  let downloaded = false;
   try {
     const res = await fetch("/api/export-excel", {
       method: "POST",
@@ -1354,17 +1472,34 @@ async function exportExcelPersonalized() {
       body: JSON.stringify(payload)
     });
 
-    if (!res.ok) throw new Error("Export failed");
-    const blob = await res.blob();
-    const url = window.URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = `SAT_October_2026_${studentName.replace(/\s+/g, '_')}.xlsx`;
-    document.body.appendChild(a);
-    a.click();
-    a.remove();
-  } catch (e) {
-    alert("Có lỗi khi xuất file Excel. Vui lòng kiểm tra lại kết nối máy chủ.");
+    if (res.ok) {
+      const blob = await res.blob();
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = `SAT_October_2026_${studentName.replace(/\s+/g, '_')}.xlsx`;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      downloaded = true;
+    }
+  } catch (e) {}
+
+  // Fallback to client-side SheetJS generation (for GitHub Pages)
+  if (!downloaded) {
+    const s = calculateTestSummary();
+    const blob = generateClientExcelBlob(studentName, s);
+    if (blob) {
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = `SAT_October_2026_${studentName.replace(/\s+/g, '_')}.xlsx`;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+    } else {
+      alert("Không thể tạo file Excel. Vui lòng tải lại trang.");
+    }
   }
 }
 

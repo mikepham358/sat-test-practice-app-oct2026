@@ -400,6 +400,8 @@ class BluebookAppHandler(BaseHTTPRequestHandler):
             path = "/index.html"
         clean_path = path.lstrip("/")
         file_path = os.path.join(STATIC_DIR, clean_path)
+        if not os.path.exists(file_path):
+            file_path = os.path.join(APP_DIR, clean_path)
 
         if not os.path.exists(file_path) or os.path.isdir(file_path):
             self.send_error(404, "File not found")
