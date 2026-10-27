@@ -18,6 +18,7 @@ const App = {
   eliminatorMode: false,
   timerInterval: null,
   timerRunning: false, // Default paused until student starts practice
+  manualPause: false,  // Student clicked pause button manually
   timerHidden: false,
   pdfViewerMode: "drive", // "drive" (default, ideal for iPad/phones) or "local"
 
@@ -492,7 +493,7 @@ function setupModuleQuestions() {
   renderCurrentQuestion();
 }
 
-// ================= TIMER CONTROLS =================
+// ================= TIMER CONTROLS & AUTO-PAUSE LOGIC =================
 function pauseTimer() {
   App.timerRunning = false;
   if (DOM.btnTimerPause) {
@@ -505,6 +506,7 @@ function pauseTimer() {
 }
 
 function resumeTimer() {
+  if (App.manualPause) return; // Respect student's manual pause
   App.timerRunning = true;
   if (DOM.btnTimerPause) {
     DOM.btnTimerPause.textContent = "⏸️";
@@ -512,6 +514,45 @@ function resumeTimer() {
   }
   if (DOM.timerDisplay) {
     DOM.timerDisplay.classList.remove("timer-paused");
+  }
+}
+
+function shouldTimerRun() {
+  if (App.manualPause) return false;
+
+  // 1. Must be in practice view
+  if (!DOM.viewPractice || DOM.viewPractice.classList.contains("hidden")) return false;
+
+  // 2. Modals that suspend active practice (error notes, review, calculators, strategies, etc.)
+  if (DOM.modalMandatoryReflection && !DOM.modalMandatoryReflection.classList.contains("hidden")) return false;
+  if (DOM.modalErrorLog && !DOM.modalErrorLog.classList.contains("hidden")) return false;
+  if (DOM.navigatorOverlay && !DOM.navigatorOverlay.classList.contains("hidden")) return false;
+  if (DOM.modalCalculator && !DOM.modalCalculator.classList.contains("hidden")) return false;
+  if (DOM.modalReference && !DOM.modalReference.classList.contains("hidden")) return false;
+  if (DOM.modalStrategies && !DOM.modalStrategies.classList.contains("hidden")) return false;
+  if (DOM.modalFinishTest && !DOM.modalFinishTest.classList.contains("hidden")) return false;
+  if (DOM.modalSubmitSuccess && !DOM.modalSubmitSuccess.classList.contains("hidden")) return false;
+
+  // 3. Question status check:
+  // If the current question is already completed or just evaluated for review, pause the timer!
+  const currentQ = App.currentQuestion || (App.questions ? App.questions[App.currentIndex] : null);
+  if (!currentQ) return false;
+
+  const qState = App.studentState.attempts[currentQ.id];
+  if (qState) {
+    const isFinished = (qState.status && (qState.status.startsWith("mastered") || qState.status === "missed"));
+    if (isFinished) return false;
+    if (qState.justChecked) return false;
+  }
+
+  return true;
+}
+
+function syncTimerState() {
+  if (shouldTimerRun()) {
+    resumeTimer();
+  } else {
+    pauseTimer();
   }
 }
 
@@ -539,6 +580,7 @@ function startModuleTimer() {
         }
       } else {
         DOM.timerDisplay.textContent = "00:00";
+        pauseTimer();
       }
     }
   }, 1000);
@@ -615,6 +657,9 @@ function renderCurrentQuestion() {
 
   // Disable check button until selected
   DOM.btnCheckAnswer.disabled = true;
+
+  // Auto-sync timer based on practice vs review mode
+  syncTimerState();
 }
 
 function renderOptions(q, qState) {
@@ -655,6 +700,12 @@ function renderOptions(q, qState) {
       if (e.target.classList.contains("btn-strike-option")) return;
       if (isFinished) return;
       if (row.classList.contains("eliminated")) return;
+
+      if (qState.justChecked) {
+        qState.justChecked = false;
+        saveLocalState();
+        syncTimerState();
+      }
 
       document.querySelectorAll(".option-row").forEach(r => r.classList.remove("selected"));
       row.classList.add("selected");
@@ -911,7 +962,6 @@ function renderNavigatorTiles() {
       if (idx !== App.currentIndex && !checkCanNavigate()) return;
       if (idx !== App.currentIndex) {
         App.currentIndex = idx;
-        resumeTimer();
         renderCurrentQuestion();
       }
       DOM.navigatorOverlay.classList.add("hidden");
@@ -1208,6 +1258,9 @@ function checkCanNavigate() {
 }
 
 function openMandatoryReflectionModal(q, qState) {
+  // Always pause timer during error notebook reflection
+  pauseTimer();
+
   if (!q) q = App.currentQuestion;
   if (!qState) qState = App.studentState.attempts[q.id];
   if (!q || !qState) return;
@@ -1287,8 +1340,9 @@ function saveMandatoryReflection() {
   // Auto advance to next question
   if (App.currentIndex < App.questions.length - 1) {
     App.currentIndex++;
-    resumeTimer();
     renderCurrentQuestion();
+  } else {
+    syncTimerState();
   }
 }
 
@@ -1669,6 +1723,15 @@ function setupEventListeners() {
   // Grid-in input change
   DOM.gridinInput.addEventListener("input", () => {
     DOM.btnCheckAnswer.disabled = (DOM.gridinInput.value.trim() === "");
+    const q = App.currentQuestion;
+    if (q) {
+      const qState = App.studentState.attempts[q.id];
+      if (qState && qState.justChecked) {
+        qState.justChecked = false;
+        saveLocalState();
+        syncTimerState();
+      }
+    }
   });
   DOM.gridinInput.addEventListener("keydown", (e) => {
     if (e.key === "Enter" && !DOM.btnCheckAnswer.disabled) {
@@ -1681,7 +1744,6 @@ function setupEventListeners() {
     if (!checkCanNavigate()) return;
     if (App.currentIndex > 0) {
       App.currentIndex--;
-      resumeTimer();
       renderCurrentQuestion();
     }
   });
@@ -1690,19 +1752,25 @@ function setupEventListeners() {
     if (!checkCanNavigate()) return;
     if (App.currentIndex < App.questions.length - 1) {
       App.currentIndex++;
-      resumeTimer();
       renderCurrentQuestion();
     }
   });
 
   // Question Navigator Modal
   DOM.btnOpenNavigator.addEventListener("click", () => {
+    pauseTimer();
     renderNavigatorTiles();
     DOM.navigatorOverlay.classList.remove("hidden");
   });
-  DOM.btnCloseNavigator.addEventListener("click", () => DOM.navigatorOverlay.classList.add("hidden"));
+  DOM.btnCloseNavigator.addEventListener("click", () => {
+    DOM.navigatorOverlay.classList.add("hidden");
+    syncTimerState();
+  });
   DOM.navigatorOverlay.addEventListener("click", (e) => {
-    if (e.target === DOM.navigatorOverlay) DOM.navigatorOverlay.classList.add("hidden");
+    if (e.target === DOM.navigatorOverlay) {
+      DOM.navigatorOverlay.classList.add("hidden");
+      syncTimerState();
+    }
   });
 
   // Timer Controls
@@ -1714,24 +1782,42 @@ function setupEventListeners() {
 
   DOM.btnTimerPause.addEventListener("click", () => {
     if (App.timerRunning) {
+      App.manualPause = true;
       pauseTimer();
     } else {
+      App.manualPause = false;
       resumeTimer();
     }
   });
 
   // Modals
-  DOM.btnOpenCalc.addEventListener("click", () => DOM.modalCalculator.classList.toggle("hidden"));
-  DOM.btnCloseCalculator.addEventListener("click", () => DOM.modalCalculator.classList.add("hidden"));
+  DOM.btnOpenCalc.addEventListener("click", () => {
+    DOM.modalCalculator.classList.toggle("hidden");
+    syncTimerState();
+  });
+  DOM.btnCloseCalculator.addEventListener("click", () => {
+    DOM.modalCalculator.classList.add("hidden");
+    syncTimerState();
+  });
 
-  DOM.btnOpenRef.addEventListener("click", () => DOM.modalReference.classList.remove("hidden"));
-  DOM.btnCloseReference.addEventListener("click", () => DOM.modalReference.classList.add("hidden"));
+  DOM.btnOpenRef.addEventListener("click", () => {
+    pauseTimer();
+    DOM.modalReference.classList.remove("hidden");
+  });
+  DOM.btnCloseReference.addEventListener("click", () => {
+    DOM.modalReference.classList.add("hidden");
+    syncTimerState();
+  });
 
   DOM.btnOpenErrorLog.addEventListener("click", () => {
+    pauseTimer();
     renderErrorLogs();
     DOM.modalErrorLog.classList.remove("hidden");
   });
-  DOM.btnCloseErrorLog.addEventListener("click", () => DOM.modalErrorLog.classList.add("hidden"));
+  DOM.btnCloseErrorLog.addEventListener("click", () => {
+    DOM.modalErrorLog.classList.add("hidden");
+    syncTimerState();
+  });
 
   DOM.btnAddNewError.addEventListener("click", () => {
     const q = App.currentQuestion;
@@ -1756,10 +1842,14 @@ function setupEventListeners() {
   DOM.selectFilterErrStatus.addEventListener("change", renderErrorLogs);
 
   DOM.btnOpenStrategies.addEventListener("click", () => {
+    pauseTimer();
     renderStrategiesModal();
     DOM.modalStrategies.classList.remove("hidden");
   });
-  DOM.btnCloseStrategies.addEventListener("click", () => DOM.modalStrategies.classList.add("hidden"));
+  DOM.btnCloseStrategies.addEventListener("click", () => {
+    DOM.modalStrategies.classList.add("hidden");
+    syncTimerState();
+  });
 
   // Home Button
   if (DOM.btnHome) {
