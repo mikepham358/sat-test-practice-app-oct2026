@@ -233,6 +233,7 @@ const DOM = {
   inputReflDetail: document.getElementById("input-refl-detail"),
   inputReflNotes: document.getElementById("input-refl-notes"),
   inputReflVocab: document.getElementById("input-refl-vocab"),
+  btnSaveReflAndReview: document.getElementById("btn-save-refl-and-review"),
   btnSaveMandatoryReflection: document.getElementById("btn-save-mandatory-reflection"),
 
   // Success Modal
@@ -783,7 +784,7 @@ function renderAttemptSlots(q, qState) {
   } else if (status === "mastered_l3") {
     showAlert(true, "✅ Đúng ở Lần 3 (Hiệu suất 33.3%). Xem lại gợi ý để nắm chắc kiến thức.");
   } else if (status === "missed") {
-    showAlert(false, `❌ Chưa chính xác sau 3 lần. Đáp án đúng là [${q.correct_answer}]. Hãy ghi lại vào Sổ lỗi.`);
+    showAlert(false, `❌ Chưa chính xác sau 3 lần. Đáp án đúng là [${q.correct_answer}]. Hãy ghi lại vào Sổ thử sai.`);
   } else if (status.startsWith("retry")) {
     const left = 3 - attempts.length;
     showAlert(false, `⚠️ Chưa chính xác. Em còn ${left} lần thử. Đã mở gợi ý bên dưới!`);
@@ -800,7 +801,7 @@ function showAlert(isSuccess, text) {
 
 function renderHints(q, qState) {
   const attempts = qState.attempts || [];
-  const isFinished = (qState.status.startsWith("mastered") || qState.status === "missed");
+  const isFinished = (qState.status.startsWith("mastered") || qState.status === "missed") || !!qState.reviewAllHints;
 
   // Tier 1: Định hướng bối cảnh & Tư duy tổng quan (Mở sau Lần 1 hoặc khi hoàn thành)
   if (attempts.length >= 1 || isFinished) {
@@ -1070,7 +1071,7 @@ function renderErrorLogs() {
         <div style="font-size: 32px; margin-bottom: 8px;">📭</div>
         <div style="font-weight: 600; font-size: 14px; color: #202124;">Không tìm thấy ghi chép nào</div>
         <div style="font-size: 12.5px; margin-top: 4px;">
-          ${qLower ? `Không có kết quả khớp với từ khóa "${escapeHtml(qLower)}".` : `Em chưa có ghi chép lỗi sai hoặc từ vựng nào trong mục này.`}
+          ${qLower ? `Không có kết quả khớp với từ khóa "${escapeHtml(qLower)}".` : `Em chưa có ghi chép thử sai hoặc từ vựng nào trong mục này.`}
         </div>
       </div>
     `;
@@ -1111,7 +1112,7 @@ function renderErrorLogs() {
             </select>
           </div>
           <div class="full-width">
-            <label>Phân tích nguyên nhân sai & Bài học rút ra:</label>
+            <label>Phân tích nguyên nhân thử sai & Bài học rút ra:</label>
             <textarea class="g-textarea edit-detail" rows="2">${escapeHtml(item.trap_detail || "")}</textarea>
           </div>
           <div class="full-width">
@@ -1137,7 +1138,7 @@ function renderErrorLogs() {
       editCard.querySelector(".btn-save-edit").addEventListener("click", () => {
         const newDetail = editCard.querySelector(".edit-detail").value.trim();
         if (!newDetail) {
-          alert("Vui lòng không để trống phần phân tích lỗi sai!");
+          alert("Vui lòng không để trống phần phân tích thử sai!");
           return;
         }
         item.status = editCard.querySelector(".edit-status").value;
@@ -1185,7 +1186,7 @@ function renderErrorLogs() {
 
     const quickToggleBtn = (item.status === "Đã triệt tiêu") ?
       `<button class="btn-quick-toggle-status" title="Chuyển về trạng thái đang theo dõi">🔄 Đưa về theo dõi</button>` :
-      `<button class="btn-quick-toggle-status" title="Đánh dấu em đã nắm vững lỗi này">✅ Đã triệt tiêu lỗi</button>`;
+      `<button class="btn-quick-toggle-status" title="Đánh dấu em đã nắm vững kiến thức này">✅ Đã triệt tiêu</button>`;
 
     card.innerHTML = `
       <div class="card-top-row">
@@ -1221,7 +1222,7 @@ function renderErrorLogs() {
 
     // Delete button
     card.querySelector(".btn-del-card").addEventListener("click", () => {
-      if (confirm(`Em có chắc chắn muốn xóa ghi chép lỗi câu ${item.q_label || item.question_id} này không?`)) {
+      if (confirm(`Em có chắc chắn muốn xóa ghi chép thử sai câu ${item.q_label || item.question_id} này không?`)) {
         App.studentState.error_logs = App.studentState.error_logs.filter(x => x.id !== item.id);
         saveLocalState();
         updateErrorBadge();
@@ -1445,7 +1446,7 @@ function checkCanNavigate() {
   if (!currentQ) return true;
   const qState = App.studentState.attempts[currentQ.id];
   if (qState && qState.needs_error_log && !qState.error_logged) {
-    alert("⚠️ Em cần hoàn thành ghi chép sổ lỗi cho câu này trước khi chuyển sang câu tiếp theo!");
+    alert("⚠️ Em cần hoàn thành ghi chép sổ thử sai cho câu này trước khi chuyển sang câu tiếp theo!");
     openMandatoryReflectionModal(currentQ, qState);
     return false;
   }
@@ -1482,7 +1483,7 @@ function openMandatoryReflectionModal(q, qState) {
   DOM.modalMandatoryReflection.classList.remove("hidden");
 }
 
-function saveMandatoryReflection() {
+function saveMandatoryReflection(advanceToNext = true) {
   const q = App.currentQuestion;
   if (!q) return;
   const qState = App.studentState.attempts[q.id];
@@ -1494,13 +1495,13 @@ function saveMandatoryReflection() {
   const vocab = DOM.inputReflVocab ? DOM.inputReflVocab.value.trim() : "";
 
   if (!trap) {
-    alert("Vui lòng chọn nhóm bẫy SAT em đã mắc phải!");
+    alert("Vui lòng chọn nhóm bẫy SAT em đã gặp phải!");
     DOM.selectReflTrap.focus();
     return;
   }
 
   if (!detail || detail.length < 5) {
-    alert("Vui lòng nhập phân tích nguyên nhân sai và bài học rút ra (tối thiểu 5 ký tự)!");
+    alert("Vui lòng nhập phân tích nguyên nhân thử sai và bài học rút ra (tối thiểu 5 ký tự)!");
     DOM.inputReflDetail.focus();
     return;
   }
@@ -1527,6 +1528,7 @@ function saveMandatoryReflection() {
 
   qState.error_logged = true;
   qState.needs_error_log = false;
+  qState.reviewAllHints = true;
   App.studentState.attempts[q.id] = qState;
 
   saveLocalState();
@@ -1535,15 +1537,33 @@ function saveMandatoryReflection() {
 
   DOM.modalMandatoryReflection.classList.add("hidden");
 
-  // Show a brief success alert
-  alert("✅ Ghi chép sổ lỗi thành công! Em đã mở khóa và có thể tiếp tục làm câu tiếp theo.");
-
-  // Auto advance to next question
-  if (App.currentIndex < App.questions.length - 1) {
-    App.currentIndex++;
-    renderCurrentQuestion();
+  if (advanceToNext) {
+    // Show a brief success alert & auto advance
+    alert("✅ Ghi chép sổ thử sai thành công! Em đã mở khóa và có thể tiếp tục làm câu tiếp theo.");
+    if (App.currentIndex < App.questions.length - 1) {
+      App.currentIndex++;
+      renderCurrentQuestion();
+    } else {
+      renderCurrentQuestion();
+      syncTimerState();
+    }
   } else {
-    syncTimerState();
+    // Stay on current question with all hints unlocked and expanded
+    renderCurrentQuestion();
+
+    if (DOM.hintContent1) DOM.hintContent1.classList.remove("collapsed");
+    if (DOM.hintContent2) DOM.hintContent2.classList.remove("collapsed");
+    if (DOM.hintContent3) DOM.hintContent3.classList.remove("collapsed");
+    if (DOM.hintContent4) DOM.hintContent4.classList.remove("collapsed");
+
+    pauseTimer();
+
+    const hintSec = document.getElementById("hint-card-1") || DOM.hintsContainer;
+    if (hintSec) {
+      hintSec.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    }
+
+    alert("💡 Đã lưu vào Sổ Thử Sai! Tất cả các tầng gợi ý & chiến thuật của câu này đã được mở khóa hoàn toàn để em nghiên cứu kỹ lưỡng.");
   }
 }
 
@@ -1602,7 +1622,7 @@ async function generateClientExcelBlob(studentName, summary) {
         wsOv["B16"] = { t: "s", v: summary ? `${summary.scorePct}%` : "0%" };
         wsOv["A17"] = { t: "s", v: "Điểm ước tính" };
         wsOv["B17"] = { t: "s", v: `${summary ? (summary.estimatedScore || Math.round(400 + (summary.scorePct / 100) * 1200)) : 400} / 1600` };
-        wsOv["A18"] = { t: "s", v: "Số lỗi ghi sổ" };
+        wsOv["A18"] = { t: "s", v: "Số lần thử sai ghi sổ" };
         wsOv["B18"] = { t: "n", v: (App.studentState.error_logs || []).length };
       }
 
@@ -1802,7 +1822,7 @@ Em xin gửi kết quả bài làm đề thi Digital SAT Real Test October 2026 
 - Số câu đúng ngay Lần 1 (100%): ${s.l1Correct} câu
 - Số câu đúng Lần 2 (66.7%): ${s.l2Correct} câu
 - Số câu đúng Lần 3 (33.3%): ${s.l3Correct} câu
-- Số lỗi sai đã ghi chép vào sổ lỗi: ${errCount} câu
+- Số lần thử sai đã ghi chép vào sổ thử sai: ${errCount} câu
 
 (File Excel bài làm chi tiết: ${filename} đã được tải về thiết bị của em và đính kèm cùng email này).
 
@@ -2148,7 +2168,7 @@ function setupEventListeners() {
       const q = App.currentQuestion;
       const detail = DOM.inputNewDetail ? DOM.inputNewDetail.value.trim() : "";
       if (!detail) {
-        alert("Vui lòng nhập phân tích lỗi sai hoặc bài học rút ra!");
+        alert("Vui lòng nhập phân tích nguyên nhân thử sai hoặc bài học rút ra!");
         if (DOM.inputNewDetail) DOM.inputNewDetail.focus();
         return;
       }
@@ -2261,8 +2281,11 @@ function setupEventListeners() {
   }
 
   // Mandatory Error Reflection Modal Controls
+  if (DOM.btnSaveReflAndReview) {
+    DOM.btnSaveReflAndReview.addEventListener("click", () => saveMandatoryReflection(false));
+  }
   if (DOM.btnSaveMandatoryReflection) {
-    DOM.btnSaveMandatoryReflection.addEventListener("click", saveMandatoryReflection);
+    DOM.btnSaveMandatoryReflection.addEventListener("click", () => saveMandatoryReflection(true));
   }
 
   // PDF External Drive Opener

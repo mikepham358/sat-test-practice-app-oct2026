@@ -226,8 +226,8 @@
             </div>
             <div class="feature-card">
               <div class="feat-icon-wrap bg-amber-tint">📝</div>
-              <h4>Sổ Tay Lỗi Sai Bắt Buộc</h4>
-              <p>Tự động phát hiện câu sai và hướng dẫn phản tư bẫy SAT trước khi mở khóa câu tiếp theo.</p>
+              <h4>Sổ Tay Thử Sai Bắt Buộc</h4>
+              <p>Tự động ghi chép phân tích thử sai và hướng dẫn phản tư bẫy SAT trước khi mở khóa câu tiếp theo.</p>
             </div>
             <div class="feature-card">
               <div class="feat-icon-wrap bg-purple-tint">☁️</div>
@@ -296,8 +296,8 @@
       <button class="tool-btn" id="btn-toggle-scratchpad" title="Bảng nháp Whiteboard">
         <span>✏️ Scratchpad</span>
       </button>
-      <button class="tool-btn" id="btn-open-error-log" title="Sổ tay Lỗi sai Socratic">
-        <span>🎯 Sổ lỗi</span>
+      <button class="tool-btn" id="btn-open-error-log" title="Sổ tay Thử sai Socratic">
+        <span>🎯 Sổ thử sai</span>
         <span class="badge" id="badge-error-count">0</span>
       </button>
       <button class="tool-btn" id="btn-open-strategies" title="Bí kíp chiến lược đề thi">
@@ -616,7 +616,7 @@
         <div class="header-title-group">
           <div class="header-main-title">
             <span class="header-icon">📓</span>
-            <h3>Sổ tay Lỗi sai & Từ vựng Socratic</h3>
+            <h3>Sổ tay Thử sai & Từ vựng Socratic</h3>
             <span class="live-count-badge" id="badge-notebook-count">0 ghi chép</span>
           </div>
           <p class="header-sub-desc">Ghi chép bẫy đề thi, ghi chú tư duy & từ mới tiếng Anh — Tự động lưu trên thiết bị của em</p>
@@ -707,8 +707,8 @@
   <div class="modal-overlay hidden" id="modal-mandatory-reflection">
     <div class="modal-card reflection-modal-card">
       <div class="reflection-header">
-        <div class="reflection-badge">⚠️ BẮT BUỘC GHI CHÉP SỔ LỖI SAI</div>
-        <h3>Phân Tích Lỗi Sai: <span id="refl-q-label">Question 1</span></h3>
+        <div class="reflection-badge">⚠️ BẮT BUỘC GHI CHÉP SỔ THỬ SAI</div>
+        <h3>Phân Tích Thử Sai: <span id="refl-q-label">Question 1</span></h3>
         <p class="reflection-subtitle">Chủ đề: <strong id="refl-q-topic">Reading</strong> (<span id="refl-q-module">Module 1</span>)</p>
       </div>
 
@@ -719,7 +719,7 @@
             <span class="val val-correct" id="refl-correct-ans">B</span>
           </div>
           <div class="info-row">
-            <span class="lbl">Các lần em chọn sai:</span>
+            <span class="lbl">Các lần em chọn chưa đúng:</span>
             <span class="val val-wrong" id="refl-wrong-picks">Lần 1: C</span>
           </div>
           <div class="info-hint" id="refl-hint-box">
@@ -729,7 +729,7 @@
 
         <form class="reflection-form" id="form-mandatory-reflection" onsubmit="return false;">
           <div class="form-group">
-            <label for="select-refl-trap">1. Nhóm bẫy SAT em đã mắc phải <span class="req">*</span></label>
+            <label for="select-refl-trap">1. Nhóm bẫy SAT em đã gặp phải <span class="req">*</span></label>
             <select id="select-refl-trap" required>
               <option value="">-- Chọn nhóm bẫy SAT em gặp phải --</option>
               <option value="Bẫy từ vựng & Nghĩa trong ngữ cảnh (Context Clues)">📖 Bẫy từ vựng & Nghĩa trong ngữ cảnh (Context Clues)</option>
@@ -746,8 +746,8 @@
           </div>
 
           <div class="form-group">
-            <label for="input-refl-detail">2. Phân tích nguyên nhân sai & Bài học rút ra <span class="req">*</span></label>
-            <textarea id="input-refl-detail" rows="3" placeholder="Tại sao em lại chọn nhầm? Em đã nhìn nhận sót chỗ nào và lần sau gặp dạng bài này em sẽ chú ý điều gì? (Tối thiểu 5 ký tự)" required minlength="5"></textarea>
+            <label for="input-refl-detail">2. Phân tích nguyên nhân thử sai & Bài học rút ra <span class="req">*</span></label>
+            <textarea id="input-refl-detail" rows="3" placeholder="Tại sao em lại chọn phương án đó? Em đã nhìn nhận sót manh mối nào và lần sau gặp dạng bài này em sẽ chú ý điều gì? (Tối thiểu 5 ký tự)" required minlength="5"></textarea>
           </div>
 
           <div class="form-group">
@@ -761,8 +761,11 @@
           </div>
 
           <div class="reflection-actions">
-            <button type="button" class="btn-primary-ob" id="btn-save-mandatory-reflection">
-              💾 Lưu Vào Sổ Lỗi & Mở Khóa Câu Tiếp Theo ➔
+            <button type="button" class="btn-save-review" id="btn-save-refl-and-review">
+              👀 Lưu Vào Sổ & Xem Lại Câu Vừa Rồi (Mở Khóa Toàn Bộ Gợi Ý)
+            </button>
+            <button type="button" class="btn-save-next" id="btn-save-mandatory-reflection">
+              💾 Lưu Vào Sổ Thử Sai & Sang Câu Tiếp Theo ➔
             </button>
           </div>
         </form>
@@ -848,8 +851,8 @@
           <div class="guide-item">
             <div class="guide-icon">📝</div>
             <div class="guide-text">
-              <h4>Sổ tay lỗi sai bắt buộc</h4>
-              <p>Khi trả lời sai, hệ thống yêu cầu học sinh ghi chép bẫy SAT và giải pháp phản tư trước khi mở khóa câu tiếp theo.</p>
+              <h4>Sổ tay thử sai bắt buộc</h4>
+              <p>Khi trả lời chưa đúng, hệ thống hướng dẫn học sinh ghi chép bẫy SAT và giải pháp phản tư trước khi mở khóa câu tiếp theo hoặc xem lại toàn bộ gợi ý.</p>
             </div>
           </div>
 
@@ -996,7 +999,7 @@
         </label>
         <label class="reset-chk-label">
           <input type="checkbox" id="chk-reset-errors">
-          <span>Xoá toàn bộ ghi chép trong Sổ lỗi (Mặc định giữ lại để ôn tập)</span>
+          <span>Xoá toàn bộ ghi chép trong Sổ thử sai (Mặc định giữ lại để ôn tập)</span>
         </label>
       </div>
 
