@@ -1,5 +1,6 @@
 /**
- * Bluebook Digital SAT Practice Engine — October 2026 (INT-B)
+ * Digital SAT Practice Based on Learning Science — October 2026 (INT-B)
+ * Designed by Mike Pham Bá Hong Son - Google for Education Innovator
  * 100% Client-Side LocalStorage Isolation for Independent Student Practice
  */
 
