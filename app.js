@@ -1547,83 +1547,145 @@ function saveMandatoryReflection() {
   }
 }
 
-// ================= CLIENT-SIDE EXCEL GENERATOR (FOR GITHUB PAGES & OFFLINE) =================
-function generateClientExcelBlob(studentName, summary) {
+// ================= CLIENT-SIDE EXCEL GENERATOR (MATCHES MASTER TEMPLATE - OCTOBER 2026) =================
+async function generateClientExcelBlob(studentName, summary) {
   if (typeof XLSX === "undefined") return null;
 
   try {
-    const wb = XLSX.utils.book_new();
+    let wb = null;
+    // 1. Try to load the master template.xlsx
+    try {
+      const res = await fetch("template.xlsx");
+      if (res.ok) {
+        const ab = await res.arrayBuffer();
+        wb = XLSX.read(ab, { type: "array", cellStyles: true });
+      }
+    } catch (e) {
+      console.warn("Could not fetch template.xlsx:", e);
+    }
 
-    // 1. Sheet: Tổng Quan
+    if (wb && wb.SheetNames && wb.SheetNames.includes("RW_Module1")) {
+      const attempts = App.studentState.attempts || {};
+      const questions = (App.db && App.db.questions) ? App.db.questions : (App.questions || []);
+
+      // 1. Personalize Performance_Summary header
+      if (wb.Sheets["Performance_Summary"]) {
+        const wsPerf = wb.Sheets["Performance_Summary"];
+        wsPerf["A1"] = { t: "s", v: `BẢNG TỔNG HỢP KẾT QUẢ: ${studentName.toUpperCase()} (OCTOBER 2026 TEST)` };
+        wsPerf["A3"] = { t: "s", v: `Học sinh: ${studentName} | Thời gian làm bài: ${new Date().toLocaleString("vi-VN")}` };
+      }
+
+      // 2. Clear old attempt values from Module sheets & Master sheet
+      const modSheets = ["RW_Module1", "RW_Module2", "Math_Module1", "Math_Module2"];
+      modSheets.forEach(mName => {
+        const ws = wb.Sheets[mName];
+        if (ws) {
+          for (let r = 5; r <= 35; r++) {
+            delete ws[`F${r}`];
+            delete ws[`H${r}`];
+            delete ws[`J${r}`];
+          }
+        }
+      });
+
+      const wsMaster = wb.Sheets["Master_All_98_Questions"];
+      if (wsMaster) {
+        for (let r = 5; r <= 105; r++) {
+          delete wsMaster[`G${r}`];
+          delete wsMaster[`I${r}`];
+          delete wsMaster[`K${r}`];
+        }
+      }
+
+      // 3. Populate student attempts into Module sheets & Master sheet
+      questions.forEach(q => {
+        const qState = attempts[q.id];
+        if (!qState) return;
+
+        let attList = qState.attempts || [];
+        if (!Array.isArray(attList)) attList = [attList];
+
+        const att1 = attList[0] ? String(attList[0]).trim().toUpperCase() : "";
+        const att2 = attList[1] ? String(attList[1]).trim().toUpperCase() : "";
+        const att3 = attList[2] ? String(attList[2]).trim().toUpperCase() : "";
+
+        // Module Sheet
+        const ws = wb.Sheets[q.module_code];
+        if (ws) {
+          for (let r = 5; r <= 35; r++) {
+            const cellA = ws[`A${r}`];
+            if (cellA && String(cellA.v).trim() === String(q.q_label).trim()) {
+              if (att1) ws[`F${r}`] = { t: "s", v: att1 };
+              if (att2) ws[`H${r}`] = { t: "s", v: att2 };
+              if (att3) ws[`J${r}`] = { t: "s", v: att3 };
+              break;
+            }
+          }
+        }
+
+        // Master Sheet
+        if (wsMaster) {
+          const r = q.id + 4;
+          if (att1) wsMaster[`G${r}`] = { t: "s", v: att1 };
+          if (att2) wsMaster[`I${r}`] = { t: "s", v: att2 };
+          if (att3) wsMaster[`K${r}`] = { t: "s", v: att3 };
+        }
+      });
+
+      // 4. Populate SAT_Error_Log_Tracker
+      const wsErr = wb.Sheets["SAT_Error_Log_Tracker"];
+      if (wsErr) {
+        const errList = App.studentState.error_logs || [];
+        // Clear old rows 16 to 45
+        for (let r = 16; r <= 45; r++) {
+          for (let col of ["A","B","C","D","E","F","G","H","I","J"]) {
+            delete wsErr[`${col}${r}`];
+          }
+        }
+
+        // Write student error logs
+        errList.forEach((e, idx) => {
+          const r = 16 + idx;
+          wsErr[`A${r}`] = { t: "s", v: e.date || new Date().toLocaleDateString("vi-VN") };
+          wsErr[`B${r}`] = { t: "s", v: e.module || "" };
+          wsErr[`C${r}`] = { t: "s", v: `${e.q_label || `Q${e.question_id}`}: ${e.skill || ""}` };
+          wsErr[`D${r}`] = { t: "s", v: e.root_cause || "Bẫy SAT" };
+          wsErr[`E${r}`] = { t: "s", v: e.trap_detail || "" };
+          wsErr[`F${r}`] = { t: "s", v: e.socratic_analysis || "" };
+          wsErr[`G${r}`] = { t: "s", v: e.student_notes || "" };
+          wsErr[`H${r}`] = { t: "s", v: e.vocabulary || "" };
+          wsErr[`I${r}`] = { t: "s", v: e.status || "Đang theo dõi" };
+          wsErr[`J${r}`] = { t: "s", v: e.takeaway || "" };
+        });
+
+        // Update counts in row 3
+        const totalE = errList.length;
+        const pendingE = errList.filter(l => l.status === "Chưa xử lý").length;
+        const trackingE = errList.filter(l => l.status === "Đang theo dõi").length;
+        const resolvedE = errList.filter(l => l.status === "Đã triệt tiêu").length;
+        const rateE = totalE > 0 ? `${Math.round((resolvedE / totalE) * 100)}%` : "0%";
+
+        wsErr["E3"] = { t: "n", v: totalE };
+        wsErr["F3"] = { t: "n", v: pendingE };
+        wsErr["G3"] = { t: "n", v: trackingE };
+        wsErr["H3"] = { t: "n", v: resolvedE };
+        wsErr["I3"] = { t: "s", v: rateE };
+      }
+
+      const wbout = XLSX.write(wb, { bookType: "xlsx", type: "array" });
+      return new Blob([wbout], { type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" });
+    }
+
+    // Fallback: minimal workbook if template.xlsx is unreachable
+    const fallbackWb = XLSX.utils.book_new();
     const overviewData = [
       ["BÁO CÁO KẾT QUẢ DIGITAL SAT BLUEBOOK"],
-      ["Đề thi", App.db ? App.db.test_title : "Digital SAT Practice Test — October 2026 (INT-B)"],
       ["Học sinh", studentName],
-      ["Email học sinh", App.studentState.student_email || "N/A"],
-      ["Mục tiêu điểm", App.studentState.student_target || "Chưa đặt"],
-      ["Thời gian nộp", new Date().toLocaleString("vi-VN")],
-      ["Giáo viên phụ trách", "Mike Pham Bá Hong Son (Google for Education Innovator) - mikepham358@gmail.com"],
-      ["Nguồn tài liệu", "Tham khảo từ hocsat.com"],
-      [""],
-      ["BẢNG TỔNG KẾT ĐIỂM SỐ"],
-      ["Tổng số câu", summary ? summary.total : 98],
-      ["Số câu đã làm", summary ? summary.answered : 0],
-      ["Số câu đúng Lần 1 (100%)", summary ? summary.l1Correct : 0],
-      ["Số câu đúng Lần 2 (66.7%)", summary ? summary.l2Correct : 0],
-      ["Số câu đúng Lần 3 (33.3%)", summary ? summary.l3Correct : 0],
-      ["Hiệu suất điểm", summary ? `${summary.scorePct}%` : "0%"],
-      ["Điểm ước tính", summary ? `${summary.estimatedScore || Math.round(400 + (summary.scorePct / 100) * 1200)} / 1600` : "400 / 1600"],
-      ["Số lỗi ghi sổ", (App.studentState.error_logs || []).length]
+      ["Email", App.studentState.student_email || "N/A"],
+      ["Hiệu suất", summary ? `${summary.scorePct}%` : "0%"]
     ];
-    const wsOverview = XLSX.utils.aoa_to_sheet(overviewData);
-    XLSX.utils.book_append_sheet(wb, wsOverview, "Tong_Quan");
-
-    // 2. Sheet: Chi Tiết Câu Hỏi
-    const detailRows = [
-      ["STT", "Module", "Dạng bài", "Kỹ năng / Topic", "Đáp án đúng", "Đáp án học sinh", "Số lần thử", "Trạng thái", "Gợi ý Tầng 1", "Chiến lược Tip"]
-    ];
-    if (App.db && App.db.questions) {
-      App.db.questions.forEach((q, idx) => {
-        const qState = App.studentState.attempts[q.id] || {};
-        detailRows.push([
-          q.q_label || `Q${idx + 1}`,
-          q.module_title || q.module_code,
-          q.is_grid_in ? "Điền số (Grid-in)" : "Trắc nghiệm",
-          q.topic || "",
-          q.correct_answer || "",
-          qState.selectedAnswer || "",
-          qState.attempts || 0,
-          qState.isCorrect ? "Đúng" : (qState.finished ? "Sai" : "Chưa làm"),
-          q.tier1_hint || "",
-          q.strategic_tip || ""
-        ]);
-      });
-    }
-    const wsDetail = XLSX.utils.aoa_to_sheet(detailRows);
-    XLSX.utils.book_append_sheet(wb, wsDetail, "Chi_Tiet_Bai_Lam");
-
-    // 3. Sheet: Sổ Lỗi Sai & Từ Vựng
-    const errRows = [
-      ["STT", "Mã câu", "Module", "Chủ đề / Kỹ năng", "Nhóm bẫy SAT", "Phân tích nguyên nhân & Bài học", "Ghi chú tư duy", "Từ mới / Thuật ngữ", "Tình trạng", "Thời gian"]
-    ];
-    (App.studentState.error_logs || []).forEach((e, idx) => {
-      errRows.push([
-        idx + 1,
-        e.q_label || `Câu ${e.question_id || e.q_id || idx + 1}`,
-        e.module || e.module_code || "",
-        e.skill || e.topic || "",
-        e.root_cause || e.trap || "",
-        e.trap_detail || e.takeaway || "",
-        e.student_notes || "",
-        e.vocabulary || "",
-        e.status || "Chưa xử lý",
-        e.date || (e.timestamp ? new Date(e.timestamp).toLocaleString("vi-VN") : "")
-      ]);
-    });
-    const wsErrors = XLSX.utils.aoa_to_sheet(errRows);
-    XLSX.utils.book_append_sheet(wb, wsErrors, "So_Tay_Loi_Sai_Tu_Vung");
-
-    const wbout = XLSX.write(wb, { bookType: "xlsx", type: "array" });
+    XLSX.utils.book_append_sheet(fallbackWb, XLSX.utils.aoa_to_sheet(overviewData), "Tong_Quan");
+    const wbout = XLSX.write(fallbackWb, { bookType: "xlsx", type: "array" });
     return new Blob([wbout], { type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" });
   } catch (e) {
     console.error("Client Excel generation failed:", e);
@@ -1654,7 +1716,8 @@ async function submitTestFinal() {
       score_pct: s.scorePct,
       time_spent: s.timeSpent
     },
-    attempts: App.studentState.attempts
+    attempts: App.studentState.attempts,
+    error_logs: App.studentState.error_logs || []
   };
 
   let serverData = null;
@@ -1679,7 +1742,7 @@ async function submitTestFinal() {
   if (serverData && serverData.download_url) {
     fileBlobUrl = serverData.download_url;
   } else {
-    const clientBlob = generateClientExcelBlob(studentName, s);
+    const clientBlob = await generateClientExcelBlob(studentName, s);
     if (clientBlob) {
       fileBlobUrl = window.URL.createObjectURL(clientBlob);
     }
@@ -1749,7 +1812,8 @@ async function exportExcelPersonalized() {
 
   const payload = {
     student_name: studentName,
-    attempts: App.studentState.attempts
+    attempts: App.studentState.attempts,
+    error_logs: App.studentState.error_logs || []
   };
 
   let downloaded = false;
@@ -1776,7 +1840,7 @@ async function exportExcelPersonalized() {
   // Fallback to client-side SheetJS generation (for GitHub Pages)
   if (!downloaded) {
     const s = calculateTestSummary();
-    const blob = generateClientExcelBlob(studentName, s);
+    const blob = await generateClientExcelBlob(studentName, s);
     if (blob) {
       const url = window.URL.createObjectURL(blob);
       const a = document.createElement("a");

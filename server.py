@@ -44,15 +44,43 @@ def load_email_config():
 
 def generate_student_excel(payload):
     import openpyxl
-    excel_path = DB["excel_path"]
+    local_template = os.path.join(APP_DIR, "template.xlsx")
+    excel_path = local_template if os.path.exists(local_template) else DB.get("excel_path", "")
+    if not os.path.exists(excel_path):
+        excel_path = "/Users/mike/Library/CloudStorage/GoogleDrive-mikepham358@gmail.com/My Drive/A Vinschool by Mike Pham/26-27 Grand Plan /Study Plan/Module /Template - October 2026.xlsx"
+
     wb = openpyxl.load_workbook(excel_path, data_only=False)
 
-    student_name = payload.get("student_name", "Student").strip()
+    student_name = payload.get("student_name", "Student").strip() or "Hoc_Sinh"
     user_attempts = payload.get("attempts", {})  # { "1": { attempts: ["B"], status: "..." } }
+    error_logs = payload.get("error_logs", [])
+
+    # Personalize Performance_Summary header
+    if "Performance_Summary" in wb.sheetnames:
+        ws_perf = wb["Performance_Summary"]
+        ws_perf.cell(1, 1, f"BẢNG TỔNG HỢP KẾT QUẢ: {student_name.upper()} (OCTOBER 2026 TEST)")
+        ws_perf.cell(3, 1, f"Học sinh: {student_name} | Thời gian làm bài: {datetime.datetime.now().strftime('%d/%m/%Y %H:%M:%S')}")
 
     # Build question lookup by ID
     q_map = {q["id"]: q for q in DB["questions"]}
 
+    # Clear existing attempt inputs first to ensure clean state
+    for mod in ["RW_Module1", "RW_Module2", "Math_Module1", "Math_Module2"]:
+        if mod in wb.sheetnames:
+            ws = wb[mod]
+            for r in range(5, ws.max_row + 1):
+                ws.cell(r, 6, None)
+                ws.cell(r, 8, None)
+                ws.cell(r, 10, None)
+
+    if "Master_All_98_Questions" in wb.sheetnames:
+        ws_m = wb["Master_All_98_Questions"]
+        for r in range(5, ws_m.max_row + 1):
+            ws_m.cell(r, 7, None)
+            ws_m.cell(r, 9, None)
+            ws_m.cell(r, 11, None)
+
+    # Populate student attempts
     for qid_str, q_state in user_attempts.items():
         try:
             qid = int(qid_str)
@@ -62,27 +90,78 @@ def generate_student_excel(payload):
         if not q_info:
             continue
 
+        attempts = q_state.get("attempts", [])
+        if isinstance(attempts, (int, float, str)):
+            attempts = [str(attempts)]
+        elif not isinstance(attempts, list):
+            attempts = []
+
+        # 1. Populate Module Sheet
         mod_code = q_info["module_code"]
         if mod_code in wb.sheetnames:
             ws = wb[mod_code]
-            q_label = q_info["q_label"]
+            q_label = str(q_info["q_label"]).strip()
             for r in range(5, ws.max_row + 1):
                 val = str(ws.cell(r, 1).value or "").strip()
                 if val == q_label:
-                    attempts = q_state.get("attempts", [])
-                    if isinstance(attempts, (int, float, str)):
-                        attempts = [str(attempts)]
-                    elif not isinstance(attempts, list):
-                        attempts = []
-
-                    # Col 6 = Lần thử 1, Col 8 = Lần thử 2, Col 10 = Lần thử 3
-                    if len(attempts) >= 1:
-                        ws.cell(r, 6, attempts[0])
-                    if len(attempts) >= 2:
-                        ws.cell(r, 8, attempts[1])
-                    if len(attempts) >= 3:
-                        ws.cell(r, 10, attempts[2])
+                    if len(attempts) >= 1 and attempts[0]:
+                        ws.cell(r, 6, str(attempts[0]).strip().upper())
+                    if len(attempts) >= 2 and attempts[1]:
+                        ws.cell(r, 8, str(attempts[1]).strip().upper())
+                    if len(attempts) >= 3 and attempts[2]:
+                        ws.cell(r, 10, str(attempts[2]).strip().upper())
                     break
+
+        # 2. Populate Master_All_98_Questions Sheet
+        if "Master_All_98_Questions" in wb.sheetnames:
+            ws_m = wb["Master_All_98_Questions"]
+            master_id = f"M{qid}"
+            for r in range(5, ws_m.max_row + 1):
+                val = str(ws_m.cell(r, 1).value or "").strip()
+                if val == master_id or r == (qid + 4):
+                    if len(attempts) >= 1 and attempts[0]:
+                        ws_m.cell(r, 7, str(attempts[0]).strip().upper())
+                    if len(attempts) >= 2 and attempts[1]:
+                        ws_m.cell(r, 9, str(attempts[1]).strip().upper())
+                    if len(attempts) >= 3 and attempts[2]:
+                        ws_m.cell(r, 11, str(attempts[2]).strip().upper())
+                    break
+
+    # 3. Populate SAT_Error_Log_Tracker Sheet
+    if "SAT_Error_Log_Tracker" in wb.sheetnames:
+        ws_err = wb["SAT_Error_Log_Tracker"]
+        if error_logs:
+            # Clear old rows 16 to 40
+            for r in range(16, max(40, ws_err.max_row + 1)):
+                for c in range(1, 11):
+                    ws_err.cell(r, c, None)
+
+            # Write student error logs
+            for idx, e in enumerate(error_logs):
+                r = 16 + idx
+                ws_err.cell(r, 1, e.get("date", datetime.datetime.now().strftime("%Y-%m-%d")))
+                ws_err.cell(r, 2, e.get("module", ""))
+                ws_err.cell(r, 3, f"{e.get('q_label', '')}: {e.get('skill', '')}")
+                ws_err.cell(r, 4, e.get("root_cause", "Bẫy SAT"))
+                ws_err.cell(r, 5, e.get("trap_detail", ""))
+                ws_err.cell(r, 6, e.get("socratic_analysis", ""))
+                ws_err.cell(r, 7, e.get("student_notes", ""))
+                ws_err.cell(r, 8, e.get("vocabulary", ""))
+                ws_err.cell(r, 9, e.get("status", "Đang theo dõi"))
+                ws_err.cell(r, 10, e.get("takeaway", ""))
+
+            # Update summary counts in row 3
+            total_e = len(error_logs)
+            pending_e = sum(1 for e in error_logs if e.get("status") == "Chưa xử lý")
+            tracking_e = sum(1 for e in error_logs if e.get("status") == "Đang theo dõi")
+            resolved_e = sum(1 for e in error_logs if e.get("status") == "Đã triệt tiêu")
+            rate_e = f"{round((resolved_e / total_e) * 100)}%" if total_e > 0 else "0.0%"
+
+            ws_err.cell(3, 5, total_e)
+            ws_err.cell(3, 6, pending_e)
+            ws_err.cell(3, 7, tracking_e)
+            ws_err.cell(3, 8, resolved_e)
+            ws_err.cell(3, 9, rate_e)
 
     safe_name = re.sub(r'[^a-zA-Z0-9_\-]', '_', student_name) or "Student"
     timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
