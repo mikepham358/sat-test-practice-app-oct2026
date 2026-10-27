@@ -20,7 +20,10 @@ const App = {
   timerRunning: false, // Default paused until student starts practice
   manualPause: false,  // Student clicked pause button manually
   timerHidden: false,
-  pdfViewerMode: "drive", // "drive" (default, ideal for iPad/phones) or "local"
+  pdfViewerMode: "drive", // Standard Google Drive viewer
+  notebookFilterStatus: "all",
+  notebookSearchQuery: "",
+  editingLogId: null,
 
   // Student Personal State (Loaded from localStorage)
   studentState: {
@@ -75,7 +78,6 @@ const DOM = {
   headerStudentBadge: document.getElementById("header-student-badge"),
   headerStudentName: document.getElementById("header-student-name"),
   btnEditStudent: document.getElementById("btn-edit-student"),
-  btnThemeToggle: document.getElementById("btn-theme-toggle"),
 
   // Split & PDF
   splitContainer: document.getElementById("split-container"),
@@ -84,12 +86,6 @@ const DOM = {
   pdfFrame: document.getElementById("pdf-frame"),
   pdfPageBadge: document.getElementById("pdf-page-badge"),
   pdfSyncPageNum: document.getElementById("pdf-sync-page-num"),
-  btnModeDrive: document.getElementById("btn-mode-drive"),
-  btnModeLocal: document.getElementById("btn-mode-local"),
-  localPdfControls: document.getElementById("local-pdf-controls"),
-  inputPdfPage: document.getElementById("input-pdf-page"),
-  btnPdfPrev: document.getElementById("btn-pdf-prev"),
-  btnPdfNext: document.getElementById("btn-pdf-next"),
   btnPdfExternal: document.getElementById("btn-pdf-external"),
 
   // Question Top
@@ -163,11 +159,30 @@ const DOM = {
   btnCloseCalculator: document.getElementById("btn-close-calculator"),
   modalReference: document.getElementById("modal-reference"),
   btnCloseReference: document.getElementById("btn-close-reference"),
+
+  // Socratic Error & Vocabulary Notebook
   modalErrorLog: document.getElementById("modal-error-log"),
   btnCloseErrorLog: document.getElementById("btn-close-error-log"),
-  errorLogList: document.getElementById("error-log-list"),
   btnAddNewError: document.getElementById("btn-add-new-error"),
-  selectFilterErrStatus: document.getElementById("select-filter-err-status"),
+  errorLogList: document.getElementById("error-log-list"),
+  inputFilterErrSearch: document.getElementById("input-filter-err-search"),
+  btnClearErrSearch: document.getElementById("btn-clear-err-search"),
+  badgeNotebookCount: document.getElementById("badge-notebook-count"),
+  notebookFilterChips: document.getElementById("notebook-filter-chips"),
+  countChipAll: document.getElementById("count-chip-all"),
+  countChipPending: document.getElementById("count-chip-pending"),
+  countChipTracking: document.getElementById("count-chip-tracking"),
+  countChipResolved: document.getElementById("count-chip-resolved"),
+  notebookAddPanel: document.getElementById("notebook-add-panel"),
+  addPanelQBadge: document.getElementById("add-panel-q-badge"),
+  selectNewTrap: document.getElementById("select-new-trap"),
+  selectNewStatus: document.getElementById("select-new-status"),
+  inputNewDetail: document.getElementById("input-new-detail"),
+  inputNewNotes: document.getElementById("input-new-notes"),
+  inputNewVocab: document.getElementById("input-new-vocab"),
+  btnSaveNewError: document.getElementById("btn-save-new-error"),
+  btnCancelAddError: document.getElementById("btn-cancel-add-error"),
+
   modalStrategies: document.getElementById("modal-strategies"),
   btnCloseStrategies: document.getElementById("btn-close-strategies"),
   strategiesContent: document.getElementById("strategies-content"),
@@ -215,6 +230,8 @@ const DOM = {
   reflHintBox: document.getElementById("refl-hint-box"),
   selectReflTrap: document.getElementById("select-refl-trap"),
   inputReflDetail: document.getElementById("input-refl-detail"),
+  inputReflNotes: document.getElementById("input-refl-notes"),
+  inputReflVocab: document.getElementById("input-refl-vocab"),
   btnSaveMandatoryReflection: document.getElementById("btn-save-mandatory-reflection"),
 
   // Success Modal
@@ -434,7 +451,6 @@ function startPracticeFromHome(targetModule) {
 document.addEventListener("DOMContentLoaded", async () => {
   loadLocalState();
   initSplitResizer();
-  initTheme();
   initScratchpad();
   initOnboarding();
   setupEventListeners();
@@ -971,79 +987,257 @@ function renderNavigatorTiles() {
   });
 }
 
-// ================= PDF NAVIGATION =================
+// ================= PDF NAVIGATION (GOOGLE DRIVE OFFICIAL) =================
 function navigatePdf(page, zoom = null) {
   const p = Math.max(1, Math.min(44, parseInt(page) || 1));
-  if (DOM.inputPdfPage) DOM.inputPdfPage.value = p;
   if (DOM.pdfSyncPageNum) DOM.pdfSyncPageNum.textContent = p;
-
-  if (App.pdfViewerMode === "local") {
-    let url = `/pdf?p=${p}#page=${p}`;
-    if (zoom) {
-      url += `&zoom=${zoom}`;
-    } else {
-      url += `&view=FitH`;
-    }
-    DOM.pdfFrame.src = url;
-  }
 }
 
-function setPdfViewerMode(mode) {
-  App.pdfViewerMode = mode;
-  if (mode === "drive") {
-    DOM.btnModeDrive.classList.add("active");
-    DOM.btnModeLocal.classList.remove("active");
-    DOM.localPdfControls.classList.add("hidden");
-    if (!DOM.pdfFrame.src.includes("drive.google.com")) {
-      DOM.pdfFrame.src = DRIVE_PREVIEW_URL;
-    }
-  } else {
-    DOM.btnModeDrive.classList.remove("active");
-    DOM.btnModeLocal.classList.add("active");
-    DOM.localPdfControls.classList.remove("hidden");
-    const p = App.currentQuestion ? App.currentQuestion.pdf_page : (parseInt(DOM.inputPdfPage.value) || 3);
-    navigatePdf(p);
-  }
+// ================= ERROR LOG & NOTEBOOK UTILS =================
+function escapeHtml(str) {
+  if (!str) return "";
+  return String(str)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
 }
 
-// ================= ERROR LOG & STRATEGIES =================
+function formatVocabHtml(vocabText) {
+  if (!vocabText) return "";
+  const lines = vocabText.split(/[\n;]+/).map(s => s.trim()).filter(Boolean);
+  if (lines.length > 1) {
+    return `<div style="display: flex; flex-direction: column; gap: 4px; margin-top: 4px;">` +
+      lines.map(line => {
+        const parts = line.split(/[:=–-]/);
+        if (parts.length >= 2) {
+          const word = parts[0].trim();
+          const def = parts.slice(1).join("=").trim();
+          return `<div><span class="vocab-tag-highlight">${escapeHtml(word)}</span>: ${escapeHtml(def)}</div>`;
+        }
+        return `<div>• ${escapeHtml(line)}</div>`;
+      }).join("") + `</div>`;
+  }
+  return `<span>${escapeHtml(vocabText)}</span>`;
+}
+
 function updateErrorBadge() {
   const unres = (App.studentState.error_logs || []).filter(l => l.status !== "Đã triệt tiêu").length;
-  DOM.badgeErrorCount.textContent = unres;
+  if (DOM.badgeErrorCount) DOM.badgeErrorCount.textContent = unres;
 }
 
 function renderErrorLogs() {
-  const statusFilter = DOM.selectFilterErrStatus.value;
   const list = App.studentState.error_logs || [];
+  const total = list.length;
+  const pending = list.filter(l => l.status === "Chưa xử lý").length;
+  const tracking = list.filter(l => l.status === "Đang theo dõi").length;
+  const resolved = list.filter(l => l.status === "Đã triệt tiêu").length;
+  const vocabCount = list.filter(l => l.vocabulary && l.vocabulary.trim()).length;
+
+  if (DOM.countChipAll) DOM.countChipAll.textContent = total;
+  if (DOM.countChipPending) DOM.countChipPending.textContent = pending;
+  if (DOM.countChipTracking) DOM.countChipTracking.textContent = tracking;
+  if (DOM.countChipResolved) DOM.countChipResolved.textContent = resolved;
+  if (DOM.badgeNotebookCount) {
+    DOM.badgeNotebookCount.textContent = `${total} ghi chép • ${vocabCount} từ mới`;
+  }
+
   DOM.errorLogList.innerHTML = "";
 
-  const filtered = list.filter(l => (statusFilter === "all" || l.status === statusFilter));
+  const qLower = (App.notebookSearchQuery || "").toLowerCase();
+  const filtered = list.filter(item => {
+    const matchStatus = (App.notebookFilterStatus === "all" || item.status === App.notebookFilterStatus);
+    if (!matchStatus) return false;
+    if (!qLower) return true;
+    const searchTarget = [
+      item.q_label,
+      item.question_id,
+      item.module,
+      item.skill,
+      item.root_cause,
+      item.trap_detail,
+      item.student_notes,
+      item.vocabulary
+    ].filter(Boolean).join(" ").toLowerCase();
+    return searchTarget.includes(qLower);
+  });
+
   if (filtered.length === 0) {
-    DOM.errorLogList.innerHTML = `<div style="text-align: center; padding: 30px; color: var(--bb-text-muted);">Chưa có ghi chép lỗi sai nào trong bộ lọc này.</div>`;
+    DOM.errorLogList.innerHTML = `
+      <div style="text-align: center; padding: 36px 16px; color: #5f6368;">
+        <div style="font-size: 32px; margin-bottom: 8px;">📭</div>
+        <div style="font-weight: 600; font-size: 14px; color: #202124;">Không tìm thấy ghi chép nào</div>
+        <div style="font-size: 12.5px; margin-top: 4px;">
+          ${qLower ? `Không có kết quả khớp với từ khóa "${escapeHtml(qLower)}".` : `Em chưa có ghi chép lỗi sai hoặc từ vựng nào trong mục này.`}
+        </div>
+      </div>
+    `;
     return;
   }
 
   filtered.forEach(item => {
+    if (App.editingLogId === item.id) {
+      // INLINE EDIT FORM (Google Material 3)
+      const editCard = document.createElement("div");
+      editCard.className = "g-inline-edit";
+      editCard.innerHTML = `
+        <div style="font-size: 13px; font-weight: 700; color: #1a73e8; margin-bottom: 10px;">
+          ✏️ Đang chỉnh sửa: ${escapeHtml(item.module || "SAT")} • Câu ${escapeHtml(item.q_label || item.question_id || "")}
+        </div>
+        <div class="inline-edit-grid">
+          <div>
+            <label>Tình trạng xử lý:</label>
+            <select class="g-select edit-status">
+              <option value="Chưa xử lý" ${item.status === "Chưa xử lý" ? "selected" : ""}>⏳ Chưa xử lý</option>
+              <option value="Đang theo dõi" ${item.status === "Đang theo dõi" ? "selected" : ""}>🔄 Đang theo dõi</option>
+              <option value="Đã triệt tiêu" ${item.status === "Đã triệt tiêu" ? "selected" : ""}>✅ Đã triệt tiêu</option>
+            </select>
+          </div>
+          <div>
+            <label>Nhóm bẫy SAT:</label>
+            <select class="g-select edit-trap">
+              <option value="Bẫy từ vựng & Nghĩa trong ngữ cảnh (Context Clues)" ${item.root_cause?.includes("từ vựng") ? "selected" : ""}>📖 Bẫy từ vựng & Nghĩa trong ngữ cảnh (Context Clues)</option>
+              <option value="Bẫy đảo cực & Từ tuyệt đối (Extreme Words: always, never, only...)" ${item.root_cause?.includes("đảo cực") ? "selected" : ""}>⚠️ Bẫy đảo cực & Từ tuyệt đối (Extreme Words: always, never, only...)</option>
+              <option value="Bẫy tương phản giả & Cụm nối (However, Although, But...)" ${item.root_cause?.includes("tương phản") ? "selected" : ""}>⚡ Bẫy tương phản giả & Cụm nối (However, Although, But...)</option>
+              <option value="Bẫy suy diễn quá xa / Lạc đề (Out of Scope / Assumption)" ${item.root_cause?.includes("suy diễn") ? "selected" : ""}>🔍 Bẫy suy diễn quá xa / Lạc đề (Out of Scope / Assumption)</option>
+              <option value="Bẫy đọc lướt sót từ khóa quan trọng (Careless Reading)" ${item.root_cause?.includes("đọc lướt") ? "selected" : ""}>👀 Bẫy đọc lướt sót từ khóa quan trọng (Careless Reading)</option>
+              <option value="Bẫy đại số / Đổi dấu / Chuyển vế nhầm (Algebra / Sign Trap)" ${item.root_cause?.includes("đại số") ? "selected" : ""}>🧮 Bẫy đại số / Đổi dấu / Chuyển vế nhầm (Algebra / Sign Trap)</option>
+              <option value="Bẫy đọc nhầm câu hỏi (Đề hỏi y nhưng giải ra x)" ${item.root_cause?.includes("nhầm câu hỏi") ? "selected" : ""}>🎯 Bẫy đọc nhầm câu hỏi (Đề hỏi y nhưng giải ra x)</option>
+              <option value="Bẫy làm tròn số / Phân số / Đơn vị đo (Fractions / Units)" ${item.root_cause?.includes("làm tròn") ? "selected" : ""}>📏 Bẫy làm tròn số / Phân số / Đơn vị đo (Fractions / Units)</option>
+              <option value="Chưa nắm chắc công thức / lý thuyết cốt lõi" ${item.root_cause?.includes("công thức") ? "selected" : ""}>📚 Chưa nắm chắc công thức / lý thuyết cốt lõi</option>
+              <option value="Khác" ${item.root_cause === "Khác" ? "selected" : ""}>💡 Bẫy khác...</option>
+            </select>
+          </div>
+          <div class="full-width">
+            <label>Phân tích nguyên nhân sai & Bài học rút ra:</label>
+            <textarea class="g-textarea edit-detail" rows="2">${escapeHtml(item.trap_detail || "")}</textarea>
+          </div>
+          <div class="full-width">
+            <label>📝 Ghi chú tư duy cá nhân (Mẹo nhớ nhanh):</label>
+            <textarea class="g-textarea edit-notes" rows="2" placeholder="Ví dụ: Quy tắc gạch chân từ khóa, cách giải nhanh...">${escapeHtml(item.student_notes || "")}</textarea>
+          </div>
+          <div class="full-width">
+            <label>📖 Từ mới & Thuật ngữ tiếng Anh:</label>
+            <textarea class="g-textarea edit-vocab" rows="2" placeholder="Ví dụ: repudiate = bác bỏ; ephemeral = ngắn ngủi...">${escapeHtml(item.vocabulary || "")}</textarea>
+          </div>
+        </div>
+        <div class="inline-edit-actions">
+          <button class="btn-subtle btn-cancel-edit">✕ Hủy</button>
+          <button class="btn-primary-g btn-save-edit">💾 Lưu thay đổi</button>
+        </div>
+      `;
+
+      editCard.querySelector(".btn-cancel-edit").addEventListener("click", () => {
+        App.editingLogId = null;
+        renderErrorLogs();
+      });
+
+      editCard.querySelector(".btn-save-edit").addEventListener("click", () => {
+        const newDetail = editCard.querySelector(".edit-detail").value.trim();
+        if (!newDetail) {
+          alert("Vui lòng không để trống phần phân tích lỗi sai!");
+          return;
+        }
+        item.status = editCard.querySelector(".edit-status").value;
+        item.root_cause = editCard.querySelector(".edit-trap").value;
+        item.trap_detail = newDetail;
+        item.student_notes = editCard.querySelector(".edit-notes").value.trim();
+        item.vocabulary = editCard.querySelector(".edit-vocab").value.trim();
+
+        saveLocalState();
+        App.editingLogId = null;
+        updateErrorBadge();
+        renderErrorLogs();
+      });
+
+      DOM.errorLogList.appendChild(editCard);
+      return;
+    }
+
+    // READ CARD (Material 3 Minimalist)
     const card = document.createElement("div");
-    card.style.cssText = "background: var(--bb-bg-surface); border: 1px solid var(--bb-border); border-radius: 8px; padding: 14px; margin-bottom: 12px;";
+    card.className = "g-notebook-card";
+
+    let statusClass = "status-tracking";
+    let statusText = "🔄 Đang theo dõi";
+    if (item.status === "Chưa xử lý") {
+      statusClass = "status-pending";
+      statusText = "⏳ Chưa xử lý";
+    } else if (item.status === "Đã triệt tiêu") {
+      statusClass = "status-resolved";
+      statusText = "✅ Đã triệt tiêu";
+    }
+
+    const notesHtml = item.student_notes ? `
+      <div class="card-notes-box">
+        <strong>📝 Ghi chú tư duy:</strong> ${escapeHtml(item.student_notes)}
+      </div>
+    ` : "";
+
+    const vocabHtml = item.vocabulary ? `
+      <div class="card-vocab-box">
+        <strong>📖 Từ mới / Thuật ngữ:</strong>
+        ${formatVocabHtml(item.vocabulary)}
+      </div>
+    ` : "";
+
+    const quickToggleBtn = (item.status === "Đã triệt tiêu") ?
+      `<button class="btn-quick-toggle-status" title="Chuyển về trạng thái đang theo dõi">🔄 Đưa về theo dõi</button>` :
+      `<button class="btn-quick-toggle-status" title="Đánh dấu em đã nắm vững lỗi này">✅ Đã triệt tiêu lỗi</button>`;
+
     card.innerHTML = `
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-        <span style="font-weight: 700; color: #0284c7; font-size: 13px;">${item.module || "SAT"} • ${item.skill}</span>
-        <div>
-          <span style="font-size: 11px; font-weight: 700; padding: 2px 6px; border-radius: 4px; background: #fef3c7; color: #b45309;">${item.status}</span>
-          <button class="btn-sm btn-del-err" style="margin-left: 8px; color: #dc2626; cursor: pointer;">✕</button>
+      <div class="card-top-row">
+        <div class="card-top-left">
+          <span class="card-q-tag">📘 ${escapeHtml(item.module || "SAT")} • Câu ${escapeHtml(item.q_label || item.question_id || "")}</span>
+          <span class="card-status-badge ${statusClass}">${statusText}</span>
+        </div>
+        <div class="card-top-right">
+          <button class="btn-card-action btn-edit-card" title="Chỉnh sửa ghi chép này">✏️ Sửa</button>
+          <button class="btn-card-action btn-del-card" title="Xóa ghi chép này">✕</button>
         </div>
       </div>
-      <div style="font-size: 13px; line-height: 1.5; margin-bottom: 6px;"><strong>🎯 Chi tiết bẫy:</strong> ${item.trap_detail}</div>
-      <div style="font-size: 13px; line-height: 1.5; color: var(--bb-text-secondary);"><strong>🧠 Phân tích Socratic:</strong> ${item.socratic_analysis}</div>
+
+      <div class="card-trap-content">
+        <span class="card-trap-tag">${escapeHtml(item.root_cause || "Bẫy SAT")}</span>
+        <span>${escapeHtml(item.trap_detail || "")}</span>
+      </div>
+
+      ${notesHtml}
+      ${vocabHtml}
+
+      <div class="card-footer">
+        <span>🕒 ${escapeHtml(item.date || "Ghi chép")} ${item.skill ? `• ${escapeHtml(item.skill)}` : ""}</span>
+        <div>${quickToggleBtn}</div>
+      </div>
     `;
 
-    card.querySelector(".btn-del-err").addEventListener("click", () => {
-      App.studentState.error_logs = App.studentState.error_logs.filter(x => x.id !== item.id);
-      saveLocalState();
-      updateErrorBadge();
+    // Edit button
+    card.querySelector(".btn-edit-card").addEventListener("click", () => {
+      App.editingLogId = item.id;
       renderErrorLogs();
     });
+
+    // Delete button
+    card.querySelector(".btn-del-card").addEventListener("click", () => {
+      if (confirm(`Em có chắc chắn muốn xóa ghi chép lỗi câu ${item.q_label || item.question_id} này không?`)) {
+        App.studentState.error_logs = App.studentState.error_logs.filter(x => x.id !== item.id);
+        saveLocalState();
+        updateErrorBadge();
+        renderErrorLogs();
+      }
+    });
+
+    // Quick status toggle
+    const toggleBtn = card.querySelector(".btn-quick-toggle-status");
+    if (toggleBtn) {
+      toggleBtn.addEventListener("click", () => {
+        item.status = (item.status === "Đã triệt tiêu") ? "Đang theo dõi" : "Đã triệt tiêu";
+        saveLocalState();
+        updateErrorBadge();
+        renderErrorLogs();
+      });
+    }
 
     DOM.errorLogList.appendChild(card);
   });
@@ -1281,6 +1475,8 @@ function openMandatoryReflectionModal(q, qState) {
 
   DOM.selectReflTrap.value = "";
   DOM.inputReflDetail.value = "";
+  if (DOM.inputReflNotes) DOM.inputReflNotes.value = "";
+  if (DOM.inputReflVocab) DOM.inputReflVocab.value = "";
 
   DOM.modalMandatoryReflection.classList.remove("hidden");
 }
@@ -1293,6 +1489,8 @@ function saveMandatoryReflection() {
 
   const trap = DOM.selectReflTrap.value;
   const detail = DOM.inputReflDetail.value.trim();
+  const notes = DOM.inputReflNotes ? DOM.inputReflNotes.value.trim() : "";
+  const vocab = DOM.inputReflVocab ? DOM.inputReflVocab.value.trim() : "";
 
   if (!trap) {
     alert("Vui lòng chọn nhóm bẫy SAT em đã mắc phải!");
@@ -1317,12 +1515,14 @@ function saveMandatoryReflection() {
     correct_answer: q.correct_answer,
     root_cause: trap,
     trap_detail: detail,
+    student_notes: notes,
+    vocabulary: vocab,
     socratic_analysis: q.level1_tip || "",
     status: "Đang theo dõi"
   };
 
   if (!App.studentState.error_logs) App.studentState.error_logs = [];
-  App.studentState.error_logs.push(newLog);
+  App.studentState.error_logs.unshift(newLog);
 
   qState.error_logged = true;
   qState.needs_error_log = false;
@@ -1401,23 +1601,26 @@ function generateClientExcelBlob(studentName, summary) {
     const wsDetail = XLSX.utils.aoa_to_sheet(detailRows);
     XLSX.utils.book_append_sheet(wb, wsDetail, "Chi_Tiet_Bai_Lam");
 
-    // 3. Sheet: Sổ Lỗi Sai
+    // 3. Sheet: Sổ Lỗi Sai & Từ Vựng
     const errRows = [
-      ["STT", "Mã câu", "Module", "Chủ đề lỗi", "Lỗi sai gặp phải (Bẫy SAT)", "Bài học rút ra", "Thời gian"]
+      ["STT", "Mã câu", "Module", "Chủ đề / Kỹ năng", "Nhóm bẫy SAT", "Phân tích nguyên nhân & Bài học", "Ghi chú tư duy", "Từ mới / Thuật ngữ", "Tình trạng", "Thời gian"]
     ];
     (App.studentState.error_logs || []).forEach((e, idx) => {
       errRows.push([
         idx + 1,
-        e.q_label || `Câu ${e.q_id}`,
-        e.module_code || "",
-        e.topic || "",
-        e.trap || "",
-        e.takeaway || "",
-        e.timestamp ? new Date(e.timestamp).toLocaleString("vi-VN") : ""
+        e.q_label || `Câu ${e.question_id || e.q_id || idx + 1}`,
+        e.module || e.module_code || "",
+        e.skill || e.topic || "",
+        e.root_cause || e.trap || "",
+        e.trap_detail || e.takeaway || "",
+        e.student_notes || "",
+        e.vocabulary || "",
+        e.status || "Chưa xử lý",
+        e.date || (e.timestamp ? new Date(e.timestamp).toLocaleString("vi-VN") : "")
       ]);
     });
     const wsErrors = XLSX.utils.aoa_to_sheet(errRows);
-    XLSX.utils.book_append_sheet(wb, wsErrors, "So_Tay_Loi_Sai");
+    XLSX.utils.book_append_sheet(wb, wsErrors, "So_Tay_Loi_Sai_Tu_Vung");
 
     const wbout = XLSX.write(wb, { bookType: "xlsx", type: "array" });
     return new Blob([wbout], { type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" });
@@ -1672,12 +1875,6 @@ function initSplitResizer() {
   });
 }
 
-function initTheme() {
-  DOM.btnThemeToggle.addEventListener("click", () => {
-    document.body.classList.toggle("theme-slate");
-  });
-}
-
 // ================= EVENT LISTENERS =================
 function setupEventListeners() {
   // Module Change
@@ -1811,6 +2008,8 @@ function setupEventListeners() {
 
   DOM.btnOpenErrorLog.addEventListener("click", () => {
     pauseTimer();
+    App.editingLogId = null;
+    if (DOM.notebookAddPanel) DOM.notebookAddPanel.classList.add("hidden");
     renderErrorLogs();
     DOM.modalErrorLog.classList.remove("hidden");
   });
@@ -1819,27 +2018,102 @@ function setupEventListeners() {
     syncTimerState();
   });
 
-  DOM.btnAddNewError.addEventListener("click", () => {
-    const q = App.currentQuestion;
-    if (!q) return;
-    const desc = prompt("Mô tả bẫy hoặc lỗi sai em vừa gặp:", `Câu ${q.q_label} (${q.topic})`);
-    if (desc) {
-      App.studentState.error_logs.push({
-        id: `err_${Date.now()}`,
-        module: q.module_title,
-        skill: q.topic,
-        root_cause: "Bẫy SAT Trap",
-        trap_detail: desc,
-        socratic_analysis: q.level1_tip || "Đọc kỹ đề bài.",
-        status: "Chưa xử lý"
-      });
+  // Notebook Add Entry Panel
+  if (DOM.btnAddNewError) {
+    DOM.btnAddNewError.addEventListener("click", () => {
+      if (!DOM.notebookAddPanel) return;
+      const isHidden = DOM.notebookAddPanel.classList.contains("hidden");
+      if (isHidden) {
+        DOM.notebookAddPanel.classList.remove("hidden");
+        const q = App.currentQuestion;
+        if (DOM.addPanelQBadge) {
+          DOM.addPanelQBadge.textContent = q ? `Câu ${q.q_label} (${q.topic})` : "Ghi chép tự do";
+        }
+        if (DOM.inputNewDetail) DOM.inputNewDetail.focus();
+      } else {
+        DOM.notebookAddPanel.classList.add("hidden");
+      }
+    });
+  }
+
+  if (DOM.btnCancelAddError) {
+    DOM.btnCancelAddError.addEventListener("click", () => {
+      if (DOM.notebookAddPanel) DOM.notebookAddPanel.classList.add("hidden");
+    });
+  }
+
+  if (DOM.btnSaveNewError) {
+    DOM.btnSaveNewError.addEventListener("click", () => {
+      const q = App.currentQuestion;
+      const detail = DOM.inputNewDetail ? DOM.inputNewDetail.value.trim() : "";
+      if (!detail) {
+        alert("Vui lòng nhập phân tích lỗi sai hoặc bài học rút ra!");
+        if (DOM.inputNewDetail) DOM.inputNewDetail.focus();
+        return;
+      }
+      const newEntry = {
+        id: `err_man_${Date.now()}`,
+        question_id: q ? q.id : "custom",
+        q_label: q ? q.q_label : "Ghi chép",
+        module: q ? q.module_title : "SAT",
+        skill: q ? q.topic : "Luyện thi",
+        date: new Date().toLocaleDateString("vi-VN"),
+        wrong_attempts: [],
+        correct_answer: q ? q.correct_answer : "",
+        root_cause: DOM.selectNewTrap ? DOM.selectNewTrap.value : "Bẫy SAT Trap",
+        trap_detail: detail,
+        student_notes: DOM.inputNewNotes ? DOM.inputNewNotes.value.trim() : "",
+        vocabulary: DOM.inputNewVocab ? DOM.inputNewVocab.value.trim() : "",
+        socratic_analysis: q ? (q.level1_tip || "") : "",
+        status: DOM.selectNewStatus ? DOM.selectNewStatus.value : "Đang theo dõi"
+      };
+
+      if (!App.studentState.error_logs) App.studentState.error_logs = [];
+      App.studentState.error_logs.unshift(newEntry);
+
+      // Clear add form
+      if (DOM.inputNewDetail) DOM.inputNewDetail.value = "";
+      if (DOM.inputNewNotes) DOM.inputNewNotes.value = "";
+      if (DOM.inputNewVocab) DOM.inputNewVocab.value = "";
+      if (DOM.notebookAddPanel) DOM.notebookAddPanel.classList.add("hidden");
+
       saveLocalState();
       updateErrorBadge();
       renderErrorLogs();
-    }
-  });
+    });
+  }
 
-  DOM.selectFilterErrStatus.addEventListener("change", renderErrorLogs);
+  // Notebook Search Input
+  if (DOM.inputFilterErrSearch) {
+    DOM.inputFilterErrSearch.addEventListener("input", (e) => {
+      App.notebookSearchQuery = e.target.value.trim();
+      if (DOM.btnClearErrSearch) {
+        DOM.btnClearErrSearch.classList.toggle("hidden", !App.notebookSearchQuery);
+      }
+      renderErrorLogs();
+    });
+  }
+
+  if (DOM.btnClearErrSearch) {
+    DOM.btnClearErrSearch.addEventListener("click", () => {
+      if (DOM.inputFilterErrSearch) DOM.inputFilterErrSearch.value = "";
+      App.notebookSearchQuery = "";
+      DOM.btnClearErrSearch.classList.add("hidden");
+      renderErrorLogs();
+    });
+  }
+
+  // Notebook Filter Chips
+  if (DOM.notebookFilterChips) {
+    DOM.notebookFilterChips.querySelectorAll(".filter-chip").forEach(chip => {
+      chip.addEventListener("click", () => {
+        DOM.notebookFilterChips.querySelectorAll(".filter-chip").forEach(c => c.classList.remove("active"));
+        chip.classList.add("active");
+        App.notebookFilterStatus = chip.dataset.status || "all";
+        renderErrorLogs();
+      });
+    });
+  }
 
   DOM.btnOpenStrategies.addEventListener("click", () => {
     pauseTimer();
@@ -1890,22 +2164,12 @@ function setupEventListeners() {
     DOM.btnSaveMandatoryReflection.addEventListener("click", saveMandatoryReflection);
   }
 
-  // PDF Mode Switcher
-  DOM.btnModeDrive.addEventListener("click", () => setPdfViewerMode("drive"));
-  DOM.btnModeLocal.addEventListener("click", () => setPdfViewerMode("local"));
-
-  // PDF Controls
-  if (DOM.btnPdfPrev) DOM.btnPdfPrev.addEventListener("click", () => navigatePdf(parseInt(DOM.inputPdfPage.value) - 1));
-  if (DOM.btnPdfNext) DOM.btnPdfNext.addEventListener("click", () => navigatePdf(parseInt(DOM.inputPdfPage.value) + 1));
-  if (DOM.inputPdfPage) DOM.inputPdfPage.addEventListener("change", (e) => navigatePdf(e.target.value));
-
-  DOM.btnPdfExternal.addEventListener("click", () => {
-    if (App.pdfViewerMode === "local") {
-      window.open(`/pdf#page=${DOM.inputPdfPage.value}`, '_blank');
-    } else {
+  // PDF External Drive Opener
+  if (DOM.btnPdfExternal) {
+    DOM.btnPdfExternal.addEventListener("click", () => {
       window.open(DRIVE_VIEW_URL, '_blank');
-    }
-  });
+    });
+  }
 
   // Excerpt Accordion
   DOM.excerptHeader.addEventListener("click", () => {

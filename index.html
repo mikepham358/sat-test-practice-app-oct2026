@@ -305,14 +305,13 @@
         <span class="badge-name" id="header-student-name">Học sinh</span>
         <button class="btn-edit-student" id="btn-edit-student" title="Sửa tên / email">✏️</button>
       </div>
-      <button class="btn-icon-mode" id="btn-theme-toggle" title="Đổi giao diện">🌓</button>
     </div>
   </header>
 
   <!-- ================= MAIN WORKSPACE (SPLIT SCREEN) ================= -->
   <main class="split-container" id="split-container">
     
-    <!-- LEFT PANE: Synchronized Test PDF Viewer (Google Drive & Local Dual Mode) -->
+    <!-- LEFT PANE: Synchronized Test PDF Viewer (Google Drive Official) -->
     <section class="pane pane-pdf" id="pane-pdf">
       <div class="pdf-toolbar">
         <div class="pdf-toolbar-left">
@@ -322,24 +321,14 @@
           </div>
         </div>
         <div class="pdf-toolbar-center">
-          <div class="pdf-viewer-mode-switch">
-            <button class="btn-mode-toggle active" id="btn-mode-drive" title="Google Drive Viewer (Hiển thị mượt mà trên iPad, iPhone, Android, Laptop)">☁️ Google Drive</button>
-            <button class="btn-mode-toggle" id="btn-mode-local" title="Trình đọc PDF nội bộ (Tự động nhảy trang trên Laptop / PC)">💻 PDF Nội bộ</button>
-          </div>
-          <!-- Local PDF controls (visible when in local mode) -->
-          <div class="local-pdf-controls hidden" id="local-pdf-controls">
-            <button class="btn-icon-sub" id="btn-pdf-prev" title="Trang trước">◀</button>
-            <div class="page-indicator">
-              <span>Trang</span>
-              <input type="number" id="input-pdf-page" min="1" max="44" value="3">
-              <span>/ 44</span>
-            </div>
-            <button class="btn-icon-sub" id="btn-pdf-next" title="Trang sau">▶</button>
+          <div class="pdf-drive-indicator" title="Trình xem đề thi Google Drive chính thức">
+            <span class="drive-pulse-dot"></span>
+            <span>Google Drive PDF Viewer</span>
           </div>
         </div>
         <div class="pdf-toolbar-right">
           <button class="btn-icon-sub btn-external-drive" id="btn-pdf-external" title="Mở file đề Google Drive trong tab mới (Rất tiện chia đôi màn hình trên iPad)">
-            ↗️ Mở Drive
+            ↗️ Mở Drive tab mới
           </button>
         </div>
       </div>
@@ -608,23 +597,93 @@
     </div>
   </div>
 
-  <!-- ================= MODAL: SOCRATIC ERROR LOG ================= -->
+  <!-- ================= MODAL: SOCRATIC ERROR & VOCABULARY NOTEBOOK ================= -->
   <div class="modal-overlay hidden" id="modal-error-log">
     <div class="modal-card error-modal-card">
-      <div class="modal-card-header">
-        <h3>🎯 Sổ tay Lỗi sai Socratic (Lưu trên máy của em)</h3>
-        <button class="btn-close-modal" id="btn-close-error-log">✕</button>
-      </div>
-      <div class="modal-card-body">
-        <div class="error-log-toolbar">
-          <select id="select-filter-err-status">
-            <option value="all">Tất cả tình trạng</option>
-            <option value="Chưa xử lý">⏳ Chưa xử lý</option>
-            <option value="Đang theo dõi">🔄 Đang theo dõi</option>
-            <option value="Đã triệt tiêu">✅ Đã triệt tiêu</option>
-          </select>
-          <button class="btn-pill" id="btn-add-new-error">➕ Ghi chép lỗi câu hiện tại</button>
+      <div class="modal-card-header g-ux-modal-header">
+        <div class="header-title-group">
+          <div class="header-main-title">
+            <span class="header-icon">📓</span>
+            <h3>Sổ tay Lỗi sai & Từ vựng Socratic</h3>
+            <span class="live-count-badge" id="badge-notebook-count">0 ghi chép</span>
+          </div>
+          <p class="header-sub-desc">Ghi chép bẫy đề thi, ghi chú tư duy & từ mới tiếng Anh — Tự động lưu trên thiết bị của em</p>
         </div>
+        <button class="btn-close-modal" id="btn-close-error-log" title="Đóng">✕</button>
+      </div>
+
+      <div class="modal-card-body">
+        <!-- Google UX Minimalist Toolbar -->
+        <div class="notebook-toolbar">
+          <div class="g-search-wrapper">
+            <span class="g-search-icon">🔍</span>
+            <input type="text" id="input-filter-err-search" class="g-search-input" placeholder="Tìm theo câu hỏi, từ mới, bẫy SAT, ghi chú...">
+            <button class="btn-clear-search hidden" id="btn-clear-err-search" title="Xóa tìm kiếm">✕</button>
+          </div>
+          <button class="btn-pill btn-pill-primary" id="btn-add-new-error" title="Thêm ghi chép hoặc từ mới cho câu hiện tại">
+            <span class="icon">➕</span>
+            <span>Thêm ghi chép / Từ mới</span>
+          </button>
+        </div>
+
+        <!-- Filter Chips (Google Material 3) -->
+        <div class="notebook-filter-chips" id="notebook-filter-chips">
+          <button class="filter-chip active" data-status="all">Tất cả (<span id="count-chip-all">0</span>)</button>
+          <button class="filter-chip chip-pending" data-status="Chưa xử lý">⏳ Chưa xử lý (<span id="count-chip-pending">0</span>)</button>
+          <button class="filter-chip chip-tracking" data-status="Đang theo dõi">🔄 Đang theo dõi (<span id="count-chip-tracking">0</span>)</button>
+          <button class="filter-chip chip-resolved" data-status="Đã triệt tiêu">✅ Đã triệt tiêu (<span id="count-chip-resolved">0</span>)</button>
+        </div>
+
+        <!-- Inline Add New Entry Panel (Collapsible) -->
+        <div class="notebook-add-panel hidden" id="notebook-add-panel">
+          <div class="add-panel-header">
+            <h4>➕ Ghi chép mới</h4>
+            <span class="current-q-pill" id="add-panel-q-badge">Câu hiện tại</span>
+          </div>
+          <div class="add-panel-grid">
+            <div class="form-group">
+              <label for="select-new-trap">1. Nhóm bẫy SAT <span class="req">*</span></label>
+              <select id="select-new-trap" class="g-select">
+                <option value="Bẫy từ vựng & Nghĩa trong ngữ cảnh (Context Clues)">📖 Bẫy từ vựng & Nghĩa trong ngữ cảnh (Context Clues)</option>
+                <option value="Bẫy đảo cực & Từ tuyệt đối (Extreme Words: always, never, only...)">⚠️ Bẫy đảo cực & Từ tuyệt đối (Extreme Words: always, never, only...)</option>
+                <option value="Bẫy tương phản giả & Cụm nối (However, Although, But...)">⚡ Bẫy tương phản giả & Cụm nối (However, Although, But...)</option>
+                <option value="Bẫy suy diễn quá xa / Lạc đề (Out of Scope / Assumption)">🔍 Bẫy suy diễn quá xa / Lạc đề (Out of Scope / Assumption)</option>
+                <option value="Bẫy đọc lướt sót từ khóa quan trọng (Careless Reading)">👀 Bẫy đọc lướt sót từ khóa quan trọng (Careless Reading)</option>
+                <option value="Bẫy đại số / Đổi dấu / Chuyển vế nhầm (Algebra / Sign Trap)">🧮 Bẫy đại số / Đổi dấu / Chuyển vế nhầm (Algebra / Sign Trap)</option>
+                <option value="Bẫy đọc nhầm câu hỏi (Đề hỏi y nhưng giải ra x)">🎯 Bẫy đọc nhầm câu hỏi (Đề hỏi y nhưng giải ra x)</option>
+                <option value="Bẫy làm tròn số / Phân số / Đơn vị đo (Fractions / Units)">📏 Bẫy làm tròn số / Phân số / Đơn vị đo (Fractions / Units)</option>
+                <option value="Chưa nắm chắc công thức / lý thuyết cốt lõi">📚 Chưa nắm chắc công thức / lý thuyết cốt lõi</option>
+                <option value="Khác">💡 Bẫy khác...</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="select-new-status">2. Tình trạng ban đầu</label>
+              <select id="select-new-status" class="g-select">
+                <option value="Chưa xử lý">⏳ Chưa xử lý</option>
+                <option value="Đang theo dõi" selected>🔄 Đang theo dõi</option>
+                <option value="Đã triệt tiêu">✅ Đã triệt tiêu</option>
+              </select>
+            </div>
+            <div class="form-group full-width">
+              <label for="input-new-detail">3. Phân tích nguyên nhân sai & Bài học rút ra <span class="req">*</span></label>
+              <textarea id="input-new-detail" class="g-textarea" rows="2" placeholder="Tại sao em chọn nhầm? Điểm cốt lõi cần nhớ cho lần sau..."></textarea>
+            </div>
+            <div class="form-group full-width">
+              <label for="input-new-notes">4. 📝 Ghi chú tư duy cá nhân (Mẹo nhớ nhanh - Không bắt buộc)</label>
+              <textarea id="input-new-notes" class="g-textarea" rows="2" placeholder="Ví dụ: Công thức tính nhanh, mẹo loại trừ phương án C, chú ý liên từ đối lập..."></textarea>
+            </div>
+            <div class="form-group full-width">
+              <label for="input-new-vocab">5. 📖 Từ mới / Thuật ngữ tiếng Anh (Không bắt buộc)</label>
+              <textarea id="input-new-vocab" class="g-textarea" rows="2" placeholder="Ví dụ: ubiquitous (adj) = phổ biến; refute (v) = bác bỏ; conjecture (n) = phỏng đoán..."></textarea>
+            </div>
+          </div>
+          <div class="add-panel-actions">
+            <button class="btn-sm btn-subtle" id="btn-cancel-add-error">✕ Hủy</button>
+            <button class="btn-sm btn-primary-g" id="btn-save-new-error">💾 Lưu vào sổ</button>
+          </div>
+        </div>
+
+        <!-- Notebook Items List -->
         <div class="error-log-list" id="error-log-list">
           <!-- Dynamically populated from localStorage -->
         </div>
@@ -677,6 +736,16 @@
           <div class="form-group">
             <label for="input-refl-detail">2. Phân tích nguyên nhân sai & Bài học rút ra <span class="req">*</span></label>
             <textarea id="input-refl-detail" rows="3" placeholder="Tại sao em lại chọn nhầm? Em đã nhìn nhận sót chỗ nào và lần sau gặp dạng bài này em sẽ chú ý điều gì? (Tối thiểu 5 ký tự)" required minlength="5"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="input-refl-notes">3. 📝 Ghi chú tư duy cá nhân (Mẹo nhớ nhanh - Không bắt buộc)</label>
+            <textarea id="input-refl-notes" rows="2" placeholder="Ví dụ: Quy tắc gạch chân từ khóa, chú ý liên từ đảo chiều, mẹo nhẩm nhanh..."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="input-refl-vocab">4. 📖 Từ mới / Thuật ngữ tiếng Anh (Không bắt buộc)</label>
+            <textarea id="input-refl-vocab" rows="2" placeholder="Ví dụ: repudiate (v) = bác bỏ; ephemeral (adj) = ngắn ngủi; substantiate (v) = chứng minh..."></textarea>
           </div>
 
           <div class="reflection-actions">
