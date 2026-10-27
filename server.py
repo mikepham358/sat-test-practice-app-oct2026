@@ -7,6 +7,8 @@ from http.server import HTTPServer, BaseHTTPRequestHandler
 import datetime
 import shutil
 import smtplib
+import subprocess
+import threading
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email.mime.application import MIMEApplication
@@ -15,6 +17,9 @@ APP_DIR = os.path.dirname(os.path.abspath(__file__))
 STATIC_DIR = os.path.join(APP_DIR, "static")
 DATABASE_FILE = os.path.join(APP_DIR, "database.json")
 CONFIG_FILE = os.path.join(APP_DIR, "email_config.json")
+FEEDBACK_FILE = os.path.join(APP_DIR, "feedback.json")
+STATIC_FEEDBACK_FILE = os.path.join(STATIC_DIR, "feedback.json")
+FEEDBACK_LOG_MD = os.path.join(APP_DIR, "FEEDBACK_LOG.md")
 SUBMISSIONS_DIR = os.path.join(APP_DIR, "submissions")
 os.makedirs(SUBMISSIONS_DIR, exist_ok=True)
 
@@ -41,6 +46,110 @@ def load_email_config():
         "smtp_user": "mikepham358@gmail.com",
         "smtp_pass": ""
     }
+
+def load_feedbacks():
+    if os.path.exists(FEEDBACK_FILE):
+        try:
+            with open(FEEDBACK_FILE, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except Exception:
+            return []
+    return []
+
+def save_feedbacks_and_update_log(feedbacks):
+    # 1. Save JSON
+    with open(FEEDBACK_FILE, "w", encoding="utf-8") as f:
+        json.dump(feedbacks, f, ensure_ascii=False, indent=2)
+    try:
+        with open(STATIC_FEEDBACK_FILE, "w", encoding="utf-8") as f:
+            json.dump(feedbacks, f, ensure_ascii=False, indent=2)
+    except Exception:
+        pass
+
+    # 2. Update FEEDBACK_LOG.md
+    total = len(feedbacks)
+    cat_err = 0
+    cat_feat = 0
+    cat_tech = 0
+    cat_other = 0
+    for x in feedbacks:
+        c_low = x.get("category", "").lower()
+        if "lỗi" in c_low or "đáp án" in c_low:
+            cat_err += 1
+        elif "tính năng" in c_low or "đề xuất" in c_low:
+            cat_feat += 1
+        elif "kỹ thuật" in c_low or "giao diện" in c_low or "desmos" in c_low:
+            cat_tech += 1
+        else:
+            cat_other += 1
+    
+    resolved = sum(1 for x in feedbacks if "đã" in x.get("status", "").lower() or "triệt tiêu" in x.get("status", "").lower() or "giải quyết" in x.get("status", "").lower())
+    pending = total - resolved
+    now_str = datetime.datetime.now().strftime("%d/%m/%Y %H:%M:%S")
+
+    md = f"""# 📋 Nhật Ký Phản Hồi & Đóng Góp Ý Kiến (Feedback Logbook)
+
+> **Dự án:** Digital SAT Practice Based on Learning Science — Vinschool SAT Team  
+> **Giáo viên phụ trách:** Mike Pham Bá Hong Son (Google for Education Innovator) — `mikepham358@gmail.com`  
+> **Trang làm bài trực tuyến:** [https://mikepham358.github.io/sat-test-practice-app-oct2026/](https://mikepham358.github.io/sat-test-practice-app-oct2026/)  
+> **Cập nhật tự động lần cuối:** `{now_str}`  
+> **Mô tả:** Mọi phản hồi từ học sinh và giáo viên gửi qua nút **`💬 Góp ý & Báo lỗi`** thông minh trên ứng dụng sẽ được tự động lưu trữ và đồng bộ tức thời lên kho mã nguồn GitHub này.
+
+---
+
+## 📊 Bảng Thống Kê Tổng Hợp (Summary Statistics)
+
+| Chỉ số | Số lượng | Mô tả chi tiết |
+| :--- | :---: | :--- |
+| **Tổng số phản hồi tiếp nhận** | **{total}** | Toàn bộ phản hồi ghi nhận từ giáo viên & học sinh |
+| 🎯 **Báo lỗi câu hỏi / Đáp án** | `{cat_err}` | Rà soát và đối chiếu trực tiếp với file gốc `KeyB.pdf` |
+| 💡 **Đề xuất tính năng mới** | `{cat_feat}` | Cải tiến phương pháp học tập theo khoa học nhận thức |
+| ⚡ **Lỗi giao diện / Kỹ thuật / Desmos** | `{cat_tech}` | Tối ưu trải nghiệm tương tác split-screen & kéo thả |
+| 📝 **Góp ý chung & Đánh giá** | `{cat_other}` | Nhận xét chung về đề thi và lớp học |
+| ✅ **Đã giải quyết / Đã khắc phục** | `{resolved}` | Đã kiểm tra, chỉnh sửa mã nguồn và đẩy lên GitHub |
+| ⏳ **Đang xử lý (Open)** | `{pending}` | Đang trong hàng đợi kiểm tra của giáo viên |
+
+---
+
+## 📝 Danh Sách Nhật Ký Phản Hồi Chi Tiết (Detailed Feedback Log)
+
+| STT | Mã Phản Hồi | Thời Gian | Người Gửi | Phân Loại | Vị Trí / Câu Hỏi | Mức Độ | Nội Dung Phản Hồi | Trạng Thái |
+| :---: | :---: | :---: | :--- | :---: | :---: | :---: | :--- | :---: |
+"""
+    for idx, item in enumerate(feedbacks, start=1):
+        fid = item.get("id", f"FB-{idx:03d}")
+        ts = item.get("date_str", item.get("timestamp", ""))
+        sender = item.get("student_name", "Ẩn danh")
+        email = item.get("student_email", "")
+        sender_display = f"{sender}<br><sub>{email}</sub>" if email else sender
+        cat = item.get("category", "Góp ý chung")
+        pos = item.get("context_label", item.get("question_label", "Hệ thống"))
+        prio = item.get("priority", "Bình thường")
+        content = item.get("content", "").replace("|", "\\|").replace("\n", "<br>")
+        st = item.get("status", "Đang xử lý (Open)")
+        md += f"| {idx} | `{fid}` | {ts} | {sender_display} | {cat} | {pos} | {prio} | {content} | {st} |\n"
+
+    md += "\n---\n*Nhật ký này được tạo và cập nhật tự động từ hệ thống Digital SAT Practice Engine.*\n"
+
+    with open(FEEDBACK_LOG_MD, "w", encoding="utf-8") as f:
+        f.write(md)
+
+def sync_feedback_to_github_async(fb_item):
+    def _worker():
+        try:
+            fid = fb_item.get("id", "FB")
+            sender = fb_item.get("student_name", "Student")
+            cat = fb_item.get("category", "Feedback")
+            msg = f"docs(feedback): log feedback {fid} from {sender} [{cat}]"
+            subprocess.run(["git", "add", "FEEDBACK_LOG.md", "feedback.json", "static/feedback.json"], cwd=APP_DIR, check=True)
+            subprocess.run(["git", "commit", "-m", msg], cwd=APP_DIR, check=True)
+            subprocess.run(["git", "push", "origin", "main"], cwd=APP_DIR, check=True)
+            print(f"✅ [GitHub Sync] Feedback {fid} pushed to GitHub repository successfully!")
+        except Exception as e:
+            print(f"⚠️ [GitHub Sync Warning] Could not push feedback to GitHub: {e}")
+
+    t = threading.Thread(target=_worker, daemon=True)
+    t.start()
 
 def generate_student_excel(payload):
     import openpyxl
@@ -345,6 +454,10 @@ class BluebookAppHandler(BaseHTTPRequestHandler):
                 self.send_json(DB)
             return
 
+        if path == "/api/feedbacks":
+            self.send_json(load_feedbacks())
+            return
+
         if path.startswith("/api/download-submission"):
             parsed_qs = urllib.parse.parse_qs(parsed_url.query)
             filename = parsed_qs.get("file", [""])[0]
@@ -386,7 +499,47 @@ class BluebookAppHandler(BaseHTTPRequestHandler):
             self.handle_submit_test(payload)
             return
 
+        if path == "/api/feedback":
+            self.handle_add_feedback(payload)
+            return
+
         self.send_error(404, "Endpoint not found")
+
+    def handle_add_feedback(self, payload):
+        try:
+            feedbacks = load_feedbacks()
+            now = datetime.datetime.now()
+            fb_id = f"FB-{now.strftime('%Y%m%d')}-{len(feedbacks)+1:03d}"
+            
+            fb_item = {
+                "id": fb_id,
+                "timestamp": now.isoformat(),
+                "date_str": now.strftime("%d/%m/%Y %H:%M"),
+                "student_name": payload.get("student_name", "Ẩn danh").strip() or "Ẩn danh",
+                "student_email": payload.get("student_email", "").strip(),
+                "category": payload.get("category", "📝 Góp ý chung").strip(),
+                "priority": payload.get("priority", "🟢 Bình thường").strip(),
+                "context_label": payload.get("context_label", "Hệ thống").strip(),
+                "content": payload.get("content", "").strip(),
+                "status": "⏳ Đang xử lý (Open)"
+            }
+
+            if not fb_item["content"]:
+                self.send_json({"success": False, "error": "Nội dung phản hồi không được để trống."}, 400)
+                return
+
+            feedbacks.append(fb_item)
+            save_feedbacks_and_update_log(feedbacks)
+            sync_feedback_to_github_async(fb_item)
+
+            self.send_json({
+                "success": True,
+                "item": fb_item,
+                "message": f"Phản hồi [{fb_id}] đã được ghi nhận và đang tự động cập nhật vào GitHub!",
+                "github_url": "https://github.com/mikepham358/sat-test-practice-app-oct2026/blob/main/FEEDBACK_LOG.md"
+            })
+        except Exception as e:
+            self.send_json({"success": False, "error": f"Lỗi khi xử lý phản hồi: {str(e)}"}, 500)
 
     # --- PDF STREAMING WITH HTTP RANGE SUPPORT ---
 

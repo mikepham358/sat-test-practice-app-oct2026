@@ -366,6 +366,11 @@
             <span class="cross-icon">⨉</span>
             <span>Eliminate Choices</span>
           </button>
+          <!-- Smart Question Feedback Button -->
+          <button class="btn-q-feedback" id="btn-q-feedback" title="Báo lỗi câu hỏi hoặc góp ý đáp án cho câu này">
+            <span class="btn-q-fb-icon">💬</span>
+            <span>Góp ý câu này</span>
+          </button>
         </div>
       </div>
 
@@ -999,6 +1004,146 @@
         <button type="button" class="btn-sub-ob" id="btn-cancel-reset">
           Hủy Bỏ
         </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= SMART FLOATING FEEDBACK BUTTON ================= -->
+  <button class="btn-floating-feedback" id="btn-floating-feedback" title="Gửi phản hồi, báo lỗi câu hỏi hoặc đề xuất tính năng bất cứ lúc nào">
+    <span class="btn-fb-icon">💬</span>
+    <span class="btn-fb-text">Góp ý & Báo lỗi</span>
+  </button>
+
+  <!-- ================= MODAL: SMART FEEDBACK & GITHUB LOGBOOK ================= -->
+  <div class="modal-overlay hidden" id="modal-feedback">
+    <div class="modal-card feedback-modal-card">
+      <div class="modal-card-header g-ux-modal-header">
+        <div class="header-title-group">
+          <div class="header-main-title">
+            <span class="header-icon">💬</span>
+            <h3>Gửi Phản Hồi & Đóng Góp Ý Kiến</h3>
+          </div>
+          <p class="header-sub-desc">Phản hồi của em sẽ được ghi nhận tự động vào Nhật ký GitHub của Vinschool SAT Team</p>
+        </div>
+        <button class="btn-close-modal" id="btn-close-feedback" title="Đóng">✕</button>
+      </div>
+
+      <!-- Modal Tabs: Send Feedback / GitHub Logbook -->
+      <div class="fb-tabs-bar">
+        <button class="fb-tab-btn active" id="tab-btn-fb-new">📝 Gửi phản hồi mới</button>
+        <button class="fb-tab-btn" id="tab-btn-fb-history">
+          📋 Nhật ký GitHub <span class="fb-count-badge" id="fb-history-count">4</span>
+        </button>
+      </div>
+
+      <div class="modal-card-body fb-modal-body">
+        
+        <!-- TAB 1: FORM GỬI PHẢN HỒI -->
+        <div class="fb-tab-content active" id="fb-tab-content-new">
+          <form id="form-submit-feedback">
+            
+            <!-- Context Bar (Smart Auto-detection) -->
+            <div class="fb-context-bar" id="fb-context-bar">
+              <div class="fb-context-icon">📍</div>
+              <div class="fb-context-details">
+                <div class="fb-context-title">Vị trí & Ngữ cảnh tự động nhận diện:</div>
+                <div class="fb-context-label" id="fb-detected-context">Đang tải ngữ cảnh...</div>
+              </div>
+              <button type="button" class="btn-change-context" id="btn-toggle-custom-context">Đổi phạm vi</button>
+            </div>
+
+            <!-- Custom Context Selector (Hidden by default, shown if student wants to change) -->
+            <div class="form-group hidden" id="group-custom-context">
+              <label for="select-fb-custom-module">Chọn phần thi hoặc phạm vi góp ý:</label>
+              <select id="select-fb-custom-module" class="g-input">
+                <option value="CURRENT">Câu hỏi hiện tại đang xem</option>
+                <option value="RW_Module1">Reading & Writing: Module 1 (27 Qs)</option>
+                <option value="RW_Module2">Reading & Writing: Module 2 (27 Qs)</option>
+                <option value="Math_Module1">Math: Module 1 (22 Qs)</option>
+                <option value="Math_Module2">Math: Module 2 (22 Qs)</option>
+                <option value="GENERAL">Toàn bộ đề thi / Hệ thống chung</option>
+              </select>
+            </div>
+
+            <!-- Category & Priority Row -->
+            <div class="form-row-2col">
+              <div class="form-group">
+                <label for="select-fb-category">Phân loại góp ý <span class="req">*</span></label>
+                <select id="select-fb-category" class="g-input" required>
+                  <option value="🎯 Báo lỗi câu hỏi / Đáp án">🎯 Báo lỗi câu hỏi / Đáp án đề thi</option>
+                  <option value="💡 Đề xuất tính năng mới">💡 Đề xuất tính năng & trải nghiệm mới</option>
+                  <option value="⚡ Lỗi giao diện / Kỹ thuật / Desmos">⚡ Lỗi giao diện / Kỹ thuật / Desmos</option>
+                  <option value="📝 Góp ý chung & Đánh giá">📝 Góp ý chung & Đánh giá phương pháp</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="select-fb-priority">Mức độ ưu tiên <span class="req">*</span></label>
+                <select id="select-fb-priority" class="g-input" required>
+                  <option value="🟢 Bình thường">🟢 Bình thường (Đóng góp cải thiện)</option>
+                  <option value="🟡 Cần xem lại">🟡 Cần xem lại (Ảnh hưởng đến bài thi)</option>
+                  <option value="🔴 Khẩn cấp">🔴 Khẩn cấp (Lỗi sai đáp án / Treo máy)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Feedback Content -->
+            <div class="form-group">
+              <label for="input-fb-content">Nội dung chi tiết <span class="req">*</span></label>
+              <textarea id="input-fb-content" rows="4" class="g-textarea" placeholder="Mô tả cụ thể vấn đề em phát hiện, câu hỏi nào bị nhầm lẫn hoặc đề xuất cải tiến của em..." required minlength="5"></textarea>
+            </div>
+
+            <!-- User Info Row -->
+            <div class="form-row-2col">
+              <div class="form-group">
+                <label for="input-fb-name">Họ và tên học sinh / Người gửi</label>
+                <input type="text" id="input-fb-name" class="g-input" placeholder="Ví dụ: Nguyễn Văn A">
+              </div>
+              <div class="form-group">
+                <label for="input-fb-email">Email nhận phản hồi</label>
+                <input type="email" id="input-fb-email" class="g-input" placeholder="email@vinschool.edu.vn">
+              </div>
+            </div>
+
+            <div class="fb-submit-actions">
+              <button type="submit" class="btn-primary-ob btn-send-feedback" id="btn-submit-feedback">
+                <span>🚀 Gửi Phản Hồi & Đồng Bộ Lên GitHub</span>
+              </button>
+            </div>
+          </form>
+
+          <!-- Success Banner (hidden by default) -->
+          <div class="fb-success-banner hidden" id="fb-success-banner">
+            <div class="success-icon">🎉</div>
+            <h4>Cảm ơn em! Phản hồi đã được ghi nhận thành công</h4>
+            <p id="fb-success-msg">Dữ liệu đã được lưu vào hệ thống và đang tự động đồng bộ lên GitHub.</p>
+            <div class="fb-success-links">
+              <a href="https://github.com/mikepham358/sat-test-practice-app-oct2026/blob/main/FEEDBACK_LOG.md" target="_blank" rel="noopener noreferrer" class="btn-view-github-log">
+                📖 Xem Nhật Ký Trên GitHub ↗
+              </a>
+              <button type="button" class="btn-send-another" id="btn-send-another-fb">
+                ➕ Gửi thêm phản hồi khác
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 2: NHẬT KÝ FEEDBACK GITHUB -->
+        <div class="fb-tab-content hidden" id="fb-tab-content-history">
+          <div class="fb-history-header">
+            <div class="fb-history-intro">
+              <span>Các phản hồi đã được lưu trữ trong nhật ký <code>FEEDBACK_LOG.md</code> trên GitHub:</span>
+            </div>
+            <a href="https://github.com/mikepham358/sat-test-practice-app-oct2026/blob/main/FEEDBACK_LOG.md" target="_blank" rel="noopener noreferrer" class="btn-github-pill">
+              🐙 Mở trên GitHub ↗
+            </a>
+          </div>
+
+          <div class="fb-history-list" id="fb-history-list">
+            <!-- Populated dynamically via JS -->
+          </div>
+        </div>
+
       </div>
     </div>
   </div>

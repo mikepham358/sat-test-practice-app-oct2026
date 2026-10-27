@@ -25,6 +25,8 @@ const App = {
   notebookFilterStatus: "all",
   notebookSearchQuery: "",
   editingLogId: null,
+  feedbacks: [],
+  currentFeedbackContext: null,
 
   // Student Personal State (Loaded from localStorage)
   studentState: {
@@ -251,7 +253,33 @@ const DOM = {
   chkResetTimer: document.getElementById("chk-reset-timer"),
   chkResetErrors: document.getElementById("chk-reset-errors"),
   btnConfirmDoReset: document.getElementById("btn-confirm-do-reset"),
-  btnCancelReset: document.getElementById("btn-cancel-reset")
+  btnCancelReset: document.getElementById("btn-cancel-reset"),
+
+  // Smart Feedback
+  btnFloatingFeedback: document.getElementById("btn-floating-feedback"),
+  btnQFeedback: document.getElementById("btn-q-feedback"),
+  modalFeedback: document.getElementById("modal-feedback"),
+  btnCloseFeedback: document.getElementById("btn-close-feedback"),
+  tabBtnFbNew: document.getElementById("tab-btn-fb-new"),
+  tabBtnFbHistory: document.getElementById("tab-btn-fb-history"),
+  fbTabContentNew: document.getElementById("fb-tab-content-new"),
+  fbTabContentHistory: document.getElementById("fb-tab-content-history"),
+  fbHistoryCount: document.getElementById("fb-history-count"),
+  fbDetectedContext: document.getElementById("fb-detected-context"),
+  btnToggleCustomContext: document.getElementById("btn-toggle-custom-context"),
+  groupCustomContext: document.getElementById("group-custom-context"),
+  selectFbCustomModule: document.getElementById("select-fb-custom-module"),
+  formSubmitFeedback: document.getElementById("form-submit-feedback"),
+  selectFbCategory: document.getElementById("select-fb-category"),
+  selectFbPriority: document.getElementById("select-fb-priority"),
+  inputFbContent: document.getElementById("input-fb-content"),
+  inputFbName: document.getElementById("input-fb-name"),
+  inputFbEmail: document.getElementById("input-fb-email"),
+  btnSubmitFeedback: document.getElementById("btn-submit-feedback"),
+  fbSuccessBanner: document.getElementById("fb-success-banner"),
+  fbSuccessMsg: document.getElementById("fb-success-msg"),
+  btnSendAnotherFb: document.getElementById("btn-send-another-fb"),
+  fbHistoryList: document.getElementById("fb-history-list")
 };
 
 // ================= LOCALSTORAGE MANAGER =================
@@ -305,6 +333,7 @@ function saveLocalState() {
 // ================= VIEW CONTROLLER (GOOGLE UX LANDING & PRACTICE) =================
 function showView(viewName) {
   if (viewName === "home") {
+    document.body.classList.remove("in-practice");
     if (DOM.viewHome) {
       DOM.viewHome.classList.remove("hidden");
       DOM.viewHome.style.display = "flex";
@@ -319,6 +348,7 @@ function showView(viewName) {
     if (DOM.viewHome) DOM.viewHome.scrollTo({ top: 0, behavior: "smooth" });
     window.scrollTo({ top: 0, behavior: "smooth" });
   } else {
+    document.body.classList.add("in-practice");
     if (DOM.viewHome) {
       DOM.viewHome.classList.add("hidden");
       DOM.viewHome.style.display = "none";
@@ -453,6 +483,7 @@ function startPracticeFromHome(targetModule) {
 // ================= INITIALIZATION =================
 document.addEventListener("DOMContentLoaded", async () => {
   loadLocalState();
+  loadFeedbacksList();
   initSplitResizer();
   initDraggableDesmos();
   initScratchpad();
@@ -552,6 +583,7 @@ function shouldTimerRun() {
   if (DOM.modalStrategies && !DOM.modalStrategies.classList.contains("hidden")) return false;
   if (DOM.modalFinishTest && !DOM.modalFinishTest.classList.contains("hidden")) return false;
   if (DOM.modalSubmitSuccess && !DOM.modalSubmitSuccess.classList.contains("hidden")) return false;
+  if (DOM.modalFeedback && !DOM.modalFeedback.classList.contains("hidden")) return false;
 
   // 3. Question status check:
   // If the current question is already completed or just evaluated for review, pause the timer!
@@ -2119,6 +2151,292 @@ function initDraggableDesmos() {
   });
 }
 
+// ================= SMART FEEDBACK & GITHUB LOG SYSTEM =================
+async function loadFeedbacksList() {
+  try {
+    const res = await fetch("/api/feedbacks");
+    if (res.ok) {
+      App.feedbacks = await res.json();
+    }
+  } catch (e) {
+    try {
+      const resStatic = await fetch("feedback.json");
+      if (resStatic.ok) {
+        App.feedbacks = await resStatic.json();
+      }
+    } catch (e2) {}
+  }
+
+  // Also merge any offline feedbacks stored in localStorage
+  try {
+    const localFbs = JSON.parse(localStorage.getItem("sat_feedback_local_queue") || "[]");
+    if (Array.isArray(localFbs) && localFbs.length > 0) {
+      if (!App.feedbacks) App.feedbacks = [];
+      const existingIds = new Set(App.feedbacks.map(x => x.id));
+      for (const item of localFbs) {
+        if (!existingIds.has(item.id)) {
+          App.feedbacks.unshift(item);
+        }
+      }
+    }
+  } catch (e3) {}
+
+  updateFeedbackBadge();
+}
+
+function updateFeedbackBadge() {
+  if (DOM.fbHistoryCount) {
+    DOM.fbHistoryCount.textContent = App.feedbacks ? App.feedbacks.length : 0;
+  }
+}
+
+function openFeedbackModal(prefilledContext) {
+  pauseTimer();
+
+  // Detect current context
+  let contextLabel = "Trang chủ / Hệ thống chung";
+  const isPractice = DOM.viewPractice && !DOM.viewPractice.classList.contains("hidden");
+
+  if (prefilledContext) {
+    contextLabel = prefilledContext;
+  } else if (isPractice && App.currentQuestion) {
+    const q = App.currentQuestion;
+    const qIndex = App.currentIndex + 1;
+    const modTitle = DOM.selectModule ? DOM.selectModule.options[DOM.selectModule.selectedIndex].text.split("(")[0].trim() : App.activeModuleCode;
+    contextLabel = `${modTitle} • Câu ${qIndex} (Mã #${q.id}) ${q.pdf_page ? `• Trang ${q.pdf_page}` : ""}`;
+  }
+
+  App.currentFeedbackContext = contextLabel;
+
+  if (DOM.fbDetectedContext) {
+    DOM.fbDetectedContext.textContent = contextLabel;
+  }
+
+  // Pre-fill user details if available
+  if (DOM.inputFbName && !DOM.inputFbName.value) {
+    DOM.inputFbName.value = App.studentState.student_name || "";
+  }
+  if (DOM.inputFbEmail && !DOM.inputFbEmail.value) {
+    DOM.inputFbEmail.value = App.studentState.student_email || "";
+  }
+
+  // Pre-select category based on context
+  if (DOM.selectFbCategory) {
+    if (isPractice) {
+      DOM.selectFbCategory.value = "🎯 Báo lỗi câu hỏi / Đáp án";
+    } else {
+      DOM.selectFbCategory.value = "📝 Góp ý chung & Đánh giá";
+    }
+  }
+
+  // Reset form state & success banner
+  if (DOM.formSubmitFeedback) {
+    DOM.formSubmitFeedback.classList.remove("hidden");
+    DOM.formSubmitFeedback.reset();
+    if (DOM.inputFbName) DOM.inputFbName.value = App.studentState.student_name || "";
+    if (DOM.inputFbEmail) DOM.inputFbEmail.value = App.studentState.student_email || "";
+    if (DOM.selectFbCategory) DOM.selectFbCategory.value = isPractice ? "🎯 Báo lỗi câu hỏi / Đáp án" : "📝 Góp ý chung & Đánh giá";
+  }
+
+  if (DOM.fbSuccessBanner) DOM.fbSuccessBanner.classList.add("hidden");
+  if (DOM.groupCustomContext) DOM.groupCustomContext.classList.add("hidden");
+
+  // Show Tab 1 by default
+  switchFeedbackTab("new");
+
+  if (DOM.modalFeedback) {
+    DOM.modalFeedback.classList.remove("hidden");
+  }
+
+  loadFeedbacksList();
+}
+
+function closeFeedbackModal() {
+  if (DOM.modalFeedback) {
+    DOM.modalFeedback.classList.add("hidden");
+  }
+  syncTimerState();
+}
+
+function switchFeedbackTab(tabName) {
+  if (tabName === "new") {
+    if (DOM.tabBtnFbNew) DOM.tabBtnFbNew.classList.add("active");
+    if (DOM.tabBtnFbHistory) DOM.tabBtnFbHistory.classList.remove("active");
+    if (DOM.fbTabContentNew) DOM.fbTabContentNew.classList.remove("hidden");
+    if (DOM.fbTabContentHistory) DOM.fbTabContentHistory.classList.add("hidden");
+  } else {
+    if (DOM.tabBtnFbNew) DOM.tabBtnFbNew.classList.remove("active");
+    if (DOM.tabBtnFbHistory) DOM.tabBtnFbHistory.classList.add("active");
+    if (DOM.fbTabContentNew) DOM.fbTabContentNew.classList.add("hidden");
+    if (DOM.fbTabContentHistory) DOM.fbTabContentHistory.classList.remove("hidden");
+    renderFeedbackHistoryList();
+  }
+}
+
+function renderFeedbackHistoryList() {
+  if (!DOM.fbHistoryList) return;
+  const list = App.feedbacks || [];
+
+  if (list.length === 0) {
+    DOM.fbHistoryList.innerHTML = `
+      <div style="text-align: center; padding: 32px 16px; color: #64748b;">
+        <div style="font-size: 32px; margin-bottom: 8px;">📭</div>
+        <div style="font-weight: 600;">Chưa có phản hồi nào được ghi nhận</div>
+        <div style="font-size: 12.5px; margin-top: 4px;">Em có thể là người đầu tiên gửi đóng góp ý kiến qua tab bên cạnh!</div>
+      </div>
+    `;
+    return;
+  }
+
+  // Render in reverse chronological order (newest first)
+  const sorted = [...list].reverse();
+  DOM.fbHistoryList.innerHTML = sorted.map((item, idx) => {
+    const isResolved = item.status && (item.status.includes("Đã") || item.status.includes("giải quyết") || item.status.includes("triệt tiêu"));
+    const statusClass = isResolved ? "fb-status-resolved" : "fb-status-open";
+    
+    return `
+      <div class="fb-card-item">
+        <div class="fb-card-top">
+          <div class="fb-card-meta">
+            <span class="fb-card-id">${escapeHtml(item.id || `FB-${idx+1}`)}</span>
+            <span class="fb-card-cat">${escapeHtml(item.category || "Góp ý")}</span>
+            <span class="fb-card-date">${escapeHtml(item.date_str || "")}</span>
+          </div>
+          <span class="fb-card-status ${statusClass}">${escapeHtml(item.status || "Đang xử lý")}</span>
+        </div>
+        <div class="fb-card-context">📍 ${escapeHtml(item.context_label || item.question_label || "Toàn hệ thống")}</div>
+        <div class="fb-card-content">${escapeHtml(item.content || "")}</div>
+        <div class="fb-card-footer">
+          <span>Người gửi: <strong>${escapeHtml(item.student_name || "Học sinh")}</strong> ${item.student_email ? `(${escapeHtml(item.student_email)})` : ""}</span>
+          <span>Ưu tiên: <strong>${escapeHtml(item.priority || "Bình thường")}</strong></span>
+        </div>
+      </div>
+    `;
+  }).join("");
+}
+
+async function handleFeedbackSubmit(e) {
+  e.preventDefault();
+  const content = DOM.inputFbContent ? DOM.inputFbContent.value.trim() : "";
+  if (!content) {
+    alert("Vui lòng nhập nội dung chi tiết phản hồi của em!");
+    return;
+  }
+
+  const studentName = (DOM.inputFbName ? DOM.inputFbName.value.trim() : "") || App.studentState.student_name || "Ẩn danh";
+  const studentEmail = (DOM.inputFbEmail ? DOM.inputFbEmail.value.trim() : "") || App.studentState.student_email || "";
+  const category = DOM.selectFbCategory ? DOM.selectFbCategory.value : "🎯 Báo lỗi câu hỏi / Đáp án";
+  const priority = DOM.selectFbPriority ? DOM.selectFbPriority.value : "🟢 Bình thường";
+
+  let contextLabel = App.currentFeedbackContext || "Hệ thống chung";
+  if (DOM.groupCustomContext && !DOM.groupCustomContext.classList.contains("hidden")) {
+    const customMod = DOM.selectFbCustomModule.value;
+    if (customMod !== "CURRENT") {
+      contextLabel = DOM.selectFbCustomModule.options[DOM.selectFbCustomModule.selectedIndex].text;
+    }
+  }
+
+  const payload = {
+    student_name: studentName,
+    student_email: studentEmail,
+    category: category,
+    priority: priority,
+    context_label: contextLabel,
+    content: content
+  };
+
+  if (DOM.btnSubmitFeedback) {
+    DOM.btnSubmitFeedback.disabled = true;
+    DOM.btnSubmitFeedback.innerHTML = `<span>⏳ Đang ghi nhận & đồng bộ lên GitHub...</span>`;
+  }
+
+  let serverSuccess = false;
+  let serverResponse = null;
+
+  try {
+    const res = await fetch("/api/feedback", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload)
+    });
+    if (res.ok) {
+      serverResponse = await res.json();
+      if (serverResponse.success) {
+        serverSuccess = true;
+      }
+    }
+  } catch (err) {
+    // Expected on static hosting like GitHub Pages
+  }
+
+  if (serverSuccess && serverResponse && serverResponse.item) {
+    if (!App.feedbacks) App.feedbacks = [];
+    App.feedbacks.push(serverResponse.item);
+    updateFeedbackBadge();
+    showFeedbackSuccess(serverResponse.item.id, true, payload);
+  } else {
+    // Client-side fallback for GitHub Pages
+    const now = new Date();
+    const localId = `FB-${now.getFullYear()}${(now.getMonth()+1).toString().padStart(2, '0')}${now.getDate().toString().padStart(2, '0')}-${Date.now().toString().slice(-3)}`;
+    const localItem = {
+      id: localId,
+      timestamp: now.toISOString(),
+      date_str: `${now.getDate().toString().padStart(2, '0')}/${(now.getMonth()+1).toString().padStart(2, '0')}/${now.getFullYear()} ${now.getHours().toString().padStart(2, '0')}:${now.getMinutes().toString().padStart(2, '0')}`,
+      student_name: studentName,
+      student_email: studentEmail,
+      category: category,
+      priority: priority,
+      context_label: contextLabel,
+      content: content,
+      status: "⏳ Đã ghi nhận (Local Queue)"
+    };
+
+    try {
+      const localQueue = JSON.parse(localStorage.getItem("sat_feedback_local_queue") || "[]");
+      localQueue.push(localItem);
+      localStorage.setItem("sat_feedback_local_queue", JSON.stringify(localQueue));
+    } catch (e) {}
+
+    if (!App.feedbacks) App.feedbacks = [];
+    App.feedbacks.push(localItem);
+    updateFeedbackBadge();
+    showFeedbackSuccess(localId, false, payload);
+  }
+
+  if (DOM.btnSubmitFeedback) {
+    DOM.btnSubmitFeedback.disabled = false;
+    DOM.btnSubmitFeedback.innerHTML = `<span>🚀 Gửi Phản Hồi & Đồng Bộ Lên GitHub</span>`;
+  }
+}
+
+function showFeedbackSuccess(fbId, isServerSynced, rawPayload) {
+  if (DOM.formSubmitFeedback) DOM.formSubmitFeedback.classList.add("hidden");
+  if (DOM.fbSuccessBanner) {
+    DOM.fbSuccessBanner.classList.remove("hidden");
+    if (DOM.fbSuccessMsg) {
+      if (isServerSynced) {
+        DOM.fbSuccessMsg.innerHTML = `Phản hồi mã <strong>${escapeHtml(fbId)}</strong> đã được lưu thành công và tự động commit & push lên kho lưu trữ GitHub (<code>FEEDBACK_LOG.md</code>).`;
+      } else {
+        const ghIssueTitle = encodeURIComponent(`[Feedback ${rawPayload.category}] ${rawPayload.context_label}`);
+        const ghIssueBody = encodeURIComponent(`### 💬 Phản hồi từ học sinh Vinschool SAT Team\n\n- **Mã phản hồi:** \`${fbId}\`\n- **Người gửi:** ${rawPayload.student_name} (${rawPayload.student_email || "Chưa cung cấp"})\n- **Phân loại:** ${rawPayload.category}\n- **Mức độ:** ${rawPayload.priority}\n- **Vị trí / Ngữ cảnh:** ${rawPayload.context_label}\n- **Thời gian:** ${new Date().toLocaleString("vi-VN")}\n\n---\n### 📝 Nội dung phản hồi:\n${rawPayload.content}\n\n*(Gửi từ Digital SAT Bluebook App - GitHub Pages)*`);
+        const ghIssueUrl = `https://github.com/mikepham358/sat-test-practice-app-oct2026/issues/new?title=${ghIssueTitle}&body=${ghIssueBody}`;
+
+        DOM.fbSuccessMsg.innerHTML = `
+          Phản hồi mã <strong>${escapeHtml(fbId)}</strong> đã được ghi nhận thành công trên thiết bị của em!<br>
+          <div style="margin-top: 10px; font-size: 13px;">
+            Vì em đang dùng phiên bản GitHub Pages trực tuyến, em có thể bấm nút bên dưới để <strong>tạo Issue chính thức trên GitHub</strong> chỉ với 1 click:
+          </div>
+          <div style="margin-top: 12px;">
+            <a href="${ghIssueUrl}" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 8px 16px; background: #0969da; color: #fff; text-decoration: none; border-radius: 20px; font-weight: 700;">
+              🐙 Mở GitHub Issue Ngay (Tự Điền Đầy Đủ) ↗
+            </a>
+          </div>
+        `;
+      }
+    }
+  }
+}
+
 // ================= EVENT LISTENERS =================
 function setupEventListeners() {
   // Module Change
@@ -2532,4 +2850,47 @@ function setupEventListeners() {
       DOM.btnNavNext.click();
     }
   });
+
+  // Smart Feedback Controls
+  if (DOM.btnFloatingFeedback) {
+    DOM.btnFloatingFeedback.addEventListener("click", () => openFeedbackModal());
+  }
+  if (DOM.btnQFeedback) {
+    DOM.btnQFeedback.addEventListener("click", () => openFeedbackModal());
+  }
+  if (DOM.btnCloseFeedback) {
+    DOM.btnCloseFeedback.addEventListener("click", closeFeedbackModal);
+  }
+  if (DOM.modalFeedback) {
+    DOM.modalFeedback.addEventListener("click", (e) => {
+      if (e.target === DOM.modalFeedback) closeFeedbackModal();
+    });
+  }
+  if (DOM.tabBtnFbNew) {
+    DOM.tabBtnFbNew.addEventListener("click", () => switchFeedbackTab("new"));
+  }
+  if (DOM.tabBtnFbHistory) {
+    DOM.tabBtnFbHistory.addEventListener("click", () => switchFeedbackTab("history"));
+  }
+  if (DOM.btnToggleCustomContext) {
+    DOM.btnToggleCustomContext.addEventListener("click", () => {
+      if (DOM.groupCustomContext) {
+        DOM.groupCustomContext.classList.toggle("hidden");
+      }
+    });
+  }
+  if (DOM.btnSendAnotherFb) {
+    DOM.btnSendAnotherFb.addEventListener("click", () => {
+      if (DOM.fbSuccessBanner) DOM.fbSuccessBanner.classList.add("hidden");
+      if (DOM.formSubmitFeedback) {
+        DOM.formSubmitFeedback.classList.remove("hidden");
+        DOM.formSubmitFeedback.reset();
+        if (DOM.inputFbName) DOM.inputFbName.value = App.studentState.student_name || "";
+        if (DOM.inputFbEmail) DOM.inputFbEmail.value = App.studentState.student_email || "";
+      }
+    });
+  }
+  if (DOM.formSubmitFeedback) {
+    DOM.formSubmitFeedback.addEventListener("submit", handleFeedbackSubmit);
+  }
 }

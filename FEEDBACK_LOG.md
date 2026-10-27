@@ -3,7 +3,7 @@
 > **Dự án:** Digital SAT Practice Based on Learning Science — Vinschool SAT Team  
 > **Giáo viên phụ trách:** Mike Pham Bá Hong Son (Google for Education Innovator) — `mikepham358@gmail.com`  
 > **Trang làm bài trực tuyến:** [https://mikepham358.github.io/sat-test-practice-app-oct2026/](https://mikepham358.github.io/sat-test-practice-app-oct2026/)  
-> **Cập nhật tự động lần cuối:** `27/10/2026 15:07:34`  
+> **Cập nhật tự động lần cuối:** `27/10/2026 15:08:05`  
 > **Mô tả:** Mọi phản hồi từ học sinh và giáo viên gửi qua nút **`💬 Góp ý & Báo lỗi`** thông minh trên ứng dụng sẽ được tự động lưu trữ và đồng bộ tức thời lên kho mã nguồn GitHub này.
 
 ---
@@ -15,8 +15,8 @@
 | **Tổng số phản hồi tiếp nhận** | **5** | Toàn bộ phản hồi ghi nhận từ giáo viên & học sinh |
 | 🎯 **Báo lỗi câu hỏi / Đáp án** | `3` | Rà soát và đối chiếu trực tiếp với file gốc `KeyB.pdf` |
 | 💡 **Đề xuất tính năng mới** | `2` | Cải tiến phương pháp học tập theo khoa học nhận thức |
-| ⚡ **Lỗi giao diện / Kỹ thuật / Desmos** | `1` | Tối ưu trải nghiệm tương tác split-screen & kéo thả |
-| 📝 **Góp ý chung & Đánh giá** | `-1` | Nhận xét chung về đề thi và lớp học |
+| ⚡ **Lỗi giao diện / Kỹ thuật / Desmos** | `0` | Tối ưu trải nghiệm tương tác split-screen & kéo thả |
+| 📝 **Góp ý chung & Đánh giá** | `0` | Nhận xét chung về đề thi và lớp học |
 | ✅ **Đã giải quyết / Đã khắc phục** | `4` | Đã kiểm tra, chỉnh sửa mã nguồn và đẩy lên GitHub |
 | ⏳ **Đang xử lý (Open)** | `1` | Đang trong hàng đợi kiểm tra của giáo viên |
 
