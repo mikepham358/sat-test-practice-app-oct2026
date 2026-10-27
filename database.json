@@ -166,7 +166,7 @@
       "section": "Reading and Writing",
       "module_num": 1,
       "topic": "Vocabulary in Context (Precision)",
-      "passage": "the source of a malfunction in a complex electrical system can be a time-consuming process: a repair technician may need to test each individual component one by one until the specific part causing the problematic behavior is identified.",
+      "passage": "______ the source of a malfunction in a complex electrical system can be a painstaking, time-consuming process: a repair technician may need to test each individual component one by one until the specific part causing the problematic behavior is identified.",
       "prompt": "Which choice completes the text with the most logical and precise word or phrase?",
       "options": [
         {
@@ -208,7 +208,7 @@
       "section": "Reading and Writing",
       "module_num": 1,
       "topic": "Vocabulary in Context (Biological Processes)",
-      "passage": "Single-celled foraminifera inhabiting coastal waters experience significant environmental salinity changes during tidal cycles. How, then, do they _____ internal salt levels? Some organisms maintain high concentrations of phosphates that allow them to affect the concentration of internal electrolytes—including salt—in response to external changes.",
+      "passage": "Single-celled foraminifera inhabiting coastal waters experience significant environmental salinity changes during tidal cycles. How, then, do they ______ internal salt levels? Some organisms maintain high concentrations of phosphates that allow them to affect the concentration of internal electrolytes— including salt—in response to external changes. It may be that coastal foraminifera do the same.",
       "prompt": "Which choice completes the text with the most logical and precise word or phrase?",
       "options": [
         {
@@ -250,7 +250,7 @@
       "section": "Reading and Writing",
       "module_num": 1,
       "topic": "Vocabulary in Context (Research Approaches)",
-      "passage": "Though most studies of the effect of altitude on blood chemistry usually concentrate on people who live above sea level, researchers Suleiman A. Al-Sweedan and Moath Alhaj have instead chosen the _____ path in their recent work of studying the blood of people who live below sea level, in locations such as the California towns of Westmorland and Thermal.",
+      "passage": "Though most studies of the effect of altitude on blood chemistry usually concentrate on people who live above sea level, researchers Suleiman A. Al-Sweedan and Moath Alhaj have instead chosen the ______ path in their recent work of studying the blood of people who live below sea level, in locations such as the California towns of Westmorland and Thermal.",
       "prompt": "Which choice completes the text with the most logical and precise word or phrase?",
       "options": [
         {
@@ -267,10 +267,10 @@
         },
         {
           "key": "D",
-          "text": "superficial"
+          "text": "timeworn"
         }
       ],
-      "options_raw": "A. predictable\nB. innovative\nC. idealistic\nD. superficial",
+      "options_raw": "A. predictable\nB. innovative\nC. idealistic\nD. timeworn",
       "is_grid_in": false,
       "correct_answer": "B",
       "tier1_hint": "Phân tích hướng tiếp cận nghiên cứu của nhóm tác giả đối với môi trường đại dương.",
@@ -292,7 +292,7 @@
       "section": "Reading and Writing",
       "module_num": 1,
       "topic": "Vocabulary in Context (Sufficiency)",
-      "passage": "While basic computer security training that only teaches recognition of obvious scams cannot provide _____ protection against today's sophisticated fake emails, which employ such subtle deception techniques that many organizations now require their staff to complete comprehensive cybersecurity education programs.",
+      "passage": "While once ______, basic computer security training that only teaches recognition of obvious scams cannot provide enough protection against today’s sophisticated fake emails, which employ such subtle deception techniques that many organizations now require their staff to complete comprehensive cybersecurity education programs.",
       "prompt": "Which choice completes the text with the most logical and precise word or phrase?",
       "options": [
         {
@@ -339,7 +339,7 @@
       "options": [
         {
           "key": "A",
-          "text": "It lists the number of cities in one country, then compares that number to another country."
+          "text": "It lists the number of cities in one country, then compares that number to the number of cities in another country."
         },
         {
           "key": "B",
@@ -351,10 +351,10 @@
         },
         {
           "key": "D",
-          "text": "It describes two locations, then explains why only one is considered a city."
+          "text": "It describes two locations, then explains why only one of the locations is considered a city."
         }
       ],
-      "options_raw": "A. It lists the number of cities in one country, then compares that number to another country.\nB. It poses a question, then explains why the question has many answers.\nC. It offers a recommendation, then provides reasons for that recommendation.\nD. It describes two locations, then explains why only one is considered a city.",
+      "options_raw": "A. It lists the number of cities in one country, then compares that number to the number of cities in another country.\nB. It poses a question, then explains why the question has many answers.\nC. It offers a recommendation, then provides reasons for that recommendation.\nD. It describes two locations, then explains why only one of the locations is considered a city.",
       "is_grid_in": false,
       "correct_answer": "B",
       "tier1_hint": "Xác định cấu trúc tổng thể của bài đọc từ câu hỏi mở đầu đến các câu tiếp theo.",
@@ -376,27 +376,27 @@
       "section": "Reading and Writing",
       "module_num": 1,
       "topic": "Main Purpose (Literary Narrative)",
-      "passage": "Adapted from William Faulkner's 1940 novel The Hamlet... He was breathing hard but not because he had been galloping. On the contrary, since he had approached near enough to his destination to believe he could have seen smoke if there had been smoke, he had ridden slower and slower. Nevertheless he now sat the horse before the gap in the fence, breathing hard enough through his nose and even sweating a little...",
+      "passage": "The following text is adapted from the 1940 novel The Hamlet by William Faulkner. In rural Mississippi, a man is riding a horse toward the residence of someone he intends to meet with about a business matter. He was breathing hard but not because he had been galloping. On the contrary, since he had approached near enough to his destination to believe he could have seen smoke if there had been smoke, he had ridden slower and slower. Nevertheless he now sat the horse before the gap in the fence, breathing hard enough through his nose and even sweating a little, looking at the sagging broken-backed cabin set in its inevitable treeless and grassless plot and weathered to the color of an old bee-hive, with that expression of tense and rapid speculation of a man approaching a dud howitzer [artillery] shell.\n\n©1967 by Estelle Faulkner and Jill Faulkner Summers",
       "prompt": "Which choice best states the main purpose of the text?",
       "options": [
         {
           "key": "A",
-          "text": "To contrast the man's desire to attend the meeting with his awareness of risk."
+          "text": "To contrast the man’s desire to attend the meeting with his awareness of the risk involved in attending it"
         },
         {
           "key": "B",
-          "text": "To compare the upcoming meeting to a far more serious experience from earlier."
+          "text": "To compare the upcoming meeting to a far more serious experience from earlier in the man’s life"
         },
         {
           "key": "C",
-          "text": "To depict the man's insistence on meeting despite the inconvenience."
+          "text": "To depict the man’s insistence on meeting despite the inconvenience of traveling on horseback"
         },
         {
           "key": "D",
-          "text": "To portray the man's anxiety about the meeting as reflected by his physical state and demeanor."
+          "text": "To portray the man’s anxiety about the meeting as reflected by his physical state and demeanor"
         }
       ],
-      "options_raw": "A. To contrast the man's desire to attend the meeting with his awareness of risk.\nB. To compare the upcoming meeting to a far more serious experience from earlier.\nC. To depict the man's insistence on meeting despite the inconvenience.\nD. To portray the man's anxiety about the meeting as reflected by his physical state and demeanor.",
+      "options_raw": "A. To contrast the man’s desire to attend the meeting with his awareness of the risk involved in attending it\nB. To compare the upcoming meeting to a far more serious experience from earlier in the man’s life\nC. To depict the man’s insistence on meeting despite the inconvenience of traveling on horseback\nD. To portray the man’s anxiety about the meeting as reflected by his physical state and demeanor",
       "is_grid_in": false,
       "correct_answer": "D",
       "tier1_hint": "Tập trung vào các chi tiết miêu tả cảm xúc và biểu hiện thể chất của nhân vật.",
@@ -418,27 +418,27 @@
       "section": "Reading and Writing",
       "module_num": 1,
       "topic": "Main Purpose (Informational Text)",
-      "passage": "Modern forestry offers diverse career opportunities that integrate scientific knowledge and environmental work. Arborists assess tree health and perform maintenance... Forestry technicians collect data... Forest ecologists conduct field research... With this blend of scientific understanding and practical application, forestry professionals address a variety of complex environmental challenges.",
+      "passage": "Modern forestry offers diverse career opportunities that integrate scientific knowledge with hands-on environmental work. Arborists assess tree health and perform maintenance such as pruning to promote safety and prevent problems. Forestry technicians collect data on growth patterns and biodiversity in the wild. Forest ecologists conduct field research and analyze ecosystems to understand how forests respond to changes in weather patterns. With this blend of scientific understanding and practical application, forestry professionals address a variety of complex environmental challenges.",
       "prompt": "Which choice best describes the main purpose of the text?",
       "options": [
         {
           "key": "A",
-          "text": "To explain technological advances in modern forestry."
+          "text": "To explain technological advances in modern forestry and demonstrate how they’ve transformed traditional practices"
         },
         {
           "key": "B",
-          "text": "To analyze environmental problems facing forests."
+          "text": "To analyze environmental challenges facing forests and describe how modern professionals address these problems"
         },
         {
           "key": "C",
-          "text": "To compare career security across forestry positions."
+          "text": "To compare career opportunities in modern forestry and explain which positions offer the best job security"
         },
         {
           "key": "D",
-          "text": "To highlight career opportunities in modern forestry and describe how they integrate scientific knowledge and hands-on work."
+          "text": "To highlight career opportunities in modern forestry and describe how they integrate scientific knowledge and hands-on work"
         }
       ],
-      "options_raw": "A. To explain technological advances in modern forestry.\nB. To analyze environmental problems facing forests.\nC. To compare career security across forestry positions.\nD. To highlight career opportunities in modern forestry and describe how they integrate scientific knowledge and hands-on work.",
+      "options_raw": "A. To explain technological advances in modern forestry and demonstrate how they’ve transformed traditional practices\nB. To analyze environmental challenges facing forests and describe how modern professionals address these problems\nC. To compare career opportunities in modern forestry and explain which positions offer the best job security\nD. To highlight career opportunities in modern forestry and describe how they integrate scientific knowledge and hands-on work",
       "is_grid_in": false,
       "correct_answer": "D",
       "tier1_hint": "So sánh câu mở đầu và câu kết thúc của bài đọc để xác định chủ đề xuyên suốt.",
@@ -460,7 +460,7 @@
       "section": "Reading and Writing",
       "module_num": 1,
       "topic": "Detail & Literal Comprehension",
-      "passage": "James Fong and his team discovered a new color, which they named olo. Olo is a very saturated blue-green color that can't be seen with the human eye under natural conditions. In the human eye, long, medium, and short cones in the retina help sense bright light and color. Olo can only be seen by activating the medium cones alone. Fong and team activated these cones by using a targeted laser technology to stimulate just the medium cone cells.",
+      "passage": "James Fong and his team claim to have discovered a new color, which they named olo. Olo is a very saturated blue-green color that can’t be seen with the human eye under natural conditions. In the human eye, long, medium, and short cones in the retina help sense bright light and color. Olo can only be seen by activating the medium cones alone. Fong and team activated these cones by using a targeted laser technology to stimulate just the medium cone cells.",
       "prompt": "According to the text, how can the color olo be seen?",
       "options": [
         {
@@ -502,16 +502,16 @@
       "section": "Reading and Writing",
       "module_num": 1,
       "topic": "Quantitative Evidence (Graph)",
-      "passage": "A student is collecting data about countries with volcanoes that have been active in the time since 1800 and in the time since 1960. The student records that Ethiopia has _____",
+      "passage": "A student is collecting data about countries with volcanoes that have been active in the time since 1800 and in the time since 1960. The student records that Ethiopia has ______",
       "prompt": "Which choice most effectively uses data from the graph to complete the statement?",
       "options": [
         {
           "key": "A",
-          "text": "the same number of volcanoes active since 1800 as Tanzania."
+          "text": "the same number of volcanoes that have been active since 1800 as Tanzania has."
         },
         {
           "key": "B",
-          "text": "no volcanoes active since 1800."
+          "text": "no volcanoes that have been active since 1800."
         },
         {
           "key": "C",
@@ -522,7 +522,7 @@
           "text": "fewer volcanoes that have been active since 1960 than Tanzania has."
         }
       ],
-      "options_raw": "A. the same number of volcanoes active since 1800 as Tanzania.\nB. no volcanoes active since 1800.\nC. more volcanoes that have been active since 1960 than Tanzania has.\nD. fewer volcanoes that have been active since 1960 than Tanzania has.",
+      "options_raw": "A. the same number of volcanoes that have been active since 1800 as Tanzania has.\nB. no volcanoes that have been active since 1800.\nC. more volcanoes that have been active since 1960 than Tanzania has.\nD. fewer volcanoes that have been active since 1960 than Tanzania has.",
       "is_grid_in": false,
       "correct_answer": "C",
       "tier1_hint": "Quan sát biểu đồ và xác định đúng hai quốc gia cùng mốc thời gian từ năm 1960.",
@@ -544,27 +544,27 @@
       "section": "Reading and Writing",
       "module_num": 1,
       "topic": "Command of Evidence (Quotation)",
-      "passage": "Editor Jared Shurin's 2023 anthology The Big Book of Cyberpunk... Shurin defines cyberpunk as a subgenre concerning 'the influence of technology on human affairs'; however, some critics assert that cyberpunk is a literary movement that is in large part aesthetic rather than idea driven.",
+      "passage": "Editor Jared Shurin’s enormous 2023 anthology The Big Book of Cyberpunk comprises 108 stories. Shurin’s volume is chronologically expansive, featuring such stories as James Tiptree Jr.’s “The Girl Who Was Plugged In” (1973) and Erica Satifka’s “Act of Providence” (2021). In his introduction, Shurin defines cyberpunk as a subgenre of speculative fiction concerning “the influence of technology on the scale, the pace, or the pattern of human affairs”; however, some critics assert that cyberpunk is a literary movement that is in large part aesthetic rather than idea driven.",
       "prompt": "Which quotation from a literary critic would be the most effective evidence in support of the underlined claim?",
       "options": [
         {
           "key": "A",
-          "text": "'Not all the stories anthologized in The Big Book of Cyberpunk were first published in journals...'"
+          "text": "“Not all the stories anthologized in The Big Book of Cyberpunk were first published as stand-alone short stories in magazines or journals: for example, qntm’s 2021 story ‘Lena’ was originally self- published on the author’s site qntm.org.”"
         },
         {
           "key": "B",
-          "text": "'The stories in The Big Book of Cyberpunk share a number of common themes...'"
+          "text": "“The stories in The Big Book of Cyberpunk share a number of common themes indicative of cyberpunk as a whole: body modification; resistance to authority; the ways in which technological advancements alter human behavior.”"
         },
         {
           "key": "C",
-          "text": "'Shurin's characterization of cyberpunk is remarkably generous...'"
+          "text": "“Shurin’s characterization of cyberpunk is remarkably generous: it is a categorization that might well serve for the entire field of science fiction in general, rather than cyberpunk in particular.”"
         },
         {
           "key": "D",
-          "text": "'A key component of cyberpunk that differentiates it from other subgenres of science fiction is an affection for the totems of 1980s pop culture, such as the mirrored sunglasses that were then popular.'"
+          "text": "“A key component of cyberpunk that differentiates it from other subgenres of science fiction is an affection for the totems of 1980s pop culture, such as the mirrored sunglasses that were then popular.”"
         }
       ],
-      "options_raw": "A. 'Not all the stories anthologized in The Big Book of Cyberpunk were first published in journals...'\nB. 'The stories in The Big Book of Cyberpunk share a number of common themes...'\nC. 'Shurin's characterization of cyberpunk is remarkably generous...'\nD. 'A key component of cyberpunk that differentiates it from other subgenres of science fiction is an affection for the totems of 1980s pop culture, such as the mirrored sunglasses that were then popular.'",
+      "options_raw": "A. “Not all the stories anthologized in The Big Book of Cyberpunk were first published as stand-alone short stories in magazines or journals: for example, qntm’s 2021 story ‘Lena’ was originally self- published on the author’s site qntm.org.”\nB. “The stories in The Big Book of Cyberpunk share a number of common themes indicative of cyberpunk as a whole: body modification; resistance to authority; the ways in which technological advancements alter human behavior.”\nC. “Shurin’s characterization of cyberpunk is remarkably generous: it is a categorization that might well serve for the entire field of science fiction in general, rather than cyberpunk in particular.”\nD. “A key component of cyberpunk that differentiates it from other subgenres of science fiction is an affection for the totems of 1980s pop culture, such as the mirrored sunglasses that were then popular.”",
       "is_grid_in": false,
       "correct_answer": "D",
       "tier1_hint": "Đọc kỹ yêu cầu câu hỏi về yếu tố thẩm mỹ hoặc biểu tượng phong cách.",
@@ -586,27 +586,27 @@
       "section": "Reading and Writing",
       "module_num": 1,
       "topic": "Command of Evidence (Table Data)",
-      "passage": "Employment in Tribal Economies in December 2017 and December 2023... Between end-of-year 2017 and end-of-year 2023, the percentage of tribal employees working in the public sector increased, from 34.0% to 34.6%, while the percentage working in the business sector declined from 66.0% to 65.4%.",
+      "passage": "Employment in Tribal Economies in December 2017 and December 2023 by Sector Economic sector Approximate total number of employees, 2017 Percentage of workforce, 2017 Approximate total number of employees, 2023 Percentage of workforce, 2023 Business sector (all tribal businesses) 220,700 66.0% 232,300 65.4% Leisure and hospitality businesses 185,100 55.3% 192,300 54.2% Education and healthcare businesses 19,100 5.7% 21,600 6.1% Other businesses 16,500 5.0% 18,400 5.1% Public sector (tribal government and public administration) 113,800 34.0% 122,700 34.6% Tribal nations employ a large percentage of their populations in tribally owned businesses as well as in government and public administration. This is especially true in Oklahoma and other states with robust tribal economies and large Native populations. Between end-of-year 2017 and end-of-year 2023, the percentage of tribal employees working in the public sector increased, from 34.0% to 34.6%, while the percentage working in the business sector declined from 66.0% to 65.4%.",
       "prompt": "Which statement about the decline in the percentage of tribal employees working in the business sector is best supported by information in the table?",
       "options": [
         {
           "key": "A",
-          "text": "didn't result from an overall contraction of that sector, since the total number of employees in that sector increased by several thousand during this period."
+          "text": "It didn’t result from an overall contraction of that sector, since the total number of employees in that sector increased by several thousand during this period."
         },
         {
           "key": "B",
-          "text": "It was offset by changes in leisure and hospitality businesses..."
+          "text": "It was offset by changes in leisure and hospitality businesses, since the percentage of employees working in those businesses increased during this period."
         },
         {
           "key": "C",
-          "text": "It was driven primarily by changes in businesses classified as 'other'..."
+          "text": "It was driven primarily by changes in businesses classified as “other,” since those businesses had the lowest number of employees by the end of 2023."
         },
         {
           "key": "D",
-          "text": "It resulted from widespread workforce redistributions..."
+          "text": "It resulted from widespread workforce redistributions, since several thousand employees left that sector to take new jobs in the public sector during this period."
         }
       ],
-      "options_raw": "A. didn't result from an overall contraction of that sector, since the total number of employees in that sector increased by several thousand during this period.\nB. It was offset by changes in leisure and hospitality businesses...\nC. It was driven primarily by changes in businesses classified as 'other'...\nD. It resulted from widespread workforce redistributions...",
+      "options_raw": "A. It didn’t result from an overall contraction of that sector, since the total number of employees in that sector increased by several thousand during this period.\nB. It was offset by changes in leisure and hospitality businesses, since the percentage of employees working in those businesses increased during this period.\nC. It was driven primarily by changes in businesses classified as “other,” since those businesses had the lowest number of employees by the end of 2023.\nD. It resulted from widespread workforce redistributions, since several thousand employees left that sector to take new jobs in the public sector during this period.",
       "is_grid_in": false,
       "correct_answer": "A",
       "tier1_hint": "Định vị ngành nghề và khoảng thời gian được đề cập trong bảng số liệu.",
@@ -628,27 +628,27 @@
       "section": "Reading and Writing",
       "module_num": 1,
       "topic": "Command of Evidence (Chart Interpretation)",
-      "passage": "Tax Penalties Assessed on Private Foundations That Filed Form 4720, by Reason, 2003-2005... Out of the organizations that filed Form 990-PF in the years 2003-2005...",
+      "passage": "While US public charities, like Commonfund, must file Form 990 yearly with the IRS, private foundations, such as Lilly Endowment Inc., must file a different form, 990-PF. In addition, foundations that engage in certain prohibited activities must also file Form 4720 and pay a penalty tax on the money involved. Private foundations are prohibited from holding excess interests in a business enterprise, “self-dealing” (conducting activities that benefit foundation insiders), making taxable expenditures such as grants to noncharitable entities, and failing to cross a required threshold in making charitable distributions from income. Out of the organizations that filed Form 990-PF in the years 2003–2005, ______",
       "prompt": "Which choice most effectively uses data from the graph to complete the assertion?",
       "options": [
         {
           "key": "A",
-          "text": "those that filed Form 4720 because they had excess holdings paid a larger penalty..."
+          "text": "those that filed Form 4720 because they had excess holdings in a business enterprise paid, on average, a larger penalty than those that filed Form 4720 because they made taxable expenditures."
         },
         {
           "key": "B",
-          "text": "those that filed Form 4720 because they engaged in self-dealing..."
+          "text": "those that filed Form 4720 because they engaged in self-dealing paid an increasing percentage of the total penalty each year from 2003 to 2005."
         },
         {
           "key": "C",
-          "text": "those that filed Form 4720 in 2003 because they failed to meet the minimum requirement collectively paid a larger percentage of the total penalty assessed that year than those that filed Form 4720 in 2005 for the same reason."
+          "text": "those that filed Form 4720 in 2003 because they failed to meet the minimum charitable distribution requirement collectively paid a larger percentage of the total penalty assessed that year than those that filed Form 4720 in 2005 for the same reason."
         },
         {
           "key": "D",
-          "text": "those that filed Form 4720 in 2005 because..."
+          "text": "those that filed Form 4720 in 2005 because they engaged in self-dealing collectively paid a larger percentage of the total penalty assessed that year than those that filed Form 990 but also filed Form 4720 for the same reason."
         }
       ],
-      "options_raw": "A. those that filed Form 4720 because they had excess holdings paid a larger penalty...\nB. those that filed Form 4720 because they engaged in self-dealing...\nC. those that filed Form 4720 in 2003 because they failed to meet the minimum requirement collectively paid a larger percentage of the total penalty assessed that year than those that filed Form 4720 in 2005 for the same reason.\nD. those that filed Form 4720 in 2005 because...",
+      "options_raw": "A. those that filed Form 4720 because they had excess holdings in a business enterprise paid, on average, a larger penalty than those that filed Form 4720 because they made taxable expenditures.\nB. those that filed Form 4720 because they engaged in self-dealing paid an increasing percentage of the total penalty each year from 2003 to 2005.\nC. those that filed Form 4720 in 2003 because they failed to meet the minimum charitable distribution requirement collectively paid a larger percentage of the total penalty assessed that year than those that filed Form 4720 in 2005 for the same reason.\nD. those that filed Form 4720 in 2005 because they engaged in self-dealing collectively paid a larger percentage of the total penalty assessed that year than those that filed Form 990 but also filed Form 4720 for the same reason.",
       "is_grid_in": false,
       "correct_answer": "C",
       "tier1_hint": "Chú ý chỉ số phần trăm do 'undistributed income' trên biểu đồ qua các mốc năm.",
@@ -670,27 +670,27 @@
       "section": "Reading and Writing",
       "module_num": 1,
       "topic": "Command of Evidence (Literary Text)",
-      "passage": "Philoctetes is a play by Sophocles... Odysseus suggests that the plan for returning with Philoctetes rests on Neoptolemus not having been part of the group that abandoned him:",
+      "passage": "Philoctetes is a play by Sophocles that was first performed in 409 BCE. In the play, Odysseus and Neoptolemus must retrieve Philoctetes—a master archer who is believed necessary for the Greeks to win the Trojan War—from a cave on a deserted island where Odysseus and others had abandoned him with a debilitating injury earlier in the war. Odysseus suggests that the plan for returning with Philoctetes rests on Neoptolemus not having been part of the group that abandoned him: ______",
       "prompt": "Which quotation from Philoctetes most effectively illustrates the claim?",
       "options": [
         {
           "key": "A",
-          "text": "'Since the prize of victory is so dear, / Endure it...'"
+          "text": "“Since the prize of victory is so dear, / Endure it [acting deceitfully]—We’ll be just another day / But now, for one brief hour, devote thyself / To serve me without shame.”"
         },
         {
           "key": "B",
-          "text": "'Go near now silently, and make me know...'"
+          "text": "“Go near now silently, and make me know / If still he persevere, and hold this spot, / Or have roamed elsewhere, that informed of this / I may proceed with what remains to say, / And we may act in concert.”"
         },
         {
           "key": "C",
-          "text": "'Now let me show, why thine approach to him / Is safe and trustful as mine cannot be / Thou didst sail forth, not to redeem thine oath, / Nor by constraint, nor with the foremost band.'"
+          "text": "“Now let me show, why thine approach to him / Is safe and trustful as mine cannot be / Thou didst sail forth, not to redeem thine oath, / Nor by constraint, nor with the foremost band. / All which reproaches I must bear.”"
         },
         {
           "key": "D",
-          "text": "'No moment for this talk, / Lest he discern my coming...'"
+          "text": "“No moment for this talk, / Lest he discern my coming, and I lose / The scheme, wherewith I think to catch him soon.”"
         }
       ],
-      "options_raw": "A. 'Since the prize of victory is so dear, / Endure it...'\nB. 'Go near now silently, and make me know...'\nC. 'Now let me show, why thine approach to him / Is safe and trustful as mine cannot be / Thou didst sail forth, not to redeem thine oath, / Nor by constraint, nor with the foremost band.'\nD. 'No moment for this talk, / Lest he discern my coming...'",
+      "options_raw": "A. “Since the prize of victory is so dear, / Endure it [acting deceitfully]—We’ll be just another day / But now, for one brief hour, devote thyself / To serve me without shame.”\nB. “Go near now silently, and make me know / If still he persevere, and hold this spot, / Or have roamed elsewhere, that informed of this / I may proceed with what remains to say, / And we may act in concert.”\nC. “Now let me show, why thine approach to him / Is safe and trustful as mine cannot be / Thou didst sail forth, not to redeem thine oath, / Nor by constraint, nor with the foremost band. / All which reproaches I must bear.”\nD. “No moment for this talk, / Lest he discern my coming, and I lose / The scheme, wherewith I think to catch him soon.”",
       "is_grid_in": false,
       "correct_answer": "C",
       "tier1_hint": "Xác định nguyên nhân dẫn đến sự tin tưởng của nhân vật được hỏi trong tác phẩm.",
@@ -712,7 +712,7 @@
       "section": "Reading and Writing",
       "module_num": 1,
       "topic": "Text Completion / Logical Inference",
-      "passage": "Louis-Ferdinand Céline's 1932 novel Journey to the End of the Night is regularly described as autobiographical. That characterization is apt... Much of the novel is pure invention, and readers who overlook this fact and instead focus excessively on correspondences between the novel and Céline's life can thus _____",
+      "passage": "Louis-Ferdinand Céline’s 1932 novel Journey to the End of the Night is regularly described as autobiographical. That characterization is apt—there are many parallels between the experiences of the novel’s protagonist, Ferdinand Bardamu, and those of Céline—but it should not be taken to mean that every person or event depicted in Journey to the End of the Night has a real-life analogue. Much of the novel is pure invention, and readers who overlook this fact and instead focus excessively on correspondences between the novel and Céline’s life can thus ______",
       "prompt": "Which choice most logically completes the text?",
       "options": [
         {
@@ -725,14 +725,14 @@
         },
         {
           "key": "C",
-          "text": "refuse to acknowledge that Céline drew on real-world material..."
+          "text": "refuse to acknowledge that Céline drew on real-world material when writing Journey to the End of the Night."
         },
         {
           "key": "D",
-          "text": "misrepresent Journey to the End of the Night as being more widely read than it actually was."
+          "text": "misrepresent Journey to the End of the Night as being more widely read than it actually is."
         }
       ],
-      "options_raw": "A. fail to appreciate how much creativity Céline shows in the book.\nB. overemphasize the extent to which Céline took inspiration from earlier writers.\nC. refuse to acknowledge that Céline drew on real-world material...\nD. misrepresent Journey to the End of the Night as being more widely read than it actually was.",
+      "options_raw": "A. fail to appreciate how much creativity Céline shows in the book.\nB. overemphasize the extent to which Céline took inspiration from earlier writers.\nC. refuse to acknowledge that Céline drew on real-world material when writing Journey to the End of the Night.\nD. misrepresent Journey to the End of the Night as being more widely read than it actually is.",
       "is_grid_in": false,
       "correct_answer": "A",
       "tier1_hint": "Xác định mối quan hệ logic giữa việc tập trung vào yếu tố tự thuật và yếu tố sáng tác.",
@@ -754,27 +754,27 @@
       "section": "Reading and Writing",
       "module_num": 1,
       "topic": "Text Completion / Inference",
-      "passage": "Last-mile delivery... is subject to increasing pressure... One advance is the use of self-service lockers. This approach, while convenient, introduces new obstacles (e.g., placement is challenging). It is therefore likely that _____",
+      "passage": "Last-mile delivery, the final stage in the delivery of products to customers, is subject to increasing pressure as consumers place greater emphasis on convenience and immediacy, increasingly expecting next-day delivery. In response to this challenge and others, such as the increasing volume of parcels to be delivered, delivery companies are continually looking for ways to make last-mile delivery more efficient. One advance in last-mile delivery is the use of self-service lockers (containers where consumers can pick up their parcels using a unique code). This approach, while promising, also introduces new obstacles (e.g., convenient placement of self-service lockers is challenging). It is therefore likely that ______",
       "prompt": "Which choice most logically completes the text?",
       "options": [
         {
           "key": "A",
-          "text": "delivery companies will need to keep experimenting with new ideas for last-mile delivery if they hope to keep pace with consumers' expectations."
+          "text": "delivery companies will need to keep experimenting with new ideas for last-mile delivery if they hope to keep pace with consumers’ expectations."
         },
         {
           "key": "B",
-          "text": "delivery companies will continue promising next-day delivery..."
+          "text": "delivery companies will continue promising next-day delivery out of a desire to meet consumers’ expectations."
         },
         {
           "key": "C",
-          "text": "advances in last-mile technologies will slow..."
+          "text": "advances in last-mile technologies will slow as delivery companies focus more on meeting customer expectations for increased convenience."
         },
         {
           "key": "D",
-          "text": "innovations in the use of self-service lockers will stall..."
+          "text": "innovations in the use of self-service lockers for last-mile delivery will stall unless delivery companies shift their focus to methods with fewer complications."
         }
       ],
-      "options_raw": "A. delivery companies will need to keep experimenting with new ideas for last-mile delivery if they hope to keep pace with consumers' expectations.\nB. delivery companies will continue promising next-day delivery...\nC. advances in last-mile technologies will slow...\nD. innovations in the use of self-service lockers will stall...",
+      "options_raw": "A. delivery companies will need to keep experimenting with new ideas for last-mile delivery if they hope to keep pace with consumers’ expectations.\nB. delivery companies will continue promising next-day delivery out of a desire to meet consumers’ expectations.\nC. advances in last-mile technologies will slow as delivery companies focus more on meeting customer expectations for increased convenience.\nD. innovations in the use of self-service lockers for last-mile delivery will stall unless delivery companies shift their focus to methods with fewer complications.",
       "is_grid_in": false,
       "correct_answer": "A",
       "tier1_hint": "Phân tích lập luận của tác giả về tác động của biến đổi khí hậu đối với loài động vật.",
@@ -796,7 +796,7 @@
       "section": "Reading and Writing",
       "module_num": 1,
       "topic": "Standard English Conventions (Relative Clauses)",
-      "passage": "With an average summer temperature of 82.5 degrees Fahrenheit, Nicosia is one European _____ travelers recommend, especially from June to September.",
+      "passage": "With an average summer temperature of 82.5 degrees Fahrenheit, Nicosia is one European ______ many travelers recommend, especially from June to September.",
       "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
       "options": [
         {
@@ -805,7 +805,7 @@
         },
         {
           "key": "B",
-          "text": "city in which"
+          "text": "city in which,"
         },
         {
           "key": "C",
@@ -816,7 +816,7 @@
           "text": "city, that"
         }
       ],
-      "options_raw": "A. city, which\nB. city in which\nC. city that\nD. city, that",
+      "options_raw": "A. city, which\nB. city in which,\nC. city that\nD. city, that",
       "is_grid_in": false,
       "correct_answer": "C",
       "tier1_hint": "Xác định mệnh đề quan hệ bổ nghĩa cho danh từ chỉ vật hay chỉ người đứng trước.",
@@ -838,7 +838,7 @@
       "section": "Reading and Writing",
       "module_num": 1,
       "topic": "Standard English Conventions (Verb Tense & Progress)",
-      "passage": "Nanoengineers have developed synthesized mesoporous silica nanoparticles... As nanotechnology evolves, medical technology _____ to evolve as well.",
+      "passage": "Nanoengineers have developed synthesized mesoporous silica nanoparticles that are used to transport genes and medicines to specific cells in the body. As nanotechnology evolves, medical technology ______ to evolve as well.",
       "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
       "options": [
         {
@@ -880,12 +880,12 @@
       "section": "Reading and Writing",
       "module_num": 1,
       "topic": "Standard English Conventions (Punctuation / Dashes)",
-      "passage": "To more easily balance the weight of her body on her toes... Anna Pavlova redesigned her pointe shoes. The modifications she made—adding a stiffened leather sole and hardened toe _____ began the modernization of ballet's iconic footwear.",
+      "passage": "To more easily balance the weight of her body on her toes while performing the demanding pointe work that became increasingly common in early 20th-century ballet, internationally known ballerina Anna Pavlova redesigned her pointe shoes. The modifications she made—adding a stiffened leather sole and hardened toe ______ began the modernization of ballet’s iconic footwear.",
       "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
       "options": [
         {
           "key": "A",
-          "text": "box"
+          "text": "box,"
         },
         {
           "key": "B",
@@ -893,14 +893,14 @@
         },
         {
           "key": "C",
-          "text": "box,"
+          "text": "box"
         },
         {
           "key": "D",
           "text": "box:"
         }
       ],
-      "options_raw": "A. box\nB. box—\nC. box,\nD. box:",
+      "options_raw": "A. box,\nB. box—\nC. box\nD. box:",
       "is_grid_in": false,
       "correct_answer": "B",
       "tier1_hint": "Xác định thành phần bổ sung không thiết yếu (non-essential clause) trong câu.",
@@ -922,7 +922,7 @@
       "section": "Reading and Writing",
       "module_num": 1,
       "topic": "Standard English Conventions (Colons)",
-      "passage": "The purpose of these ancient games was _____ provide entertainment during leisure time, to reflect cultural beliefs, and to develop strategic thinking skills among players.",
+      "passage": "Archaeological evidence indicates that board games have existed in human societies for at least five millennia, with examples discovered in the tombs of ancient Egypt and the ruins of Mesopotamia. The purpose of these ancient games was ______ provide entertainment during leisure time, to reflect cultural beliefs, and to develop strategic thinking skills among players.",
       "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
       "options": [
         {
@@ -964,7 +964,7 @@
       "section": "Reading and Writing",
       "module_num": 1,
       "topic": "Standard English Conventions (Semicolons & Colons)",
-      "passage": "Extensive radiocarbon dating of reed samples from Caral confirmed Ruth Shady Solis's hypothesis about the Peruvian site's _____ nearly 5,000 years ago, the ancient city preceded the Olmec civilization to the north by a full millennium...",
+      "passage": "Extensive radiocarbon dating of reed samples from Caral confirmed Ruth Shady Solís’s hypothesis about the Peruvian site’s ______ nearly 5,000 years ago, the ancient city preceded the Olmec civilization to the north by a full millennium, a revelation that fundamentally altered our understanding of urban development in the Western Hemisphere.",
       "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
       "options": [
         {
@@ -1006,12 +1006,12 @@
       "section": "Reading and Writing",
       "module_num": 1,
       "topic": "Standard English Conventions (Subject-Verb Agreement)",
-      "passage": "Commercial applications of this new synthetic dye technology—beginning with the purple dye called mauve, discovered by William Perkin in 1856— _____ responsible for launching what one science historian calls a 'manufacturing revolution based on chemistry.'",
+      "passage": "Chemists investigating the properties of coal tar in the mid-nineteenth century discovered compounds that led to the creation of vibrant artificial colorants. Commercial applications of this new synthetic dye technology—beginning with the purple dye called mauve, discovered by William Perkin in 1856—______ responsible for launching what one science historian calls a “manufacturing revolution based on chemistry.”",
       "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
       "options": [
         {
           "key": "A",
-          "text": "has been"
+          "text": "was"
         },
         {
           "key": "B",
@@ -1023,10 +1023,10 @@
         },
         {
           "key": "D",
-          "text": "was"
+          "text": "has been"
         }
       ],
-      "options_raw": "A. has been\nB. is\nC. were\nD. was",
+      "options_raw": "A. was\nB. is\nC. were\nD. has been",
       "is_grid_in": false,
       "correct_answer": "C",
       "tier1_hint": "Xác định chủ ngữ chính của câu bằng cách gạch bỏ các cụm giới từ nhiễu đứng giữa.",
@@ -1048,7 +1048,7 @@
       "section": "Reading and Writing",
       "module_num": 1,
       "topic": "Transitions (Sequence & Step)",
-      "passage": "How does a clear evening become foggy? First, the ground releases heat, which radiates upward. This causes the air near the ground to cool. _____ tiny water droplets begin to form as the cooling air reaches its dew point... Finally, as more droplets accumulate, a visible layer of fog develops.",
+      "passage": "How does a clear evening become foggy? First, the ground releases heat, which radiates upward. This causes the air near the ground to cool. ______ tiny water droplets begin to form as the cooling air reaches its dew point and can no longer hold its moisture as invisible vapor. Finally, as more droplets accumulate, a visible layer of fog develops close to the ground.",
       "prompt": "Which choice completes the text with the most logical transition?",
       "options": [
         {
@@ -1090,7 +1090,7 @@
       "section": "Reading and Writing",
       "module_num": 1,
       "topic": "Transitions (Elaboration & Specifics)",
-      "passage": "Scientists studying forest restoration have discovered that trees depend on complex partnerships with microscopic organisms for survival. The researchers found that special fungi called endophytes live inside tree leaves and serve as a defense mechanism. _____ these endophytes help by fighting off diseases and boosting the tree's immune system.",
+      "passage": "Scientists studying forest restoration have discovered that trees depend on complex partnerships with microscopic organisms for survival. The researchers found that special fungi called endophytes live inside tree leaves and serve as a defense mechanism. ______ these endophytes help by fighting off diseases and boosting the tree’s immune system.",
       "prompt": "Which choice completes the text with the most logical transition?",
       "options": [
         {
@@ -1132,12 +1132,12 @@
       "section": "Reading and Writing",
       "module_num": 1,
       "topic": "Rhetorical Synthesis / Student Notes",
-      "passage": "Notes: Pistol shrimp are small marine crustaceans that hunt using a specialized oversized claw. When the claw snaps shut rapidly, it pushes water... bubble pops forcefully... shock waves powerful enough to stun small fish.",
+      "passage": "While researching a topic, a student has taken the following notes:\n\n• Pistol shrimp are small marine crustaceans that hunt using a specialized oversized claw.\n\n• When the claw snaps shut rapidly, it pushes water through a narrow groove at extreme speeds.\n\n• This high-speed water jet creates a bubble that pops forcefully near the shrimp’s prey.\n\n• The popping bubble generates shock waves powerful enough to stun small fish.",
       "prompt": "The student wants to introduce pistol shrimp to an audience unfamiliar with these crustaceans. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
       "options": [
         {
           "key": "A",
-          "text": "Some crustaceans use a specialized claw to create high-speed water jets..."
+          "text": "Some crustaceans use a specialized claw to create high-speed water jets and a bubble that stuns the small fish they prey on."
         },
         {
           "key": "B",
@@ -1145,14 +1145,14 @@
         },
         {
           "key": "C",
-          "text": "Pushing water through a narrow groove at extreme speeds..."
+          "text": "Pushing water through a narrow groove at extreme speeds, the snapping shut of the shrimp’s claw sets the shock-wave hunting process in motion."
         },
         {
           "key": "D",
-          "text": "Pistol shrimp are preyed on by small marine crustaceans..."
+          "text": "Pistol shrimp are preyed on by small marine crustaceans that create high-speed water jets to stun their prey."
         }
       ],
-      "options_raw": "A. Some crustaceans use a specialized claw to create high-speed water jets...\nB. Pistol shrimp are small marine creatures that use a specialized oversized claw to generate shock waves powerful enough to stun small fish.\nC. Pushing water through a narrow groove at extreme speeds...\nD. Pistol shrimp are preyed on by small marine crustaceans...",
+      "options_raw": "A. Some crustaceans use a specialized claw to create high-speed water jets and a bubble that stuns the small fish they prey on.\nB. Pistol shrimp are small marine creatures that use a specialized oversized claw to generate shock waves powerful enough to stun small fish.\nC. Pushing water through a narrow groove at extreme speeds, the snapping shut of the shrimp’s claw sets the shock-wave hunting process in motion.\nD. Pistol shrimp are preyed on by small marine crustaceans that create high-speed water jets to stun their prey.",
       "is_grid_in": false,
       "correct_answer": "B",
       "tier1_hint": "Đọc kỹ yêu cầu đề bài (Goal) để biết thông tin nào cần được ưu tiên làm nổi bật.",
@@ -1174,8 +1174,8 @@
       "section": "Reading and Writing",
       "module_num": 1,
       "topic": "Rhetorical Synthesis / Student Notes",
-      "passage": "Notes: Elizabeth Catlett (1915-2012) was a celebrated African American artist... best known for creating sculptures and prints... New Generation is a 1992 print... Standing Mother and Child is a 1980 sculpture.",
-      "prompt": "The student wants to provide an example of one of Catlett's sculptures. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+      "passage": "While researching a topic, a student has taken the following notes:\n\n• Elizabeth Catlett (1915–2012) was a celebrated African American artist.\n\n• She is best known for creating sculptures and prints that explore the Black experience.\n\n• Standing Mother and Child is a 1980 sculpture by Catlett.\n\n• New Generation is a 1992 print by Catlett.",
+      "prompt": "The student wants to provide an example of one of Catlett’s sculptures. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
       "options": [
         {
           "key": "A",
@@ -1187,14 +1187,14 @@
         },
         {
           "key": "C",
-          "text": "Artist Elizabeth Catlett is best known for creating sculptures and prints..."
+          "text": "Artist Elizabeth Catlett is best known for creating sculptures and prints that explore the Black experience."
         },
         {
           "key": "D",
           "text": "Elizabeth Catlett, a celebrated artist, was born in 1915."
         }
       ],
-      "options_raw": "A. The print New Generation was created by celebrated artist Elizabeth Catlett in 1992.\nB. The sculpture Standing Mother and Child was created by celebrated artist Elizabeth Catlett in 1980.\nC. Artist Elizabeth Catlett is best known for creating sculptures and prints...\nD. Elizabeth Catlett, a celebrated artist, was born in 1915.",
+      "options_raw": "A. The print New Generation was created by celebrated artist Elizabeth Catlett in 1992.\nB. The sculpture Standing Mother and Child was created by celebrated artist Elizabeth Catlett in 1980.\nC. Artist Elizabeth Catlett is best known for creating sculptures and prints that explore the Black experience.\nD. Elizabeth Catlett, a celebrated artist, was born in 1915.",
       "is_grid_in": false,
       "correct_answer": "B",
       "tier1_hint": "Xác định khía cạnh cụ thể mà đề bài yêu cầu người học phải nhấn mạnh từ ghi chú.",
@@ -1216,7 +1216,7 @@
       "section": "Reading and Writing",
       "module_num": 1,
       "topic": "Rhetorical Synthesis / Student Notes",
-      "passage": "Notes: Chapantongo is a municipality in Hidalgo, Mexico... Municipalities provide public services... Chapantongo's population was 12,967 in 2020. Its population was 12,271 in 2010.",
+      "passage": "While researching a topic, a student has taken the following notes:\n\n• Chapantongo is a municipality in the state of Hidalgo, Mexico.\n\n• Municipalities are governmental regions responsible for providing many public services to their residents.\n\n• One service they provide is traffic control.\n\n• Chapantongo’s population was 12,967 in 2020.\n\n• Its population was 12,271 in 2010.\n\n• Hidalgo is divided into 84 municipalities.",
       "prompt": "The student wants to emphasize the 2020 population of Chapantongo. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
       "options": [
         {
@@ -1229,14 +1229,14 @@
         },
         {
           "key": "C",
-          "text": "Chapantongo, a municipality in Hidalgo, is responsible for providing public services..."
+          "text": "As a municipality in Hidalgo, Chapantongo is responsible for providing public services to its population."
         },
         {
           "key": "D",
-          "text": "Home to 12,271 people, the governmental region was responsible..."
+          "text": "Home to 12,271 people, the governmental region was responsible for providing traffic control to its population in 2010."
         }
       ],
-      "options_raw": "A. As of 2020, Chapantongo was one of 84 municipalities in Hidalgo, Mexico.\nB. In 2020, the municipality of Chapantongo had a population of 12,967.\nC. Chapantongo, a municipality in Hidalgo, is responsible for providing public services...\nD. Home to 12,271 people, the governmental region was responsible...",
+      "options_raw": "A. As of 2020, Chapantongo was one of 84 municipalities in Hidalgo, Mexico.\nB. In 2020, the municipality of Chapantongo had a population of 12,967.\nC. As a municipality in Hidalgo, Chapantongo is responsible for providing public services to its population.\nD. Home to 12,271 people, the governmental region was responsible for providing traffic control to its population in 2010.",
       "is_grid_in": false,
       "correct_answer": "B",
       "tier1_hint": "Xem xét mục tiêu bài viết (ví dụ: so sánh hai nghiên cứu hay giới thiệu một phát minh).",
@@ -1258,27 +1258,27 @@
       "section": "Reading and Writing",
       "module_num": 1,
       "topic": "Rhetorical Synthesis / Student Notes",
-      "passage": "Notes: The Future of Nostalgia is a book by Svetlana Boym... Chapter 8 explores nostalgia and Europe's largest shopping mall... Chapter 17 discusses skeptics...",
+      "passage": "While researching a topic, a student has taken the following notes:\n\n• The Future of Nostalgia is a scholarly book by literary theorist Svetlana Boym.\n\n• The book explores the concept of nostalgia from various angles.\n\n• Chapter 8 explores nostalgia and Europe’s largest shopping mall.\n\n• Chapter 17 discusses various skeptics’ takes on the concept of nostalgia.\n\n• In chapter 17, Boym writes, “The poethics of nostalgia combines estrangement and human solidarity,\n\naffect and reflection.”",
       "prompt": "The student wants to explain what Svetlana Boym writes about in chapter 8. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
       "options": [
         {
           "key": "A",
-          "text": "Svetlana Boym's The Future of Nostalgia explores nostalgia from various angles."
+          "text": "Svetlana Boym’s The Future of Nostalgia explores the concept of nostalgia from various angles."
         },
         {
           "key": "B",
-          "text": "As Svetlana Boym writes in the seventeenth chapter..."
+          "text": "As Svetlana Boym writes in the seventeenth chapter of her book, “The poethics of nostalgia combines estrangement and human solidarity, affect and reflection.”"
         },
         {
           "key": "C",
-          "text": "Literary theorist Svetlana Boym explores nostalgia and Europe's largest shopping mall in chapter 8 of her book."
+          "text": "Literary theorist Svetlana Boym explores nostalgia and Europe’s largest shopping mall in chapter 8 of her book."
         },
         {
           "key": "D",
-          "text": "After exploring nostalgia and Europe's largest shopping mall, Boym goes on to discuss..."
+          "text": "After exploring nostalgia and Europe’s largest shopping mall, Svetlana Boym goes on to discuss various skeptics’ takes on the concept of nostalgia. STOP If you finish before time is called, you may check your work on this module only. Do not turn to any other module in the test."
         }
       ],
-      "options_raw": "A. Svetlana Boym's The Future of Nostalgia explores nostalgia from various angles.\nB. As Svetlana Boym writes in the seventeenth chapter...\nC. Literary theorist Svetlana Boym explores nostalgia and Europe's largest shopping mall in chapter 8 of her book.\nD. After exploring nostalgia and Europe's largest shopping mall, Boym goes on to discuss...",
+      "options_raw": "A. Svetlana Boym’s The Future of Nostalgia explores the concept of nostalgia from various angles.\nB. As Svetlana Boym writes in the seventeenth chapter of her book, “The poethics of nostalgia combines estrangement and human solidarity, affect and reflection.”\nC. Literary theorist Svetlana Boym explores nostalgia and Europe’s largest shopping mall in chapter 8 of her book.\nD. After exploring nostalgia and Europe’s largest shopping mall, Svetlana Boym goes on to discuss various skeptics’ takes on the concept of nostalgia. STOP If you finish before time is called, you may check your work on this module only. Do not turn to any other module in the test.",
       "is_grid_in": false,
       "correct_answer": "C",
       "tier1_hint": "Đọc yêu cầu để xác định đối tượng khán giả hoặc mục đích của câu văn cần viết.",
@@ -1300,7 +1300,7 @@
       "section": "Reading and Writing",
       "module_num": 2,
       "topic": "Vocabulary in Context (Interplay)",
-      "passage": "Soil conditions, weather patterns, market trends, input costs, labor availability, equipment maintenance, and biological cycles are all variables that farmers must consider separately and in terms of how they may affect each other, and it is this _____ of factors in particular that makes successful farm management so challenging.",
+      "passage": "Weather patterns, market trends, input costs, labor availability, equipment maintenance, and biological cycles are all variables that farmers must consider separately and in terms of how they may affect each other, and it is this ______ of factors in particular that makes successful farm management so challenging.",
       "prompt": "Which choice completes the text with the most logical and precise word or phrase?",
       "options": [
         {
@@ -1342,7 +1342,7 @@
       "section": "Reading and Writing",
       "module_num": 2,
       "topic": "Vocabulary in Context (Efficiency & Output)",
-      "passage": "To maximize throughput, package distribution centers employ advanced scheduling systems and strategic staging areas... are so efficient that even when delivery trucks arrive with short notice, goods can be processed rapidly.",
+      "passage": "To maximize ______, package distribution centers employ advanced scheduling systems and strategic staging areas that allow for goods received from warehouses to be immediately transferred to trucks for delivery to their final destinations. Some centers are so efficient that even the largest delivery trucks can be filled in a matter of minutes.",
       "prompt": "Which choice completes the text with the most logical and precise word or phrase?",
       "options": [
         {
@@ -1384,7 +1384,7 @@
       "section": "Reading and Writing",
       "module_num": 2,
       "topic": "Vocabulary in Context (Parameters)",
-      "passage": "Researchers have developed algorithms that take into account how various _____ influence production schedules, allowing rapid solution generation for manufacturing planning problems. The algorithms help identify efficient production schedules by processing those quantifiable inputs...",
+      "passage": "Researchers have developed algorithms that take into account how various ______ influence production schedules, allowing rapid solution generation for manufacturing planning problems. The algorithms help identify efficient production schedules by processing those quantifiable inputs (e.g., demand patterns and capacity constraints) without exhaustively testing all possible scenarios.",
       "prompt": "Which choice completes the text with the most logical and precise word or phrase?",
       "options": [
         {
@@ -1401,10 +1401,10 @@
         },
         {
           "key": "D",
-          "text": "liabilities"
+          "text": "anomalies"
         }
       ],
-      "options_raw": "A. optimizations\nB. predictions\nC. parameters\nD. liabilities",
+      "options_raw": "A. optimizations\nB. predictions\nC. parameters\nD. anomalies",
       "is_grid_in": false,
       "correct_answer": "C",
       "tier1_hint": "Xác định bản chất của các yếu tố đầu vào được sử dụng trong mô hình nghiên cứu.",
@@ -1426,7 +1426,7 @@
       "section": "Reading and Writing",
       "module_num": 2,
       "topic": "Vocabulary in Context (Cautions & Warnings)",
-      "passage": "Marvel Girl's ability to lift modest loads with her mind is illustrative of the lamentably lackluster powers bestowed on many female superheroes... serve as _____ showing the corrupting influence of power.",
+      "passage": "Marvel Girl’s ability to lift modest loads with her mind is illustrative of the lamentably lackluster powers bestowed on many female superheroes, but even those with more formidable powers have been subject to unflattering portrayals that often serve as ______: as the Phoenix, Jean Grey loses control of a cosmic force and destroys an entire planet, showing the corrupting influence of power.",
       "prompt": "Which choice completes the text with the most logical and precise word or phrase?",
       "options": [
         {
@@ -1468,7 +1468,7 @@
       "section": "Reading and Writing",
       "module_num": 2,
       "topic": "Sentence Function & Text Structure",
-      "passage": "Research on minor solar eruptions in magnetically quiet regions revealed an interesting pattern. Material expelled during these events follows a narrow arc trajectory back to the Sun's surface... Although these are impressive speeds, they are not sufficient to overcome the confining forces of the Sun's gravity... so the material is pulled back down.",
+      "passage": "Research on minor solar eruptions in magnetically quiet regions revealed an interesting pattern. Material expelled during these events follows a narrow arc trajectory back to the Sun’s surface. High-resolution images show these eruptions produce thin streams of hot gas moving at speeds between 55 and 200 kilometers per second. Although these are impressive speeds, they are not sufficient to overcome the confining forces of the Sun’s gravity and magnetic field, so the material is pulled back down.",
       "prompt": "Which choice best describes the function of the underlined sentence in the text as a whole?",
       "options": [
         {
@@ -1477,18 +1477,18 @@
         },
         {
           "key": "B",
-          "text": "It presents a research finding that challenges the view mentioned in the first sentence."
+          "text": "It presents a research finding that challenges the view mentioned in the first sentence of the text."
         },
         {
           "key": "C",
-          "text": "It acknowledges an exception to the pattern described in the first sentence."
+          "text": "It acknowledges an exception to the pattern described in the first sentence of the text."
         },
         {
           "key": "D",
           "text": "It discusses a natural occurrence that leads to the consequences explained later in the text."
         }
       ],
-      "options_raw": "A. It describes a natural phenomenon that is explained later in the text.\nB. It presents a research finding that challenges the view mentioned in the first sentence.\nC. It acknowledges an exception to the pattern described in the first sentence.\nD. It discusses a natural occurrence that leads to the consequences explained later in the text.",
+      "options_raw": "A. It describes a natural phenomenon that is explained later in the text.\nB. It presents a research finding that challenges the view mentioned in the first sentence of the text.\nC. It acknowledges an exception to the pattern described in the first sentence of the text.\nD. It discusses a natural occurrence that leads to the consequences explained later in the text.",
       "is_grid_in": false,
       "correct_answer": "D",
       "tier1_hint": "Xác định chức năng của câu gạch chân đối với lập luận toàn bài.",
@@ -1510,27 +1510,27 @@
       "section": "Reading and Writing",
       "module_num": 2,
       "topic": "Text Structure & Overall Purpose",
-      "passage": "Blue holes are large underwater sinkholes: pits filled with dark blue water... The formation of blue holes typically involves several natural processes, including the dissolution of limestone... Currently, the deepest blue hole on record is the Taam Ja' Blue Hole in Chetumal Bay, Mexico...",
+      "passage": "With examples ranging from Dean’s Blue Hole in the Bahamas to Watling’s Blue Hole near San Salvador Island, blue holes are large underwater sinkholes: pits filled with dark blue water that contrasts with lighter blue shallower waters surrounding them. The formation of blue holes typically involves several natural processes, including the dissolution of limestone or other carbonate rocks. Currently, the deepest blue hole on record is the Taam Ja’ Blue Hole in Chetumal Bay, Mexico, which is reported by Laura Carrillo and colleagues as extending at least 420 meters below sea level.",
       "prompt": "Which choice best describes the overall structure of the text?",
       "options": [
         {
           "key": "A",
-          "text": "It describes the appearance of a particular type of sinkhole, compares two sinkholes, and names researchers."
+          "text": "It describes the appearance of a particular type of sinkhole, compares the formations of two sinkholes of that type, and then names the researchers who discovered the deepest known sinkhole of that type."
         },
         {
           "key": "B",
-          "text": "It compares a deep sinkhole to a shallower one, details processes, and emphasizes depth."
+          "text": "It compares a deep sinkhole to a shallower one, details the processes by which both sinkholes formed, and emphasizes the remarkable depth of the deeper sinkhole."
         },
         {
           "key": "C",
-          "text": "It explains how a particular sinkhole formed, evaluates appearance, and provides info."
+          "text": "It explains how a particular sinkhole formed, evaluates that sinkhole’s unusual appearance, and names a research team that is studying the sinkhole."
         },
         {
           "key": "D",
           "text": "It defines a kind of sinkhole, describes its typical appearance and formation, and provides information about the deepest known sinkhole."
         }
       ],
-      "options_raw": "A. It describes the appearance of a particular type of sinkhole, compares two sinkholes, and names researchers.\nB. It compares a deep sinkhole to a shallower one, details processes, and emphasizes depth.\nC. It explains how a particular sinkhole formed, evaluates appearance, and provides info.\nD. It defines a kind of sinkhole, describes its typical appearance and formation, and provides information about the deepest known sinkhole.",
+      "options_raw": "A. It describes the appearance of a particular type of sinkhole, compares the formations of two sinkholes of that type, and then names the researchers who discovered the deepest known sinkhole of that type.\nB. It compares a deep sinkhole to a shallower one, details the processes by which both sinkholes formed, and emphasizes the remarkable depth of the deeper sinkhole.\nC. It explains how a particular sinkhole formed, evaluates that sinkhole’s unusual appearance, and names a research team that is studying the sinkhole.\nD. It defines a kind of sinkhole, describes its typical appearance and formation, and provides information about the deepest known sinkhole.",
       "is_grid_in": false,
       "correct_answer": "D",
       "tier1_hint": "Phân tích bố cục bài đọc từ việc nêu hiện tượng đến việc đưa ra lời giải thích.",
@@ -1552,27 +1552,27 @@
       "section": "Reading and Writing",
       "module_num": 2,
       "topic": "Cross-Text Comparison (Paired Passages)",
-      "passage": "Text 1: The wood I walk in on this mild May day... what grove of tropic palms, what strange ferns... could ever thrill such deep and delicate fibres within me as this home scene?\nText 2: My feelings seem to be those of our ancient earth... my own consciousness seems to stream through each blade of grass... in the rustling palm leaves.",
-      "prompt": "Which choice best describes a notable difference in how the author of Text 1 and the author of Text 2 refer to palm trees?",
+      "passage": "Text 1 is from George Eliot’s 1860 novel The Mill on the Floss. Text 2 is from Rabindranath Tagore’s 1921\n\nnonfiction book Glimpses of Bengal.\n\nText 1\n\nThe wood I walk in on this mild May day, with the young yellow-brown foliage of the oaks between me and the blue sky, the white star-flowers and the blue-eyed speedwell and the ground ivy at my feet, what grove of tropic palms, what strange ferns or splendid broad-petalled blossoms, could ever thrill such deep and delicate fibres within me as this home scene?\n\nText 2\n\nMy feelings seem to be those of our ancient earth in the daily ecstasy of its sun-kissed life; my own consciousness seems to stream through each blade of grass, each sucking root, to rise with the sap through the trees, to break out with joyous thrills in the waving fields of corn, in the rustling palm leaves.",
+      "prompt": "Which choice best describes a notable difference in how the references to palm trees function in Text 1 and Text 2?",
       "options": [
         {
           "key": "A",
-          "text": "While the narrator of Text 1 and the author of Text 2 both refer to metaphorical palm trees, only Text 1 suggests they represent home."
+          "text": "While the narrator of Text 1 and the author of Text 2 both refer to metaphorical palm trees, only the narrator of Text 1 suggests that the palm trees are representative of home."
         },
         {
           "key": "B",
-          "text": "While palm trees form part of a series conveying variety in both texts, only Text 2 recognizes how interconnected they are."
+          "text": "While palm trees form part of a series conveying the variety of the natural world in both texts, only the author of Text 2 recognizes how closely interconnected palm trees are with other plants in their environment."
         },
         {
           "key": "C",
-          "text": "While both discuss palm trees to suggest the value of nature, only Text 1 alludes to labor."
+          "text": "While the narrator of Text 1 and the author of Text 2 both discuss palm trees to suggest the value of experiencing the natural world, only the narrator of Text 1 alludes to the labor that goes into cultivating real palm trees."
         },
         {
           "key": "D",
           "text": "While palm trees serve to evoke natural beauty in both texts, only the author of Text 2 expresses a close sense of identification with palm trees."
         }
       ],
-      "options_raw": "A. While the narrator of Text 1 and the author of Text 2 both refer to metaphorical palm trees, only Text 1 suggests they represent home.\nB. While palm trees form part of a series conveying variety in both texts, only Text 2 recognizes how interconnected they are.\nC. While both discuss palm trees to suggest the value of nature, only Text 1 alludes to labor.\nD. While palm trees serve to evoke natural beauty in both texts, only the author of Text 2 expresses a close sense of identification with palm trees.",
+      "options_raw": "A. While the narrator of Text 1 and the author of Text 2 both refer to metaphorical palm trees, only the narrator of Text 1 suggests that the palm trees are representative of home.\nB. While palm trees form part of a series conveying the variety of the natural world in both texts, only the author of Text 2 recognizes how closely interconnected palm trees are with other plants in their environment.\nC. While the narrator of Text 1 and the author of Text 2 both discuss palm trees to suggest the value of experiencing the natural world, only the narrator of Text 1 alludes to the labor that goes into cultivating real palm trees.\nD. While palm trees serve to evoke natural beauty in both texts, only the author of Text 2 expresses a close sense of identification with palm trees.",
       "is_grid_in": false,
       "correct_answer": "A",
       "tier1_hint": "So sánh góc nhìn của tác giả Đoạn 1 và tác giả Đoạn 2 về cùng một chủ đề.",
@@ -1594,27 +1594,27 @@
       "section": "Reading and Writing",
       "module_num": 2,
       "topic": "Main Idea (Vernacular Riddles)",
-      "passage": "Primarily encountered by modern readers as inert written texts, the vernacular riddles of early medieval England contain 'implicit vestiges' of an interactive performance context, scholar Jill Frederick argues. Locative phrases scattered throughout... invite a verbalized response... suggesting a form of dramatic impersonation...",
+      "passage": "Primarily encountered by modern readers as inert written texts, the vernacular riddles of early medieval England contain “implicit vestiges” of an interactive performance context, scholar Jill Frederick argues. Locative phrases (e.g., “here” and “now”) scattered throughout the riddles indicate the space shared by their speakers and audiences; the common refrain “say what I am called” invites a verbalized response; and the conflation of many of the riddles’ speakers with their solutions (typically animals, objects, or natural phenomena) suggests a form of dramatic impersonation perhaps meant to entertain during public gatherings.",
       "prompt": "Which choice best states the main idea of the text?",
       "options": [
         {
           "key": "A",
-          "text": "It is reasonable to conclude that vernacular riddles were mainly performed at large public gatherings..."
+          "text": "It is reasonable to conclude based on textual evidence from the vernacular riddles of early medieval England that they were mainly performed at large public gatherings, though documentation of the locations in which they were performed is unlikely to exist."
         },
         {
           "key": "B",
-          "text": "Linguistic evidence found within the vernacular riddles of early medieval England suggests that they may have been intended to be performed in communal settings, though this isn't how they are generally experienced by readers today."
+          "text": "Linguistic evidence found within the vernacular riddles of early medieval England suggests that they may have been intended to be performed in communal settings, though this isn’t how they are generally experienced by readers today."
         },
         {
           "key": "C",
-          "text": "People of early medieval England likely found riddles more amusing than modern readers..."
+          "text": "People of early medieval England likely found that era’s vernacular riddles to be more amusing than modern readers do, given that there is substantial evidence to indicate that they are best experienced in the context of an interactive performance rather than exclusively as written texts."
         },
         {
           "key": "D",
-          "text": "Scholars once assumed that riddles were read silently..."
+          "text": "Scholars once assumed that the vernacular riddles of early medieval England were originally intended to be read silently, but newly uncovered historical documents corroborate Jill Frederick’s assertion that they may in fact have been intended primarily for oral performance."
         }
       ],
-      "options_raw": "A. It is reasonable to conclude that vernacular riddles were mainly performed at large public gatherings...\nB. Linguistic evidence found within the vernacular riddles of early medieval England suggests that they may have been intended to be performed in communal settings, though this isn't how they are generally experienced by readers today.\nC. People of early medieval England likely found riddles more amusing than modern readers...\nD. Scholars once assumed that riddles were read silently...",
+      "options_raw": "A. It is reasonable to conclude based on textual evidence from the vernacular riddles of early medieval England that they were mainly performed at large public gatherings, though documentation of the locations in which they were performed is unlikely to exist.\nB. Linguistic evidence found within the vernacular riddles of early medieval England suggests that they may have been intended to be performed in communal settings, though this isn’t how they are generally experienced by readers today.\nC. People of early medieval England likely found that era’s vernacular riddles to be more amusing than modern readers do, given that there is substantial evidence to indicate that they are best experienced in the context of an interactive performance rather than exclusively as written texts.\nD. Scholars once assumed that the vernacular riddles of early medieval England were originally intended to be read silently, but newly uncovered historical documents corroborate Jill Frederick’s assertion that they may in fact have been intended primarily for oral performance.",
       "is_grid_in": false,
       "correct_answer": "B",
       "tier1_hint": "Tập trung vào ý tưởng chủ đạo xuyên suốt các câu thơ/đoạn văn thay vì các chi tiết phụ.",
@@ -1636,27 +1636,27 @@
       "section": "Reading and Writing",
       "module_num": 2,
       "topic": "Inference / Textual Evidence",
-      "passage": "In the Mexican dialect of Spanish, the consonant s is pronounced with greater tension in the tongue... Margarita Hidalgo argues that Mexican Spanish acquired this pronunciation from Nahuatl... as Spanish colonizers incorporated Nahuatl words...",
+      "passage": "In the Mexican dialect of Spanish, the consonant s is pronounced with greater tension in the tongue than it is in Castilian, the dominant dialect in Spain, resulting in a sharper sound. Margarita Hidalgo, a linguist at San Diego State University, argues that Mexican Spanish acquired this pronunciation from Nahuatl, the language of the Nahua people in central Mexico: as the Spanish colonizers of Mexico incorporated Nahuatl words into their speech, and as more and more Nahuas spoke Spanish as a second language, the Nahuatl pronunciation of the s consonant replaced the Castilian pronunciation.",
       "prompt": "Information in the text best supports which statement about the consonant s?",
       "options": [
         {
           "key": "A",
-          "text": "The pronunciation of this consonant is the principal difference between dialects."
+          "text": "The pronunciation of this consonant is the principal difference between the Mexican and Castilian dialects of Spanish."
         },
         {
           "key": "B",
-          "text": "This consonant appears in a higher percentage of Nahuatl vocabulary."
+          "text": "This consonant appears in a higher percentage of Nahuatl vocabulary than of Castilian vocabulary."
         },
         {
           "key": "C",
-          "text": "The pronunciation of this consonant in Mexican Spanish may have been affected by its pronunciation in Nahuatl."
+          "text": "The pronunciation of this consonant in Nahuatl may have been affected by its pronunciation in Mexican Spanish."
         },
         {
           "key": "D",
-          "text": "The pronunciation requires greater tension in the tongue in Nahuatl than in Castilian."
+          "text": "The pronunciation of this consonant requires greater tension in the tongue in Nahuatl than in Castilian."
         }
       ],
-      "options_raw": "A. The pronunciation of this consonant is the principal difference between dialects.\nB. This consonant appears in a higher percentage of Nahuatl vocabulary.\nC. The pronunciation of this consonant in Mexican Spanish may have been affected by its pronunciation in Nahuatl.\nD. The pronunciation requires greater tension in the tongue in Nahuatl than in Castilian.",
+      "options_raw": "A. The pronunciation of this consonant is the principal difference between the Mexican and Castilian dialects of Spanish.\nB. This consonant appears in a higher percentage of Nahuatl vocabulary than of Castilian vocabulary.\nC. The pronunciation of this consonant in Nahuatl may have been affected by its pronunciation in Mexican Spanish.\nD. The pronunciation of this consonant requires greater tension in the tongue in Nahuatl than in Castilian.",
       "is_grid_in": false,
       "correct_answer": "D",
       "tier1_hint": "Đối chiếu các dữ kiện trong bài đọc để tìm suy luận có căn cứ trực tiếp.",
@@ -1678,27 +1678,27 @@
       "section": "Reading and Writing",
       "module_num": 2,
       "topic": "Command of Evidence (Cover Crops)",
-      "passage": "Cover crops, such as teff, are planted between main growing seasons... Axel Don concluded that cover crops contribute meaningfully to soil carbon sequestration and could help offset agricultural emissions...",
-      "prompt": "Which finding, if true, would be most consistent with Don and his coauthor's conclusion?",
+      "passage": "Cover crops, such as teff, are planted by many farmers between main growing seasons. While these crops are known for increasing biodiversity, Axel Don and his coauthor argued in a 2015 study that cover crops’ role in supporting soil carbon sequestration deserves more attention. Cover crops remove carbon dioxide (CO2) from the air and convert it to organic compounds; some of these compounds are stored in the soil as soil organic carbon (SOC), which contributes to the buildup of SOC stocks over time. Based on data from numerous farm fields, Don and his coauthor concluded that cover crops contribute meaningfully to soil carbon sequestration and, if widely adopted, could help offset agricultural emissions of atmospheric CO2 and other greenhouse gases.",
+      "prompt": "Which finding, if true, would be most consistent with Don and his coauthor’s conclusion?",
       "options": [
         {
           "key": "A",
-          "text": "Teff captures considerably more CO2 in fields where it is grown alongside other species..."
+          "text": "Teff captures considerably more CO2 in fields where it is the sole cover crop compared with fields where it is grown alongside other species of cover crops."
         },
         {
           "key": "B",
-          "text": "Cover crops generally exhibit reduced carbon sequestration rates in fields exposed to high levels..."
+          "text": "Cover crops generally exhibit reduced carbon sequestration rates in fields exposed to high levels of greenhouse gas emissions compared with fields exposed to low levels of those emissions."
         },
         {
           "key": "C",
-          "text": "SOC stocks vary more in fields where cover crops have been grown for decades..."
+          "text": "SOC stocks vary more in fields where cover crops have been grown for decades compared with fields where cover crops have only recently been introduced."
         },
         {
           "key": "D",
           "text": "SOC stocks tend to be significantly lower in fields without cover crops compared with fields where cover crops have been grown for several years."
         }
       ],
-      "options_raw": "A. Teff captures considerably more CO2 in fields where it is grown alongside other species...\nB. Cover crops generally exhibit reduced carbon sequestration rates in fields exposed to high levels...\nC. SOC stocks vary more in fields where cover crops have been grown for decades...\nD. SOC stocks tend to be significantly lower in fields without cover crops compared with fields where cover crops have been grown for several years.",
+      "options_raw": "A. Teff captures considerably more CO2 in fields where it is the sole cover crop compared with fields where it is grown alongside other species of cover crops.\nB. Cover crops generally exhibit reduced carbon sequestration rates in fields exposed to high levels of greenhouse gas emissions compared with fields exposed to low levels of those emissions.\nC. SOC stocks vary more in fields where cover crops have been grown for decades compared with fields where cover crops have only recently been introduced.\nD. SOC stocks tend to be significantly lower in fields without cover crops compared with fields where cover crops have been grown for several years.",
       "is_grid_in": false,
       "correct_answer": "D",
       "tier1_hint": "Phân tích dữ liệu được trình bày về tác dụng của cây che phủ (cover crops).",
@@ -1720,27 +1720,27 @@
       "section": "Reading and Writing",
       "module_num": 2,
       "topic": "Text Completion / Logical Inference",
-      "passage": "While the brain regions most strongly associated with language tasks have some modularity... comprehension also invokes other areas of the brain associated with nonlinguistic functions. For example, understanding a description of physical actions activates sensory-motor areas... Thus, beyond the areas most strongly associated with linguistic functions, _____",
+      "passage": "While the brain regions most strongly associated with language tasks have some modularity in that different language tasks activate these areas to varying degrees, comprehension also invokes other areas of the brain more strongly associated with nonlinguistic functions. For example, understanding a description of a person performing physical actions might call on parts of the listener’s brain associated with sensory- motor functions, whereas a highly emotive account will likely activate areas associated with affective processing. Thus, beyond the areas most strongly associated with linguistic functions, ______",
       "prompt": "Which choice most logically completes the text?",
       "options": [
         {
           "key": "A",
-          "text": "the specific combination of brain regions involved in comprehension is likely contingent on the total context in which the speech is embedded."
+          "text": "the specific combination of brain regions involved in comprehending speech is likely contingent on the total context in which the speech is embedded."
         },
         {
           "key": "B",
-          "text": "the brain regions associated with sensory-motor functions are often involved..."
+          "text": "the brain regions associated with sensory-motor functions are often involved in general comprehension, even in contexts that don’t involve descriptions of physical movement."
         },
         {
           "key": "C",
-          "text": "the brain regions most strongly associated with affective processing activate..."
+          "text": "the brain regions most strongly associated with affective processing activate whenever a listener believes an utterance has emotional connotations, even if the speaker did not intend those connotations."
         },
         {
           "key": "D",
-          "text": "the areas of the brain that activate when processing speech will typically include..."
+          "text": "the areas of the brain that activate when processing speech will typically include areas primarily responsible for nonlinguistic functions, although the exact combination of areas may be impossible to determine."
         }
       ],
-      "options_raw": "A. the specific combination of brain regions involved in comprehension is likely contingent on the total context in which the speech is embedded.\nB. the brain regions associated with sensory-motor functions are often involved...\nC. the brain regions most strongly associated with affective processing activate...\nD. the areas of the brain that activate when processing speech will typically include...",
+      "options_raw": "A. the specific combination of brain regions involved in comprehending speech is likely contingent on the total context in which the speech is embedded.\nB. the brain regions associated with sensory-motor functions are often involved in general comprehension, even in contexts that don’t involve descriptions of physical movement.\nC. the brain regions most strongly associated with affective processing activate whenever a listener believes an utterance has emotional connotations, even if the speaker did not intend those connotations.\nD. the areas of the brain that activate when processing speech will typically include areas primarily responsible for nonlinguistic functions, although the exact combination of areas may be impossible to determine.",
       "is_grid_in": false,
       "correct_answer": "A",
       "tier1_hint": "Phân tích mối quan hệ logic giữa hai vế của câu cần hoàn thành.",
@@ -1762,27 +1762,27 @@
       "section": "Reading and Writing",
       "module_num": 2,
       "topic": "Text Completion / Logic Comparison",
-      "passage": "The Clarion-Clipperton Zone (CCZ)... Some species were identified both morphologically and molecularly, whereas species for which molecular sampling was impracticable were identified solely based on physical morphology. Since molecular analysis does not require distinguishing subtle physiological differences, it is _____",
+      "passage": "The Clarion-Clipperton Zone (CCZ) is an expanse of abyssal plain and seamounts (underwater mountains) between Hawai‘i and Mexico in which mining is permitted, but the area’s biodiversity is poorly understood. The vast majority of invertebrate species found in a recent survey of the CCZ were hitherto unknown to scientists, and sampling for animal life has been highly concentrated in the eastern part of the zone. Some species like Psychropotes dyscrita were identified both morphologically and molecularly (using DNA analysis), whereas Discantenna metallica and other species for which molecular sampling was impracticable were identified solely based on physical morphology. Since molecular analysis does not require distinguishing subtle physiological differences, it is ______",
       "prompt": "Which choice most logically completes the text?",
       "options": [
         {
           "key": "A",
-          "text": "more frequently used for identifying species with physical differences..."
+          "text": "more frequently used for identifying species with physiological characteristics like those of Psychropotes dyscrita than morphological analysis is."
         },
         {
           "key": "B",
-          "text": "capable of providing greater physiological detail..."
+          "text": "capable of providing greater physiological detail about a species than is the method used for Discantenna metallica."
         },
         {
           "key": "C",
-          "text": "better suited to distinguishing Psychropotes dyscrita from morphologically similar species..."
+          "text": "better suited to distinguishing Discantenna metallica from morphologically similar species than to distinguishing Psychropotes dyscrita from morphologically similar species."
         },
         {
           "key": "D",
           "text": "more likely to properly distinguish between morphologically similar but distinct invertebrate species than is the method used to identify Discantenna metallica."
         }
       ],
-      "options_raw": "A. more frequently used for identifying species with physical differences...\nB. capable of providing greater physiological detail...\nC. better suited to distinguishing Psychropotes dyscrita from morphologically similar species...\nD. more likely to properly distinguish between morphologically similar but distinct invertebrate species than is the method used to identify Discantenna metallica.",
+      "options_raw": "A. more frequently used for identifying species with physiological characteristics like those of Psychropotes dyscrita than morphological analysis is.\nB. capable of providing greater physiological detail about a species than is the method used for Discantenna metallica.\nC. better suited to distinguishing Discantenna metallica from morphologically similar species than to distinguishing Psychropotes dyscrita from morphologically similar species.\nD. more likely to properly distinguish between morphologically similar but distinct invertebrate species than is the method used to identify Discantenna metallica.",
       "is_grid_in": false,
       "correct_answer": "C",
       "tier1_hint": "Xác định sự so sánh giữa hai nhóm hoặc hai phương pháp được đề cập.",
@@ -1804,16 +1804,16 @@
       "section": "Reading and Writing",
       "module_num": 2,
       "topic": "Text Completion / Complex Inference",
-      "passage": "Rare species advantage (RSA) describes the situation in which there are few conspecifics... Among tree species in tropical forest sites, RSA is expected, but in temperate forest sites, the aggregation-abundance correlation is strongly negative. Mathematical modeling suggests, however, that ecological niche distinction may mitigate the apparent risk to temperate ecological stability engendered by this pattern because _____",
+      "passage": "Rare species advantage (RSA) describes the situation in which there are few conspecifics (other members of the same species) in an organism’s immediate surroundings, enabling the organism to avoid competition with conspecifics for the same resources; RSA is widely believed to play a crucial role in maintaining ecological stability. Among tree species in the Barro Colorado Island plot (latitude 9.15∘ N) and other tropical forest sites, there is little correlation between conspecific aggregation and the abundance of a given species in the wider local area, so RSA is expected, but in the Fenglin Nature Reserve (latitude 48.08∘ N) and other temperate forest sites, the aggregation-abundance correlation for tree species is strongly negative. Mathematical modeling suggests, however, that ecological niche distinction may mitigate the apparent risk to temperate ecological stability engendered by this pattern: ______",
       "prompt": "Which choice most logically completes the text?",
       "options": [
         {
           "key": "A",
-          "text": "as a tree species in temperate forests becomes more abundant, individuals are more likely..."
+          "text": "as a tree species in temperate forests becomes more abundant, individuals of that species are more likely to be found near conspecifics, enabling abundant species to exploit localized resources to a greater extent than rare species can."
         },
         {
           "key": "B",
-          "text": "even though rare tree species in forests tend to cluster..."
+          "text": "even though rare tree species in temperate forests tend to cluster with conspecifics more than rare tree species in tropical forests do, they are sufficiently rare locally that they benefit from RSA more than rare tropical species do."
         },
         {
           "key": "C",
@@ -1821,10 +1821,10 @@
         },
         {
           "key": "D",
-          "text": "while an increase in abundance in one tree species often leads..."
+          "text": "while an increase in abundance in one tree species often leads to a reduction in abundance of nearby species, temperate tree species tend to play different roles in the same ecosystem, reducing the expected effect of abundance on aggregation."
         }
       ],
-      "options_raw": "A. as a tree species in temperate forests becomes more abundant, individuals are more likely...\nB. even though rare tree species in forests tend to cluster...\nC. although rare tree species in temperate forests encounter relatively high local competition from conspecifics, they can thrive by exploiting resources that are underexploited by other local species.\nD. while an increase in abundance in one tree species often leads...",
+      "options_raw": "A. as a tree species in temperate forests becomes more abundant, individuals of that species are more likely to be found near conspecifics, enabling abundant species to exploit localized resources to a greater extent than rare species can.\nB. even though rare tree species in temperate forests tend to cluster with conspecifics more than rare tree species in tropical forests do, they are sufficiently rare locally that they benefit from RSA more than rare tropical species do.\nC. although rare tree species in temperate forests encounter relatively high local competition from conspecifics, they can thrive by exploiting resources that are underexploited by other local species.\nD. while an increase in abundance in one tree species often leads to a reduction in abundance of nearby species, temperate tree species tend to play different roles in the same ecosystem, reducing the expected effect of abundance on aggregation.",
       "is_grid_in": false,
       "correct_answer": "A",
       "tier1_hint": "Đọc kỹ các câu tiền đề để nắm vững giả thuyết nghiên cứu được đưa ra.",
@@ -1846,7 +1846,7 @@
       "section": "Reading and Writing",
       "module_num": 2,
       "topic": "Standard English Conventions (Modifiers)",
-      "passage": "A premortem is an exercise in which teams imagine their project has already failed... Prompting teams to proactively develop mitigation strategies during the planning stage, _____",
+      "passage": "A premortem is an exercise in which teams imagine their project has already failed, then brainstorm possible reasons for that failure. Despite its apparent pessimism, ______ prompting teams to proactively develop mitigation strategies during the planning stage. As a result, the project is more likely to succeed.",
       "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
       "options": [
         {
@@ -1888,7 +1888,7 @@
       "section": "Reading and Writing",
       "module_num": 2,
       "topic": "Standard English Conventions (Parallel Lists)",
-      "passage": "As one of aviation's earliest female stunt performers, Gladys Ingle developed a versatile repertoire of acrobatic feats. Her specialized skills included standing on the wing of a flying aircraft and shooting a bow and arrow at a target _____ maintaining perfect balance during aerial maneuvers, such as vertical loops; and even walking across the wing...",
+      "passage": "As one of aviation’s earliest female stunt performers, Gladys Ingle developed a versatile repertoire of acrobatic feats. Her specialized skills included standing on the wing of a flying aircraft and shooting a bow and arrow at a ______ perfect balance during aerial maneuvers, such as vertical loops; and even walking across the wing as an aircraft flew at full speed beneath a bridge.",
       "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
       "options": [
         {
@@ -1930,12 +1930,12 @@
       "section": "Reading and Writing",
       "module_num": 2,
       "topic": "Standard English Conventions (Participles)",
-      "passage": "During a recent investigation, archaeologists _____ an explanation for the consistent and seemingly deliberate placement of petroglyphs near water analyzed several sites on Caribbean islands.",
+      "passage": "During a recent investigation, archaeologists ______ an explanation for the consistent and seemingly deliberate placement of petroglyphs (rock carvings) near water analyzed several sites on Caribbean islands. They discovered that many of the pools near petroglyphs had consistent water levels year-round, creating perfect reflecting surfaces for the carved symbols on the rocks.",
       "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
       "options": [
         {
           "key": "A",
-          "text": "had"
+          "text": "had sought"
         },
         {
           "key": "B",
@@ -1950,7 +1950,7 @@
           "text": "were seeking"
         }
       ],
-      "options_raw": "A. had\nB. sought\nC. seeking\nD. were seeking",
+      "options_raw": "A. had sought\nB. sought\nC. seeking\nD. were seeking",
       "is_grid_in": false,
       "correct_answer": "C",
       "tier1_hint": "Phân tích vai trò ngữ pháp của từ cần điền trong mệnh đề chính.",
@@ -1972,27 +1972,27 @@
       "section": "Reading and Writing",
       "module_num": 2,
       "topic": "Standard English Conventions (Punctuation Dashes)",
-      "passage": "For his mash-up 'Smells Like Rockin' Robin,' DJ Mark Vidler layered Kurt Cobain's minor-key vocals over the Jackson 5's major-key blues progression _____ a technique that, by inserting the grunge singer's vocal melody as pitch-shifted 'blue notes', creates an intensified 'bluesy' sound.",
+      "passage": "For his mash-up “Smells Like Rockin’ Robin,” DJ Mark Vidler layered Kurt Cobain’s minor-key vocals from “Smells Like Teen Spirit” over the Jackson 5’s major-key blues progression from “Rockin’ ______ by inserting the grunge singer’s vocal melody as pitch-shifted “blue notes” within the pop-soul group’s harmonic framework, creates an intensified “bluesy” sound and subverts the expectations of listeners familiar with either musical source.",
       "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
       "options": [
         {
           "key": "A",
-          "text": "Robin, a technique that"
+          "text": "Robin,” a technique that"
         },
         {
           "key": "B",
-          "text": "Robin. A technique that"
+          "text": "Robin.” A technique that"
         },
         {
           "key": "C",
-          "text": "Robin; a technique that,"
+          "text": "Robin”; a technique that,"
         },
         {
           "key": "D",
-          "text": "Robin—a technique that,"
+          "text": "Robin”—a technique that,"
         }
       ],
-      "options_raw": "A. Robin, a technique that\nB. Robin. A technique that\nC. Robin; a technique that,\nD. Robin—a technique that,",
+      "options_raw": "A. Robin,” a technique that\nB. Robin.” A technique that\nC. Robin”; a technique that,\nD. Robin”—a technique that,",
       "is_grid_in": false,
       "correct_answer": "D",
       "tier1_hint": "Xác định cụm từ bổ sung thông tin không thiết yếu trong câu.",
@@ -2014,7 +2014,7 @@
       "section": "Reading and Writing",
       "module_num": 2,
       "topic": "Standard English Conventions (Prepositions)",
-      "passage": "During the late nineteenth century, agricultural chemist George Washington Carver revolutionized farming practices in the American _____ promoting systematic crop rotation techniques that replenished essential nitrogen in depleted soils.",
+      "passage": "During the late nineteenth century, agricultural chemist George Washington Carver revolutionized farming practices in the American ______ promoting systematic crop rotation techniques that replenished essential nitrogen in depleted soils.",
       "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
       "options": [
         {
@@ -2027,14 +2027,14 @@
         },
         {
           "key": "C",
-          "text": "South: by"
+          "text": "South; by"
         },
         {
           "key": "D",
-          "text": "South; by"
+          "text": "South: by"
         }
       ],
-      "options_raw": "A. South, by\nB. South by\nC. South: by\nD. South; by",
+      "options_raw": "A. South, by\nB. South by\nC. South; by\nD. South: by",
       "is_grid_in": false,
       "correct_answer": "B",
       "tier1_hint": "Xác định giới từ đi kèm cố định với danh từ hoặc động từ đứng trước.",
@@ -2056,7 +2056,7 @@
       "section": "Reading and Writing",
       "module_num": 2,
       "topic": "Standard English Conventions (Participles)",
-      "passage": "Named for the year in which it was detected by English astronomers, SN 2016aps was a supernova (the explosion of a massive star) _____ in the constellation Draco, 3.6 billion light-years from Earth, the powerful blast propelled particles into space.",
+      "passage": "Named for the year in which it was detected by English astronomers, SN 2016aps was a supernova (the explosion of a massive ______ in the constellation Draco, 3.6 billion light-years from Earth, the transient yet powerful blast propelled particles and debris into space at extremely high speeds.",
       "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
       "options": [
         {
@@ -2098,27 +2098,27 @@
       "section": "Reading and Writing",
       "module_num": 2,
       "topic": "Standard English Conventions (Dangling Modifiers)",
-      "passage": "Originating during the Cretaceous period, _____",
+      "passage": "Originating during the Cretaceous period, ______",
       "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
       "options": [
         {
           "key": "A",
-          "text": "entomologists have extensively examined fossilized resin deposits..."
+          "text": "entomologists have extensively examined fossilized resin deposits excavated in northern Myanmar."
         },
         {
           "key": "B",
-          "text": "the fossilized amber specimens excavated in northern Myanmar preserve anatomical details of early arthropods."
+          "text": "the fossilized amber specimens excavated in northern Myanmar preserve unprecedented anatomical details of early arthropods."
         },
         {
           "key": "C",
-          "text": "paleontological excavation in northern Myanmar has uncovered..."
+          "text": "paleontological excavation in northern Myanmar has uncovered numerous ancient arthropods."
         },
         {
           "key": "D",
-          "text": "arthropods were trapped and entombed within sticky conifer secretion..."
+          "text": "arthropods were trapped and entombed within sticky conifer secretions."
         }
       ],
-      "options_raw": "A. entomologists have extensively examined fossilized resin deposits...\nB. the fossilized amber specimens excavated in northern Myanmar preserve anatomical details of early arthropods.\nC. paleontological excavation in northern Myanmar has uncovered...\nD. arthropods were trapped and entombed within sticky conifer secretion...",
+      "options_raw": "A. entomologists have extensively examined fossilized resin deposits excavated in northern Myanmar.\nB. the fossilized amber specimens excavated in northern Myanmar preserve unprecedented anatomical details of early arthropods.\nC. paleontological excavation in northern Myanmar has uncovered numerous ancient arthropods.\nD. arthropods were trapped and entombed within sticky conifer secretions.",
       "is_grid_in": false,
       "correct_answer": "B",
       "tier1_hint": "Kiểm tra cụm mở đầu câu dạng `-ing` hoặc `-ed` đứng trước dấu phẩy.",
@@ -2140,7 +2140,7 @@
       "section": "Reading and Writing",
       "module_num": 2,
       "topic": "Transitions (Contrast)",
-      "passage": "In a 1993 study by Vales and Peek, the researchers used microhistological fecal analysis to determine the ratio of three plant subtypes... The researchers did not perform this analysis on all such ungulates, _____ they focused exclusively on elk in Wyoming.",
+      "passage": "In a 1993 study by Vales and Peek, the researchers used microhistological fecal analysis to determine the ratio of three plant subtypes (graminoids, forbs, and browse) within the diets of North American ungulates. The researchers did not perform this analysis on all such ungulates, ______ they focused exclusively on elk in Wyoming.",
       "prompt": "Which choice completes the text with the most logical transition?",
       "options": [
         {
@@ -2182,7 +2182,7 @@
       "section": "Reading and Writing",
       "module_num": 2,
       "topic": "Transitions (Illustration / Exemplification)",
-      "passage": "The Hornbostel-Sachs system classifies musical instruments by how they produce sound. For example, an instrument that is popular in India called the saraswati veena produces sound primarily through the vibration of its strings. _____ under the Hornbostel-Sachs system, the saraswati veena is a chordophone.",
+      "passage": "The Hornbostel-Sachs system classifies musical instruments by how they produce sound. For example, an instrument that is popular in India called the saraswati veena produces sound primarily through the vibration of its strings. ______ under the Hornbostel-Sachs system, the saraswati veena is a chordophone.",
       "prompt": "Which choice completes the text with the most logical transition?",
       "options": [
         {
@@ -2224,7 +2224,7 @@
       "section": "Reading and Writing",
       "module_num": 2,
       "topic": "Transitions (Comparison / Contrast)",
-      "passage": "Generally, sleek vehicles are more aerodynamic than bulkier ones. The streamlined nose of the Airbus A350 XWB jet helps it glide through wind with relative ease, _____ a boxy pickup truck encounters more wind resistance.",
+      "passage": "Generally, sleek vehicles are more aerodynamic than bulkier ones. The streamlined nose of the Airbus A350 XWB jet, ______ helps it glide through wind with relative ease, while a boxy pickup truck encounters more wind resistance, making it less aerodynamic.",
       "prompt": "Which choice completes the text with the most logical transition?",
       "options": [
         {
@@ -2266,27 +2266,27 @@
       "section": "Reading and Writing",
       "module_num": 2,
       "topic": "Transitions (Emphasis)",
-      "passage": "On June 13, 1927, aviator Charles Lindbergh received a ticker-tape parade in New York City... Of the 206 ticker-tape parades held between 1886 and 2022, a number were for achievements in aviation. _____ Lindbergh's parade was just one of 16 honoring pilots.",
+      "passage": "On June 13, 1927, aviator Charles Lindbergh received a ticker-tape parade in New York City in recognition of his transatlantic flight. Of the 206 ticker-tape parades held between 1886 and 2022, a number were for achievements in aviation. ______ Lindbergh’s parade was just one of 16 honoring pilots.",
       "prompt": "Which choice completes the text with the most logical transition?",
       "options": [
         {
           "key": "A",
-          "text": "Indeed,"
+          "text": "Therefore,"
         },
         {
           "key": "B",
-          "text": "In addition,"
+          "text": "Indeed,"
         },
         {
           "key": "C",
-          "text": "Indeed,"
+          "text": "In addition,"
         },
         {
           "key": "D",
           "text": "Nevertheless,"
         }
       ],
-      "options_raw": "A. Indeed,\nB. In addition,\nC. Indeed,\nD. Nevertheless,",
+      "options_raw": "A. Therefore,\nB. Indeed,\nC. In addition,\nD. Nevertheless,",
       "is_grid_in": false,
       "correct_answer": "B",
       "tier1_hint": "Phân tích sắc thái của phát biểu ở câu thứ hai.",
@@ -2308,27 +2308,27 @@
       "section": "Reading and Writing",
       "module_num": 2,
       "topic": "Transitions (Contrast & Context)",
-      "passage": "Between February 1876 and September 1876, George Eliot's novel Daniel Deronda was serialized in eight parts... Scholars typically regard the serial version as less authoritative than the book version. _____ as scholar Philip Allingham notes, serialized texts were the versions in which nineteenth-century readership first saw itself reflected.",
+      "passage": "Between February 1876 and September 1876, George Eliot’s novel Daniel Deronda was serialized in eight parts in Blackwood’s Magazine. Scholars typically regard the serial version of Eliot’s novel as less authoritative than the version later published in book form. ______ as scholar Philip Allingham notes, serialized texts were the versions in which the nineteenth-century readership first “saw itself and its world reflected, and to which it responded, often with great emotion.”",
       "prompt": "Which choice completes the text with the most logical transition?",
       "options": [
         {
           "key": "A",
-          "text": "Accordingly, they emphasize..."
+          "text": "Accordingly, they emphasize the appeal of the serial version for Victorian audiences;"
         },
         {
           "key": "B",
-          "text": "Still, the serial version is important to an understanding of the novel's historical context;"
+          "text": "Still, the serial version is important to an understanding of the novel’s historical context;"
         },
         {
           "key": "C",
-          "text": "Consequently, the book version..."
+          "text": "Consequently, the book version of the novel is often favored over the serial version;"
         },
         {
           "key": "D",
-          "text": "However, others regard..."
+          "text": "However, others regard the serial version as a more faithful representation of Eliot’s intentions;"
         }
       ],
-      "options_raw": "A. Accordingly, they emphasize...\nB. Still, the serial version is important to an understanding of the novel's historical context;\nC. Consequently, the book version...\nD. However, others regard...",
+      "options_raw": "A. Accordingly, they emphasize the appeal of the serial version for Victorian audiences;\nB. Still, the serial version is important to an understanding of the novel’s historical context;\nC. Consequently, the book version of the novel is often favored over the serial version;\nD. However, others regard the serial version as a more faithful representation of Eliot’s intentions;",
       "is_grid_in": false,
       "correct_answer": "B",
       "tier1_hint": "Xem xét bối cảnh và sự chuyển ý giữa hai đoạn văn.",
@@ -2350,12 +2350,12 @@
       "section": "Reading and Writing",
       "module_num": 2,
       "topic": "Rhetorical Synthesis / Student Notes",
-      "passage": "Notes: Highpointers Club aims to reach the highest points in 50 US states (50 Completers). In Suk Han completed this on Nov 15, 2013. Timms Hill in Wisconsin (1,951 ft), Gannett Peak in Wyoming (13,809 ft).",
+      "passage": "•  The Highpointers Club is a hiking club.\n\n•  One of the main goals among club members is to reach the highest points in all fifty US states.\n\n•  Those who achieve this are called 50 Completers.\n\n•  In Suk Han became a 50 Completer on November 15, 2013.\n\n•  The highest point in Wisconsin is Timms Hill, at 1,951 ft.\n\n•  The highest point in Wyoming is Gannett Peak, at 13,809 ft.",
       "prompt": "Which choice most effectively uses information from the given sentences to explain the 50 Completers hiking challenge to a new audience?",
       "options": [
         {
           "key": "A",
-          "text": "If you are looking for a new hiking challenge, consider joining..."
+          "text": "If you are looking for a new hiking challenge, consider joining the Highpointers Club, as did In Suk Han, a hiker who successfully reached the highest point in every US state."
         },
         {
           "key": "B",
@@ -2363,14 +2363,14 @@
         },
         {
           "key": "C",
-          "text": "On November 15, 2013, In Suk Han finally completed..."
+          "text": "On November 15, 2013, In Suk Han finally completed the feat of reaching the highest point in all fifty US states, including Timms Hill in Wisconsin and Gannett Peak in Wyoming."
         },
         {
           "key": "D",
-          "text": "Hikers aiming to count themselves among the 50 Completers..."
+          "text": "Hikers aiming to count themselves among the 50 Completers must reach not only Wisconsin’s Timms Hill but also the even higher peak of Gannett Peak in Wyoming."
         }
       ],
-      "options_raw": "A. If you are looking for a new hiking challenge, consider joining...\nB. Not until after you have reached the highest points in all fifty US states—including Timms Hill in Wisconsin and Gannett Peak in Wyoming—can you include yourself among the 50 Completers of the Highpointers Club.\nC. On November 15, 2013, In Suk Han finally completed...\nD. Hikers aiming to count themselves among the 50 Completers...",
+      "options_raw": "A. If you are looking for a new hiking challenge, consider joining the Highpointers Club, as did In Suk Han, a hiker who successfully reached the highest point in every US state.\nB. Not until after you have reached the highest points in all fifty US states—including Timms Hill in Wisconsin and Gannett Peak in Wyoming—can you include yourself among the 50 Completers of the Highpointers Club.\nC. On November 15, 2013, In Suk Han finally completed the feat of reaching the highest point in all fifty US states, including Timms Hill in Wisconsin and Gannett Peak in Wyoming.\nD. Hikers aiming to count themselves among the 50 Completers must reach not only Wisconsin’s Timms Hill but also the even higher peak of Gannett Peak in Wyoming.",
       "is_grid_in": false,
       "correct_answer": "B",
       "tier1_hint": "Đọc kỹ yêu cầu đề bài để biết thông tin nào cần được làm nổi bật.",
@@ -2392,12 +2392,12 @@
       "section": "Reading and Writing",
       "module_num": 2,
       "topic": "Rhetorical Synthesis / Student Notes",
-      "passage": "Notes: Enhanced rock weathering (ERW) spreads crushed basalt on farmland to capture CO2 and improve soil health. ERW is low-cost, low-tech compared to expensive energy-intensive methods. CO2 becomes stable bicarbonate in soil water flowing to oceans.",
+      "passage": "While researching a topic, a student has taken the following notes:\n\n•  Enhanced rock weathering (ERW) is a method of spreading crushed basalt on farmland to capture\n\ncarbon dioxide (CO2) and improve soil health.\n\n•  ERW increases crop yields and removes harmful CO2 from the air.\n\n•  ERW offers a low-cost, low-tech alternative to expensive, energy-intensive carbon capture methods.\n\n•  The CO2 captured by ERW becomes stable bicarbonate in soil water, which eventually streams into the\n\nocean to remain safely stored for hundreds of years.\n\n•  ERW can improve rural economies by reducing farmers’ need for fertilizers and increasing their\n\nearnings from carbon credits.",
       "prompt": "The student wants to explain why ERW is a superior method for capturing CO2. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
       "options": [
         {
           "key": "A",
-          "text": "ERW improves soil health and helps farmers increase their income..."
+          "text": "ERW improves soil health and helps farmers increase their income from selling carbon credits."
         },
         {
           "key": "B",
@@ -2405,14 +2405,14 @@
         },
         {
           "key": "C",
-          "text": "CO2 captured by ERW becomes stable bicarbonate..."
+          "text": "The CO2 captured by ERW becomes stable bicarbonate, which improves soil health by remaining in the ocean for hundreds of years."
         },
         {
           "key": "D",
-          "text": "ERW is a method of spreading crushed basalt on farmland..."
+          "text": "ERW is a method of spreading crushed basalt on farmland to capture CO2, improving rural economies. STOP If you finish before time is called, you may check your work on this module only. Do not turn to any other module in the test."
         }
       ],
-      "options_raw": "A. ERW improves soil health and helps farmers increase their income...\nB. ERW removes CO2 from the air in a way that is both low-cost and low-tech.\nC. CO2 captured by ERW becomes stable bicarbonate...\nD. ERW is a method of spreading crushed basalt on farmland...",
+      "options_raw": "A. ERW improves soil health and helps farmers increase their income from selling carbon credits.\nB. ERW removes CO2 from the air in a way that is both low-cost and low-tech.\nC. The CO2 captured by ERW becomes stable bicarbonate, which improves soil health by remaining in the ocean for hundreds of years.\nD. ERW is a method of spreading crushed basalt on farmland to capture CO2, improving rural economies. STOP If you finish before time is called, you may check your work on this module only. Do not turn to any other module in the test.",
       "is_grid_in": false,
       "correct_answer": "B",
       "tier1_hint": "Xác định mục tiêu nhấn mạnh sự khác biệt hay điểm chung giữa hai đối tượng.",
