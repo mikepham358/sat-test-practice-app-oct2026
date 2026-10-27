@@ -157,6 +157,7 @@ const DOM = {
 
   // Modals
   modalCalculator: document.getElementById("modal-calculator"),
+  calcModalHeader: document.getElementById("calc-modal-header"),
   btnCloseCalculator: document.getElementById("btn-close-calculator"),
   modalReference: document.getElementById("modal-reference"),
   btnCloseReference: document.getElementById("btn-close-reference"),
@@ -453,6 +454,7 @@ function startPracticeFromHome(targetModule) {
 document.addEventListener("DOMContentLoaded", async () => {
   loadLocalState();
   initSplitResizer();
+  initDraggableDesmos();
   initScratchpad();
   initOnboarding();
   setupEventListeners();
@@ -1996,6 +1998,127 @@ function initSplitResizer() {
   });
 }
 
+// ================= DRAGGABLE DESMOS CALCULATOR =================
+function initDraggableDesmos() {
+  const modal = DOM.modalCalculator;
+  const header = DOM.calcModalHeader || document.getElementById("calc-modal-header");
+  if (!modal || !header) return;
+
+  let isDragging = false;
+  let startX = 0;
+  let startY = 0;
+  let initialLeft = 0;
+  let initialTop = 0;
+  const iframe = modal.querySelector("iframe");
+
+  // Keep modal elevated above other floating elements when clicked
+  modal.addEventListener("mousedown", () => {
+    modal.style.zIndex = "1000";
+  });
+
+  function onPointerDown(e) {
+    // Ignore clicks on close button or interactive elements
+    if (e.target.closest("#btn-close-calculator") || e.target.closest("button") || e.target.closest("a")) {
+      return;
+    }
+
+    isDragging = true;
+    modal.classList.add("is-dragging");
+    modal.style.zIndex = "1000";
+
+    // Disable iframe pointer events during drag so mousemove events are not swallowed
+    if (iframe) {
+      iframe.style.pointerEvents = "none";
+    }
+
+    const clientX = (e.touches && e.touches[0]) ? e.touches[0].clientX : e.clientX;
+    const clientY = (e.touches && e.touches[0]) ? e.touches[0].clientY : e.clientY;
+
+    startX = clientX;
+    startY = clientY;
+
+    const rect = modal.getBoundingClientRect();
+    initialLeft = rect.left;
+    initialTop = rect.top;
+
+    // Convert fixed right-anchored positioning to explicit top/left coordinates
+    modal.style.right = "auto";
+    modal.style.bottom = "auto";
+    modal.style.left = `${initialLeft}px`;
+    modal.style.top = `${initialTop}px`;
+    modal.style.margin = "0";
+
+    document.addEventListener("mousemove", onPointerMove, { passive: false });
+    document.addEventListener("mouseup", onPointerUp);
+    document.addEventListener("touchmove", onPointerMove, { passive: false });
+    document.addEventListener("touchend", onPointerUp);
+    document.addEventListener("touchcancel", onPointerUp);
+
+    e.preventDefault();
+  }
+
+  function onPointerMove(e) {
+    if (!isDragging) return;
+
+    if (e.cancelable) {
+      e.preventDefault();
+    }
+
+    const clientX = (e.touches && e.touches[0]) ? e.touches[0].clientX : e.clientX;
+    const clientY = (e.touches && e.touches[0]) ? e.touches[0].clientY : e.clientY;
+
+    const deltaX = clientX - startX;
+    const deltaY = clientY - startY;
+
+    let newLeft = initialLeft + deltaX;
+    let newTop = initialTop + deltaY;
+
+    // Viewport constraints: allow flexible movement anywhere on screen,
+    // while keeping at least 80px of width and the 44px header visible
+    const modalWidth = modal.offsetWidth;
+    const winWidth = window.innerWidth;
+    const winHeight = window.innerHeight;
+
+    const minLeft = -(modalWidth - 80);
+    const maxLeft = winWidth - 80;
+    const minTop = 0;
+    const maxTop = winHeight - 44;
+
+    newLeft = Math.max(minLeft, Math.min(newLeft, maxLeft));
+    newTop = Math.max(minTop, Math.min(newTop, maxTop));
+
+    modal.style.left = `${newLeft}px`;
+    modal.style.top = `${newTop}px`;
+  }
+
+  function onPointerUp() {
+    if (!isDragging) return;
+    isDragging = false;
+    modal.classList.remove("is-dragging");
+
+    if (iframe) {
+      iframe.style.pointerEvents = "auto";
+    }
+
+    document.removeEventListener("mousemove", onPointerMove);
+    document.removeEventListener("mouseup", onPointerUp);
+    document.removeEventListener("touchmove", onPointerMove);
+    document.removeEventListener("touchend", onPointerUp);
+    document.removeEventListener("touchcancel", onPointerUp);
+  }
+
+  header.addEventListener("mousedown", onPointerDown);
+  header.addEventListener("touchstart", onPointerDown, { passive: false });
+
+  // Double click header to reset back to default top-right position
+  header.addEventListener("dblclick", (e) => {
+    if (e.target.closest("button")) return;
+    modal.style.left = "auto";
+    modal.style.top = "80px";
+    modal.style.right = "40px";
+  });
+}
+
 // ================= EVENT LISTENERS =================
 function setupEventListeners() {
   // Module Change
@@ -2110,7 +2233,18 @@ function setupEventListeners() {
 
   // Modals
   DOM.btnOpenCalc.addEventListener("click", () => {
+    const isHidden = DOM.modalCalculator.classList.contains("hidden");
     DOM.modalCalculator.classList.toggle("hidden");
+    if (isHidden) {
+      DOM.modalCalculator.style.zIndex = "1000";
+      // Ensure calculator is positioned nicely within viewport
+      const rect = DOM.modalCalculator.getBoundingClientRect();
+      if (rect.right < 80 || rect.left > window.innerWidth - 80 || rect.top > window.innerHeight - 44) {
+        DOM.modalCalculator.style.left = "auto";
+        DOM.modalCalculator.style.top = "80px";
+        DOM.modalCalculator.style.right = "40px";
+      }
+    }
     syncTimerState();
   });
   DOM.btnCloseCalculator.addEventListener("click", () => {

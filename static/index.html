@@ -539,9 +539,12 @@
 
   <!-- ================= MODAL: DESMOS GRAPHING CALCULATOR ================= -->
   <div class="draggable-calc-modal hidden" id="modal-calculator">
-    <div class="calc-modal-header">
-      <span>🧮 Desmos | Graphing Calculator (Digital SAT Standard)</span>
-      <button class="btn-close-modal" id="btn-close-calculator">✕</button>
+    <div class="calc-modal-header" id="calc-modal-header" title="Kéo thanh tiêu đề để di chuyển máy tính Desmos đến bất kỳ vị trí nào trên màn hình (Nhấp đúp để đặt lại góc trên bên phải)">
+      <div class="calc-header-title">
+        <span class="calc-drag-handle" title="Kéo để di chuyển">⠿</span>
+        <span>🧮 Desmos | Graphing Calculator (Digital SAT Standard)</span>
+      </div>
+      <button class="btn-close-modal" id="btn-close-calculator" title="Đóng máy tính Desmos">✕</button>
     </div>
     <div class="calc-modal-body">
       <iframe src="https://www.desmos.com/calculator" frameborder="0"></iframe>

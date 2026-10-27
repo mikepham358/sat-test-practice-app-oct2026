@@ -1326,20 +1326,31 @@ body.eliminator-mode-active .btn-strike-option {
   position: fixed;
   top: 80px;
   right: 40px;
-  width: 520px;
-  height: 540px;
+  width: 540px;
+  height: 560px;
+  min-width: 320px;
+  min-height: 350px;
+  max-width: 96vw;
+  max-height: 90vh;
   background: #ffffff;
   border: 1px solid #cbd5e1;
-  border-radius: 16px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
-  z-index: 90;
+  border-radius: 14px;
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.22);
+  z-index: 999;
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  resize: both;
 }
 
 .draggable-calc-modal.hidden {
   display: none !important;
+}
+
+.draggable-calc-modal.is-dragging {
+  opacity: 0.96;
+  box-shadow: 0 24px 50px rgba(15, 23, 42, 0.35);
+  transition: none !important;
 }
 
 .calc-modal-header {
@@ -1349,20 +1360,56 @@ body.eliminator-mode-active .btn-strike-option {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 16px;
+  padding: 0 14px;
   font-size: 13px;
   font-weight: 700;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.2px;
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+  flex-shrink: 0;
+}
+
+.draggable-calc-modal.is-dragging .calc-modal-header {
+  cursor: grabbing;
+}
+
+.calc-header-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.calc-drag-handle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: #94a3b8;
+  letter-spacing: -1px;
+  cursor: grab;
+}
+
+.draggable-calc-modal.is-dragging .calc-drag-handle {
+  cursor: grabbing;
+  color: #60a5fa;
 }
 
 .calc-modal-body {
   flex: 1;
+  position: relative;
+  overflow: hidden;
+  background: #ffffff;
 }
 
 .calc-modal-body iframe {
   width: 100%;
   height: 100%;
   border: none;
+  display: block;
 }
 
 /* Reference Modal */
