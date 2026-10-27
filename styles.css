@@ -177,6 +177,16 @@ body {
   filter: blur(5px);
 }
 
+.timer-display.timer-paused {
+  color: #fbbf24 !important;
+  animation: timerPausedPulse 1.8s infinite ease-in-out;
+}
+
+@keyframes timerPausedPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.55; transform: scale(0.98); }
+}
+
 .btn-timer-action {
   background: rgba(255, 255, 255, 0.08);
   color: #cbd5e1;

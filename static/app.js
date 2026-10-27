@@ -292,7 +292,7 @@ function showView(viewName) {
       DOM.viewPractice.classList.add("hidden");
       DOM.viewPractice.style.display = "none";
     }
-    App.timerRunning = false;
+    pauseTimer();
     syncHomeProfile();
     updateModuleCardStats();
     if (DOM.viewHome) DOM.viewHome.scrollTo({ top: 0, behavior: "smooth" });
@@ -310,7 +310,7 @@ function showView(viewName) {
       DOM.modalOnboarding.classList.add("hidden");
       DOM.modalOnboarding.style.display = "none";
     }
-    App.timerRunning = true;
+    resumeTimer();
     renderCurrentQuestion();
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
@@ -490,6 +490,29 @@ function setupModuleQuestions() {
   DOM.selectModule.value = mod;
 
   renderCurrentQuestion();
+}
+
+// ================= TIMER CONTROLS =================
+function pauseTimer() {
+  App.timerRunning = false;
+  if (DOM.btnTimerPause) {
+    DOM.btnTimerPause.textContent = "▶️";
+    DOM.btnTimerPause.title = "Tiếp tục tính giờ";
+  }
+  if (DOM.timerDisplay) {
+    DOM.timerDisplay.classList.add("timer-paused");
+  }
+}
+
+function resumeTimer() {
+  App.timerRunning = true;
+  if (DOM.btnTimerPause) {
+    DOM.btnTimerPause.textContent = "⏸️";
+    DOM.btnTimerPause.title = "Tạm dừng";
+  }
+  if (DOM.timerDisplay) {
+    DOM.timerDisplay.classList.remove("timer-paused");
+  }
 }
 
 // ================= TIMER =================
@@ -842,6 +865,9 @@ function checkAnswer() {
   App.studentState.attempts[q.id] = qState;
   saveLocalState();
 
+  // Pause timer so student can review explanations, hints, or record reflection without penalty
+  pauseTimer();
+
   // Re-render UI
   renderCurrentQuestion();
 
@@ -883,8 +909,11 @@ function renderNavigatorTiles() {
 
     tile.addEventListener("click", () => {
       if (idx !== App.currentIndex && !checkCanNavigate()) return;
-      App.currentIndex = idx;
-      renderCurrentQuestion();
+      if (idx !== App.currentIndex) {
+        App.currentIndex = idx;
+        resumeTimer();
+        renderCurrentQuestion();
+      }
       DOM.navigatorOverlay.classList.add("hidden");
     });
 
@@ -1258,6 +1287,7 @@ function saveMandatoryReflection() {
   // Auto advance to next question
   if (App.currentIndex < App.questions.length - 1) {
     App.currentIndex++;
+    resumeTimer();
     renderCurrentQuestion();
   }
 }
@@ -1651,6 +1681,7 @@ function setupEventListeners() {
     if (!checkCanNavigate()) return;
     if (App.currentIndex > 0) {
       App.currentIndex--;
+      resumeTimer();
       renderCurrentQuestion();
     }
   });
@@ -1659,6 +1690,7 @@ function setupEventListeners() {
     if (!checkCanNavigate()) return;
     if (App.currentIndex < App.questions.length - 1) {
       App.currentIndex++;
+      resumeTimer();
       renderCurrentQuestion();
     }
   });
@@ -1681,8 +1713,11 @@ function setupEventListeners() {
   });
 
   DOM.btnTimerPause.addEventListener("click", () => {
-    App.timerRunning = !App.timerRunning;
-    DOM.btnTimerPause.textContent = App.timerRunning ? "⏸️" : "▶️";
+    if (App.timerRunning) {
+      pauseTimer();
+    } else {
+      resumeTimer();
+    }
   });
 
   // Modals
