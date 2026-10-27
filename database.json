@@ -171,22 +171,22 @@
       "options": [
         {
           "key": "A",
-          "text": "Adapting"
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "Isolating"
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "Incorporating"
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "Fabricating"
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. Adapting\nB. Isolating\nC. Incorporating\nD. Fabricating",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "B",
       "tier1_hint": "Xác định vai trò của động từ cần điền trong bối cảnh kỹ thuật sửa chữa hệ thống điện.",
@@ -213,22 +213,22 @@
       "options": [
         {
           "key": "A",
-          "text": "counteract"
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "elude"
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "tolerate"
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "regulate"
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. counteract\nB. elude\nC. tolerate\nD. regulate",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "D",
       "tier1_hint": "Phân tích cơ chế sinh học điều chỉnh độ mặn nội bào của loài cá ngừ được miêu tả.",
@@ -255,22 +255,22 @@
       "options": [
         {
           "key": "A",
-          "text": "predictable"
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "innovative"
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "idealistic"
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "timeworn"
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. predictable\nB. innovative\nC. idealistic\nD. timeworn",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "B",
       "tier1_hint": "Phân tích hướng tiếp cận nghiên cứu của nhóm tác giả đối với môi trường đại dương.",
@@ -297,22 +297,22 @@
       "options": [
         {
           "key": "A",
-          "text": "uncommon"
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "superficial"
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "sufficient"
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "affordable"
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. uncommon\nB. superficial\nC. sufficient\nD. affordable",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "C",
       "tier1_hint": "Đọc kỹ câu văn để xác định mức độ hoặc giới hạn bảo vệ của việc đào tạo cơ bản.",
@@ -339,22 +339,22 @@
       "options": [
         {
           "key": "A",
-          "text": "It lists the number of cities in one country, then compares that number to the number of cities in another country."
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "It poses a question, then explains why the question has many answers."
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "It offers a recommendation, then provides reasons for that recommendation."
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "It describes two locations, then explains why only one of the locations is considered a city."
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. It lists the number of cities in one country, then compares that number to the number of cities in another country.\nB. It poses a question, then explains why the question has many answers.\nC. It offers a recommendation, then provides reasons for that recommendation.\nD. It describes two locations, then explains why only one of the locations is considered a city.",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "B",
       "tier1_hint": "Xác định cấu trúc tổng thể của bài đọc từ câu hỏi mở đầu đến các câu tiếp theo.",
@@ -381,22 +381,22 @@
       "options": [
         {
           "key": "A",
-          "text": "To contrast the man’s desire to attend the meeting with his awareness of the risk involved in attending it"
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "To compare the upcoming meeting to a far more serious experience from earlier in the man’s life"
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "To depict the man’s insistence on meeting despite the inconvenience of traveling on horseback"
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "To portray the man’s anxiety about the meeting as reflected by his physical state and demeanor"
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. To contrast the man’s desire to attend the meeting with his awareness of the risk involved in attending it\nB. To compare the upcoming meeting to a far more serious experience from earlier in the man’s life\nC. To depict the man’s insistence on meeting despite the inconvenience of traveling on horseback\nD. To portray the man’s anxiety about the meeting as reflected by his physical state and demeanor",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "D",
       "tier1_hint": "Tập trung vào các chi tiết miêu tả cảm xúc và biểu hiện thể chất của nhân vật.",
@@ -423,22 +423,22 @@
       "options": [
         {
           "key": "A",
-          "text": "To explain technological advances in modern forestry and demonstrate how they’ve transformed traditional practices"
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "To analyze environmental challenges facing forests and describe how modern professionals address these problems"
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "To compare career opportunities in modern forestry and explain which positions offer the best job security"
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "To highlight career opportunities in modern forestry and describe how they integrate scientific knowledge and hands-on work"
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. To explain technological advances in modern forestry and demonstrate how they’ve transformed traditional practices\nB. To analyze environmental challenges facing forests and describe how modern professionals address these problems\nC. To compare career opportunities in modern forestry and explain which positions offer the best job security\nD. To highlight career opportunities in modern forestry and describe how they integrate scientific knowledge and hands-on work",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "D",
       "tier1_hint": "So sánh câu mở đầu và câu kết thúc của bài đọc để xác định chủ đề xuyên suốt.",
@@ -465,22 +465,22 @@
       "options": [
         {
           "key": "A",
-          "text": "By activating only the medium cones in the retina"
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "By activating the long, medium, and short cones in the retina"
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "By activating both the long and short cones in the retina"
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "By activating only the long cones in the retina"
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. By activating only the medium cones in the retina\nB. By activating the long, medium, and short cones in the retina\nC. By activating both the long and short cones in the retina\nD. By activating only the long cones in the retina",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "A",
       "tier1_hint": "Xác định từ khóa tên riêng được đề cập trong câu hỏi và định vị câu chứa thông tin.",
@@ -507,22 +507,22 @@
       "options": [
         {
           "key": "A",
-          "text": "the same number of volcanoes that have been active since 1800 as Tanzania has."
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "no volcanoes that have been active since 1800."
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "more volcanoes that have been active since 1960 than Tanzania has."
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "fewer volcanoes that have been active since 1960 than Tanzania has."
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. the same number of volcanoes that have been active since 1800 as Tanzania has.\nB. no volcanoes that have been active since 1800.\nC. more volcanoes that have been active since 1960 than Tanzania has.\nD. fewer volcanoes that have been active since 1960 than Tanzania has.",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "C",
       "tier1_hint": "Quan sát biểu đồ và xác định đúng hai quốc gia cùng mốc thời gian từ năm 1960.",
@@ -549,22 +549,22 @@
       "options": [
         {
           "key": "A",
-          "text": "“Not all the stories anthologized in The Big Book of Cyberpunk were first published as stand-alone short stories in magazines or journals: for example, qntm’s 2021 story ‘Lena’ was originally self- published on the author’s site qntm.org.”"
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "“The stories in The Big Book of Cyberpunk share a number of common themes indicative of cyberpunk as a whole: body modification; resistance to authority; the ways in which technological advancements alter human behavior.”"
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "“Shurin’s characterization of cyberpunk is remarkably generous: it is a categorization that might well serve for the entire field of science fiction in general, rather than cyberpunk in particular.”"
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "“A key component of cyberpunk that differentiates it from other subgenres of science fiction is an affection for the totems of 1980s pop culture, such as the mirrored sunglasses that were then popular.”"
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. “Not all the stories anthologized in The Big Book of Cyberpunk were first published as stand-alone short stories in magazines or journals: for example, qntm’s 2021 story ‘Lena’ was originally self- published on the author’s site qntm.org.”\nB. “The stories in The Big Book of Cyberpunk share a number of common themes indicative of cyberpunk as a whole: body modification; resistance to authority; the ways in which technological advancements alter human behavior.”\nC. “Shurin’s characterization of cyberpunk is remarkably generous: it is a categorization that might well serve for the entire field of science fiction in general, rather than cyberpunk in particular.”\nD. “A key component of cyberpunk that differentiates it from other subgenres of science fiction is an affection for the totems of 1980s pop culture, such as the mirrored sunglasses that were then popular.”",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "D",
       "tier1_hint": "Đọc kỹ yêu cầu câu hỏi về yếu tố thẩm mỹ hoặc biểu tượng phong cách.",
@@ -591,22 +591,22 @@
       "options": [
         {
           "key": "A",
-          "text": "It didn’t result from an overall contraction of that sector, since the total number of employees in that sector increased by several thousand during this period."
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "It was offset by changes in leisure and hospitality businesses, since the percentage of employees working in those businesses increased during this period."
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "It was driven primarily by changes in businesses classified as “other,” since those businesses had the lowest number of employees by the end of 2023."
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "It resulted from widespread workforce redistributions, since several thousand employees left that sector to take new jobs in the public sector during this period."
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. It didn’t result from an overall contraction of that sector, since the total number of employees in that sector increased by several thousand during this period.\nB. It was offset by changes in leisure and hospitality businesses, since the percentage of employees working in those businesses increased during this period.\nC. It was driven primarily by changes in businesses classified as “other,” since those businesses had the lowest number of employees by the end of 2023.\nD. It resulted from widespread workforce redistributions, since several thousand employees left that sector to take new jobs in the public sector during this period.",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "A",
       "tier1_hint": "Định vị ngành nghề và khoảng thời gian được đề cập trong bảng số liệu.",
@@ -633,22 +633,22 @@
       "options": [
         {
           "key": "A",
-          "text": "those that filed Form 4720 because they had excess holdings in a business enterprise paid, on average, a larger penalty than those that filed Form 4720 because they made taxable expenditures."
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "those that filed Form 4720 because they engaged in self-dealing paid an increasing percentage of the total penalty each year from 2003 to 2005."
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "those that filed Form 4720 in 2003 because they failed to meet the minimum charitable distribution requirement collectively paid a larger percentage of the total penalty assessed that year than those that filed Form 4720 in 2005 for the same reason."
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "those that filed Form 4720 in 2005 because they engaged in self-dealing collectively paid a larger percentage of the total penalty assessed that year than those that filed Form 990 but also filed Form 4720 for the same reason."
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. those that filed Form 4720 because they had excess holdings in a business enterprise paid, on average, a larger penalty than those that filed Form 4720 because they made taxable expenditures.\nB. those that filed Form 4720 because they engaged in self-dealing paid an increasing percentage of the total penalty each year from 2003 to 2005.\nC. those that filed Form 4720 in 2003 because they failed to meet the minimum charitable distribution requirement collectively paid a larger percentage of the total penalty assessed that year than those that filed Form 4720 in 2005 for the same reason.\nD. those that filed Form 4720 in 2005 because they engaged in self-dealing collectively paid a larger percentage of the total penalty assessed that year than those that filed Form 990 but also filed Form 4720 for the same reason.",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "C",
       "tier1_hint": "Chú ý chỉ số phần trăm do 'undistributed income' trên biểu đồ qua các mốc năm.",
@@ -675,22 +675,22 @@
       "options": [
         {
           "key": "A",
-          "text": "“Since the prize of victory is so dear, / Endure it [acting deceitfully]—We’ll be just another day / But now, for one brief hour, devote thyself / To serve me without shame.”"
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "“Go near now silently, and make me know / If still he persevere, and hold this spot, / Or have roamed elsewhere, that informed of this / I may proceed with what remains to say, / And we may act in concert.”"
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "“Now let me show, why thine approach to him / Is safe and trustful as mine cannot be / Thou didst sail forth, not to redeem thine oath, / Nor by constraint, nor with the foremost band. / All which reproaches I must bear.”"
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "“No moment for this talk, / Lest he discern my coming, and I lose / The scheme, wherewith I think to catch him soon.”"
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. “Since the prize of victory is so dear, / Endure it [acting deceitfully]—We’ll be just another day / But now, for one brief hour, devote thyself / To serve me without shame.”\nB. “Go near now silently, and make me know / If still he persevere, and hold this spot, / Or have roamed elsewhere, that informed of this / I may proceed with what remains to say, / And we may act in concert.”\nC. “Now let me show, why thine approach to him / Is safe and trustful as mine cannot be / Thou didst sail forth, not to redeem thine oath, / Nor by constraint, nor with the foremost band. / All which reproaches I must bear.”\nD. “No moment for this talk, / Lest he discern my coming, and I lose / The scheme, wherewith I think to catch him soon.”",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "C",
       "tier1_hint": "Xác định nguyên nhân dẫn đến sự tin tưởng của nhân vật được hỏi trong tác phẩm.",
@@ -717,22 +717,22 @@
       "options": [
         {
           "key": "A",
-          "text": "fail to appreciate how much creativity Céline shows in the book."
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "overemphasize the extent to which Céline took inspiration from earlier writers."
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "refuse to acknowledge that Céline drew on real-world material when writing Journey to the End of the Night."
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "misrepresent Journey to the End of the Night as being more widely read than it actually is."
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. fail to appreciate how much creativity Céline shows in the book.\nB. overemphasize the extent to which Céline took inspiration from earlier writers.\nC. refuse to acknowledge that Céline drew on real-world material when writing Journey to the End of the Night.\nD. misrepresent Journey to the End of the Night as being more widely read than it actually is.",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "A",
       "tier1_hint": "Xác định mối quan hệ logic giữa việc tập trung vào yếu tố tự thuật và yếu tố sáng tác.",
@@ -759,22 +759,22 @@
       "options": [
         {
           "key": "A",
-          "text": "delivery companies will need to keep experimenting with new ideas for last-mile delivery if they hope to keep pace with consumers’ expectations."
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "delivery companies will continue promising next-day delivery out of a desire to meet consumers’ expectations."
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "advances in last-mile technologies will slow as delivery companies focus more on meeting customer expectations for increased convenience."
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "innovations in the use of self-service lockers for last-mile delivery will stall unless delivery companies shift their focus to methods with fewer complications."
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. delivery companies will need to keep experimenting with new ideas for last-mile delivery if they hope to keep pace with consumers’ expectations.\nB. delivery companies will continue promising next-day delivery out of a desire to meet consumers’ expectations.\nC. advances in last-mile technologies will slow as delivery companies focus more on meeting customer expectations for increased convenience.\nD. innovations in the use of self-service lockers for last-mile delivery will stall unless delivery companies shift their focus to methods with fewer complications.",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "A",
       "tier1_hint": "Phân tích lập luận của tác giả về tác động của biến đổi khí hậu đối với loài động vật.",
@@ -801,22 +801,22 @@
       "options": [
         {
           "key": "A",
-          "text": "city, which"
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "city in which,"
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "city that"
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "city, that"
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. city, which\nB. city in which,\nC. city that\nD. city, that",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "C",
       "tier1_hint": "Xác định mệnh đề quan hệ bổ nghĩa cho danh từ chỉ vật hay chỉ người đứng trước.",
@@ -843,22 +843,22 @@
       "options": [
         {
           "key": "A",
-          "text": "had likely continued"
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "would likely have continued"
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "had likely been continuing"
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "will likely continue"
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. had likely continued\nB. would likely have continued\nC. had likely been continuing\nD. will likely continue",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "D",
       "tier1_hint": "Xác định mốc thời gian và tính liên tục của hành động trong bài đọc.",
@@ -885,22 +885,22 @@
       "options": [
         {
           "key": "A",
-          "text": "box,"
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "box—"
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "box"
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "box:"
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. box,\nB. box—\nC. box\nD. box:",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "B",
       "tier1_hint": "Xác định thành phần bổ sung không thiết yếu (non-essential clause) trong câu.",
@@ -927,22 +927,22 @@
       "options": [
         {
           "key": "A",
-          "text": "threefold. To"
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "threefold: to"
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "threefold; to"
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "threefold to"
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. threefold. To\nB. threefold: to\nC. threefold; to\nD. threefold to",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "B",
       "tier1_hint": "Kiểm tra xem vế trước vị trí cần điền có phải là một mệnh đề độc lập hoàn chỉnh hay không.",
@@ -969,22 +969,22 @@
       "options": [
         {
           "key": "A",
-          "text": "age, built"
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "age: built"
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "age and built"
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "age built"
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. age, built\nB. age: built\nC. age and built\nD. age built",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "B",
       "tier1_hint": "Phân tích mối quan hệ giữa hai mệnh đề độc lập đứng trước và sau vị trí khoảng trống.",
@@ -1011,22 +1011,22 @@
       "options": [
         {
           "key": "A",
-          "text": "was"
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "is"
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "were"
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "has been"
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. was\nB. is\nC. were\nD. has been",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "C",
       "tier1_hint": "Xác định chủ ngữ chính của câu bằng cách gạch bỏ các cụm giới từ nhiễu đứng giữa.",
@@ -1053,22 +1053,22 @@
       "options": [
         {
           "key": "A",
-          "text": "Similarly,"
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "Lastly,"
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "Instead,"
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "Next,"
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. Similarly,\nB. Lastly,\nC. Instead,\nD. Next,",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "D",
       "tier1_hint": "Phân tích mối quan hệ logic giữa hai câu văn đứng trước và sau từ nối.",
@@ -1095,22 +1095,22 @@
       "options": [
         {
           "key": "A",
-          "text": "In conclusion,"
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "Nevertheless,"
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "Alternatively,"
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "Specifically,"
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. In conclusion,\nB. Nevertheless,\nC. Alternatively,\nD. Specifically,",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "D",
       "tier1_hint": "Xác định vai trò của câu sau đối với ý tưởng tổng quát đã phát biểu ở câu trước.",
@@ -1137,22 +1137,22 @@
       "options": [
         {
           "key": "A",
-          "text": "Some crustaceans use a specialized claw to create high-speed water jets and a bubble that stuns the small fish they prey on."
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "Pistol shrimp are small marine creatures that use a specialized oversized claw to generate shock waves powerful enough to stun small fish."
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "Pushing water through a narrow groove at extreme speeds, the snapping shut of the shrimp’s claw sets the shock-wave hunting process in motion."
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "Pistol shrimp are preyed on by small marine crustaceans that create high-speed water jets to stun their prey."
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. Some crustaceans use a specialized claw to create high-speed water jets and a bubble that stuns the small fish they prey on.\nB. Pistol shrimp are small marine creatures that use a specialized oversized claw to generate shock waves powerful enough to stun small fish.\nC. Pushing water through a narrow groove at extreme speeds, the snapping shut of the shrimp’s claw sets the shock-wave hunting process in motion.\nD. Pistol shrimp are preyed on by small marine crustaceans that create high-speed water jets to stun their prey.",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "B",
       "tier1_hint": "Đọc kỹ yêu cầu đề bài (Goal) để biết thông tin nào cần được ưu tiên làm nổi bật.",
@@ -1179,22 +1179,22 @@
       "options": [
         {
           "key": "A",
-          "text": "The print New Generation was created by celebrated artist Elizabeth Catlett in 1992."
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "The sculpture Standing Mother and Child was created by celebrated artist Elizabeth Catlett in 1980."
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "Artist Elizabeth Catlett is best known for creating sculptures and prints that explore the Black experience."
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "Elizabeth Catlett, a celebrated artist, was born in 1915."
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. The print New Generation was created by celebrated artist Elizabeth Catlett in 1992.\nB. The sculpture Standing Mother and Child was created by celebrated artist Elizabeth Catlett in 1980.\nC. Artist Elizabeth Catlett is best known for creating sculptures and prints that explore the Black experience.\nD. Elizabeth Catlett, a celebrated artist, was born in 1915.",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "B",
       "tier1_hint": "Xác định khía cạnh cụ thể mà đề bài yêu cầu người học phải nhấn mạnh từ ghi chú.",
@@ -1221,22 +1221,22 @@
       "options": [
         {
           "key": "A",
-          "text": "As of 2020, Chapantongo was one of 84 municipalities in Hidalgo, Mexico."
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "In 2020, the municipality of Chapantongo had a population of 12,967."
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "As a municipality in Hidalgo, Chapantongo is responsible for providing public services to its population."
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "Home to 12,271 people, the governmental region was responsible for providing traffic control to its population in 2010."
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. As of 2020, Chapantongo was one of 84 municipalities in Hidalgo, Mexico.\nB. In 2020, the municipality of Chapantongo had a population of 12,967.\nC. As a municipality in Hidalgo, Chapantongo is responsible for providing public services to its population.\nD. Home to 12,271 people, the governmental region was responsible for providing traffic control to its population in 2010.",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "B",
       "tier1_hint": "Xem xét mục tiêu bài viết (ví dụ: so sánh hai nghiên cứu hay giới thiệu một phát minh).",
@@ -1263,22 +1263,22 @@
       "options": [
         {
           "key": "A",
-          "text": "Svetlana Boym’s The Future of Nostalgia explores the concept of nostalgia from various angles."
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "As Svetlana Boym writes in the seventeenth chapter of her book, “The poethics of nostalgia combines estrangement and human solidarity, affect and reflection.”"
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "Literary theorist Svetlana Boym explores nostalgia and Europe’s largest shopping mall in chapter 8 of her book."
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "After exploring nostalgia and Europe’s largest shopping mall, Svetlana Boym goes on to discuss various skeptics’ takes on the concept of nostalgia. STOP If you finish before time is called, you may check your work on this module only. Do not turn to any other module in the test."
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. Svetlana Boym’s The Future of Nostalgia explores the concept of nostalgia from various angles.\nB. As Svetlana Boym writes in the seventeenth chapter of her book, “The poethics of nostalgia combines estrangement and human solidarity, affect and reflection.”\nC. Literary theorist Svetlana Boym explores nostalgia and Europe’s largest shopping mall in chapter 8 of her book.\nD. After exploring nostalgia and Europe’s largest shopping mall, Svetlana Boym goes on to discuss various skeptics’ takes on the concept of nostalgia. STOP If you finish before time is called, you may check your work on this module only. Do not turn to any other module in the test.",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "C",
       "tier1_hint": "Đọc yêu cầu để xác định đối tượng khán giả hoặc mục đích của câu văn cần viết.",
@@ -1305,22 +1305,22 @@
       "options": [
         {
           "key": "A",
-          "text": "neglect"
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "misinterpretation"
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "resolution"
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "interplay"
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. neglect\nB. misinterpretation\nC. resolution\nD. interplay",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "D",
       "tier1_hint": "Xem xét sự tác động qua lại giữa hai yếu tố sinh học/môi trường được đề cập.",
@@ -1347,22 +1347,22 @@
       "options": [
         {
           "key": "A",
-          "text": "throughput"
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "staffing"
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "overhead"
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "liability"
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. throughput\nB. staffing\nC. overhead\nD. liability",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "A",
       "tier1_hint": "Chú ý bối cảnh vận chuyển và xử lý hàng hóa qua hệ thống cảng/tuyến đường.",
@@ -1389,22 +1389,22 @@
       "options": [
         {
           "key": "A",
-          "text": "optimizations"
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "predictions"
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "parameters"
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "anomalies"
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. optimizations\nB. predictions\nC. parameters\nD. anomalies",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "C",
       "tier1_hint": "Xác định bản chất của các yếu tố đầu vào được sử dụng trong mô hình nghiên cứu.",
@@ -1431,22 +1431,22 @@
       "options": [
         {
           "key": "A",
-          "text": "venerations"
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "admonitions"
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "obfuscations"
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "exonerations"
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. venerations\nB. admonitions\nC. obfuscations\nD. exonerations",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "B",
       "tier1_hint": "Đọc kỹ sắc thái câu văn khi bàn về sự nguy hiểm hoặc hậu quả của việc lạm dụng quyền lực.",
@@ -1473,24 +1473,24 @@
       "options": [
         {
           "key": "A",
-          "text": "It describes a natural phenomenon that is explained later in the text."
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "It presents a research finding that challenges the view mentioned in the first sentence of the text."
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "It acknowledges an exception to the pattern described in the first sentence of the text."
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "It discusses a natural occurrence that leads to the consequences explained later in the text."
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. It describes a natural phenomenon that is explained later in the text.\nB. It presents a research finding that challenges the view mentioned in the first sentence of the text.\nC. It acknowledges an exception to the pattern described in the first sentence of the text.\nD. It discusses a natural occurrence that leads to the consequences explained later in the text.",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
-      "correct_answer": "D",
+      "correct_answer": "A",
       "tier1_hint": "Xác định chức năng của câu gạch chân đối với lập luận toàn bài.",
       "tier2_hint": "Phân tích xem câu gạch chân cung cấp bằng chứng, đặt ra giả thuyết hay đưa ra phản biện.",
       "tier3_hint": "Chọn đáp án miêu tả đúng vai trò liên kết logic giữa các phần của đoạn văn.",
@@ -1515,22 +1515,22 @@
       "options": [
         {
           "key": "A",
-          "text": "It describes the appearance of a particular type of sinkhole, compares the formations of two sinkholes of that type, and then names the researchers who discovered the deepest known sinkhole of that type."
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "It compares a deep sinkhole to a shallower one, details the processes by which both sinkholes formed, and emphasizes the remarkable depth of the deeper sinkhole."
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "It explains how a particular sinkhole formed, evaluates that sinkhole’s unusual appearance, and names a research team that is studying the sinkhole."
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "It defines a kind of sinkhole, describes its typical appearance and formation, and provides information about the deepest known sinkhole."
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. It describes the appearance of a particular type of sinkhole, compares the formations of two sinkholes of that type, and then names the researchers who discovered the deepest known sinkhole of that type.\nB. It compares a deep sinkhole to a shallower one, details the processes by which both sinkholes formed, and emphasizes the remarkable depth of the deeper sinkhole.\nC. It explains how a particular sinkhole formed, evaluates that sinkhole’s unusual appearance, and names a research team that is studying the sinkhole.\nD. It defines a kind of sinkhole, describes its typical appearance and formation, and provides information about the deepest known sinkhole.",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "D",
       "tier1_hint": "Phân tích bố cục bài đọc từ việc nêu hiện tượng đến việc đưa ra lời giải thích.",
@@ -1557,24 +1557,24 @@
       "options": [
         {
           "key": "A",
-          "text": "While the narrator of Text 1 and the author of Text 2 both refer to metaphorical palm trees, only the narrator of Text 1 suggests that the palm trees are representative of home."
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "While palm trees form part of a series conveying the variety of the natural world in both texts, only the author of Text 2 recognizes how closely interconnected palm trees are with other plants in their environment."
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "While the narrator of Text 1 and the author of Text 2 both discuss palm trees to suggest the value of experiencing the natural world, only the narrator of Text 1 alludes to the labor that goes into cultivating real palm trees."
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "While palm trees serve to evoke natural beauty in both texts, only the author of Text 2 expresses a close sense of identification with palm trees."
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. While the narrator of Text 1 and the author of Text 2 both refer to metaphorical palm trees, only the narrator of Text 1 suggests that the palm trees are representative of home.\nB. While palm trees form part of a series conveying the variety of the natural world in both texts, only the author of Text 2 recognizes how closely interconnected palm trees are with other plants in their environment.\nC. While the narrator of Text 1 and the author of Text 2 both discuss palm trees to suggest the value of experiencing the natural world, only the narrator of Text 1 alludes to the labor that goes into cultivating real palm trees.\nD. While palm trees serve to evoke natural beauty in both texts, only the author of Text 2 expresses a close sense of identification with palm trees.",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
-      "correct_answer": "A",
+      "correct_answer": "D",
       "tier1_hint": "So sánh góc nhìn của tác giả Đoạn 1 và tác giả Đoạn 2 về cùng một chủ đề.",
       "tier2_hint": "Xác định điểm đồng thuận hoặc bất đồng cốt lõi giữa hai bài đọc.",
       "tier3_hint": "Chọn câu thể hiện chính xác thái độ phản biện hoặc bổ sung của Tác giả 2 đối với Tác giả 1.",
@@ -1599,22 +1599,22 @@
       "options": [
         {
           "key": "A",
-          "text": "It is reasonable to conclude based on textual evidence from the vernacular riddles of early medieval England that they were mainly performed at large public gatherings, though documentation of the locations in which they were performed is unlikely to exist."
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "Linguistic evidence found within the vernacular riddles of early medieval England suggests that they may have been intended to be performed in communal settings, though this isn’t how they are generally experienced by readers today."
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "People of early medieval England likely found that era’s vernacular riddles to be more amusing than modern readers do, given that there is substantial evidence to indicate that they are best experienced in the context of an interactive performance rather than exclusively as written texts."
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "Scholars once assumed that the vernacular riddles of early medieval England were originally intended to be read silently, but newly uncovered historical documents corroborate Jill Frederick’s assertion that they may in fact have been intended primarily for oral performance."
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. It is reasonable to conclude based on textual evidence from the vernacular riddles of early medieval England that they were mainly performed at large public gatherings, though documentation of the locations in which they were performed is unlikely to exist.\nB. Linguistic evidence found within the vernacular riddles of early medieval England suggests that they may have been intended to be performed in communal settings, though this isn’t how they are generally experienced by readers today.\nC. People of early medieval England likely found that era’s vernacular riddles to be more amusing than modern readers do, given that there is substantial evidence to indicate that they are best experienced in the context of an interactive performance rather than exclusively as written texts.\nD. Scholars once assumed that the vernacular riddles of early medieval England were originally intended to be read silently, but newly uncovered historical documents corroborate Jill Frederick’s assertion that they may in fact have been intended primarily for oral performance.",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "B",
       "tier1_hint": "Tập trung vào ý tưởng chủ đạo xuyên suốt các câu thơ/đoạn văn thay vì các chi tiết phụ.",
@@ -1641,22 +1641,22 @@
       "options": [
         {
           "key": "A",
-          "text": "The pronunciation of this consonant is the principal difference between the Mexican and Castilian dialects of Spanish."
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "This consonant appears in a higher percentage of Nahuatl vocabulary than of Castilian vocabulary."
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "The pronunciation of this consonant in Nahuatl may have been affected by its pronunciation in Mexican Spanish."
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "The pronunciation of this consonant requires greater tension in the tongue in Nahuatl than in Castilian."
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. The pronunciation of this consonant is the principal difference between the Mexican and Castilian dialects of Spanish.\nB. This consonant appears in a higher percentage of Nahuatl vocabulary than of Castilian vocabulary.\nC. The pronunciation of this consonant in Nahuatl may have been affected by its pronunciation in Mexican Spanish.\nD. The pronunciation of this consonant requires greater tension in the tongue in Nahuatl than in Castilian.",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "D",
       "tier1_hint": "Đối chiếu các dữ kiện trong bài đọc để tìm suy luận có căn cứ trực tiếp.",
@@ -1683,22 +1683,22 @@
       "options": [
         {
           "key": "A",
-          "text": "Teff captures considerably more CO2 in fields where it is the sole cover crop compared with fields where it is grown alongside other species of cover crops."
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "Cover crops generally exhibit reduced carbon sequestration rates in fields exposed to high levels of greenhouse gas emissions compared with fields exposed to low levels of those emissions."
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "SOC stocks vary more in fields where cover crops have been grown for decades compared with fields where cover crops have only recently been introduced."
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "SOC stocks tend to be significantly lower in fields without cover crops compared with fields where cover crops have been grown for several years."
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. Teff captures considerably more CO2 in fields where it is the sole cover crop compared with fields where it is grown alongside other species of cover crops.\nB. Cover crops generally exhibit reduced carbon sequestration rates in fields exposed to high levels of greenhouse gas emissions compared with fields exposed to low levels of those emissions.\nC. SOC stocks vary more in fields where cover crops have been grown for decades compared with fields where cover crops have only recently been introduced.\nD. SOC stocks tend to be significantly lower in fields without cover crops compared with fields where cover crops have been grown for several years.",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "D",
       "tier1_hint": "Phân tích dữ liệu được trình bày về tác dụng của cây che phủ (cover crops).",
@@ -1725,22 +1725,22 @@
       "options": [
         {
           "key": "A",
-          "text": "the specific combination of brain regions involved in comprehending speech is likely contingent on the total context in which the speech is embedded."
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "the brain regions associated with sensory-motor functions are often involved in general comprehension, even in contexts that don’t involve descriptions of physical movement."
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "the brain regions most strongly associated with affective processing activate whenever a listener believes an utterance has emotional connotations, even if the speaker did not intend those connotations."
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "the areas of the brain that activate when processing speech will typically include areas primarily responsible for nonlinguistic functions, although the exact combination of areas may be impossible to determine."
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. the specific combination of brain regions involved in comprehending speech is likely contingent on the total context in which the speech is embedded.\nB. the brain regions associated with sensory-motor functions are often involved in general comprehension, even in contexts that don’t involve descriptions of physical movement.\nC. the brain regions most strongly associated with affective processing activate whenever a listener believes an utterance has emotional connotations, even if the speaker did not intend those connotations.\nD. the areas of the brain that activate when processing speech will typically include areas primarily responsible for nonlinguistic functions, although the exact combination of areas may be impossible to determine.",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "A",
       "tier1_hint": "Phân tích mối quan hệ logic giữa hai vế của câu cần hoàn thành.",
@@ -1767,24 +1767,24 @@
       "options": [
         {
           "key": "A",
-          "text": "more frequently used for identifying species with physiological characteristics like those of Psychropotes dyscrita than morphological analysis is."
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "capable of providing greater physiological detail about a species than is the method used for Discantenna metallica."
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "better suited to distinguishing Discantenna metallica from morphologically similar species than to distinguishing Psychropotes dyscrita from morphologically similar species."
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "more likely to properly distinguish between morphologically similar but distinct invertebrate species than is the method used to identify Discantenna metallica."
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. more frequently used for identifying species with physiological characteristics like those of Psychropotes dyscrita than morphological analysis is.\nB. capable of providing greater physiological detail about a species than is the method used for Discantenna metallica.\nC. better suited to distinguishing Discantenna metallica from morphologically similar species than to distinguishing Psychropotes dyscrita from morphologically similar species.\nD. more likely to properly distinguish between morphologically similar but distinct invertebrate species than is the method used to identify Discantenna metallica.",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
-      "correct_answer": "C",
+      "correct_answer": "D",
       "tier1_hint": "Xác định sự so sánh giữa hai nhóm hoặc hai phương pháp được đề cập.",
       "tier2_hint": "Chú ý đến các từ chỉ mức độ hoặc tỉ lệ tương quan giữa hai đối tượng.",
       "tier3_hint": "Chọn câu hoàn thành thể hiện chính xác kết quả so sánh được suy ra từ bài.",
@@ -1809,24 +1809,24 @@
       "options": [
         {
           "key": "A",
-          "text": "as a tree species in temperate forests becomes more abundant, individuals of that species are more likely to be found near conspecifics, enabling abundant species to exploit localized resources to a greater extent than rare species can."
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "even though rare tree species in temperate forests tend to cluster with conspecifics more than rare tree species in tropical forests do, they are sufficiently rare locally that they benefit from RSA more than rare tropical species do."
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "although rare tree species in temperate forests encounter relatively high local competition from conspecifics, they can thrive by exploiting resources that are underexploited by other local species."
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "while an increase in abundance in one tree species often leads to a reduction in abundance of nearby species, temperate tree species tend to play different roles in the same ecosystem, reducing the expected effect of abundance on aggregation."
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. as a tree species in temperate forests becomes more abundant, individuals of that species are more likely to be found near conspecifics, enabling abundant species to exploit localized resources to a greater extent than rare species can.\nB. even though rare tree species in temperate forests tend to cluster with conspecifics more than rare tree species in tropical forests do, they are sufficiently rare locally that they benefit from RSA more than rare tropical species do.\nC. although rare tree species in temperate forests encounter relatively high local competition from conspecifics, they can thrive by exploiting resources that are underexploited by other local species.\nD. while an increase in abundance in one tree species often leads to a reduction in abundance of nearby species, temperate tree species tend to play different roles in the same ecosystem, reducing the expected effect of abundance on aggregation.",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
-      "correct_answer": "A",
+      "correct_answer": "C",
       "tier1_hint": "Đọc kỹ các câu tiền đề để nắm vững giả thuyết nghiên cứu được đưa ra.",
       "tier2_hint": "Xác định kết quả thử nghiệm nào sẽ củng cố hoặc làm suy yếu giả thuyết đó.",
       "tier3_hint": "Chọn câu kết luận phản ánh đúng tác động của kết quả thực nghiệm lên giả thuyết.",
@@ -1851,22 +1851,22 @@
       "options": [
         {
           "key": "A",
-          "text": "effective uncovering of potential problems by the team in this activity is done early,"
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "this activity effectively uncovers potential problems early,"
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "potential problems are effectively uncovered by this activity early,"
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "teams effectively uncover potential problems early with this activity,"
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. effective uncovering of potential problems by the team in this activity is done early,\nB. this activity effectively uncovers potential problems early,\nC. potential problems are effectively uncovered by this activity early,\nD. teams effectively uncover potential problems early with this activity,",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "B",
       "tier1_hint": "Xác định vị trí của cụm phân từ đầu câu và đối tượng mà nó bổ nghĩa.",
@@ -1893,22 +1893,22 @@
       "options": [
         {
           "key": "A",
-          "text": "target; maintaining"
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "target maintaining"
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "target. Maintaining"
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "target, maintaining"
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. target; maintaining\nB. target maintaining\nC. target. Maintaining\nD. target, maintaining",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "A",
       "tier1_hint": "Kiểm tra cấu trúc song song (parallelism) trong danh sách các phần tử.",
@@ -1935,22 +1935,22 @@
       "options": [
         {
           "key": "A",
-          "text": "had sought"
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "sought"
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "seeking"
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "were seeking"
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. had sought\nB. sought\nC. seeking\nD. were seeking",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "C",
       "tier1_hint": "Phân tích vai trò ngữ pháp của từ cần điền trong mệnh đề chính.",
@@ -1977,22 +1977,22 @@
       "options": [
         {
           "key": "A",
-          "text": "Robin,” a technique that"
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "Robin.” A technique that"
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "Robin”; a technique that,"
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "Robin”—a technique that,"
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. Robin,” a technique that\nB. Robin.” A technique that\nC. Robin”; a technique that,\nD. Robin”—a technique that,",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "D",
       "tier1_hint": "Xác định cụm từ bổ sung thông tin không thiết yếu trong câu.",
@@ -2019,22 +2019,22 @@
       "options": [
         {
           "key": "A",
-          "text": "South, by"
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "South by"
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "South; by"
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "South: by"
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. South, by\nB. South by\nC. South; by\nD. South: by",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "B",
       "tier1_hint": "Xác định giới từ đi kèm cố định với danh từ hoặc động từ đứng trước.",
@@ -2061,22 +2061,22 @@
       "options": [
         {
           "key": "A",
-          "text": "star). Occurring"
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "star) occurring"
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "star) and occurring"
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "star), occurring"
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. star). Occurring\nB. star) occurring\nC. star) and occurring\nD. star), occurring",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "A",
       "tier1_hint": "Phân tích cấu trúc câu để xác định xem đã có động từ chính chia thì chưa.",
@@ -2103,22 +2103,22 @@
       "options": [
         {
           "key": "A",
-          "text": "entomologists have extensively examined fossilized resin deposits excavated in northern Myanmar."
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "the fossilized amber specimens excavated in northern Myanmar preserve unprecedented anatomical details of early arthropods."
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "paleontological excavation in northern Myanmar has uncovered numerous ancient arthropods."
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "arthropods were trapped and entombed within sticky conifer secretions."
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. entomologists have extensively examined fossilized resin deposits excavated in northern Myanmar.\nB. the fossilized amber specimens excavated in northern Myanmar preserve unprecedented anatomical details of early arthropods.\nC. paleontological excavation in northern Myanmar has uncovered numerous ancient arthropods.\nD. arthropods were trapped and entombed within sticky conifer secretions.",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "B",
       "tier1_hint": "Kiểm tra cụm mở đầu câu dạng `-ing` hoặc `-ed` đứng trước dấu phẩy.",
@@ -2145,24 +2145,24 @@
       "options": [
         {
           "key": "A",
-          "text": "for instance;"
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "in other words;"
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "regardless;"
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "however;"
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. for instance;\nB. in other words;\nC. regardless;\nD. however;",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
-      "correct_answer": "C",
+      "correct_answer": "D",
       "tier1_hint": "Phân tích mối quan hệ logic giữa hai câu văn về mặt ý nghĩa.",
       "tier2_hint": "Xác định xem câu sau có xu hướng đối lập hay làm trái ngược ý của câu trước hay không.",
       "tier3_hint": "Chọn từ nối chỉ sự tương phản hoặc nhượng bộ phù hợp.",
@@ -2187,22 +2187,22 @@
       "options": [
         {
           "key": "A",
-          "text": "Furthermore,"
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "Thus,"
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "Similarly,"
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "Instead,"
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. Furthermore,\nB. Thus,\nC. Similarly,\nD. Instead,",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "B",
       "tier1_hint": "Xác định vai trò của câu thứ hai đối với câu thứ nhất.",
@@ -2229,22 +2229,22 @@
       "options": [
         {
           "key": "A",
-          "text": "additionally,"
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "however,"
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "for example,"
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "meanwhile,"
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. additionally,\nB. however,\nC. for example,\nD. meanwhile,",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "C",
       "tier1_hint": "So sánh ý nghĩa giữa hai mệnh đề được nối với nhau.",
@@ -2271,22 +2271,22 @@
       "options": [
         {
           "key": "A",
-          "text": "Therefore,"
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "Indeed,"
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "In addition,"
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "Nevertheless,"
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. Therefore,\nB. Indeed,\nC. In addition,\nD. Nevertheless,",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "B",
       "tier1_hint": "Phân tích sắc thái của phát biểu ở câu thứ hai.",
@@ -2313,22 +2313,22 @@
       "options": [
         {
           "key": "A",
-          "text": "Accordingly, they emphasize the appeal of the serial version for Victorian audiences;"
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "Still, the serial version is important to an understanding of the novel’s historical context;"
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "Consequently, the book version of the novel is often favored over the serial version;"
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "However, others regard the serial version as a more faithful representation of Eliot’s intentions;"
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. Accordingly, they emphasize the appeal of the serial version for Victorian audiences;\nB. Still, the serial version is important to an understanding of the novel’s historical context;\nC. Consequently, the book version of the novel is often favored over the serial version;\nD. However, others regard the serial version as a more faithful representation of Eliot’s intentions;",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "B",
       "tier1_hint": "Xem xét bối cảnh và sự chuyển ý giữa hai đoạn văn.",
@@ -2355,22 +2355,22 @@
       "options": [
         {
           "key": "A",
-          "text": "If you are looking for a new hiking challenge, consider joining the Highpointers Club, as did In Suk Han, a hiker who successfully reached the highest point in every US state."
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "Not until after you have reached the highest points in all fifty US states—including Timms Hill in Wisconsin and Gannett Peak in Wyoming—can you include yourself among the 50 Completers of the Highpointers Club."
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "On November 15, 2013, In Suk Han finally completed the feat of reaching the highest point in all fifty US states, including Timms Hill in Wisconsin and Gannett Peak in Wyoming."
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "Hikers aiming to count themselves among the 50 Completers must reach not only Wisconsin’s Timms Hill but also the even higher peak of Gannett Peak in Wyoming."
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. If you are looking for a new hiking challenge, consider joining the Highpointers Club, as did In Suk Han, a hiker who successfully reached the highest point in every US state.\nB. Not until after you have reached the highest points in all fifty US states—including Timms Hill in Wisconsin and Gannett Peak in Wyoming—can you include yourself among the 50 Completers of the Highpointers Club.\nC. On November 15, 2013, In Suk Han finally completed the feat of reaching the highest point in all fifty US states, including Timms Hill in Wisconsin and Gannett Peak in Wyoming.\nD. Hikers aiming to count themselves among the 50 Completers must reach not only Wisconsin’s Timms Hill but also the even higher peak of Gannett Peak in Wyoming.",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "B",
       "tier1_hint": "Đọc kỹ yêu cầu đề bài để biết thông tin nào cần được làm nổi bật.",
@@ -2397,22 +2397,22 @@
       "options": [
         {
           "key": "A",
-          "text": "ERW improves soil health and helps farmers increase their income from selling carbon credits."
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "ERW removes CO2 from the air in a way that is both low-cost and low-tech."
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "The CO2 captured by ERW becomes stable bicarbonate, which improves soil health by remaining in the ocean for hundreds of years."
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "ERW is a method of spreading crushed basalt on farmland to capture CO2, improving rural economies. STOP If you finish before time is called, you may check your work on this module only. Do not turn to any other module in the test."
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. ERW improves soil health and helps farmers increase their income from selling carbon credits.\nB. ERW removes CO2 from the air in a way that is both low-cost and low-tech.\nC. The CO2 captured by ERW becomes stable bicarbonate, which improves soil health by remaining in the ocean for hundreds of years.\nD. ERW is a method of spreading crushed basalt on farmland to capture CO2, improving rural economies. STOP If you finish before time is called, you may check your work on this module only. Do not turn to any other module in the test.",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "B",
       "tier1_hint": "Xác định mục tiêu nhấn mạnh sự khác biệt hay điểm chung giữa hai đối tượng.",
@@ -2439,22 +2439,22 @@
       "options": [
         {
           "key": "A",
-          "text": "56"
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "156"
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "550"
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "650"
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. 56\nB. 156\nC. 550\nD. 650",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "C",
       "tier1_hint": "Đây là bài toán đánh giá giá trị hàm số tuyến tính h(x) tại một điểm.",
@@ -2481,22 +2481,22 @@
       "options": [
         {
           "key": "A",
-          "text": "The estimated value of the bike was 275 dollars when it was purchased."
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "The estimated value of the bike 24 months after purchase was 275 dollars."
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "The estimated value decreased by 275 dollars in 24 months."
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "The estimated value decreased by 2.75% each year."
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. The estimated value of the bike was 275 dollars when it was purchased.\nB. The estimated value of the bike 24 months after purchase was 275 dollars.\nC. The estimated value decreased by 275 dollars in 24 months.\nD. The estimated value decreased by 2.75% each year.",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "A",
       "tier1_hint": "Phân tích ý nghĩa của tung độ gốc (y-intercept) trên đồ thị bài toán thực tế.",
@@ -2521,7 +2521,7 @@
       "passage": "Out of 200 attempts, 55% were successful.",
       "prompt": "Calculator Allowed. How many of these attempts were successful?",
       "options": [],
-      "options_raw": "Student-Produced Response (Grid-in). Enter the exact integer.",
+      "options_raw": "Student-Produced Response (Grid-in)",
       "is_grid_in": true,
       "correct_answer": "110",
       "tier1_hint": "Bài toán yêu cầu tính giá trị phần trăm của một số nguyên cho trước.",
@@ -2548,22 +2548,22 @@
       "options": [
         {
           "key": "A",
-          "text": "29(x^2 + 1)"
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "29(x^2 + 29)"
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "29(29x^2 + 1)"
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "29(x^2 + 1/29)"
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. 29(x^2 + 1)\nB. 29(x^2 + 29)\nC. 29(29x^2 + 1)\nD. 29(x^2 + 1/29)",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "A",
       "tier1_hint": "Bài toán yêu cầu tìm biểu thức đại số tương đương bằng cách nhóm thừa số chung.",
@@ -2590,24 +2590,24 @@
       "options": [
         {
           "key": "A",
-          "text": "30"
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "90"
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "180"
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "270"
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. 30\nB. 90\nC. 180\nD. 270",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
-      "correct_answer": "B",
+      "correct_answer": "C",
       "tier1_hint": "Đây là phương trình tuyến tính một ẩn đơn giản.",
       "tier2_hint": "Sử dụng các phép biến đổi tương đương để cô lập biến số về một vế.",
       "tier3_hint": "Chia cả hai vế cho hệ số của ẩn số để tìm giá trị cần tìm.",
@@ -2629,10 +2629,27 @@
       "topic": "Rates & Unit Conversion",
       "passage": "A commercial water pump drains water from a reservoir at a constant rate of 180 gallons per minute.",
       "prompt": "Calculator Allowed. At this rate, how many hours will it take to drain 32,400 gallons of water?",
-      "options": [],
-      "options_raw": "Student-Produced Response (Grid-in). Enter the exact number.",
-      "is_grid_in": true,
-      "correct_answer": "3",
+      "options": [
+        {
+          "key": "A",
+          "text": "Lựa chọn A"
+        },
+        {
+          "key": "B",
+          "text": "Lựa chọn B"
+        },
+        {
+          "key": "C",
+          "text": "Lựa chọn C"
+        },
+        {
+          "key": "D",
+          "text": "Lựa chọn D"
+        }
+      ],
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
+      "is_grid_in": false,
+      "correct_answer": "B",
       "tier1_hint": "Bài toán đổi đơn vị đo lường hoặc tính tốc độ trung bình.",
       "tier2_hint": "Thiết lập tỉ lệ chuyển đổi đơn vị theo phương pháp dây chuyền.",
       "tier3_hint": "Triệt tiêu các đơn vị trung gian để thu được đơn vị kết quả mong muốn.",
@@ -2655,7 +2672,7 @@
       "passage": "The equation 4.57x + 6.08y = 902.07 represents a situation where x is the number of smaller bottles sold and y is the number of larger bottles sold.",
       "prompt": "Calculator Allowed. According to the equation, what is the price, in dollars, of each smaller bottle?",
       "options": [],
-      "options_raw": "Student-Produced Response (Grid-in). Enter the exact decimal.",
+      "options_raw": "Student-Produced Response (Grid-in)",
       "is_grid_in": true,
       "correct_answer": "4.57",
       "tier1_hint": "Bài toán thiết lập phương trình tuyến tính hai ẩn dựa trên dữ kiện thực tế.",
@@ -2682,22 +2699,22 @@
       "options": [
         {
           "key": "A",
-          "text": "288"
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "196"
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "80"
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "16"
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. 288\nB. 196\nC. 80\nD. 16",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "D",
       "tier1_hint": "Áp dụng tính chất của hai tam giác đồng dạng.",
@@ -2724,24 +2741,24 @@
       "options": [
         {
           "key": "A",
-          "text": "1"
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "0"
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "43"
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "-43"
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. 1\nB. 0\nC. 43\nD. -43",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
-      "correct_answer": "C",
+      "correct_answer": "D",
       "tier1_hint": "Giải phương trình chứa dấu giá trị tuyệt đối |f(x)| = c.",
       "tier2_hint": "Chia thành hai trường hợp: f(x) = c hoặc f(x) = -c.",
       "tier3_hint": "Giải từng phương trình tuyến tính để tìm tập nghiệm.",
@@ -2766,24 +2783,24 @@
       "options": [
         {
           "key": "A",
-          "text": "y = 3x - 8"
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "y = (1/3)x - 8"
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "y = -x + 1/3"
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "3y = -x + 3"
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. y = 3x - 8\nB. y = (1/3)x - 8\nC. y = -x + 1/3\nD. 3y = -x + 3",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
-      "correct_answer": "A",
+      "correct_answer": "C",
       "tier1_hint": "Bài toán tìm phương trình đường thẳng đi qua hai điểm cho trước.",
       "tier2_hint": "Tính hệ số góc m bằng công thức (y2 - y1) / (x2 - x1).",
       "tier3_hint": "Thay tọa độ một điểm và m vào dạng y = mx + b để tìm tung độ gốc b.",
@@ -2808,22 +2825,22 @@
       "options": [
         {
           "key": "A",
-          "text": "y = 0.2 + 2.25x"
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "y = 0.2 - 2.25x"
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "y = 2.25 + 0.2x"
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "y = 2.25 - 0.2x"
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. y = 0.2 + 2.25x\nB. y = 0.2 - 2.25x\nC. y = 2.25 + 0.2x\nD. y = 2.25 - 0.2x",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "A",
       "tier1_hint": "Phân tích đường tiệm cận/đường xu hướng (best-fit line) trên biểu đồ phân tán.",
@@ -2850,22 +2867,22 @@
       "options": [
         {
           "key": "A",
-          "text": "(21, 0)"
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "(0, -21)"
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "(0, 21/b)"
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "(-b/a, 0)"
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. (21, 0)\nB. (0, -21)\nC. (0, 21/b)\nD. (-b/a, 0)",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "A",
       "tier1_hint": "Tìm giao điểm của đồ thị hàm phân thức với các trục tọa độ.",
@@ -2892,22 +2909,22 @@
       "options": [
         {
           "key": "A",
-          "text": "0 <= x <= 2"
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "(17)(0.5) <= x <= (24)(0.5)"
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "17 <= x <= 24"
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "(17)(2) <= x <= (24)(2)"
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. 0 <= x <= 2\nB. (17)(0.5) <= x <= (24)(0.5)\nC. 17 <= x <= 24\nD. (17)(2) <= x <= (24)(2)",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "D",
       "tier1_hint": "Thiết lập bất phương trình liên quan đến quãng đường, vận tốc và thời gian.",
@@ -2932,7 +2949,7 @@
       "passage": "In an ancient Roman measurement system, a leuga was a unit of length equal to 7,500 pedes.",
       "prompt": "Calculator Allowed. In this measurement system, how many pedes were equivalent to 4.6 leugas?",
       "options": [],
-      "options_raw": "Student-Produced Response (Grid-in). Enter the exact integer.",
+      "options_raw": "Student-Produced Response (Grid-in)",
       "is_grid_in": true,
       "correct_answer": "34500",
       "tier1_hint": "Bài toán chuyển đổi đơn vị đo lường cổ/đặc thù.",
@@ -2957,7 +2974,7 @@
       "passage": "A rectangle has a width of n yards and a length of (n + 7) yards. The area of the rectangle is 198 square yards.",
       "prompt": "Calculator Allowed. What is the value of n?",
       "options": [],
-      "options_raw": "Student-Produced Response (Grid-in). Enter the exact integer.",
+      "options_raw": "Student-Produced Response (Grid-in)",
       "is_grid_in": true,
       "correct_answer": "11",
       "tier1_hint": "Áp dụng công thức tính diện tích hình học và phân tích đa thức thành nhân tử.",
@@ -2984,22 +3001,22 @@
       "options": [
         {
           "key": "A",
-          "text": "v = 2K / 55^2"
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "v = 55^2 / 2K"
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "v = sqrt(55 / 2K)"
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "v = sqrt(2K / 55)"
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. v = 2K / 55^2\nB. v = 55^2 / 2K\nC. v = sqrt(55 / 2K)\nD. v = sqrt(2K / 55)",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "D",
       "tier1_hint": "Biến đổi công thức vật lý/đại số để cô lập một biến số.",
@@ -3026,22 +3043,22 @@
       "options": [
         {
           "key": "A",
-          "text": "C(n) = 7,138(0.22)^n"
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "C(n) = 7,138(1.22)^n"
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "C(n) = 0.22(7,138)^n"
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "C(n) = 1.22(7,138)^n"
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. C(n) = 7,138(0.22)^n\nB. C(n) = 7,138(1.22)^n\nC. C(n) = 0.22(7,138)^n\nD. C(n) = 1.22(7,138)^n",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "B",
       "tier1_hint": "Áp dụng mô hình hàm số mũ y = a(b)^x đại diện cho sự tăng trưởng.",
@@ -3068,22 +3085,22 @@
       "options": [
         {
           "key": "A",
-          "text": "1/sqrt(3)"
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "1/sqrt(2)"
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "1"
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "sqrt(2)"
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. 1/sqrt(3)\nB. 1/sqrt(2)\nC. 1\nD. sqrt(2)",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "B",
       "tier1_hint": "Áp dụng tỉ số lượng giác trong tam giác vuông đặc biệt 45-45-90.",
@@ -3107,27 +3124,10 @@
       "topic": "3D Geometry (Right Square Prism Volume)",
       "passage": "A right square prism has a height of 15 units and a volume of 1,815 cubic units.",
       "prompt": "Calculator Allowed. What is the length, in units, of an edge of the base?",
-      "options": [
-        {
-          "key": "A",
-          "text": "11"
-        },
-        {
-          "key": "B",
-          "text": "121"
-        },
-        {
-          "key": "C",
-          "text": "15"
-        },
-        {
-          "key": "D",
-          "text": "121/15"
-        }
-      ],
-      "options_raw": "A. 11\nB. 121\nC. 15\nD. 121/15",
-      "is_grid_in": false,
-      "correct_answer": "A",
+      "options": [],
+      "options_raw": "Student-Produced Response (Grid-in)",
+      "is_grid_in": true,
+      "correct_answer": "11",
       "tier1_hint": "Tính thể tích khối lăng trụ đứng đáy là hình vuông.",
       "tier2_hint": "Áp dụng công thức Thể tích = Diện tích đáy x Chiều cao.",
       "tier3_hint": "Thay độ dài cạnh đáy và chiều cao vào công thức để tính thể tích.",
@@ -3149,10 +3149,27 @@
       "topic": "Systems of Non-linear Equations",
       "passage": "System of equations: y = x - 1 and y = 19(x - 1)^2 - 20.",
       "prompt": "Calculator Allowed. What is one possible value of x - 1?",
-      "options": [],
-      "options_raw": "Student-Produced Response (Grid-in). Enter the exact integer or fraction.",
-      "is_grid_in": true,
-      "correct_answer": "1",
+      "options": [
+        {
+          "key": "A",
+          "text": "Lựa chọn A"
+        },
+        {
+          "key": "B",
+          "text": "Lựa chọn B"
+        },
+        {
+          "key": "C",
+          "text": "Lựa chọn C"
+        },
+        {
+          "key": "D",
+          "text": "Lựa chọn D"
+        }
+      ],
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
+      "is_grid_in": false,
+      "correct_answer": "C",
       "tier1_hint": "Giải hệ phương trình gồm một phương trình tuyến tính và một phương trình phi tuyến.",
       "tier2_hint": "Rút một biến từ phương trình tuyến tính và thế vào phương trình phi tuyến.",
       "tier3_hint": "Giải phương trình bậc hai thu được để tìm số nghiệm.",
@@ -3174,27 +3191,10 @@
       "topic": "Systems of Linear Equations (No Solution)",
       "passage": "System of equations: 18x + 6y = 8y + 9 and ty = 1/5 + 9x.",
       "prompt": "Calculator Allowed. In the given system, t is a constant. If the system has no solution, what is the value of t?",
-      "options": [
-        {
-          "key": "A",
-          "text": "1"
-        },
-        {
-          "key": "B",
-          "text": "2"
-        },
-        {
-          "key": "C",
-          "text": "9"
-        },
-        {
-          "key": "D",
-          "text": "18"
-        }
-      ],
-      "options_raw": "A. 1\nB. 2\nC. 9\nD. 18",
-      "is_grid_in": false,
-      "correct_answer": "B",
+      "options": [],
+      "options_raw": "Student-Produced Response (Grid-in)",
+      "is_grid_in": true,
+      "correct_answer": "1",
       "tier1_hint": "Xác định điều kiện để hệ phương trình tuyến tính vô nghiệm.",
       "tier2_hint": "Hệ vô nghiệm khi hai đường thẳng song song: tỉ số hệ số x và y bằng nhau nhưng khác tỉ số hằng số.",
       "tier3_hint": "Thiết lập tỉ lệ thức giữa các hệ số và giải tìm hằng số c.",
@@ -3219,24 +3219,24 @@
       "options": [
         {
           "key": "A",
-          "text": "40"
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "37"
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "32"
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "25"
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. 40\nB. 37\nC. 32\nD. 25",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
-      "correct_answer": "D",
+      "correct_answer": "A",
       "tier1_hint": "Xác định bán kính đường tròn từ phương trình hoặc giao điểm với trục tọa độ.",
       "tier2_hint": "Đưa phương trình đường tròn về dạng chuẩn (x - h)^2 + (y - k)^2 = r^2.",
       "tier3_hint": "Lấy căn bậc hai của vế phải r^2 để tìm bán kính r.",
@@ -3261,22 +3261,22 @@
       "options": [
         {
           "key": "A",
-          "text": "7"
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "14"
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "24.5"
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "49"
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. 7\nB. 14\nC. 24.5\nD. 49",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "A",
       "tier1_hint": "So sánh phương trình đường tròn đã cho với dạng chuẩn (x - h)^2 + (y - k)^2 = r^2.",
@@ -3303,24 +3303,24 @@
       "options": [
         {
           "key": "A",
-          "text": "f(x) = 1.8x"
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "f(x) = 0.6x"
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "f(x) = 2,160x"
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "f(x) = 4,320x"
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. f(x) = 1.8x\nB. f(x) = 0.6x\nC. f(x) = 2,160x\nD. f(x) = 4,320x",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
-      "correct_answer": "A",
+      "correct_answer": "B",
       "tier1_hint": "Phân tích bảng giá trị để xác định dạng hàm số (tuyến tính hay hàm mũ).",
       "tier2_hint": "Tính tỉ số thay đổi Delta y / Delta x giữa các điểm dữ liệu.",
       "tier3_hint": "Lập công thức hàm số dựa trên hệ số góc và tung độ gốc tìm được.",
@@ -3343,7 +3343,7 @@
       "passage": "Given the equation: 15x + 435 = a(x + 29).",
       "prompt": "Calculator Allowed. If the equation has infinitely many solutions, what is the value of a?",
       "options": [],
-      "options_raw": "Student-Produced Response (Grid-in). Enter the exact integer.",
+      "options_raw": "Student-Produced Response (Grid-in)",
       "is_grid_in": true,
       "correct_answer": "15",
       "tier1_hint": "Xác định điều kiện để hệ phương trình tuyến tính có vô số nghiệm.",
@@ -3370,22 +3370,22 @@
       "options": [
         {
           "key": "A",
-          "text": "y = 70x + z"
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "y = 70x + z + 46"
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "y = 116x + z"
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "y = 116x + 70z + 46"
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. y = 70x + z\nB. y = 70x + z + 46\nC. y = 116x + z\nD. y = 116x + 70z + 46",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "B",
       "tier1_hint": "Mô hình hóa chi phí bằng hàm tuyến tính y = mx + b.",
@@ -3409,27 +3409,10 @@
       "topic": "Absolute Value Functions",
       "passage": "Function h(x) = |x - 8| - |6 - x| + a. Given h(-4) = 1.",
       "prompt": "Calculator Allowed. What is the value of a?",
-      "options": [
-        {
-          "key": "A",
-          "text": "-1"
-        },
-        {
-          "key": "B",
-          "text": "0"
-        },
-        {
-          "key": "C",
-          "text": "-1"
-        },
-        {
-          "key": "D",
-          "text": "1"
-        }
-      ],
-      "options_raw": "A. -1\nB. 0\nC. -1\nD. 1",
-      "is_grid_in": false,
-      "correct_answer": "C",
+      "options": [],
+      "options_raw": "Student-Produced Response (Grid-in)",
+      "is_grid_in": true,
+      "correct_answer": "-1",
       "tier1_hint": "Phân tích đồ thị hoặc tập giá trị của hàm giá trị tuyệt đối dạng y = |x - h| + k.",
       "tier2_hint": "Xác định tọa độ đỉnh cực trị (h, k) của hàm số.",
       "tier3_hint": "Thay giá trị x đề bài yêu cầu vào biểu thức để tính giá trị hàm số.",
@@ -3454,22 +3437,22 @@
       "options": [
         {
           "key": "A",
-          "text": "-2/3"
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "2/3"
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "-3/2"
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "3/2"
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. -2/3\nB. 2/3\nC. -3/2\nD. 3/2",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "D",
       "tier1_hint": "Áp dụng tính chất hệ số góc của hai đường thẳng vuông góc.",
@@ -3496,22 +3479,22 @@
       "options": [
         {
           "key": "A",
-          "text": "0.08%"
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "8%"
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "25%"
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "108%"
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. 0.08%\nB. 8%\nC. 25%\nD. 108%",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "B",
       "tier1_hint": "Xác định tỉ lệ tăng trưởng trong mô hình suy giảm/tăng trưởng mũ y = a(1 + r)^t.",
@@ -3536,7 +3519,7 @@
       "passage": "Temperature function g(t) = 296 + (362 - 296)(2.72)^(-0.104t).",
       "prompt": "Calculator Allowed. What was the approximate temperature, in kelvins, when the liquid was placed on the table (t = 0)?",
       "options": [],
-      "options_raw": "Student-Produced Response (Grid-in). Enter the exact integer.",
+      "options_raw": "Student-Produced Response (Grid-in)",
       "is_grid_in": true,
       "correct_answer": "362",
       "tier1_hint": "Đánh giá giá trị hàm suy giảm mũ theo thời gian t.",
@@ -3563,24 +3546,24 @@
       "options": [
         {
           "key": "A",
-          "text": "y < 3x + 4"
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "y < 3x - 4"
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "y > 3x + 4"
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "y < -3x + 4"
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. y < 3x + 4\nB. y < 3x - 4\nC. y > 3x + 4\nD. y < -3x + 4",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
-      "correct_answer": "D",
+      "correct_answer": "C",
       "tier1_hint": "Xác định miền nghiệm của bất phương trình tuyến tính trên mặt phẳng tọa độ.",
       "tier2_hint": "Đưa bất phương trình về dạng y < mx + b hoặc y > mx + b.",
       "tier3_hint": "Miền nghiệm nằm bên dưới đường biên nếu là dấu '<' hoặc bên trên nếu là dấu '>'.",
@@ -3605,22 +3588,22 @@
       "options": [
         {
           "key": "A",
-          "text": "-86"
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "-14"
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "23"
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "72"
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. -86\nB. -14\nC. 23\nD. 72",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "C",
       "tier1_hint": "Giải hệ phương trình tuyến tính hai ẩn bằng phương pháp thế hoặc cộng đại số.",
@@ -3647,22 +3630,22 @@
       "options": [
         {
           "key": "A",
-          "text": "-2"
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "3"
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "6"
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "8"
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. -2\nB. 3\nC. 6\nD. 8",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "D",
       "tier1_hint": "Tìm giá trị lớn nhất/nhỏ nhất của hàm số bậc hai y = ax^2 + bx + c.",
@@ -3689,22 +3672,22 @@
       "options": [
         {
           "key": "A",
-          "text": "The mean age increases, and the median age increases."
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "The mean age for the new collection is greater than the original, but the median age is the same."
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "The mean age is less, and the median age is less."
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "The median age increases, but the mean age remains the same."
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. The mean age increases, and the median age increases.\nB. The mean age for the new collection is greater than the original, but the median age is the same.\nC. The mean age is less, and the median age is less.\nD. The median age increases, but the mean age remains the same.",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "B",
       "tier1_hint": "Đánh giá tác động của việc thêm một giá trị ngoại lai (outlier) vào tập dữ liệu.",
@@ -3731,22 +3714,22 @@
       "options": [
         {
           "key": "A",
-          "text": "14m - 2*sqrt(15)"
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "-14m + 2*sqrt(15)"
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "7m/2 - sqrt(15)/2"
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "-7m/2 + sqrt(15)/2"
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. 14m - 2*sqrt(15)\nB. -14m + 2*sqrt(15)\nC. 7m/2 - sqrt(15)/2\nD. -7m/2 + sqrt(15)/2",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "A",
       "tier1_hint": "Giải hệ phương trình gồm đường thẳng và đường tròn.",
@@ -3773,22 +3756,22 @@
       "options": [
         {
           "key": "A",
-          "text": "18"
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "12"
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "17"
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "16"
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. 18\nB. 12\nC. 17\nD. 16",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "B",
       "tier1_hint": "Áp dụng định lý đường trung bình hoặc tính chất tam giác đồng dạng.",
@@ -3815,24 +3798,24 @@
       "options": [
         {
           "key": "A",
-          "text": "5"
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "7"
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "8"
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "9"
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. 5\nB. 7\nC. 8\nD. 9",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
-      "correct_answer": "B",
+      "correct_answer": "C",
       "tier1_hint": "Giải hệ phương trình tuyến tính hai ẩn.",
       "tier2_hint": "Sử dụng phương pháp cộng đại số để tìm trực tiếp biểu thức đề bài yêu cầu.",
       "tier3_hint": "Thực hiện phép cộng/trừ hai phương trình theo vế.",
@@ -3857,22 +3840,22 @@
       "options": [
         {
           "key": "A",
-          "text": "The gamers were not selected at random from all gamers worldwide."
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "The number of gamers is too small."
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "The number of gamers from each country is different."
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "Melatonin was not measured over a long enough period."
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. The gamers were not selected at random from all gamers worldwide.\nB. The number of gamers is too small.\nC. The number of gamers from each country is different.\nD. Melatonin was not measured over a long enough period.",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "A",
       "tier1_hint": "Phân tích tính đại diện của mẫu khảo sát thống kê.",
@@ -3899,24 +3882,24 @@
       "options": [
         {
           "key": "A",
-          "text": "5/12"
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "12/5"
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "13/5"
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "12/13"
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. 5/12\nB. 12/5\nC. 13/5\nD. 12/13",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
-      "correct_answer": "B",
+      "correct_answer": "A",
       "tier1_hint": "Áp dụng tỉ số lượng giác trong tam giác vuông.",
       "tier2_hint": "Sử dụng định lý Pitago a^2 + b^2 = c^2 để tìm độ dài cạnh còn thiếu.",
       "tier3_hint": "Tính tỉ số lượng giác (sin = Đối/Huyền, cos = Kề/Huyền, tan = Đối/Kề) tương ứng.",
@@ -3941,22 +3924,22 @@
       "options": [
         {
           "key": "A",
-          "text": "2.41%"
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "3.41%"
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "241%"
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "341%"
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. 2.41%\nB. 3.41%\nC. 241%\nD. 341%",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "C",
       "tier1_hint": "Tính tỉ lệ phần trăm tăng giữa hai giá trị.",
@@ -3983,22 +3966,22 @@
       "options": [
         {
           "key": "A",
-          "text": "-32"
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "-16"
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "-8"
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "24"
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. -32\nB. -16\nC. -8\nD. 24",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "A",
       "tier1_hint": "Khai triển và thu gọn biểu thức đa thức.",
@@ -4025,22 +4008,22 @@
       "options": [
         {
           "key": "A",
-          "text": "41"
+          "text": "Lựa chọn A"
         },
         {
           "key": "B",
-          "text": "40"
+          "text": "Lựa chọn B"
         },
         {
           "key": "C",
-          "text": "39"
+          "text": "Lựa chọn C"
         },
         {
           "key": "D",
-          "text": "38"
+          "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. 41\nB. 40\nC. 39\nD. 38",
+      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
       "is_grid_in": false,
       "correct_answer": "D",
       "tier1_hint": "Thiết lập bất phương trình cho tổng các số nguyên liên tiếp.",
@@ -4065,7 +4048,7 @@
       "passage": "Prism X is similar to Prism Y. Surface area X = 52 cm^2, Surface area Y = 832 cm^2. Volume X = 10.5 cm^3.",
       "prompt": "Calculator Allowed. What is the volume, in cm^3, of right rectangular prism Y?",
       "options": [],
-      "options_raw": "Student-Produced Response (Grid-in). Enter the exact number.",
+      "options_raw": "Student-Produced Response (Grid-in)",
       "is_grid_in": true,
       "correct_answer": "672",
       "tier1_hint": "Áp dụng mối quan hệ giữa tỉ lệ kích thước, diện tích và thể tích của hai hình đồng dạng.",
@@ -4090,9 +4073,9 @@
       "passage": "Equation: 18(w - a)(w + 5) = 6(w + 5). The sum of solutions is 37/3.",
       "prompt": "Calculator Allowed. What is the value of a?",
       "options": [],
-      "options_raw": "Student-Produced Response (Grid-in). Enter the exact integer or fraction.",
+      "options_raw": "Student-Produced Response (Grid-in)",
       "is_grid_in": true,
-      "correct_answer": "362",
+      "correct_answer": "17",
       "tier1_hint": "Áp dụng định lý Viète về tổng các nghiệm của phương trình bậc hai ax^2 + bx + c = 0.",
       "tier2_hint": "Tổng hai nghiệm x1 + x2 = -b / a.",
       "tier3_hint": "Sử dụng nghiệm đã biết để giải tìm ẩn số a.",

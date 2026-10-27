@@ -69,4 +69,4 @@ echo "📋 Hãy copy link 'https://...trycloudflare.com' dưới đây để g�
 echo "----------------------------------------------------------"
 
 # Launch Cloudflare tunnel
-"$CLOUDFLARED_BIN" tunnel --url "http://localhost:$PORT"
+"$CLOUDFLARED_BIN" tunnel --protocol http2 --url "http://localhost:$PORT"

@@ -685,7 +685,7 @@ function renderOptions(q, qState) {
   const eliminated = qState.eliminated || [];
 
   const defaultKeys = ["A", "B", "C", "D"];
-  const opts = (q.options && q.options.length > 0) ? q.options : defaultKeys.map(k => ({ key: k, text: `Option ${k}` }));
+  const opts = defaultKeys.map(k => ({ key: k, text: `Lựa chọn ${k}` }));
 
   opts.forEach(opt => {
     const row = document.createElement("div");
@@ -708,7 +708,7 @@ function renderOptions(q, qState) {
 
     row.innerHTML = `
       <div class="option-bubble">${opt.key}</div>
-      <div class="option-text-wrap">${opt.text}</div>
+      <div class="option-text-wrap font-medium">Lựa chọn ${opt.key}</div>
       <button class="btn-strike-option" title="Gạch bỏ phương án này">⨉</button>
     `;
 
