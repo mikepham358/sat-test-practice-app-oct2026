@@ -67,7 +67,7 @@ def generate_student_excel(payload):
         ws_ov.cell(4, 2, student_email)
         ws_ov.cell(5, 2, student_target)
         ws_ov.cell(6, 2, now_str)
-        ws_ov.cell(7, 2, "Mike Pham Bá Hong Son (Google for Education Innovator) - mikepham358@gmail.com")
+        ws_ov.cell(7, 2, "Mike Pham Bá Hong Son (Google for Education Innovator: https://edudirectory.withgoogle.com/profiles/5087615831769088) - mikepham358@gmail.com")
         ws_ov.cell(8, 2, "Tham khảo từ hocsat.com")
 
         if summary:

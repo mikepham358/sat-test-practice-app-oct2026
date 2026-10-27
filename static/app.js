@@ -1583,7 +1583,7 @@ async function generateClientExcelBlob(studentName, summary) {
         wsOv["A6"] = { t: "s", v: "Thời gian nộp" };
         wsOv["B6"] = { t: "s", v: new Date().toLocaleString("vi-VN") };
         wsOv["A7"] = { t: "s", v: "Giáo viên phụ trách" };
-        wsOv["B7"] = { t: "s", v: "Mike Pham Bá Hong Son (Google for Education Innovator) - mikepham358@gmail.com" };
+        wsOv["B7"] = { t: "s", v: "Mike Pham Bá Hong Son (Google for Education Innovator: https://edudirectory.withgoogle.com/profiles/5087615831769088) - mikepham358@gmail.com" };
         wsOv["A8"] = { t: "s", v: "Nguồn tài liệu" };
         wsOv["B8"] = { t: "s", v: "Tham khảo từ hocsat.com" };
 
