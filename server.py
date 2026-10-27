@@ -52,14 +52,40 @@ def generate_student_excel(payload):
     wb = openpyxl.load_workbook(excel_path, data_only=False)
 
     student_name = payload.get("student_name", "Student").strip() or "Hoc_Sinh"
+    student_email = payload.get("student_email", "").strip() or "Chưa cung cấp"
+    student_target = payload.get("student_target", "1400+")
+    now_str = datetime.datetime.now().strftime("%d/%m/%Y %H:%M:%S")
+    summary = payload.get("summary", {})
     user_attempts = payload.get("attempts", {})  # { "1": { attempts: ["B"], status: "..." } }
     error_logs = payload.get("error_logs", [])
+
+    # 1. Populate Overview_Strategies with Tong_Quan structure
+    if "Overview_Strategies" in wb.sheetnames:
+        ws_ov = wb["Overview_Strategies"]
+        ws_ov.cell(2, 2, DB.get("test_title", "Digital SAT Practice Test — October 2026 (INT-B)"))
+        ws_ov.cell(3, 2, student_name)
+        ws_ov.cell(4, 2, student_email)
+        ws_ov.cell(5, 2, student_target)
+        ws_ov.cell(6, 2, now_str)
+        ws_ov.cell(7, 2, "Mike Pham Bá Hong Son (Google for Education Innovator) - mikepham358@gmail.com")
+        ws_ov.cell(8, 2, "Tham khảo từ hocsat.com")
+
+        if summary:
+            if "total" in summary: ws_ov.cell(11, 2, summary["total"])
+            if "answered" in summary: ws_ov.cell(12, 2, summary["answered"])
+            if "l1_correct" in summary: ws_ov.cell(13, 2, summary["l1_correct"])
+            if "l2_correct" in summary: ws_ov.cell(14, 2, summary["l2_correct"])
+            if "l3_correct" in summary: ws_ov.cell(15, 2, summary["l3_correct"])
+            if "score_pct" in summary: ws_ov.cell(16, 2, f"{summary['score_pct']}%")
+            est = summary.get("estimatedScore") or round(400 + (summary.get("score_pct", 0) / 100) * 1200)
+            ws_ov.cell(17, 2, f"{est} / 1600")
+            ws_ov.cell(18, 2, len(error_logs))
 
     # Personalize Performance_Summary header
     if "Performance_Summary" in wb.sheetnames:
         ws_perf = wb["Performance_Summary"]
         ws_perf.cell(1, 1, f"BẢNG TỔNG HỢP KẾT QUẢ: {student_name.upper()} (OCTOBER 2026 TEST)")
-        ws_perf.cell(3, 1, f"Học sinh: {student_name} | Thời gian làm bài: {datetime.datetime.now().strftime('%d/%m/%Y %H:%M:%S')}")
+        ws_perf.cell(3, 1, f"Học sinh: {student_name} | Thời gian làm bài: {now_str}")
 
     # Build question lookup by ID
     q_map = {q["id"]: q for q in DB["questions"]}
@@ -127,41 +153,28 @@ def generate_student_excel(payload):
                         ws_m.cell(r, 11, str(attempts[2]).strip().upper())
                     break
 
-    # 3. Populate SAT_Error_Log_Tracker Sheet
+    # 3. Populate SAT_Error_Log_Tracker Sheet (So_Tay_Loi_Sai_Tu_Vung structure)
     if "SAT_Error_Log_Tracker" in wb.sheetnames:
         ws_err = wb["SAT_Error_Log_Tracker"]
-        if error_logs:
-            # Clear old rows 16 to 40
-            for r in range(16, max(40, ws_err.max_row + 1)):
-                for c in range(1, 11):
-                    ws_err.cell(r, c, None)
+        # Clear old rows from row 2 to 200
+        for r in range(2, max(50, ws_err.max_row + 1)):
+            for c in range(1, 11):
+                ws_err.cell(r, c, None)
 
-            # Write student error logs
-            for idx, e in enumerate(error_logs):
-                r = 16 + idx
-                ws_err.cell(r, 1, e.get("date", datetime.datetime.now().strftime("%Y-%m-%d")))
-                ws_err.cell(r, 2, e.get("module", ""))
-                ws_err.cell(r, 3, f"{e.get('q_label', '')}: {e.get('skill', '')}")
-                ws_err.cell(r, 4, e.get("root_cause", "Bẫy SAT"))
-                ws_err.cell(r, 5, e.get("trap_detail", ""))
-                ws_err.cell(r, 6, e.get("socratic_analysis", ""))
-                ws_err.cell(r, 7, e.get("student_notes", ""))
-                ws_err.cell(r, 8, e.get("vocabulary", ""))
-                ws_err.cell(r, 9, e.get("status", "Đang theo dõi"))
-                ws_err.cell(r, 10, e.get("takeaway", ""))
-
-            # Update summary counts in row 3
-            total_e = len(error_logs)
-            pending_e = sum(1 for e in error_logs if e.get("status") == "Chưa xử lý")
-            tracking_e = sum(1 for e in error_logs if e.get("status") == "Đang theo dõi")
-            resolved_e = sum(1 for e in error_logs if e.get("status") == "Đã triệt tiêu")
-            rate_e = f"{round((resolved_e / total_e) * 100)}%" if total_e > 0 else "0.0%"
-
-            ws_err.cell(3, 5, total_e)
-            ws_err.cell(3, 6, pending_e)
-            ws_err.cell(3, 7, tracking_e)
-            ws_err.cell(3, 8, resolved_e)
-            ws_err.cell(3, 9, rate_e)
+        # Write student error logs with exact columns:
+        # STT, Mã câu, Module, Chủ đề / Kỹ năng, Nhóm bẫy SAT, Phân tích nguyên nhân & Bài học, Ghi chú tư duy, Từ mới / Thuật ngữ, Tình trạng, Thời gian
+        for idx, e in enumerate(error_logs):
+            r = 2 + idx
+            ws_err.cell(r, 1, idx + 1)
+            ws_err.cell(r, 2, str(e.get("q_label") or f"Q{e.get('question_id', '')}"))
+            ws_err.cell(r, 3, str(e.get("module") or ""))
+            ws_err.cell(r, 4, str(e.get("skill") or ""))
+            ws_err.cell(r, 5, str(e.get("root_cause") or "Bẫy SAT"))
+            ws_err.cell(r, 6, str(e.get("trap_detail") or ""))
+            ws_err.cell(r, 7, str(e.get("student_notes") or ""))
+            ws_err.cell(r, 8, str(e.get("vocabulary") or ""))
+            ws_err.cell(r, 9, str(e.get("status") or "Đang theo dõi"))
+            ws_err.cell(r, 10, str(e.get("date") or datetime.datetime.now().strftime("%d/%m/%Y")))
 
     safe_name = re.sub(r'[^a-zA-Z0-9_\-]', '_', student_name) or "Student"
     timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")

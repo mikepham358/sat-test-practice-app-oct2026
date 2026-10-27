@@ -1568,14 +1568,52 @@ async function generateClientExcelBlob(studentName, summary) {
       const attempts = App.studentState.attempts || {};
       const questions = (App.db && App.db.questions) ? App.db.questions : (App.questions || []);
 
-      // 1. Personalize Performance_Summary header
+      // 1. Populate Overview_Strategies with Tong_Quan structure
+      if (wb.Sheets["Overview_Strategies"]) {
+        const wsOv = wb.Sheets["Overview_Strategies"];
+        wsOv["A1"] = { t: "s", v: "BÁO CÁO KẾT QUẢ DIGITAL SAT BLUEBOOK" };
+        wsOv["A2"] = { t: "s", v: "Đề thi" };
+        wsOv["B2"] = { t: "s", v: App.db ? App.db.test_title : "Digital SAT Practice Test — October 2026 (INT-B)" };
+        wsOv["A3"] = { t: "s", v: "Học sinh" };
+        wsOv["B3"] = { t: "s", v: studentName };
+        wsOv["A4"] = { t: "s", v: "Email học sinh" };
+        wsOv["B4"] = { t: "s", v: App.studentState.student_email || "Chưa cung cấp" };
+        wsOv["A5"] = { t: "s", v: "Mục tiêu điểm" };
+        wsOv["B5"] = { t: "s", v: App.studentState.student_target || "1400+" };
+        wsOv["A6"] = { t: "s", v: "Thời gian nộp" };
+        wsOv["B6"] = { t: "s", v: new Date().toLocaleString("vi-VN") };
+        wsOv["A7"] = { t: "s", v: "Giáo viên phụ trách" };
+        wsOv["B7"] = { t: "s", v: "Mike Pham Bá Hong Son (Google for Education Innovator) - mikepham358@gmail.com" };
+        wsOv["A8"] = { t: "s", v: "Nguồn tài liệu" };
+        wsOv["B8"] = { t: "s", v: "Tham khảo từ hocsat.com" };
+
+        wsOv["A10"] = { t: "s", v: "BẢNG TỔNG KẾT ĐIỂM SỐ" };
+        wsOv["A11"] = { t: "s", v: "Tổng số câu" };
+        wsOv["B11"] = { t: "n", v: summary ? summary.total : 98 };
+        wsOv["A12"] = { t: "s", v: "Số câu đã làm" };
+        wsOv["B12"] = { t: "n", v: summary ? summary.answered : 0 };
+        wsOv["A13"] = { t: "s", v: "Số câu đúng Lần 1 (100%)" };
+        wsOv["B13"] = { t: "n", v: summary ? summary.l1Correct : 0 };
+        wsOv["A14"] = { t: "s", v: "Số câu đúng Lần 2 (66.7%)" };
+        wsOv["B14"] = { t: "n", v: summary ? summary.l2Correct : 0 };
+        wsOv["A15"] = { t: "s", v: "Số câu đúng Lần 3 (33.3%)" };
+        wsOv["B15"] = { t: "n", v: summary ? summary.l3Correct : 0 };
+        wsOv["A16"] = { t: "s", v: "Hiệu suất điểm" };
+        wsOv["B16"] = { t: "s", v: summary ? `${summary.scorePct}%` : "0%" };
+        wsOv["A17"] = { t: "s", v: "Điểm ước tính" };
+        wsOv["B17"] = { t: "s", v: `${summary ? (summary.estimatedScore || Math.round(400 + (summary.scorePct / 100) * 1200)) : 400} / 1600` };
+        wsOv["A18"] = { t: "s", v: "Số lỗi ghi sổ" };
+        wsOv["B18"] = { t: "n", v: (App.studentState.error_logs || []).length };
+      }
+
+      // 2. Personalize Performance_Summary header
       if (wb.Sheets["Performance_Summary"]) {
         const wsPerf = wb.Sheets["Performance_Summary"];
         wsPerf["A1"] = { t: "s", v: `BẢNG TỔNG HỢP KẾT QUẢ: ${studentName.toUpperCase()} (OCTOBER 2026 TEST)` };
         wsPerf["A3"] = { t: "s", v: `Học sinh: ${studentName} | Thời gian làm bài: ${new Date().toLocaleString("vi-VN")}` };
       }
 
-      // 2. Clear old attempt values from Module sheets & Master sheet
+      // 3. Clear old attempt values from Module sheets & Master sheet
       const modSheets = ["RW_Module1", "RW_Module2", "Math_Module1", "Math_Module2"];
       modSheets.forEach(mName => {
         const ws = wb.Sheets[mName];
@@ -1597,7 +1635,7 @@ async function generateClientExcelBlob(studentName, summary) {
         }
       }
 
-      // 3. Populate student attempts into Module sheets & Master sheet
+      // 4. Populate student attempts into Module sheets & Master sheet
       questions.forEach(q => {
         const qState = attempts[q.id];
         if (!qState) return;
@@ -1632,44 +1670,42 @@ async function generateClientExcelBlob(studentName, summary) {
         }
       });
 
-      // 4. Populate SAT_Error_Log_Tracker
+      // 5. Populate SAT_Error_Log_Tracker with So_Tay_Loi_Sai_Tu_Vung structure
       const wsErr = wb.Sheets["SAT_Error_Log_Tracker"];
       if (wsErr) {
-        const errList = App.studentState.error_logs || [];
-        // Clear old rows 16 to 45
-        for (let r = 16; r <= 45; r++) {
-          for (let col of ["A","B","C","D","E","F","G","H","I","J"]) {
+        // Headers in Row 1
+        const headers = [
+          "STT", "Mã câu", "Module", "Chủ đề / Kỹ năng", "Nhóm bẫy SAT",
+          "Phân tích nguyên nhân & Bài học", "Ghi chú tư duy", "Từ mới / Thuật ngữ",
+          "Tình trạng", "Thời gian"
+        ];
+        const cols = ["A","B","C","D","E","F","G","H","I","J"];
+        headers.forEach((h, i) => {
+          wsErr[`${cols[i]}1`] = { t: "s", v: h };
+        });
+
+        // Clear old rows 2 to 60
+        for (let r = 2; r <= 60; r++) {
+          for (let col of cols) {
             delete wsErr[`${col}${r}`];
           }
         }
 
         // Write student error logs
+        const errList = App.studentState.error_logs || [];
         errList.forEach((e, idx) => {
-          const r = 16 + idx;
-          wsErr[`A${r}`] = { t: "s", v: e.date || new Date().toLocaleDateString("vi-VN") };
-          wsErr[`B${r}`] = { t: "s", v: e.module || "" };
-          wsErr[`C${r}`] = { t: "s", v: `${e.q_label || `Q${e.question_id}`}: ${e.skill || ""}` };
-          wsErr[`D${r}`] = { t: "s", v: e.root_cause || "Bẫy SAT" };
-          wsErr[`E${r}`] = { t: "s", v: e.trap_detail || "" };
-          wsErr[`F${r}`] = { t: "s", v: e.socratic_analysis || "" };
-          wsErr[`G${r}`] = { t: "s", v: e.student_notes || "" };
-          wsErr[`H${r}`] = { t: "s", v: e.vocabulary || "" };
-          wsErr[`I${r}`] = { t: "s", v: e.status || "Đang theo dõi" };
-          wsErr[`J${r}`] = { t: "s", v: e.takeaway || "" };
+          const r = 2 + idx;
+          wsErr[`A${r}`] = { t: "n", v: idx + 1 };
+          wsErr[`B${r}`] = { t: "s", v: String(e.q_label || `Q${e.question_id || ""}`) };
+          wsErr[`C${r}`] = { t: "s", v: String(e.module || "") };
+          wsErr[`D${r}`] = { t: "s", v: String(e.skill || "") };
+          wsErr[`E${r}`] = { t: "s", v: String(e.root_cause || "Bẫy SAT") };
+          wsErr[`F${r}`] = { t: "s", v: String(e.trap_detail || "") };
+          wsErr[`G${r}`] = { t: "s", v: String(e.student_notes || "") };
+          wsErr[`H${r}`] = { t: "s", v: String(e.vocabulary || "") };
+          wsErr[`I${r}`] = { t: "s", v: String(e.status || "Đang theo dõi") };
+          wsErr[`J${r}`] = { t: "s", v: String(e.date || new Date().toLocaleDateString("vi-VN")) };
         });
-
-        // Update counts in row 3
-        const totalE = errList.length;
-        const pendingE = errList.filter(l => l.status === "Chưa xử lý").length;
-        const trackingE = errList.filter(l => l.status === "Đang theo dõi").length;
-        const resolvedE = errList.filter(l => l.status === "Đã triệt tiêu").length;
-        const rateE = totalE > 0 ? `${Math.round((resolvedE / totalE) * 100)}%` : "0%";
-
-        wsErr["E3"] = { t: "n", v: totalE };
-        wsErr["F3"] = { t: "n", v: pendingE };
-        wsErr["G3"] = { t: "n", v: trackingE };
-        wsErr["H3"] = { t: "n", v: resolvedE };
-        wsErr["I3"] = { t: "s", v: rateE };
       }
 
       const wbout = XLSX.write(wb, { bookType: "xlsx", type: "array" });
