@@ -82,5 +82,29 @@
     "context_label": "Math: Module 1 • Câu 17 (Mã #71) • Trang 33",
     "content": "Thanks teacher.",
     "status": "✅ Đã tiếp nhận & Cập nhật"
+  },
+  {
+    "id": "GH-ISSUE-#2",
+    "student_name": "** Mai",
+    "student_email": "pbhs92@gmail.com",
+    "category": "** 📝 Góp ý chung & Đánh giá",
+    "priority": "** 🟢 Bình thường",
+    "context_label": "** Math: Module 1 • Câu 17 (Mã #71) • Trang 33",
+    "date_str": "** 10:01:16 28/10/2026",
+    "content": "Thanks teacher.\n\n*",
+    "status": "✅ Đã tiếp nhận & Cập nhật",
+    "github_issue_url": "https://github.com/mikepham358/sat-test-practice-app-oct2026/issues/2"
+  },
+  {
+    "id": "GH-ISSUE-#1",
+    "student_name": "** Mike",
+    "student_email": "pbhs92@gmail.com",
+    "category": "** 📝 Góp ý chung & Đánh giá",
+    "priority": "** 🟢 Bình thường",
+    "context_label": "** Toàn bộ đề thi / Hệ thống chung",
+    "date_str": "** 15:16:42 27/10/2026",
+    "content": "It's improving!\n\n*",
+    "status": "✅ Đã tiếp nhận & Cập nhật",
+    "github_issue_url": "https://github.com/mikepham358/sat-test-practice-app-oct2026/issues/1"
   }
 ]
