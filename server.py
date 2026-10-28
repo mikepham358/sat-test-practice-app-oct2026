@@ -749,10 +749,31 @@ class BluebookAppHandler(BaseHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(content)
 
+def start_github_issue_polling():
+    def _worker():
+        import time
+        try:
+            from sync_github_issues import sync
+        except Exception as e:
+            print(f"Notice: sync_github_issues module not loaded: {e}")
+            return
+        # Initial wait before first sync
+        time.sleep(5)
+        while True:
+            try:
+                sync()
+            except Exception as e:
+                pass
+            time.sleep(60)
+
+    t = threading.Thread(target=_worker, daemon=True)
+    t.start()
+
 def run(port=8085):
     server_address = ('', port)
     httpd = HTTPServer(server_address, BluebookAppHandler)
     print(f"🚀 Bluebook SAT Practice Engine running at: http://localhost:{port}")
+    start_github_issue_polling()
     try:
         httpd.serve_forever()
     except KeyboardInterrupt:

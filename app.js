@@ -2229,10 +2229,12 @@ async function loadFeedbacksList() {
     const res = await fetch("/api/feedbacks");
     if (res.ok) {
       App.feedbacks = await res.json();
+    } else {
+      throw new Error("fallback to static");
     }
   } catch (e) {
     try {
-      const resStatic = await fetch("feedback.json");
+      const resStatic = await fetch("feedback.json?t=" + Date.now());
       if (resStatic.ok) {
         App.feedbacks = await resStatic.json();
       }
@@ -2523,20 +2525,33 @@ Em cảm ơn Thầy!`
       );
       const ghIssueUrl = `https://github.com/mikepham358/sat-test-practice-app-oct2026/issues/new?title=${ghIssueTitle}&body=${ghIssueBody}&assignees=mikepham358&labels=student-feedback`;
 
+      // On GitHub Pages: auto open GitHub Issue tab so user doesn't miss posting to GitHub
+      if (!isServerSynced) {
+        try {
+          window.open(ghIssueUrl, "_blank");
+        } catch (errOpen) {}
+      }
+
       DOM.fbSuccessMsg.innerHTML = `
         <div style="font-size: 14px; line-height: 1.6; color: #1e293b;">
-          Phản hồi mã <strong>${escapeHtml(fbId)}</strong> đã được ghi nhận thành công!<br>
-          ${isServerSynced ? "Dữ liệu đã tự động commit & push lên kho lưu trữ GitHub (<code>FEEDBACK_LOG.md</code>)." : "Dữ liệu đã được lưu trữ trong hàng đợi thiết bị của em."}
+          🎉 Phản hồi mã <strong>${escapeHtml(fbId)}</strong> đã được ghi nhận thành công!<br>
+          ${isServerSynced ? "Dữ liệu đã tự động commit & push lên kho lưu trữ GitHub (<code>FEEDBACK_LOG.md</code>)." : "Dữ liệu đã được chuẩn bị đầy đủ sẵn sàng đồng bộ lên GitHub."}
         </div>
+        ${!isServerSynced ? `
+        <div style="margin-top: 14px; padding: 12px 14px; background: #eff6ff; border: 1.5px solid #bfdbfe; border-radius: 10px; font-size: 13.5px; color: #1e40af;">
+          🚀 <strong>Hệ thống đã tự động mở trang tạo Issue trên GitHub cho em!</strong><br>
+          Em chỉ cần kiểm tra nội dung và nhấn nút xanh <strong>"Submit new issue"</strong> trên GitHub để phản hồi tự động cập nhật vào <code>FEEDBACK_LOG.md</code> và gửi email thông báo cho Thầy Mike.
+        </div>
+        ` : ""}
         <div style="margin-top: 14px; padding: 12px 14px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; font-size: 13px; color: #475569;">
-          📬 <strong>Thông báo tới Thầy Mike:</strong> Em có thể gửi email trực tiếp tới <strong>${teacherEmail}</strong> hoặc mở GitHub Issue chỉ với 1 click bên dưới:
+          📬 <strong>Kênh liên hệ trực tiếp:</strong> Em cũng có thể gửi email thẳng tới <strong>${teacherEmail}</strong> qua nút bấm bên dưới:
         </div>
         <div style="margin-top: 14px; display: flex; flex-wrap: wrap; gap: 10px;">
           <a href="${mailtoUrl}" style="display: inline-flex; align-items: center; gap: 6px; padding: 9px 18px; background: #ea4335; color: #ffffff; text-decoration: none; border-radius: 20px; font-weight: 700; font-size: 13px; box-shadow: 0 2px 6px rgba(234, 67, 53, 0.25);">
             📧 Gửi Email Trực Tiếp Cho Thầy (mikepham358@gmail.com) ↗
           </a>
           <a href="${ghIssueUrl}" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 6px; padding: 9px 18px; background: #0969da; color: #ffffff; text-decoration: none; border-radius: 20px; font-weight: 700; font-size: 13px; box-shadow: 0 2px 6px rgba(9, 105, 218, 0.25);">
-            🐙 Mở GitHub Issue (Gán Thầy @mikepham358) ↗
+            🐙 Mở Lại Trang GitHub Issue (Gán Thầy @mikepham358) ↗
           </a>
         </div>
       `;
