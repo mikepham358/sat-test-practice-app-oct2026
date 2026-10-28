@@ -3,7 +3,7 @@
 > **Dự án:** Digital SAT Bluebook Practice App • Vinschool SAT Team  
 > **Giáo viên phụ trách:** Mike Pham Bá Hong Son (Google for Education Innovator) — [mikepham358@gmail.com](mailto:mikepham358@gmail.com)  
 > **Trạng thái đồng bộ:** 🟢 Tự động cập nhật trực tiếp qua GitHub Repository & App Engine  
-> **Cập nhật lần cuối:** 28/10/2026 10:14:43
+> **Cập nhật lần cuối:** 28/10/2026 10:15:32
 
 ---
 
@@ -11,10 +11,10 @@
 
 | Chỉ Số Đánh Giá | Giá Trị Hiện Tại | Ghi Chú |
 | :--- | :---: | :--- |
-| **Tổng số phản hồi nhận được** | **9** | Gồm đóng góp câu hỏi, kỹ thuật & tính năng |
-| **Số phản hồi đã giải quyết triệt để** | **7** | Đã sửa code, dataset hoặc triển khai |
-| **Tỷ lệ xử lý thành công** | **77.8%** | Cam kết hỗ trợ học sinh tối đa |
-| **Phân loại phản hồi** | **🎯 Báo lỗi câu hỏi / Đáp án:** 3 • **💡 Đề xuất tính năng mới:** 2 • **⚡ Lỗi giao diện / Kỹ thuật:** 1 • **📝 Góp ý chung & Đánh giá:** 1 • **** 📝 Góp ý chung & Đánh giá:** 2 | Tự động phân nhóm |
+| **Tổng số phản hồi nhận được** | **8** | Gồm đóng góp câu hỏi, kỹ thuật & tính năng |
+| **Số phản hồi đã giải quyết triệt để** | **6** | Đã sửa code, dataset hoặc triển khai |
+| **Tỷ lệ xử lý thành công** | **75.0%** | Cam kết hỗ trợ học sinh tối đa |
+| **Phân loại phản hồi** | **🎯 Báo lỗi câu hỏi / Đáp án:** 3 • **💡 Đề xuất tính năng mới:** 2 • **⚡ Lỗi giao diện / Kỹ thuật:** 1 • **📝 Góp ý chung & Đánh giá:** 2 | Tự động phân nhóm |
 
 ---
 
@@ -28,9 +28,8 @@
 | 4 | `FB-20261027-004` | 27/10/2026 13:30 | **Học sinh Vinschool SAT Team**<br><code>sat.student@vinschool.edu.vn</code> | ⚡ Lỗi giao diện / Kỹ thuật | 🟡 Cần xem lại | Công cụ Desmos Calculator | Cửa sổ máy tính Desmos bị cố định ở góc trên bên phải làm che mất các phương án trắc nghiệm. Cần cho phép học sinh kéo thả di chuyển tự do bất kỳ đâu trên màn hình. | ✅ Đã giải quyết (Kéo thả mượt mà & co giãn tự do) |
 | 5 | `FB-20261027-005` | 27/10/2026 15:07 | **Test Runner**<br><code>test@vinschool.edu.vn</code> | 💡 Đề xuất tính năng mới | 🟢 Bình thường | Hệ thống Feedback | Kiểm tra tự động luồng ghi nhận và đồng bộ feedback vào GitHub. | ⏳ Đang xử lý (Open) |
 | 6 | `FB-20261028-006` | 28/10/2026 09:57 | **Test Student**<br><code>test@vinschool.edu.vn</code> | 🎯 Báo lỗi câu hỏi / Đáp án | 🟢 Bình thường | Math: Module 1 Q5 | Kiểm tra hệ thống email feedback tới Thầy Mike | ⏳ Đang xử lý (Open) |
-| 7 | `FB-20261028-393` | 28/10/2026 10:01 | **Mai**<br><code>pbhs92@gmail.com</code> | 📝 Góp ý chung & Đánh giá | 🟢 Bình thường | Math: Module 1 • Câu 17 (Mã #71) • Trang 33 | Thanks teacher. | ✅ Đã tiếp nhận & Cập nhật |
-| 8 | `GH-ISSUE-#2` | ** 10:01:16 28/10/2026 | **** Mai**<br><code>pbhs92@gmail.com</code> | ** 📝 Góp ý chung & Đánh giá | ** 🟢 Bình thường | ** Math: Module 1 • Câu 17 (Mã #71) • Trang 33 | Thanks teacher.<br><br>* | ✅ Đã tiếp nhận & Cập nhật |
-| 9 | `GH-ISSUE-#1` | ** 15:16:42 27/10/2026 | **** Mike**<br><code>pbhs92@gmail.com</code> | ** 📝 Góp ý chung & Đánh giá | ** 🟢 Bình thường | ** Toàn bộ đề thi / Hệ thống chung | It's improving!<br><br>* | ✅ Đã tiếp nhận & Cập nhật |
+| 7 | `FB-20261028-393` | 10:01:16 28/10/2026 | **Mai**<br><code>pbhs92@gmail.com</code> | 📝 Góp ý chung & Đánh giá | 🟢 Bình thường | Math: Module 1 • Câu 17 (Mã #71) • Trang 33 | Thanks teacher. | ✅ Đã tiếp nhận & Cập nhật |
+| 8 | `FB-20261027-035` | 15:16:42 27/10/2026 | **Mike**<br><code>pbhs92@gmail.com</code> | 📝 Góp ý chung & Đánh giá | 🟢 Bình thường | Toàn bộ đề thi / Hệ thống chung | It's improving! | ✅ Đã tiếp nhận & Cập nhật |
 
 ---
 
