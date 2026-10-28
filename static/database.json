@@ -4450,7 +4450,7 @@
       "section": "Math",
       "module_num": 2,
       "topic": "Exponential Population Growth Rate",
-      "passage": "Model P(t) = 250(1.08)^t gives the population after t hours.",
+      "passage": "A laboratory culture of bacteria grows according to the model P(t) = 250(1.08)^t, where t represents the elapsed time in hours.",
       "prompt": "Calculator Allowed. By what percentage does the population increase each hour?",
       "options": [
         {
@@ -4470,28 +4470,28 @@
           "text": "Lựa chọn D"
         }
       ],
-      "options_raw": "A. Lựa chọn A\nB. Lựa chọn B\nC. Lựa chọn C\nD. Lựa chọn D",
+      "options_raw": "A. 0.08%\nB. 8%\nC. 25%\nD. 108%",
       "is_grid_in": false,
       "correct_answer": "B",
-      "tier1_hint": "Xác định tỉ lệ tăng trưởng trong mô hình suy giảm/tăng trưởng mũ y = a(1 + r)^t.",
-      "tier2_hint": "So sánh thừa số cơ số trong ngoặc với dạng (1 + r).",
-      "tier3_hint": "Chuyển đổi r sang dạng phần trăm %.",
+      "tier1_hint": "Mô hình tăng trưởng hàm số mũ có dạng P(t) = P0 * (1 + r)^t, trong đó r là tỉ lệ tăng trưởng.",
+      "tier2_hint": "So sánh hệ số trong ngoặc (1.08) với biểu thức (1 + r): 1 + r = 1.08 => r = 0.08.",
+      "tier3_hint": "Đổi số thập phân r = 0.08 sang tỉ lệ phần trăm bằng cách nhân với 100%: 0.08 × 100% = 8%.",
       "strategic_tip": "Growth Factor = 1 + r => 1.08 = 1 + 0.08 => r = 8%.",
-      "level1_tip": "Xác định tỉ lệ tăng trưởng trong mô hình suy giảm/tăng trưởng mũ y = a(1 + r)^t.",
-      "level2_hint": "So sánh thừa số cơ số trong ngoặc với dạng (1 + r).",
-      "level3_solution": "Chuyển đổi r sang dạng phần trăm %.",
+      "level1_tip": "Xác định tỉ lệ tăng trưởng trong mô hình tăng trưởng mũ P(t) = P0(1 + r)^t.",
+      "level2_hint": "So sánh hệ số cơ số 1.08 với dạng (1 + r).",
+      "level3_solution": "1 + r = 1.08 => r = 0.08 = 8%.",
       "pdf_page": 39,
       "difficulty": "Medium",
-      "target_clue": "Hàm dân số P(t) = 12000 * (1.045)^t có dạng P0 * (1 + r)^t.\nHệ số 1.045 = 1 + 0.045, nghĩa là tốc độ tăng trưởng r = 0.045 = 4.5% mỗi năm.",
-      "solution_steps": "Hàm dân số P(t) = 12000 * (1.045)^t có dạng P0 * (1 + r)^t.\nHệ số 1.045 = 1 + 0.045, nghĩa là tốc độ tăng trưởng r = 0.045 = 4.5% mỗi năm.",
+      "target_clue": "Mô hình hàm số mũ P(t) = 250(1.08)^t có dạng P(t) = P0 * (1 + r)^t.\nHệ số cơ số (growth factor) là 1.08 = 1 + 0.08, nghĩa là tỉ lệ tăng trưởng r = 0.08 = 8% mỗi giờ.",
+      "solution_steps": "Mô hình hàm số mũ chuẩn: P(t) = P0 * (1 + r)^t.\nSo sánh với P(t) = 250(1.08)^t:\n1) Số lượng vi khuẩn ban đầu P0 = 250.\n2) Hệ số cơ số (growth factor) 1 + r = 1.08 => r = 1.08 - 1 = 0.08.\n3) Tỉ lệ phần trăm tăng trưởng mỗi giờ: r = 0.08 × 100% = 8%.",
       "princeton_strategy": "Exponential Growth Rate",
-      "pro_tip": "Mẹo Princeton Review: Lấy hệ số trong ngoặc trừ đi 1 rồi nhân 100%: (1.045 - 1) * 100% = 4.5%.",
-      "pooe_breakdown": "• Đáp án ĐÚNG: B. 4.5%\n• Loại A. 0.45%.\n• Loại C. 45%.\n• Loại D. 104.5%.",
+      "pro_tip": "Mẹo Princeton Review: Đối với mô hình hàm số mũ P(t) = P0 * b^t, phần trăm tăng trưởng mỗi đơn vị thời gian luôn bằng (b - 1) × 100%. Ở đây: (1.08 - 1) × 100% = 8%.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: B. 8% — 1 + r = 1.08 => r = 0.08 = 8% mỗi giờ.\n• Loại A. 0.08% — Lỗi chưa nhân với 100% (0.08 = 8%, không phải 0.08%).\n• Loại C. 25% — Lỗi nhầm lẫn từ hệ số ban đầu 250.\n• Loại D. 108% — 108% là quy mô vi khuẩn sau 1 giờ so với ban đầu (1 + r), không phải phần trăm tăng thêm r.",
       "option_explanations": {
-        "A": "Loại A — 0.45%.",
-        "B": "ĐÁP ÁN ĐÚNG. 4.5%",
-        "C": "Loại C — 45%.",
-        "D": "Loại D — 104.5%."
+        "A": "Loại A (0.08%) — Lỗi nhầm lẫn do chưa nhân với 100% khi chuyển số thập phân 0.08 sang tỉ lệ phần trăm (0.08 = 8%, không phải 0.08%).",
+        "B": "ĐÁP ÁN ĐÚNG: B (8%) — Mô hình tăng trưởng hàm số mũ chuẩn có dạng P(t) = P0 * (1 + r)^t. Với hệ số cơ số trong ngoặc là 1.08 = 1 + 0.08, tỉ lệ tăng trưởng vi khuẩn mỗi giờ là r = 0.08 = 8%.",
+        "C": "Loại C (25%) — Lỗi nhầm lẫn lấy từ hệ số ban đầu 250 (hoặc 25% từ 250).",
+        "D": "Loại D (108%) — Lỗi lấy toàn bộ hệ số cơ số nhân 100% (108% là tỉ lệ dân số mới so với ban đầu, không phải phần trăm TĂNG THÊM r)."
       }
     },
     {
