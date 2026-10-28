@@ -1,0 +1,33 @@
+name: "💡 Đề Xuất Tính Năng & Góp Ý Chung"
+description: "Đóng góp ý tưởng cải tiến giao diện, phương pháp học tập hoặc tính năng mới"
+title: "[Góp ý] "
+labels: ["enhancement", "student-feedback"]
+assignees:
+  - mikepham358
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### 💡 Vinschool SAT Team - Đề Xuất Ý Tưởng & Góp Ý
+        Mọi ý kiến đóng góp của em sẽ được gửi trực tiếp tới email Thầy Mike Phạm (**mikepham358@gmail.com**).
+  - type: input
+    id: student_name
+    attributes:
+      label: Họ và tên học sinh
+      placeholder: "Ví dụ: Trần Thị B"
+    validations:
+      required: true
+  - type: input
+    id: student_email
+    attributes:
+      label: Email học sinh
+      placeholder: "email@vinschool.edu.vn"
+    validations:
+      required: false
+  - type: textarea
+    id: feedback_idea
+    attributes:
+      label: Đề xuất hoặc ý tưởng của em
+      placeholder: "Chia sẻ ý tưởng cải tiến app hoặc đề xuất tính năng hữu ích cho học sinh..."
+    validations:
+      required: true

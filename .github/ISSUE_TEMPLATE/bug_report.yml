@@ -1,0 +1,60 @@
+name: "🎯 Báo Lỗi Câu Hỏi / Đáp Án / Kỹ Thuật"
+description: "Báo cáo lỗi câu hỏi, đáp án, giải thích hoặc lỗi hiển thị trên app"
+title: "[Báo lỗi] "
+labels: ["bug", "student-feedback"]
+assignees:
+  - mikepham358
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### 🎓 Vinschool SAT Team - Kênh Tiếp Nhận Báo Lỗi & Phản Hồi
+        Cảm ơn em đã đóng góp để hoàn thiện ứng dụng luyện thi Digital SAT Bluebook.
+        Phản hồi này sẽ được gửi trực tiếp tới email Thầy Mike Phạm (**mikepham358@gmail.com**).
+  - type: input
+    id: student_name
+    attributes:
+      label: Họ và tên học sinh
+      placeholder: "Ví dụ: Nguyễn Văn A"
+    validations:
+      required: true
+  - type: input
+    id: student_email
+    attributes:
+      label: Email học sinh (để Thầy phản hồi giải đáp)
+      placeholder: "email@vinschool.edu.vn"
+    validations:
+      required: false
+  - type: dropdown
+    id: module
+    attributes:
+      label: Phần thi / Module xảy ra lỗi
+      options:
+        - "Reading & Writing: Module 1"
+        - "Reading & Writing: Module 2"
+        - "Math: Module 1"
+        - "Math: Module 2"
+        - "Hệ thống chung / Giao diện / Desmos"
+    validations:
+      required: true
+  - type: input
+    id: question_number
+    attributes:
+      label: Số thứ tự câu hỏi (nếu có)
+      placeholder: "Ví dụ: Câu 9 phần Math Module 1"
+    validations:
+      required: false
+  - type: textarea
+    id: bug_description
+    attributes:
+      label: Mô tả chi tiết lỗi phát hiện
+      placeholder: "Mô tả cụ thể sự cố: ví dụ đáp án trong app bị nhầm, lỗi chính tả câu hỏi, máy tính Desmos bị lỗi..."
+    validations:
+      required: true
+  - type: textarea
+    id: expected_behavior
+    attributes:
+      label: Kết quả mong đợi / Đáp án theo em là đúng
+      placeholder: "Ví dụ: Theo file KeyB.pdf câu này đáp án đúng là D (-43)..."
+    validations:
+      required: false

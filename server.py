@@ -406,6 +406,79 @@ def send_submission_email(student_name, student_email, summary, excel_bytes, exc
     except Exception as e:
         return False, f"Lỗi gửi email qua SMTP: {str(e)}", recipients
 
+def send_feedback_email_notification(fb_item):
+    config = load_email_config()
+    teacher_email = config.get("teacher_email", "mikepham358@gmail.com")
+    smtp_pass = config.get("smtp_pass", "").strip()
+    smtp_host = config.get("smtp_host", "smtp.gmail.com")
+    smtp_port = int(config.get("smtp_port", 465))
+    smtp_user = config.get("smtp_user", teacher_email).strip()
+
+    if not smtp_pass:
+        print("ℹ️ [Email Feedback Notification] SMTP password not set. Direct email dispatch ready via mailto / GitHub alerts.")
+        return False, "Chưa thiết lập mật khẩu ứng dụng Gmail (App Password)."
+
+    try:
+        msg = MIMEMultipart()
+        msg["From"] = f"Vinschool SAT Team <{smtp_user}>"
+        msg["To"] = teacher_email
+        recipients = [teacher_email]
+        if fb_item.get("student_email") and "@" in fb_item["student_email"]:
+            msg["Cc"] = fb_item["student_email"]
+            recipients.append(fb_item["student_email"])
+
+        subject = f"[SAT Bluebook Feedback - {fb_item.get('id', 'FB')}] {fb_item.get('category')} - {fb_item.get('context_label')}"
+        msg["Subject"] = subject
+
+        html_body = f"""
+        <html>
+        <body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #1e293b;">
+          <div style="max-width: 600px; margin: 0 auto; border: 1px solid #e2e8f0; border-radius: 12px; padding: 24px; background: #ffffff;">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 16px;">
+              <span style="font-size: 24px;">💬</span>
+              <h2 style="margin: 0; color: #0f172a; font-size: 18px;">Phản Hồi & Báo Lỗi Mới từ Học Sinh</h2>
+            </div>
+            <table style="width: 100%; border-collapse: collapse; margin-bottom: 16px; font-size: 14px;">
+              <tr><td style="padding: 6px 0; color: #64748b; width: 140px;">Mã phản hồi:</td><td><strong>{fb_item.get('id')}</strong></td></tr>
+              <tr><td style="padding: 6px 0; color: #64748b;">Học sinh:</td><td><strong>{fb_item.get('student_name')}</strong> ({fb_item.get('student_email') or 'Chưa cung cấp'})</td></tr>
+              <tr><td style="padding: 6px 0; color: #64748b;">Phân loại:</td><td><span style="padding: 2px 8px; background: #eff6ff; color: #1d4ed8; border-radius: 4px; font-weight: 600;">{fb_item.get('category')}</span></td></tr>
+              <tr><td style="padding: 6px 0; color: #64748b;">Mức độ ưu tiên:</td><td><strong>{fb_item.get('priority')}</strong></td></tr>
+              <tr><td style="padding: 6px 0; color: #64748b;">Ngữ cảnh / Vị trí:</td><td>{fb_item.get('context_label')}</td></tr>
+              <tr><td style="padding: 6px 0; color: #64748b;">Thời gian:</td><td>{fb_item.get('date_str')}</td></tr>
+            </table>
+            <div style="padding: 14px; background: #f8fafc; border-left: 4px solid #3b82f6; border-radius: 6px; margin-bottom: 20px;">
+              <div style="font-size: 12px; font-weight: 700; color: #475569; text-transform: uppercase; margin-bottom: 4px;">Nội dung phản hồi:</div>
+              <div style="font-size: 14px; color: #0f172a; white-space: pre-wrap;">{fb_item.get('content')}</div>
+            </div>
+            <div style="font-size: 12px; color: #94a3b8; text-align: center; border-top: 1px solid #f1f5f9; padding-top: 12px;">
+              Digital SAT Bluebook Practice App • Vinschool SAT Team
+            </div>
+          </div>
+        </body>
+        </html>
+        """
+        msg.attach(MIMEText(html_body, "html", "utf-8"))
+
+        if smtp_port == 465:
+            with smtplib.SMTP_SSL(smtp_host, smtp_port, timeout=15) as server:
+                server.login(smtp_user, smtp_pass)
+                server.sendmail(smtp_user, recipients, msg.as_string())
+        else:
+            with smtplib.SMTP(smtp_host, smtp_port, timeout=15) as server:
+                server.starttls()
+                server.login(smtp_user, smtp_pass)
+                server.sendmail(smtp_user, recipients, msg.as_string())
+
+        print(f"✅ [Feedback Email] Notification sent successfully to {teacher_email}!")
+        return True, "Email đã được gửi thành công!"
+    except Exception as e:
+        print(f"⚠️ [Feedback Email Error] {e}")
+        return False, str(e)
+
+def notify_feedback_email_async(fb_item):
+    t = threading.Thread(target=send_feedback_email_notification, args=(fb_item,), daemon=True)
+    t.start()
+
 class BluebookAppHandler(BaseHTTPRequestHandler):
     def end_headers(self):
         self.send_header('Access-Control-Allow-Origin', '*')
@@ -531,6 +604,7 @@ class BluebookAppHandler(BaseHTTPRequestHandler):
             feedbacks.append(fb_item)
             save_feedbacks_and_update_log(feedbacks)
             sync_feedback_to_github_async(fb_item)
+            notify_feedback_email_async(fb_item)
 
             self.send_json({
                 "success": True,

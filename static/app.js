@@ -2486,25 +2486,60 @@ function showFeedbackSuccess(fbId, isServerSynced, rawPayload) {
   if (DOM.fbSuccessBanner) {
     DOM.fbSuccessBanner.classList.remove("hidden");
     if (DOM.fbSuccessMsg) {
-      if (isServerSynced) {
-        DOM.fbSuccessMsg.innerHTML = `Phản hồi mã <strong>${escapeHtml(fbId)}</strong> đã được lưu thành công và tự động commit & push lên kho lưu trữ GitHub (<code>FEEDBACK_LOG.md</code>).`;
-      } else {
-        const ghIssueTitle = encodeURIComponent(`[Feedback ${rawPayload.category}] ${rawPayload.context_label}`);
-        const ghIssueBody = encodeURIComponent(`### 💬 Phản hồi từ học sinh Vinschool SAT Team\n\n- **Mã phản hồi:** \`${fbId}\`\n- **Người gửi:** ${rawPayload.student_name} (${rawPayload.student_email || "Chưa cung cấp"})\n- **Phân loại:** ${rawPayload.category}\n- **Mức độ:** ${rawPayload.priority}\n- **Vị trí / Ngữ cảnh:** ${rawPayload.context_label}\n- **Thời gian:** ${new Date().toLocaleString("vi-VN")}\n\n---\n### 📝 Nội dung phản hồi:\n${rawPayload.content}\n\n*(Gửi từ Digital SAT Bluebook App - GitHub Pages)*`);
-        const ghIssueUrl = `https://github.com/mikepham358/sat-test-practice-app-oct2026/issues/new?title=${ghIssueTitle}&body=${ghIssueBody}`;
+      const teacherEmail = "mikepham358@gmail.com";
+      const mailSubject = encodeURIComponent(`[SAT Bluebook Feedback - ${fbId}] ${rawPayload.category} - ${rawPayload.context_label}`);
+      const mailBody = encodeURIComponent(
+`Kính gửi Thầy Mike Pham Bá Hong Son,
 
-        DOM.fbSuccessMsg.innerHTML = `
-          Phản hồi mã <strong>${escapeHtml(fbId)}</strong> đã được ghi nhận thành công trên thiết bị của em!<br>
-          <div style="margin-top: 10px; font-size: 13px;">
-            Vì em đang dùng phiên bản GitHub Pages trực tuyến, em có thể bấm nút bên dưới để <strong>tạo Issue chính thức trên GitHub</strong> chỉ với 1 click:
-          </div>
-          <div style="margin-top: 12px;">
-            <a href="${ghIssueUrl}" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 8px 16px; background: #0969da; color: #fff; text-decoration: none; border-radius: 20px; font-weight: 700;">
-              🐙 Mở GitHub Issue Ngay (Tự Điền Đầy Đủ) ↗
-            </a>
-          </div>
-        `;
-      }
+Em gửi phản hồi / báo lỗi từ ứng dụng luyện thi Digital SAT Bluebook:
+
+- Mã phản hồi: ${fbId}
+- Học sinh gửi: ${rawPayload.student_name} (${rawPayload.student_email || "Chưa cung cấp"})
+- Phân loại: ${rawPayload.category}
+- Mức độ ưu tiên: ${rawPayload.priority}
+- Vị trí / Ngữ cảnh: ${rawPayload.context_label}
+- Thời gian: ${new Date().toLocaleString("vi-VN")}
+
+--------------------------------------------------
+NỘI DUNG PHẢN HỒI / BÁO LỖI:
+${rawPayload.content}
+--------------------------------------------------
+
+Em cảm ơn Thầy!`
+      );
+      const mailtoUrl = `mailto:${teacherEmail}?subject=${mailSubject}&body=${mailBody}`;
+
+      const ghIssueTitle = encodeURIComponent(`[Feedback ${rawPayload.category}] ${rawPayload.context_label}`);
+      const ghIssueBody = encodeURIComponent(
+`### 💬 Phản hồi từ học sinh Vinschool SAT Team\n\n` +
+`- **Mã phản hồi:** \`${fbId}\`\n` +
+`- **Người gửi:** ${rawPayload.student_name} (${rawPayload.student_email || "Chưa cung cấp"})\n` +
+`- **Phân loại:** ${rawPayload.category}\n` +
+`- **Mức độ:** ${rawPayload.priority}\n` +
+`- **Vị trí / Ngữ cảnh:** ${rawPayload.context_label}\n` +
+`- **Thời gian:** ${new Date().toLocaleString("vi-VN")}\n\n` +
+`---\n### 📝 Nội dung phản hồi:\n${rawPayload.content}\n\n` +
+`*(Gửi từ Digital SAT Bluebook Practice App)*\n\ncc: @mikepham358`
+      );
+      const ghIssueUrl = `https://github.com/mikepham358/sat-test-practice-app-oct2026/issues/new?title=${ghIssueTitle}&body=${ghIssueBody}&assignees=mikepham358&labels=student-feedback`;
+
+      DOM.fbSuccessMsg.innerHTML = `
+        <div style="font-size: 14px; line-height: 1.6; color: #1e293b;">
+          Phản hồi mã <strong>${escapeHtml(fbId)}</strong> đã được ghi nhận thành công!<br>
+          ${isServerSynced ? "Dữ liệu đã tự động commit & push lên kho lưu trữ GitHub (<code>FEEDBACK_LOG.md</code>)." : "Dữ liệu đã được lưu trữ trong hàng đợi thiết bị của em."}
+        </div>
+        <div style="margin-top: 14px; padding: 12px 14px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; font-size: 13px; color: #475569;">
+          📬 <strong>Thông báo tới Thầy Mike:</strong> Em có thể gửi email trực tiếp tới <strong>${teacherEmail}</strong> hoặc mở GitHub Issue chỉ với 1 click bên dưới:
+        </div>
+        <div style="margin-top: 14px; display: flex; flex-wrap: wrap; gap: 10px;">
+          <a href="${mailtoUrl}" style="display: inline-flex; align-items: center; gap: 6px; padding: 9px 18px; background: #ea4335; color: #ffffff; text-decoration: none; border-radius: 20px; font-weight: 700; font-size: 13px; box-shadow: 0 2px 6px rgba(234, 67, 53, 0.25);">
+            📧 Gửi Email Trực Tiếp Cho Thầy (mikepham358@gmail.com) ↗
+          </a>
+          <a href="${ghIssueUrl}" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 6px; padding: 9px 18px; background: #0969da; color: #ffffff; text-decoration: none; border-radius: 20px; font-weight: 700; font-size: 13px; box-shadow: 0 2px 6px rgba(9, 105, 218, 0.25);">
+            🐙 Mở GitHub Issue (Gán Thầy @mikepham358) ↗
+          </a>
+        </div>
+      `;
     }
   }
 }
