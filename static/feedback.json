@@ -58,5 +58,17 @@
     "context_label": "Hệ thống Feedback",
     "content": "Kiểm tra tự động luồng ghi nhận và đồng bộ feedback vào GitHub.",
     "status": "⏳ Đang xử lý (Open)"
+  },
+  {
+    "id": "FB-20261028-006",
+    "timestamp": "2026-10-28T09:57:17.500655",
+    "date_str": "28/10/2026 09:57",
+    "student_name": "Test Student",
+    "student_email": "test@vinschool.edu.vn",
+    "category": "🎯 Báo lỗi câu hỏi / Đáp án",
+    "priority": "🟢 Bình thường",
+    "context_label": "Math: Module 1 Q5",
+    "content": "Kiểm tra hệ thống email feedback tới Thầy Mike",
+    "status": "⏳ Đang xử lý (Open)"
   }
 ]

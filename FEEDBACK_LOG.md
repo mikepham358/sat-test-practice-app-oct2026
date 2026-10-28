@@ -3,7 +3,7 @@
 > **Dự án:** Digital SAT Practice Based on Learning Science — Vinschool SAT Team  
 > **Giáo viên phụ trách:** Mike Pham Bá Hong Son (Google for Education Innovator) — `mikepham358@gmail.com`  
 > **Trang làm bài trực tuyến:** [https://mikepham358.github.io/sat-test-practice-app-oct2026/](https://mikepham358.github.io/sat-test-practice-app-oct2026/)  
-> **Cập nhật tự động lần cuối:** `27/10/2026 15:08:05`  
+> **Cập nhật tự động lần cuối:** `28/10/2026 09:57:17`  
 > **Mô tả:** Mọi phản hồi từ học sinh và giáo viên gửi qua nút **`💬 Góp ý & Báo lỗi`** thông minh trên ứng dụng sẽ được tự động lưu trữ và đồng bộ tức thời lên kho mã nguồn GitHub này.
 
 ---
@@ -12,13 +12,13 @@
 
 | Chỉ số | Số lượng | Mô tả chi tiết |
 | :--- | :---: | :--- |
-| **Tổng số phản hồi tiếp nhận** | **5** | Toàn bộ phản hồi ghi nhận từ giáo viên & học sinh |
-| 🎯 **Báo lỗi câu hỏi / Đáp án** | `3` | Rà soát và đối chiếu trực tiếp với file gốc `KeyB.pdf` |
+| **Tổng số phản hồi tiếp nhận** | **6** | Toàn bộ phản hồi ghi nhận từ giáo viên & học sinh |
+| 🎯 **Báo lỗi câu hỏi / Đáp án** | `4` | Rà soát và đối chiếu trực tiếp với file gốc `KeyB.pdf` |
 | 💡 **Đề xuất tính năng mới** | `2` | Cải tiến phương pháp học tập theo khoa học nhận thức |
 | ⚡ **Lỗi giao diện / Kỹ thuật / Desmos** | `0` | Tối ưu trải nghiệm tương tác split-screen & kéo thả |
 | 📝 **Góp ý chung & Đánh giá** | `0` | Nhận xét chung về đề thi và lớp học |
 | ✅ **Đã giải quyết / Đã khắc phục** | `4` | Đã kiểm tra, chỉnh sửa mã nguồn và đẩy lên GitHub |
-| ⏳ **Đang xử lý (Open)** | `1` | Đang trong hàng đợi kiểm tra của giáo viên |
+| ⏳ **Đang xử lý (Open)** | `2` | Đang trong hàng đợi kiểm tra của giáo viên |
 
 ---
 
@@ -31,6 +31,7 @@
 | 3 | `FB-20261027-003` | 27/10/2026 12:45 | Mike Pham Bá Hong Son<br><sub>mikepham358@gmail.com</sub> | 💡 Đề xuất tính năng mới | Sổ tay Thử sai Socratic | 🟡 Cần xem lại | Đổi cách gọi 'lỗi sai' thành 'thử sai' theo triết lý Growth Mindset. Khi hiện popup bắt buộc phản tư, bổ sung lựa chọn xem lại câu vừa làm để mở khóa toàn bộ 4 tầng gợi ý. | ✅ Đã giải quyết |
 | 4 | `FB-20261027-004` | 27/10/2026 13:30 | Học sinh Vinschool SAT Team<br><sub>sat.student@vinschool.edu.vn</sub> | ⚡ Lỗi giao diện / Kỹ thuật | Công cụ Desmos Calculator | 🟡 Cần xem lại | Cửa sổ máy tính Desmos bị cố định ở góc trên bên phải làm che mất các phương án trắc nghiệm. Cần cho phép học sinh kéo thả di chuyển tự do bất kỳ đâu trên màn hình. | ✅ Đã giải quyết (Kéo thả mượt mà & co giãn tự do) |
 | 5 | `FB-20261027-005` | 27/10/2026 15:07 | Test Runner<br><sub>test@vinschool.edu.vn</sub> | 💡 Đề xuất tính năng mới | Hệ thống Feedback | 🟢 Bình thường | Kiểm tra tự động luồng ghi nhận và đồng bộ feedback vào GitHub. | ⏳ Đang xử lý (Open) |
+| 6 | `FB-20261028-006` | 28/10/2026 09:57 | Test Student<br><sub>test@vinschool.edu.vn</sub> | 🎯 Báo lỗi câu hỏi / Đáp án | Math: Module 1 Q5 | 🟢 Bình thường | Kiểm tra hệ thống email feedback tới Thầy Mike | ⏳ Đang xử lý (Open) |
 
 ---
 *Nhật ký này được tạo và cập nhật tự động từ hệ thống Digital SAT Practice Engine.*
