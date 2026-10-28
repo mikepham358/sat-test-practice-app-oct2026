@@ -677,15 +677,18 @@ function renderCurrentQuestion() {
   DOM.excerptPrompt.textContent = q.prompt || "";
 
   // Render Response Mode: Multiple-Choice or Grid-in
+  const isFinished = (qState.status && (qState.status.startsWith("mastered") || qState.status === "missed")) || !!qState.reviewAllHints;
+
   if (q.is_grid_in) {
     DOM.mcqResponseArea.classList.add("hidden");
     DOM.gridinResponseArea.classList.remove("hidden");
     DOM.gridinInput.value = (qState.attempts && qState.attempts.length > 0) ? qState.attempts[qState.attempts.length - 1] : "";
-    DOM.gridinInput.disabled = (qState.status.startsWith("mastered") || qState.status === "missed");
+    DOM.gridinInput.disabled = isFinished;
+    renderGridInSolution(q, qState, isFinished);
   } else {
     DOM.gridinResponseArea.classList.add("hidden");
     DOM.mcqResponseArea.classList.remove("hidden");
-    renderOptions(q, qState);
+    renderOptions(q, qState, isFinished);
   }
 
   // Attempt tracker & Slots
@@ -714,9 +717,42 @@ function renderCurrentQuestion() {
   syncTimerState();
 }
 
-function renderOptions(q, qState) {
+function renderGridInSolution(q, qState, isFinished) {
+  let solBox = document.getElementById("gridin-solution-box");
+  if (!solBox) {
+    solBox = document.createElement("div");
+    solBox.id = "gridin-solution-box";
+    DOM.gridinResponseArea.appendChild(solBox);
+  }
+  if (!isFinished) {
+    solBox.className = "hidden";
+    solBox.innerHTML = "";
+    return;
+  }
+  solBox.className = "gridin-solution-card";
+  const trapErrors = q.grid_in_explanation?.trap_errors || "Cẩn thận kiểm tra các bẫy đổi đơn vị, làm tròn số thập phân, hoặc điều kiện bài toán.";
+  const steps = q.solution_steps || q.pooe_breakdown || "Xem lời giải chi tiết và các bước biến đổi trên bảng gợi ý.";
+  
+  solBox.innerHTML = `
+    <div class="gridin-badge-line">
+      <span class="gridin-correct-tag"><span class="badge-icon">✅</span> ĐÁP ÁN ĐÚNG CHUẨN: <strong>${escapeHtml(q.correct_answer)}</strong></span>
+    </div>
+    <div class="gridin-section">
+      <div class="gridin-sec-header">💡 CÁCH GIẢI CHI TIẾT & BƯỚC TÍNH:</div>
+      <div class="gridin-sec-body">${escapeHtml(steps)}</div>
+    </div>
+    <div class="gridin-section gridin-trap">
+      <div class="gridin-sec-header trap-header">⚠️ TẠI SAO CÁC KẾT QUẢ KHÁC BỊ SAI / LỖI BẪY:</div>
+      <div class="gridin-sec-body">${escapeHtml(trapErrors)}</div>
+    </div>
+  `;
+}
+
+function renderOptions(q, qState, isFinished) {
   DOM.optionsContainer.innerHTML = "";
-  const isFinished = (qState.status.startsWith("mastered") || qState.status === "missed");
+  if (isFinished === undefined) {
+    isFinished = (qState.status && (qState.status.startsWith("mastered") || qState.status === "missed")) || !!qState.reviewAllHints;
+  }
   const eliminated = qState.eliminated || [];
 
   const defaultKeys = ["A", "B", "C", "D"];
@@ -731,21 +767,42 @@ function renderOptions(q, qState) {
       row.classList.add("eliminated");
     }
 
+    const isCorrect = (opt.key === q.correct_answer);
+
     if (isFinished) {
-      if (opt.key === q.correct_answer) {
+      if (isCorrect) {
         row.classList.add("correct");
-      } else if (qState.attempts.includes(opt.key)) {
+      } else if (qState.attempts && qState.attempts.includes(opt.key)) {
         row.classList.add("wrong");
       }
-    } else if (qState.attempts.includes(opt.key)) {
+    } else if (qState.attempts && qState.attempts.includes(opt.key)) {
       row.classList.add("wrong");
     }
 
     row.innerHTML = `
-      <div class="option-bubble">${opt.key}</div>
-      <div class="option-text-wrap font-medium">Lựa chọn ${opt.key}</div>
-      <button class="btn-strike-option" title="Gạch bỏ phương án này">⨉</button>
+      <div class="option-header-row">
+        <div class="option-bubble">${opt.key}</div>
+        <div class="option-text-wrap font-medium">Lựa chọn ${opt.key}</div>
+        ${!isFinished ? `<button class="btn-strike-option" title="Gạch bỏ phương án này">⨉</button>` : ''}
+      </div>
     `;
+
+    // Render explanation for every option (why right / why wrong) when finished
+    if (isFinished && q.option_explanations && q.option_explanations[opt.key]) {
+      const expText = q.option_explanations[opt.key];
+      const expDiv = document.createElement("div");
+      expDiv.className = `option-explanation-card ${isCorrect ? 'exp-correct' : 'exp-wrong'}`;
+      
+      const badgeLabel = isCorrect ? "✅ ĐÁP ÁN ĐÚNG" : "❌ TẠI SAO SAI / BỊ LOẠI";
+      
+      expDiv.innerHTML = `
+        <div class="exp-badge-line">
+          <span class="exp-badge-tag ${isCorrect ? 'tag-correct' : 'tag-wrong'}">${badgeLabel}</span>
+        </div>
+        <div class="exp-text-content">${escapeHtml(expText)}</div>
+      `;
+      row.appendChild(expDiv);
+    }
 
     // Click option to select
     row.addEventListener("click", (e) => {
@@ -767,18 +824,20 @@ function renderOptions(q, qState) {
 
     // Eliminator strike action
     const btnStrike = row.querySelector(".btn-strike-option");
-    btnStrike.addEventListener("click", (e) => {
-      e.stopPropagation();
-      row.classList.toggle("eliminated");
-      if (row.classList.contains("eliminated")) {
-        if (!qState.eliminated) qState.eliminated = [];
-        if (!qState.eliminated.includes(opt.key)) qState.eliminated.push(opt.key);
-      } else {
-        qState.eliminated = (qState.eliminated || []).filter(k => k !== opt.key);
-      }
-      App.studentState.attempts[q.id] = qState;
-      saveLocalState();
-    });
+    if (btnStrike) {
+      btnStrike.addEventListener("click", (e) => {
+        e.stopPropagation();
+        row.classList.toggle("eliminated");
+        if (row.classList.contains("eliminated")) {
+          if (!qState.eliminated) qState.eliminated = [];
+          if (!qState.eliminated.includes(opt.key)) qState.eliminated.push(opt.key);
+        } else {
+          qState.eliminated = (qState.eliminated || []).filter(k => k !== opt.key);
+        }
+        App.studentState.attempts[q.id] = qState;
+        saveLocalState();
+      });
+    }
 
     DOM.optionsContainer.appendChild(row);
   });
@@ -874,14 +933,27 @@ function renderHints(q, qState) {
     DOM.hintCard3.classList.remove("unlocked");
   }
 
-  // Tier 4: Strategic Tip & Công thức chuẩn College Board (Mở khi làm đúng hoặc hoàn thành)
+  // Tier 4: Strategic Tip & Công thức chuẩn College Board / Princeton Review (Mở khi làm đúng hoặc hoàn thành)
   if (DOM.hintCard4) {
     if (isFinished) {
-      DOM.hintText4.innerHTML = `<strong>✨ Chiến thuật College Board:</strong><br>${q.strategic_tip || "Nắm vững quy tắc và công thức toán / ngữ pháp cốt lõi."}`;
+      let content = "";
+      if (q.princeton_strategy) {
+        content += `<p style="margin-bottom: 8px;"><strong>🎯 Chiến thuật Princeton Review:</strong> ${escapeHtml(q.princeton_strategy)}</p>`;
+      }
+      if (q.target_clue) {
+        content += `<p style="margin-bottom: 8px;"><strong>🔍 Phân tích Manh mối & Target:</strong> ${escapeHtml(q.target_clue)}</p>`;
+      }
+      if (q.pro_tip) {
+        content += `<p style="margin-bottom: 8px;"><strong>💡 Mẹo độc quyền Pro-Tip:</strong> ${escapeHtml(q.pro_tip)}</p>`;
+      }
+      if (!content) {
+        content = `<strong>✨ Chiến thuật College Board:</strong><br>${escapeHtml(q.strategic_tip || "Nắm vững quy tắc và công thức toán / ngữ pháp cốt lõi.")}`;
+      }
+      DOM.hintText4.innerHTML = content;
       DOM.hintContent4.classList.remove("collapsed");
       DOM.hintCard4.classList.add("unlocked");
     } else {
-      DOM.hintText4.textContent = "🔒 Hoàn thành câu hỏi để mở khóa Strategic Tip & Bí kíp công thức.";
+      DOM.hintText4.textContent = "🔒 Hoàn thành câu hỏi để mở khóa phân tích chiến thuật & mẹo độc quyền Princeton Review.";
       DOM.hintContent4.classList.add("collapsed");
       DOM.hintCard4.classList.remove("unlocked");
     }

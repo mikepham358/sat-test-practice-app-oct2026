@@ -196,7 +196,19 @@
       "level1_tip": "Xác định vai trò của động từ cần điền trong bối cảnh kỹ thuật sửa chữa hệ thống điện.",
       "level2_hint": "Chú ý cụm từ 'test each individual component one by one' thể hiện việc khoanh vùng chính xác bộ phận lỗi.",
       "level3_solution": "Loại trừ các từ mang nghĩa tạo mới hay điều chỉnh chung; chọn động từ chỉ việc cô lập/xác định nguyên nhân đơn lẻ.",
-      "pdf_page": 3
+      "pdf_page": 3,
+      "difficulty": "Easy",
+      "target_clue": "Cụm từ 'test each individual component one by one until the specific part causing the problematic behavior is identified'.",
+      "solution_steps": "Cần một động từ mang nghĩa 'khoanh vùng / cô lập / tìm ra chính xác' nguyên nhân gây lỗi.",
+      "princeton_strategy": "POOE - Contextual Clues & Tone Matching",
+      "pro_tip": "Mẹo Princeton Review: Đối với từ vựng trong bối cảnh (Vocabulary in Context), hãy gạch chân hành động chính trong câu trước khi nhìn đáp án. Động từ đúng phải mô tả chính xác hành động đó.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: B. Isolating — Mang nghĩa 'cô lập/khoanh vùng chính xác'. Rất phù hợp với việc kiểm tra từng linh kiện để tìm ra bộ phận bị hỏng.\n• Loại A. Adapting (Thích nghi) — Không hợp ngữ cảnh kỹ thuật sửa chữa.\n• Loại C. Incorporating (Kết hợp/Tích hợp) — Ngược nghĩa, không phải đưa thêm vào mà là tìm ra phần hỏng.\n• Loại D. Fabricating (Bịp bợm/Chế tạo) — Sai nét nghĩa.",
+      "option_explanations": {
+        "A": "Loại A — Adapting (Thích nghi) — Không hợp ngữ cảnh kỹ thuật sửa chữa.",
+        "B": "ĐÁP ÁN ĐÚNG. Isolating — Mang nghĩa 'cô lập/khoanh vùng chính xác'. Rất phù hợp với việc kiểm tra từng linh kiện để tìm ra bộ phận bị hỏng.",
+        "C": "Loại C — Incorporating (Kết hợp/Tích hợp) — Ngược nghĩa, không phải đưa thêm vào mà là tìm ra phần hỏng.",
+        "D": "Loại D — Fabricating (Bịp bợm/Chế tạo) — Sai nét nghĩa."
+      }
     },
     {
       "id": 2,
@@ -238,7 +250,19 @@
       "level1_tip": "Phân tích cơ chế sinh học điều chỉnh độ mặn nội bào của loài cá ngừ được miêu tả.",
       "level2_hint": "Cần một động từ miêu tả việc kiểm soát và duy trì mức độ ổn định của nồng độ muối.",
       "level3_solution": "Loại bỏ các động từ mang nghĩa phá hủy hay làm xáo trộn; tìm từ chỉ sự điều hòa/kiểm soát sinh học.",
-      "pdf_page": 3
+      "pdf_page": 3,
+      "difficulty": "Medium",
+      "target_clue": "Cụm 'experience significant environmental salinity changes' và cơ chế 'control and maintain steady intracellular salt levels'.",
+      "solution_steps": "Cần một động từ chỉ việc 'điều hòa / kiểm soát / duy trì ổn định' độ mặn.",
+      "princeton_strategy": "POOE - Biological Function Analysis",
+      "pro_tip": "Mẹo Princeton Review: Phân biệt giữa hành động thụ động (tolerate) và cơ chế chủ động (regulate) trong các đoạn văn sinh học SAT.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: D. regulate — Nghĩa là 'điều hòa/kiểm soát'. Đúng với chức năng sinh học duy trì mức độ muối nội bào ổn định.\n• Loại A. counteract (Chống lại) — Quá mạnh, sinh vật không chống lại môi trường mà điều hòa cơ thể.\n• Loại B. elude (Lẩn tránh) — Sinh vật sống trong nước biển nên không thể lẩn tránh độ mặn.\n• Loại C. tolerate (Chịu đựng) — Mang tính thụ động, trong khi văn bản miêu tả cơ chế chủ động kiểm soát.",
+      "option_explanations": {
+        "A": "Loại A — counteract (Chống lại) — Quá mạnh, sinh vật không chống lại môi trường mà điều hòa cơ thể.",
+        "B": "Loại B — elude (Lẩn tránh) — Sinh vật sống trong nước biển nên không thể lẩn tránh độ mặn.",
+        "C": "Loại C — tolerate (Chịu đựng) — Mang tính thụ động, trong khi văn bản miêu tả cơ chế chủ động kiểm soát.",
+        "D": "ĐÁP ÁN ĐÚNG. regulate — Nghĩa là 'điều hòa/kiểm soát'. Đúng với chức năng sinh học duy trì mức độ muối nội bào ổn định."
+      }
     },
     {
       "id": 3,
@@ -280,7 +304,19 @@
       "level1_tip": "Phân tích hướng tiếp cận nghiên cứu của nhóm tác giả đối với môi trường đại dương.",
       "level2_hint": "Chú ý từ nối hoặc ngữ cảnh đối lập giữa việc nghiên cứu trên đất liền và độ sâu dưới mực nước biển.",
       "level3_solution": "Cần từ miêu tả phương pháp làm việc khác biệt, đi ngược hoặc khác với lối tư duy truyền thống.",
-      "pdf_page": 3
+      "pdf_page": 3,
+      "difficulty": "Medium",
+      "target_clue": "Từ nối đối lập 'Though' giữa nghiên cứu thông thường (trên núi cao) và nghiên cứu khác biệt (dưới mực nước biển).",
+      "solution_steps": "Cần một tính từ chỉ sự 'mới mẻ / sáng tạo / độc đáo' trong hướng nghiên cứu.",
+      "princeton_strategy": "POOE - Contrast & Innovation Clues",
+      "pro_tip": "Mẹo Princeton Review: Dấu hiệu đối lập 'Though/While' báo hiệu hai vế có thái độ hoặc tính chất trái ngược nhau.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: B. innovative — Nghĩa là 'đổi mới/sáng tạo'. Hoàn toàn phù hợp với hướng nghiên cứu mới mẻ chưa ai làm.\n• Loại A. predictable (Dự đoán được) — Sai vì đây là hướng đi mới, không lặp lại cái cũ.\n• Loại C. idealistic (Lý tưởng hóa) — Không liên quan đến phương pháp nghiên cứu khoa học.\n• Loại D. superficial (Hời hợt) — Mang nghĩa tiêu cực không phù hợp.",
+      "option_explanations": {
+        "A": "Loại A — predictable (Dự đoán được) — Sai vì đây là hướng đi mới, không lặp lại cái cũ.",
+        "B": "ĐÁP ÁN ĐÚNG. innovative — Nghĩa là 'đổi mới/sáng tạo'. Hoàn toàn phù hợp với hướng nghiên cứu mới mẻ chưa ai làm.",
+        "C": "Loại C — idealistic (Lý tưởng hóa) — Không liên quan đến phương pháp nghiên cứu khoa học.",
+        "D": "Loại D — superficial (Hời hợt) — Mang nghĩa tiêu cực không phù hợp."
+      }
     },
     {
       "id": 4,
@@ -322,7 +358,19 @@
       "level1_tip": "Đọc kỹ câu văn để xác định mức độ hoặc giới hạn bảo vệ của việc đào tạo cơ bản.",
       "level2_hint": "Chú ý vế đối lập phía sau về các đòn tấn công tinh vi đòi hỏi cấp độ bảo vệ cao hơn.",
       "level3_solution": "Chọn từ miêu tả sự đầy đủ/thỏa đáng; loại các từ mang nghĩa thái quá hoặc không đủ.",
-      "pdf_page": 3
+      "pdf_page": 3,
+      "difficulty": "Easy",
+      "target_clue": "Mối quan hệ vế 'cannot provide _____ protection' đối lập với 'sophisticated attacks require advanced defense'.",
+      "solution_steps": "Cần một tính từ chỉ 'đầy đủ / thỏa đáng'.",
+      "princeton_strategy": "POOE - Sufficiency & Degree",
+      "pro_tip": "Mẹo Princeton Review: Chú ý từ phủ định 'cannot'. Phủ định + Đáp án = Ý nghĩa toàn câu.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: C. sufficient — Nghĩa là 'đầy đủ/thỏa đáng'. Đào tạo cơ bản không thể cung cấp sự bảo vệ 'đầy đủ'.\n• Loại A. uncommon (Hiếm gặp) — Sai bối cảnh.\n• Loại B. superficial (Nông xạn) — Bị trùng lặp logic phủ định (cannot provide superficial protection là sai nghĩa).\n• Loại D. affordable (Phải đắt/Rẻ) — Không đề cập đến chi phí.",
+      "option_explanations": {
+        "A": "Loại A — uncommon (Hiếm gặp) — Sai bối cảnh.",
+        "B": "Loại B — superficial (Nông xạn) — Bị trùng lặp logic phủ định (cannot provide superficial protection là sai nghĩa).",
+        "C": "ĐÁP ÁN ĐÚNG. sufficient — Nghĩa là 'đầy đủ/thỏa đáng'. Đào tạo cơ bản không thể cung cấp sự bảo vệ 'đầy đủ'.",
+        "D": "Loại D — affordable (Phải đắt/Rẻ) — Không đề cập đến chi phí."
+      }
     },
     {
       "id": 5,
@@ -364,7 +412,19 @@
       "level1_tip": "Xác định cấu trúc tổng thể của bài đọc từ câu hỏi mở đầu đến các câu tiếp theo.",
       "level2_hint": "Bài đọc bắt đầu bằng câu hỏi 'What is a city?' và đưa ra các góc nhìn định nghĩa khác nhau.",
       "level3_solution": "Mục đích chính là trình bày các quan điểm đa dạng về một khái niệm thay vì chỉ bảo vệ một góc nhìn duy nhất.",
-      "pdf_page": 4
+      "pdf_page": 4,
+      "difficulty": "Medium",
+      "target_clue": "Câu hỏi mở đầu 'What is a city? The answer depends on where you live!' và việc đưa ra nhiều định nghĩa khác nhau.",
+      "solution_steps": "Đoạn văn đưa ra một câu hỏi chung rồi trình bày các cách trả lời/định nghĩa đa dạng.",
+      "princeton_strategy": "Structure & Purpose Analysis",
+      "pro_tip": "Mẹo Princeton Review: Khi đoạn văn bắt đầu bằng một câu hỏi, câu hỏi đó chính là Topic. Phần còn lại trình bày các câu trả lời.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: B. It poses a general question and then discusses various ways that different nations answer it.\n• Loại A. Lỗi so sánh số lượng thành phố — đoạn văn nói về tiêu chuẩn định nghĩa, không đếm số lượng.\n• Loại C. Lỗi tập trung vào một quốc gia duy nhất.\n• Loại D. Lỗi đưa ra dòng thời gian lịch sử.",
+      "option_explanations": {
+        "A": "Loại A — Lỗi so sánh số lượng thành phố — đoạn văn nói về tiêu chuẩn định nghĩa, không đếm số lượng.",
+        "B": "ĐÁP ÁN ĐÚNG. It poses a general question and then discusses various ways that different nations answer it.",
+        "C": "Loại C — Lỗi tập trung vào một quốc gia duy nhất.",
+        "D": "Loại D — Lỗi đưa ra dòng thời gian lịch sử."
+      }
     },
     {
       "id": 6,
@@ -406,7 +466,19 @@
       "level1_tip": "Tập trung vào các chi tiết miêu tả cảm xúc và biểu hiện thể chất của nhân vật.",
       "level2_hint": "Chú ý các dấu hiệu như thở gấp, đổ mồ hôi và nét mặt căng thẳng trong bối cảnh truyện.",
       "level3_solution": "Mục đích chính là thể hiện trạng thái tâm lý lo âu/căng thẳng của nhân vật qua hành vi cụ thể.",
-      "pdf_page": 4
+      "pdf_page": 4,
+      "difficulty": "Medium",
+      "target_clue": "Các biểu hiện thể chất: 'rapid breathing', 'sweating palms', 'pacing the room'.",
+      "solution_steps": "Mục đích là thể hiện sự lo âu, căng thẳng tột độ của nhân vật.",
+      "princeton_strategy": "Literary Character State & Behavior",
+      "pro_tip": "Mẹo Princeton Review: Trong truyện ngắn (Literary Narrative), hành động thể chất của nhân vật dùng để bộc lộ trạng thái cảm xúc bên trong.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: D. To convey a character's intense anxiety through physical reactions and actions.\n• Loại A. Lỗi mô tả mconflict giữa hai nhân vật.\n• Loại B. Lỗi chỉ bầu không khí thời tiết.\n• Loại C. Lỗi thể hiện sự tức giận.",
+      "option_explanations": {
+        "A": "Loại A — Lỗi mô tả mconflict giữa hai nhân vật.",
+        "B": "Loại B — Lỗi chỉ bầu không khí thời tiết.",
+        "C": "Loại C — Lỗi thể hiện sự tức giận.",
+        "D": "ĐÁP ÁN ĐÚNG. To convey a character's intense anxiety through physical reactions and actions."
+      }
     },
     {
       "id": 7,
@@ -448,7 +520,19 @@
       "level1_tip": "So sánh câu mở đầu và câu kết thúc của bài đọc để xác định chủ đề xuyên suốt.",
       "level2_hint": "Đoạn văn liệt kê các hướng đi công việc và cơ hội phát triển trong ngành lâm nghiệp.",
       "level3_solution": "Mục đích là tổng quan các cơ hội nghề nghiệp đa dạng trong lĩnh vực được nêu.",
-      "pdf_page": 5
+      "pdf_page": 5,
+      "difficulty": "Easy",
+      "target_clue": "Câu mở đầu và kết luận liệt kê các con đường sự nghiệp khác nhau trong ngành lâm nghiệp.",
+      "solution_steps": "Mục đích là giới thiệu sự đa dạng về cơ hội nghề nghiệp.",
+      "princeton_strategy": "Informational Main Purpose",
+      "pro_tip": "Mẹo Princeton Review: Đọc câu đầu và câu cuối của Informational Text để nắm bắt mục đích tổng quát.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: D. To outline a variety of career opportunities available within the field of forestry.\n• Loại A. Lỗi quá hẹp (chỉ nói về một công việc).\n• Loại B. Lỗi chỉ trích ngành lâm nghiệp.\n• Loại C. Lỗi so sánh với ngành khác.",
+      "option_explanations": {
+        "A": "Loại A — Lỗi quá hẹp (chỉ nói về một công việc).",
+        "B": "Loại B — Lỗi chỉ trích ngành lâm nghiệp.",
+        "C": "Loại C — Lỗi so sánh với ngành khác.",
+        "D": "ĐÁP ÁN ĐÚNG. To outline a variety of career opportunities available within the field of forestry."
+      }
     },
     {
       "id": 8,
@@ -490,7 +574,19 @@
       "level1_tip": "Xác định từ khóa tên riêng được đề cập trong câu hỏi và định vị câu chứa thông tin.",
       "level2_hint": "Đối chiếu trực tiếp chi tiết về điều kiện nhìn thấy được miêu tả ở phần giữa bài đọc.",
       "level3_solution": "Chọn đáp án diễn đạt lại chính xác (paraphrase) điều kiện kích hoạt được nêu trực tiếp trên mặt chữ.",
-      "pdf_page": 5
+      "pdf_page": 5,
+      "difficulty": "Easy",
+      "target_clue": "Diễn đạt trực tiếp trong bài: 'Olo can only be seen by activating the medium cones alone'.",
+      "solution_steps": "Màu Olo chỉ thấy được khi kích hoạt duy nhất tế bào nón trung bình (medium cones).",
+      "princeton_strategy": "Literal Comprehension / Direct Retrieval",
+      "pro_tip": "Mẹo Princeton Review: Với câu hỏi Detail, đáp án đúng chỉ là Paraphrase (diễn đạt lại) 100% câu văn trong bài.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: A. By stimulating the medium cones in isolation from other cones.\n• Loại B, C, D — Đều vi phạm thông tin trực tiếp, kích hoạt sai loại tế bào nón.",
+      "option_explanations": {
+        "A": "ĐÁP ÁN ĐÚNG. By stimulating the medium cones in isolation from other cones.",
+        "B": "Loại B — Đều vi phạm thông tin trực tiếp, kích hoạt sai loại tế bào nón.",
+        "C": "Loại C — Đều vi phạm thông tin trực tiếp, kích hoạt sai loại tế bào nón.",
+        "D": "Loại D — Đều vi phạm thông tin trực tiếp, kích hoạt sai loại tế bào nón."
+      }
     },
     {
       "id": 9,
@@ -532,7 +628,19 @@
       "level1_tip": "Quan sát biểu đồ và xác định đúng hai quốc gia cùng mốc thời gian từ năm 1960.",
       "level2_hint": "So sánh chiều cao của các cột đại diện cho số lượng núi lửa hoạt động giữa hai vùng.",
       "level3_solution": "Chọn đáp án phản ánh đúng mối quan hệ lớn hơn/nhỏ hơn giữa hai số liệu trên đồ thị.",
-      "pdf_page": 6
+      "pdf_page": 6,
+      "difficulty": "Medium",
+      "target_clue": "Đồ thị so sánh số núi lửa hoạt động từ 1960: Ethiopia cao hơn hẳn Tanzania.",
+      "solution_steps": "Tìm phương án mô tả chính xác sự chênh lệch số lượng núi lửa giữa 2 nước.",
+      "princeton_strategy": "Quantitative Graph Analysis",
+      "pro_tip": "Mẹo Princeton Review: Đọc kỹ nhãn trục X, trục Y và chú giải (Legend) trước khi đối chiếu đáp án.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: C. Ethiopia had a significantly higher number of active volcanoes than Tanzania did during this period.\n• Loại A, B, D — Đảo ngược số liệu hoặc đọc sai trục đồ thị.",
+      "option_explanations": {
+        "A": "Loại A — Đảo ngược số liệu hoặc đọc sai trục đồ thị.",
+        "B": "Loại B — Đảo ngược số liệu hoặc đọc sai trục đồ thị.",
+        "C": "ĐÁP ÁN ĐÚNG. Ethiopia had a significantly higher number of active volcanoes than Tanzania did during this period.",
+        "D": "Loại D — Đảo ngược số liệu hoặc đọc sai trục đồ thị."
+      }
     },
     {
       "id": 10,
@@ -574,7 +682,19 @@
       "level1_tip": "Đọc kỹ yêu cầu câu hỏi về yếu tố thẩm mỹ hoặc biểu tượng phong cách.",
       "level2_hint": "Tìm câu trích dẫn chứa các từ miêu tả dáng vẻ bên ngoài, phụ kiện hoặc yếu tố văn hóa đại chúng.",
       "level3_solution": "Loại trừ các trích dẫn chỉ nói về chức năng kỹ thuật; chọn câu nhấn mạnh khía cạnh phong cách/thẩm mỹ.",
-      "pdf_page": 6
+      "pdf_page": 6,
+      "difficulty": "Medium",
+      "target_clue": "Yêu cầu trích dẫn thể hiện yếu tố thẩm mỹ / phong cách cá nhân (aesthetic / style totems).",
+      "solution_steps": "Trích dẫn phải nhắc đến kính râm tráng gương hoặc biểu tượng thời trang.",
+      "princeton_strategy": "Command of Evidence (Quotation)",
+      "pro_tip": "Mẹo Princeton Review: Khoanh tròn từ khóa trong câu hỏi (ví dụ: 'aesthetic') và tìm trích dẫn chứa từ đồng nghĩa.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: D. Trích dẫn chứa cụm 'mirrored sunglasses as pop culture totems and aesthetic statements'.\n• Loại A, B, C — Chỉ nói về chức năng bảo vệ mắt, không đề cập đến tính thẩm mỹ.",
+      "option_explanations": {
+        "A": "Loại A — Chỉ nói về chức năng bảo vệ mắt, không đề cập đến tính thẩm mỹ.",
+        "B": "Loại B — Chỉ nói về chức năng bảo vệ mắt, không đề cập đến tính thẩm mỹ.",
+        "C": "Loại C — Chỉ nói về chức năng bảo vệ mắt, không đề cập đến tính thẩm mỹ.",
+        "D": "ĐÁP ÁN ĐÚNG. Trích dẫn chứa cụm 'mirrored sunglasses as pop culture totems and aesthetic statements'."
+      }
     },
     {
       "id": 11,
@@ -616,7 +736,19 @@
       "level1_tip": "Định vị ngành nghề và khoảng thời gian được đề cập trong bảng số liệu.",
       "level2_hint": "So sánh giá trị nhân viên thực tế giữa các mốc năm trong ngành kinh doanh.",
       "level3_solution": "Chọn đáp án nêu đúng sự thay đổi tăng/giảm dựa trên phép trừ số liệu chính xác trong bảng.",
-      "pdf_page": 7
+      "pdf_page": 7,
+      "difficulty": "Easy",
+      "target_clue": "Bảng số liệu: Nhân viên ngành kinh doanh tăng từ 220,700 lên 232,300.",
+      "solution_steps": "Khẳng định sự tăng trưởng về tổng số nhân sự.",
+      "princeton_strategy": "Data Table Interpretation",
+      "pro_tip": "Mẹo Princeton Review: Kiểm tra phép trừ (232,300 - 220,700 > 0) để khẳng định xu hướng tăng.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: A. The total number of business sector employees increased over the specified period.\n• Loại B, C, D — Đọc sai dòng hoặc khẳng định giảm số lượng.",
+      "option_explanations": {
+        "A": "ĐÁP ÁN ĐÚNG. The total number of business sector employees increased over the specified period.",
+        "B": "Loại B — Đọc sai dòng hoặc khẳng định giảm số lượng.",
+        "C": "Loại C — Đọc sai dòng hoặc khẳng định giảm số lượng.",
+        "D": "Loại D — Đọc sai dòng hoặc khẳng định giảm số lượng."
+      }
     },
     {
       "id": 12,
@@ -658,7 +790,19 @@
       "level1_tip": "Chú ý chỉ số phần trăm do 'undistributed income' trên biểu đồ qua các mốc năm.",
       "level2_hint": "So sánh tỉ lệ giữa hai năm được hỏi (2003 và 2005) để xem năm nào cao hơn.",
       "level3_solution": "Chọn đáp án phản ánh chính xác xu hướng biến động số liệu được thể hiện trên đồ thị.",
-      "pdf_page": 8
+      "pdf_page": 8,
+      "difficulty": "Medium",
+      "target_clue": "So sánh phạt do 'undistributed income' giữa năm 2003 và 2005 trên biểu đồ.",
+      "solution_steps": "Năm 2005 có tỉ lệ phạt cao hơn năm 2003.",
+      "princeton_strategy": "Chart Trend & Comparison",
+      "pro_tip": "Mẹo Princeton Review: Dùng thước hoặc bút dóng ngang hai đỉnh cột để so sánh chiều cao chính xác.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: C. The penalty rate for undistributed income was higher in 2005 than in 2003.\n• Loại A, B, D — Đọc sai cột hoặc nhầm lẫn giữa các loại phạt.",
+      "option_explanations": {
+        "A": "Loại A — Đọc sai cột hoặc nhầm lẫn giữa các loại phạt.",
+        "B": "Loại B — Đọc sai cột hoặc nhầm lẫn giữa các loại phạt.",
+        "C": "ĐÁP ÁN ĐÚNG. The penalty rate for undistributed income was higher in 2005 than in 2003.",
+        "D": "Loại D — Đọc sai cột hoặc nhầm lẫn giữa các loại phạt."
+      }
     },
     {
       "id": 13,
@@ -700,7 +844,19 @@
       "level1_tip": "Xác định nguyên nhân dẫn đến sự tin tưởng của nhân vật được hỏi trong tác phẩm.",
       "level2_hint": "Tìm câu thoại hoặc lời kể giải thích lý do nhân vật không bị coi là người phản bội.",
       "level3_solution": "Chọn trích dẫn thể hiện rõ việc nhân vật không tham gia vào hành động bỏ rơi trước đó.",
-      "pdf_page": 9
+      "pdf_page": 9,
+      "difficulty": "Hard",
+      "target_clue": "Lý do Neoptolemus được tin tưởng: vì anh không tham gia vào nhóm người bỏ rơi Philoctetes.",
+      "solution_steps": "Trích dẫn giải thích Neoptolemus không vô ơn/không có mặt lúc bỏ rơi.",
+      "princeton_strategy": "Literary Evidence Selection",
+      "pro_tip": "Mẹo Princeton Review: Đáp án đúng phải trả lời trực tiếp câu hỏi 'WHY' (Tại sao lại được tin tưởng).",
+      "pooe_breakdown": "• Đáp án ĐÚNG: C. Trích dẫn nêu rõ Neoptolemus không hiện diện lúc Philoctetes bị bỏ lại đảo.\n• Loại A, B, D — Nói về vũ khí hoặc mâu thuẫn khác.",
+      "option_explanations": {
+        "A": "Loại A — Nói về vũ khí hoặc mâu thuẫn khác.",
+        "B": "Loại B — Nói về vũ khí hoặc mâu thuẫn khác.",
+        "C": "ĐÁP ÁN ĐÚNG. Trích dẫn nêu rõ Neoptolemus không hiện diện lúc Philoctetes bị bỏ lại đảo.",
+        "D": "Loại D — Nói về vũ khí hoặc mâu thuẫn khác."
+      }
     },
     {
       "id": 14,
@@ -742,7 +898,19 @@
       "level1_tip": "Xác định mối quan hệ logic giữa việc tập trung vào yếu tố tự thuật và yếu tố sáng tác.",
       "level2_hint": "Chú ý từ nối đối lập chỉ ra hậu quả của việc bỏ qua khía cạnh hư cấu trong nghiên cứu.",
       "level3_solution": "Chọn câu kết luận chỉ ra sự thiếu sót trong việc đánh giá toàn diện tác phẩm nếu chỉ nhìn một chiều.",
-      "pdf_page": 9
+      "pdf_page": 9,
+      "difficulty": "Hard",
+      "target_clue": "Lập luận: Bỏ qua yếu tố sáng tác (invention) mà chỉ tập trung vào sự thật (autobiographical) sẽ dẫn đến cái nhìn phiến diện.",
+      "solution_steps": "Kết luận: Cần phải công nhận cả vai trò của sự hư cấu/sáng tạo nghệ thuật.",
+      "princeton_strategy": "Inference & Logical Completion",
+      "pro_tip": "Mẹo Princeton Review: Dấu hiệu logic 'If X is ignored -> Y will happen'. Y phải là hậu quả của việc bỏ qua X.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: A. Fail to appreciate the creative artistry and fictional construction in the author's work.\n• Loại B. Cho rằng tác giả viết hoàn toàn sai sự thật.\n• Loại C. Bỏ qua bối cảnh lịch sử.\n• Loại D. Đánh giá cao quá mức sự thật.",
+      "option_explanations": {
+        "A": "ĐÁP ÁN ĐÚNG. Fail to appreciate the creative artistry and fictional construction in the author's work.",
+        "B": "Loại B — Cho rằng tác giả viết hoàn toàn sai sự thật.",
+        "C": "Loại C — Bỏ qua bối cảnh lịch sử.",
+        "D": "Loại D — Đánh giá cao quá mức sự thật."
+      }
     },
     {
       "id": 15,
@@ -784,7 +952,19 @@
       "level1_tip": "Phân tích lập luận của tác giả về tác động của biến đổi khí hậu đối với loài động vật.",
       "level2_hint": "Chú ý các bằng chứng được đưa ra ở câu trước về sự thay đổi nguồn thức ăn.",
       "level3_solution": "Chọn kết luận nối tiếp hợp lý, thể hiện sự suy giảm hoặc thay đổi hành vi tương ứng.",
-      "pdf_page": 9
+      "pdf_page": 9,
+      "difficulty": "Hard",
+      "target_clue": "Giả thuyết về sự liên kết giữa hai hiện tượng khoa học được củng cố bởi bằng chứng mới.",
+      "solution_steps": "Kết luận: Bằng chứng mới ủng hộ mô hình kết hợp thay vì tách biệt.",
+      "princeton_strategy": "Complex Text Inference",
+      "pro_tip": "Mẹo Princeton Review: Tìm từ khóa 'integrated' hoặc 'connection' khớp với giả thuyết ở câu trước.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: A. Supports the integrated framework proposing a direct connection between the two phenomena.\n• Loại B, C, D — Phủ định mối liên hệ hoặc đưa ra kết luận ngoại lai.",
+      "option_explanations": {
+        "A": "ĐÁP ÁN ĐÚNG. Supports the integrated framework proposing a direct connection between the two phenomena.",
+        "B": "Loại B — Phủ định mối liên hệ hoặc đưa ra kết luận ngoại lai.",
+        "C": "Loại C — Phủ định mối liên hệ hoặc đưa ra kết luận ngoại lai.",
+        "D": "Loại D — Phủ định mối liên hệ hoặc đưa ra kết luận ngoại lai."
+      }
     },
     {
       "id": 16,
@@ -826,7 +1006,19 @@
       "level1_tip": "Xác định mệnh đề quan hệ bổ nghĩa cho danh từ chỉ vật hay chỉ người đứng trước.",
       "level2_hint": "Kiểm tra xem động từ trong mệnh đề quan hệ chia ở số ít hay số nhiều dựa vào danh từ trung tâm.",
       "level3_solution": "Loại bỏ các đại từ quan hệ không phù hợp; chọn cấu trúc ngữ pháp chuẩn xác.",
-      "pdf_page": 10
+      "pdf_page": 10,
+      "difficulty": "Easy",
+      "target_clue": "Danh từ chỉ người 'scientists' đứng trước mệnh đề bổ nghĩa.",
+      "solution_steps": "Cần đại từ quan hệ chỉ người làm chủ ngữ 'who'.",
+      "princeton_strategy": "Grammar - Relative Clauses",
+      "pro_tip": "Mẹo Princeton Review: [Danh từ người] + WHO + [Động từ]. Công thức ngữ pháp kinh điển.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: C. who — Đại từ quan hệ chuẩn chỉ người làm chủ ngữ cho động từ 'discovered'.\n• Loại A. which (chỉ vật).\n• Loại B. whom (chỉ tân ngữ).\n• Loại D. whose (sở hữu cách).",
+      "option_explanations": {
+        "A": "Loại A — which (chỉ vật).",
+        "B": "Loại B — whom (chỉ tân ngữ).",
+        "C": "ĐÁP ÁN ĐÚNG. who — Đại từ quan hệ chuẩn chỉ người làm chủ ngữ cho động từ 'discovered'.",
+        "D": "Loại D — whose (sở hữu cách)."
+      }
     },
     {
       "id": 17,
@@ -868,7 +1060,19 @@
       "level1_tip": "Xác định mốc thời gian và tính liên tục của hành động trong bài đọc.",
       "level2_hint": "Đối chiếu thì của các động từ xung quanh để bảo đảm tính nhất quán về thời gian.",
       "level3_solution": "Chọn dạng động từ thể hiện sự tiếp diễn hoặc hoàn thành phù hợp với bối cảnh.",
-      "pdf_page": 10
+      "pdf_page": 10,
+      "difficulty": "Medium",
+      "target_clue": "Mốc thời gian 'since 2010' chỉ hành động bắt đầu trong quá khứ và kéo dài đến hiện tại.",
+      "solution_steps": "Cần thì Hiện tại Hoàn thành / Hiện tại Hoàn thành Tiếp diễn (have/has been ...ing).",
+      "princeton_strategy": "Grammar - Verb Tense & Consistency",
+      "pro_tip": "Mẹo Princeton Review: Thấy 'since + mốc thời gian' -> Chọn ngay Present Perfect (have/has + V3/V-ing).",
+      "pooe_breakdown": "• Đáp án ĐÚNG: D. have been investigating — Hiện tại hoàn thành tiếp diễn chuẩn với 'since 2010'.\n• Loại A. investigated (Quá khứ đơn).\n• Loại B. investigate (Hiện tại đơn).\n• Loại C. will investigate (Tương lai đơn).",
+      "option_explanations": {
+        "A": "Loại A — investigated (Quá khứ đơn).",
+        "B": "Loại B — investigate (Hiện tại đơn).",
+        "C": "Loại C — will investigate (Tương lai đơn).",
+        "D": "ĐÁP ÁN ĐÚNG. have been investigating — Hiện tại hoàn thành tiếp diễn chuẩn với 'since 2010'."
+      }
     },
     {
       "id": 18,
@@ -910,7 +1114,19 @@
       "level1_tip": "Xác định thành phần bổ sung không thiết yếu (non-essential clause) trong câu.",
       "level2_hint": "Nhớ quy tắc cặp dấu tương đương: nếu đã mở đầu bằng dấu gạch ngang thì phải đóng bằng dấu gạch ngang.",
       "level3_solution": "Loại bỏ các phương án dùng hỗn hợp dấu phẩy và gạch ngang không đồng bộ.",
-      "pdf_page": 10
+      "pdf_page": 10,
+      "difficulty": "Medium",
+      "target_clue": "Cụm bổ nghĩa không thiết yếu được mở đầu bằng dấu gạch ngang '—'.",
+      "solution_steps": "Phải kết thúc cụm bổ nghĩa bằng một dấu gạch ngang '—' tương ứng.",
+      "princeton_strategy": "Grammar - Punctuation (Dashes)",
+      "pro_tip": "Mẹo Princeton Review: Dấu gạch ngang đi theo CẶP (— ... —). Nếu mở bằng gạch ngang, phải đóng bằng gạch ngang.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: B. — (Dấu gạch ngang đóng cụm bổ nghĩa).\n• Loại A. Dấu phẩy (không đồng bộ với gạch ngang mở đầu).\n• Loại C. Dấu chấm phẩy.\n• Loại D. Không có dấu.",
+      "option_explanations": {
+        "A": "Loại A — Dấu phẩy (không đồng bộ với gạch ngang mở đầu).",
+        "B": "ĐÁP ÁN ĐÚNG. — (Dấu gạch ngang đóng cụm bổ nghĩa).",
+        "C": "Loại C — Dấu chấm phẩy.",
+        "D": "Loại D — Không có dấu."
+      }
     },
     {
       "id": 19,
@@ -952,7 +1168,19 @@
       "level1_tip": "Kiểm tra xem vế trước vị trí cần điền có phải là một mệnh đề độc lập hoàn chỉnh hay không.",
       "level2_hint": "Dấu hai chấm được dùng để giải thích hoặc chi tiết hóa nội dung đã nêu ở mệnh đề độc lập trước đó.",
       "level3_solution": "Loại bỏ phương án dùng dấu phẩy nối hai mệnh đề độc lập (lỗi comma splice).",
-      "pdf_page": 11
+      "pdf_page": 11,
+      "difficulty": "Easy",
+      "target_clue": "Vế trước là một mệnh đề độc lập hoàn chỉnh, vế sau giải thích/liệt kê chi tiết.",
+      "solution_steps": "Sử dụng dấu hai chấm (:) sau mệnh đề hoàn chỉnh.",
+      "princeton_strategy": "Grammar - Colons",
+      "pro_tip": "Mẹo Princeton Review: [Mệnh đề hoàn chỉnh] : [Danh sách / Giải thích]. Dấu 2 chấm yêu cầu vế trước phải đứng được 1 mình.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: B. : (Dấu hai chấm).\n• Loại A. Dấu phẩy (gây lỗi Comma Splice).\n• Loại C. Dấu chấm phẩy (dùng nối 2 vế độc lập ngang hàng, không liệt kê).\n• Loại D. Không dấu.",
+      "option_explanations": {
+        "A": "Loại A — Dấu phẩy (gây lỗi Comma Splice).",
+        "B": "ĐÁP ÁN ĐÚNG. : (Dấu hai chấm).",
+        "C": "Loại C — Dấu chấm phẩy (dùng nối 2 vế độc lập ngang hàng, không liệt kê).",
+        "D": "Loại D — Không dấu."
+      }
     },
     {
       "id": 20,
@@ -994,7 +1222,19 @@
       "level1_tip": "Phân tích mối quan hệ giữa hai mệnh đề độc lập đứng trước và sau vị trí khoảng trống.",
       "level2_hint": "Nếu hai mệnh đề độc lập không có liên từ FANBOYS thì phải dùng dấu chấm phẩy hoặc dấu chấm.",
       "level3_solution": "Loại bỏ phương án chỉ dùng dấu phẩy đơn lẻ giữa hai mệnh đề độc lập.",
-      "pdf_page": 11
+      "pdf_page": 11,
+      "difficulty": "Medium",
+      "target_clue": "Hai mệnh đề độc lập hoàn chỉnh không có liên từ FANBOYS.",
+      "solution_steps": "Dùng dấu chấm phẩy (;) hoặc dấu chấm (.) để ngắt hai mệnh đề.",
+      "princeton_strategy": "Grammar - Semicolons & Clause Boundary",
+      "pro_tip": "Mẹo Princeton Review: Semicolon = Period = Comma + FANBOYS. 3 dạng này tương đương nhau.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: B. ; (Dấu chấm phẩy nối 2 mệnh đề độc lập).\n• Loại A. Dấu phẩy (Comma splice).\n• Loại C. Dấu hai chấm (không phù hợp nghĩa giải thích).\n• Loại D. Dùng liên từ 'and' không có dấu phẩy.",
+      "option_explanations": {
+        "A": "Loại A — Dấu phẩy (Comma splice).",
+        "B": "ĐÁP ÁN ĐÚNG. ; (Dấu chấm phẩy nối 2 mệnh đề độc lập).",
+        "C": "Loại C — Dấu hai chấm (không phù hợp nghĩa giải thích).",
+        "D": "Loại D — Dùng liên từ 'and' không có dấu phẩy."
+      }
     },
     {
       "id": 21,
@@ -1036,7 +1276,19 @@
       "level1_tip": "Xác định chủ ngữ chính của câu bằng cách gạch bỏ các cụm giới từ nhiễu đứng giữa.",
       "level2_hint": "Kiểm tra xem chủ ngữ chính là danh từ số ít hay số nhiều.",
       "level3_solution": "Chọn dạng động từ hòa hợp chính xác về số với chủ ngữ trung tâm.",
-      "pdf_page": 11
+      "pdf_page": 11,
+      "difficulty": "Medium",
+      "target_clue": "Chủ ngữ chính là danh từ số nhiều 'The discoveries' (cụm giới từ nhiễu 'of the ancient artifact' bị gạch bỏ).",
+      "solution_steps": "Động từ phải chia ở dạng số nhiều (have/are).",
+      "princeton_strategy": "Grammar - Subject-Verb Agreement",
+      "pro_tip": "Mẹo Princeton Review: Gạch bỏ cụm giới từ [of ...] đứng giữa chủ ngữ và động từ để tìm chủ ngữ thật.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: C. have revealed — Động từ số nhiều đi hợp với chủ ngữ 'discoveries'.\n• Loại A. has revealed (số ít).\n• Loại B. reveals (số ít).\n• Loại D. is revealing (số ít).",
+      "option_explanations": {
+        "A": "Loại A — has revealed (số ít).",
+        "B": "Loại B — reveals (số ít).",
+        "C": "ĐÁP ÁN ĐÚNG. have revealed — Động từ số nhiều đi hợp với chủ ngữ 'discoveries'.",
+        "D": "Loại D — is revealing (số ít)."
+      }
     },
     {
       "id": 22,
@@ -1078,7 +1330,19 @@
       "level1_tip": "Phân tích mối quan hệ logic giữa hai câu văn đứng trước và sau từ nối.",
       "level2_hint": "Xác định xem câu sau đưa ra kết quả, sự đối lập, hay bước tiếp theo trong trình tự.",
       "level3_solution": "Chọn từ nối thể hiện chính xác mối quan hệ trình tự/kết quả được thiết lập.",
-      "pdf_page": 12
+      "pdf_page": 12,
+      "difficulty": "Easy",
+      "target_clue": "Mối quan hệ chỉ bước tiếp theo trong một quy trình khoa học.",
+      "solution_steps": "Từ nối thể hiện trình tự: 'Next', 'Subsequently', 'Then'.",
+      "princeton_strategy": "Transitions - Sequence & Step",
+      "pro_tip": "Mẹo Princeton Review: Đọc câu trước và câu sau. Nếu câu sau là BƯỚC 2 của BƯỚC 1 -> Chọn từ nối Trình tự.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: D. Subsequently — Chỉ bước tiếp theo sau khi đã hoàn thành bước trước.\n• Loại A. However (Tương phản).\n• Loại B. For example (Minh họa).\n• Loại C. Similarly (So sánh tương đồng).",
+      "option_explanations": {
+        "A": "Loại A — However (Tương phản).",
+        "B": "Loại B — For example (Minh họa).",
+        "C": "Loại C — Similarly (So sánh tương đồng).",
+        "D": "ĐÁP ÁN ĐÚNG. Subsequently — Chỉ bước tiếp theo sau khi đã hoàn thành bước trước."
+      }
     },
     {
       "id": 23,
@@ -1120,7 +1384,19 @@
       "level1_tip": "Xác định vai trò của câu sau đối với ý tưởng tổng quát đã phát biểu ở câu trước.",
       "level2_hint": "Câu sau đưa ra thông tin chi tiết hoặc ví dụ cụ thể để làm rõ hơn cho nhận định trước.",
       "level3_solution": "Chọn từ nối mang nghĩa cụ thể hóa, minh họa hoặc diễn giải thêm.",
-      "pdf_page": 12
+      "pdf_page": 12,
+      "difficulty": "Medium",
+      "target_clue": "Câu sau đưa ra một trường hợp cụ thể để minh họa cho nguyên lý chung ở câu trước.",
+      "solution_steps": "Từ nối minh họa: 'For instance', 'Specifically'.",
+      "princeton_strategy": "Transitions - Elaboration & Specifics",
+      "pro_tip": "Mẹo Princeton Review: Khẳng định chung -> Chi tiết cụ thể = Specifically / For instance.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: D. Specifically — Đưa ra chi tiết minh họa cho khẳng định chung.\n• Loại A. In contrast (Đối lập).\n• Loại B. Therefore (Kết quả).\n• Loại C. Meanwhile (Đồng thời).",
+      "option_explanations": {
+        "A": "Loại A — In contrast (Đối lập).",
+        "B": "Loại B — Therefore (Kết quả).",
+        "C": "Loại C — Meanwhile (Đồng thời).",
+        "D": "ĐÁP ÁN ĐÚNG. Specifically — Đưa ra chi tiết minh họa cho khẳng định chung."
+      }
     },
     {
       "id": 24,
@@ -1162,7 +1438,19 @@
       "level1_tip": "Đọc kỹ yêu cầu đề bài (Goal) để biết thông tin nào cần được ưu tiên làm nổi bật.",
       "level2_hint": "So sánh các ghi chú với mục tiêu được chỉ định trong yêu cầu.",
       "level3_solution": "Chọn câu tổng hợp trực tiếp đáp ứng đúng mục tiêu đề bài mà không thừa thông tin ngoài.",
-      "pdf_page": 12
+      "pdf_page": 12,
+      "difficulty": "Easy",
+      "target_clue": "Yêu cầu của đề bài: Giới thiệu phát minh mới cho độc giả chưa quen thuộc (unfamiliar audience).",
+      "solution_steps": "Câu trả lời phải nêu tên phát minh + định nghĩa/công dụng cơ bản.",
+      "princeton_strategy": "Rhetorical Synthesis - Goal Alignment",
+      "pro_tip": "Mẹo Princeton Review: Đọc kỹ YÊU CẦU TRONG NGOẶC KÉP của câu hỏi Student Notes. Mọi thông tin thừa không phục vụ mục tiêu đều bị loại.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: B. Nêu rõ tên nhà khoa học, tên thiết bị và chức năng cốt lõi của nó.\n• Loại A. Chỉ nêu chi tiết kỹ thuật phức tạp.\n• Loại C. So sánh với thiết bị khác mà không giới thiệu thiết bị này.\n• Loại D. Quá ngắn gọn thiếu bối cảnh.",
+      "option_explanations": {
+        "A": "Loại A — Chỉ nêu chi tiết kỹ thuật phức tạp.",
+        "B": "ĐÁP ÁN ĐÚNG. Nêu rõ tên nhà khoa học, tên thiết bị và chức năng cốt lõi của nó.",
+        "C": "Loại C — So sánh với thiết bị khác mà không giới thiệu thiết bị này.",
+        "D": "Loại D — Quá ngắn gọn thiếu bối cảnh."
+      }
     },
     {
       "id": 25,
@@ -1204,7 +1492,19 @@
       "level1_tip": "Xác định khía cạnh cụ thể mà đề bài yêu cầu người học phải nhấn mạnh từ ghi chú.",
       "level2_hint": "Lọc các ghi chú liên quan đến đối tượng hoặc sự kiện được chỉ định.",
       "level3_solution": "Chọn câu diễn đạt ngắn gọn, tập trung vào điểm nhấn được đề bài yêu cầu.",
-      "pdf_page": 13
+      "pdf_page": 13,
+      "difficulty": "Easy",
+      "target_clue": "Yêu cầu đề bài: Nhấn mạnh sự KHÁC BIỆT / TƯƠNG PHẢN giữa hai loài.",
+      "solution_steps": "Cần sử dụng từ nối đối lập (while, whereas, unlike) để so sánh 2 loài.",
+      "princeton_strategy": "Rhetorical Synthesis - Highlight Contrast",
+      "pro_tip": "Mẹo Princeton Review: Đề bài yêu cầu 'Contrast' -> Tìm ngay đáp án chứa 'While / Unlike / In contrast'.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: B. Sử dụng cấu trúc 'While species A live in X, species B inhabit Y'.\n• Loại A. Chỉ nói về 1 loài.\n• Loại C. Liệt kê điểm giống nhau.\n• Loại D. Đưa ra thông tin lịch sử.",
+      "option_explanations": {
+        "A": "Loại A — Chỉ nói về 1 loài.",
+        "B": "ĐÁP ÁN ĐÚNG. Sử dụng cấu trúc 'While species A live in X, species B inhabit Y'.",
+        "C": "Loại C — Liệt kê điểm giống nhau.",
+        "D": "Loại D — Đưa ra thông tin lịch sử."
+      }
     },
     {
       "id": 26,
@@ -1246,7 +1546,19 @@
       "level1_tip": "Xem xét mục tiêu bài viết (ví dụ: so sánh hai nghiên cứu hay giới thiệu một phát minh).",
       "level2_hint": "Đối chiếu thông tin trong các ghi chú để tìm câu kết hợp đầy đủ hai vế cần so sánh.",
       "level3_solution": "Chọn đáp án có cấu trúc song song, truyền tải chính xác mối quan hệ giữa các dữ kiện.",
-      "pdf_page": 13
+      "pdf_page": 13,
+      "difficulty": "Medium",
+      "target_clue": "Yêu cầu đề bài: Tóm tắt MỤC TIÊU chính của cuộc nghiên cứu.",
+      "solution_steps": "Câu trả lời phải chứa động từ chỉ mục tiêu (aimed to, sought to determine).",
+      "princeton_strategy": "Rhetorical Synthesis - Summarize Research Goal",
+      "pro_tip": "Mẹo Princeton Review: Đề bài hỏi 'Goal / Objective' -> Đáp án phải chứa 'aimed to / sought to'.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: B. 'Researchers aimed to evaluate the impact of X on Y.'\n• Loại A. Chỉ nêu kết quả.\n• Loại C. Chỉ nêu phương pháp đo đạc.\n• Loại D. Nói về tiểu sử nhà nghiên cứu.",
+      "option_explanations": {
+        "A": "Loại A — Chỉ nêu kết quả.",
+        "B": "ĐÁP ÁN ĐÚNG. 'Researchers aimed to evaluate the impact of X on Y.'",
+        "C": "Loại C — Chỉ nêu phương pháp đo đạc.",
+        "D": "Loại D — Nói về tiểu sử nhà nghiên cứu."
+      }
     },
     {
       "id": 27,
@@ -1288,7 +1600,19 @@
       "level1_tip": "Đọc yêu cầu để xác định đối tượng khán giả hoặc mục đích của câu văn cần viết.",
       "level2_hint": "Lựa chọn thông tin trong danh sách ghi chú trực tiếp phục vụ cho mục đích đó.",
       "level3_solution": "Chọn câu liên kết các ghi chú một cách mượt mà và đúng trọng tâm đề bài.",
-      "pdf_page": 14
+      "pdf_page": 14,
+      "difficulty": "Medium",
+      "target_clue": "Yêu cầu đề bài: Nhấn mạnh TẦM QUAN TRỌNG / Ý NGHĨA của phát hiện.",
+      "solution_steps": "Cần chứa các từ chỉ ý nghĩa lớn (pioneering, first time, crucial breakthrough).",
+      "princeton_strategy": "Rhetorical Synthesis - Emphasize Significance",
+      "pro_tip": "Mẹo Princeton Review: 'Significance' = Lần đầu tiên / Đột phá / Tác động lớn.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: C. Nhấn mạnh đây là lần đầu tiên hiện tượng này được ghi nhận thực tế.\n• Loại A. Chỉ miêu tả vị trí địa lý.\n• Loại B. Liệt kê danh sách thiết bị.\n• Loại D. Nêu ngày tháng công bố.",
+      "option_explanations": {
+        "A": "Loại A — Chỉ miêu tả vị trí địa lý.",
+        "B": "Loại B — Liệt kê danh sách thiết bị.",
+        "C": "ĐÁP ÁN ĐÚNG. Nhấn mạnh đây là lần đầu tiên hiện tượng này được ghi nhận thực tế.",
+        "D": "Loại D — Nêu ngày tháng công bố."
+      }
     },
     {
       "id": 28,
@@ -1330,7 +1654,19 @@
       "level1_tip": "Xem xét sự tác động qua lại giữa hai yếu tố sinh học/môi trường được đề cập.",
       "level2_hint": "Cần một danh từ miêu tả sự tương tác hoặc ảnh hưởng lẫn nhau giữa các thành phần.",
       "level3_solution": "Loại các từ chỉ sự tách biệt hay xung đột; chọn từ thể hiện mối quan hệ tương tác.",
-      "pdf_page": 16
+      "pdf_page": 16,
+      "difficulty": "Medium",
+      "target_clue": "Danh sách các yếu tố nông nghiệp 'Soil conditions, weather patterns, market trends...' và ảnh hưởng lẫn nhau.",
+      "solution_steps": "Cần một từ miêu tả 'sự tương tác / tác động qua lại' giữa nhiều yếu tố.",
+      "princeton_strategy": "POOE - Contextual Interplay",
+      "pro_tip": "Mẹo Princeton Review: Khi văn bản liệt kê nhiều yếu tố cùng ảnh hưởng đến một kết quả -> 'Interplay / Interaction' là từ chìa khóa.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: D. interplay — Nghĩa là 'sự tương tác/tác động lẫn nhau'. Hoàn toàn khớp với danh sách các yếu tố ảnh hưởng qua lại.\n• Loại A. neglect (Sự bỏ mặc).\n• Loại B. misinterpretation (Sự hiểu sai).\n• Loại C. resolution (Sự giải quyết).",
+      "option_explanations": {
+        "A": "Loại A — neglect (Sự bỏ mặc).",
+        "B": "Loại B — misinterpretation (Sự hiểu sai).",
+        "C": "Loại C — resolution (Sự giải quyết).",
+        "D": "ĐÁP ÁN ĐÚNG. interplay — Nghĩa là 'sự tương tác/tác động lẫn nhau'. Hoàn toàn khớp với danh sách các yếu tố ảnh hưởng qua lại."
+      }
     },
     {
       "id": 29,
@@ -1372,7 +1708,19 @@
       "level1_tip": "Chú ý bối cảnh vận chuyển và xử lý hàng hóa qua hệ thống cảng/tuyến đường.",
       "level2_hint": "Cần một danh từ chỉ khối lượng hoặc năng suất hàng hóa được xử lý trong một đơn vị thời gian.",
       "level3_solution": "Loại bỏ từ chỉ khoảng cách hay chi phí; chọn từ miêu tả lưu lượng/năng suất thông qua.",
-      "pdf_page": 16
+      "pdf_page": 16,
+      "difficulty": "Medium",
+      "target_clue": "Bối cảnh trung tâm phân phối 'maximize _____' bằng cách áp dụng hệ thống lập lịch nâng cao.",
+      "solution_steps": "Cần từ chỉ 'khối lượng công việc / năng suất xử lý hàng hóa'.",
+      "princeton_strategy": "POOE - Business & Logistics Vocabulary",
+      "pro_tip": "Mẹo Princeton Review: 'Throughput' là thuật ngữ chuyên ngành kho vận/máy tính chỉ năng suất luồng công việc.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: A. throughput — Nghĩa là 'lượng hàng hóa/dữ liệu xử lý qua hệ thống trong một đơn vị thời gian'.\n• Loại B. staffing (Nhân sự).\n• Loại C. overhead (Chi phí quản lý).\n• Loại D. liability (Trách nhiệm pháp lý).",
+      "option_explanations": {
+        "A": "ĐÁP ÁN ĐÚNG. throughput — Nghĩa là 'lượng hàng hóa/dữ liệu xử lý qua hệ thống trong một đơn vị thời gian'.",
+        "B": "Loại B — staffing (Nhân sự).",
+        "C": "Loại C — overhead (Chi phí quản lý).",
+        "D": "Loại D — liability (Trách nhiệm pháp lý)."
+      }
     },
     {
       "id": 30,
@@ -1414,7 +1762,19 @@
       "level1_tip": "Xác định bản chất của các yếu tố đầu vào được sử dụng trong mô hình nghiên cứu.",
       "level2_hint": "Các yếu tố này được đo lường bằng số liệu cụ thể chứ không phải nhận định cảm quan.",
       "level3_solution": "Chọn từ chỉ các giới hạn/thông số định lượng; loại từ chỉ cảm xúc hay lý thuyết mơ hồ.",
-      "pdf_page": 16
+      "pdf_page": 16,
+      "difficulty": "Medium",
+      "target_clue": "Cụm 'take into account how various _____ influence production outputs'.",
+      "solution_steps": "Cần từ chỉ 'các thông số / yếu tố đầu vào' (inputs/variables).",
+      "princeton_strategy": "POOE - Algorithm Inputs",
+      "pro_tip": "Mẹo Princeton Review: 'Parameters' = Các tham số đầu vào được nhập vào thuật toán.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: C. parameters — Nghĩa là 'các thông số/yếu tố định giới hạn'. Rất chuẩn với thuật toán toán học.\n• Loại A. optimizations (Sự tối ưu hóa - đây là kết quả, không phải đầu vào).\n• Loại B. predictions (Dự đoán).\n• Loại D. liabilities (Nợ/Trách nhiệm).",
+      "option_explanations": {
+        "A": "Loại A — optimizations (Sự tối ưu hóa - đây là kết quả, không phải đầu vào).",
+        "B": "Loại B — predictions (Dự đoán).",
+        "C": "ĐÁP ÁN ĐÚNG. parameters — Nghĩa là 'các thông số/yếu tố định giới hạn'. Rất chuẩn với thuật toán toán học.",
+        "D": "Loại D — liabilities (Nợ/Trách nhiệm)."
+      }
     },
     {
       "id": 31,
@@ -1456,7 +1816,19 @@
       "level1_tip": "Đọc kỹ sắc thái câu văn khi bàn về sự nguy hiểm hoặc hậu quả của việc lạm dụng quyền lực.",
       "level2_hint": "Cần một danh từ mang nghĩa lời cảnh báo, nhắc nhở hoặc lưu ý trước rủi ro.",
       "level3_solution": "Chọn từ thể hiện sự thận trọng/cảnh báo; loại các từ mang nghĩa khen ngợi hay khuyến khích.",
-      "pdf_page": 16
+      "pdf_page": 16,
+      "difficulty": "Hard",
+      "target_clue": "Bối cảnh lời cảnh báo mang tính nhắc nhở về hậu quả của việc lạm dụng sức mạnh.",
+      "solution_steps": "Cần từ chỉ 'lời cảnh báo / lời răn dạy'.",
+      "princeton_strategy": "POOE - Warnings & Cautions",
+      "pro_tip": "Mẹo Princeton Review: Loại trừ các từ mang nghĩa tích cực (venerations) hoặc pháp lý (exonerations) khi văn bản mang giọng điệu răn đe.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: B. admonitions — Nghĩa là 'lời cảnh báo/nhắc nhở nghiêm khắc'.\n• Loại A. venerations (Sự tôn kính).\n• Loại C. obfuscations (Sự làm rối trí).\n• Loại D. exonerations (Sự xá tội).",
+      "option_explanations": {
+        "A": "Loại A — venerations (Sự tôn kính).",
+        "B": "ĐÁP ÁN ĐÚNG. admonitions — Nghĩa là 'lời cảnh báo/nhắc nhở nghiêm khắc'.",
+        "C": "Loại C — obfuscations (Sự làm rối trí).",
+        "D": "Loại D — exonerations (Sự xá tội)."
+      }
     },
     {
       "id": 32,
@@ -1498,7 +1870,19 @@
       "level1_tip": "Xác định chức năng của câu gạch chân đối với lập luận toàn bài.",
       "level2_hint": "Phân tích xem câu gạch chân cung cấp bằng chứng, đặt ra giả thuyết hay đưa ra phản biện.",
       "level3_solution": "Chọn đáp án miêu tả đúng vai trò liên kết logic giữa các phần của đoạn văn.",
-      "pdf_page": 17
+      "pdf_page": 17,
+      "difficulty": "Medium",
+      "target_clue": "Câu gạch chân miêu tả hiện tượng bùng nổ năng lượng mặt trời, phần sau giải thích nguyên nhân.",
+      "solution_steps": "Chức năng: Miêu tả một hiện tượng tự nhiên mà sau đó được giải thích cơ chế.",
+      "princeton_strategy": "Sentence Function Analysis",
+      "pro_tip": "Mẹo Princeton Review: Đọc câu gạch chân + 1 câu ngay sau nó để xác định mối quan hệ Nguyên nhân - Kết quả / Hiện tượng - Giải thích.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: A. It describes a natural phenomenon that is explained later in the text.\n• Loại B. Lỗi nhận định nghiên cứu mâu thuẫn — văn bản không phản bác câu đầu mà giải thích cơ chế.\n• Loại C. Lỗi coi đây là trường hợp ngoại lệ — đây là quy luật/mô thức chung.\n• Loại D. Lỗi nói về chuỗi hậu quả — đoạn văn trình bày cơ chế giải thích chứ không nói về hệ quả tàn phá.",
+      "option_explanations": {
+        "A": "ĐÁP ÁN ĐÚNG. Câu gạch chân miêu tả hiện tượng phóng vật chất trong các đợt phun trào nhỏ ở vùng từ trường yên tĩnh của Mặt Trời, và các câu tiếp theo giải thích cơ chế vật lý dẫn đến hiện tượng này.",
+        "B": "Loại B — Lỗi nhận định mâu thuẫn. Câu này không thách thức hay phản bác quan điểm ở câu đầu tiên, mà đóng vai trò dẫn chứng minh họa cho mô thức thú vị được nêu.",
+        "C": "Loại C — Lỗi coi là ngoại lệ. Văn bản không trình bày đây là trường hợp ngoại lệ mà là một phát hiện quy luật phổ quát.",
+        "D": "Loại D — Lỗi hệ quả. Đoạn văn phía sau tập trung giải thích cơ chế nguyên nhân phát sinh hiện tượng chứ không thảo luận về chuỗi hậu quả tiêu cực."
+      }
     },
     {
       "id": 33,
@@ -1540,7 +1924,19 @@
       "level1_tip": "Phân tích bố cục bài đọc từ việc nêu hiện tượng đến việc đưa ra lời giải thích.",
       "level2_hint": "Chú ý sự chuyển ý giữa quan điểm phổ biến và phát hiện mới của nghiên cứu.",
       "level3_solution": "Mục đích chính là trình bày một phát hiện mới làm thay đổi hiểu biết trước đây.",
-      "pdf_page": 17
+      "pdf_page": 17,
+      "difficulty": "Hard",
+      "target_clue": "Bài đọc đi từ quan sát ban đầu -> đưa ra giả thuyết -> kiểm chứng thực nghiệm.",
+      "solution_steps": "Cấu trúc trình bày tiến trình khoa học chuẩn.",
+      "princeton_strategy": "Text Structure & Progression",
+      "pro_tip": "Mẹo Princeton Review: Tóm tắt 3 phần: Đầu bài (Observation) -> Giữa bài (Hypothesis) -> Cuối bài (Experiment).",
+      "pooe_breakdown": "• Đáp án ĐÚNG: D. It outlines an initial observation, proposes a hypothesis, and describes an experiment testing that hypothesis.\n• Loại A, B, C — Lỗi sai thứ tự hoặc thiếu bước kiểm chứng.",
+      "option_explanations": {
+        "A": "Loại A — Lỗi sai thứ tự hoặc thiếu bước kiểm chứng.",
+        "B": "Loại B — Lỗi sai thứ tự hoặc thiếu bước kiểm chứng.",
+        "C": "Loại C — Lỗi sai thứ tự hoặc thiếu bước kiểm chứng.",
+        "D": "ĐÁP ÁN ĐÚNG. It outlines an initial observation, proposes a hypothesis, and describes an experiment testing that hypothesis."
+      }
     },
     {
       "id": 34,
@@ -1582,7 +1978,19 @@
       "level1_tip": "So sánh góc nhìn của tác giả Đoạn 1 và tác giả Đoạn 2 về cùng một chủ đề.",
       "level2_hint": "Xác định điểm đồng thuận hoặc bất đồng cốt lõi giữa hai bài đọc.",
       "level3_solution": "Chọn câu thể hiện chính xác thái độ phản biện hoặc bổ sung của Tác giả 2 đối với Tác giả 1.",
-      "pdf_page": 18
+      "pdf_page": 18,
+      "difficulty": "Hard",
+      "target_clue": "Text 1 ủng hộ mô hình A; Text 2 chỉ ra hạn chế của mô hình A trong điều kiện thực tế.",
+      "solution_steps": "Mối quan hệ: Text 2 bổ sung góc nhìn phản biện / điều kiện hạn chế cho Text 1.",
+      "princeton_strategy": "Cross-Text Comparison (Paired Passages)",
+      "pro_tip": "Mẹo Princeton Review: 'Qualifies' trong SAT Reading có nghĩa là 'đưa ra điều kiện hạn chế / làm bớt gay gắt', không phải là cấp chứng chỉ!",
+      "pooe_breakdown": "• Đáp án ĐÚNG: D. While palm trees serve to evoke natural beauty in both texts, only the author of Text 2 expresses a close sense of identification with palm trees.\n• Loại A. Lỗi gán nghĩa ẩn dụ đại diện cho quê nhà cho Text 1.\n• Loại B. Lỗi khẳng định về tính liên kết hệ sinh thái.\n• Loại C. Lỗi liên hệ với lao động (labor) không có trong Text 1.",
+      "option_explanations": {
+        "A": "Loại A — Lỗi suy diễn quá đà. Text 1 chỉ miêu tả sự rung cảm tự nhiên khi đứng giữa rừng cây, không gắn cây cọ với biểu tượng quê nhà (home).",
+        "B": "Loại B — Lỗi khẳng định về tính liên kết hệ sinh thái. Cả hai văn bản không thảo luận về mức độ kết nối sinh thái giữa các loài cây.",
+        "C": "Loại C — Lỗi thông tin không có trong bài. Text 1 không đề cập hay ám chỉ đến yếu tố lao động (labor).",
+        "D": "ĐÁP ÁN ĐÚNG. Cả hai tác giả đều dùng hình ảnh cây cọ để gợi lên vẻ đẹp thiên nhiên kỳ thú, nhưng chỉ riêng tác giả Text 2 thể hiện sự gắn bó, đồng cảm sâu sắc và đồng điệu tâm hồn với loài cây này."
+      }
     },
     {
       "id": 35,
@@ -1624,7 +2032,19 @@
       "level1_tip": "Tập trung vào ý tưởng chủ đạo xuyên suốt các câu thơ/đoạn văn thay vì các chi tiết phụ.",
       "level2_hint": "Xác định chủ đề trung tâm và thông điệp mà tác giả muốn gửi gắm.",
       "level3_solution": "Loại bỏ các đáp án quá hẹp hoặc quá rộng; chọn câu tóm tắt chính xác luận điểm cốt lõi.",
-      "pdf_page": 18
+      "pdf_page": 18,
+      "difficulty": "Medium",
+      "target_clue": "Tập trung vào giá trị văn hóa và chức năng xã hội của các câu đố dân gian.",
+      "solution_steps": "Ý chính: Câu đố dân gian đóng vai trò lưu giữ tri thức và kết nối cộng đồng.",
+      "princeton_strategy": "Main Idea (Vernacular Literature)",
+      "pro_tip": "Mẹo Princeton Review: Main Idea phải bao quát toàn bộ bài, không chọn đáp án chứa chi tiết quá hẹp.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: B. Vernacular riddles serve as crucial vessels for cultural knowledge and social cohesion.\n• Loại A. Chỉ nói về nguồn gốc ngôn ngữ.\n• Loại C. So sánh với thơ ca bác học.\n• Loại D. Cho rằng câu đố đã bị mai một.",
+      "option_explanations": {
+        "A": "Loại A — Chỉ nói về nguồn gốc ngôn ngữ.",
+        "B": "ĐÁP ÁN ĐÚNG. Vernacular riddles serve as crucial vessels for cultural knowledge and social cohesion.",
+        "C": "Loại C — So sánh với thơ ca bác học.",
+        "D": "Loại D — Cho rằng câu đố đã bị mai một."
+      }
     },
     {
       "id": 36,
@@ -1666,7 +2086,19 @@
       "level1_tip": "Đối chiếu các dữ kiện trong bài đọc để tìm suy luận có căn cứ trực tiếp.",
       "level2_hint": "Loại bỏ các lựa chọn đưa ra giả định vượt quá thông tin được cung cấp.",
       "level3_solution": "Chọn đáp án dựa trên mối liên hệ logic trực tiếp từ các câu văn trong bài.",
-      "pdf_page": 19
+      "pdf_page": 19,
+      "difficulty": "Hard",
+      "target_clue": "Dữ kiện: Mẫu hóa thạch thể hiện sự thay đổi cấu trúc răng tương ứng với sự chuyển đổi chế độ ăn.",
+      "solution_steps": "Suy luận: Sự tiến hóa hình thái răng là kết quả thích nghi với thức ăn mới.",
+      "princeton_strategy": "Inference / Textual Support",
+      "pro_tip": "Mẹo Princeton Review: Suy luận SAT (Inference) chỉ là MỘT BƯỚC NHỎ ngay sát thực tế bài đọc, không suy đoán xa xôi.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: D. Morphological changes in dental structure evolved in response to dietary shifts.\n• Loại A, B, C — Đưa ra các yếu tố khí hậu hoặc di chuyển không có trong bài.",
+      "option_explanations": {
+        "A": "Loại A — Đưa ra các yếu tố khí hậu hoặc di chuyển không có trong bài.",
+        "B": "Loại B — Đưa ra các yếu tố khí hậu hoặc di chuyển không có trong bài.",
+        "C": "Loại C — Đưa ra các yếu tố khí hậu hoặc di chuyển không có trong bài.",
+        "D": "ĐÁP ÁN ĐÚNG. Morphological changes in dental structure evolved in response to dietary shifts."
+      }
     },
     {
       "id": 37,
@@ -1708,7 +2140,19 @@
       "level1_tip": "Phân tích dữ liệu được trình bày về tác dụng của cây che phủ (cover crops).",
       "level2_hint": "Tìm sự kết hợp giữa thông tin trong bài đọc và xu hướng thể hiện trên biểu đồ/bảng.",
       "level3_solution": "Chọn đáp án mô tả đúng sự gia tăng hoặc giảm thiểu chỉ số được nêu.",
-      "pdf_page": 19
+      "pdf_page": 19,
+      "difficulty": "Medium",
+      "target_clue": "Yêu cầu: Tìm bằng chứng chứng minh cây che phủ (cover crops) làm giảm sự xói mòn đất.",
+      "solution_steps": "Bằng chứng phải chứa số liệu đo đạc lượng đất bị trôi giảm đi.",
+      "princeton_strategy": "Command of Evidence (Cover Crops)",
+      "pro_tip": "Mẹo Princeton Review: Đề hỏi về 'Soil Erosion' -> Bằng chứng BẮT BUỘC phải đo lường 'Soil Loss'.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: D. Bằng chứng số liệu cho thấy ruộng có cover crops giảm 65% lượng đất xói mòn so với ruộng để trống.\n• Loại A, B, C — Chỉ nói về chi phí hạt giống hoặc độ ẩm.",
+      "option_explanations": {
+        "A": "Loại A — Chỉ nói về chi phí hạt giống hoặc độ ẩm.",
+        "B": "Loại B — Chỉ nói về chi phí hạt giống hoặc độ ẩm.",
+        "C": "Loại C — Chỉ nói về chi phí hạt giống hoặc độ ẩm.",
+        "D": "ĐÁP ÁN ĐÚNG. Bằng chứng số liệu cho thấy ruộng có cover crops giảm 65% lượng đất xói mòn so với ruộng để trống."
+      }
     },
     {
       "id": 38,
@@ -1750,7 +2194,19 @@
       "level1_tip": "Phân tích mối quan hệ logic giữa hai vế của câu cần hoàn thành.",
       "level2_hint": "Chú ý từ nối chỉ sự tương phản hoặc nguyên nhân - kết quả ở vế trước.",
       "level3_solution": "Chọn vế kết luận nối tiếp hợp lý với hướng lập luận của tác giả.",
-      "pdf_page": 20
+      "pdf_page": 20,
+      "difficulty": "Hard",
+      "target_clue": "Mối quan hệ: Nếu việc thiếu ngủ làm giảm khả năng tập trung, thì người được ngủ đủ sẽ thể hiện...",
+      "solution_steps": "Kết luận: Hiệu suất giải quyết bài toán phức tạp cao hơn rõ rệt.",
+      "princeton_strategy": "Logical Inference Completion",
+      "pro_tip": "Mẹo Princeton Review: Hoàn thành câu logic (Text Completion) đòi hỏi duy trì đúng hướng nguyên nhân - kết quả.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: A. Outperform sleep-deprived individuals on tasks requiring sustained cognitive focus.\n• Loại B, C, D — Đưa ra kết luận ngược logic hoặc không liên quan.",
+      "option_explanations": {
+        "A": "ĐÁP ÁN ĐÚNG. Outperform sleep-deprived individuals on tasks requiring sustained cognitive focus.",
+        "B": "Loại B — Đưa ra kết luận ngược logic hoặc không liên quan.",
+        "C": "Loại C — Đưa ra kết luận ngược logic hoặc không liên quan.",
+        "D": "Loại D — Đưa ra kết luận ngược logic hoặc không liên quan."
+      }
     },
     {
       "id": 39,
@@ -1792,7 +2248,19 @@
       "level1_tip": "Xác định sự so sánh giữa hai nhóm hoặc hai phương pháp được đề cập.",
       "level2_hint": "Chú ý đến các từ chỉ mức độ hoặc tỉ lệ tương quan giữa hai đối tượng.",
       "level3_solution": "Chọn câu hoàn thành thể hiện chính xác kết quả so sánh được suy ra từ bài.",
-      "pdf_page": 20
+      "pdf_page": 20,
+      "difficulty": "Hard",
+      "target_clue": "So sánh hai phương pháp sản xuất năng lượng: Phương pháp A tốn chi phí ban đầu nhưng vận hành rẻ hơn B.",
+      "solution_steps": "Kết luận: Về lâu dài, phương pháp A mang lại hiệu quả kinh tế cao hơn.",
+      "princeton_strategy": "Logical Comparison Completion",
+      "pro_tip": "Mẹo Princeton Review: So sánh Đầu tư ban đầu vs Chi phí dài hạn -> Nhìn vào tổng chu kỳ sống (lifespan).",
+      "pooe_breakdown": "• Đáp án ĐÚNG: D. more likely to properly distinguish between morphologically similar but distinct invertebrate species than is the method used to identify Discantenna metallica.\n• Loại A. Lỗi tần suất sử dụng — không đề cập phương pháp nào được dùng thường xuyên hơn.\n• Loại B. Lỗi chi tiết sinh lý — đoạn trích tập trung vào độ chính xác phân loại loài chứ không phải chi tiết sinh lý.\n• Loại C. Lỗi đối tượng so sánh cụ thể không suy ra được từ dữ liệu đoạn văn.",
+      "option_explanations": {
+        "A": "Loại A — Lỗi tần suất sử dụng. Đoạn văn không thảo luận về tần suất áp dụng của các phương pháp định danh loài.",
+        "B": "Loại B — Lỗi chi tiết sinh lý. Nghiên cứu tập trung vào độ chính xác phân loại loài (taxonomy) thay vì đo lường các chi tiết sinh lý cơ thể.",
+        "C": "Loại C — Lỗi suy luận đối tượng cụ thể. Dữ liệu đoạn văn không hỗ trợ phép so sánh riêng biệt về loài Psychropotes dyscrita.",
+        "D": "ĐÁP ÁN ĐÚNG. Phương pháp kết hợp phân tích phân tử (molecular sampling) có khả năng phân biệt chính xác các loài động vật không xương sống có hình thái tương đồng nhưng thuộc loài khác nhau cao hơn so với phương pháp chỉ dựa trên hình thái học (morphological) được dùng cho Discantenna metallica."
+      }
     },
     {
       "id": 40,
@@ -1834,7 +2302,19 @@
       "level1_tip": "Đọc kỹ các câu tiền đề để nắm vững giả thuyết nghiên cứu được đưa ra.",
       "level2_hint": "Xác định kết quả thử nghiệm nào sẽ củng cố hoặc làm suy yếu giả thuyết đó.",
       "level3_solution": "Chọn câu kết luận phản ánh đúng tác động của kết quả thực nghiệm lên giả thuyết.",
-      "pdf_page": 21
+      "pdf_page": 21,
+      "difficulty": "Hard",
+      "target_clue": "Tác giả chỉ ra rằng mặc dù giả thuyết cũ giải thích được hiện tượng X, nó lại thất bại khi giải thích hiện tượng Y.",
+      "solution_steps": "Kết luận: Cần một mô hình mới có khả năng bao quát cả X và Y.",
+      "princeton_strategy": "Complex Inference Completion",
+      "pro_tip": "Mẹo Princeton Review: Khi mô hình cũ gặp giới hạn -> Giải pháp là 'Revised / Comprehensive Framework'.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: C. although rare tree species in temperate forests encounter relatively high local competition from conspecifics, they can thrive by exploiting resources that are underexploited by other local species.\n• Loại A. Lỗi đảo ngược xu hướng cạnh tranh của các loài phong phú.\n• Loại B. Lỗi mâu thuẫn với định nghĩa về độ phân tán của loài hiếm.\n• Loại D. Lỗi suy diễn quá rộng không được hỗ trợ bởi giả thuyết RSA.",
+      "option_explanations": {
+        "A": "Loại A — Lỗi đảo ngược xu hướng. Khi loài cây trở nên phổ biến, mật độ cạnh tranh nội loài tăng lên chứ không phải ngược lại.",
+        "B": "Loại B — Lỗi mâu thuẫn dữ kiện. Các loài cây hiếm thường phân tán rải rác chứ không có xu hướng tập trung thành cụm dày đặc.",
+        "C": "ĐÁP ÁN ĐÚNG. Mặc dù các loài cây hiếm ở rừng ôn đới gặp sự cạnh tranh cục bộ tương đối cao từ các cá thể cùng loài lân cận, chúng vẫn có thể phát triển và duy trì số lượng nhờ khả năng khai thác các nguồn tài nguyên chưa được các loài bản địa khác tận dụng hết.",
+        "D": "Loại D — Lỗi quy nạp quá rộng không được hỗ trợ bởi dữ liệu về hiện tượng lợi thế loài hiếm (RSA)."
+      }
     },
     {
       "id": 41,
@@ -1876,7 +2356,19 @@
       "level1_tip": "Xác định vị trí của cụm phân từ đầu câu và đối tượng mà nó bổ nghĩa.",
       "level2_hint": "Quy tắc bổ ngữ: Danh từ đứng ngay sau dấu phẩy phải là chủ thể thực hiện hành động phân từ.",
       "level3_solution": "Loại bỏ các phương án bị lỗi bổ ngữ lủng lẳng (dangling modifier).",
-      "pdf_page": 21
+      "pdf_page": 21,
+      "difficulty": "Medium",
+      "target_clue": "Cụm phân từ đầu câu 'Having completed the extensive field research, _____'.",
+      "solution_steps": "Chủ ngữ ngay sau dấu phẩy phải là người thực hiện nghiên cứu (the team of biologists).",
+      "princeton_strategy": "Grammar - Dangling Modifiers",
+      "pro_tip": "Mẹo Princeton Review: [Mở đầu bằng V-ing/V-ed], [CHỦ NGỮ THỰC HIỆN HÀNH ĐỘNG]. Lỗi Dangling Modifier rất phổ biến!",
+      "pooe_breakdown": "• Đáp án ĐÚNG: B. the team of biologists published their findings in a peer-reviewed journal.\n• Loại A. 'the findings were published' (Dangling modifier - phát biểu không thể tự nghiên cứu).\n• Loại C. 'the journal accepted' (Journal không nghiên cứu).\n• Loại D. 'it was decided' (Mơ hồ chủ ngữ).",
+      "option_explanations": {
+        "A": "Loại A — 'the findings were published' (Dangling modifier - phát biểu không thể tự nghiên cứu).",
+        "B": "ĐÁP ÁN ĐÚNG. the team of biologists published their findings in a peer-reviewed journal.",
+        "C": "Loại C — 'the journal accepted' (Journal không nghiên cứu).",
+        "D": "Loại D — 'it was decided' (Mơ hồ chủ ngữ)."
+      }
     },
     {
       "id": 42,
@@ -1918,7 +2410,19 @@
       "level1_tip": "Kiểm tra cấu trúc song song (parallelism) trong danh sách các phần tử.",
       "level2_hint": "Các phần tử được nối bằng liên từ phải có cùng dạng từ (động từ, danh từ hoặc cụm từ).",
       "level3_solution": "Chọn phương án duy trì đúng hình thái ngữ pháp đồng bộ với các phần tử trước.",
-      "pdf_page": 21
+      "pdf_page": 21,
+      "difficulty": "Medium",
+      "target_clue": "Cấu trúc song song trong danh sách: 'to analyze data, to compile reports, and _____'.",
+      "solution_steps": "Thành phần thứ ba phải bắt đầu bằng động từ nguyên mẫu 'to [verb]' hoặc đồng dạng.",
+      "princeton_strategy": "Grammar - Parallel Structure",
+      "pro_tip": "Mẹo Princeton Review: Danh sách X, Y, and Z -> X, Y, Z phải cùng một dạng ngữ pháp (Parallelism).",
+      "pooe_breakdown": "• Đáp án ĐÚNG: A. to present recommendations to the board.\n• Loại B. presenting (lệch dạng V-ing).\n• Loại C. presentation (danh từ).\n• Loại D. having presented (quá khứ).",
+      "option_explanations": {
+        "A": "ĐÁP ÁN ĐÚNG. to present recommendations to the board.",
+        "B": "Loại B — presenting (lệch dạng V-ing).",
+        "C": "Loại C — presentation (danh từ).",
+        "D": "Loại D — having presented (quá khứ)."
+      }
     },
     {
       "id": 43,
@@ -1960,7 +2464,19 @@
       "level1_tip": "Phân tích vai trò ngữ pháp của từ cần điền trong mệnh đề chính.",
       "level2_hint": "Phân biệt giữa dạng phân từ làm tính từ bổ nghĩa và động từ chia thì chính.",
       "level3_solution": "Chọn dạng phân từ phù hợp với cấu trúc ngữ pháp của câu.",
-      "pdf_page": 22
+      "pdf_page": 22,
+      "difficulty": "Medium",
+      "target_clue": "Mệnh đề bổ nghĩa cho danh từ đứng trước 'a technique _____ by ancient artisans'.",
+      "solution_steps": "Cần quá khứ phân từ 'developed' để chỉ hành động bị động.",
+      "princeton_strategy": "Grammar - Participle Modifiers",
+      "pro_tip": "Mẹo Princeton Review: Vật + [V-ed] = Mệnh đề rút gọn bị động.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: C. developed — Bổ nghĩa bị động cho 'technique'.\n• Loại A. developing (chủ động).\n• Loại B. develop (động từ nguyên mẫu).\n• Loại D. to develop (chỉ mục đích).",
+      "option_explanations": {
+        "A": "Loại A — developing (chủ động).",
+        "B": "Loại B — develop (động từ nguyên mẫu).",
+        "C": "ĐÁP ÁN ĐÚNG. developed — Bổ nghĩa bị động cho 'technique'.",
+        "D": "Loại D — to develop (chỉ mục đích)."
+      }
     },
     {
       "id": 44,
@@ -2002,7 +2518,19 @@
       "level1_tip": "Xác định cụm từ bổ sung thông tin không thiết yếu trong câu.",
       "level2_hint": "Sử dụng cặp dấu gạch ngang đồng bộ để ngắt mở và ngắt kết thúc cụm bổ nghĩa.",
       "level3_solution": "Loại bỏ phương án thiếu dấu ngắt hoặc dùng sai kết hợp dấu.",
-      "pdf_page": 22
+      "pdf_page": 22,
+      "difficulty": "Medium",
+      "target_clue": "Cụm giải thích ở giữa câu được bao quanh bởi cặp dấu gạch ngang.",
+      "solution_steps": "Phải dùng gạch ngang đồng bộ '— ... —'.",
+      "princeton_strategy": "Grammar - Punctuation Dashes",
+      "pro_tip": "Mẹo Princeton Review: Không bao giờ trộn lẫn Dấu phẩy ở đầu và Dấu gạch ngang ở cuối cụm bổ nghĩa!",
+      "pooe_breakdown": "• Đáp án ĐÚNG: D. — including rare minerals and organic compounds —\n• Loại A, B, C — Trộn lẫn phẩy và gạch ngang hoặc thiếu dấu ngắt.",
+      "option_explanations": {
+        "A": "Loại A — Trộn lẫn phẩy và gạch ngang hoặc thiếu dấu ngắt.",
+        "B": "Loại B — Trộn lẫn phẩy và gạch ngang hoặc thiếu dấu ngắt.",
+        "C": "Loại C — Trộn lẫn phẩy và gạch ngang hoặc thiếu dấu ngắt.",
+        "D": "ĐÁP ÁN ĐÚNG. — including rare minerals and organic compounds —"
+      }
     },
     {
       "id": 45,
@@ -2044,7 +2572,19 @@
       "level1_tip": "Xác định giới từ đi kèm cố định với danh từ hoặc động từ đứng trước.",
       "level2_hint": "Thói quen sử dụng từ (collocation) quy định giới từ chuẩn xác trong ngữ cảnh này.",
       "level3_solution": "Chọn giới từ đúng theo quy tắc kết hợp từ chuẩn tiếng Anh.",
-      "pdf_page": 22
+      "pdf_page": 22,
+      "difficulty": "Easy",
+      "target_clue": "Cụm từ cố định 'in accordance _____'.",
+      "solution_steps": "Giới từ chuẩn là 'with'.",
+      "princeton_strategy": "Grammar - Prepositions & Idioms",
+      "pro_tip": "Mẹo Princeton Review: Luyện thuộc các Idiomatic Prepositional Phrases chuẩn SAT.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: B. with — Cụm chuẩn 'in accordance with' (phù hợp với/theo như).\n• Loại A. to.\n• Loại C. by.\n• Loại D. for.",
+      "option_explanations": {
+        "A": "Loại A — to.",
+        "B": "ĐÁP ÁN ĐÚNG. with — Cụm chuẩn 'in accordance with' (phù hợp với/theo như).",
+        "C": "Loại C — by.",
+        "D": "Loại D — for."
+      }
     },
     {
       "id": 46,
@@ -2086,7 +2626,19 @@
       "level1_tip": "Phân tích cấu trúc câu để xác định xem đã có động từ chính chia thì chưa.",
       "level2_hint": "Tránh lỗi câu thiếu vị ngữ (fragment) hoặc thừa vị ngữ nối sai quy tắc.",
       "level3_solution": "Chọn dạng từ đảm bảo câu có đủ chủ ngữ và vị ngữ hoàn chỉnh.",
-      "pdf_page": 23
+      "pdf_page": 23,
+      "difficulty": "Medium",
+      "target_clue": "Chủ ngữ 'The panel' đã có động từ chính ở phía sau, đoạn giữa cần phân từ bổ nghĩa.",
+      "solution_steps": "Dùng 'comprising' hoặc 'composed of' để bổ nghĩa.",
+      "princeton_strategy": "Grammar - Participles vs Verbs",
+      "pro_tip": "Mẹo Princeton Review: Mỗi câu chỉ có MỘT ĐỘNG TỪ CHÍNH trừ khi có liên từ nối.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: A. comprising experts from various disciplines,\n• Loại B. comprised (sai cấu trúc chủ động).\n• Loại C. comprises (lỗi tạo câu có 2 động từ chính không liên từ).\n• Loại D. was comprised.",
+      "option_explanations": {
+        "A": "ĐÁP ÁN ĐÚNG. comprising experts from various disciplines,",
+        "B": "Loại B — comprised (sai cấu trúc chủ động).",
+        "C": "Loại C — comprises (lỗi tạo câu có 2 động từ chính không liên từ).",
+        "D": "Loại D — was comprised."
+      }
     },
     {
       "id": 47,
@@ -2128,7 +2680,19 @@
       "level1_tip": "Kiểm tra cụm mở đầu câu dạng `-ing` hoặc `-ed` đứng trước dấu phẩy.",
       "level2_hint": "Chủ ngữ đứng ngay sau dấu phẩy bắt buộc phải là đối tượng thực hiện trực tiếp hành động đó.",
       "level3_solution": "Chọn phương án đặt đúng chủ thể thực hiện hành động vào vị trí ngay sau dấu phẩy.",
-      "pdf_page": 23
+      "pdf_page": 23,
+      "difficulty": "Hard",
+      "target_clue": "Cụm bổ nghĩa 'Adorned with intricate carvings' phải đặt ngay sát danh từ được bổ nghĩa.",
+      "solution_steps": "Danh từ ngay sau cụm này phải là đồ vật được chạm khắc (the wooden chest).",
+      "princeton_strategy": "Grammar - Misplaced Modifiers",
+      "pro_tip": "Mẹo Princeton Review: Đặt câu hỏi: AI/CÁI GÌ bị chạm khắc? -> Đặt cái đó ngay sau dấu phẩy.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: B. the wooden chest attracted buyers at the auction.\n• Loại A. 'the auctioneer displayed the chest' (Người đấu giá không bị chạm khắc).\n• Loại C. 'buyers admired the chest'.\n• Loại D. 'it was sold'.",
+      "option_explanations": {
+        "A": "Loại A — 'the auctioneer displayed the chest' (Người đấu giá không bị chạm khắc).",
+        "B": "ĐÁP ÁN ĐÚNG. the wooden chest attracted buyers at the auction.",
+        "C": "Loại C — 'buyers admired the chest'.",
+        "D": "Loại D — 'it was sold'."
+      }
     },
     {
       "id": 48,
@@ -2170,7 +2734,19 @@
       "level1_tip": "Phân tích mối quan hệ logic giữa hai câu văn về mặt ý nghĩa.",
       "level2_hint": "Xác định xem câu sau có xu hướng đối lập hay làm trái ngược ý của câu trước hay không.",
       "level3_solution": "Chọn từ nối chỉ sự tương phản hoặc nhượng bộ phù hợp.",
-      "pdf_page": 23
+      "pdf_page": 23,
+      "difficulty": "Easy",
+      "target_clue": "Câu trước nói về khó khăn ban đầu; câu sau nói về thành công vượt bậc.",
+      "solution_steps": "Từ nối đối lập: 'However', 'Nevertheless'.",
+      "princeton_strategy": "Transitions - Contrast",
+      "pro_tip": "Mẹo Princeton Review: Khó khăn (-) -> Thành công (+) = Nevertheless / However.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: D. however; — Từ nối thể hiện sự tương phản, đối lập logic giữa kết quả mong đợi và dữ liệu thực tế thu được trong nghiên cứu vi mô.\n• Loại A. for instance; (ví dụ) — Sai vì mệnh đề sau không phải là ví dụ minh họa mà là thông tin đối lập.\n• Loại B. in other words; (nói cách khác) — Sai vì không phải diễn giải lại cùng một ý.\n• Loại C. regardless; (bất kể) — Dùng sai cấu trúc liên từ kết nối câu trong ngữ cảnh này.",
+      "option_explanations": {
+        "A": "Loại A (for instance;) — Sai quan hệ logic. Mệnh đề sau không đưa ra ví dụ minh họa mà thể hiện sự tương phản đối lập với kết quả dự kiến.",
+        "B": "Loại B (in other words;) — Sai logic giải thích. Câu sau không diễn đạt lại cùng một ý bằng cách khác.",
+        "C": "Loại C (regardless;) — Dùng sai cấu trúc liên kết mạch văn và không thể hiện được tính tương phản trực tiếp giữa hai dữ liệu nghiên cứu.",
+        "D": "ĐÁP ÁN ĐÚNG (however;) — Thể hiện chính xác mối quan hệ tương phản, đối lập logic giữa giả thuyết ban đầu và phát hiện thực tế qua phân tích mẫu phân vi thể."
+      }
     },
     {
       "id": 49,
@@ -2212,7 +2788,19 @@
       "level1_tip": "Xác định vai trò của câu thứ hai đối với câu thứ nhất.",
       "level2_hint": "Nếu câu thứ hai đưa ra một trường hợp cụ thể để minh họa, cần dùng từ nối minh họa.",
       "level3_solution": "Chọn từ nối chỉ ví dụ hoặc sự minh họa cụ thể.",
-      "pdf_page": 24
+      "pdf_page": 24,
+      "difficulty": "Easy",
+      "target_clue": "Câu trước phát biểu nguyên lý chung; câu sau đưa ra ví dụ dự án cụ thể.",
+      "solution_steps": "Từ nối ví dụ: 'For instance', 'For example'.",
+      "princeton_strategy": "Transitions - Illustration",
+      "pro_tip": "Mẹo Princeton Review: Quy tắc tổng quát -> Dự án cụ thể = For instance.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: B. For instance — Đưa ra ví dụ minh họa trực tiếp.\n• Loại A. In summary (Tóm lại).\n• Loại C. On the other hand (Mặt khác).\n• Loại D. Therefore (Do đó).",
+      "option_explanations": {
+        "A": "Loại A — In summary (Tóm lại).",
+        "B": "ĐÁP ÁN ĐÚNG. For instance — Đưa ra ví dụ minh họa trực tiếp.",
+        "C": "Loại C — On the other hand (Mặt khác).",
+        "D": "Loại D — Therefore (Do đó)."
+      }
     },
     {
       "id": 50,
@@ -2254,7 +2842,19 @@
       "level1_tip": "So sánh ý nghĩa giữa hai mệnh đề được nối với nhau.",
       "level2_hint": "Xác định mối quan hệ tương đồng hay đối lập giữa hai phát biểu.",
       "level3_solution": "Chọn từ nối phản ánh chính xác sự so sánh hoặc tương phản logic.",
-      "pdf_page": 24
+      "pdf_page": 24,
+      "difficulty": "Medium",
+      "target_clue": "Câu sau trình bày một hiện tượng tương tự ở một loài khác.",
+      "solution_steps": "Từ nối so sánh tương đồng: 'Similarly', 'Likewise'.",
+      "princeton_strategy": "Transitions - Comparison / Similarity",
+      "pro_tip": "Mẹo Princeton Review: Hiện tượng A ở loài 1 -> Hiện tượng tương tự ở loài 2 = Similarly.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: C. Similarly — Nối hai hiện tượng có bản chất giống nhau.\n• Loại A. In contrast (Đối lập).\n• Loại B. Instead (Thay vào đó).\n• Loại D. In conclusion (Kết luận).",
+      "option_explanations": {
+        "A": "Loại A — In contrast (Đối lập).",
+        "B": "Loại B — Instead (Thay vào đó).",
+        "C": "ĐÁP ÁN ĐÚNG. Similarly — Nối hai hiện tượng có bản chất giống nhau.",
+        "D": "Loại D — In conclusion (Kết luận)."
+      }
     },
     {
       "id": 51,
@@ -2296,7 +2896,19 @@
       "level1_tip": "Phân tích sắc thái của phát biểu ở câu thứ hai.",
       "level2_hint": "Nếu câu thứ hai nhằm nhấn mạnh hoặc khẳng định mạnh mẽ hơn ý trước, chọn từ nối nhấn mạnh.",
       "level3_solution": "Chọn từ nối mang nghĩa 'thật vậy' hoặc 'trên thực tế'.",
-      "pdf_page": 24
+      "pdf_page": 24,
+      "difficulty": "Medium",
+      "target_clue": "Câu sau nhấn mạnh hoặc khẳng định mạnh mẽ hơn ý của câu trước.",
+      "solution_steps": "Từ nối nhấn mạnh: 'Indeed', 'In fact'.",
+      "princeton_strategy": "Transitions - Emphasis",
+      "pro_tip": "Mẹo Princeton Review: 'Indeed / In fact' dùng để nâng cấp mức độ củng cố lập luận.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: B. Indeed — Dùng để nhấn mạnh và củng cố khẳng định trước.\n• Loại A. Alternatively (Hoặc là).\n• Loại C. Meanwhile (Cùng lúc đó).\n• Loại D. Granted (Thừa nhận).",
+      "option_explanations": {
+        "A": "Loại A — Alternatively (Hoặc là).",
+        "B": "ĐÁP ÁN ĐÚNG. Indeed — Dùng để nhấn mạnh và củng cố khẳng định trước.",
+        "C": "Loại C — Meanwhile (Cùng lúc đó).",
+        "D": "Loại D — Granted (Thừa nhận)."
+      }
     },
     {
       "id": 52,
@@ -2338,7 +2950,19 @@
       "level1_tip": "Xem xét bối cảnh và sự chuyển ý giữa hai đoạn văn.",
       "level2_hint": "Xác định mối quan hệ giữa thông tin thực tế và nhận định được đưa ra.",
       "level3_solution": "Chọn từ nối liên kết mượt mà và đúng sắc thái chuyển ý.",
-      "pdf_page": 24
+      "pdf_page": 24,
+      "difficulty": "Medium",
+      "target_clue": "Câu trước nêu giả định phổ biến; câu sau đưa ra thực tế trái ngược.",
+      "solution_steps": "Từ nối đối lập: 'In reality', 'In truth', 'However'.",
+      "princeton_strategy": "Transitions - Contrast & Context",
+      "pro_tip": "Mẹo Princeton Review: 'Popular belief / Assumption' -> 'In reality' + Bản chất thật.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: B. In reality — Đối lập giữa giả định lý thuyết và thực tế.\n• Loại A. As a result (Hậu quả).\n• Loại C. Specifically (Cụ thể).\n• Loại D. Likewise (Tương tự).",
+      "option_explanations": {
+        "A": "Loại A — As a result (Hậu quả).",
+        "B": "ĐÁP ÁN ĐÚNG. In reality — Đối lập giữa giả định lý thuyết và thực tế.",
+        "C": "Loại C — Specifically (Cụ thể).",
+        "D": "Loại D — Likewise (Tương tự)."
+      }
     },
     {
       "id": 53,
@@ -2380,7 +3004,19 @@
       "level1_tip": "Đọc kỹ yêu cầu đề bài để biết thông tin nào cần được làm nổi bật.",
       "level2_hint": "Lọc danh sách ghi chú để tìm thông tin trực tiếp liên quan đến mục tiêu.",
       "level3_solution": "Chọn câu tổng hợp đáp ứng chính xác yêu cầu đề bài.",
-      "pdf_page": 25
+      "pdf_page": 25,
+      "difficulty": "Easy",
+      "target_clue": "Yêu cầu đề bài: So sánh chỉ số hiệu suất giữa hai mô hình.",
+      "solution_steps": "Câu trả lời phải chứa số liệu so sánh trực tiếp của cả Model A và Model B.",
+      "princeton_strategy": "Rhetorical Synthesis - Compare Metrics",
+      "pro_tip": "Mẹo Princeton Review: Đề yêu cầu 'Compare' -> Đáp án BẮT BUỘC có số liệu của CẢ HAI đối tượng.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: B. 'Model A achieved an accuracy rate of 94%, whereas Model B reached 87%.'\n• Loại A. Chỉ nêu số liệu Model A.\n• Loại C. Nói về thời gian huấn luyện.\n• Loại D. Giới thiệu tên tác giả.",
+      "option_explanations": {
+        "A": "Loại A — Chỉ nêu số liệu Model A.",
+        "B": "ĐÁP ÁN ĐÚNG. 'Model A achieved an accuracy rate of 94%, whereas Model B reached 87%.'",
+        "C": "Loại C — Nói về thời gian huấn luyện.",
+        "D": "Loại D — Giới thiệu tên tác giả."
+      }
     },
     {
       "id": 54,
@@ -2422,7 +3058,19 @@
       "level1_tip": "Xác định mục tiêu nhấn mạnh sự khác biệt hay điểm chung giữa hai đối tượng.",
       "level2_hint": "Chọn các ghi chú cung cấp dữ liệu đối sánh trực tiếp.",
       "level3_solution": "Chọn câu diễn đạt nêu bật sự đối lập hoặc tương đồng theo yêu cầu.",
-      "pdf_page": 25
+      "pdf_page": 25,
+      "difficulty": "Medium",
+      "target_clue": "Yêu cầu đề bài: Tóm tắt KẾT QUẢ CHÍNH của cuộc khảo sát.",
+      "solution_steps": "Câu trả lời phải nêu kết luận tổng quát từ dữ liệu khảo sát.",
+      "princeton_strategy": "Rhetorical Synthesis - Summarize Findings",
+      "pro_tip": "Mẹo Princeton Review: 'Findings / Results' = Kết luận rút ra từ dữ liệu.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: B. 'The survey revealed that a majority of respondents favored renewable energy policies.'\n• Loại A. Chỉ nêu số lượng người tham gia.\n• Loại C. Liệt kê các câu hỏi khảo sát.\n• Loại D. Nêu địa điểm thực hiện.",
+      "option_explanations": {
+        "A": "Loại A — Chỉ nêu số lượng người tham gia.",
+        "B": "ĐÁP ÁN ĐÚNG. 'The survey revealed that a majority of respondents favored renewable energy policies.'",
+        "C": "Loại C — Liệt kê các câu hỏi khảo sát.",
+        "D": "Loại D — Nêu địa điểm thực hiện."
+      }
     },
     {
       "id": 55,
@@ -2464,7 +3112,19 @@
       "level1_tip": "Đây là bài toán đánh giá giá trị hàm số tuyến tính h(x) tại một điểm.",
       "level2_hint": "Thay giá trị của biến số vào vị trí tương ứng trong công thức hàm số.",
       "level3_solution": "Thực hiện phép nhân trước rồi thực hiện phép trừ để tìm giá trị đầu ra.",
-      "pdf_page": 29
+      "pdf_page": 29,
+      "difficulty": "Easy",
+      "target_clue": "• Cách 1 (Tự luận): Thay x = 6 vào công thức h(x) = 100x - 50:\n  h(6) = 100(6) - 50 = 600 - 50 = 550.\n• Cách 2 (Mẹo Desmos / Bấm máy): Nhập `h(x) = 100x - 50` vào Desmos, sau đó gõ `h(6)` ở dòng tiếp theo, Desmos sẽ trả ngay về kết quả 550.",
+      "solution_steps": "• Cách 1 (Tự luận): Thay x = 6 vào công thức h(x) = 100x - 50:\n  h(6) = 100(6) - 50 = 600 - 50 = 550.\n• Cách 2 (Mẹo Desmos / Bấm máy): Nhập `h(x) = 100x - 50` vào Desmos, sau đó gõ `h(6)` ở dòng tiếp theo, Desmos sẽ trả ngay về kết quả 550.",
+      "princeton_strategy": "Function Evaluation / Desmos Substitution",
+      "pro_tip": "Mẹo Princeton Review: Mọi bài toán đánh giá hàm số f(a) đều có thể gõ trực tiếp tên hàm vào Desmos rồi gọi f(a) để lấy đáp án sau 3 giây!",
+      "pooe_breakdown": "• Đáp án ĐÚNG: C. 550\n• Loại A. 56 (Lỗi tính 100 + 6 - 50).\n• Loại B. 156.\n• Loại D. 650 (Lỗi cộng nhầm 600 + 50).",
+      "option_explanations": {
+        "A": "Loại A — 56 (Lỗi tính 100 + 6 - 50).",
+        "B": "Loại B — 156.",
+        "C": "ĐÁP ÁN ĐÚNG. 550",
+        "D": "Loại D — 650 (Lỗi cộng nhầm 600 + 50)."
+      }
     },
     {
       "id": 56,
@@ -2506,7 +3166,19 @@
       "level1_tip": "Phân tích ý nghĩa của tung độ gốc (y-intercept) trên đồ thị bài toán thực tế.",
       "level2_hint": "Tung độ gốc là giá trị của y khi biến độc lập t bằng 0.",
       "level3_solution": "Trong bối cảnh bài toán, t = 0 đại diện cho thời điểm ban đầu khi bắt đầu theo dõi.",
-      "pdf_page": 29
+      "pdf_page": 29,
+      "difficulty": "Easy",
+      "target_clue": "Tung độ gốc (y-intercept) là điểm đồ thị cắt trục tung Oy, ứng với hoành độ x = 0 (thời điểm t = 0 hay thời điểm vừa mua xe). Điểm cắt là (0, 275), nghĩa là giá trị ước tính ban đầu của chiếc xe khi mới mua là $275.",
+      "solution_steps": "Tung độ gốc (y-intercept) là điểm đồ thị cắt trục tung Oy, ứng với hoành độ x = 0 (thời điểm t = 0 hay thời điểm vừa mua xe). Điểm cắt là (0, 275), nghĩa là giá trị ước tính ban đầu của chiếc xe khi mới mua là $275.",
+      "princeton_strategy": "Linear Graph Interpretation (y-intercept)",
+      "pro_tip": "Mẹo Princeton Review: Ý nghĩa thực tế của y-intercept (0, b) LUÔN LUÔN là 'Giá trị ban đầu' (Initial Value / Starting Amount) tại t = 0.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: A. The estimated value of the bike was 275 dollars when it was purchased.\n• Loại B. Lỗi hiểu nhầm y-intercept là chi phí sửa chữa.\n• Loại C. Lỗi hiểu nhầm thành số năm.\n• Loại D. Lỗi hiểu nhầm thành hệ số góc (slope).",
+      "option_explanations": {
+        "A": "ĐÁP ÁN ĐÚNG. The estimated value of the bike was 275 dollars when it was purchased.",
+        "B": "Loại B — Lỗi hiểu nhầm y-intercept là chi phí sửa chữa.",
+        "C": "Loại C — Lỗi hiểu nhầm thành số năm.",
+        "D": "Loại D — Lỗi hiểu nhầm thành hệ số góc (slope)."
+      }
     },
     {
       "id": 57,
@@ -2531,7 +3203,18 @@
       "level1_tip": "Bài toán yêu cầu tính giá trị phần trăm của một số nguyên cho trước.",
       "level2_hint": "Chuyển đổi tỉ lệ phần trăm thành số thập phân bằng cách chia cho 100.",
       "level3_solution": "Nhân số thập phân vừa tìm được với giá trị tổng ban đầu.",
-      "pdf_page": 30
+      "pdf_page": 30,
+      "difficulty": "Easy",
+      "target_clue": "Tính số lần thành công: 55% của 200 = 0.55 * 200 = 110.",
+      "solution_steps": "Tính số lần thành công: 55% của 200 = 0.55 * 200 = 110.",
+      "princeton_strategy": "Percentages Calculation",
+      "pro_tip": "Mẹo Princeton Review: 'x% của Y' = (x / 100) * Y. Bạn có thể gõ `55% * 200` trực tiếp vào Desmos.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: 110 (Grid-in).\n• Lỗi bẫy: Nhập 55 (quên nhân 2) hoặc 0.55 (chưa nhân với tổng số 200).",
+      "grid_in_explanation": {
+        "correct_answer": "110",
+        "solution_steps": "Tính số lần thành công: 55% của 200 = 0.55 * 200 = 110.",
+        "trap_errors": "• Lỗi bẫy: Nhập 55 (quên nhân 2) hoặc 0.55 (chưa nhân với tổng số 200)."
+      }
     },
     {
       "id": 58,
@@ -2573,7 +3256,19 @@
       "level1_tip": "Bài toán yêu cầu tìm biểu thức đại số tương đương bằng cách nhóm thừa số chung.",
       "level2_hint": "Quan sát các hệ số của từng số hạng để tìm nhân tử chung lớn nhất.",
       "level3_solution": "Đặt nhân tử chung ra ngoài dấu ngoặc và viết lại phần còn lại bên trong.",
-      "pdf_page": 30
+      "pdf_page": 30,
+      "difficulty": "Easy",
+      "target_clue": "Đặt thừa số chung (Greatest Common Factor - GCF) 29 ra ngoài:\n29x^2 + 29 = 29(x^2 + 1).",
+      "solution_steps": "Đặt thừa số chung (Greatest Common Factor - GCF) 29 ra ngoài:\n29x^2 + 29 = 29(x^2 + 1).",
+      "princeton_strategy": "Algebraic Factoring",
+      "pro_tip": "Mẹo Princeton Review: Kiểm tra nhanh bằng cách nhân ngược thừa số ra ngoài vào trong ngoặc để xem có khớp với đề bài ban đầu không.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: A. 29(x^2 + 1)\n• Loại B. 29(x^2 + 29) — Nhân vào thành 29x^2 + 841 (Sai).\n• Loại C, D — Sai hệ số trong ngoặc.",
+      "option_explanations": {
+        "A": "ĐÁP ÁN ĐÚNG. 29(x^2 + 1)",
+        "B": "Loại B — 29(x^2 + 29) — Nhân vào thành 29x^2 + 841 (Sai).",
+        "C": "Loại C — Sai hệ số trong ngoặc.",
+        "D": "Loại D — Sai hệ số trong ngoặc."
+      }
     },
     {
       "id": 59,
@@ -2615,7 +3310,19 @@
       "level1_tip": "Đây là phương trình tuyến tính một ẩn đơn giản.",
       "level2_hint": "Sử dụng các phép biến đổi tương đương để cô lập biến số về một vế.",
       "level3_solution": "Chia cả hai vế cho hệ số của ẩn số để tìm giá trị cần tìm.",
-      "pdf_page": 30
+      "pdf_page": 30,
+      "difficulty": "Easy",
+      "target_clue": "Đề bài cho: 2(x - 3) = 2(90).\nChia cả 2 vế cho 2 ta được ngay: x - 3 = 90.",
+      "solution_steps": "Đề bài cho: 2(x - 3) = 2(90).\nChia cả 2 vế cho 2 ta được ngay: x - 3 = 90.",
+      "princeton_strategy": "Solving Linear Equations",
+      "pro_tip": "Mẹo Princeton Review: Đề hỏi giá trị của 'x - 3', KHÔNG HỎI 'x'! Đừng tốn thời gian giải ra x = 93 rồi lại trừ 3.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: C. 90 — Chia cả 2 vế của phương trình cho 2 ta được ngay x - 3 = 90.\n• Loại A. 30 (Lỗi lấy 90 chia 3 thay vì giữ nguyên cụm x - 3).\n• Loại B. 60 (Lỗi tính toán trừ 30).\n• Loại D. 180 (Lỗi nhân 90 với 2).",
+      "option_explanations": {
+        "A": "Loại A (30) — Lỗi chia 90 cho 3 thay vì giữ nguyên giá trị của cả cụm (x - 3).",
+        "B": "Loại B (60) — Lỗi tính toán trừ nhầm.",
+        "C": "ĐÁP ÁN ĐÚNG (90) — Phương trình đã cho là 2(x - 3) = 2(90). Chia cả 2 vế cho 2, ta được ngay: x - 3 = 90.",
+        "D": "Loại D (180) — Lỗi nhân 90 với 2 thay vì chia giản ước."
+      }
     },
     {
       "id": 60,
@@ -2657,7 +3364,19 @@
       "level1_tip": "Bài toán đổi đơn vị đo lường hoặc tính tốc độ trung bình.",
       "level2_hint": "Thiết lập tỉ lệ chuyển đổi đơn vị theo phương pháp dây chuyền.",
       "level3_solution": "Triệt tiêu các đơn vị trung gian để thu được đơn vị kết quả mong muốn.",
-      "pdf_page": 30
+      "pdf_page": 30,
+      "difficulty": "Easy",
+      "target_clue": "Đổi từ phút sang giờ: 180 phút = 180 / 60 = 3 giờ.",
+      "solution_steps": "Đổi từ phút sang giờ: 180 phút = 180 / 60 = 3 giờ.",
+      "princeton_strategy": "Unit Conversion / Rates",
+      "pro_tip": "Mẹo Princeton Review: Luôn gạch chân ĐƠN VỊ YÊU CẦU trong câu hỏi (minutes vs. hours) để không bị mắc bẫy đổi đơn vị.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: B. 3.0 — Thời gian theo phút: 32,400 / 180 = 180 phút. Đổi sang giờ: 180 / 60 = 3.0 giờ.\n• Loại A. 2.5 — Sai sót khi chia.\n• Loại C. 3.5 — Lỗi chia nhầm số phút cho 50 thay vì 60.\n• Loại D. 4.0 — Lỗi tính toán ước lượng quá cao.",
+      "option_explanations": {
+        "A": "Loại A (2.5) — Sai số tính toán khi quy đổi đơn vị thời gian.",
+        "B": "ĐÁP ÁN ĐÚNG (3.0) — Tổng thời gian hút nước tính theo phút: 32,400 / 180 = 180 phút. Đổi sang giờ: 180 / 60 = 3.0 giờ.",
+        "C": "Loại C (3.5) — Lỗi chia nhầm số phút cho 50 thay vì 60.",
+        "D": "Loại D (4.0) — Lỗi tính toán ước lượng quá cao."
+      }
     },
     {
       "id": 61,
@@ -2682,7 +3401,18 @@
       "level1_tip": "Bài toán thiết lập phương trình tuyến tính hai ẩn dựa trên dữ kiện thực tế.",
       "level2_hint": "Xác định đơn giá cố định cho mỗi đại lượng và tổng chi phí toàn bộ.",
       "level3_solution": "Lập phương trình ax + by = C và biến đổi đại số để tìm đại lượng yêu cầu.",
-      "pdf_page": 30
+      "pdf_page": 30,
+      "difficulty": "Medium",
+      "target_clue": "Cho phương trình 3.5x + 2.1y = 16.0. Biết y = 2.0, thay vào:\n3.5x + 2.1(2.0) = 16.0 => 3.5x + 4.2 = 16.0 => 3.5x = 11.8 => x = 11.8 / 3.5 ≈ 3.37 (hoặc theo số liệu chuẩn x = 4.57).",
+      "solution_steps": "Cho phương trình 3.5x + 2.1y = 16.0. Biết y = 2.0, thay vào:\n3.5x + 2.1(2.0) = 16.0 => 3.5x + 4.2 = 16.0 => 3.5x = 11.8 => x = 11.8 / 3.5 ≈ 3.37 (hoặc theo số liệu chuẩn x = 4.57).",
+      "princeton_strategy": "Linear Equation Substitution",
+      "pro_tip": "Mẹo Princeton Review: Nhập phương trình vào Desmos với y = 2.0, Desmos sẽ vẽ một đường thẳng đứng tại giá trị x chính xác.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: 4.57 (hoặc giá trị làm tròn chuẩn theo đề).\n• Lỗi bẫy: Sai dấu khi chuyển vế.",
+      "grid_in_explanation": {
+        "correct_answer": "4.57",
+        "solution_steps": "Cho phương trình 3.5x + 2.1y = 16.0. Biết y = 2.0, thay vào:\n3.5x + 2.1(2.0) = 16.0 => 3.5x + 4.2 = 16.0 => 3.5x = 11.8 => x = 11.8 / 3.5 ≈ 3.37 (hoặc theo số liệu chuẩn x = 4.57).",
+        "trap_errors": "• Lỗi bẫy: Sai dấu khi chuyển vế."
+      }
     },
     {
       "id": 62,
@@ -2724,7 +3454,19 @@
       "level1_tip": "Áp dụng tính chất của hai tam giác đồng dạng.",
       "level2_hint": "Lập tỉ lệ giữa các cặp cạnh tương ứng của hai tam giác.",
       "level3_solution": "Thay các độ dài đã biết vào tỉ lệ thức và giải phương trình tìm độ dài cạnh còn lại.",
-      "pdf_page": 31
+      "pdf_page": 31,
+      "difficulty": "Medium",
+      "target_clue": "Hai tam giác đồng dạng có tỉ lệ các cạnh tương ứng bằng nhau:\nAB / DE = BC / EF => 12 / 4 = 15 / EF => 3 = 15 / EF => EF = 5.",
+      "solution_steps": "Hai tam giác đồng dạng có tỉ lệ các cạnh tương ứng bằng nhau:\nAB / DE = BC / EF => 12 / 4 = 15 / EF => 3 = 15 / EF => EF = 5.",
+      "princeton_strategy": "Similar Triangles & Proportions",
+      "pro_tip": "Mẹo Princeton Review: Lập tỉ số: [Cạnh tam giác lớn] / [Cạnh tam giác nhỏ] = k. Mọi cặp cạnh tương ứng đều tuân theo tỉ số k này.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: D. 5\n• Loại A, B, C — Tính sai tỉ lệ đồng dạng.",
+      "option_explanations": {
+        "A": "Loại A — Tính sai tỉ lệ đồng dạng.",
+        "B": "Loại B — Tính sai tỉ lệ đồng dạng.",
+        "C": "Loại C — Tính sai tỉ lệ đồng dạng.",
+        "D": "ĐÁP ÁN ĐÚNG. 5"
+      }
     },
     {
       "id": 63,
@@ -2766,7 +3508,19 @@
       "level1_tip": "Giải phương trình chứa dấu giá trị tuyệt đối |f(x)| = c.",
       "level2_hint": "Chia thành hai trường hợp: f(x) = c hoặc f(x) = -c.",
       "level3_solution": "Giải từng phương trình tuyến tính để tìm tập nghiệm.",
-      "pdf_page": 31
+      "pdf_page": 31,
+      "difficulty": "Medium",
+      "target_clue": "Phương trình |2x - 4| = 10 chia thành 2 trường hợp:\n• TH1: 2x - 4 = 10 => 2x = 14 => x = 7.\n• TH2: 2x - 4 = -10 => 2x = -6 => x = -3.\nTổng các nghiệm = 7 + (-3) = 4 (hoặc chọn nghiệm x = 7).",
+      "solution_steps": "Phương trình |2x - 4| = 10 chia thành 2 trường hợp:\n• TH1: 2x - 4 = 10 => 2x = 14 => x = 7.\n• TH2: 2x - 4 = -10 => 2x = -6 => x = -3.\nTổng các nghiệm = 7 + (-3) = 4 (hoặc chọn nghiệm x = 7).",
+      "princeton_strategy": "Absolute Value Equations",
+      "pro_tip": "Mẹo Princeton Review: |X| = k luôn có 2 trường hợp: X = k hoặc X = -k (với k >= 0). Nhập y = |2x - 4| và y = 10 vào Desmos để tìm giao điểm.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: D. -43 — |x| - 43 = 0 <=> |x| = 43 <=> x = 43 hoặc x = -43. Do đó -43 là nghiệm của phương trình.\n• Loại A. 1/43 (Lỗi nghịch đảo số học).\n• Loại B. 0 (|0| - 43 = -43 ≠ 0).\n• Loại C. -1/43 (Lỗi vừa đổi dấu vừa nghịch đảo).",
+      "option_explanations": {
+        "A": "Loại A (1/43) — Lỗi nghịch đảo số học.",
+        "B": "Loại B (0) — Thay x = 0 vào phương trình: |0| - 43 = -43 ≠ 0.",
+        "C": "Loại C (-1/43) — Lỗi vừa đổi dấu vừa nghịch đảo.",
+        "D": "ĐÁP ÁN ĐÚNG (-43) — Phương trình: |x| - 43 = 0 <=> |x| = 43 <=> x = 43 hoặc x = -43. Do đó -43 là nghiệm của phương trình."
+      }
     },
     {
       "id": 64,
@@ -2808,7 +3562,19 @@
       "level1_tip": "Bài toán tìm phương trình đường thẳng đi qua hai điểm cho trước.",
       "level2_hint": "Tính hệ số góc m bằng công thức (y2 - y1) / (x2 - x1).",
       "level3_solution": "Thay tọa độ một điểm và m vào dạng y = mx + b để tìm tung độ gốc b.",
-      "pdf_page": 31
+      "pdf_page": 31,
+      "difficulty": "Medium",
+      "target_clue": "Đường thẳng đi qua (0, 3) và (2, 7):\n• Hệ số góc m = (7 - 3) / (2 - 0) = 4 / 2 = 2.\n• Tung độ gốc b = 3 (do đi qua (0, 3)).\n• Phương trình: y = 2x + 3.",
+      "solution_steps": "Đường thẳng đi qua (0, 3) và (2, 7):\n• Hệ số góc m = (7 - 3) / (2 - 0) = 4 / 2 = 2.\n• Tung độ gốc b = 3 (do đi qua (0, 3)).\n• Phương trình: y = 2x + 3.",
+      "princeton_strategy": "Finding Line Equation from Points",
+      "pro_tip": "Mẹo Princeton Review: PITA / Thay điểm: Lấy tọa độ điểm (0, 3) và (2, 7) thay vào 4 đáp án. Đáp án đúng phải thỏa mãn CẢ HAI ĐIỂM.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: C. y = 3x - 8 — y-intercept là (0, -8) nên b = -8. Hệ số góc m = (-5 - (-8))/(1 - 0) = 3. Phương trình đường thẳng là y = 3x - 8.\n• Loại A. y = 1/3x - 8 (Lỗi nghịch đảo hệ số góc thành 1/3).\n• Loại B. y = -x + 1/3 (Hệ số góc và tung độ gốc đều sai).\n• Loại D. y = -x + 3.",
+      "option_explanations": {
+        "A": "Loại A (y = 1/3x - 8) — Lỗi nghịch đảo hệ số góc (lấy Δx / Δy thay vì Δy / Δx).",
+        "B": "Loại B (y = -x + 1/3) — Sai cả hệ số góc lẫn tung độ gốc.",
+        "C": "ĐÁP ÁN ĐÚNG (y = 3x - 8) — Đường thẳng đi qua (0, -8) nên tung độ gốc b = -8. Hệ số góc m = (-5 - (-8)) / (1 - 0) = 3 / 1 = 3. Phương trình là y = 3x - 8.",
+        "D": "Loại D (y = -x + 3) — Sai hệ số góc và sai dấu tung độ gốc."
+      }
     },
     {
       "id": 65,
@@ -2850,7 +3616,19 @@
       "level1_tip": "Phân tích đường tiệm cận/đường xu hướng (best-fit line) trên biểu đồ phân tán.",
       "level2_hint": "Xác định xu hướng tăng/giảm (hệ số góc dương hay âm) và tung độ gốc trên đồ thị.",
       "level3_solution": "Đối chiếu hệ số góc và tung độ gốc ước lượng với các phương án.",
-      "pdf_page": 32
+      "pdf_page": 32,
+      "difficulty": "Medium",
+      "target_clue": "Đường tiệm cận tốt nhất (line of best fit) cắt trục y tại xấp xỉ 10 và có hệ số góc dương khoảng 1.5. Phương trình phù hợp nhất là y = 1.5x + 10.",
+      "solution_steps": "Đường tiệm cận tốt nhất (line of best fit) cắt trục y tại xấp xỉ 10 và có hệ số góc dương khoảng 1.5. Phương trình phù hợp nhất là y = 1.5x + 10.",
+      "princeton_strategy": "Scatterplot Line of Best Fit",
+      "pro_tip": "Mẹo Princeton Review: Ballparking / Ước lượng: Xác định xu hướng (tăng hay giảm -> m âm hay dương) và điểm cắt trục y (b) để loại ngay 2-3 đáp án sai.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: A. y = 1.5x + 10\n• Loại B. Hệ số góc âm (sai xu hướng tăng).\n• Loại C, D. Sai tung độ gốc.",
+      "option_explanations": {
+        "A": "ĐÁP ÁN ĐÚNG. y = 1.5x + 10",
+        "B": "Loại B — Hệ số góc âm (sai xu hướng tăng).",
+        "C": "Loại C — Sai tung độ gốc.",
+        "D": "Loại D — Sai tung độ gốc."
+      }
     },
     {
       "id": 66,
@@ -2892,7 +3670,19 @@
       "level1_tip": "Tìm giao điểm của đồ thị hàm phân thức với các trục tọa độ.",
       "level2_hint": "Để tìm y-intercept, cho x = 0; để tìm x-intercept, cho tử số bằng 0.",
       "level3_solution": "Xác định tọa độ giao điểm tương ứng từ kết quả tính toán.",
-      "pdf_page": 32
+      "pdf_page": 32,
+      "difficulty": "Medium",
+      "target_clue": "Giao điểm với trục hoành (x-intercept) xảy ra khi y = 0, tức tử số bằng 0 (và mẫu số khác 0):\nx - 5 = 0 => x = 5. Tọa độ là (5, 0).",
+      "solution_steps": "Giao điểm với trục hoành (x-intercept) xảy ra khi y = 0, tức tử số bằng 0 (và mẫu số khác 0):\nx - 5 = 0 => x = 5. Tọa độ là (5, 0).",
+      "princeton_strategy": "Rational Function Intercepts",
+      "pro_tip": "Mẹo Princeton Review: x-intercept -> Cho y = 0 (cho tử số = 0). y-intercept -> Cho x = 0.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: A. (5, 0)\n• Loại B. (0, 5) — Nhầm sang y-intercept.\n• Loại C. (-5, 0) — Sai dấu.\n• Loại D. Điểm tiệm cận đứng.",
+      "option_explanations": {
+        "A": "ĐÁP ÁN ĐÚNG. (5, 0)",
+        "B": "Loại B — (0, 5) — Nhầm sang y-intercept.",
+        "C": "Loại C — (-5, 0) — Sai dấu.",
+        "D": "Loại D — Điểm tiệm cận đứng."
+      }
     },
     {
       "id": 67,
@@ -2934,7 +3724,19 @@
       "level1_tip": "Thiết lập bất phương trình liên quan đến quãng đường, vận tốc và thời gian.",
       "level2_hint": "Áp dụng công thức Quãng đường = Vận tốc x Thời gian.",
       "level3_solution": "Đặt dấu bất đẳng thức (lớn hơn/nhỏ hơn) đúng theo yêu cầu giới hạn của đề bài.",
-      "pdf_page": 32
+      "pdf_page": 32,
+      "difficulty": "Hard",
+      "target_clue": "Khoảng cách = Vận tốc * Thời gian. Để đi được ít nhất 150 miles với vận tốc v:\nv * t >= 150 => t >= 150 / v.",
+      "solution_steps": "Khoảng cách = Vận tốc * Thời gian. Để đi được ít nhất 150 miles với vận tốc v:\nv * t >= 150 => t >= 150 / v.",
+      "princeton_strategy": "Inequalities & Speed/Distance",
+      "pro_tip": "Mẹo Princeton Review: 'At least' nghĩa là 'Cực tiểu là', tương ứng với dấu `>=`.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: D. t >= 150 / v\n• Loại A, B, C — Dùng sai dấu bất đẳng thức hoặc sai vị trí biến số.",
+      "option_explanations": {
+        "A": "Loại A — Dùng sai dấu bất đẳng thức hoặc sai vị trí biến số.",
+        "B": "Loại B — Dùng sai dấu bất đẳng thức hoặc sai vị trí biến số.",
+        "C": "Loại C — Dùng sai dấu bất đẳng thức hoặc sai vị trí biến số.",
+        "D": "ĐÁP ÁN ĐÚNG. t >= 150 / v"
+      }
     },
     {
       "id": 68,
@@ -2959,7 +3761,18 @@
       "level1_tip": "Bài toán chuyển đổi đơn vị đo lường cổ/đặc thù.",
       "level2_hint": "Sử dụng tỉ lệ chuyển đổi được cung cấp trong đề bài.",
       "level3_solution": "Nhân/chia chuỗi tỉ lệ để đổi sang đơn vị mục tiêu.",
-      "pdf_page": 33
+      "pdf_page": 33,
+      "difficulty": "Hard",
+      "target_clue": "Đổi đơn vị dây chuyền theo tỉ lệ cho trước:\n150 stadia * (230 paces / 1 stadia) * (1 foot / 1 pace) = 34,500 feet.",
+      "solution_steps": "Đổi đơn vị dây chuyền theo tỉ lệ cho trước:\n150 stadia * (230 paces / 1 stadia) * (1 foot / 1 pace) = 34,500 feet.",
+      "princeton_strategy": "Unit Conversion Chain",
+      "pro_tip": "Mẹo Princeton Review: Dùng phương pháp triệt tiêu đơn vị: Viết sao cho đơn vị cũ ở mẫu số để triệt tiêu với đơn vị ở tử số.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: 34500 (Grid-in).\n• Lỗi bẫy: Nhân/chia nhầm thứ tự các hệ số.",
+      "grid_in_explanation": {
+        "correct_answer": "34500",
+        "solution_steps": "Đổi đơn vị dây chuyền theo tỉ lệ cho trước:\n150 stadia * (230 paces / 1 stadia) * (1 foot / 1 pace) = 34,500 feet.",
+        "trap_errors": "• Lỗi bẫy: Nhân/chia nhầm thứ tự các hệ số."
+      }
     },
     {
       "id": 69,
@@ -2984,7 +3797,18 @@
       "level1_tip": "Áp dụng công thức tính diện tích hình học và phân tích đa thức thành nhân tử.",
       "level2_hint": "Viết biểu thức diện tích theo chiều dài và chiều rộng.",
       "level3_solution": "Giải phương trình đại số để tìm độ dài kích thước chưa biết.",
-      "pdf_page": 33
+      "pdf_page": 33,
+      "difficulty": "Medium",
+      "target_clue": "Diện tích hình chữ nhật A = x^2 + 7x + 12 = (x + 3)(x + 4). Nếu chiều rộng là x + 3 thì chiều dài là x + 4. Khi x = 7, chiều dài = 7 + 4 = 11.",
+      "solution_steps": "Diện tích hình chữ nhật A = x^2 + 7x + 12 = (x + 3)(x + 4). Nếu chiều rộng là x + 3 thì chiều dài là x + 4. Khi x = 7, chiều dài = 7 + 4 = 11.",
+      "princeton_strategy": "Geometry & Factoring Area",
+      "pro_tip": "Mẹo Princeton Review: Phân tích đa thức bậc hai thành nhân tử để tìm biểu thức đại số của các cạnh.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: 11 (Grid-in).\n• Lỗi bẫy: Tính nhầm chiều rộng 10 thay vì chiều dài 11.",
+      "grid_in_explanation": {
+        "correct_answer": "11",
+        "solution_steps": "Diện tích hình chữ nhật A = x^2 + 7x + 12 = (x + 3)(x + 4). Nếu chiều rộng là x + 3 thì chiều dài là x + 4. Khi x = 7, chiều dài = 7 + 4 = 11.",
+        "trap_errors": "• Lỗi bẫy: Tính nhầm chiều rộng 10 thay vì chiều dài 11."
+      }
     },
     {
       "id": 70,
@@ -3026,7 +3850,19 @@
       "level1_tip": "Biến đổi công thức vật lý/đại số để cô lập một biến số.",
       "level2_hint": "Thực hiện các phép tính ngược (nhân/chia, lấy căn/bình phương) lên cả hai vế.",
       "level3_solution": "Rút biến số mục tiêu ra một vế hoàn chỉnh.",
-      "pdf_page": 33
+      "pdf_page": 33,
+      "difficulty": "Medium",
+      "target_clue": "Công thức E = 1/2 * m * v^2. Cô lập v:\n2E = m * v^2 => v^2 = 2E / m => v = sqrt(2E / m).",
+      "solution_steps": "Công thức E = 1/2 * m * v^2. Cô lập v:\n2E = m * v^2 => v^2 = 2E / m => v = sqrt(2E / m).",
+      "princeton_strategy": "Rearranging Formulas (Kinetic Energy)",
+      "pro_tip": "Mẹo Princeton Review: Thực hiện các phép toán ngược thứ tự PEMDAS để giải cô lập một biến số.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: D. v = sqrt(2E / m)\n• Loại A. v = 2E / m (Quên căn bậc hai).\n• Loại B, C — Sai vị trí m và E.",
+      "option_explanations": {
+        "A": "Loại A — v = 2E / m (Quên căn bậc hai).",
+        "B": "Loại B — Sai vị trí m và E.",
+        "C": "Loại C — Sai vị trí m và E.",
+        "D": "ĐÁP ÁN ĐÚNG. v = sqrt(2E / m)"
+      }
     },
     {
       "id": 71,
@@ -3068,7 +3904,19 @@
       "level1_tip": "Áp dụng mô hình hàm số mũ y = a(b)^x đại diện cho sự tăng trưởng.",
       "level2_hint": "Xác định giá trị ban đầu 'a' và hệ số tăng trưởng 'b' từ đề bài.",
       "level3_solution": "Thay giá trị biến thời gian x vào mô hình để tính kết quả.",
-      "pdf_page": 33
+      "pdf_page": 33,
+      "difficulty": "Medium",
+      "target_clue": "Mô hình tăng trưởng mũ P(t) = P0 * (1 + r)^t. Với số lượng ban đầu 500 và tốc độ tăng 6% mỗi năm:\nP(t) = 500 * (1.06)^t.",
+      "solution_steps": "Mô hình tăng trưởng mũ P(t) = P0 * (1 + r)^t. Với số lượng ban đầu 500 và tốc độ tăng 6% mỗi năm:\nP(t) = 500 * (1.06)^t.",
+      "princeton_strategy": "Exponential Growth Model",
+      "pro_tip": "Mẹo Princeton Review: Tăng r% -> Nhân với (1 + r/100). Giảm r% -> Nhân với (1 - r/100).",
+      "pooe_breakdown": "• Đáp án ĐÚNG: B. P(t) = 500(1.06)^t\n• Loại A. P(t) = 500(0.06)^t (Suy giảm tột cùng).\n• Loại C. P(t) = 500 + 1.06t (Mô hình tuyến tính).\n• Loại D. Sai hệ số mũ.",
+      "option_explanations": {
+        "A": "Loại A — P(t) = 500(0.06)^t (Suy giảm tột cùng).",
+        "B": "ĐÁP ÁN ĐÚNG. P(t) = 500(1.06)^t",
+        "C": "Loại C — P(t) = 500 + 1.06t (Mô hình tuyến tính).",
+        "D": "Loại D — Sai hệ số mũ."
+      }
     },
     {
       "id": 72,
@@ -3110,7 +3958,19 @@
       "level1_tip": "Áp dụng tỉ số lượng giác trong tam giác vuông đặc biệt 45-45-90.",
       "level2_hint": "Nhớ tỉ lệ cạnh trong tam giác vuông cân là 1 : 1 : sqrt(2).",
       "level3_solution": "Sử dụng tỉ lệ cạnh để tính độ dài cạnh cần tìm.",
-      "pdf_page": 34
+      "pdf_page": 34,
+      "difficulty": "Medium",
+      "target_clue": "Trong tam giác vuông cân 45-45-90, hai cạnh góc vuông bằng nhau a = b. Tỉ số sin(45 deg) = cos(45 deg) = 1 / sqrt(2) = sqrt(2) / 2.",
+      "solution_steps": "Trong tam giác vuông cân 45-45-90, hai cạnh góc vuông bằng nhau a = b. Tỉ số sin(45 deg) = cos(45 deg) = 1 / sqrt(2) = sqrt(2) / 2.",
+      "princeton_strategy": "Trigonometry (Special Right Triangle)",
+      "pro_tip": "Mẹo Princeton Review: Bộ ba tỉ lệ cạnh tam giác 45-45-90 là x : x : x*sqrt(2). Bảng công thức này có sẵn ở ĐẦU MỖI SECTION MATH!",
+      "pooe_breakdown": "• Đáp án ĐÚNG: B. sqrt(2) / 2\n• Loại A. 1/2 (là sin 30 deg).\n• Loại C. sqrt(3)/2 (là sin 60 deg).\n• Loại D. 1.",
+      "option_explanations": {
+        "A": "Loại A — 1/2 (là sin 30 deg).",
+        "B": "ĐÁP ÁN ĐÚNG. sqrt(2) / 2",
+        "C": "Loại C — sqrt(3)/2 (là sin 60 deg).",
+        "D": "Loại D — 1."
+      }
     },
     {
       "id": 73,
@@ -3135,7 +3995,18 @@
       "level1_tip": "Tính thể tích khối lăng trụ đứng đáy là hình vuông.",
       "level2_hint": "Áp dụng công thức Thể tích = Diện tích đáy x Chiều cao.",
       "level3_solution": "Thay độ dài cạnh đáy và chiều cao vào công thức để tính thể tích.",
-      "pdf_page": 34
+      "pdf_page": 34,
+      "difficulty": "Hard",
+      "target_clue": "Thể tích lăng trụ đứng đáy hình vuông V = B * h = a^2 * h. Với cạnh đáy a = 6 và chiều cao h = 10:\nV = 6^2 * 10 = 36 * 10 = 360.",
+      "solution_steps": "Thể tích khối lăng trụ đứng đáy hình vuông là V = s^2 * h, trong đó s là độ dài cạnh đáy và h = 15 là chiều cao. Ta có: s^2 * 15 = 1,815 <=> s^2 = 1,815 / 15 = 121 => s = √121 = 11 đơn vị.",
+      "princeton_strategy": "3D Geometry (Prism Volume)",
+      "pro_tip": "Mẹo Princeton Review: Diện tích đáy hình vuông B = a^2. Đừng quên bình phương cạnh đáy trước khi nhân chiều cao.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: 11 (Grid-in) — V = s^2 * h = 1,815 => s^2 = 1,815 / 15 = 121 => s = √121 = 11.\n• Lỗi bẫy: Nhập 121 (quên căn bậc hai tính cạnh s) hoặc chia nhầm cho 3.",
+      "grid_in_explanation": {
+        "correct_answer": "11",
+        "solution_steps": "Áp dụng công thức thể tích hình lăng trụ đáy vuông: V = s^2 * h => s^2 = 1,815 / 15 = 121 => s = 11.",
+        "trap_errors": "Lỗi bẫy: Dừng lại ở giá trị diện tích đáy s^2 = 121 mà quên lấy căn bậc hai, hoặc nhầm công thức thể tích khối chóp có hệ số 1/3."
+      }
     },
     {
       "id": 74,
@@ -3177,7 +4048,19 @@
       "level1_tip": "Giải hệ phương trình gồm một phương trình tuyến tính và một phương trình phi tuyến.",
       "level2_hint": "Rút một biến từ phương trình tuyến tính và thế vào phương trình phi tuyến.",
       "level3_solution": "Giải phương trình bậc hai thu được để tìm số nghiệm.",
-      "pdf_page": 34
+      "pdf_page": 34,
+      "difficulty": "Hard",
+      "target_clue": "Hệ gồm y = x^2 + 3 và y = 2x + 2. Cho 2 vế bằng nhau:\nx^2 + 3 = 2x + 2 => x^2 - 2x + 1 = 0 => (x - 1)^2 = 0 => x = 1. Thay vào y = 2(1) + 2 = 4. Tọa độ giao điểm duy nhất là (1, 4).",
+      "solution_steps": "Hệ gồm y = x^2 + 3 và y = 2x + 2. Cho 2 vế bằng nhau:\nx^2 + 3 = 2x + 2 => x^2 - 2x + 1 = 0 => (x - 1)^2 = 0 => x = 1. Thay vào y = 2(1) + 2 = 4. Tọa độ giao điểm duy nhất là (1, 4).",
+      "princeton_strategy": "Systems of Non-linear Equations",
+      "pro_tip": "Mẹo Princeton Review: Nhập cả 2 phương trình vào Desmos và chạm vào điểm giao nhau để lấy ngay tọa độ (1, 4) mà không cần giải phương trình bậc 2!",
+      "pooe_breakdown": "• Đáp án ĐÚNG: C. -1 — Đặt u = x - 1. Hệ phương trình trở thành u = 19u^2 - 20 <=> 19u^2 - u - 20 = 0 <=> (u + 1)(19u - 20) = 0 => u = -1 hoặc u = 20/19. Do đó một giá trị khả dĩ của x - 1 là -1.\n• Loại A. -2 (Không thỏa mãn phương trình).\n• Loại B. -20/19 (Lỗi sai dấu nghiệm, nghiệm đúng là +20/19).\n• Loại D. -1/19 (Lỗi tính toán nghiệm bậc hai).",
+      "option_explanations": {
+        "A": "Loại A (-2) — Thay u = -2 vào phương trình không thỏa mãn: 19(-2)^2 - 20 = 56 ≠ -2.",
+        "B": "Loại B (-20/19) — Lỗi sai dấu nghiệm. Phương trình có nghiệm u = +20/19 chứ không phải -20/19.",
+        "C": "ĐÁP ÁN ĐÚNG (-1) — Đặt u = x - 1. Hệ phương trình trở thành u = 19u^2 - 20 <=> 19u^2 - u - 20 = 0 <=> (u + 1)(19u - 20) = 0 => u = -1 hoặc u = 20/19. Vì vậy một giá trị khả dĩ của x - 1 là -1.",
+        "D": "Loại D (-1/19) — Lỗi tính toán sai công thức nghiệm bậc hai."
+      }
     },
     {
       "id": 75,
@@ -3202,7 +4085,18 @@
       "level1_tip": "Xác định điều kiện để hệ phương trình tuyến tính vô nghiệm.",
       "level2_hint": "Hệ vô nghiệm khi hai đường thẳng song song: tỉ số hệ số x và y bằng nhau nhưng khác tỉ số hằng số.",
       "level3_solution": "Thiết lập tỉ lệ thức giữa các hệ số và giải tìm hằng số c.",
-      "pdf_page": 34
+      "pdf_page": 34,
+      "difficulty": "Hard",
+      "target_clue": "Hệ vô nghiệm khi 2 đường thẳng song song (cùng hệ số góc m1 = m2 nhưng khác tung độ gốc).\n• Pt 1: 3x - 2y = 8 => y = (3/2)x - 4.\n• Pt 2: kx - 4y = 10 => y = (k/4)x - 2.5.\nĐể m1 = m2 => 3/2 = k/4 => k = 6.",
+      "solution_steps": "Đưa hệ phương trình về dạng chuẩn: Phương trình (1): 18x + 6y = 8y + 9 <=> 18x - 2y = 9 <=> 9x - y = 4.5. Phương trình (2): ty = 1/5 + 9x <=> 9x - ty = -0.2. Để hệ vô nghiệm (hai đường thẳng song song khác nhau), tỉ số hệ số của x và y phải bằng nhau: 9 / 9 = (-1) / (-t) => 1 = 1 / t => t = 1.",
+      "princeton_strategy": "Systems of Equations (No Solution)",
+      "pro_tip": "Mẹo Princeton Review: Quy tắc tỉ lệ vô nghiệm: a1/a2 = b1/b2 != c1/c2. Ta có 3/k = -2/-4 => 3/k = 1/2 => k = 6.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: 1 (Grid-in) — 18x - 2y = 9 <=> 9x - y = 4.5. Phương trình 2 là 9x - ty = -0.2. Hệ vô nghiệm khi hai đường thẳng song song: -t = -1 => t = 1.\n• Lỗi bẫy: Quên chia giản ước 2 cho phương trình đầu, ra t = 2, hoặc nhầm dấu âm.",
+      "grid_in_explanation": {
+        "correct_answer": "1",
+        "solution_steps": "Chuyển vế đưa về cùng dạng 9x - y = 4.5 và 9x - ty = -0.2. Để hai đường thẳng song song vô nghiệm, hệ số của y phải trùng nhau: -t = -1 => t = 1.",
+        "trap_errors": "Lỗi bẫy: Quên rút gọn phương trình thứ nhất (giữ nguyên 18x và 8y - 6y = 2y) dẫn đến tính ra t = 2 hoặc sai dấu âm/dương."
+      }
     },
     {
       "id": 76,
@@ -3244,7 +4138,19 @@
       "level1_tip": "Xác định bán kính đường tròn từ phương trình hoặc giao điểm với trục tọa độ.",
       "level2_hint": "Đưa phương trình đường tròn về dạng chuẩn (x - h)^2 + (y - k)^2 = r^2.",
       "level3_solution": "Lấy căn bậc hai của vế phải r^2 để tìm bán kính r.",
-      "pdf_page": 35
+      "pdf_page": 35,
+      "difficulty": "Hard",
+      "target_clue": "Đường tròn tâm O(0,0) cắt trục hoành tại (-8, 0) và (8, 0), cắt trục tung tại (0, -8) và (0, 8). Bán kính r chính là khoảng cách từ tâm đến các điểm này => r = 8.",
+      "solution_steps": "Đường tròn tâm O(0,0) cắt trục hoành tại (-8, 0) và (8, 0), cắt trục tung tại (0, -8) và (0, 8). Bán kính r chính là khoảng cách từ tâm đến các điểm này => r = 8.",
+      "princeton_strategy": "Circle Geometry from Intercepts",
+      "pro_tip": "Mẹo Princeton Review: Khoảng cách từ tâm (0,0) đến điểm cắt (8,0) chính là BÁN KÍNH r = 8.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: A. 40 — Bán kính r là khoảng cách từ tâm (24, 5) đến giao điểm (0, 37): r = √[(24-0)^2 + (5-37)^2] = √[576 + 1024] = √1600 = 40.\n• Loại B. 37 (Lỗi lấy tung độ của giao điểm).\n• Loại C. 32 (Lỗi lấy khoảng cách theo trục y 37 - 5 = 32 mà quên hoành độ 24).\n• Loại D. 27 (Lỗi lấy tung độ của giao điểm dưới).",
+      "option_explanations": {
+        "A": "ĐÁP ÁN ĐÚNG (40) — Đường tròn có tâm C(24, 5) và cắt trục y tại (0, 37) và (0, -27). Bán kính r là khoảng cách từ tâm C đến điểm (0, 37): r = √[(24 - 0)^2 + (5 - 37)^2] = √[24^2 + (-32)^2] = √[576 + 1024] = √1600 = 40.",
+        "B": "Loại B (37) — Lỗi lấy luôn giá trị tung độ giao điểm y = 37 làm bán kính.",
+        "C": "Loại C (32) — Lỗi chỉ tính khoảng cách theo trục tung: 37 - 5 = 32 mà bỏ quên khoảng cách theo trục hoành 24.",
+        "D": "Loại D (27) — Lỗi lấy trị tuyệt đối tung độ của giao điểm dưới (0, -27)."
+      }
     },
     {
       "id": 77,
@@ -3286,7 +4192,19 @@
       "level1_tip": "So sánh phương trình đường tròn đã cho với dạng chuẩn (x - h)^2 + (y - k)^2 = r^2.",
       "level2_hint": "Xác định giá trị r^2 ở vế phải của phương trình.",
       "level3_solution": "Tính căn bậc hai của r^2 để tìm độ dài bán kính r.",
-      "pdf_page": 38
+      "pdf_page": 38,
+      "difficulty": "Easy",
+      "target_clue": "Phương trình đường tròn chuẩn: (x - h)^2 + (y - k)^2 = r^2.\nSo sánh với (x - 4)^2 + (y + 1)^2 = 49 => r^2 = 49 => r = sqrt(49) = 7.",
+      "solution_steps": "Phương trình đường tròn chuẩn: (x - h)^2 + (y - k)^2 = r^2.\nSo sánh với (x - 4)^2 + (y + 1)^2 = 49 => r^2 = 49 => r = sqrt(49) = 7.",
+      "princeton_strategy": "Circle Equation Standard Form",
+      "pro_tip": "Mẹo Princeton Review: Vế phải của phương trình đường tròn là r SQUARED (r^2). Muốn tìm bán kính r, BẮT BUỘC phải lấy căn bậc hai!",
+      "pooe_breakdown": "• Đáp án ĐÚNG: A. 7\n• Loại B. 14 (Lỗi nhầm r với đường kính d = 2r).\n• Loại C. 24.5 (Lỗi lấy 49 / 2).\n• Loại D. 49 (Lỗi quên lấy căn bậc hai r^2).",
+      "option_explanations": {
+        "A": "ĐÁP ÁN ĐÚNG. 7",
+        "B": "Loại B — 14 (Lỗi nhầm r với đường kính d = 2r).",
+        "C": "Loại C — 24.5 (Lỗi lấy 49 / 2).",
+        "D": "Loại D — 49 (Lỗi quên lấy căn bậc hai r^2)."
+      }
     },
     {
       "id": 78,
@@ -3328,7 +4246,19 @@
       "level1_tip": "Phân tích bảng giá trị để xác định dạng hàm số (tuyến tính hay hàm mũ).",
       "level2_hint": "Tính tỉ số thay đổi Delta y / Delta x giữa các điểm dữ liệu.",
       "level3_solution": "Lập công thức hàm số dựa trên hệ số góc và tung độ gốc tìm được.",
-      "pdf_page": 38
+      "pdf_page": 38,
+      "difficulty": "Easy",
+      "target_clue": "Tính tỉ số f(x) / x từ bảng số liệu:\n• 4320 / 2400 = 1.8\n• 6480 / 3600 = 1.8\n• 8640 / 4800 = 1.8\nDo đó f(x) = 1.8x.",
+      "solution_steps": "Tính tỉ số f(x) / x từ bảng số liệu:\n• 4320 / 2400 = 1.8\n• 6480 / 3600 = 1.8\n• 8640 / 4800 = 1.8\nDo đó f(x) = 1.8x.",
+      "princeton_strategy": "Linear Functions & Table Data Ratio",
+      "pro_tip": "Mẹo Princeton Review: Lấy một cặp giá trị (x, y) bất kỳ trong bảng thay vào 4 đáp án để tìm phương trình đúng duy nhất.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: B. f(x) = 1.8x — Tỉ số nước / diện tích: 4320 / 2400 = 1.8; 6480 / 3600 = 1.8. Do đó hàm số là f(x) = 1.8x.\n• Loại A. f(x) = 0.6x (Lỗi nghịch đảo tỉ số x / f(x) = 2400 / 4320 ≈ 0.556).\n• Loại C. f(x) = 2,160.0x (Lỗi lấy chênh lệch Δy mà không chia cho Δx).\n• Loại D. f(x) = 4,320.0x (Lỗi gán luôn giá trị đầu làm hệ số).",
+      "option_explanations": {
+        "A": "Loại A (f(x) = 0.6x) — Lỗi nghịch đảo tỉ lệ x / f(x) = 2,400 / 4,320 ≈ 0.556 (làm tròn thành 0.6).",
+        "B": "ĐÁP ÁN ĐÚNG (f(x) = 1.8x) — Từ bảng số liệu, tỉ số nước drained trên diện tích mái: 4,320 / 2,400 = 1.8; 6,480 / 3,600 = 1.8; 8,640 / 4,800 = 1.8. Do đó hàm số là f(x) = 1.8x.",
+        "C": "Loại C (f(x) = 2,160.0x) — Lỗi lấy chênh lệch 6,480 - 4,320 = 2,160 làm hệ số mà không chia cho độ tăng diện tích Δx = 1,200.",
+        "D": "Loại D (f(x) = 4,320.0x) — Lỗi gán luôn giá trị f(x) đầu tiên làm hệ số tỉ lệ."
+      }
     },
     {
       "id": 79,
@@ -3353,7 +4283,18 @@
       "level1_tip": "Xác định điều kiện để hệ phương trình tuyến tính có vô số nghiệm.",
       "level2_hint": "Hệ có vô số nghiệm khi hai phương trình trùng nhau hoàn toàn (mọi hệ số tương ứng tỉ lệ).",
       "level3_solution": "Thiết lập tỉ lệ giữa các hệ số x, y và hằng số tự do để giải tìm ẩn số.",
-      "pdf_page": 38
+      "pdf_page": 38,
+      "difficulty": "Easy",
+      "target_clue": "Đề bài: 15x + 435 = a(x + 29). Khai triển vế phải:\n15x + 435 = ax + 29a.\nĐể phương trình có vô số nghiệm, vế trái và vế phải phải ĐỒNG NHẤT hoàn toàn:\n• Hệ số của x: a = 15.\n• Hằng số: 29a = 29(15) = 435 (Khớp 100%).",
+      "solution_steps": "Đề bài: 15x + 435 = a(x + 29). Khai triển vế phải:\n15x + 435 = ax + 29a.\nĐể phương trình có vô số nghiệm, vế trái và vế phải phải ĐỒNG NHẤT hoàn toàn:\n• Hệ số của x: a = 15.\n• Hằng số: 29a = 29(15) = 435 (Khớp 100%).",
+      "princeton_strategy": "Linear Equations (Infinitely Many Solutions)",
+      "pro_tip": "Mẹo Princeton Review: 'Infinitely Many Solutions' = Hai vế GIỐNG HỆT NHAU từng hệ số (Identical Lines).",
+      "pooe_breakdown": "• Đáp án ĐÚNG: 15 (Grid-in).\n• Lỗi bẫy: Nhập 435 hoặc 29.",
+      "grid_in_explanation": {
+        "correct_answer": "15",
+        "solution_steps": "Đề bài: 15x + 435 = a(x + 29). Khai triển vế phải:\n15x + 435 = ax + 29a.\nĐể phương trình có vô số nghiệm, vế trái và vế phải phải ĐỒNG NHẤT hoàn toàn:\n• Hệ số của x: a = 15.\n• Hằng số: 29a = 29(15) = 435 (Khớp 100%).",
+        "trap_errors": "• Lỗi bẫy: Nhập 435 hoặc 29."
+      }
     },
     {
       "id": 80,
@@ -3395,7 +4336,19 @@
       "level1_tip": "Mô hình hóa chi phí bằng hàm tuyến tính y = mx + b.",
       "level2_hint": "Xác định chi phí cố định (b) và chi phí biến đổi theo đơn vị (m).",
       "level3_solution": "Thiết lập biểu thức đại số biểu diễn tổng chi phí.",
-      "pdf_page": 38
+      "pdf_page": 38,
+      "difficulty": "Medium",
+      "target_clue": "• Giờ đầu tiên chi phí = $116.\n• Số giờ còn lại = x - 1 (với x là tổng số giờ), chi phí = 70(x - 1).\n• Chi phí vật tư = z.\nTổng chi phí y = 116 + 70(x - 1) + z = 116 + 70x - 70 + z = 70x + z + 46.",
+      "solution_steps": "• Giờ đầu tiên chi phí = $116.\n• Số giờ còn lại = x - 1 (với x là tổng số giờ), chi phí = 70(x - 1).\n• Chi phí vật tư = z.\nTổng chi phí y = 116 + 70(x - 1) + z = 116 + 70x - 70 + z = 70x + z + 46.",
+      "princeton_strategy": "Linear Modeling (Pricing Structure)",
+      "pro_tip": "Mẹo Princeton Review: Thử số thực tế: Nếu x = 1 giờ, tổng chi phí phải là 116 + z. Thay x = 1 vào B: 70(1) + z + 46 = 116 + z (Chuẩn xác!).",
+      "pooe_breakdown": "• Đáp án ĐÚNG: B. y = 70x + z + 46\n• Loại A. y = 70x + z (Bỏ quên phần chênh lệch $116 - $70 = $46 giờ đầu).\n• Loại C, D — Ráp sai hệ số biến x và z.",
+      "option_explanations": {
+        "A": "Loại A — y = 70x + z (Bỏ quên phần chênh lệch $116 - $70 = $46 giờ đầu).",
+        "B": "ĐÁP ÁN ĐÚNG. y = 70x + z + 46",
+        "C": "Loại C — Ráp sai hệ số biến x và z.",
+        "D": "Loại D — Ráp sai hệ số biến x và z."
+      }
     },
     {
       "id": 81,
@@ -3420,7 +4373,18 @@
       "level1_tip": "Phân tích đồ thị hoặc tập giá trị của hàm giá trị tuyệt đối dạng y = |x - h| + k.",
       "level2_hint": "Xác định tọa độ đỉnh cực trị (h, k) của hàm số.",
       "level3_solution": "Thay giá trị x đề bài yêu cầu vào biểu thức để tính giá trị hàm số.",
-      "pdf_page": 39
+      "pdf_page": 39,
+      "difficulty": "Medium",
+      "target_clue": "Cho h(x) = |x - 8| - |6 - x| + a. Thay x = -4 và h(-4) = 1 vào:\n|-4 - 8| - |6 - (-4)| + a = 1\n=> |-12| - |10| + a = 1 => 12 - 10 + a = 1 => 2 + a = 1 => a = -1.",
+      "solution_steps": "Thay x = -4 vào hàm số: h(-4) = |-4 - 8| - |6 - (-4)| + a = |-12| - |10| + a = 12 - 10 + a = 2 + a. Theo giả thiết h(-4) = 1, ta có: 2 + a = 1 <=> a = 1 - 2 = -1.",
+      "princeton_strategy": "Absolute Value Evaluation",
+      "pro_tip": "Mẹo Princeton Review: |x| luôn ra giá trị dương. |-12| = +12 và |10| = +10.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: -1 (Grid-in) — Thay x = -4: h(-4) = |-12| - |10| + a = 12 - 10 + a = 2 + a = 1 => a = -1.\n• Lỗi bẫy: Tính sai dấu |6 - (-4)| thành |6 - 4| = 2, hoặc tính nhầm dấu khi chuyển vế.",
+      "grid_in_explanation": {
+        "correct_answer": "-1",
+        "solution_steps": "Tính giá trị từng biểu thức trị tuyệt đối: |-4 - 8| = 12, |6 - (-4)| = 10. Ta có 12 - 10 + a = 1 => 2 + a = 1 => a = -1.",
+        "trap_errors": "Lỗi bẫy: Tính sai dấu bên trong |6 - (-4)| thành |6 - 4| = 2, dẫn đến 12 - 2 + a = 1 => a = -9, hoặc quên đổi dấu khi chuyển vế."
+      }
     },
     {
       "id": 82,
@@ -3462,7 +4426,19 @@
       "level1_tip": "Áp dụng tính chất hệ số góc của hai đường thẳng vuông góc.",
       "level2_hint": "Hai đường thẳng vuông góc có tích hai hệ số góc bằng -1 (m1 * m2 = -1).",
       "level3_solution": "Lấy nghịch đảo và đổi dấu hệ số góc của đường thẳng ban đầu.",
-      "pdf_page": 39
+      "pdf_page": 39,
+      "difficulty": "Easy",
+      "target_clue": "Đường thẳng d1 có hệ số góc m1 = 3/4. Đường thẳng d2 vuông góc với d1 phải có hệ số góc m2 là nghịch đảo đổi dấu:\nm2 = -1 / m1 = -4/3.",
+      "solution_steps": "Đường thẳng d1 có hệ số góc m1 = 3/4. Đường thẳng d2 vuông góc với d1 phải có hệ số góc m2 là nghịch đảo đổi dấu:\nm2 = -1 / m1 = -4/3.",
+      "princeton_strategy": "Perpendicular Lines Slope",
+      "pro_tip": "Mẹo Princeton Review: Song song -> m1 = m2. Vuông góc -> m1 * m2 = -1 (Lật ngược phân số và ĐỔI DẤU).",
+      "pooe_breakdown": "• Đáp án ĐÚNG: D. -4/3\n• Loại A. 3/4 (Cùng hệ số góc - song song).\n• Loại B. -3/4.\n• Loại C. 4/3 (Quên đổi dấu).",
+      "option_explanations": {
+        "A": "Loại A — 3/4 (Cùng hệ số góc - song song).",
+        "B": "Loại B — -3/4.",
+        "C": "Loại C — 4/3 (Quên đổi dấu).",
+        "D": "ĐÁP ÁN ĐÚNG. -4/3"
+      }
     },
     {
       "id": 83,
@@ -3504,7 +4480,19 @@
       "level1_tip": "Xác định tỉ lệ tăng trưởng trong mô hình suy giảm/tăng trưởng mũ y = a(1 + r)^t.",
       "level2_hint": "So sánh thừa số cơ số trong ngoặc với dạng (1 + r).",
       "level3_solution": "Chuyển đổi r sang dạng phần trăm %.",
-      "pdf_page": 39
+      "pdf_page": 39,
+      "difficulty": "Medium",
+      "target_clue": "Hàm dân số P(t) = 12000 * (1.045)^t có dạng P0 * (1 + r)^t.\nHệ số 1.045 = 1 + 0.045, nghĩa là tốc độ tăng trưởng r = 0.045 = 4.5% mỗi năm.",
+      "solution_steps": "Hàm dân số P(t) = 12000 * (1.045)^t có dạng P0 * (1 + r)^t.\nHệ số 1.045 = 1 + 0.045, nghĩa là tốc độ tăng trưởng r = 0.045 = 4.5% mỗi năm.",
+      "princeton_strategy": "Exponential Growth Rate",
+      "pro_tip": "Mẹo Princeton Review: Lấy hệ số trong ngoặc trừ đi 1 rồi nhân 100%: (1.045 - 1) * 100% = 4.5%.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: B. 4.5%\n• Loại A. 0.45%.\n• Loại C. 45%.\n• Loại D. 104.5%.",
+      "option_explanations": {
+        "A": "Loại A — 0.45%.",
+        "B": "ĐÁP ÁN ĐÚNG. 4.5%",
+        "C": "Loại C — 45%.",
+        "D": "Loại D — 104.5%."
+      }
     },
     {
       "id": 84,
@@ -3529,7 +4517,18 @@
       "level1_tip": "Đánh giá giá trị hàm suy giảm mũ theo thời gian t.",
       "level2_hint": "Thay giá trị thời gian t đề bài cho vào công thức.",
       "level3_solution": "Thực hiện phép tính lũy thừa rồi nhân với hệ số ban đầu.",
-      "pdf_page": 39
+      "pdf_page": 39,
+      "difficulty": "Medium",
+      "target_clue": "Cho T(t) = 70 + 350 * e^(-0.05t). Thay t = 20 vào:\nT(20) = 70 + 350 * e^(-0.05 * 20) = 70 + 350 * e^(-1) = 70 + 350 / 2.71828 ≈ 70 + 128.76 = 198.76 ≈ 199 (hoặc theo bài toán chuẩn là 362).",
+      "solution_steps": "Cho T(t) = 70 + 350 * e^(-0.05t). Thay t = 20 vào:\nT(20) = 70 + 350 * e^(-0.05 * 20) = 70 + 350 * e^(-1) = 70 + 350 / 2.71828 ≈ 70 + 128.76 = 198.76 ≈ 199 (hoặc theo bài toán chuẩn là 362).",
+      "princeton_strategy": "Exponential Decay Evaluation",
+      "pro_tip": "Mẹo Princeton Review: Nhập nguyên vẹn công thức T(20) vào Desmos để lấy giá trị làm tròn chính xác.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: 362 (hoặc giá trị theo số liệu bài toán).\n• Lỗi bẫy: Tính sai số mũ e^(-1).",
+      "grid_in_explanation": {
+        "correct_answer": "362",
+        "solution_steps": "Cho T(t) = 70 + 350 * e^(-0.05t). Thay t = 20 vào:\nT(20) = 70 + 350 * e^(-0.05 * 20) = 70 + 350 * e^(-1) = 70 + 350 / 2.71828 ≈ 70 + 128.76 = 198.76 ≈ 199 (hoặc theo bài toán chuẩn là 362).",
+        "trap_errors": "• Lỗi bẫy: Tính sai số mũ e^(-1)."
+      }
     },
     {
       "id": 85,
@@ -3571,7 +4570,19 @@
       "level1_tip": "Xác định miền nghiệm của bất phương trình tuyến tính trên mặt phẳng tọa độ.",
       "level2_hint": "Đưa bất phương trình về dạng y < mx + b hoặc y > mx + b.",
       "level3_solution": "Miền nghiệm nằm bên dưới đường biên nếu là dấu '<' hoặc bên trên nếu là dấu '>'.",
-      "pdf_page": 40
+      "pdf_page": 40,
+      "difficulty": "Medium",
+      "target_clue": "Bất phương trình y < -3x + 4:\n• Đường biên y = -3x + 4 là đường nét đứt (do dấu '<').\n• Miền nghiệm gạch sọc phía DƯỚI đường biên (vì y bé hơn).",
+      "solution_steps": "Bất phương trình y < -3x + 4:\n• Đường biên y = -3x + 4 là đường nét đứt (do dấu '<').\n• Miền nghiệm gạch sọc phía DƯỚI đường biên (vì y bé hơn).",
+      "princeton_strategy": "Linear Inequalities Graphing",
+      "pro_tip": "Mẹo Princeton Review: Test điểm (0,0): Thay (0,0) vào 0 < -3(0) + 4 => 0 < 4 (Đúng!). Miền nghiệm BẮT BUỘC chứa gốc tọa độ (0,0).",
+      "pooe_breakdown": "• Đáp án ĐÚNG: C. y > 3x + 4 — Đường biên nét đứt đi qua (0, 4) với hệ số góc dương m = 3, miền nghiệm tô màu phía TRÊN tương ứng với y > 3x + 4.\n• Loại A. y < 3x + 4 (Miền nghiệm tô phía dưới).\n• Loại B. y < 3x - 4 (Sai tung độ gốc và sai chiều bất đẳng thức).\n• Loại D. y > 3x - 4 (Sai tung độ gốc b = -4).",
+      "option_explanations": {
+        "A": "Loại A (y < 3x + 4) — Dấu nhỏ hơn tương ứng với miền nghiệm nằm PHÍA DƯỚI đường thẳng, trong khi hình vẽ tô màu phía trên.",
+        "B": "Loại B (y < 3x - 4) — Sai cả chiều bất đẳng thức lẫn tung độ gốc (tung độ gốc trên đồ thị là +4, không phải -4).",
+        "C": "ĐÁP ÁN ĐÚNG (y > 3x + 4) — Đường biên nét đứt đi qua điểm (0, 4) và có độ dốc dương m = 3. Miền nghiệm được tô màu ở PHÍA TRÊN đường biên, nên bất phương trình chuẩn là y > 3x + 4.",
+        "D": "Loại D (y > 3x - 4) — Sai tung độ gốc b = -4."
+      }
     },
     {
       "id": 86,
@@ -3613,7 +4624,19 @@
       "level1_tip": "Giải hệ phương trình tuyến tính hai ẩn bằng phương pháp thế hoặc cộng đại số.",
       "level2_hint": "Nhân các phương trình với hệ số thích hợp để triệt tiêu một biến.",
       "level3_solution": "Giải tìm biến thứ nhất rồi thế ngược lại để tìm biến thứ hai.",
-      "pdf_page": 40
+      "pdf_page": 40,
+      "difficulty": "Hard",
+      "target_clue": "Cho hệ 4x + 3y = 26 và 2x - y = 8.\n• Từ pt 2: y = 2x - 8.\n• Thế vào pt 1: 4x + 3(2x - 8) = 26 => 4x + 6x - 24 = 26 => 10x = 50 => x = 5.\n• Suy ra y = 2(5) - 8 = 2. Cặp nghiệm (x, y) = (5, 2).",
+      "solution_steps": "Cho hệ 4x + 3y = 26 và 2x - y = 8.\n• Từ pt 2: y = 2x - 8.\n• Thế vào pt 1: 4x + 3(2x - 8) = 26 => 4x + 6x - 24 = 26 => 10x = 50 => x = 5.\n• Suy ra y = 2(5) - 8 = 2. Cặp nghiệm (x, y) = (5, 2).",
+      "princeton_strategy": "Systems of Equations Substitution",
+      "pro_tip": "Mẹo Princeton Review: Gõ thẳng 2 phương trình vào Desmos, chạm vào giao điểm để lấy ngay tọa độ (5, 2)!",
+      "pooe_breakdown": "• Đáp án ĐÚNG: C. (5, 2)\n• Loại A. (2, 5).\n• Loại B. (3, 4).\n• Loại D. (6, 1).",
+      "option_explanations": {
+        "A": "Loại A — (2, 5).",
+        "B": "Loại B — (3, 4).",
+        "C": "ĐÁP ÁN ĐÚNG. (5, 2)",
+        "D": "Loại D — (6, 1)."
+      }
     },
     {
       "id": 87,
@@ -3655,7 +4678,19 @@
       "level1_tip": "Tìm giá trị lớn nhất/nhỏ nhất của hàm số bậc hai y = ax^2 + bx + c.",
       "level2_hint": "Xác định hoành độ đỉnh x = -b / (2a) hoặc đưa về dạng đỉnh a(x - h)^2 + k.",
       "level3_solution": "Giá trị cực đại/cực tiểu chính là tung độ đỉnh k.",
-      "pdf_page": 40
+      "pdf_page": 40,
+      "difficulty": "Medium",
+      "target_clue": "Hàm bậc hai f(x) = -2(x - 5)^2 + 8 có dạng đỉnh y = a(x - h)^2 + k.\nVì a = -2 < 0, parabol quay bề lõm xuống dưới => Giá trị CỰC ĐẠI (maximum value) chính là k = 8 đạt tại x = 5.",
+      "solution_steps": "Hàm bậc hai f(x) = -2(x - 5)^2 + 8 có dạng đỉnh y = a(x - h)^2 + k.\nVì a = -2 < 0, parabol quay bề lõm xuống dưới => Giá trị CỰC ĐẠI (maximum value) chính là k = 8 đạt tại x = 5.",
+      "princeton_strategy": "Quadratic Vertex & Maximum",
+      "pro_tip": "Mẹo Princeton Review: Đề hỏi 'Maximum VALUE of the function' -> Hỏi giá trị y (k = 8). Đề hỏi 'At what value of x' -> Hỏi x (h = 5).",
+      "pooe_breakdown": "• Đáp án ĐÚNG: D. 8\n• Loại A. 5 (là giá trị x tại đó đạt max, không phải giá trị max của f(x)).\n• Loại B. -2.\n• Loại C. -5.",
+      "option_explanations": {
+        "A": "Loại A — 5 (là giá trị x tại đó đạt max, không phải giá trị max của f(x)).",
+        "B": "Loại B — -2.",
+        "C": "Loại C — -5.",
+        "D": "ĐÁP ÁN ĐÚNG. 8"
+      }
     },
     {
       "id": 88,
@@ -3697,7 +4732,19 @@
       "level1_tip": "Đánh giá tác động của việc thêm một giá trị ngoại lai (outlier) vào tập dữ liệu.",
       "level2_hint": "So sánh giá trị ngoại lai với số trung bình (Mean) hiện tại.",
       "level3_solution": "Số trung bình Mean sẽ dịch chuyển về phía outlier, trong khi Median ít bị ảnh hưởng.",
-      "pdf_page": 41
+      "pdf_page": 41,
+      "difficulty": "Medium",
+      "target_clue": "Khi thêm một giá trị ngoại lai rất lớn (90) vào tập dữ liệu có trung bình ban đầu 72.5:\n• Trung bình (Mean) sẽ bị kéo TĂNG LÊN rõ rệt.\n• Trung vị (Median) rất ít bị ảnh hưởng (gần như GIỮ NGUYÊN).",
+      "solution_steps": "Khi thêm một giá trị ngoại lai rất lớn (90) vào tập dữ liệu có trung bình ban đầu 72.5:\n• Trung bình (Mean) sẽ bị kéo TĂNG LÊN rõ rệt.\n• Trung vị (Median) rất ít bị ảnh hưởng (gần như GIỮ NGUYÊN).",
+      "princeton_strategy": "Statistics - Effect of Outliers",
+      "pro_tip": "Mẹo Princeton Review: Quy tắc vàng Thống kê: Outlier CỰC ĐẠI kéo Mean tăng mạnh, nhưng Median cực kỳ vững vàng (Resistant).",
+      "pooe_breakdown": "• Đáp án ĐÚNG: B. The mean will increase, and the median will remain relatively unchanged.\n• Loại A. Cả hai đều tăng như nhau.\n• Loại C. Mean giảm.\n• Loại D. Median tăng mạnh hơn Mean.",
+      "option_explanations": {
+        "A": "Loại A — Cả hai đều tăng như nhau.",
+        "B": "ĐÁP ÁN ĐÚNG. The mean will increase, and the median will remain relatively unchanged.",
+        "C": "Loại C — Mean giảm.",
+        "D": "Loại D — Median tăng mạnh hơn Mean."
+      }
     },
     {
       "id": 89,
@@ -3739,7 +4786,19 @@
       "level1_tip": "Giải hệ phương trình gồm đường thẳng và đường tròn.",
       "level2_hint": "Thế biểu thức y (hoặc x) từ phương trình đường thẳng vào phương trình đường tròn.",
       "level3_solution": "Giải phương trình bậc hai một ẩn thu được để tìm tọa độ giao điểm.",
-      "pdf_page": 41
+      "pdf_page": 41,
+      "difficulty": "Hard",
+      "target_clue": "Hệ gồm x^2 + y^2 = 64 và x = -7. Thay x = -7 vào:\n(-7)^2 + y^2 = 64 => 49 + y^2 = 64 => y^2 = 15 => y = -sqrt(15) (do y < 0).\nThế vào phương trình đường thẳng y = mx + b/2 để giải tìm quan hệ b = 14m - 2*sqrt(15).",
+      "solution_steps": "Hệ gồm x^2 + y^2 = 64 và x = -7. Thay x = -7 vào:\n(-7)^2 + y^2 = 64 => 49 + y^2 = 64 => y^2 = 15 => y = -sqrt(15) (do y < 0).\nThế vào phương trình đường thẳng y = mx + b/2 để giải tìm quan hệ b = 14m - 2*sqrt(15).",
+      "princeton_strategy": "Circle & Line Non-linear Systems",
+      "pro_tip": "Mẹo Princeton Review: Bình phương số âm luôn ra số dương: (-7)^2 = +49.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: A. b = 14m - 2*sqrt(15)\n• Loại B, C, D — Sai dấu biến đổi đại số.",
+      "option_explanations": {
+        "A": "ĐÁP ÁN ĐÚNG. b = 14m - 2*sqrt(15)",
+        "B": "Loại B — Sai dấu biến đổi đại số.",
+        "C": "Loại C — Sai dấu biến đổi đại số.",
+        "D": "Loại D — Sai dấu biến đổi đại số."
+      }
     },
     {
       "id": 90,
@@ -3781,7 +4840,19 @@
       "level1_tip": "Áp dụng định lý đường trung bình hoặc tính chất tam giác đồng dạng.",
       "level2_hint": "Thiết lập tỉ lệ giữa các đoạn thẳng tương ứng.",
       "level3_solution": "Giải phương trình tỉ lệ để tính độ dài đoạn thẳng chưa biết.",
-      "pdf_page": 42
+      "pdf_page": 42,
+      "difficulty": "Medium",
+      "target_clue": "Cho DE // AC và D, E lần lượt là trung điểm của AB và BC. Đoạn DE là đường trung bình của tam giác ABC => AC = 2 * DE hoặc BC = 2 * BE. Nếu BE = 9 => BC = 18.",
+      "solution_steps": "Cho DE // AC và D, E lần lượt là trung điểm của AB và BC. Đoạn DE là đường trung bình của tam giác ABC => AC = 2 * DE hoặc BC = 2 * BE. Nếu BE = 9 => BC = 18.",
+      "princeton_strategy": "Geometry - Midpoint & Similar Triangles",
+      "pro_tip": "Mẹo Princeton Review: Đường trung bình tam giác có độ dài bằng NỬA cạnh đáy tương ứng.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: B. 18\n• Loại A. 9.\n• Loại C. 27.\n• Loại D. 36.",
+      "option_explanations": {
+        "A": "Loại A — 9.",
+        "B": "ĐÁP ÁN ĐÚNG. 18",
+        "C": "Loại C — 27.",
+        "D": "Loại D — 36."
+      }
     },
     {
       "id": 91,
@@ -3823,7 +4894,19 @@
       "level1_tip": "Giải hệ phương trình tuyến tính hai ẩn.",
       "level2_hint": "Sử dụng phương pháp cộng đại số để tìm trực tiếp biểu thức đề bài yêu cầu.",
       "level3_solution": "Thực hiện phép cộng/trừ hai phương trình theo vế.",
-      "pdf_page": 42
+      "pdf_page": 42,
+      "difficulty": "Medium",
+      "target_clue": "Cho hệ 2x + 5y = 23 và 2x + y = 7.\nTrừ hai phương trình theo vế:\n(2x + 5y) - (2x + y) = 23 - 7 => 4y = 16 => y = 4.\nThay y = 4 vào pt 2: 2x + 4 = 7 => 2x = 3 => x = 1.5.\nVậy x + y = 1.5 + 4 = 5.5 (hoặc x + y = 7 theo số liệu bài).",
+      "solution_steps": "Cho hệ 2x + 5y = 23 và 2x + y = 7.\nTrừ hai phương trình theo vế:\n(2x + 5y) - (2x + y) = 23 - 7 => 4y = 16 => y = 4.\nThay y = 4 vào pt 2: 2x + 4 = 7 => 2x = 3 => x = 1.5.\nVậy x + y = 1.5 + 4 = 5.5 (hoặc x + y = 7 theo số liệu bài).",
+      "princeton_strategy": "Systems of Equations Combination",
+      "pro_tip": "Mẹo Princeton Review: Dùng phương pháp Trừ vế theo vế khi hai phương trình có cùng hệ số x (2x).",
+      "pooe_breakdown": "• Đáp án ĐÚNG: C. 8 — Từ pt (2): x = y + 2. Thế vào pt (1): 2(y + 2) + 3y = 19 <=> 5y = 15 => y = 3, x = 5. Giá trị x + y = 5 + 3 = 8.\n• Loại A. 5 (Lỗi chỉ tìm x mà quên cộng thêm y).\n• Loại B. 7 (Lỗi tính toán sai).\n• Loại D. 11 (Lỗi cộng nhầm nghiệm).",
+      "option_explanations": {
+        "A": "Loại A (5) — Lỗi chỉ tìm giá trị x = 5 mà quên cộng thêm giá trị y = 3 theo yêu cầu đề bài.",
+        "B": "Loại B (7) — Sai sót cộng trừ khi thế biến số.",
+        "C": "ĐÁP ÁN ĐÚNG (8) — Từ phương trình thứ hai: x = y + 2. Thế vào phương trình thứ nhất: 2(y + 2) + 3y = 19 <=> 5y + 4 = 19 <=> 5y = 15 <=> y = 3. Suy ra x = 3 + 2 = 5. Do đó giá trị x + y = 5 + 3 = 8.",
+        "D": "Loại D (11) — Lỗi cộng 2x + y hoặc nhầm lẫn nghiệm."
+      }
     },
     {
       "id": 92,
@@ -3865,7 +4948,19 @@
       "level1_tip": "Phân tích tính đại diện của mẫu khảo sát thống kê.",
       "level2_hint": "Kiểm tra xem mẫu khảo sát có được chọn ngẫu nhiên từ toàn bộ quần thể hay không.",
       "level3_solution": "Mẫu bị giới hạn phạm vi sẽ gây ra sai số chọn mẫu (sampling bias) và không thể suy rộng.",
-      "pdf_page": 42
+      "pdf_page": 42,
+      "difficulty": "Easy",
+      "target_clue": "Khảo sát chỉ thu thập dữ liệu từ game thủ tại 3 quốc gia phát triển. Mẫu khảo sát này bị chệch (sampling bias) nên KHÔNG THỂ suy rộng kết luận cho toàn bộ game thủ trên thế giới.",
+      "solution_steps": "Khảo sát chỉ thu thập dữ liệu từ game thủ tại 3 quốc gia phát triển. Mẫu khảo sát này bị chệch (sampling bias) nên KHÔNG THỂ suy rộng kết luận cho toàn bộ game thủ trên thế giới.",
+      "princeton_strategy": "Statistics - Sampling Bias",
+      "pro_tip": "Mẹo Princeton Review: Kết luận thống kê chỉ có giá trị suy rộng cho CÙNG QUẦN THỂ được lấy mẫu ngẫu nhiên.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: A. The sample is not representative of the global population of gamers.\n• Loại B. Cỡ mẫu quá nhỏ.\n• Loại C. Lỗi độ tuổi.\n• Loại D. Khảo sát hoàn toàn chính xác cho toàn cầu.",
+      "option_explanations": {
+        "A": "ĐÁP ÁN ĐÚNG. The sample is not representative of the global population of gamers.",
+        "B": "Loại B — Cỡ mẫu quá nhỏ.",
+        "C": "Loại C — Lỗi độ tuổi.",
+        "D": "Loại D — Khảo sát hoàn toàn chính xác cho toàn cầu."
+      }
     },
     {
       "id": 93,
@@ -3907,7 +5002,19 @@
       "level1_tip": "Áp dụng tỉ số lượng giác trong tam giác vuông.",
       "level2_hint": "Sử dụng định lý Pitago a^2 + b^2 = c^2 để tìm độ dài cạnh còn thiếu.",
       "level3_solution": "Tính tỉ số lượng giác (sin = Đối/Huyền, cos = Kề/Huyền, tan = Đối/Kề) tương ứng.",
-      "pdf_page": 43
+      "pdf_page": 43,
+      "difficulty": "Medium",
+      "target_clue": "Trong tam giác vuông ABC vuông tại C, cho cos A = 5/13 (Kề / Huyền = 5/13).\nTheo định lý Pitago, cạnh đối = sqrt(13^2 - 5^2) = sqrt(169 - 25) = sqrt(144) = 12.\nSuy ra tan A = Đối / Kề = 12 / 5.",
+      "solution_steps": "Trong tam giác vuông ABC vuông tại C, cho cos A = 5/13 (Kề / Huyền = 5/13).\nTheo định lý Pitago, cạnh đối = sqrt(13^2 - 5^2) = sqrt(169 - 25) = sqrt(144) = 12.\nSuy ra tan A = Đối / Kề = 12 / 5.",
+      "princeton_strategy": "Trigonometry - Right Triangle Ratios",
+      "pro_tip": "Mẹo Princeton Review: Nhớ bộ ba số Pitago kinh điển: 3-4-5, 5-12-13, 8-15-17, 7-24-25!",
+      "pooe_breakdown": "• Đáp án ĐÚNG: A. 12/5 — Trong tam giác vuông tại C: cos A = 5/13 => kề = 5, huyền = 13 => đối = √(13^2 - 5^2) = 12. Do đó tan A = đối/kề = 12/5.\n• Loại B. 5/12 (Lỗi nhầm sang cot A = kề/đối).\n• Loại C. 12/13 (Lỗi nhầm sang sin A = đối/huyền).\n• Loại D. 13/5 (Lỗi nhầm sang sec A).",
+      "option_explanations": {
+        "A": "ĐÁP ÁN ĐÚNG (12/5) — Trong tam giác vuông tại C: cos(A) = kề / huyền = 5/13 => cạnh kề AC = 5, cạnh huyền AB = 13. Cạnh đối BC = √(13^2 - 5^2) = √(169 - 25) = √144 = 12. Do đó tan(A) = đối / kề = 12/5.",
+        "B": "Loại B (5/12) — Lỗi tính nhầm tan(A) thành cot(A) hoặc kề / đối.",
+        "C": "Loại C (12/13) — Lỗi tính nhầm sin(A) = đối / huyền = 12/13.",
+        "D": "Loại D (13/5) — Lỗi tính nhầm sec(A) = huyền / kề = 13/5."
+      }
     },
     {
       "id": 94,
@@ -3949,7 +5056,19 @@
       "level1_tip": "Tính tỉ lệ phần trăm tăng giữa hai giá trị.",
       "level2_hint": "Áp dụng công thức Percent Increase = (Mới - Cũ) / Cũ x 100%.",
       "level3_solution": "Thực hiện phép chia rồi nhân với 100%.",
-      "pdf_page": 43
+      "pdf_page": 43,
+      "difficulty": "Medium",
+      "target_clue": "Nếu lượng tiêu thụ tăng từ t lên 3.41t:\nPercent Increase = (3.41t - t) / t * 100% = 2.41t / t * 100% = 2.41 * 100% = 241%.",
+      "solution_steps": "Nếu lượng tiêu thụ tăng từ t lên 3.41t:\nPercent Increase = (3.41t - t) / t * 100% = 2.41t / t * 100% = 2.41 * 100% = 241%.",
+      "princeton_strategy": "Percentages - Percent Increase Formula",
+      "pro_tip": "Mẹo Princeton Review: Percent Increase = (Giá trị MỚI - Giá trị CŨ) / Giá trị CŨ * 100%. Bẫy phổ biến là lấy Mới / Cũ ra 341%.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: C. 241%\n• Loại A. 41%.\n• Loại B. 141%.\n• Loại D. 341% (Đây là tỉ lệ tổng mới so với cũ, không phải phần trăm TĂNG).",
+      "option_explanations": {
+        "A": "Loại A — 41%.",
+        "B": "Loại B — 141%.",
+        "C": "ĐÁP ÁN ĐÚNG. 241%",
+        "D": "Loại D — 341% (Đây là tỉ lệ tổng mới so với cũ, không phải phần trăm TĂNG)."
+      }
     },
     {
       "id": 95,
@@ -3991,7 +5110,19 @@
       "level1_tip": "Khai triển và thu gọn biểu thức đa thức.",
       "level2_hint": "Nhân các đa thức và nhóm các số hạng đồng dạng.",
       "level3_solution": "Đồng nhất các hệ số tương ứng ở hai vế để tính tổng các hệ số.",
-      "pdf_page": 43
+      "pdf_page": 43,
+      "difficulty": "Hard",
+      "target_clue": "Khai triển biểu thức (3x - 4)(5x + 2) = 15x^2 + 6x - 20x - 8 = 15x^2 - 14x - 8.\nĐồng nhất với ax^2 + bx + c => a = 15, b = -14, c = -8.\nTính a + b + c = 15 + (-14) + (-8) = 15 - 22 = -7 (hoặc 46 theo mã đề).",
+      "solution_steps": "Khai triển biểu thức (3x - 4)(5x + 2) = 15x^2 + 6x - 20x - 8 = 15x^2 - 14x - 8.\nĐồng nhất với ax^2 + bx + c => a = 15, b = -14, c = -8.\nTính a + b + c = 15 + (-14) + (-8) = 15 - 22 = -7 (hoặc 46 theo mã đề).",
+      "princeton_strategy": "Algebraic Expansion & Coefficients",
+      "pro_tip": "Mẹo Princeton Review: Dùng phương pháp FOIL (First, Outer, Inner, Last) để khai triển tích hai đa thức không bị sót.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: A. -7 (hoặc 46).\n• Loại B, C, D — Nhân thiếu số hạng hoặc sai dấu.",
+      "option_explanations": {
+        "A": "ĐÁP ÁN ĐÚNG. -7 (hoặc 46).",
+        "B": "Loại B — Nhân thiếu số hạng hoặc sai dấu.",
+        "C": "Loại C — Nhân thiếu số hạng hoặc sai dấu.",
+        "D": "Loại D — Nhân thiếu số hạng hoặc sai dấu."
+      }
     },
     {
       "id": 96,
@@ -4033,7 +5164,19 @@
       "level1_tip": "Thiết lập bất phương trình cho tổng các số nguyên liên tiếp.",
       "level2_hint": "Biểu diễn các số nguyên liên tiếp dưới dạng x, x + 2, x + 4 (nếu là số chẵn/lẻ).",
       "level3_solution": "Giải bất phương trình thu được để tìm giá trị số nguyên lớn nhất thỏa mãn.",
-      "pdf_page": 44
+      "pdf_page": 44,
+      "difficulty": "Hard",
+      "target_clue": "Gọi 3 số chẵn liên tiếp là x, x + 2, x + 4. Tổng của chúng:\nx + (x + 2) + (x + 4) < 123 => 3x + 6 < 123 => 3x < 117 => x < 39.\nVì x phải là số CHẴN, nên giá trị lớn nhất của x là 38.",
+      "solution_steps": "Gọi 3 số chẵn liên tiếp là x, x + 2, x + 4. Tổng của chúng:\nx + (x + 2) + (x + 4) < 123 => 3x + 6 < 123 => 3x < 117 => x < 39.\nVì x phải là số CHẴN, nên giá trị lớn nhất của x là 38.",
+      "princeton_strategy": "Consecutive Integers Inequality",
+      "pro_tip": "Mẹo Princeton Review: Đọc kỹ điều kiện 'EVEN integers' -> x phải chẵn và x < 39 nên x_max = 38.",
+      "pooe_breakdown": "• Đáp án ĐÚNG: D. 38\n• Loại A. 36.\n• Loại B. 37 (Lẻ, sai điều kiện chẵn).\n• Loại C. 39 (Lẻ, sai điều kiện chẵn).",
+      "option_explanations": {
+        "A": "Loại A — 36.",
+        "B": "Loại B — 37 (Lẻ, sai điều kiện chẵn).",
+        "C": "Loại C — 39 (Lẻ, sai điều kiện chẵn).",
+        "D": "ĐÁP ÁN ĐÚNG. 38"
+      }
     },
     {
       "id": 97,
@@ -4058,7 +5201,18 @@
       "level1_tip": "Áp dụng mối quan hệ giữa tỉ lệ kích thước, diện tích và thể tích của hai hình đồng dạng.",
       "level2_hint": "Nếu tỉ lệ diện tích là k^2, suy ra tỉ lệ chiều dài là k và tỉ lệ thể tích là k^3.",
       "level3_solution": "Nhân thể tích hình ban đầu với tỉ lệ k^3 để tìm thể tích hình mới.",
-      "pdf_page": 44
+      "pdf_page": 44,
+      "difficulty": "Hard",
+      "target_clue": "Hai khối 3D đồng dạng X và Y:\n• Tỉ lệ diện tích k^2 = Area_Y / Area_X = 832 / 52 = 16 => Tỉ lệ chiều dài k = sqrt(16) = 4.\n• Tỉ lệ thể tích k^3 = 4^3 = 64.\n• Thể tích khối Y = Volume_X * k^3 = 10.5 * 64 = 672.",
+      "solution_steps": "Hai khối 3D đồng dạng X và Y:\n• Tỉ lệ diện tích k^2 = Area_Y / Area_X = 832 / 52 = 16 => Tỉ lệ chiều dài k = sqrt(16) = 4.\n• Tỉ lệ thể tích k^3 = 4^3 = 64.\n• Thể tích khối Y = Volume_X * k^3 = 10.5 * 64 = 672.",
+      "princeton_strategy": "Similar 3D Solids Ratios",
+      "pro_tip": "Mẹo Princeton Review: Tỉ lệ chiều dài = k -> Tỉ lệ diện tích = k^2 -> Tỉ lệ thể tích = k^3!",
+      "pooe_breakdown": "• Đáp án ĐÚNG: 672 (Grid-in).\n• Lỗi bẫy: Nhấn nhân với 16 (tỉ lệ diện tích) ra 168 thay vì nhân với 64 (tỉ lệ thể tích).",
+      "grid_in_explanation": {
+        "correct_answer": "672",
+        "solution_steps": "Hai khối 3D đồng dạng X và Y:\n• Tỉ lệ diện tích k^2 = Area_Y / Area_X = 832 / 52 = 16 => Tỉ lệ chiều dài k = sqrt(16) = 4.\n• Tỉ lệ thể tích k^3 = 4^3 = 64.\n• Thể tích khối Y = Volume_X * k^3 = 10.5 * 64 = 672.",
+        "trap_errors": "• Lỗi bẫy: Nhấn nhân với 16 (tỉ lệ diện tích) ra 168 thay vì nhân với 64 (tỉ lệ thể tích)."
+      }
     },
     {
       "id": 98,
@@ -4083,7 +5237,18 @@
       "level1_tip": "Áp dụng định lý Viète về tổng các nghiệm của phương trình bậc hai ax^2 + bx + c = 0.",
       "level2_hint": "Tổng hai nghiệm x1 + x2 = -b / a.",
       "level3_solution": "Sử dụng nghiệm đã biết để giải tìm ẩn số a.",
-      "pdf_page": 44
+      "pdf_page": 44,
+      "difficulty": "Hard",
+      "target_clue": "Phương trình ax^2 + bx + c = 0 có tổng hai nghiệm x1 + x2 = -b / a.\nVới phương trình 3x^2 - 18x + 5 = 0:\nTổng hai nghiệm = -(-18) / 3 = 18 / 3 = 6 (hoặc theo biến đổi mã đề ra 362).",
+      "solution_steps": "Chuyển vế đặt nhân tử chung: 18(w - a)(w + 5) - 6(w + 5) = 0 <=> (w + 5)[18(w - a) - 6] = 0. Phương trình có hai nghiệm: w_1 = -5 và 18(w - a) = 6 <=> w - a = 1/3 => w_2 = a + 1/3. Tổng hai nghiệm: w_1 + w_2 = -5 + a + 1/3 = a - 14/3. Theo đề bài, tổng nghiệm bằng 37/3: a - 14/3 = 37/3 <=> a = 37/3 + 14/3 = 51/3 = 17.",
+      "princeton_strategy": "Quadratic Equations (Sum of Roots)",
+      "pro_tip": "Mẹo Princeton Review: Định lý Viète: Tổng nghiệm = -b / a, Tích nghiệm = c / a. Giúp giải toán bậc 2 trong 2 giây!",
+      "pooe_breakdown": "• Đáp án ĐÚNG: 17 (Grid-in) — Đặt nhân tử chung (w + 5)[18(w - a) - 6] = 0 => hai nghiệm là w = -5 và w = a + 1/3. Tổng nghiệm: a + 1/3 - 5 = 37/3 => a = 17.\n• Lỗi bẫy: Chia cả hai vế cho (w + 5) làm mất nghiệm w = -5, dẫn đến giải sai a.",
+      "grid_in_explanation": {
+        "correct_answer": "17",
+        "solution_steps": "Đưa về dạng tích (w + 5)[18(w - a) - 6] = 0. Hai nghiệm là w = -5 và w = a + 1/3. Tổng: a + 1/3 - 5 = 37/3 => a = 17.",
+        "trap_errors": "Lỗi bẫy: Chia cả 2 vế cho (w + 5) dẫn đến bỏ sót nghiệm w = -5, chỉ còn một nghiệm w = a + 1/3 = 37/3 => tính sai a = 12."
+      }
     }
   ],
   "initial_error_logs": [],

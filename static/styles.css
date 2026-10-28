@@ -703,9 +703,10 @@ body {
 
 .option-row {
   display: flex;
-  align-items: center;
-  gap: 16px;
-  padding: 14px 20px;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+  padding: 14px 18px;
   background: #ffffff;
   border: 1.5px solid #e2e8f0;
   border-radius: 14px;
@@ -716,7 +717,7 @@ body {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
 }
 
-.option-row:hover:not(.eliminated) {
+.option-row:hover:not(.eliminated):not(.correct):not(.wrong) {
   border-color: #3b82f6;
   background: #fbfcfe;
   transform: translateY(-2px);
@@ -734,12 +735,14 @@ body {
   border-color: #10b981;
   background: #ecfdf5;
   box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15);
+  cursor: default;
 }
 
 .option-row.wrong {
   border-color: #ef4444;
   background: #fef2f2;
   box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.12);
+  cursor: default;
 }
 
 .option-row.eliminated {
@@ -747,6 +750,13 @@ body {
   text-decoration: line-through;
   background: #f8fafc;
   border-color: #cbd5e1;
+}
+
+.option-header-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
 }
 
 .option-bubble {
@@ -793,6 +803,141 @@ body {
   line-height: 1.55;
   color: #1e293b;
   font-weight: 500;
+}
+
+/* Option Breakdown Explanation Callouts */
+.option-explanation-card {
+  margin-top: 10px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 13.5px;
+  line-height: 1.55;
+  animation: fadeInExp 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  border-left: 4px solid;
+}
+
+@keyframes fadeInExp {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.option-explanation-card.exp-correct {
+  background: #ffffff;
+  border-color: #10b981;
+  border-top: 1px solid #bbf7d0;
+  border-right: 1px solid #bbf7d0;
+  border-bottom: 1px solid #bbf7d0;
+  box-shadow: 0 2px 6px rgba(16, 185, 129, 0.08);
+}
+
+.option-explanation-card.exp-wrong {
+  background: #ffffff;
+  border-color: #f43f5e;
+  border-top: 1px solid #fecdd3;
+  border-right: 1px solid #fecdd3;
+  border-bottom: 1px solid #fecdd3;
+  box-shadow: 0 2px 6px rgba(244, 63, 94, 0.06);
+}
+
+.exp-badge-line {
+  margin-bottom: 6px;
+}
+
+.exp-badge-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 2.5px 8px;
+  border-radius: 6px;
+  text-transform: uppercase;
+}
+
+.exp-badge-tag.tag-correct {
+  background: #15803d;
+  color: #ffffff;
+}
+
+.exp-badge-tag.tag-wrong {
+  background: #be123c;
+  color: #ffffff;
+}
+
+.exp-text-content {
+  font-size: 13.5px;
+  color: #1e293b;
+  font-weight: 450;
+  line-height: 1.55;
+  white-space: pre-line;
+}
+
+/* Grid-in Solution Card */
+.gridin-solution-card {
+  margin-top: 16px;
+  padding: 16px;
+  border-radius: 12px;
+  background: #ffffff;
+  border: 1.5px solid #cbd5e1;
+  animation: fadeInExp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.gridin-badge-line {
+  margin-bottom: 12px;
+}
+
+.gridin-correct-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #ecfdf5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.gridin-section {
+  margin-top: 10px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+.gridin-sec-header {
+  font-size: 12px;
+  font-weight: 750;
+  color: #0f766e;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  letter-spacing: 0.03em;
+}
+
+.gridin-sec-header.trap-header {
+  color: #b91c1c;
+}
+
+.gridin-sec-body {
+  font-size: 13.5px;
+  color: #1e293b;
+  line-height: 1.6;
+  white-space: pre-line;
+}
+
+.gridin-section.gridin-trap {
+  background: #fff5f5;
+  border-color: #fecdd3;
 }
 
 /* Strikethrough Eliminate Action Button */
