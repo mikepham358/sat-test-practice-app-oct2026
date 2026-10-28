@@ -95,5 +95,17 @@
     "content": "It's improving!",
     "status": "✅ Đã tiếp nhận & Cập nhật",
     "github_issue_url": "https://github.com/mikepham358/sat-test-practice-app-oct2026/issues/1"
+  },
+  {
+    "id": "FB-20261028-408",
+    "student_name": "Theo",
+    "student_email": "theo92@gmail.com",
+    "category": "📝 Góp ý chung & Đánh giá",
+    "priority": "🟢 Bình thường",
+    "context_label": "Trang chủ / Hệ thống chung",
+    "date_str": "11:35:43 28/10/2026",
+    "content": "Hi, It's good",
+    "status": "✅ Đã tiếp nhận & Cập nhật",
+    "github_issue_url": "https://github.com/mikepham358/sat-test-practice-app-oct2026/issues/3"
   }
 ]
