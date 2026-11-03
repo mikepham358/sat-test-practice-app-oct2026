@@ -10,7 +10,7 @@ APP_DIR = os.path.dirname(os.path.abspath(__file__))
 FEEDBACK_FILE = os.path.join(APP_DIR, "feedback.json")
 STATIC_FEEDBACK_FILE = os.path.join(APP_DIR, "static", "feedback.json")
 FEEDBACK_LOG_MD = os.path.join(APP_DIR, "FEEDBACK_LOG.md")
-REPO = "mikepham358/sat-test-practice-app-oct2026"
+REPO = "mikepham358/vinschool-sat-team"
 
 def fetch_github_issues():
     url = f"https://api.github.com/repos/{REPO}/issues?state=all"

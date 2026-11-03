@@ -2911,7 +2911,7 @@ Em cảm ơn Thầy!`
 `---\n### 📝 Nội dung phản hồi:\n${rawPayload.content}\n\n` +
 `*(Gửi từ Digital SAT Bluebook Practice App)*\n\ncc: @mikepham358`
       );
-      const ghIssueUrl = `https://github.com/mikepham358/sat-test-practice-app-oct2026/issues/new?title=${ghIssueTitle}&body=${ghIssueBody}&assignees=mikepham358&labels=student-feedback`;
+      const ghIssueUrl = `https://github.com/mikepham358/vinschool-sat-team/issues/new?title=${ghIssueTitle}&body=${ghIssueBody}&assignees=mikepham358&labels=student-feedback`;
 
       // On GitHub Pages: auto open GitHub Issue tab so user doesn't miss posting to GitHub
       if (!isServerSynced) {

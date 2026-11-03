@@ -74,5 +74,5 @@ git commit -m "feat: add Digital SAT Real Test November 2026 to exam bank"
 git push origin main
 ```
 
-Trang web `https://mikepham358.github.io/sat-test-practice-app-oct2026/` sẽ tự động cập nhật ngay lập tức. Học sinh có thể chọn đề mới từ menu dropdown hoặc thẻ đề thi trên trang chủ, hoặc truy cập trực tiếp bằng đường link:
-`https://mikepham358.github.io/sat-test-practice-app-oct2026/?test=nov2026`
+Trang web `https://mikepham358.github.io/vinschool-sat-team/` sẽ tự động cập nhật ngay lập tức. Học sinh có thể chọn đề mới từ menu dropdown hoặc thẻ đề thi trên trang chủ, hoặc truy cập trực tiếp bằng đường link:
+`https://mikepham358.github.io/vinschool-sat-team/?test=nov2026`

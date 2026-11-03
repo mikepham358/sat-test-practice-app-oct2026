@@ -91,7 +91,7 @@ def save_feedbacks_and_update_log(feedbacks):
 
 > **Dự án:** Digital SAT Practice Based on Learning Science — Vinschool SAT Team  
 > **Giáo viên phụ trách:** Mike Pham Bá Hong Son (Google for Education Innovator) — `mikepham358@gmail.com`  
-> **Trang làm bài trực tuyến:** [https://mikepham358.github.io/sat-test-practice-app-oct2026/](https://mikepham358.github.io/sat-test-practice-app-oct2026/)  
+> **Trang làm bài trực tuyến:** [https://mikepham358.github.io/vinschool-sat-team/](https://mikepham358.github.io/vinschool-sat-team/)  
 > **Cập nhật tự động lần cuối:** `{now_str}`  
 > **Mô tả:** Mọi phản hồi từ học sinh và giáo viên gửi qua nút **`💬 Góp ý & Báo lỗi`** thông minh trên ứng dụng sẽ được tự động lưu trữ và đồng bộ tức thời lên kho mã nguồn GitHub này.
 
@@ -630,7 +630,7 @@ class BluebookAppHandler(BaseHTTPRequestHandler):
                 "success": True,
                 "item": fb_item,
                 "message": f"Phản hồi [{fb_id}] đã được ghi nhận và đang tự động cập nhật vào GitHub!",
-                "github_url": "https://github.com/mikepham358/sat-test-practice-app-oct2026/blob/main/FEEDBACK_LOG.md"
+                "github_url": "https://github.com/mikepham358/vinschool-sat-team/blob/main/FEEDBACK_LOG.md"
             })
         except Exception as e:
             self.send_json({"success": False, "error": f"Lỗi khi xử lý phản hồi: {str(e)}"}, 500)

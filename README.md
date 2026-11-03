@@ -10,7 +10,7 @@
 > 
 > 📚 **Nguồn tài liệu tham khảo & câu hỏi:** Dữ liệu đề thi và câu hỏi được tổng hợp và tham khảo từ [hocsat.com](https://hocsat.com/).
 > 
-> 🔗 **Website chính thức:** [https://mikepham358.github.io/sat-test-practice-app-oct2026/](https://mikepham358.github.io/sat-test-practice-app-oct2026/)
+> 🔗 **Website chính thức:** [https://mikepham358.github.io/vinschool-sat-team/](https://mikepham358.github.io/vinschool-sat-team/)
 
 ---
 
@@ -22,8 +22,8 @@
   - 🗓️ **Real Test Tháng 10/2026 (INT-B):** 98 câu hỏi chuẩn hóa kèm giải thích 4 tầng Socratic, PDF Drive Viewer ID `1Qiu34_dltehpEVmfHvOivjAvf8Zkd77b`.
   - 🗓️ **Real Test Tháng 09/2026 (INT-A):** 98 câu hỏi chuẩn hóa kèm giải thích 4 tầng Socratic, PDF Drive Viewer ID `1dt6Up_Tz-B_h48JVLeIPF8vMwWWPxVSL`.
 - **Hỗ trợ truy cập trực tiếp bằng URL:** 
-  - Đề Tháng 09/2026: `https://mikepham358.github.io/sat-test-practice-app-oct2026/?test=sep2026`
-  - Đề Tháng 10/2026: `https://mikepham358.github.io/sat-test-practice-app-oct2026/?test=oct2026`
+  - Đề Tháng 09/2026: `https://mikepham358.github.io/vinschool-sat-team/?test=sep2026`
+  - Đề Tháng 10/2026: `https://mikepham358.github.io/vinschool-sat-team/?test=oct2026`
 - **Cô lập dữ liệu 100% (Device & Test Isolation):** Kết quả bài làm, tiến độ, đồng hồ và Sổ Lỗi Phản Tư của từng đề thi được lưu riêng biệt trong `localStorage` của trình duyệt cá nhân. Chuyển đổi giữa các đề không làm mất hay ghi đè tiến độ của nhau.
 - **Quy trình thêm đề thi mới định kỳ:** Hỗ trợ lệnh tự động `python3 add_new_test.py` chỉ trong 1 bước (xem chi tiết tại `INSTRUCTIONS_ADD_NEW_TEST.md`).
 
@@ -104,10 +104,10 @@ Mở Terminal (trên macOS/Linux) hoặc Command Prompt / PowerShell (trên Wind
 
 ```bash
 # Clone dự án từ GitHub
-git clone https://github.com/mikepham358/sat-test-practice-app-oct2026.git
+git clone https://github.com/mikepham358/vinschool-sat-team.git
 
 # Di chuyển vào thư mục dự án
-cd sat-test-practice-app-oct2026
+cd vinschool-sat-team
 ```
 
 *(Hoặc bấm vào nút **Code** màu xanh ở đầu trang GitHub $\rightarrow$ chọn **Download ZIP**, sau đó giải nén ra thư mục trên máy tính).*
@@ -186,7 +186,7 @@ Mở file `email_config.json` để thay đổi địa chỉ email của Thầy/
 ## 📁 Cấu Trúc Mã Nguồn
 
 ```text
-sat-test-practice-app-oct2026/
+vinschool-sat-team/
 ├── .gitignore            # Loại trừ file nhị phân nặng, file rác và bài làm học sinh
 ├── LICENSE               # Giấy phép MIT License và Điều khoản giáo dục
 ├── start.sh              # Script 1-click chạy máy chủ cục bộ (macOS/Linux)
