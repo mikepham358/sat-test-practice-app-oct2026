@@ -1,15 +1,74 @@
 /**
- * Digital SAT Practice Based on Learning Science — October 2026 (INT-B)
+ * Digital SAT Practice Based on Learning Science
  * Designed by Mike Pham Bá Hong Son - Google for Education Innovator
  * 100% Client-Side LocalStorage Isolation for Independent Student Practice
+ * Multi-Exam Architecture with Dynamic Switching & Drive Sync
  */
 
-const STORAGE_KEY = "bluebook_oct2026_student_state_v1";
-const DRIVE_PREVIEW_URL = "https://drive.google.com/file/d/1Qiu34_dltehpEVmfHvOivjAvf8Zkd77b/preview";
-const DRIVE_VIEW_URL = "https://drive.google.com/file/d/1Qiu34_dltehpEVmfHvOivjAvf8Zkd77b/view?usp=drive_link";
+const GLOBAL_PROFILE_KEY = "bluebook_global_student_profile_v1";
+const LEGACY_STORAGE_KEY = "bluebook_oct2026_student_state_v1";
+
+const TESTS_MANIFEST_DEFAULT = [
+  {
+    id: "oct-2026",
+    code: "oct2026",
+    title: "Digital SAT Practice Test — October 2026 (INT-B)",
+    short_title: "Tháng 10/2026 (INT-B)",
+    badge: "Mới nhất",
+    date: "2026-10",
+    dataFile: "data/oct2026.json",
+    pdfDriveId: "1Qiu34_dltehpEVmfHvOivjAvf8Zkd77b",
+    pdfPreviewUrl: "https://drive.google.com/file/d/1Qiu34_dltehpEVmfHvOivjAvf8Zkd77b/preview",
+    pdfViewUrl: "https://drive.google.com/file/d/1Qiu34_dltehpEVmfHvOivjAvf8Zkd77b/view?usp=drive_link",
+    poster: "poster.png",
+    total_questions: 98,
+    storageKey: "bluebook_oct2026_student_state_v1",
+    description: "Đề thi Real Test Digital SAT quốc tế tháng 10/2026 kèm giải thích chi tiết 4 tầng Socratic."
+  },
+  {
+    id: "sep-2026",
+    code: "sep2026",
+    title: "Digital SAT Practice Test — September 2026 (INT-A)",
+    short_title: "Tháng 09/2026 (INT-A)",
+    badge: "Chính thức",
+    date: "2026-09",
+    dataFile: "data/sep2026.json",
+    pdfDriveId: "1dt6Up_Tz-B_h48JVLeIPF8vMwWWPxVSL",
+    pdfPreviewUrl: "https://drive.google.com/file/d/1dt6Up_Tz-B_h48JVLeIPF8vMwWWPxVSL/preview",
+    pdfViewUrl: "https://drive.google.com/file/d/1dt6Up_Tz-B_h48JVLeIPF8vMwWWPxVSL/view",
+    poster: "poster_sep.png",
+    total_questions: 98,
+    storageKey: "bluebook_sep2026_student_state_v1",
+    description: "Đề thi Real Test Digital SAT quốc tế tháng 09/2026 kèm giải thích chi tiết 4 tầng Socratic."
+  }
+];
+
+// Determine initial test ID from URL params or local preference
+function detectInitialTestId() {
+  try {
+    const urlParams = new URLSearchParams(window.location.search);
+    const paramTest = urlParams.get("test");
+    if (paramTest) {
+      const clean = paramTest.toLowerCase().replace(/[^a-z0-9]/g, "");
+      if (clean.includes("sep")) return "sep-2026";
+      if (clean.includes("oct")) return "oct-2026";
+      return paramTest;
+    }
+    const hash = window.location.hash || "";
+    if (hash.includes("sep")) return "sep-2026";
+    if (hash.includes("oct")) return "oct-2026";
+
+    const saved = localStorage.getItem("bluebook_selected_test_id");
+    if (saved) return saved;
+  } catch (e) {}
+  return "oct-2026";
+}
 
 // Application State
 const App = {
+  testsManifest: (window.TESTS_MANIFEST && window.TESTS_MANIFEST.length) ? window.TESTS_MANIFEST : TESTS_MANIFEST_DEFAULT,
+  activeTestId: detectInitialTestId(),
+  activeTest: null,
   db: null,
   activeModuleCode: "RW_Module1",
   questions: [],
@@ -27,6 +86,7 @@ const App = {
   editingLogId: null,
   feedbacks: [],
   currentFeedbackContext: null,
+  lastMailtoUrl: null,
 
   // Student Personal State (Loaded from localStorage)
   studentState: {
@@ -47,11 +107,38 @@ const App = {
   }
 };
 
+function getActiveTestMeta() {
+  const match = (App.testsManifest || []).find(t => t.id === App.activeTestId || t.code === App.activeTestId);
+  return match || App.testsManifest[0] || TESTS_MANIFEST_DEFAULT[0];
+}
+
+function getStorageKeyForTest(testId) {
+  const meta = (App.testsManifest || []).find(t => t.id === testId || t.code === testId);
+  if (meta && meta.storageKey) return meta.storageKey;
+  return `bluebook_${testId}_student_state_v1`;
+}
+
 // DOM Cache
 const DOM = {
   // Views
   viewHome: document.getElementById("view-home"),
   viewPractice: document.getElementById("view-practice"),
+
+  // Multi-Exam Switcher Elements
+  selectActiveExam: document.getElementById("select-active-exam"),
+  selectPracticeExam: document.getElementById("select-practice-exam"),
+  homeBrandBadge: document.getElementById("home-brand-badge"),
+  heroMainTitle: document.getElementById("hero-main-title"),
+  heroTitleGradient: document.getElementById("hero-title-gradient"),
+  heroMainDesc: document.getElementById("hero-main-desc"),
+  heroPosterImg: document.getElementById("hero-poster-img"),
+  btnHeroDrivePdf: document.getElementById("btn-hero-drive-pdf"),
+  examsGrid: document.getElementById("exams-grid"),
+  practiceTestBadge: document.getElementById("practice-test-badge"),
+  pageModRw1: document.getElementById("page-mod-rw1"),
+  pageModRw2: document.getElementById("page-mod-rw2"),
+  pageModMath1: document.getElementById("page-mod-math1"),
+  pageModMath2: document.getElementById("page-mod-math2"),
 
   // Home Page Elements
   btnHeroEnterTest: document.getElementById("btn-hero-enter-test"),
@@ -282,23 +369,61 @@ const DOM = {
   fbHistoryList: document.getElementById("fb-history-list")
 };
 
-// ================= LOCALSTORAGE MANAGER =================
+// ================= LOCALSTORAGE MANAGER (MULTI-TEST & GLOBAL PROFILE) =================
 function loadLocalState() {
   try {
-    const raw = localStorage.getItem(STORAGE_KEY);
-    if (raw) {
-      const parsed = JSON.parse(raw);
-      App.studentState = { ...App.studentState, ...parsed };
-      if (!App.studentState.attempts) App.studentState.attempts = {};
+    // 1. Load Global Student Profile (Shared across tests)
+    let globalProfile = null;
+    const rawProfile = localStorage.getItem(GLOBAL_PROFILE_KEY);
+    if (rawProfile) {
+      globalProfile = JSON.parse(rawProfile);
+    } else {
+      // Legacy fallback
+      const legacyRaw = localStorage.getItem(LEGACY_STORAGE_KEY);
+      if (legacyRaw) {
+        const parsed = JSON.parse(legacyRaw);
+        globalProfile = {
+          student_name: parsed.student_name || "",
+          student_email: parsed.student_email || "",
+          student_target: parsed.student_target || "1400+",
+          selected_test_id: "oct-2026"
+        };
+        localStorage.setItem(GLOBAL_PROFILE_KEY, JSON.stringify(globalProfile));
+      }
+    }
+
+    if (globalProfile) {
+      App.studentState.student_name = globalProfile.student_name || "";
+      App.studentState.student_email = globalProfile.student_email || "";
+      App.studentState.student_target = globalProfile.student_target || "1400+";
+    }
+
+    // 2. Load Scoped Test Progress
+    const testKey = getStorageKeyForTest(App.activeTestId);
+    let testRaw = localStorage.getItem(testKey);
+
+    // Fallback for oct-2026 to legacy key
+    if (!testRaw && (App.activeTestId === "oct-2026" || App.activeTestId === "oct2026")) {
+      testRaw = localStorage.getItem(LEGACY_STORAGE_KEY);
+    }
+
+    if (testRaw) {
+      const parsedTest = JSON.parse(testRaw);
+      App.studentState.attempts = parsedTest.attempts || {};
+      App.studentState.active_module = parsedTest.active_module || "RW_Module1";
+      App.studentState.active_q_index = parsedTest.active_q_index || 0;
+      App.activeModuleCode = App.studentState.active_module;
 
       // Purge any legacy default/seeded error logs
-      if (App.studentState.error_logs) {
-        App.studentState.error_logs = App.studentState.error_logs.filter(e => e && e.id && !e.id.startsWith("err_oct_"));
+      if (parsedTest.error_logs) {
+        App.studentState.error_logs = parsedTest.error_logs.filter(e => e && e.id && !e.id.startsWith("err_oct_"));
       } else {
         App.studentState.error_logs = [];
       }
 
-      if (!App.studentState.timer_seconds) {
+      if (parsedTest.timer_seconds) {
+        App.studentState.timer_seconds = parsedTest.timer_seconds;
+      } else {
         App.studentState.timer_seconds = {
           "RW_Module1": 32 * 60,
           "RW_Module2": 32 * 60,
@@ -308,23 +433,59 @@ function loadLocalState() {
         };
       }
     } else {
+      App.studentState.attempts = {};
       App.studentState.error_logs = [];
+      App.studentState.timer_seconds = {
+        "RW_Module1": 32 * 60,
+        "RW_Module2": 32 * 60,
+        "Math_Module1": 35 * 60,
+        "Math_Module2": 35 * 60,
+        "ALL": 134 * 60
+      };
     }
   } catch (e) {
     console.warn("Could not load from localStorage:", e);
+    App.studentState.attempts = {};
     App.studentState.error_logs = [];
   }
 
-  // Restore student name & email
+  // Restore student profile UI
   if (App.studentState.student_name) {
-    if (DOM.inputStudentName) DOM.inputStudentName.value = App.studentState.student_name;
+    if (DOM.homeInputName) DOM.homeInputName.value = App.studentState.student_name;
     if (DOM.headerStudentName) DOM.headerStudentName.textContent = App.studentState.student_name;
+  }
+  if (App.studentState.student_email && DOM.homeInputEmail) {
+    DOM.homeInputEmail.value = App.studentState.student_email;
   }
 }
 
 function saveLocalState() {
   try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(App.studentState));
+    // 1. Save Global Student Profile
+    const profile = {
+      student_name: App.studentState.student_name || "",
+      student_email: App.studentState.student_email || "",
+      student_target: App.studentState.student_target || "1400+",
+      selected_test_id: App.activeTestId
+    };
+    localStorage.setItem(GLOBAL_PROFILE_KEY, JSON.stringify(profile));
+    localStorage.setItem("bluebook_selected_test_id", App.activeTestId);
+
+    // 2. Save Test-Specific State
+    const testState = {
+      active_module: App.activeModuleCode || "RW_Module1",
+      active_q_index: App.currentIndex || 0,
+      attempts: App.studentState.attempts || {},
+      error_logs: App.studentState.error_logs || [],
+      timer_seconds: App.studentState.timer_seconds || {}
+    };
+    const testKey = getStorageKeyForTest(App.activeTestId);
+    localStorage.setItem(testKey, JSON.stringify(testState));
+
+    // Backward compatibility mirror for oct-2026
+    if (App.activeTestId === "oct-2026" || App.activeTestId === "oct2026") {
+      localStorage.setItem(LEGACY_STORAGE_KEY, JSON.stringify(App.studentState));
+    }
   } catch (e) {
     console.warn("Could not save to localStorage:", e);
   }
@@ -498,19 +659,43 @@ document.addEventListener("DOMContentLoaded", async () => {
   showView("home");
 });
 
-async function fetchDatabase() {
+// ================= MULTI-EXAM CONTROLLER & DATA LOADER =================
+async function fetchDatabase(targetTestId = null) {
   try {
+    if (targetTestId) {
+      App.activeTestId = targetTestId;
+    }
+    App.activeTest = getActiveTestMeta();
+
     let data = null;
-    // 1. Try local/relative database.json (Works seamlessly on GitHub Pages & static hosting)
+    const targetFile = App.activeTest.dataFile || "database.json";
+
+    // 1. Try local dataFile (e.g. data/sep2026.json, data/oct2026.json)
     try {
-      const res = await fetch("database.json");
+      const res = await fetch(targetFile);
       if (res.ok) data = await res.json();
     } catch (err) {}
 
-    // 2. Fallback to /api/data endpoint if running via Python server
+    // 2. Try static/data path if running in some subpaths
     if (!data) {
       try {
-        const res = await fetch("/api/data");
+        const res = await fetch(`data/${App.activeTest.code}.json`);
+        if (res.ok) data = await res.json();
+      } catch (err) {}
+    }
+
+    // 3. Fallback to /api/data?test= if running via Python server
+    if (!data) {
+      try {
+        const res = await fetch(`/api/data?test=${App.activeTest.code}`);
+        if (res.ok) data = await res.json();
+      } catch (err) {}
+    }
+
+    // 4. Ultimate fallback to root database.json
+    if (!data) {
+      try {
+        const res = await fetch("database.json");
         if (res.ok) data = await res.json();
       } catch (err) {}
     }
@@ -518,12 +703,213 @@ async function fetchDatabase() {
     if (data) {
       App.db = data;
     }
+
     if (!App.studentState.error_logs) {
       App.studentState.error_logs = [];
     }
+
+    // Update UI Elements with active test info
+    updateActiveTestUI();
+    renderExamSelectors();
     updateErrorBadge();
   } catch (e) {
     console.error("Failed to load test database:", e);
+  }
+}
+
+function updateActiveTestUI() {
+  if (!App.activeTest) App.activeTest = getActiveTestMeta();
+  const test = App.activeTest;
+
+  // Document Title
+  document.title = `Bluebook Digital SAT — ${test.short_title}`;
+
+  // Nav brand badge
+  if (DOM.homeBrandBadge) {
+    DOM.homeBrandBadge.textContent = `${test.short_title} • ${test.badge || "Real Test"}`;
+  }
+
+  // Hero section titles
+  if (DOM.heroMainTitle && DOM.heroTitleGradient) {
+    DOM.heroTitleGradient.textContent = `Real Test ${test.short_title}`;
+  }
+  if (DOM.heroMainDesc && test.description) {
+    DOM.heroMainDesc.textContent = test.description;
+  }
+
+  // Hero poster & Drive buttons
+  if (DOM.heroPosterImg && test.poster) {
+    DOM.heroPosterImg.src = test.poster;
+  }
+  if (DOM.btnHeroDrivePdf && test.pdfViewUrl) {
+    DOM.btnHeroDrivePdf.href = test.pdfViewUrl;
+  }
+
+  // Practice View header badge & PDF iframe
+  if (DOM.practiceTestBadge) {
+    DOM.practiceTestBadge.textContent = test.short_title;
+  }
+  if (DOM.pdfFrame && test.pdfPreviewUrl) {
+    // Only update iframe src if changed to avoid unnecessary reloads
+    if (!DOM.pdfFrame.src || !DOM.pdfFrame.src.includes(test.pdfDriveId)) {
+      DOM.pdfFrame.src = test.pdfPreviewUrl;
+    }
+  }
+
+  // Update Module Page Ranges dynamically from App.db.modules
+  if (App.db && App.db.modules) {
+    const mRw1 = App.db.modules.find(m => m.code === "RW_Module1");
+    const mRw2 = App.db.modules.find(m => m.code === "RW_Module2");
+    const mM1 = App.db.modules.find(m => m.code === "Math_Module1");
+    const mM2 = App.db.modules.find(m => m.code === "Math_Module2");
+
+    if (mRw1 && DOM.pageModRw1) {
+      const endP = mRw2 ? (mRw2.pdf_start_page - 1) : (mRw1.pdf_start_page + 12);
+      DOM.pageModRw1.textContent = `📖 Trang ${mRw1.pdf_start_page} – ${endP}`;
+    }
+    if (mRw2 && DOM.pageModRw2) {
+      const endP = mM1 ? (mM1.pdf_start_page - 1) : (mRw2.pdf_start_page + 12);
+      DOM.pageModRw2.textContent = `📖 Trang ${mRw2.pdf_start_page} – ${endP}`;
+    }
+    if (mM1 && DOM.pageModMath1) {
+      const endP = mM2 ? (mM2.pdf_start_page - 1) : (mM1.pdf_start_page + 6);
+      DOM.pageModMath1.textContent = `📖 Trang ${mM1.pdf_start_page} – ${endP}`;
+    }
+    if (mM2 && DOM.pageModMath2) {
+      const endP = mM2.pdf_start_page + 6;
+      DOM.pageModMath2.textContent = `📖 Trang ${mM2.pdf_start_page} – ${endP}`;
+    }
+  }
+}
+
+function renderExamSelectors() {
+  const manifest = App.testsManifest || [];
+
+  // 1. Populate Nav dropdown
+  if (DOM.selectActiveExam) {
+    DOM.selectActiveExam.innerHTML = "";
+    manifest.forEach(test => {
+      const opt = document.createElement("option");
+      opt.value = test.id;
+      opt.textContent = `${test.short_title} (${test.badge || "Chính thức"})`;
+      if (test.id === App.activeTestId || test.code === App.activeTestId) {
+        opt.selected = true;
+      }
+      DOM.selectActiveExam.appendChild(opt);
+    });
+  }
+
+  // 2. Populate Practice Header dropdown
+  if (DOM.selectPracticeExam) {
+    DOM.selectPracticeExam.innerHTML = "";
+    manifest.forEach(test => {
+      const opt = document.createElement("option");
+      opt.value = test.id;
+      opt.textContent = `🗓️ ${test.short_title}`;
+      if (test.id === App.activeTestId || test.code === App.activeTestId) {
+        opt.selected = true;
+      }
+      DOM.selectPracticeExam.appendChild(opt);
+    });
+  }
+
+  // 3. Render Exam Hub Cards in Home
+  if (DOM.examsGrid) {
+    DOM.examsGrid.innerHTML = "";
+    manifest.forEach(test => {
+      const isActive = (test.id === App.activeTestId || test.code === App.activeTestId);
+
+      // Calculate progress from localStorage for this test
+      let answeredCount = 0;
+      let totalCount = test.total_questions || 98;
+      try {
+        const testKey = getStorageKeyForTest(test.id);
+        let raw = localStorage.getItem(testKey);
+        if (!raw && (test.id === "oct-2026" || test.code === "oct2026")) {
+          raw = localStorage.getItem(LEGACY_STORAGE_KEY);
+        }
+        if (raw) {
+          const parsed = JSON.parse(raw);
+          if (parsed && parsed.attempts) {
+            Object.values(parsed.attempts).forEach(a => {
+              if (a && a.status && a.status !== "unanswered") answeredCount++;
+            });
+          }
+        }
+      } catch (e) {}
+
+      const pct = Math.round((answeredCount / totalCount) * 100);
+
+      const card = document.createElement("div");
+      card.className = `exam-card ${isActive ? "active" : ""}`;
+      card.dataset.testId = test.id;
+      card.innerHTML = `
+        <div class="exam-card-header">
+          <span class="exam-badge-tag">${test.badge || "Official Test"}</span>
+          ${isActive ? '<span class="exam-active-indicator">● Đang luyện tập</span>' : ""}
+        </div>
+        <h3 class="exam-card-title">${test.title}</h3>
+        <p class="exam-card-desc">${test.description}</p>
+        <div class="exam-card-meta">
+          <span>📅 ${test.date || "2026"}</span>
+          <span>•</span>
+          <span>📝 98 Câu Hỏi (4 Modules)</span>
+          <span>•</span>
+          <span>⏱️ 134 Phút</span>
+        </div>
+        <div class="exam-progress-bar-wrap">
+          <div class="exam-progress-label">
+            <span>Tiến độ cá nhân:</span>
+            <strong>${answeredCount}/${totalCount} câu (${pct}%)</strong>
+          </div>
+          <div class="exam-progress-bar">
+            <div class="exam-progress-fill" style="width: ${pct}%"></div>
+          </div>
+        </div>
+        <button type="button" class="btn-select-exam">
+          ${isActive ? "✓ Đang Chọn Đề Này" : "Chọn Đề Này Để Luyện Tập ➔"}
+        </button>
+      `;
+
+      card.addEventListener("click", () => {
+        if (!isActive) switchTest(test.id);
+      });
+
+      DOM.examsGrid.appendChild(card);
+    });
+  }
+}
+
+async function switchTest(targetTestId) {
+  if (targetTestId === App.activeTestId) return;
+
+  // Save current test state before switching
+  saveLocalState();
+  pauseTimer();
+
+  App.activeTestId = targetTestId;
+  App.activeTest = getActiveTestMeta();
+
+  // Save preference
+  localStorage.setItem("bluebook_selected_test_id", targetTestId);
+
+  // Update browser URL query param without page reload
+  try {
+    const url = new URL(window.location.href);
+    url.searchParams.set("test", App.activeTest.code || App.activeTest.id);
+    window.history.replaceState({}, "", url.toString());
+  } catch (e) {}
+
+  // Load new test state and database
+  loadLocalState();
+  await fetchDatabase(targetTestId);
+  setupModuleQuestions();
+  updateModuleCardStats();
+
+  // If in practice view, re-render question immediately
+  if (document.body.classList.contains("in-practice")) {
+    renderCurrentQuestion();
+    startModuleTimer();
   }
 }
 
@@ -1914,10 +2300,12 @@ async function submitTestFinal() {
   DOM.modalFinishTest.classList.add("hidden");
 
   // Construct Mailto URL
-  const subject = `[Digital SAT Oct 2026] Báo cáo kết quả bài làm: ${studentName} - Điểm: ${s.scorePct}%`;
+  const testTitle = (App.activeTest && App.activeTest.title) || (App.db && App.db.test_title) || "Digital SAT Real Test";
+  const testShort = (App.activeTest && App.activeTest.short_title) || "Real Test";
+  const subject = `[Digital SAT ${testShort}] Báo cáo kết quả bài làm: ${studentName} - Điểm: ${s.scorePct}%`;
   const bodyText = `Kính gửi Thầy Mike Pham Bá Hong Son (Google for Education Innovator),
 
-Em xin gửi kết quả bài làm đề thi Digital SAT Real Test October 2026 (INT-B):
+Em xin gửi kết quả bài làm đề thi ${testTitle}:
 
 - Họ và tên học sinh: ${studentName}
 - Email học sinh: ${studentEmail}
@@ -2865,7 +3253,20 @@ function setupEventListeners() {
   // PDF External Drive Opener
   if (DOM.btnPdfExternal) {
     DOM.btnPdfExternal.addEventListener("click", () => {
-      window.open(DRIVE_VIEW_URL, '_blank');
+      const url = (App.activeTest && App.activeTest.pdfViewUrl) || (App.db && App.db.pdf_drive_view) || "https://drive.google.com";
+      window.open(url, '_blank');
+    });
+  }
+
+  // Multi-Exam Selectors Listeners
+  if (DOM.selectActiveExam) {
+    DOM.selectActiveExam.addEventListener("change", (e) => {
+      switchTest(e.target.value);
+    });
+  }
+  if (DOM.selectPracticeExam) {
+    DOM.selectPracticeExam.addEventListener("change", (e) => {
+      switchTest(e.target.value);
     });
   }
 

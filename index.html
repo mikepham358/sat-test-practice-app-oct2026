@@ -10,6 +10,8 @@
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
   <!-- SheetJS for Client-Side Excel Export (Works 100% on GitHub Pages without server) -->
   <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+  <!-- Tests Manifest for Instant Multi-Exam Switching -->
+  <script src="data/tests.js"></script>
   <!-- Google Fonts: Inter & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,7 +34,15 @@
           </div>
           <div class="brand-text">
             <span class="brand-title">Digital SAT Practice Based on Learning Science</span>
-            <span class="brand-badge">October 2026 • Real Test B</span>
+            <span class="brand-badge" id="home-brand-badge">October 2026 • Real Test B</span>
+          </div>
+        </div>
+        <div class="home-nav-actions">
+          <div class="exam-picker-wrap">
+            <span class="exam-picker-label">🗓️ Đề thi:</span>
+            <select id="select-active-exam" class="select-exam-dropdown" title="Chọn đề thi để luyện tập">
+              <!-- Populated dynamically from TESTS_MANIFEST -->
+            </select>
           </div>
         </div>
       </div>
@@ -51,12 +61,12 @@
               <span class="pill-sparkle">✨ DESIGNED FOR VINSCHOOL SAT TEAM</span>
             </div>
             
-            <h1 class="hero-title">
+            <h1 class="hero-title" id="hero-main-title">
               Digital SAT Practice<br>
-              <span class="text-gradient">Real Test October 2026</span>
+              <span class="text-gradient" id="hero-title-gradient">Real Test October 2026</span>
             </h1>
             
-            <p class="hero-desc">
+            <p class="hero-desc" id="hero-main-desc">
               Hệ thống tương tác chuẩn College Board: Đọc đề thi gốc trên Google Drive, làm bài kèm máy tính Desmos, hỗ trợ câu hỏi Grid-in và hệ thống gợi ý Socratic 3 cấp độ.
             </p>
 
@@ -104,7 +114,7 @@
           <div class="hero-poster-wrapper">
             <div class="poster-card">
               <div class="poster-img-container">
-                <img src="poster.png" alt="Digital SAT October 2026 Poster" class="hero-poster-img" onerror="this.src='https://lh3.googleusercontent.com/d/1lcpAwjHzS6554fQL49gGjoY1O95KnFJ7=w1600'">
+                <img id="hero-poster-img" src="poster.png" alt="Digital SAT Poster" class="hero-poster-img" onerror="this.src='poster_sep.png'">
               </div>
               <div class="poster-caption">
                 <div class="caption-info">
@@ -114,7 +124,10 @@
                   </a>
                 </div>
                 <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-                  <a href="https://edudirectory.withgoogle.com/profiles/5087615831769088" target="_blank" rel="noopener noreferrer" class="btn-open-drive-pill" style="background: #e8f0fe; color: #1a73e8; border: 1px solid #bfdbfe;" title="Hồ sơ chính thức trên Google Directory">
+                  <a id="btn-hero-drive-pdf" href="https://drive.google.com/file/d/1Qiu34_dltehpEVmfHvOivjAvf8Zkd77b/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn-open-drive-pill" style="background: #e8f0fe; color: #1a73e8; border: 1px solid #bfdbfe;" title="Mở đề thi PDF gốc trên Google Drive">
+                    📄 Mở PDF Đề Gốc ↗
+                  </a>
+                  <a href="https://edudirectory.withgoogle.com/profiles/5087615831769088" target="_blank" rel="noopener noreferrer" class="btn-open-drive-pill" style="background: #f1f5f9; color: #475569; border: 1px solid #cbd5e1;" title="Hồ sơ chính thức trên Google Directory">
                     🎓 Google Profile ↗
                   </a>
                 </div>
@@ -122,6 +135,19 @@
             </div>
           </div>
 
+        </section>
+
+        <!-- Section: Available Real Tests Hub -->
+        <section class="home-section exams-hub-section" id="exams-hub-section">
+          <div class="section-header">
+            <span class="section-tag">KHO ĐỀ THI DIGITAL SAT</span>
+            <h2>Chọn Đề Thi Real Test Để Luyện Tập</h2>
+            <p>Em có thể chuyển đổi linh hoạt giữa các đề thi thật dưới đây. Tiến độ bài làm và Sổ Lỗi Phản Tư của từng đề được lưu riêng biệt 100% trên thiết bị.</p>
+          </div>
+
+          <div class="exams-grid" id="exams-grid">
+            <!-- Dynamically populated from tests manifest -->
+          </div>
         </section>
 
         <!-- Section: 4 Modules Selector Cards -->
@@ -143,7 +169,7 @@
               <h3>Module 1: Đọc & Viết Chuẩn</h3>
               <p>27 câu hỏi trắc nghiệm kiểm tra từ vựng ngữ cảnh, cấu trúc văn bản, suy luận và ngữ pháp chuẩn.</p>
               <div class="mod-meta">
-                <span>📖 Trang 3 – 14</span>
+                <span id="page-mod-rw1">📖 Trang 3 – 14</span>
                 <span class="mod-stat" id="stat-mod-rw1">27 Câu</span>
               </div>
               <button class="btn-module-jump" data-module="RW_Module1">Vào Thi Module 1 ➔</button>
@@ -158,7 +184,7 @@
               <h3>Module 2: Đọc & Viết Phân Hóa</h3>
               <p>27 câu hỏi nâng cao với các đoạn văn khoa học phức tạp, biểu đồ dữ liệu và cặp văn bản đối chiếu.</p>
               <div class="mod-meta">
-                <span>📖 Trang 16 – 25</span>
+                <span id="page-mod-rw2">📖 Trang 16 – 25</span>
                 <span class="mod-stat" id="stat-mod-rw2">27 Câu</span>
               </div>
               <button class="btn-module-jump" data-module="RW_Module2">Vào Thi Module 2 ➔</button>
@@ -173,7 +199,7 @@
               <h3>Module 1: Toán Chuẩn</h3>
               <p>22 câu hỏi đại số tuyến tính, phương trình bậc hai, hình học và thống kê kèm máy tính Desmos.</p>
               <div class="mod-meta">
-                <span>📖 Trang 29 – 35</span>
+                <span id="page-mod-math1">📖 Trang 29 – 35</span>
                 <span class="mod-stat" id="stat-mod-math1">22 Câu</span>
               </div>
               <button class="btn-module-jump" data-module="Math_Module1">Vào Thi Module 1 ➔</button>
@@ -188,7 +214,7 @@
               <h3>Module 2: Toán Nâng Cao</h3>
               <p>22 câu hỏi phân hóa đỉnh cao với hàm phi tuyến tính, hình học không gian và các câu điền số Grid-in.</p>
               <div class="mod-meta">
-                <span>📖 Trang 38 – 44</span>
+                <span id="page-mod-math2">📖 Trang 38 – 44</span>
                 <span class="mod-stat" id="stat-mod-math2">22 Câu</span>
               </div>
               <button class="btn-module-jump" data-module="Math_Module2">Vào Thi Module 2 ➔</button>
@@ -252,7 +278,12 @@
         <button class="btn-home" id="btn-home" title="Về trang chủ / Hướng dẫn làm bài">
           <span>🏠 Trang chủ</span>
         </button>
-        <div class="test-badge">DIGITAL SAT</div>
+        <div class="test-badge-wrap">
+          <span class="test-badge" id="practice-test-badge">DIGITAL SAT</span>
+          <select id="select-practice-exam" class="select-practice-exam-header" title="Đổi đề thi nhanh">
+            <!-- Populated dynamically -->
+          </select>
+        </div>
         <div class="module-selector-wrap">
           <select id="select-active-module">
             <option value="RW_Module1">Reading & Writing: Module 1 (27 Qs)</option>

@@ -1,20 +1,33 @@
-# 📘 Digital SAT Bluebook Practice App — October 2026 (INT-B)
+# 📘 Digital SAT Bluebook Multi-Exam Practice Platform
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Author](https://img.shields.io/badge/Author-Mike%20Pham%20Bá%20Hong%20Son%20(Google%20for%20Education%20Innovator)-4285F4.svg)](#)
 [![Digital SAT](https://img.shields.io/badge/Exam-Digital%20SAT%202026-orange.svg)](https://hocsat.com/)
 [![College Board Bluebook](https://img.shields.io/badge/UI-College%20Board%20Bluebook-0056b3.svg)](https://bluebook.collegeboard.org/)
 
-> **Tác giả:** Mike Pham Bá Hong Son - Google for Education Innovator  
-> Ứng dụng luyện thi **Digital SAT** theo giao diện chuẩn **College Board Bluebook**, kết nối trực tiếp file đề PDF gốc và bộ câu hỏi 98 câu (Reading & Writing + Math), hỗ trợ chia sẻ cho cả lớp học làm bài độc lập qua Cloudflare Tunnel.  
+> **Tác giả & Kiến trúc sư:** Mike Pham Bá Hong Son - Google for Education Innovator  
+> Ứng dụng luyện thi **Digital SAT** theo giao diện chuẩn **College Board Bluebook**, hỗ trợ **Kho Đề Thi Đa Dạng (Multi-Exam Engine)** giúp học sinh lựa chọn và chuyển đổi linh hoạt giữa các đề thi Real Test (Tháng 10/2026, Tháng 09/2026,...). Toàn bộ dữ liệu đề thi kết nối trực tiếp với file PDF gốc trên Google Drive, bảng tính Desmos, hỗ trợ câu Grid-in và hệ thống gợi ý phản tư Socratic 4 tầng.  
 > 
 > 📚 **Nguồn tài liệu tham khảo & câu hỏi:** Dữ liệu đề thi và câu hỏi được tổng hợp và tham khảo từ [hocsat.com](https://hocsat.com/).
+> 
+> 🔗 **Website chính thức:** [https://mikepham358.github.io/sat-test-practice-app-oct2026/](https://mikepham358.github.io/sat-test-practice-app-oct2026/)
 
 ---
 
 ## 🌟 Tính Năng Nổi Bật
 
-### 1. Giao diện chuẩn College Board Bluebook
+### 1. Kho Đề Thi Real Test Đa Dạng & Chuyển Đổi Linh Hoạt (Multi-Exam Selector)
+- **Menu chọn đề thi trực quan:** Học sinh có thể chọn nhanh đề thi từ thanh điều hướng trên cùng hoặc từ **Kho đề thi (Exam Hub)** ngay trên trang chủ.
+- **Danh sách đề thi hiện có:**
+  - 🗓️ **Real Test Tháng 10/2026 (INT-B):** 98 câu hỏi chuẩn hóa kèm giải thích 4 tầng Socratic, PDF Drive Viewer ID `1Qiu34_dltehpEVmfHvOivjAvf8Zkd77b`.
+  - 🗓️ **Real Test Tháng 09/2026 (INT-A):** 98 câu hỏi chuẩn hóa kèm giải thích 4 tầng Socratic, PDF Drive Viewer ID `1dt6Up_Tz-B_h48JVLeIPF8vMwWWPxVSL`.
+- **Hỗ trợ truy cập trực tiếp bằng URL:** 
+  - Đề Tháng 09/2026: `https://mikepham358.github.io/sat-test-practice-app-oct2026/?test=sep2026`
+  - Đề Tháng 10/2026: `https://mikepham358.github.io/sat-test-practice-app-oct2026/?test=oct2026`
+- **Cô lập dữ liệu 100% (Device & Test Isolation):** Kết quả bài làm, tiến độ, đồng hồ và Sổ Lỗi Phản Tư của từng đề thi được lưu riêng biệt trong `localStorage` của trình duyệt cá nhân. Chuyển đổi giữa các đề không làm mất hay ghi đè tiến độ của nhau.
+- **Quy trình thêm đề thi mới định kỳ:** Hỗ trợ lệnh tự động `python3 add_new_test.py` chỉ trong 1 bước (xem chi tiết tại `INSTRUCTIONS_ADD_NEW_TEST.md`).
+
+### 2. Giao diện chuẩn College Board Bluebook
 - **Thanh điều hướng trên (Top Bar):**
   - Chuyển đổi Module: `Reading & Writing Module 1 (27q)`, `Reading & Writing Module 2 (27q)`, `Math Module 1 (22q)`, `Math Module 2 (22q)` hoặc `Tất cả 98 câu`.
   - **Đồng hồ đếm ngược (Countdown Timer):** 32 phút cho mỗi Module RW, 35 phút cho mỗi Module Math. Có nút **Hide/Show** như kỳ thi thật.
@@ -25,8 +38,8 @@
     - 📕 **Sổ tay lỗi sai & Chiến lược làm bài:** Xem lại các câu sai theo phương pháp phân tích 4 cấp độ.
     - 📥 **Xuất Excel Cá Nhân:** Tải về file `.xlsx` ghi nhận toàn bộ kết quả của riêng học sinh.
 
-### 2. Giao diện làm bài chia đôi (Split View)
-- **Bên trái:** Trình đọc file PDF đề gốc (`B.pdf`) với tính năng tự động nhảy trang đúng câu hỏi (`Sync Page`).
+### 3. Giao diện làm bài chia đôi (Split View)
+- **Bên trái:** Trình đọc file PDF đề gốc (Google Drive Preview) tự động chuyển đúng file đề và đồng bộ số trang (`Sync Page`).
 - **Bên phải:** Thẻ câu hỏi Digital SAT:
   - Nút **Mark for Review** (`🔖`) đánh dấu câu cần xem lại.
   - Nút **Eliminator Mode** (`[ABC]` gạch bỏ đáp án loại trừ).

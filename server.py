@@ -518,9 +518,29 @@ class BluebookAppHandler(BaseHTTPRequestHandler):
             self.serve_pdf(DB["pdf_path"])
             return
 
+        if path == "/api/manifest":
+            manifest_file = os.path.join(APP_DIR, "data", "manifest.json")
+            if os.path.exists(manifest_file):
+                try:
+                    with open(manifest_file, "r", encoding="utf-8") as f:
+                        self.send_json(json.load(f))
+                    return
+                except Exception:
+                    pass
+            self.send_json([])
+            return
+
         if path == "/api/data":
+            parsed_qs = urllib.parse.parse_qs(parsed_url.query)
+            test_req = parsed_qs.get("test", [""])[0]
+            target_file = DATABASE_FILE
+            if test_req:
+                clean_test = test_req.replace("-", "").lower()
+                cand = os.path.join(APP_DIR, "data", f"{clean_test}.json")
+                if os.path.exists(cand):
+                    target_file = cand
             try:
-                with open(DATABASE_FILE, "r", encoding="utf-8") as f:
+                with open(target_file, "r", encoding="utf-8") as f:
                     db_fresh = json.load(f)
                 self.send_json(db_fresh)
             except Exception as e:
