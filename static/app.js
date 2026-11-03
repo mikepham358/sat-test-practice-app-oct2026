@@ -169,6 +169,17 @@ const DOM = {
   headerStudentName: document.getElementById("header-student-name"),
   btnEditStudent: document.getElementById("btn-edit-student"),
 
+  // Zen Mode & Tablet Controls (Trụ cột 4 & 5)
+  btnToggleZen: document.getElementById("btn-toggle-zen"),
+  zenFloatingPill: document.getElementById("zen-floating-pill"),
+  zenTimerDisplay: document.getElementById("zen-timer-display"),
+  zenBtnCalc: document.getElementById("zen-btn-calc"),
+  btnExitZen: document.getElementById("btn-exit-zen"),
+  tabletPaneToggle: document.getElementById("tablet-pane-toggle"),
+  btnTabPanePdf: document.getElementById("btn-tab-pane-pdf"),
+  btnTabPaneContent: document.getElementById("btn-tab-pane-content"),
+  btnTabletToQuestion: document.getElementById("btn-tablet-to-question"),
+
   // Split & PDF
   splitContainer: document.getElementById("split-container"),
   panePdf: document.getElementById("pane-pdf"),
@@ -495,6 +506,8 @@ function saveLocalState() {
 function showView(viewName) {
   if (viewName === "home") {
     document.body.classList.remove("in-practice");
+    document.body.classList.remove("zen-mode");
+    if (DOM.zenFloatingPill) DOM.zenFloatingPill.classList.add("hidden");
     if (DOM.viewHome) {
       DOM.viewHome.classList.remove("hidden");
       DOM.viewHome.style.display = "flex";
@@ -510,6 +523,10 @@ function showView(viewName) {
     window.scrollTo({ top: 0, behavior: "smooth" });
   } else {
     document.body.classList.add("in-practice");
+    const savedZen = localStorage.getItem("bluebook_zen_mode");
+    if (savedZen === "active") {
+      toggleZenMode(true);
+    }
     if (DOM.viewHome) {
       DOM.viewHome.classList.add("hidden");
       DOM.viewHome.style.display = "none";
@@ -648,6 +665,8 @@ document.addEventListener("DOMContentLoaded", async () => {
   initSplitResizer();
   initDraggableDesmos();
   initScratchpad();
+  initTabletSupport();
+  initZenMode();
   initOnboarding();
   setupEventListeners();
 
@@ -940,6 +959,9 @@ function pauseTimer() {
   if (DOM.timerDisplay) {
     DOM.timerDisplay.classList.add("timer-paused");
   }
+  if (DOM.zenTimerDisplay) {
+    DOM.zenTimerDisplay.classList.add("timer-paused");
+  }
 }
 
 function resumeTimer() {
@@ -951,6 +973,9 @@ function resumeTimer() {
   }
   if (DOM.timerDisplay) {
     DOM.timerDisplay.classList.remove("timer-paused");
+  }
+  if (DOM.zenTimerDisplay) {
+    DOM.zenTimerDisplay.classList.remove("timer-paused");
   }
 }
 
@@ -1002,7 +1027,9 @@ function startModuleTimer() {
     let secs = App.studentState.timer_seconds[App.activeModuleCode] || 0;
     const mins = Math.floor(secs / 60);
     const remSecs = secs % 60;
-    DOM.timerDisplay.textContent = `${String(mins).padStart(2, "0")}:${String(remSecs).padStart(2, "0")}`;
+    const timeStr = `${String(mins).padStart(2, "0")}:${String(remSecs).padStart(2, "0")}`;
+    if (DOM.timerDisplay) DOM.timerDisplay.textContent = timeStr;
+    if (DOM.zenTimerDisplay) DOM.zenTimerDisplay.textContent = timeStr;
   };
 
   updateDisplay();
@@ -1017,7 +1044,8 @@ function startModuleTimer() {
           saveLocalState();
         }
       } else {
-        DOM.timerDisplay.textContent = "00:00";
+        if (DOM.timerDisplay) DOM.timerDisplay.textContent = "00:00";
+        if (DOM.zenTimerDisplay) DOM.zenTimerDisplay.textContent = "00:00";
         pauseTimer();
       }
     }
@@ -2458,36 +2486,129 @@ function initScratchpad() {
   });
 }
 
-// ================= SPLIT RESIZER & THEME =================
+// ================= SPLIT RESIZER & THEME (TOUCH + MOUSE OPTIMIZED) =================
 function initSplitResizer() {
   const savedWidth = localStorage.getItem("bluebook_split_width") || "50%";
-  DOM.panePdf.style.width = savedWidth;
+  if (DOM.panePdf && window.innerWidth > 900) {
+    DOM.panePdf.style.width = savedWidth;
+  }
 
   let isDragging = false;
-  DOM.splitDivider.addEventListener("mousedown", (e) => {
-    isDragging = true;
-    DOM.splitDivider.classList.add("dragging");
-    e.preventDefault();
-  });
 
-  window.addEventListener("mousemove", (e) => {
+  function onDragStart(e) {
+    // Only drag on desktop/tablet landscape (not tablet portrait single-pane mode)
+    if (window.innerWidth <= 900 || (window.innerWidth <= 1024 && window.innerHeight > window.innerWidth)) {
+      return;
+    }
+    isDragging = true;
+    if (DOM.splitDivider) DOM.splitDivider.classList.add("dragging");
+    document.body.classList.add("resizing-split");
+    if (e.cancelable) e.preventDefault();
+  }
+
+  function onDragMove(e) {
     if (!isDragging) return;
+    if (e.cancelable) e.preventDefault();
+
+    const clientX = (e.touches && e.touches[0]) ? e.touches[0].clientX : e.clientX;
     const containerRect = DOM.splitContainer.getBoundingClientRect();
-    const newWidth = e.clientX - containerRect.left;
+    const newWidth = clientX - containerRect.left;
     const totalWidth = containerRect.width;
-    if (newWidth >= 300 && newWidth <= totalWidth - 360) {
+
+    if (newWidth >= 280 && newWidth <= totalWidth - 320) {
       const pct = (newWidth / totalWidth * 100).toFixed(1) + "%";
       DOM.panePdf.style.width = pct;
       localStorage.setItem("bluebook_split_width", pct);
     }
-  });
+  }
 
-  window.addEventListener("mouseup", () => {
+  function onDragEnd() {
     if (isDragging) {
       isDragging = false;
-      DOM.splitDivider.classList.remove("dragging");
+      if (DOM.splitDivider) DOM.splitDivider.classList.remove("dragging");
+      document.body.classList.remove("resizing-split");
     }
-  });
+  }
+
+  if (DOM.splitDivider) {
+    DOM.splitDivider.addEventListener("mousedown", onDragStart);
+    DOM.splitDivider.addEventListener("touchstart", onDragStart, { passive: false });
+  }
+
+  window.addEventListener("mousemove", onDragMove);
+  window.addEventListener("touchmove", onDragMove, { passive: false });
+
+  window.addEventListener("mouseup", onDragEnd);
+  window.addEventListener("touchend", onDragEnd);
+  window.addEventListener("touchcancel", onDragEnd);
+}
+
+// ================= TRỤ CỘT 4: TABLET & IPAD TOUCH CONTROLS =================
+function setTabletPane(paneType) {
+  if (paneType === "pdf") {
+    document.body.classList.add("tablet-show-pdf");
+    document.body.classList.remove("tablet-show-content");
+    if (DOM.btnTabPanePdf) DOM.btnTabPanePdf.classList.add("active");
+    if (DOM.btnTabPaneContent) DOM.btnTabPaneContent.classList.remove("active");
+  } else {
+    document.body.classList.add("tablet-show-content");
+    document.body.classList.remove("tablet-show-pdf");
+    if (DOM.btnTabPaneContent) DOM.btnTabPaneContent.classList.add("active");
+    if (DOM.btnTabPanePdf) DOM.btnTabPanePdf.classList.remove("active");
+  }
+}
+
+function initTabletSupport() {
+  setTabletPane("content");
+
+  if (DOM.btnTabPanePdf) {
+    DOM.btnTabPanePdf.addEventListener("click", () => setTabletPane("pdf"));
+  }
+  if (DOM.btnTabPaneContent) {
+    DOM.btnTabPaneContent.addEventListener("click", () => setTabletPane("content"));
+  }
+  if (DOM.btnTabletToQuestion) {
+    DOM.btnTabletToQuestion.addEventListener("click", () => setTabletPane("content"));
+  }
+
+  // When tapping the PDF sync page badge in content view, jump to PDF if on tablet portrait
+  if (DOM.pdfPageBadge) {
+    DOM.pdfPageBadge.addEventListener("click", () => {
+      if (window.innerWidth <= 900 || (window.innerWidth <= 1024 && window.innerHeight > window.innerWidth)) {
+        setTabletPane("pdf");
+      }
+    });
+  }
+}
+
+// ================= TRỤ CỘT 5: ZEN FOCUS MODE CONTROLS =================
+function toggleZenMode(forcedState) {
+  const isZen = (typeof forcedState === "boolean") ? forcedState : !document.body.classList.contains("zen-mode");
+  document.body.classList.toggle("zen-mode", isZen);
+  if (DOM.btnToggleZen) {
+    DOM.btnToggleZen.classList.toggle("active", isZen);
+  }
+  if (DOM.zenFloatingPill) {
+    DOM.zenFloatingPill.classList.toggle("hidden", !isZen);
+  }
+  localStorage.setItem("bluebook_zen_mode", isZen ? "active" : "inactive");
+}
+
+function initZenMode() {
+  const savedZen = localStorage.getItem("bluebook_zen_mode");
+  if (savedZen === "active" && document.body.classList.contains("in-practice")) {
+    toggleZenMode(true);
+  }
+
+  if (DOM.btnToggleZen) {
+    DOM.btnToggleZen.addEventListener("click", () => toggleZenMode());
+  }
+  if (DOM.btnExitZen) {
+    DOM.btnExitZen.addEventListener("click", () => toggleZenMode(false));
+  }
+  if (DOM.zenBtnCalc && DOM.btnOpenCalc) {
+    DOM.zenBtnCalc.addEventListener("click", () => DOM.btnOpenCalc.click());
+  }
 }
 
 // ================= DRAGGABLE DESMOS CALCULATOR =================
@@ -3357,6 +3478,13 @@ function setupEventListeners() {
     if (["INPUT", "TEXTAREA", "SELECT"].includes(e.target.tagName)) return;
 
     const key = e.key.toUpperCase();
+    if (key === "Z" && !e.ctrlKey && !e.metaKey && !e.altKey) {
+      if (document.body.classList.contains("in-practice")) {
+        toggleZenMode();
+        e.preventDefault();
+        return;
+      }
+    }
     if (["A", "B", "C", "D"].includes(key) || ["1", "2", "3", "4"].includes(key)) {
       const optKey = ["1", "2", "3", "4"].includes(key) ? ["A", "B", "C", "D"][parseInt(key) - 1] : key;
       const row = document.querySelector(`.option-row[data-key="${optKey}"]`);
