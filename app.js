@@ -289,9 +289,15 @@ const DOM = {
   btnCloseStrategies: document.getElementById("btn-close-strategies"),
   strategiesContent: document.getElementById("strategies-content"),
 
-  // Scratchpad
+  // Scratchpad & Whiteboard
   scratchpadDrawer: document.getElementById("scratchpad-drawer"),
+  scratchpadHeader: document.getElementById("scratchpad-header"),
+  scratchpadBody: document.getElementById("scratchpad-body"),
   scratchpadCanvas: document.getElementById("scratchpad-canvas"),
+  scratchpadTextLayer: document.getElementById("scratchpad-text-layer"),
+  btnScratchToolPen: document.getElementById("btn-scratch-tool-pen"),
+  btnScratchToolText: document.getElementById("btn-scratch-tool-text"),
+  btnScratchAddTextbox: document.getElementById("btn-scratch-add-textbox"),
   btnScratchClear: document.getElementById("btn-scratch-clear"),
   btnScratchClose: document.getElementById("btn-scratch-close"),
   colorButtons: document.querySelectorAll(".color-btn"),
@@ -2433,57 +2439,347 @@ async function exportExcelPersonalized() {
   }
 }
 
-// ================= SCRATCHPAD CANVAS =================
+// ================= SCRATCHPAD CANVAS & WHITEBOARD (TOUCH + TEXTBOX + DRAGGABLE) =================
 function initScratchpad() {
+  const drawer = DOM.scratchpadDrawer;
+  const header = DOM.scratchpadHeader || drawer.querySelector(".scratchpad-header");
+  const body = DOM.scratchpadBody || document.getElementById("scratchpad-body");
   const canvas = DOM.scratchpadCanvas;
+  const textLayer = DOM.scratchpadTextLayer || document.getElementById("scratchpad-text-layer");
+  if (!drawer || !canvas) return;
+
   const ctx = canvas.getContext("2d");
   let drawing = false;
   let currentColor = "#0f172a";
+  let currentTool = "pen"; // "pen" | "text"
 
-  function resize() {
-    canvas.width = canvas.parentElement.clientWidth;
-    canvas.height = canvas.parentElement.clientHeight - 40;
+  // 1. Generic Touch & Mouse Dragging Helper
+  function makeDraggable(element, dragHandle, boundaryContainer = null) {
+    if (!element || !dragHandle) return;
+    let isDragging = false;
+    let startX = 0, startY = 0;
+    let initialLeft = 0, initialTop = 0;
+
+    function getPointerPos(e) {
+      const touch = (e.touches && e.touches[0]) ? e.touches[0] : (e.changedTouches ? e.changedTouches[0] : e);
+      return { x: touch.clientX, y: touch.clientY };
+    }
+
+    function onStart(e) {
+      if (e.target.closest("button") || e.target.closest("input") || e.target.closest("textarea")) {
+        return;
+      }
+      isDragging = true;
+      element.classList.add("is-dragging");
+      element.style.zIndex = "1002";
+
+      const pointer = getPointerPos(e);
+      startX = pointer.x;
+      startY = pointer.y;
+
+      const rect = element.getBoundingClientRect();
+      if (boundaryContainer) {
+        const bRect = boundaryContainer.getBoundingClientRect();
+        initialLeft = rect.left - bRect.left;
+        initialTop = rect.top - bRect.top;
+      } else {
+        initialLeft = rect.left;
+        initialTop = rect.top;
+        element.style.right = "auto";
+        element.style.bottom = "auto";
+        element.style.margin = "0";
+      }
+
+      element.style.left = `${initialLeft}px`;
+      element.style.top = `${initialTop}px`;
+
+      document.addEventListener("mousemove", onMove, { passive: false });
+      document.addEventListener("mouseup", onEnd);
+      document.addEventListener("touchmove", onMove, { passive: false });
+      document.addEventListener("touchend", onEnd);
+      document.addEventListener("touchcancel", onEnd);
+
+      if (e.cancelable) e.preventDefault();
+    }
+
+    function onMove(e) {
+      if (!isDragging) return;
+      if (e.cancelable) e.preventDefault();
+
+      const pointer = getPointerPos(e);
+      const dx = pointer.x - startX;
+      const dy = pointer.y - startY;
+
+      let newLeft = initialLeft + dx;
+      let newTop = initialTop + dy;
+
+      if (boundaryContainer) {
+        const bRect = boundaryContainer.getBoundingClientRect();
+        const eRect = element.getBoundingClientRect();
+        newLeft = Math.max(0, Math.min(newLeft, bRect.width - eRect.width));
+        newTop = Math.max(0, Math.min(newTop, bRect.height - eRect.height));
+      } else {
+        const eRect = element.getBoundingClientRect();
+        newLeft = Math.max(5, Math.min(newLeft, window.innerWidth - eRect.width - 5));
+        newTop = Math.max(5, Math.min(newTop, window.innerHeight - eRect.height - 5));
+      }
+
+      element.style.left = `${newLeft}px`;
+      element.style.top = `${newTop}px`;
+    }
+
+    function onEnd() {
+      if (isDragging) {
+        isDragging = false;
+        element.classList.remove("is-dragging");
+        document.removeEventListener("mousemove", onMove);
+        document.removeEventListener("mouseup", onEnd);
+        document.removeEventListener("touchmove", onMove);
+        document.removeEventListener("touchend", onEnd);
+        document.removeEventListener("touchcancel", onEnd);
+      }
+    }
+
+    dragHandle.addEventListener("mousedown", onStart);
+    dragHandle.addEventListener("touchstart", onStart, { passive: false });
   }
-  window.addEventListener("resize", resize);
-  setTimeout(resize, 200);
 
-  canvas.addEventListener("mousedown", (e) => {
-    drawing = true;
-    ctx.beginPath();
-    ctx.moveTo(e.offsetX, e.offsetY);
+  // Make scratchpad drawer draggable across window
+  if (header) {
+    makeDraggable(drawer, header, null);
+  }
+
+  // Elevate scratchpad above other modals on click
+  drawer.addEventListener("mousedown", () => {
+    drawer.style.zIndex = "1002";
   });
+  drawer.addEventListener("touchstart", () => {
+    drawer.style.zIndex = "1002";
+  }, { passive: true });
 
-  canvas.addEventListener("mousemove", (e) => {
-    if (!drawing) return;
+  // 2. Canvas Resizing with drawing preservation
+  function resizeCanvas() {
+    const parent = body || drawer;
+    const w = parent.clientWidth;
+    const h = parent.clientHeight;
+    if (!w || !h) return;
+
+    let backupCanvas = null;
+    if (canvas.width > 0 && canvas.height > 0) {
+      backupCanvas = document.createElement("canvas");
+      backupCanvas.width = canvas.width;
+      backupCanvas.height = canvas.height;
+      const bCtx = backupCanvas.getContext("2d");
+      bCtx.drawImage(canvas, 0, 0);
+    }
+
+    canvas.width = w;
+    canvas.height = h;
+
+    if (backupCanvas) {
+      ctx.drawImage(backupCanvas, 0, 0, backupCanvas.width, backupCanvas.height, 0, 0, w, h);
+    }
+  }
+
+  window.addEventListener("resize", resizeCanvas);
+  setTimeout(resizeCanvas, 200);
+
+  // 3. Coordinate Transformation (Mouse, Touch, iPad Apple Pencil)
+  function getCanvasCoords(e) {
+    const rect = canvas.getBoundingClientRect();
+    let clientX = e.clientX;
+    let clientY = e.clientY;
+
+    if (e.touches && e.touches.length > 0) {
+      clientX = e.touches[0].clientX;
+      clientY = e.touches[0].clientY;
+    } else if (e.changedTouches && e.changedTouches.length > 0) {
+      clientX = e.changedTouches[0].clientX;
+      clientY = e.changedTouches[0].clientY;
+    }
+
+    const scaleX = canvas.width / (rect.width || 1);
+    const scaleY = canvas.height / (rect.height || 1);
+    return {
+      x: (clientX - rect.left) * scaleX,
+      y: (clientY - rect.top) * scaleY
+    };
+  }
+
+  // 4. Drawing Actions
+  function startDraw(e) {
+    if (currentTool !== "pen") return;
+    drawing = true;
+    const pos = getCanvasCoords(e);
+    ctx.beginPath();
+    ctx.moveTo(pos.x, pos.y);
+    if (e.cancelable) e.preventDefault();
+  }
+
+  function doDraw(e) {
+    if (!drawing || currentTool !== "pen") return;
+    const pos = getCanvasCoords(e);
     ctx.strokeStyle = currentColor;
     ctx.lineWidth = 2.5;
     ctx.lineCap = "round";
-    ctx.lineTo(e.offsetX, e.offsetY);
+    ctx.lineJoin = "round";
+    ctx.lineTo(pos.x, pos.y);
     ctx.stroke();
+    if (e.cancelable) e.preventDefault();
+  }
+
+  function stopDraw() {
+    if (drawing) {
+      drawing = false;
+      ctx.closePath();
+    }
+  }
+
+  // Mouse Listeners
+  canvas.addEventListener("mousedown", startDraw);
+  window.addEventListener("mousemove", (e) => {
+    if (drawing) doDraw(e);
   });
+  window.addEventListener("mouseup", stopDraw);
 
-  window.addEventListener("mouseup", () => { drawing = false; });
+  // Touch Listeners (iPad & Mobile with passive: false)
+  canvas.addEventListener("touchstart", startDraw, { passive: false });
+  canvas.addEventListener("touchmove", doDraw, { passive: false });
+  canvas.addEventListener("touchend", stopDraw);
+  canvas.addEventListener("touchcancel", stopDraw);
 
+  // 5. Textbox Feature Implementation
+  function createTextbox(x = null, y = null, initialText = "") {
+    if (!textLayer || !body) return;
+    const bRect = body.getBoundingClientRect();
+
+    const posX = (x !== null && x !== undefined) ? x : Math.max(15, bRect.width / 2 - 110);
+    const posY = (y !== null && y !== undefined) ? y : Math.max(15, bRect.height / 2 - 60);
+
+    const box = document.createElement("div");
+    box.className = "scratch-textbox active";
+    box.style.borderColor = currentColor;
+    box.style.left = `${Math.max(8, Math.min(posX, bRect.width - 210))}px`;
+    box.style.top = `${Math.max(8, Math.min(posY, bRect.height - 110))}px`;
+
+    box.innerHTML = `
+      <div class="scratch-textbox-header" style="border-top: 3px solid ${currentColor};">
+        <span class="scratch-tb-drag">⋮⋮ Ô gõ nháp</span>
+        <button type="button" class="scratch-tb-del" title="Xóa ô này">✕</button>
+      </div>
+      <textarea class="scratch-tb-input" placeholder="Nhập văn bản nháp / công thức...">${initialText}</textarea>
+    `;
+
+    // Delete Button
+    const btnDel = box.querySelector(".scratch-tb-del");
+    btnDel.addEventListener("click", (e) => {
+      e.stopPropagation();
+      box.remove();
+    });
+
+    // Make textbox draggable inside scratchpad body
+    const tbHeader = box.querySelector(".scratch-textbox-header");
+    makeDraggable(box, tbHeader, body);
+
+    // Textarea focus management
+    const textarea = box.querySelector(".scratch-tb-input");
+    textarea.addEventListener("focus", () => {
+      document.querySelectorAll(".scratch-textbox").forEach(b => b.classList.remove("active"));
+      box.classList.add("active");
+    });
+
+    textLayer.appendChild(box);
+    setTimeout(() => textarea.focus(), 60);
+    return box;
+  }
+
+  // Click on canvas while in Textbox mode to place a textbox
+  function onCanvasTapForText(e) {
+    if (currentTool !== "text") return;
+    // Don't trigger if clicked on an existing textbox
+    if (e.target.closest(".scratch-textbox")) return;
+
+    const bRect = body.getBoundingClientRect();
+    let clientX = e.clientX;
+    let clientY = e.clientY;
+    if (e.changedTouches && e.changedTouches.length > 0) {
+      clientX = e.changedTouches[0].clientX;
+      clientY = e.changedTouches[0].clientY;
+    }
+    const x = clientX - bRect.left - 20;
+    const y = clientY - bRect.top - 15;
+    createTextbox(x, y);
+  }
+
+  canvas.addEventListener("click", onCanvasTapForText);
+
+  // 6. Tool Mode Switcher Controls
+  if (DOM.btnScratchToolPen) {
+    DOM.btnScratchToolPen.addEventListener("click", () => {
+      currentTool = "pen";
+      DOM.btnScratchToolPen.classList.add("active");
+      if (DOM.btnScratchToolText) DOM.btnScratchToolText.classList.remove("active");
+      if (body) body.classList.remove("text-mode");
+    });
+  }
+
+  if (DOM.btnScratchToolText) {
+    DOM.btnScratchToolText.addEventListener("click", () => {
+      currentTool = "text";
+      DOM.btnScratchToolText.classList.add("active");
+      if (DOM.btnScratchToolPen) DOM.btnScratchToolPen.classList.remove("active");
+      if (body) body.classList.add("text-mode");
+    });
+  }
+
+  if (DOM.btnScratchAddTextbox) {
+    DOM.btnScratchAddTextbox.addEventListener("click", () => {
+      createTextbox();
+    });
+  }
+
+  // 7. Color Buttons
   DOM.colorButtons.forEach(btn => {
     btn.addEventListener("click", () => {
       DOM.colorButtons.forEach(b => b.classList.remove("active"));
       btn.classList.add("active");
       currentColor = btn.dataset.color;
+
+      // Update active textbox color accent
+      const activeTb = document.querySelector(".scratch-textbox.active");
+      if (activeTb) {
+        activeTb.style.borderColor = currentColor;
+        const tbHdr = activeTb.querySelector(".scratch-textbox-header");
+        if (tbHdr) tbHdr.style.borderTop = `3px solid ${currentColor}`;
+      }
     });
   });
 
-  DOM.btnScratchClear.addEventListener("click", () => {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-  });
+  // 8. Clear & Close Actions
+  if (DOM.btnScratchClear) {
+    DOM.btnScratchClear.addEventListener("click", () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      if (textLayer) {
+        textLayer.innerHTML = "";
+      }
+    });
+  }
 
-  DOM.btnScratchClose.addEventListener("click", () => {
-    DOM.scratchpadDrawer.classList.add("hidden");
-  });
+  if (DOM.btnScratchClose) {
+    DOM.btnScratchClose.addEventListener("click", () => {
+      drawer.classList.add("hidden");
+    });
+  }
 
-  DOM.btnToggleScratchpad.addEventListener("click", () => {
-    DOM.scratchpadDrawer.classList.toggle("hidden");
-    if (!DOM.scratchpadDrawer.classList.contains("hidden")) resize();
-  });
+  if (DOM.btnToggleScratchpad) {
+    DOM.btnToggleScratchpad.addEventListener("click", () => {
+      drawer.classList.toggle("hidden");
+      if (!drawer.classList.contains("hidden")) {
+        drawer.style.zIndex = "1002";
+        setTimeout(resizeCanvas, 50);
+      }
+    });
+  }
 }
 
 // ================= SPLIT RESIZER & THEME (TOUCH + MOUSE OPTIMIZED) =================

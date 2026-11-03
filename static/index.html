@@ -840,20 +840,44 @@
     </div>
   </div>
 
-  <!-- ================= FLOATING SCRATCHPAD CANVAS ================= -->
+  <!-- ================= FLOATING SCRATCHPAD CANVAS & TEXTBOX ================= -->
   <div class="scratchpad-drawer hidden" id="scratchpad-drawer">
-    <div class="scratchpad-header">
-      <span>✏️ Bluebook Whiteboard Scratchpad</span>
+    <div class="scratchpad-header" id="scratchpad-header" title="Giữ và kéo để di chuyển bảng nháp">
+      <div class="scratchpad-title">
+        <span class="scratchpad-drag-icon">⋮⋮</span>
+        <span>✏️ Whiteboard Scratchpad</span>
+      </div>
       <div class="scratchpad-tools">
-        <button class="color-btn active" data-color="#0f172a" style="background: #0f172a;"></button>
-        <button class="color-btn" data-color="#2563eb" style="background: #2563eb;"></button>
-        <button class="color-btn" data-color="#dc2626" style="background: #dc2626;"></button>
-        <button class="color-btn" data-color="#16a34a" style="background: #16a34a;"></button>
-        <button class="btn-sm" id="btn-scratch-clear">🗑️ Xóa</button>
-        <button class="btn-sm" id="btn-scratch-close">✕</button>
+        <!-- Tools Mode: Pen vs Textbox -->
+        <div class="scratch-mode-group">
+          <button type="button" class="scratch-tool-btn active" id="btn-scratch-tool-pen" title="Chế độ Bút vẽ tay (Chuột hoặc Cảm ứng iPad)">
+            <span>✏️ Vẽ</span>
+          </button>
+          <button type="button" class="scratch-tool-btn" id="btn-scratch-tool-text" title="Chế độ Ô chữ (Chạm vào bảng để đặt Textbox)">
+            <span>🔤 Textbox</span>
+          </button>
+          <button type="button" class="scratch-tool-btn btn-scratch-add-tb" id="btn-scratch-add-textbox" title="Tạo ngay một ô gõ văn bản nháp">
+            <span>+ Textbox</span>
+          </button>
+        </div>
+
+        <!-- Palette -->
+        <div class="scratch-color-group">
+          <button type="button" class="color-btn active" data-color="#0f172a" style="background: #0f172a;" title="Màu đen"></button>
+          <button type="button" class="color-btn" data-color="#2563eb" style="background: #2563eb;" title="Màu xanh dương"></button>
+          <button type="button" class="color-btn" data-color="#dc2626" style="background: #dc2626;" title="Màu đỏ"></button>
+          <button type="button" class="color-btn" data-color="#16a34a" style="background: #16a34a;" title="Màu xanh lá"></button>
+        </div>
+
+        <!-- Actions -->
+        <button type="button" class="btn-scratch-action" id="btn-scratch-clear" title="Xóa toàn bộ nét vẽ và ô chữ">🗑️ Xóa</button>
+        <button type="button" class="btn-scratch-action btn-scratch-close" id="btn-scratch-close" title="Đóng bảng nháp">✕</button>
       </div>
     </div>
-    <canvas id="scratchpad-canvas"></canvas>
+    <div class="scratchpad-body" id="scratchpad-body">
+      <canvas id="scratchpad-canvas"></canvas>
+      <div class="scratchpad-text-layer" id="scratchpad-text-layer"></div>
+    </div>
   </div>
 
   <!-- ================= MODAL: PRACTICE RULES & GUIDE ================= -->

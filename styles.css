@@ -1642,71 +1642,322 @@ body.eliminator-mode-active .btn-strike-option {
   line-height: 1.6;
 }
 
-/* Scratchpad */
+/* ================= LUXURY DRAGGABLE SCRATCHPAD & WHITEBOARD ================= */
 .scratchpad-drawer {
   position: fixed;
   bottom: 68px;
   right: 20px;
-  width: 500px;
-  height: 400px;
-  background: var(--bb-bg-surface);
-  border: 1px solid var(--bb-border);
-  border-radius: 10px;
-  box-shadow: var(--shadow-lg);
-  z-index: 80;
+  width: 540px;
+  height: 420px;
+  min-width: 320px;
+  min-height: 280px;
+  max-width: 96vw;
+  max-height: 85vh;
+  background: #ffffff;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 14px;
+  box-shadow: 0 20px 48px rgba(15, 23, 42, 0.25), 0 4px 12px rgba(15, 23, 42, 0.1);
+  z-index: 998;
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  resize: both;
 }
 
 .scratchpad-drawer.hidden {
-  display: none;
+  display: none !important;
+}
+
+.scratchpad-drawer.is-dragging {
+  opacity: 0.96;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.35);
+  transition: none !important;
 }
 
 .scratchpad-header {
-  height: 40px;
-  background: var(--bb-bg-surface-elevated);
-  border-bottom: 1px solid var(--bb-border);
+  height: 44px;
+  background: #0f172a;
+  color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 12px;
-  font-size: 12px;
+  font-size: 12.5px;
   font-weight: 700;
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: none;
+  flex-shrink: 0;
+  gap: 8px;
+}
+
+.scratchpad-drawer.is-dragging .scratchpad-header {
+  cursor: grabbing;
+}
+
+.scratchpad-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  font-size: 12px;
+  color: #f1f5f9;
+}
+
+.scratchpad-drag-icon {
+  color: #94a3b8;
+  font-size: 15px;
+  letter-spacing: -1px;
 }
 
 .scratchpad-tools {
   display: flex;
   align-items: center;
   gap: 6px;
+  flex-wrap: nowrap;
+}
+
+/* Tool Mode Toggle Buttons (Pen vs Textbox) */
+.scratch-mode-group {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2px 4px;
+  border-radius: 8px;
+}
+
+.scratch-tool-btn {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  font-size: 11.5px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.15s ease;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.scratch-tool-btn:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.scratch-tool-btn.active {
+  background: #2563eb;
+  color: #ffffff;
+  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.4);
+}
+
+.scratch-tool-btn.btn-scratch-add-tb {
+  background: rgba(16, 185, 129, 0.2);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.35);
+}
+
+.scratch-tool-btn.btn-scratch-add-tb:hover {
+  background: #10b981;
+  color: #ffffff;
+}
+
+/* Color Palette */
+.scratch-color-group {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0 4px;
 }
 
 .color-btn {
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   border: 2px solid transparent;
   cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  touch-action: manipulation;
 }
 
-.color-btn.active {
-  border-color: #0284c7;
+.color-btn:hover {
   transform: scale(1.15);
 }
 
-.btn-sm {
-  background: none;
-  border: 1px solid var(--bb-border);
-  padding: 2px 6px;
-  border-radius: 4px;
-  font-size: 11px;
+.color-btn.active {
+  border-color: #ffffff;
+  box-shadow: 0 0 0 2px #38bdf8;
+  transform: scale(1.2);
+}
+
+/* Action Buttons (Clear, Close) */
+.btn-scratch-action {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: #e2e8f0;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 11.5px;
+  font-weight: 600;
   cursor: pointer;
+  transition: all 0.15s ease;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn-scratch-action:hover {
+  background: rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+}
+
+.btn-scratch-close {
+  background: rgba(239, 68, 68, 0.2);
+  border-color: rgba(239, 68, 68, 0.35);
+  color: #fca5a5;
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  border-radius: 50%;
+}
+
+.btn-scratch-close:hover {
+  background: #ef4444;
+  color: #ffffff;
+  border-color: #ef4444;
+}
+
+/* Whiteboard Body & Canvas */
+.scratchpad-body {
+  position: relative;
+  flex: 1;
+  width: 100%;
+  height: calc(100% - 44px);
+  overflow: hidden;
+  background: #ffffff;
 }
 
 #scratchpad-canvas {
-  flex: 1;
-  background: #ffffff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   cursor: crosshair;
+  touch-action: none !important;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.scratchpad-body.text-mode #scratchpad-canvas {
+  cursor: text;
+}
+
+/* Text Layer & Draggable Textboxes */
+.scratchpad-text-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.scratch-textbox {
+  position: absolute;
+  min-width: 180px;
+  min-height: 80px;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1.5px solid #2563eb;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+  pointer-events: auto;
+  overflow: hidden;
+  resize: both;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.scratch-textbox.active {
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.25), 0 0 0 2px rgba(37, 99, 235, 0.3);
+}
+
+.scratch-textbox-header {
+  height: 24px;
+  background: #f1f5f9;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #64748b;
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: none;
+}
+
+.scratch-textbox.is-dragging .scratch-textbox-header {
+  cursor: grabbing;
+  background: #e2e8f0;
+}
+
+.scratch-tb-drag {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.scratch-tb-del {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0 4px;
+  line-height: 1;
+  border-radius: 3px;
+  transition: all 0.15s ease;
+}
+
+.scratch-tb-del:hover {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.scratch-tb-input {
+  flex: 1;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 6px 8px;
+  font-family: 'JetBrains Mono', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace;
+  font-size: 13px;
+  line-height: 1.45;
+  color: #0f172a;
+  background: transparent;
+  resize: none;
+}
+
+.scratch-tb-input::placeholder {
+  color: #94a3b8;
+  font-size: 12px;
+  font-style: italic;
 }
 
 /* ================= ONBOARDING MODAL ================= */
