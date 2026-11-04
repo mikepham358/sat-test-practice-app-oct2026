@@ -241,6 +241,11 @@ const DOM = {
   hintContent4: document.getElementById("hint-content-4"),
   hintText4: document.getElementById("hint-text-4"),
 
+  // Visual Thinking Diagram (Mermaid)
+  mermaidDiagramCard: document.getElementById("mermaid-diagram-card"),
+  mermaidViewer: document.getElementById("mermaid-viewer"),
+  btnMermaidToggleZoom: document.getElementById("btn-mermaid-toggle-zoom"),
+
   // Footer Dock
   inputStudentName: document.getElementById("input-student-name"),
   btnOpenNavigator: document.getElementById("btn-open-navigator"),
@@ -666,6 +671,24 @@ function startPracticeFromHome(targetModule) {
 
 // ================= INITIALIZATION =================
 document.addEventListener("DOMContentLoaded", async () => {
+  if (window.mermaid) {
+    try {
+      mermaid.initialize({
+        startOnLoad: false,
+        theme: 'neutral',
+        securityLevel: 'loose',
+        fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
+        flowchart: {
+          useMaxWidth: true,
+          htmlLabels: true,
+          curve: 'basis'
+        }
+      });
+    } catch (e) {
+      console.warn("Mermaid init error:", e);
+    }
+  }
+
   loadLocalState();
   loadFeedbacksList();
   initSplitResizer();
@@ -1117,6 +1140,9 @@ function renderCurrentQuestion() {
   // Progressive Hints
   renderHints(q, qState);
 
+  // Visual Thinking Diagram (Mermaid) - Revealed when trial & error is finished
+  renderMermaidDiagram(q, isFinished);
+
   // Math typesetting
   if (window.renderMathInElement) {
     window.renderMathInElement(document.getElementById("pane-content"), {
@@ -1377,6 +1403,38 @@ function renderHints(q, qState) {
       DOM.hintContent4.classList.add("collapsed");
       DOM.hintCard4.classList.remove("unlocked");
     }
+  }
+}
+
+// ================= MERMAID INTERACTIVE VISUAL THINKING DIAGRAM =================
+async function renderMermaidDiagram(q, isFinished) {
+  if (!DOM.mermaidDiagramCard || !DOM.mermaidViewer) return;
+
+  if (!isFinished || !q.mermaid_diagram || !q.mermaid_diagram.trim()) {
+    DOM.mermaidDiagramCard.classList.add("hidden");
+    DOM.mermaidViewer.innerHTML = "";
+    return;
+  }
+
+  DOM.mermaidDiagramCard.classList.remove("hidden");
+  const rawCode = q.mermaid_diagram.trim();
+  const targetQId = q.id;
+  const renderId = `mermaid-svg-${q.id || App.currentIndex}-${Date.now()}`;
+
+  if (window.mermaid) {
+    try {
+      const { svg } = await mermaid.render(renderId, rawCode);
+      if (App.currentQuestion && App.currentQuestion.id === targetQId) {
+        DOM.mermaidViewer.innerHTML = svg;
+      }
+    } catch (err) {
+      console.warn("Mermaid render error for Q" + q.id, err);
+      if (App.currentQuestion && App.currentQuestion.id === targetQId) {
+        DOM.mermaidViewer.innerHTML = `<pre class="mermaid-raw-fallback">${escapeHtml(rawCode)}</pre>`;
+      }
+    }
+  } else {
+    DOM.mermaidViewer.innerHTML = `<pre class="mermaid-raw-fallback">${escapeHtml(rawCode)}</pre>`;
   }
 }
 
@@ -3839,5 +3897,16 @@ function setupEventListeners() {
   }
   if (DOM.formSubmitFeedback) {
     DOM.formSubmitFeedback.addEventListener("submit", handleFeedbackSubmit);
+  }
+
+  // Mermaid Zoom Toggle
+  if (DOM.btnMermaidToggleZoom) {
+    DOM.btnMermaidToggleZoom.addEventListener("click", () => {
+      if (DOM.mermaidDiagramCard) {
+        DOM.mermaidDiagramCard.classList.toggle("is-zoomed");
+        const isZoomed = DOM.mermaidDiagramCard.classList.contains("is-zoomed");
+        DOM.btnMermaidToggleZoom.innerHTML = isZoomed ? "<span>🔍 Thu nhỏ</span>" : "<span>🔍 Phóng to</span>";
+      }
+    });
   }
 }

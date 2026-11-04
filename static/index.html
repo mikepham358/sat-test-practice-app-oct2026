@@ -10,6 +10,8 @@
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
   <!-- SheetJS for Client-Side Excel Export (Works 100% on GitHub Pages without server) -->
   <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+  <!-- Mermaid JS for Mindmap & Logic Flowcharts Visualization -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js"></script>
   <!-- Tests Manifest for Instant Multi-Exam Switching -->
   <script src="data/tests.js"></script>
   <!-- Google Fonts: Inter & JetBrains Mono -->
@@ -542,6 +544,26 @@
             </div>
             <div class="hint-content collapsed" id="hint-content-4">
               <div id="hint-text-4">Trả lời đúng để mở khóa bí kíp chiến thuật.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Visual Thinking Diagram (Mermaid Interactive Mindmap / Flowchart) -->
+        <div class="mermaid-diagram-card hidden" id="mermaid-diagram-card">
+          <div class="mermaid-card-header">
+            <div class="mermaid-header-left">
+              <span class="mermaid-badge-tag">📊 SƠ ĐỒ TƯ DUY TRỰC QUAN</span>
+              <span class="mermaid-card-title">Mindmap Phân Tích Logic & Loại Trừ (Mermaid)</span>
+            </div>
+            <div class="mermaid-header-actions">
+              <button type="button" class="btn-mermaid-action" id="btn-mermaid-toggle-zoom" title="Thu phóng sơ đồ tư duy">
+                <span>🔍 Phóng to</span>
+              </button>
+            </div>
+          </div>
+          <div class="mermaid-card-body">
+            <div class="mermaid-viewer" id="mermaid-viewer">
+              <!-- Rendered Mermaid SVG injected dynamically -->
             </div>
           </div>
         </div>
