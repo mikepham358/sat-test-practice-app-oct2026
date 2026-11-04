@@ -242,16 +242,17 @@ const DOM = {
   hintContent4: document.getElementById("hint-content-4"),
   hintText4: document.getElementById("hint-text-4"),
 
-  // Visual Thinking Diagram (Mermaid)
-  mermaidDiagramCard: document.getElementById("mermaid-diagram-card"),
-  mermaidCardHeader: document.getElementById("mermaid-card-header"),
-  mermaidCardBody: document.getElementById("mermaid-card-body"),
-  mermaidViewer: document.getElementById("mermaid-viewer"),
-  btnMermaidToggleView: document.getElementById("btn-mermaid-toggle-view"),
-  mermaidToggleViewText: document.getElementById("mermaid-toggle-view-text"),
+  // Visual Thinking Diagram (Mermaid Pop-up Modal)
+  modalMermaid: document.getElementById("modal-mermaid"),
+  mermaidModalCard: document.getElementById("mermaid-modal-card"),
+  mermaidModalTitle: document.getElementById("mermaid-modal-title"),
+  mermaidModalSubtitle: document.getElementById("mermaid-modal-subtitle"),
+  mermaidTriggerBanner: document.getElementById("mermaid-trigger-banner"),
+  btnOpenMermaidModal: document.getElementById("btn-open-mermaid-modal"),
+  btnCloseMermaid: document.getElementById("btn-close-mermaid"),
   btnMermaidToggleZoom: document.getElementById("btn-mermaid-toggle-zoom"),
   mermaidZoomText: document.getElementById("mermaid-zoom-text"),
-  mermaidArrowIcon: document.getElementById("mermaid-arrow-icon"),
+  mermaidViewer: document.getElementById("mermaid-viewer"),
 
   // Footer Dock
   inputStudentName: document.getElementById("input-student-name"),
@@ -1413,54 +1414,51 @@ function renderHints(q, qState) {
   }
 }
 
-// ================= MERMAID INTERACTIVE VISUAL THINKING DIAGRAM =================
-function toggleMermaidCollapse(force) {
-  if (!DOM.mermaidDiagramCard || !DOM.mermaidCardBody) return;
-  const isCurrentlyCollapsed = DOM.mermaidCardBody.classList.contains("collapsed");
-  const willCollapse = typeof force === "boolean" ? force : !isCurrentlyCollapsed;
+// ================= MERMAID POP-UP MODAL & VISUAL THINKING =================
+async function openMermaidModal() {
+  const q = App.currentQuestion;
+  if (!q || !q.mermaid_diagram || !q.mermaid_diagram.trim()) return;
 
-  DOM.mermaidCardBody.classList.toggle("collapsed", willCollapse);
-  DOM.mermaidDiagramCard.classList.toggle("is-collapsed", willCollapse);
+  pauseTimer();
 
-  if (DOM.mermaidToggleViewText) {
-    DOM.mermaidToggleViewText.textContent = willCollapse ? "👁️ Hiện sơ đồ" : "👁️ Ẩn sơ đồ";
+  const qIndex = App.currentIndex + 1;
+  const modTitle = DOM.selectModule ? DOM.selectModule.options[DOM.selectModule.selectedIndex].text.split("(")[0].trim() : App.activeModuleCode;
+
+  if (DOM.mermaidModalTitle) {
+    DOM.mermaidModalTitle.textContent = `${modTitle} • Câu ${qIndex}: ${q.topic || 'Sơ đồ tư duy logic'}`;
   }
-  if (DOM.btnQMermaid) {
-    DOM.btnQMermaid.classList.toggle("active", !willCollapse);
+
+  if (DOM.mermaidModalCard) {
+    DOM.mermaidModalCard.classList.remove("is-zoomed");
+  }
+  if (DOM.mermaidZoomText) {
+    DOM.mermaidZoomText.textContent = "🔍 Phóng to";
+  }
+
+  if (DOM.modalMermaid) {
+    DOM.modalMermaid.classList.remove("hidden");
+  }
+
+  await renderMermaidDiagramContent(q);
+}
+
+function closeMermaidModal() {
+  if (DOM.modalMermaid) {
+    DOM.modalMermaid.classList.add("hidden");
+  }
+  if (DOM.mermaidModalCard) {
+    DOM.mermaidModalCard.classList.remove("is-zoomed");
+  }
+  if (DOM.mermaidZoomText) {
+    DOM.mermaidZoomText.textContent = "🔍 Phóng to";
   }
 }
 
-async function renderMermaidDiagram(q, isFinished) {
-  if (!DOM.mermaidDiagramCard || !DOM.mermaidViewer) return;
-
-  const hasMermaid = isFinished && q.mermaid_diagram && q.mermaid_diagram.trim().length > 0;
-
-  if (DOM.btnQMermaid) {
-    DOM.btnQMermaid.classList.toggle("hidden", !hasMermaid);
-    DOM.btnQMermaid.classList.toggle("active", hasMermaid);
-  }
-
-  if (!hasMermaid) {
-    DOM.mermaidDiagramCard.classList.add("hidden");
-    DOM.mermaidViewer.innerHTML = "";
-    return;
-  }
-
-  DOM.mermaidDiagramCard.classList.remove("hidden");
-  // Reset collapsed & zoom states when moving between questions
-  if (DOM.mermaidCardBody) DOM.mermaidCardBody.classList.remove("collapsed");
-  DOM.mermaidDiagramCard.classList.remove("is-collapsed");
-  DOM.mermaidDiagramCard.classList.remove("is-zoomed");
-  if (DOM.mermaidToggleViewText) DOM.mermaidToggleViewText.textContent = "👁️ Ẩn sơ đồ";
-  if (DOM.mermaidZoomText) {
-    DOM.mermaidZoomText.textContent = "🔍 Phóng to";
-  } else if (DOM.btnMermaidToggleZoom) {
-    DOM.btnMermaidToggleZoom.innerHTML = '<span>🔍 Phóng to</span>';
-  }
-
+async function renderMermaidDiagramContent(q) {
+  if (!DOM.mermaidViewer) return;
   const rawCode = q.mermaid_diagram.trim();
   const targetQId = q.id;
-  const renderId = `mermaid-svg-${q.id || App.currentIndex}-${Date.now()}`;
+  const renderId = `mermaid-svg-modal-${q.id || App.currentIndex}-${Date.now()}`;
 
   if (window.mermaid) {
     try {
@@ -1476,6 +1474,27 @@ async function renderMermaidDiagram(q, isFinished) {
     }
   } else {
     DOM.mermaidViewer.innerHTML = `<pre class="mermaid-raw-fallback">${escapeHtml(rawCode)}</pre>`;
+  }
+}
+
+function renderMermaidDiagram(q, isFinished) {
+  const hasMermaid = isFinished && q.mermaid_diagram && q.mermaid_diagram.trim().length > 0;
+
+  if (DOM.btnQMermaid) {
+    DOM.btnQMermaid.classList.toggle("hidden", !hasMermaid);
+  }
+
+  if (DOM.mermaidTriggerBanner) {
+    DOM.mermaidTriggerBanner.classList.toggle("hidden", !hasMermaid);
+  }
+
+  // If modal is currently open and user changed questions, sync or close
+  if (DOM.modalMermaid && !DOM.modalMermaid.classList.contains("hidden")) {
+    if (hasMermaid) {
+      openMermaidModal();
+    } else {
+      closeMermaidModal();
+    }
   }
 }
 
@@ -3870,6 +3889,13 @@ function setupEventListeners() {
 
   // Keyboard Shortcuts
   window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      if (DOM.modalMermaid && !DOM.modalMermaid.classList.contains("hidden")) {
+        closeMermaidModal();
+        e.preventDefault();
+        return;
+      }
+    }
     if (["INPUT", "TEXTAREA", "SELECT"].includes(e.target.tagName)) return;
 
     const key = e.key.toUpperCase();
@@ -3940,49 +3966,29 @@ function setupEventListeners() {
     DOM.formSubmitFeedback.addEventListener("submit", handleFeedbackSubmit);
   }
 
-  // Mermaid Mindmap Collapse/Expand & Zoom
-  if (DOM.btnMermaidToggleView) {
-    DOM.btnMermaidToggleView.addEventListener("click", (e) => {
-      e.stopPropagation();
-      toggleMermaidCollapse();
-    });
-  }
-
-  if (DOM.mermaidCardHeader) {
-    DOM.mermaidCardHeader.addEventListener("click", (e) => {
-      if (e.target.closest("#btn-mermaid-toggle-zoom") || e.target.closest("#btn-mermaid-toggle-view")) {
-        return;
-      }
-      toggleMermaidCollapse();
-    });
-  }
-
+  // Mermaid Mindmap Pop-up Modal triggers
   if (DOM.btnQMermaid) {
-    DOM.btnQMermaid.addEventListener("click", () => {
-      if (!DOM.mermaidDiagramCard || DOM.mermaidDiagramCard.classList.contains("hidden")) return;
-      const isCollapsed = DOM.mermaidCardBody && DOM.mermaidCardBody.classList.contains("collapsed");
-      if (isCollapsed) {
-        toggleMermaidCollapse(false);
-        DOM.mermaidDiagramCard.scrollIntoView({ behavior: "smooth", block: "nearest" });
-      } else {
-        toggleMermaidCollapse(true);
-      }
+    DOM.btnQMermaid.addEventListener("click", openMermaidModal);
+  }
+  if (DOM.btnOpenMermaidModal) {
+    DOM.btnOpenMermaidModal.addEventListener("click", openMermaidModal);
+  }
+  if (DOM.btnCloseMermaid) {
+    DOM.btnCloseMermaid.addEventListener("click", closeMermaidModal);
+  }
+  if (DOM.modalMermaid) {
+    DOM.modalMermaid.addEventListener("click", (e) => {
+      if (e.target === DOM.modalMermaid) closeMermaidModal();
     });
   }
-
   if (DOM.btnMermaidToggleZoom) {
     DOM.btnMermaidToggleZoom.addEventListener("click", (e) => {
       e.stopPropagation();
-      if (DOM.mermaidCardBody && DOM.mermaidCardBody.classList.contains("collapsed")) {
-        toggleMermaidCollapse(false);
-      }
-      if (DOM.mermaidDiagramCard) {
-        DOM.mermaidDiagramCard.classList.toggle("is-zoomed");
-        const isZoomed = DOM.mermaidDiagramCard.classList.contains("is-zoomed");
+      if (DOM.mermaidModalCard) {
+        DOM.mermaidModalCard.classList.toggle("is-zoomed");
+        const isZoomed = DOM.mermaidModalCard.classList.contains("is-zoomed");
         if (DOM.mermaidZoomText) {
           DOM.mermaidZoomText.textContent = isZoomed ? "🔍 Thu nhỏ" : "🔍 Phóng to";
-        } else {
-          DOM.btnMermaidToggleZoom.innerHTML = isZoomed ? "<span>🔍 Thu nhỏ</span>" : "<span>🔍 Phóng to</span>";
         }
       }
     });
