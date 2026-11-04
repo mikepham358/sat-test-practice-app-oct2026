@@ -1300,7 +1300,9 @@ body.eliminator-mode-active .btn-strike-option {
 .footer-left {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
+  flex: 1;
+  min-width: 0;
 }
 
 .student-profile-badge {
@@ -4706,11 +4708,13 @@ body.zen-mode .split-container {
 }
 
 body.zen-mode .footer-left .student-profile-badge,
+body.zen-mode .footer-left .pdf-page-badge,
 body.zen-mode .footer-left .storage-indicator {
   opacity: 0.3;
   transition: opacity 0.2s ease;
 }
 body.zen-mode .footer-left:hover .student-profile-badge,
+body.zen-mode .footer-left:hover .pdf-page-badge,
 body.zen-mode .footer-left:hover .storage-indicator {
   opacity: 1;
 }

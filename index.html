@@ -282,7 +282,6 @@
           <span class="home-text">Trang chủ</span>
         </button>
         <div class="test-badge-wrap">
-          <span class="test-badge" id="practice-test-badge">DIGITAL SAT</span>
           <select id="select-practice-exam" class="select-practice-exam-header" title="Đổi đề thi nhanh">
             <!-- Populated dynamically -->
           </select>
@@ -374,28 +373,6 @@
     
     <!-- LEFT PANE: Synchronized Test PDF Viewer (Google Drive Official) -->
     <section class="pane pane-pdf" id="pane-pdf">
-      <div class="pdf-toolbar">
-        <div class="pdf-toolbar-left">
-          <span class="pdf-doc-title">📄 Đề thi Gốc (Oct 2026 INT-B)</span>
-          <div class="pdf-page-badge" id="pdf-page-badge" title="Số trang câu hỏi này trong đề thi">
-            📖 Câu này ở <strong>Trang <span id="pdf-sync-page-num">3</span></strong>
-          </div>
-        </div>
-        <div class="pdf-toolbar-center">
-          <div class="pdf-drive-indicator" title="Trình xem đề thi Google Drive chính thức">
-            <span class="drive-pulse-dot"></span>
-            <span>Google Drive PDF Viewer</span>
-          </div>
-        </div>
-        <div class="pdf-toolbar-right">
-          <button class="btn-tablet-switch-to-q" id="btn-tablet-to-question" title="Chuyển sang màn hình Trả lời câu hỏi">
-            📝 Sang Câu hỏi ➔
-          </button>
-          <button class="btn-icon-sub btn-external-drive" id="btn-pdf-external" title="Mở file đề Google Drive trong tab mới (Rất tiện chia đôi màn hình trên iPad)">
-            ↗️ Mở Drive tab mới
-          </button>
-        </div>
-      </div>
       <div class="pdf-viewport" id="pdf-viewport">
         <iframe id="pdf-frame" 
                 src="https://drive.google.com/file/d/1Qiu34_dltehpEVmfHvOivjAvf8Zkd77b/preview" 
@@ -574,6 +551,9 @@
       <div class="student-profile-badge">
         <span class="profile-icon">👤</span>
         <input type="text" id="input-student-name" placeholder="Nhập tên học sinh..." title="Tên học sinh để xuất file Excel">
+      </div>
+      <div class="pdf-page-badge" id="pdf-page-badge" title="Số trang câu hỏi này trong đề thi PDF">
+        <span>📖 Câu này ở <strong>Trang <span id="pdf-sync-page-num">1</span></strong></span>
       </div>
       <div class="storage-indicator" title="Tiến độ đang được lưu trữ an toàn trong trình duyệt của riêng em">
         <span class="pulse-dot"></span>
