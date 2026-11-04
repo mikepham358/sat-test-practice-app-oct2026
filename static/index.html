@@ -427,6 +427,11 @@
             <span class="cross-icon">⨉</span>
             <span>Eliminate Choices</span>
           </button>
+          <!-- Mermaid Mindmap Quick Toggle Button -->
+          <button type="button" class="btn-q-mermaid hidden" id="btn-q-mermaid" title="Ẩn / Hiện sơ đồ tư duy Mermaid của câu này">
+            <span class="btn-q-mm-icon">📊</span>
+            <span>Sơ đồ tư duy</span>
+          </button>
           <!-- Smart Question Feedback Button -->
           <button class="btn-q-feedback" id="btn-q-feedback" title="Báo lỗi câu hỏi hoặc góp ý đáp án cho câu này">
             <span class="btn-q-fb-icon">💬</span>
@@ -550,18 +555,22 @@
 
         <!-- Visual Thinking Diagram (Mermaid Interactive Mindmap / Flowchart) -->
         <div class="mermaid-diagram-card hidden" id="mermaid-diagram-card">
-          <div class="mermaid-card-header">
+          <div class="mermaid-card-header" id="mermaid-card-header" title="Bấm để Ẩn / Hiện nội dung sơ đồ tư duy">
             <div class="mermaid-header-left">
               <span class="mermaid-badge-tag">📊 SƠ ĐỒ TƯ DUY TRỰC QUAN</span>
               <span class="mermaid-card-title">Mindmap Phân Tích Logic & Loại Trừ (Mermaid)</span>
             </div>
             <div class="mermaid-header-actions">
-              <button type="button" class="btn-mermaid-action" id="btn-mermaid-toggle-zoom" title="Thu phóng sơ đồ tư duy">
-                <span>🔍 Phóng to</span>
+              <button type="button" class="btn-mermaid-action btn-mermaid-toggle" id="btn-mermaid-toggle-view" title="Ẩn / Hiện nội dung sơ đồ tư duy">
+                <span id="mermaid-toggle-view-text">👁️ Ẩn sơ đồ</span>
               </button>
+              <button type="button" class="btn-mermaid-action" id="btn-mermaid-toggle-zoom" title="Thu phóng sơ đồ tư duy">
+                <span id="mermaid-zoom-text">🔍 Phóng to</span>
+              </button>
+              <span class="mermaid-arrow-icon" id="mermaid-arrow-icon">▼</span>
             </div>
           </div>
-          <div class="mermaid-card-body">
+          <div class="mermaid-card-body" id="mermaid-card-body">
             <div class="mermaid-viewer" id="mermaid-viewer">
               <!-- Rendered Mermaid SVG injected dynamically -->
             </div>

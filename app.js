@@ -196,6 +196,7 @@ const DOM = {
   chkMarkReview: document.getElementById("chk-mark-review"),
   markReviewLabel: document.querySelector(".mark-review-label"),
   btnToggleEliminator: document.getElementById("btn-toggle-eliminator"),
+  btnQMermaid: document.getElementById("btn-q-mermaid"),
 
   // Excerpt
   excerptHeader: document.getElementById("excerpt-header"),
@@ -243,8 +244,14 @@ const DOM = {
 
   // Visual Thinking Diagram (Mermaid)
   mermaidDiagramCard: document.getElementById("mermaid-diagram-card"),
+  mermaidCardHeader: document.getElementById("mermaid-card-header"),
+  mermaidCardBody: document.getElementById("mermaid-card-body"),
   mermaidViewer: document.getElementById("mermaid-viewer"),
+  btnMermaidToggleView: document.getElementById("btn-mermaid-toggle-view"),
+  mermaidToggleViewText: document.getElementById("mermaid-toggle-view-text"),
   btnMermaidToggleZoom: document.getElementById("btn-mermaid-toggle-zoom"),
+  mermaidZoomText: document.getElementById("mermaid-zoom-text"),
+  mermaidArrowIcon: document.getElementById("mermaid-arrow-icon"),
 
   // Footer Dock
   inputStudentName: document.getElementById("input-student-name"),
@@ -1407,16 +1414,50 @@ function renderHints(q, qState) {
 }
 
 // ================= MERMAID INTERACTIVE VISUAL THINKING DIAGRAM =================
+function toggleMermaidCollapse(force) {
+  if (!DOM.mermaidDiagramCard || !DOM.mermaidCardBody) return;
+  const isCurrentlyCollapsed = DOM.mermaidCardBody.classList.contains("collapsed");
+  const willCollapse = typeof force === "boolean" ? force : !isCurrentlyCollapsed;
+
+  DOM.mermaidCardBody.classList.toggle("collapsed", willCollapse);
+  DOM.mermaidDiagramCard.classList.toggle("is-collapsed", willCollapse);
+
+  if (DOM.mermaidToggleViewText) {
+    DOM.mermaidToggleViewText.textContent = willCollapse ? "👁️ Hiện sơ đồ" : "👁️ Ẩn sơ đồ";
+  }
+  if (DOM.btnQMermaid) {
+    DOM.btnQMermaid.classList.toggle("active", !willCollapse);
+  }
+}
+
 async function renderMermaidDiagram(q, isFinished) {
   if (!DOM.mermaidDiagramCard || !DOM.mermaidViewer) return;
 
-  if (!isFinished || !q.mermaid_diagram || !q.mermaid_diagram.trim()) {
+  const hasMermaid = isFinished && q.mermaid_diagram && q.mermaid_diagram.trim().length > 0;
+
+  if (DOM.btnQMermaid) {
+    DOM.btnQMermaid.classList.toggle("hidden", !hasMermaid);
+    DOM.btnQMermaid.classList.toggle("active", hasMermaid);
+  }
+
+  if (!hasMermaid) {
     DOM.mermaidDiagramCard.classList.add("hidden");
     DOM.mermaidViewer.innerHTML = "";
     return;
   }
 
   DOM.mermaidDiagramCard.classList.remove("hidden");
+  // Reset collapsed & zoom states when moving between questions
+  if (DOM.mermaidCardBody) DOM.mermaidCardBody.classList.remove("collapsed");
+  DOM.mermaidDiagramCard.classList.remove("is-collapsed");
+  DOM.mermaidDiagramCard.classList.remove("is-zoomed");
+  if (DOM.mermaidToggleViewText) DOM.mermaidToggleViewText.textContent = "👁️ Ẩn sơ đồ";
+  if (DOM.mermaidZoomText) {
+    DOM.mermaidZoomText.textContent = "🔍 Phóng to";
+  } else if (DOM.btnMermaidToggleZoom) {
+    DOM.btnMermaidToggleZoom.innerHTML = '<span>🔍 Phóng to</span>';
+  }
+
   const rawCode = q.mermaid_diagram.trim();
   const targetQId = q.id;
   const renderId = `mermaid-svg-${q.id || App.currentIndex}-${Date.now()}`;
@@ -3899,13 +3940,50 @@ function setupEventListeners() {
     DOM.formSubmitFeedback.addEventListener("submit", handleFeedbackSubmit);
   }
 
-  // Mermaid Zoom Toggle
+  // Mermaid Mindmap Collapse/Expand & Zoom
+  if (DOM.btnMermaidToggleView) {
+    DOM.btnMermaidToggleView.addEventListener("click", (e) => {
+      e.stopPropagation();
+      toggleMermaidCollapse();
+    });
+  }
+
+  if (DOM.mermaidCardHeader) {
+    DOM.mermaidCardHeader.addEventListener("click", (e) => {
+      if (e.target.closest("#btn-mermaid-toggle-zoom") || e.target.closest("#btn-mermaid-toggle-view")) {
+        return;
+      }
+      toggleMermaidCollapse();
+    });
+  }
+
+  if (DOM.btnQMermaid) {
+    DOM.btnQMermaid.addEventListener("click", () => {
+      if (!DOM.mermaidDiagramCard || DOM.mermaidDiagramCard.classList.contains("hidden")) return;
+      const isCollapsed = DOM.mermaidCardBody && DOM.mermaidCardBody.classList.contains("collapsed");
+      if (isCollapsed) {
+        toggleMermaidCollapse(false);
+        DOM.mermaidDiagramCard.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      } else {
+        toggleMermaidCollapse(true);
+      }
+    });
+  }
+
   if (DOM.btnMermaidToggleZoom) {
-    DOM.btnMermaidToggleZoom.addEventListener("click", () => {
+    DOM.btnMermaidToggleZoom.addEventListener("click", (e) => {
+      e.stopPropagation();
+      if (DOM.mermaidCardBody && DOM.mermaidCardBody.classList.contains("collapsed")) {
+        toggleMermaidCollapse(false);
+      }
       if (DOM.mermaidDiagramCard) {
         DOM.mermaidDiagramCard.classList.toggle("is-zoomed");
         const isZoomed = DOM.mermaidDiagramCard.classList.contains("is-zoomed");
-        DOM.btnMermaidToggleZoom.innerHTML = isZoomed ? "<span>🔍 Thu nhỏ</span>" : "<span>🔍 Phóng to</span>";
+        if (DOM.mermaidZoomText) {
+          DOM.mermaidZoomText.textContent = isZoomed ? "🔍 Thu nhỏ" : "🔍 Phóng to";
+        } else {
+          DOM.btnMermaidToggleZoom.innerHTML = isZoomed ? "<span>🔍 Thu nhỏ</span>" : "<span>🔍 Phóng to</span>";
+        }
       }
     });
   }
