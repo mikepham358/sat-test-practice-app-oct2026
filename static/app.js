@@ -1123,9 +1123,9 @@ function renderCurrentQuestion() {
     navigatePdf(q.pdf_page);
   }
 
-  // Excerpt Accordion
-  DOM.excerptPassage.textContent = q.passage || "Xem văn bản trên trang đề thi PDF bên trái.";
-  DOM.excerptPrompt.textContent = q.prompt || "";
+  // Excerpt Accordion (optional)
+  if (DOM.excerptPassage) DOM.excerptPassage.textContent = q.passage || "Xem văn bản trên trang đề thi PDF bên trái.";
+  if (DOM.excerptPrompt) DOM.excerptPrompt.textContent = q.prompt || "";
 
   // Render Response Mode: Multiple-Choice or Grid-in
   const isFinished = (qState.status && (qState.status.startsWith("mastered") || qState.status === "missed")) || !!qState.reviewAllHints;
@@ -3821,11 +3821,15 @@ function setupEventListeners() {
     });
   }
 
-  // Excerpt Accordion
-  DOM.excerptHeader.addEventListener("click", () => {
-    DOM.excerptBody.classList.toggle("collapsed");
-    DOM.excerptToggleIcon.textContent = DOM.excerptBody.classList.contains("collapsed") ? "▼" : "▲";
-  });
+  // Excerpt Accordion (optional)
+  if (DOM.excerptHeader) {
+    DOM.excerptHeader.addEventListener("click", () => {
+      if (DOM.excerptBody) DOM.excerptBody.classList.toggle("collapsed");
+      if (DOM.excerptToggleIcon && DOM.excerptBody) {
+        DOM.excerptToggleIcon.textContent = DOM.excerptBody.classList.contains("collapsed") ? "▼" : "▲";
+      }
+    });
+  }
 
   // Hints Accordion
   DOM.hintHead1.addEventListener("click", () => DOM.hintContent1.classList.toggle("collapsed"));
