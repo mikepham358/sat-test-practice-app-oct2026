@@ -5196,7 +5196,7 @@ body.resizing-split iframe {
 
 /* ================= MERMAID INTERACTIVE VISUAL THINKING DIAGRAM & POP-UP ================= */
 .mermaid-trigger-banner {
-  margin: 12px 0 10px 0;
+  margin: 0 0 16px 0;
   animation: mermaidFadeIn 0.35s ease-out;
 }
 

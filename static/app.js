@@ -189,7 +189,10 @@ const DOM = {
   pdfSyncPageNum: document.getElementById("pdf-sync-page-num"),
   btnPdfExternal: document.getElementById("btn-pdf-external"),
 
-  // Question Top
+  // Question Top & Actions
+  questionTopBar: document.getElementById("question-top-bar"),
+  responseInstruction: document.getElementById("response-instruction"),
+  qActionRow: document.getElementById("q-action-row"),
   qNumberLabel: document.getElementById("q-number-label"),
   qTopicBadge: document.getElementById("q-topic-badge"),
   qDomainBadge: document.getElementById("q-domain-badge"),
@@ -1135,6 +1138,14 @@ function renderCurrentQuestion() {
 
   // Render Response Mode: Multiple-Choice or Grid-in
   const isFinished = (qState.status && (qState.status.startsWith("mastered") || qState.status === "missed")) || !!qState.reviewAllHints;
+
+  // Question Header Instruction & Mark for Review visibility (Hidden after trial & error is completed)
+  if (DOM.questionTopBar) {
+    DOM.questionTopBar.classList.toggle("hidden", isFinished);
+  }
+  if (DOM.qActionRow) {
+    DOM.qActionRow.classList.toggle("hidden", isFinished);
+  }
 
   if (q.is_grid_in) {
     DOM.mcqResponseArea.classList.add("hidden");

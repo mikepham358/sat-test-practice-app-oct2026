@@ -391,21 +391,17 @@
     <section class="pane pane-content" id="pane-content">
       
       <!-- Bluebook Question Header / Instructions Bar -->
-      <div class="question-top-bar">
+      <div class="question-top-bar" id="question-top-bar">
         <div class="response-instruction" id="response-instruction">
           Đọc đề bài trên trang sách PDF bên trái và chọn đáp án đúng:
         </div>
-        <button type="button" class="btn-q-mermaid hidden" id="btn-q-mermaid" title="Ẩn / Hiện sơ đồ tư duy Mermaid của câu này">
-          <span class="btn-q-mm-icon">📊</span>
-          <span>Sơ đồ tư duy</span>
-        </button>
       </div>
 
       <!-- Question Main Card -->
       <div class="question-main-scroll">
         
         <!-- Bluebook Mark for Review (Left-aligned, ngay trên lựa chọn A) -->
-        <div class="q-action-row">
+        <div class="q-action-row" id="q-action-row">
           <label class="mark-review-label">
             <input type="checkbox" id="chk-mark-review">
             <span class="bookmark-icon">🔖</span>
@@ -416,6 +412,17 @@
         <!-- ================= RESPONSE INPUT AREA ================= -->
         <!-- 1. Multiple-Choice Response Area (A, B, C, D) -->
         <div class="response-area" id="mcq-response-area">
+          <!-- Trigger Mermaid Mindmap Pop-up (Visible when question finished & has Mermaid - Ngay trên lựa chọn A) -->
+          <div class="mermaid-trigger-banner hidden" id="mermaid-trigger-banner">
+            <button type="button" class="btn-open-mermaid-modal" id="btn-open-mermaid-modal" title="Bấm để mở Pop-up Sơ đồ tư duy trực quan">
+              <div class="mm-btn-left">
+                <span class="mm-icon">📊</span>
+                <span class="mm-text"><strong>Sơ đồ tư duy trực quan (Mermaid Mindmap)</strong> — Bấm để mở Pop-up phân tích logic</span>
+              </div>
+              <span class="mm-arrow">↗ Mở Pop-up</span>
+            </button>
+          </div>
+
           <div class="options-container" id="options-container">
             <!-- Dynamically populated options A, B, C, D -->
           </div>
@@ -461,16 +468,6 @@
           <span class="alert-text" id="alert-text">Kết quả kiểm tra</span>
         </div>
 
-        <!-- Trigger Mermaid Mindmap Pop-up (Visible when question finished & has Mermaid) -->
-        <div class="mermaid-trigger-banner hidden" id="mermaid-trigger-banner">
-          <button type="button" class="btn-open-mermaid-modal" id="btn-open-mermaid-modal" title="Bấm để mở Pop-up Sơ đồ tư duy trực quan">
-            <div class="mm-btn-left">
-              <span class="mm-icon">📊</span>
-              <span class="mm-text"><strong>Sơ đồ tư duy trực quan (Mermaid Mindmap)</strong> — Bấm để mở Pop-up phân tích logic</span>
-            </div>
-            <span class="mm-arrow">↗ Mở Pop-up</span>
-          </button>
-        </div>
 
         <!-- Progressive Hints Accordion (4 Tiers from Dataset v5) -->
         <div class="hints-accordion">
