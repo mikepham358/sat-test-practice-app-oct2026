@@ -4790,8 +4790,7 @@ body.zen-mode .footer-left:hover .storage-indicator {
 .zen-floating-pill {
   position: fixed;
   top: 12px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 16px;
   z-index: 1000;
   display: flex;
   align-items: center;
@@ -4809,11 +4808,11 @@ body.zen-mode .footer-left:hover .storage-indicator {
 
 @keyframes zenPillSlideDown {
   from {
-    transform: translate(-50%, -20px);
+    transform: translateY(-20px);
     opacity: 0;
   }
   to {
-    transform: translate(-50%, 0);
+    transform: translateY(0);
     opacity: 1;
   }
 }
