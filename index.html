@@ -390,33 +390,32 @@
     <!-- RIGHT PANE: Question & Bluebook Interaction -->
     <section class="pane pane-content" id="pane-content">
       
-      <!-- Bluebook Question Header -->
+      <!-- Bluebook Question Header / Instructions Bar -->
       <div class="question-top-bar">
-        <div class="q-actions-meta">
-          <!-- Bluebook Mark for Review -->
-          <label class="mark-review-label">
-            <input type="checkbox" id="chk-mark-review">
-            <span class="bookmark-icon">🔖</span>
-            <span>Mark for Review</span>
-          </label>
-          <!-- Mermaid Mindmap Quick Toggle Button -->
-          <button type="button" class="btn-q-mermaid hidden" id="btn-q-mermaid" title="Ẩn / Hiện sơ đồ tư duy Mermaid của câu này">
-            <span class="btn-q-mm-icon">📊</span>
-            <span>Sơ đồ tư duy</span>
-          </button>
+        <div class="response-instruction" id="response-instruction">
+          Đọc đề bài trên trang sách PDF bên trái và chọn đáp án đúng:
         </div>
+        <button type="button" class="btn-q-mermaid hidden" id="btn-q-mermaid" title="Ẩn / Hiện sơ đồ tư duy Mermaid của câu này">
+          <span class="btn-q-mm-icon">📊</span>
+          <span>Sơ đồ tư duy</span>
+        </button>
       </div>
 
       <!-- Question Main Card -->
       <div class="question-main-scroll">
         
+        <!-- Bluebook Mark for Review (Left-aligned, ngay trên lựa chọn A) -->
+        <div class="q-action-row">
+          <label class="mark-review-label">
+            <input type="checkbox" id="chk-mark-review">
+            <span class="bookmark-icon">🔖</span>
+            <span>Mark for Review</span>
+          </label>
+        </div>
 
         <!-- ================= RESPONSE INPUT AREA ================= -->
         <!-- 1. Multiple-Choice Response Area (A, B, C, D) -->
         <div class="response-area" id="mcq-response-area">
-          <div class="response-instruction">
-            Đọc đề bài trên trang sách PDF bên trái và chọn đáp án đúng:
-          </div>
           <div class="options-container" id="options-container">
             <!-- Dynamically populated options A, B, C, D -->
           </div>
