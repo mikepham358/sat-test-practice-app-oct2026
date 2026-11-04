@@ -1106,11 +1106,17 @@ function renderCurrentQuestion() {
     eliminated: []
   };
 
-  // Header Labels
-  DOM.qNumberLabel.textContent = `Question ${App.currentIndex + 1} of ${App.questions.length}`;
-  DOM.navCurrentLabel.textContent = App.currentIndex + 1;
-  DOM.qTopicBadge.textContent = q.topic;
-  DOM.qDomainBadge.textContent = q.section;
+  // Question Number & Navigation Labels
+  if (DOM.qNumberLabel) DOM.qNumberLabel.textContent = `Question ${App.currentIndex + 1} of ${App.questions.length}`;
+  if (DOM.navCurrentLabel) DOM.navCurrentLabel.textContent = App.currentIndex + 1;
+  if (DOM.qTopicBadge) {
+    DOM.qTopicBadge.textContent = q.topic || "";
+    DOM.qTopicBadge.title = `Chủ đề: ${q.topic || ""}`;
+  }
+  if (DOM.qDomainBadge) {
+    DOM.qDomainBadge.textContent = q.section || "";
+    DOM.qDomainBadge.title = `Phần thi: ${q.section || ""}`;
+  }
 
   // Mark for review
   DOM.chkMarkReview.checked = !!qState.marked;

@@ -392,11 +392,6 @@
       
       <!-- Bluebook Question Header -->
       <div class="question-top-bar">
-        <div class="q-title-meta">
-          <span class="q-number-label" id="q-number-label">Question 1 of 27</span>
-          <span class="q-topic-badge" id="q-topic-badge">Vocabulary in Context</span>
-          <span class="q-domain-badge" id="q-domain-badge">Craft & Structure</span>
-        </div>
         <div class="q-actions-meta">
           <!-- Bluebook Mark for Review -->
           <label class="mark-review-label">
@@ -536,17 +531,26 @@
         <span class="profile-icon">👤</span>
         <input type="text" id="input-student-name" placeholder="Nhập tên học sinh..." title="Tên học sinh để xuất file Excel">
       </div>
+    </div>
+
+    <!-- Bluebook Question Review Navigator & Context Center Dock -->
+    <div class="footer-center">
+      <!-- 1. 📖 Câu này ở Trang ... sát bên trái nút Question ... of 27 -->
       <div class="pdf-page-badge" id="pdf-page-badge" title="Số trang câu hỏi này trong đề thi PDF">
         <span>📖 Câu này ở <strong>Trang <span id="pdf-sync-page-num">1</span></strong></span>
       </div>
-    </div>
 
-    <!-- Bluebook Question Review Navigator Button -->
-    <div class="footer-center">
+      <!-- Question ... of 27 Navigator Button -->
       <button class="btn-question-navigator" id="btn-open-navigator">
         <span>Question <strong id="nav-current-label">1</strong> of <span id="nav-total-label">27</span></span>
         <span class="nav-arrow-up">▲</span>
       </button>
+
+      <!-- 2. Thông báo loại câu hỏi và phần thi sát về bên phải nút Question ... of 27 -->
+      <div class="footer-q-meta" id="footer-q-meta">
+        <span class="q-topic-badge" id="q-topic-badge">Vocabulary in Context</span>
+        <span class="q-domain-badge" id="q-domain-badge">Craft & Structure</span>
+      </div>
     </div>
 
     <!-- Navigation Buttons Back & Next -->

@@ -598,46 +598,53 @@ body {
 
 /* ================= LUXURY MINIMALIST QUESTION CARD ================= */
 .question-top-bar {
-  padding: 16px 24px;
+  padding: 10px 24px;
   background: #ffffff;
   border-bottom: 1px solid #f1f5f9;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   flex-shrink: 0;
+  min-height: 48px;
 }
 
 .q-title-meta {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+  display: none;
 }
 
 .q-number-label {
-  font-size: 17px;
-  font-weight: 800;
-  color: #0f172a;
-  letter-spacing: -0.3px;
+  display: none;
 }
 
 .q-topic-badge {
   background: #f8fafc;
-  color: #475569;
-  border: 1px solid #e2e8f0;
-  font-size: 11.5px;
+  color: #334155;
+  border: 1px solid #cbd5e1;
+  font-size: 12px;
   font-weight: 600;
-  padding: 4px 10px;
-  border-radius: 14px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  white-space: nowrap;
+  max-width: 260px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+  transition: all 0.2s ease;
 }
 
 .q-domain-badge {
-  background: #f0fdf4;
-  color: #15803d;
-  border: 1px solid #bbf7d0;
-  font-size: 11.5px;
+  background: #ecfdf5;
+  color: #047857;
+  border: 1px solid #a7f3d0;
+  font-size: 12px;
   font-weight: 700;
-  padding: 4px 10px;
-  border-radius: 14px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  white-space: nowrap;
+  display: inline-block;
+  box-shadow: 0 1px 2px rgba(21, 128, 61, 0.05);
+  transition: all 0.2s ease;
 }
 
 .q-actions-meta {
@@ -1314,6 +1321,7 @@ body {
 
 /* ================= LUXURY MINIMALIST FOOTER DOCK ================= */
 .bluebook-footer {
+  position: relative;
   height: 64px;
   background: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(10px);
@@ -1372,11 +1380,21 @@ body {
   box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
 }
 
-/* Question Navigator Button Center */
+/* Question Navigator & Context Center Dock */
 .footer-center {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  white-space: nowrap;
+}
+
+.footer-q-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .btn-question-navigator {
@@ -4738,13 +4756,15 @@ body.zen-mode .split-container {
 }
 
 body.zen-mode .footer-left .student-profile-badge,
-body.zen-mode .footer-left .pdf-page-badge,
+body.zen-mode .footer-center .pdf-page-badge,
+body.zen-mode .footer-center .footer-q-meta,
 body.zen-mode .footer-left .storage-indicator {
-  opacity: 0.3;
+  opacity: 0.35;
   transition: opacity 0.2s ease;
 }
 body.zen-mode .footer-left:hover .student-profile-badge,
-body.zen-mode .footer-left:hover .pdf-page-badge,
+body.zen-mode .footer-center:hover .pdf-page-badge,
+body.zen-mode .footer-center:hover .footer-q-meta,
 body.zen-mode .footer-left:hover .storage-indicator {
   opacity: 1;
 }
@@ -5083,6 +5103,46 @@ body.zen-mode .footer-left:hover .storage-indicator {
 
   .btn-timer-action#btn-timer-toggle-view {
     display: none;
+  }
+
+  .footer-q-meta {
+    display: none !important;
+  }
+  .student-profile-badge input {
+    width: 85px;
+  }
+}
+
+/* Responsive adjustments for footer center metadata & badges */
+@media (max-width: 1200px) {
+  .footer-center {
+    gap: 8px;
+  }
+  .footer-q-meta .q-topic-badge {
+    max-width: 170px;
+    font-size: 11.5px;
+  }
+  .footer-q-meta .q-domain-badge {
+    font-size: 11.5px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .footer-q-meta .q-domain-badge {
+    display: none !important;
+  }
+  .footer-q-meta .q-topic-badge {
+    max-width: 140px;
+    font-size: 11px;
+    padding: 4px 8px;
+  }
+  .pdf-page-badge {
+    padding: 5px 10px;
+    font-size: 11px;
+  }
+  .btn-question-navigator {
+    padding: 8px 18px;
+    font-size: 12.5px;
   }
 }
 
