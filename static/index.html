@@ -432,11 +432,6 @@
             <span class="btn-q-mm-icon">📊</span>
             <span>Sơ đồ tư duy</span>
           </button>
-          <!-- Smart Question Feedback Button -->
-          <button class="btn-q-feedback" id="btn-q-feedback" title="Báo lỗi câu hỏi hoặc góp ý đáp án cho câu này">
-            <span class="btn-q-fb-icon">💬</span>
-            <span>Góp ý câu này</span>
-          </button>
         </div>
       </div>
 
@@ -506,6 +501,30 @@
           <span class="alert-text" id="alert-text">Kết quả kiểm tra</span>
         </div>
 
+        <!-- Visual Thinking Diagram (Mermaid Interactive Mindmap / Flowchart) - Placed directly above Feedback Tier 1 -->
+        <div class="mermaid-diagram-card hidden" id="mermaid-diagram-card">
+          <div class="mermaid-card-header" id="mermaid-card-header" title="Bấm để Ẩn / Hiện nội dung sơ đồ tư duy">
+            <div class="mermaid-header-left">
+              <span class="mermaid-badge-tag">📊 SƠ ĐỒ TƯ DUY TRỰC QUAN</span>
+              <span class="mermaid-card-title">Mindmap Phân Tích Logic & Loại Trừ (Mermaid)</span>
+            </div>
+            <div class="mermaid-header-actions">
+              <button type="button" class="btn-mermaid-action btn-mermaid-toggle" id="btn-mermaid-toggle-view" title="Ẩn / Hiện nội dung sơ đồ tư duy">
+                <span id="mermaid-toggle-view-text">👁️ Ẩn sơ đồ</span>
+              </button>
+              <button type="button" class="btn-mermaid-action" id="btn-mermaid-toggle-zoom" title="Thu phóng sơ đồ tư duy">
+                <span id="mermaid-zoom-text">🔍 Phóng to</span>
+              </button>
+              <span class="mermaid-arrow-icon" id="mermaid-arrow-icon">▼</span>
+            </div>
+          </div>
+          <div class="mermaid-card-body" id="mermaid-card-body">
+            <div class="mermaid-viewer" id="mermaid-viewer">
+              <!-- Rendered Mermaid SVG injected dynamically -->
+            </div>
+          </div>
+        </div>
+
         <!-- Progressive Hints Accordion (4 Tiers from Dataset v5) -->
         <div class="hints-accordion">
           <!-- Tier 1: Context & Thinking Direction -->
@@ -549,30 +568,6 @@
             </div>
             <div class="hint-content collapsed" id="hint-content-4">
               <div id="hint-text-4">Trả lời đúng để mở khóa bí kíp chiến thuật.</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Visual Thinking Diagram (Mermaid Interactive Mindmap / Flowchart) -->
-        <div class="mermaid-diagram-card hidden" id="mermaid-diagram-card">
-          <div class="mermaid-card-header" id="mermaid-card-header" title="Bấm để Ẩn / Hiện nội dung sơ đồ tư duy">
-            <div class="mermaid-header-left">
-              <span class="mermaid-badge-tag">📊 SƠ ĐỒ TƯ DUY TRỰC QUAN</span>
-              <span class="mermaid-card-title">Mindmap Phân Tích Logic & Loại Trừ (Mermaid)</span>
-            </div>
-            <div class="mermaid-header-actions">
-              <button type="button" class="btn-mermaid-action btn-mermaid-toggle" id="btn-mermaid-toggle-view" title="Ẩn / Hiện nội dung sơ đồ tư duy">
-                <span id="mermaid-toggle-view-text">👁️ Ẩn sơ đồ</span>
-              </button>
-              <button type="button" class="btn-mermaid-action" id="btn-mermaid-toggle-zoom" title="Thu phóng sơ đồ tư duy">
-                <span id="mermaid-zoom-text">🔍 Phóng to</span>
-              </button>
-              <span class="mermaid-arrow-icon" id="mermaid-arrow-icon">▼</span>
-            </div>
-          </div>
-          <div class="mermaid-card-body" id="mermaid-card-body">
-            <div class="mermaid-viewer" id="mermaid-viewer">
-              <!-- Rendered Mermaid SVG injected dynamically -->
             </div>
           </div>
         </div>

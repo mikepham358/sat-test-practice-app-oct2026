@@ -4922,7 +4922,8 @@ body.resizing-split iframe {
 
 /* ================= MERMAID INTERACTIVE VISUAL THINKING DIAGRAM ================= */
 .mermaid-diagram-card {
-  margin-top: 22px;
+  margin-top: 14px;
+  margin-bottom: 14px;
   background: #ffffff;
   border: 1.5px solid #e2e8f0;
   border-radius: 14px;
