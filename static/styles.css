@@ -78,19 +78,24 @@ body {
 }
 
 .btn-home {
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  min-height: 38px;
+  padding: 0 !important;
   background: rgba(255, 255, 255, 0.06);
   color: #f8fafc;
   border: 1px solid rgba(255, 255, 255, 0.12);
-  font-size: 12.5px;
-  font-weight: 600;
-  padding: 6px 14px;
-  border-radius: 20px;
+  border-radius: 10px;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  justify-content: center;
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   white-space: nowrap;
+  flex-shrink: 0;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .btn-home:hover {
@@ -98,6 +103,19 @@ body {
   color: #60a5fa;
   border-color: rgba(96, 165, 250, 0.4);
   transform: translateY(-1px);
+}
+
+.btn-home:active {
+  transform: scale(0.92);
+}
+
+.btn-home .home-text {
+  display: none !important;
+}
+
+.btn-home .home-icon {
+  font-size: 16px;
+  line-height: 1;
 }
 
 .test-badge {
@@ -184,45 +202,51 @@ body {
   color: #fff;
 }
 
-/* Header Tools */
+/* Header Tools (Universal Smart Icon Dock across All Devices) */
 .header-tools {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
+  flex-shrink: 0;
 }
 
 .tool-btn {
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  min-height: 38px;
+  padding: 0 !important;
   background: rgba(255, 255, 255, 0.06);
   color: #f1f5f9;
   border: 1px solid rgba(255, 255, 255, 0.12);
-  font-size: 12px;
-  font-weight: 600;
-  padding: 6px 12px;
-  border-radius: 18px;
+  border-radius: 10px;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  justify-content: center;
+  gap: 0;
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
   touch-action: manipulation;
   -webkit-tap-highlight-color: transparent;
   user-select: none;
+  flex-shrink: 0;
 }
 
 .tool-btn:hover {
-  background: rgba(255, 255, 255, 0.14);
-  border-color: rgba(255, 255, 255, 0.28);
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
   color: #fff;
   transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 .tool-btn:active {
-  transform: scale(0.94);
+  transform: scale(0.92);
 }
 
 .tool-btn .tool-icon {
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1;
   display: inline-flex;
   align-items: center;
@@ -230,7 +254,26 @@ body {
 }
 
 .tool-btn .tool-text {
-  white-space: nowrap;
+  display: none !important;
+}
+
+.tool-btn .badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  min-width: 16px;
+  height: 16px;
+  font-size: 9.5px;
+  font-weight: 800;
+  padding: 1px 4px;
+  border-radius: 9999px;
+  background: #ef4444;
+  color: #fff;
+  border: 1.5px solid #090d16;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
 }
 
 .tool-btn.btn-export {
@@ -261,43 +304,54 @@ body {
   background: linear-gradient(135deg, #10b981 0%, #059669 100%);
   color: #fff;
   border: 1px solid #10b981;
-  font-weight: 700;
-  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.35);
+  box-shadow: 0 2px 10px rgba(16, 185, 129, 0.3);
 }
 
 .tool-btn.btn-finish-test:hover {
   background: linear-gradient(135deg, #059669 0%, #047857 100%);
-  transform: translateY(-1.5px);
-  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.45);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.45);
 }
 
 .header-student-badge {
-  display: flex;
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  min-height: 38px;
+  padding: 0 !important;
+  border-radius: 10px;
+  display: inline-flex;
   align-items: center;
-  gap: 6px;
+  justify-content: center;
   background: #1e293b;
   border: 1px solid #334155;
-  padding: 4px 10px;
-  border-radius: 6px;
   color: #e2e8f0;
-  font-size: 12px;
-}
-
-.header-student-badge .badge-name {
-  font-weight: 600;
-  max-width: 120px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.btn-edit-student {
-  background: transparent;
-  border: none;
   cursor: pointer;
-  padding: 0 2px;
-  font-size: 11px;
-  opacity: 0.8;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.header-student-badge:hover {
+  background: #334155;
+  border-color: #475569;
+  transform: translateY(-1px);
+}
+
+.header-student-badge:active {
+  transform: scale(0.92);
+}
+
+.header-student-badge .badge-icon {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.header-student-badge .badge-name,
+.header-student-badge .tool-text,
+.header-student-badge .btn-edit-student {
+  display: none !important;
 }
 
 .btn-edit-student:hover {
@@ -4895,35 +4949,18 @@ body.zen-mode .footer-left:hover .storage-indicator {
   }
 }
 
-/* ================= IPAD & TABLET SMART ICON-CENTRIC TOPBAR ================= */
+/* ================= RESPONSIVE ADJUSTMENTS FOR TABLET & COMPACT SCREENS ================= */
 @media (max-width: 1200px) {
   .bluebook-header {
     padding: 0 12px;
     gap: 8px;
   }
 
-  /* Left: Compact selectors & home icon */
+  /* Left: Compact selectors */
   .header-section-info {
     gap: 6px;
     min-width: 0;
     flex-shrink: 1;
-  }
-
-  .btn-home {
-    width: 38px;
-    height: 38px;
-    min-width: 38px;
-    padding: 0 !important;
-    justify-content: center;
-    border-radius: 10px;
-  }
-
-  .btn-home .home-text {
-    display: none !important;
-  }
-
-  .btn-home .home-icon {
-    font-size: 16px;
   }
 
   .practice-test-badge {
@@ -4958,71 +4995,12 @@ body.zen-mode .footer-left:hover .storage-indicator {
     font-size: 11px;
   }
 
-  /* Right: Smart Icon-only Tool Dock */
+  /* Right: Smart Icon Tool Dock */
   .header-tools {
     overflow: visible !important;
     max-width: none !important;
     gap: 5px;
     flex-shrink: 0;
-  }
-
-  .tool-btn {
-    width: 38px;
-    height: 38px;
-    min-width: 38px;
-    min-height: 38px;
-    padding: 0 !important;
-    border-radius: 10px;
-    justify-content: center;
-    gap: 0;
-  }
-
-  .tool-btn .tool-text {
-    display: none !important;
-  }
-
-  .tool-btn .tool-icon {
-    font-size: 16px;
-    line-height: 1;
-  }
-
-  .tool-btn .badge {
-    position: absolute;
-    top: -4px;
-    right: -4px;
-    min-width: 16px;
-    height: 16px;
-    font-size: 9.5px;
-    font-weight: 800;
-    padding: 1px 4px;
-    border-radius: 9999px;
-    border: 1.5px solid #090d16;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-  }
-
-  .header-student-badge {
-    width: 38px;
-    height: 38px;
-    min-width: 38px;
-    min-height: 38px;
-    padding: 0 !important;
-    border-radius: 10px;
-    justify-content: center;
-    cursor: pointer;
-  }
-
-  .header-student-badge .badge-icon {
-    font-size: 16px;
-    line-height: 1;
-  }
-
-  .header-student-badge .tool-text,
-  .header-student-badge .badge-name,
-  .header-student-badge .btn-edit-student {
-    display: none !important;
   }
 }
 
