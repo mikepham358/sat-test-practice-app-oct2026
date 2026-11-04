@@ -278,7 +278,8 @@
     <header class="bluebook-header">
       <div class="header-section-info">
         <button class="btn-home" id="btn-home" title="Về trang chủ / Hướng dẫn làm bài">
-          <span>🏠 Trang chủ</span>
+          <span class="home-icon">🏠</span>
+          <span class="home-text">Trang chủ</span>
         </button>
         <div class="test-badge-wrap">
           <span class="test-badge" id="practice-test-badge">DIGITAL SAT</span>
@@ -304,40 +305,44 @@
       <button class="btn-timer-action" id="btn-timer-pause" title="Tạm dừng / Tiếp tục">⏸️</button>
     </div>
 
-    <!-- Right Utility Tools -->
+    <!-- Right Utility Tools (Smart Icon Bar) -->
     <div class="header-tools">
-      <button class="tool-btn btn-zen-toggle" id="btn-toggle-zen" title="Bật/Tắt Chế độ Tập trung Zen Mode (Phím tắt Z)">
-        <span class="zen-icon">🧘</span>
-        <span>Zen Mode</span>
+      <button class="tool-btn btn-zen-toggle" id="btn-toggle-zen" title="Bật/Tắt Chế độ Tập trung Zen Mode (Phím Z)">
+        <span class="tool-icon">🧘</span>
+        <span class="tool-text">Zen</span>
       </button>
       <button class="tool-btn" id="btn-open-calc" title="Mở máy tính vẽ đồ thị Desmos">
-        <span>🧮 Calculator</span>
+        <span class="tool-icon">🧮</span>
+        <span class="tool-text">Calculator</span>
       </button>
       <button class="tool-btn" id="btn-open-ref" title="Mở bảng công thức Toán SAT">
-        <span>📐 Reference</span>
+        <span class="tool-icon">📐</span>
+        <span class="tool-text">Reference</span>
       </button>
       <button class="tool-btn" id="btn-toggle-scratchpad" title="Bảng nháp Whiteboard">
-        <span>✏️ Scratchpad</span>
+        <span class="tool-icon">✏️</span>
+        <span class="tool-text">Scratchpad</span>
       </button>
       <button class="tool-btn" id="btn-open-error-log" title="Sổ tay Thử sai Socratic">
-        <span>🎯 Sổ thử sai</span>
+        <span class="tool-icon">🎯</span>
+        <span class="tool-text">Sổ thử sai</span>
         <span class="badge" id="badge-error-count">0</span>
       </button>
-      <button class="tool-btn" id="btn-open-strategies" title="Bí kíp chiến lược đề thi">
-        <span>⚡ Chiến thuật</span>
-      </button>
       <button class="tool-btn btn-export" id="btn-export-excel" title="Xuất kết quả riêng của em ra Excel">
-        <span>📥 Xuất Excel</span>
+        <span class="tool-icon">📥</span>
+        <span class="tool-text">Xuất Excel</span>
       </button>
       <button class="tool-btn btn-reset-test" id="btn-reset-test" title="Đặt lại và làm lại bài thi từ đầu">
-        <span>🔄 Làm lại</span>
+        <span class="tool-icon">🔄</span>
+        <span class="tool-text">Làm lại</span>
       </button>
       <button class="tool-btn btn-finish-test" id="btn-finish-test" title="Hoàn thành bài thi và gửi báo cáo về email">
-        <span>🏁 Hoàn thành</span>
+        <span class="tool-icon">🏁</span>
+        <span class="tool-text">Hoàn thành</span>
       </button>
       <div class="header-student-badge" id="header-student-badge" title="Thông tin học sinh (Bấm để chỉnh sửa)">
-        <span class="badge-icon">👤</span>
-        <span class="badge-name" id="header-student-name">Học sinh</span>
+        <span class="badge-icon tool-icon">👤</span>
+        <span class="badge-name tool-text" id="header-student-name">Học sinh</span>
         <button class="btn-edit-student" id="btn-edit-student" title="Sửa tên / email">✏️</button>
       </div>
     </div>

@@ -3733,15 +3733,19 @@ function setupEventListeners() {
     });
   }
 
-  DOM.btnOpenStrategies.addEventListener("click", () => {
-    pauseTimer();
-    renderStrategiesModal();
-    DOM.modalStrategies.classList.remove("hidden");
-  });
-  DOM.btnCloseStrategies.addEventListener("click", () => {
-    DOM.modalStrategies.classList.add("hidden");
-    syncTimerState();
-  });
+  if (DOM.btnOpenStrategies) {
+    DOM.btnOpenStrategies.addEventListener("click", () => {
+      pauseTimer();
+      renderStrategiesModal();
+      DOM.modalStrategies.classList.remove("hidden");
+    });
+  }
+  if (DOM.btnCloseStrategies) {
+    DOM.btnCloseStrategies.addEventListener("click", () => {
+      DOM.modalStrategies.classList.add("hidden");
+      syncTimerState();
+    });
+  }
 
   // Home Button
   if (DOM.btnHome) {
