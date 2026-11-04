@@ -841,9 +841,20 @@ body {
 
 .option-row.eliminated {
   opacity: 0.45;
-  text-decoration: line-through;
   background: #f8fafc;
   border-color: #cbd5e1;
+}
+
+.option-row.eliminated .option-text-wrap {
+  text-decoration: line-through;
+  color: #94a3b8;
+}
+
+.option-row.eliminated .option-bubble {
+  background: #f1f5f9;
+  color: #94a3b8;
+  border-color: #cbd5e1;
+  text-decoration: none;
 }
 
 .option-header-row {
@@ -1034,28 +1045,47 @@ body {
   border-color: #fecdd3;
 }
 
-/* Strikethrough Eliminate Action Button */
+/* Strikethrough Eliminate Action Button (Directly Integrated on Options A, B, C, D) */
 .btn-strike-option {
-  background: transparent;
-  border: 1px solid transparent;
-  color: #94a3b8;
-  font-size: 16px;
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  min-height: 32px;
+  border-radius: 8px;
+  border: 1.5px solid #e2e8f0;
+  background: #f8fafc;
+  color: #64748b;
+  font-size: 14px;
   font-weight: 800;
-  padding: 4px 8px;
-  border-radius: 6px;
   cursor: pointer;
-  display: none;
-  transition: all 0.15s ease;
-}
-
-body.eliminator-mode-active .btn-strike-option {
-  display: block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  flex-shrink: 0;
+  margin-left: auto;
+  user-select: none;
 }
 
 .btn-strike-option:hover {
   background: #fee2e2;
-  color: #dc2626;
+  color: #ef4444;
   border-color: #fca5a5;
+  transform: scale(1.08);
+}
+
+.btn-strike-option:active {
+  transform: scale(0.92);
+}
+
+.btn-strike-option.is-eliminated,
+.option-row.eliminated .btn-strike-option {
+  background: #ef4444;
+  color: #ffffff;
+  border-color: #ef4444;
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.35);
 }
 
 /* ================= GRID-IN (MATH SPR) ================= */

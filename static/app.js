@@ -1233,11 +1233,12 @@ function renderOptions(q, qState, isFinished) {
       row.classList.add("wrong");
     }
 
+    const isEliminated = eliminated.includes(opt.key);
     row.innerHTML = `
       <div class="option-header-row">
         <div class="option-bubble">${opt.key}</div>
         <div class="option-text-wrap font-medium">Lựa chọn ${opt.key}</div>
-        ${!isFinished ? `<button class="btn-strike-option" title="Gạch bỏ phương án này">⨉</button>` : ''}
+        ${!isFinished ? `<button type="button" class="btn-strike-option ${isEliminated ? 'is-eliminated' : ''}" title="${isEliminated ? 'Khôi phục phương án ' + opt.key : 'Gạch bỏ phương án ' + opt.key + ' (Eliminate)'}">⨉</button>` : ''}
       </div>
     `;
 
@@ -1276,13 +1277,22 @@ function renderOptions(q, qState, isFinished) {
       DOM.btnCheckAnswer.disabled = false;
     });
 
-    // Eliminator strike action
+    // Eliminator strike action (Directly integrated on options A, B, C, D)
     const btnStrike = row.querySelector(".btn-strike-option");
     if (btnStrike) {
       btnStrike.addEventListener("click", (e) => {
         e.stopPropagation();
         row.classList.toggle("eliminated");
-        if (row.classList.contains("eliminated")) {
+        const nowEliminated = row.classList.contains("eliminated");
+        btnStrike.classList.toggle("is-eliminated", nowEliminated);
+        btnStrike.title = nowEliminated ? `Khôi phục phương án ${opt.key}` : `Gạch bỏ phương án ${opt.key} (Eliminate)`;
+
+        if (nowEliminated) {
+          if (row.classList.contains("selected")) {
+            row.classList.remove("selected");
+            App.selectedChoice = null;
+            DOM.btnCheckAnswer.disabled = true;
+          }
           if (!qState.eliminated) qState.eliminated = [];
           if (!qState.eliminated.includes(opt.key)) qState.eliminated.push(opt.key);
         } else {
@@ -3514,12 +3524,14 @@ function setupEventListeners() {
     DOM.markReviewLabel.classList.toggle("marked", e.target.checked);
   });
 
-  // Eliminator mode toggle [ABC]
-  DOM.btnToggleEliminator.addEventListener("click", () => {
-    App.eliminatorMode = !App.eliminatorMode;
-    DOM.btnToggleEliminator.classList.toggle("active", App.eliminatorMode);
-    document.body.classList.toggle("eliminator-mode-active", App.eliminatorMode);
-  });
+  // Eliminator mode toggle [ABC] (Optional top toggle fallback)
+  if (DOM.btnToggleEliminator) {
+    DOM.btnToggleEliminator.addEventListener("click", () => {
+      App.eliminatorMode = !App.eliminatorMode;
+      DOM.btnToggleEliminator.classList.toggle("active", App.eliminatorMode);
+      document.body.classList.toggle("eliminator-mode-active", App.eliminatorMode);
+    });
+  }
 
   // Check Answer
   DOM.btnCheckAnswer.addEventListener("click", checkAnswer);
