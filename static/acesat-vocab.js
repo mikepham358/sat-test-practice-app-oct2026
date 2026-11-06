@@ -67,7 +67,6 @@
     bindEvents();
     populateListPicker();
     updateAcedCounterDisplay();
-    renderReviewTable();
     initPracticeCards();
   }
 
@@ -83,13 +82,6 @@
       btnClearSearch: document.getElementById('acesat-clear-search'),
       tabs: document.querySelectorAll('.acesat-tab-btn'),
       panels: document.querySelectorAll('.acesat-tab-panel'),
-
-      // Review
-      reviewTitle: document.getElementById('acesat-review-list-title'),
-      reviewTbody: document.getElementById('acesat-vocab-tbody'),
-      btnSpeakAll: document.getElementById('acesat-speak-all-btn'),
-      btnToFlashcards: document.getElementById('acesat-btn-to-flashcards'),
-      btnToTest: document.getElementById('acesat-btn-to-test'),
 
       // Practice
       practiceTitle: document.getElementById('acesat-practice-list-title'),
@@ -196,7 +188,6 @@
       el.acedIndicator.classList.toggle('hidden', !isAced);
     }
     const listTitle = `List ${currentListIndex + 1}`;
-    if (el.reviewTitle) el.reviewTitle.textContent = listTitle;
     if (el.practiceTitle) el.practiceTitle.textContent = listTitle;
     if (el.testTitle) el.testTitle.textContent = listTitle;
   }
@@ -207,7 +198,6 @@
     currentListIndex = newIdx;
     if (el.listPicker) el.listPicker.value = currentListIndex;
     updateListMetaUI();
-    renderReviewTable();
     initPracticeCards();
     startTestQuiz();
   }
@@ -243,46 +233,7 @@
     }
   }
 
-  // --- 1. REVIEW TABLE ---
-  function renderReviewTable() {
-    if (!el.reviewTbody) return;
-    const words = rawWordLists[currentListIndex] || [];
-    el.reviewTbody.innerHTML = '';
-
-    words.forEach((item, idx) => {
-      const tr = document.createElement('tr');
-      tr.innerHTML = `
-        <td class="td-num">${idx + 1}</td>
-        <td class="td-word"><strong>${item.word}</strong></td>
-        <td class="td-def">${item.definition}</td>
-        <td class="td-audio">
-          <button class="btn-audio-speak" title="Nghe phát âm">🔊</button>
-        </td>
-      `;
-      tr.querySelector('.btn-audio-speak').addEventListener('click', (e) => {
-        e.stopPropagation();
-        speakWord(item.word);
-      });
-      tr.addEventListener('click', () => speakWord(item.word));
-      el.reviewTbody.appendChild(tr);
-    });
-  }
-
-  function speakAllWordsInList() {
-    const words = rawWordLists[currentListIndex] || [];
-    if (!words.length) return;
-    let idx = 0;
-    function next() {
-      if (idx >= words.length) return;
-      speakWord(`${words[idx].word}: ${words[idx].definition}`, () => {
-        idx++;
-        setTimeout(next, 350);
-      });
-    }
-    next();
-  }
-
-  // --- 2. 3D FLASHCARDS (GOOGLE MATERIAL DESIGN 3) ---
+  // --- 1. 3D FLASHCARDS (GOOGLE MATERIAL DESIGN 3) ---
   function initPracticeCards() {
     practiceWords = [...(rawWordLists[currentListIndex] || [])];
     currentCardIndex = 0;
@@ -387,7 +338,7 @@
     renderCard();
   }
 
-  // --- 3. TEST QUIZ (Matching Test.swift) ---
+  // --- 2. TEST QUIZ (Matching Test.swift) ---
   function generateQuiz(listIdx) {
     const list = rawWordLists[listIdx];
     if (!list || !list.length) return null;
@@ -553,7 +504,7 @@
     });
   }
 
-  // --- 4. GLOBAL SEARCH ---
+  // --- 3. GLOBAL SEARCH ---
   function runSearch(query) {
     query = (query || '').toLowerCase().trim();
     if (!el.searchResultsList) return;
@@ -637,11 +588,6 @@
     el.tabs.forEach(t => {
       t.addEventListener('click', () => switchTab(t.getAttribute('data-tab')));
     });
-
-    // Review Tab
-    if (el.btnSpeakAll) el.btnSpeakAll.addEventListener('click', speakAllWordsInList);
-    if (el.btnToFlashcards) el.btnToFlashcards.addEventListener('click', () => switchTab('practice'));
-    if (el.btnToTest) el.btnToTest.addEventListener('click', () => switchTab('test'));
 
     // Practice Tab
     if (el.flashcard) el.flashcard.addEventListener('click', toggleFlipCard);
