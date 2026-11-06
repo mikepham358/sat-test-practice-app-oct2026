@@ -161,6 +161,7 @@ const DOM = {
   btnToggleScratchpad: document.getElementById("btn-toggle-scratchpad"),
   btnOpenErrorLog: document.getElementById("btn-open-error-log"),
   badgeErrorCount: document.getElementById("badge-error-count"),
+  btnOpenVocab: document.getElementById("btn-open-vocab"),
   btnOpenStrategies: document.getElementById("btn-open-strategies"),
   btnExportExcel: document.getElementById("btn-export-excel"),
   btnResetTest: document.getElementById("btn-reset-test"),
@@ -277,6 +278,8 @@ const DOM = {
   btnCloseCalculator: document.getElementById("btn-close-calculator"),
   modalReference: document.getElementById("modal-reference"),
   btnCloseReference: document.getElementById("btn-close-reference"),
+  modalAceSATVocab: document.getElementById("modal-acesat-vocab"),
+  btnCloseAceSATVocab: document.getElementById("btn-close-acesat-vocab"),
 
   // Socratic Error & Vocabulary Notebook
   modalErrorLog: document.getElementById("modal-error-log"),
@@ -1035,6 +1038,7 @@ function shouldTimerRun() {
   if (DOM.modalFinishTest && !DOM.modalFinishTest.classList.contains("hidden")) return false;
   if (DOM.modalSubmitSuccess && !DOM.modalSubmitSuccess.classList.contains("hidden")) return false;
   if (DOM.modalFeedback && !DOM.modalFeedback.classList.contains("hidden")) return false;
+  if (DOM.modalAceSATVocab && !DOM.modalAceSATVocab.classList.contains("hidden")) return false;
 
   // 3. Question status check:
   // If the current question is already completed or just evaluated for review, pause the timer!
@@ -1058,6 +1062,10 @@ function syncTimerState() {
     pauseTimer();
   }
 }
+
+window.pauseTimer = pauseTimer;
+window.resumeTimer = resumeTimer;
+window.syncTimerState = syncTimerState;
 
 // ================= TIMER =================
 function startModuleTimer() {
@@ -3664,6 +3672,13 @@ function setupEventListeners() {
     DOM.modalErrorLog.classList.add("hidden");
     syncTimerState();
   });
+
+  if (DOM.btnOpenVocab) {
+    DOM.btnOpenVocab.addEventListener("click", () => {
+      pauseTimer();
+      if (window.openAceSATVocabModal) window.openAceSATVocabModal("review");
+    });
+  }
 
   // Notebook Add Entry Panel
   if (DOM.btnAddNewError) {
