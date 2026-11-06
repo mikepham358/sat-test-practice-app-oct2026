@@ -1297,15 +1297,25 @@
           <p class="header-sub-desc" id="mermaid-modal-subtitle">Trực quan hóa cấu trúc câu hỏi, bản chất vấn đề và chiến lược tư duy College Board</p>
         </div>
         <div class="mermaid-modal-actions">
-          <button type="button" class="btn-mermaid-action" id="btn-mermaid-toggle-zoom" title="Thu phóng sơ đồ">
-            <span id="mermaid-zoom-text">🔍 Phóng to</span>
-          </button>
+          <div class="mermaid-zoom-toolbar" id="mermaid-zoom-toolbar">
+            <button type="button" class="btn-mm-zoom" id="btn-mm-zoom-out" title="Thu nhỏ (Cuộn chuột xuống / Véo 2 ngón tay)">−</button>
+            <span class="mm-zoom-level" id="mm-zoom-level" title="Tỉ lệ thu phóng">100%</span>
+            <button type="button" class="btn-mm-zoom" id="btn-mm-zoom-in" title="Phóng to (Cuộn chuột lên / Xòe 2 ngón tay)">+</button>
+            <button type="button" class="btn-mm-zoom btn-mm-reset" id="btn-mm-zoom-reset" title="Khôi phục vừa màn hình (Nhấp đúp chuột)">↺ Vừa khung</button>
+          </div>
           <button type="button" class="btn-close-modal" id="btn-close-mermaid" title="Đóng sơ đồ (Esc)">✕</button>
         </div>
       </div>
-      <div class="mermaid-modal-body">
-        <div class="mermaid-viewer" id="mermaid-viewer">
-          <!-- Rendered Mermaid SVG injected dynamically -->
+      <div class="mermaid-modal-body" id="mermaid-modal-body">
+        <div class="mermaid-viewport" id="mermaid-viewport">
+          <div class="mermaid-canvas" id="mermaid-canvas">
+            <div class="mermaid-viewer" id="mermaid-viewer">
+              <!-- Rendered Mermaid SVG injected dynamically -->
+            </div>
+          </div>
+        </div>
+        <div class="mermaid-gesture-hint">
+          <span>🖐️ Giữ & kéo để di chuyển • 🔍 Cuộn chuột hoặc dùng 2 ngón tay véo/xòe để phóng to nhỏ • Nhấp đúp để đặt lại</span>
         </div>
       </div>
     </div>

@@ -254,9 +254,13 @@ const DOM = {
   mermaidTriggerBanner: document.getElementById("mermaid-trigger-banner"),
   btnOpenMermaidModal: document.getElementById("btn-open-mermaid-modal"),
   btnCloseMermaid: document.getElementById("btn-close-mermaid"),
-  btnMermaidToggleZoom: document.getElementById("btn-mermaid-toggle-zoom"),
-  mermaidZoomText: document.getElementById("mermaid-zoom-text"),
+  mermaidViewport: document.getElementById("mermaid-viewport"),
+  mermaidCanvas: document.getElementById("mermaid-canvas"),
   mermaidViewer: document.getElementById("mermaid-viewer"),
+  btnMmZoomIn: document.getElementById("btn-mm-zoom-in"),
+  btnMmZoomOut: document.getElementById("btn-mm-zoom-out"),
+  btnMmZoomReset: document.getElementById("btn-mm-zoom-reset"),
+  mmZoomLevel: document.getElementById("mm-zoom-level"),
 
   // Footer Dock
   inputStudentName: document.getElementById("input-student-name"),
@@ -1449,7 +1453,271 @@ function renderHints(q, qState) {
   }
 }
 
-// ================= MERMAID POP-UP MODAL & VISUAL THINKING =================
+// ================= MERMAID POP-UP MODAL & PAN-ZOOM CONTROLLER =================
+const MermaidPanZoom = {
+  baseW: 800,
+  baseH: 600,
+  panX: 0,
+  panY: 0,
+  scale: 1,
+  fitScale: 1,
+  minScale: 0.1,
+  maxScale: 6.0,
+  isDragging: false,
+  isPinching: false,
+  activePointers: new Map(),
+  dragStart: { x: 0, y: 0 },
+  panStart: { x: 0, y: 0 },
+  initialPinchDist: 0,
+  initialPinchMid: { x: 0, y: 0 },
+  initialPinchScale: 1,
+  initialPinchPan: { x: 0, y: 0 },
+  transitionTimer: null,
+  isInitialized: false,
+
+  init() {
+    if (this.isInitialized || !DOM.mermaidViewport || !DOM.mermaidCanvas) return;
+    this.isInitialized = true;
+
+    // Mouse wheel zooming centered at mouse pointer
+    DOM.mermaidViewport.addEventListener("wheel", (e) => {
+      e.preventDefault();
+      const rect = DOM.mermaidViewport.getBoundingClientRect();
+      const focusX = e.clientX - rect.left;
+      const focusY = e.clientY - rect.top;
+      const factor = e.deltaY < 0 ? 1.15 : (1 / 1.15);
+      this.zoomBy(factor, focusX, focusY, false);
+    }, { passive: false });
+
+    // Pointer events (unifies Mouse drag and Touch pinch/pan on all devices)
+    DOM.mermaidViewport.addEventListener("pointerdown", (e) => {
+      try {
+        DOM.mermaidViewport.setPointerCapture(e.pointerId);
+      } catch (_) {}
+      this.onPointerDown(e);
+    });
+
+    DOM.mermaidViewport.addEventListener("pointermove", (e) => {
+      this.onPointerMove(e);
+    });
+
+    const pointerEnd = (e) => {
+      try {
+        if (DOM.mermaidViewport.hasPointerCapture(e.pointerId)) {
+          DOM.mermaidViewport.releasePointerCapture(e.pointerId);
+        }
+      } catch (_) {}
+      this.onPointerUp(e);
+    };
+
+    DOM.mermaidViewport.addEventListener("pointerup", pointerEnd);
+    DOM.mermaidViewport.addEventListener("pointercancel", pointerEnd);
+
+    // Safari iOS gesture prevention to avoid bouncing the whole page
+    DOM.mermaidViewport.addEventListener("gesturestart", (e) => e.preventDefault());
+    DOM.mermaidViewport.addEventListener("gesturechange", (e) => e.preventDefault());
+    DOM.mermaidViewport.addEventListener("gestureend", (e) => e.preventDefault());
+
+    // Double-click to toggle fit vs zoom in
+    DOM.mermaidViewport.addEventListener("dblclick", (e) => {
+      e.preventDefault();
+      const rect = DOM.mermaidViewport.getBoundingClientRect();
+      const focusX = e.clientX - rect.left;
+      const focusY = e.clientY - rect.top;
+      if (Math.abs(this.scale - this.fitScale) / (this.fitScale || 1) < 0.15) {
+        this.zoomTo(this.fitScale * 1.8, focusX, focusY, true);
+      } else {
+        this.fitToView(true);
+      }
+    });
+
+    // Toolbar controls
+    if (DOM.btnMmZoomIn) {
+      DOM.btnMmZoomIn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const rect = DOM.mermaidViewport.getBoundingClientRect();
+        this.zoomBy(1.25, rect.width / 2, rect.height / 2, true);
+      });
+    }
+
+    if (DOM.btnMmZoomOut) {
+      DOM.btnMmZoomOut.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const rect = DOM.mermaidViewport.getBoundingClientRect();
+        this.zoomBy(1 / 1.25, rect.width / 2, rect.height / 2, true);
+      });
+    }
+
+    if (DOM.btnMmZoomReset) {
+      DOM.btnMmZoomReset.addEventListener("click", (e) => {
+        e.stopPropagation();
+        this.fitToView(true);
+      });
+    }
+
+    // Auto re-fit on window resize if modal is visible
+    window.addEventListener("resize", () => {
+      if (DOM.modalMermaid && !DOM.modalMermaid.classList.contains("hidden")) {
+        this.fitToView(false);
+      }
+    });
+  },
+
+  initDiagram(baseW, baseH) {
+    this.baseW = Math.max(100, baseW || 800);
+    this.baseH = Math.max(100, baseH || 600);
+    this.activePointers.clear();
+    this.isDragging = false;
+    this.isPinching = false;
+    if (DOM.mermaidViewport) {
+      DOM.mermaidViewport.classList.remove("is-dragging");
+    }
+    // Delay 1 frame to ensure DOM layout / modal visibility is ready
+    requestAnimationFrame(() => {
+      this.fitToView(false);
+    });
+  },
+
+  fitToView(smooth = false) {
+    if (!DOM.mermaidViewport || !DOM.mermaidCanvas) return;
+    const vpW = DOM.mermaidViewport.clientWidth || 800;
+    const vpH = DOM.mermaidViewport.clientHeight || 500;
+
+    // 48px padding (24px each side) for comfortable breathing room
+    const padding = 48;
+    const availW = Math.max(100, vpW - padding);
+    const availH = Math.max(100, vpH - padding);
+
+    const scaleX = availW / this.baseW;
+    const scaleY = availH / this.baseH;
+
+    // Diagram fits 100% visible on screen; cap at 1.25x so tiny diagrams aren't blown up
+    this.fitScale = Math.min(scaleX, scaleY, 1.25);
+    this.scale = this.fitScale;
+
+    // Set zoom boundaries
+    this.minScale = Math.max(0.1, this.fitScale * 0.35);
+    this.maxScale = Math.max(4.0, this.fitScale * 5.0);
+
+    // Center in viewport
+    const renderedW = this.baseW * this.scale;
+    const renderedH = this.baseH * this.scale;
+    this.panX = (vpW - renderedW) / 2;
+    this.panY = (vpH - renderedH) / 2;
+
+    this.applyTransform(smooth);
+  },
+
+  zoomBy(factor, focusX, focusY, smooth = false) {
+    this.zoomTo(this.scale * factor, focusX, focusY, smooth);
+  },
+
+  zoomTo(targetScale, focusX, focusY, smooth = false) {
+    const clampedScale = Math.max(this.minScale, Math.min(this.maxScale, targetScale));
+    if (Math.abs(clampedScale - this.scale) < 0.0001) return;
+
+    const r = clampedScale / this.scale;
+    this.panX = focusX - (focusX - this.panX) * r;
+    this.panY = focusY - (focusY - this.panY) * r;
+    this.scale = clampedScale;
+
+    this.applyTransform(smooth);
+  },
+
+  applyTransform(smooth = false) {
+    if (!DOM.mermaidCanvas) return;
+    if (smooth) {
+      DOM.mermaidCanvas.classList.add("smooth-transition");
+      clearTimeout(this.transitionTimer);
+      this.transitionTimer = setTimeout(() => {
+        if (DOM.mermaidCanvas) {
+          DOM.mermaidCanvas.classList.remove("smooth-transition");
+        }
+      }, 260);
+    } else {
+      DOM.mermaidCanvas.classList.remove("smooth-transition");
+    }
+
+    DOM.mermaidCanvas.style.transform = `translate3d(${this.panX.toFixed(2)}px, ${this.panY.toFixed(2)}px, 0) scale(${this.scale.toFixed(4)})`;
+    this.updateZoomDisplay();
+  },
+
+  updateZoomDisplay() {
+    if (!DOM.mmZoomLevel) return;
+    const pct = Math.round((this.scale / (this.fitScale || 1)) * 100);
+    DOM.mmZoomLevel.textContent = `${pct}%`;
+  },
+
+  onPointerDown(e) {
+    this.activePointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+    if (this.activePointers.size === 1) {
+      this.isDragging = true;
+      this.dragStart = { x: e.clientX, y: e.clientY };
+      this.panStart = { x: this.panX, y: this.panY };
+      if (DOM.mermaidViewport) DOM.mermaidViewport.classList.add("is-dragging");
+    } else if (this.activePointers.size === 2) {
+      this.isDragging = false;
+      this.isPinching = true;
+      const pts = Array.from(this.activePointers.values());
+      this.initialPinchDist = Math.hypot(pts[1].x - pts[0].x, pts[1].y - pts[0].y);
+      const rect = DOM.mermaidViewport.getBoundingClientRect();
+      this.initialPinchMid = {
+        x: (pts[0].x + pts[1].x) / 2 - rect.left,
+        y: (pts[0].y + pts[1].y) / 2 - rect.top
+      };
+      this.initialPinchScale = this.scale;
+      this.initialPinchPan = { x: this.panX, y: this.panY };
+    }
+  },
+
+  onPointerMove(e) {
+    if (!this.activePointers.has(e.pointerId)) return;
+    this.activePointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+
+    if (this.isPinching && this.activePointers.size === 2) {
+      const pts = Array.from(this.activePointers.values());
+      const currentDist = Math.hypot(pts[1].x - pts[0].x, pts[1].y - pts[0].y);
+      const rect = DOM.mermaidViewport.getBoundingClientRect();
+      const currentMid = {
+        x: (pts[0].x + pts[1].x) / 2 - rect.left,
+        y: (pts[0].y + pts[1].y) / 2 - rect.top
+      };
+
+      if (this.initialPinchDist > 5) {
+        const pinchFactor = currentDist / this.initialPinchDist;
+        let targetScale = this.initialPinchScale * pinchFactor;
+        targetScale = Math.max(this.minScale, Math.min(this.maxScale, targetScale));
+        const r = targetScale / this.initialPinchScale;
+        this.scale = targetScale;
+        this.panX = this.initialPinchMid.x - (this.initialPinchMid.x - this.initialPinchPan.x) * r + (currentMid.x - this.initialPinchMid.x);
+        this.panY = this.initialPinchMid.y - (this.initialPinchMid.y - this.initialPinchPan.y) * r + (currentMid.y - this.initialPinchMid.y);
+        this.applyTransform(false);
+      }
+    } else if (this.isDragging && this.activePointers.size === 1) {
+      const dx = e.clientX - this.dragStart.x;
+      const dy = e.clientY - this.dragStart.y;
+      this.panX = this.panStart.x + dx;
+      this.panY = this.panStart.y + dy;
+      this.applyTransform(false);
+    }
+  },
+
+  onPointerUp(e) {
+    this.activePointers.delete(e.pointerId);
+    if (this.activePointers.size === 0) {
+      this.isDragging = false;
+      this.isPinching = false;
+      if (DOM.mermaidViewport) DOM.mermaidViewport.classList.remove("is-dragging");
+    } else if (this.activePointers.size === 1) {
+      this.isPinching = false;
+      this.isDragging = true;
+      const rem = Array.from(this.activePointers.values())[0];
+      this.dragStart = { x: rem.x, y: rem.y };
+      this.panStart = { x: this.panX, y: this.panY };
+    }
+  }
+};
+
 async function openMermaidModal() {
   const q = App.currentQuestion;
   if (!q || !q.mermaid_diagram || !q.mermaid_diagram.trim()) return;
@@ -1463,29 +1731,17 @@ async function openMermaidModal() {
     DOM.mermaidModalTitle.textContent = `${modTitle} • Câu ${qIndex}: ${q.topic || 'Sơ đồ tư duy logic'}`;
   }
 
-  if (DOM.mermaidModalCard) {
-    DOM.mermaidModalCard.classList.remove("is-zoomed");
-  }
-  if (DOM.mermaidZoomText) {
-    DOM.mermaidZoomText.textContent = "🔍 Phóng to";
-  }
-
   if (DOM.modalMermaid) {
     DOM.modalMermaid.classList.remove("hidden");
   }
 
+  MermaidPanZoom.init();
   await renderMermaidDiagramContent(q);
 }
 
 function closeMermaidModal() {
   if (DOM.modalMermaid) {
     DOM.modalMermaid.classList.add("hidden");
-  }
-  if (DOM.mermaidModalCard) {
-    DOM.mermaidModalCard.classList.remove("is-zoomed");
-  }
-  if (DOM.mermaidZoomText) {
-    DOM.mermaidZoomText.textContent = "🔍 Phóng to";
   }
 }
 
@@ -1500,16 +1756,69 @@ async function renderMermaidDiagramContent(q) {
       const { svg } = await mermaid.render(renderId, rawCode);
       if (App.currentQuestion && App.currentQuestion.id === targetQId) {
         DOM.mermaidViewer.innerHTML = svg;
+        prepareMermaidSvg();
       }
     } catch (err) {
       console.warn("Mermaid render error for Q" + q.id, err);
       if (App.currentQuestion && App.currentQuestion.id === targetQId) {
         DOM.mermaidViewer.innerHTML = `<pre class="mermaid-raw-fallback">${escapeHtml(rawCode)}</pre>`;
+        MermaidPanZoom.initDiagram(700, 400);
       }
     }
   } else {
     DOM.mermaidViewer.innerHTML = `<pre class="mermaid-raw-fallback">${escapeHtml(rawCode)}</pre>`;
+    MermaidPanZoom.initDiagram(700, 400);
   }
+}
+
+function prepareMermaidSvg() {
+  if (!DOM.mermaidViewer) return;
+  const svgEl = DOM.mermaidViewer.querySelector("svg");
+  if (!svgEl) return;
+
+  // Extract base natural dimensions
+  let baseW = 0;
+  let baseH = 0;
+
+  const vb = svgEl.getAttribute("viewBox");
+  if (vb) {
+    const parts = vb.trim().split(/[\s,]+/).map(Number);
+    if (parts.length === 4 && parts[2] > 0 && parts[3] > 0) {
+      baseW = parts[2];
+      baseH = parts[3];
+    }
+  }
+
+  if (!baseW || !baseH) {
+    try {
+      const bbox = svgEl.getBBox();
+      if (bbox && bbox.width > 0 && bbox.height > 0) {
+        baseW = bbox.width + (bbox.x > 0 ? bbox.x * 2 : 20);
+        baseH = bbox.height + (bbox.y > 0 ? bbox.y * 2 : 20);
+      }
+    } catch (_) {}
+  }
+
+  if (!baseW || !baseH) {
+    baseW = parseFloat(svgEl.getAttribute("width")) || svgEl.clientWidth || 900;
+    baseH = parseFloat(svgEl.getAttribute("height")) || svgEl.clientHeight || 600;
+  }
+
+  // Ensure viewBox is properly defined so SVG scales cleanly
+  if (!svgEl.getAttribute("viewBox") && baseW > 0 && baseH > 0) {
+    svgEl.setAttribute("viewBox", `0 0 ${baseW} ${baseH}`);
+  }
+
+  // Set explicit base dimensions on SVG and remove inline max-width
+  svgEl.removeAttribute("width");
+  svgEl.removeAttribute("height");
+  svgEl.style.width = `${baseW}px`;
+  svgEl.style.height = `${baseH}px`;
+  svgEl.style.maxWidth = "none";
+  svgEl.style.maxHeight = "none";
+  svgEl.style.display = "block";
+
+  MermaidPanZoom.initDiagram(baseW, baseH);
 }
 
 function renderMermaidDiagram(q, isFinished) {
@@ -3953,12 +4262,28 @@ function setupEventListeners() {
 
   // Keyboard Shortcuts
   window.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") {
-      if (DOM.modalMermaid && !DOM.modalMermaid.classList.contains("hidden")) {
+    if (DOM.modalMermaid && !DOM.modalMermaid.classList.contains("hidden")) {
+      if (e.key === "Escape") {
         closeMermaidModal();
         e.preventDefault();
         return;
       }
+      if (e.key === "+" || e.key === "=") {
+        if (DOM.btnMmZoomIn) DOM.btnMmZoomIn.click();
+        e.preventDefault();
+        return;
+      }
+      if (e.key === "-" || e.key === "_") {
+        if (DOM.btnMmZoomOut) DOM.btnMmZoomOut.click();
+        e.preventDefault();
+        return;
+      }
+      if (e.key === "0" || e.key.toLowerCase() === "r") {
+        if (DOM.btnMmZoomReset) DOM.btnMmZoomReset.click();
+        e.preventDefault();
+        return;
+      }
+      return;
     }
     if (["INPUT", "TEXTAREA", "SELECT"].includes(e.target.tagName)) return;
 
@@ -4045,16 +4370,5 @@ function setupEventListeners() {
       if (e.target === DOM.modalMermaid) closeMermaidModal();
     });
   }
-  if (DOM.btnMermaidToggleZoom) {
-    DOM.btnMermaidToggleZoom.addEventListener("click", (e) => {
-      e.stopPropagation();
-      if (DOM.mermaidModalCard) {
-        DOM.mermaidModalCard.classList.toggle("is-zoomed");
-        const isZoomed = DOM.mermaidModalCard.classList.contains("is-zoomed");
-        if (DOM.mermaidZoomText) {
-          DOM.mermaidZoomText.textContent = isZoomed ? "🔍 Thu nhỏ" : "🔍 Phóng to";
-        }
-      }
-    });
-  }
+  MermaidPanZoom.init();
 }
