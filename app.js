@@ -3676,7 +3676,7 @@ function setupEventListeners() {
   if (DOM.btnOpenVocab) {
     DOM.btnOpenVocab.addEventListener("click", () => {
       pauseTimer();
-      if (window.openAceSATVocabModal) window.openAceSATVocabModal("review");
+      if (window.openAceSATVocabModal) window.openAceSATVocabModal("practice");
     });
   }
 
@@ -3684,7 +3684,7 @@ function setupEventListeners() {
   if (btnHomeOpenVocab) {
     btnHomeOpenVocab.addEventListener("click", () => {
       if (window.openAceSATVocabModal) {
-        window.openAceSATVocabModal("review");
+        window.openAceSATVocabModal("practice");
       } else {
         const modal = document.getElementById("modal-acesat-vocab");
         if (modal) modal.classList.remove("hidden");

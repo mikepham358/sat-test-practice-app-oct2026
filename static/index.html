@@ -42,7 +42,7 @@
           </div>
         </div>
         <div class="home-nav-actions">
-          <button type="button" class="btn-home-vocab" id="btn-home-open-vocab" title="Kho 1,000 Từ Vựng SAT (AceSAT Hub)" onclick="if(window.openAceSATVocabModal){window.openAceSATVocabModal('review');}else{document.getElementById('modal-acesat-vocab')?.classList.remove('hidden');}">
+          <button type="button" class="btn-home-vocab" id="btn-home-open-vocab" title="Kho 1,000 Từ Vựng SAT (AceSAT Hub)" onclick="if(window.openAceSATVocabModal){window.openAceSATVocabModal('practice');}else{document.getElementById('modal-acesat-vocab')?.classList.remove('hidden');}">
             <span>📚</span>
             <span>AceSAT: 1,000 Từ Vựng</span>
             <span class="vocab-badge-count">100 Lists</span>
@@ -260,7 +260,7 @@
                 💡 <em>"Nắm vững từ vựng học thuật ngữ cảnh là chìa khóa vàng mở rộng phổ điểm 700+ cho phần thi Digital SAT Reading & Writing."</em>
               </p>
               <div class="vocab-hero-actions">
-                <button type="button" class="btn-google-primary btn-large" id="btn-hero-launch-vocab" onclick="if(window.openAceSATVocabModal){window.openAceSATVocabModal('review');}else{document.getElementById('modal-acesat-vocab')?.classList.remove('hidden');}">
+                <button type="button" class="btn-google-primary btn-large" id="btn-hero-launch-vocab" onclick="if(window.openAceSATVocabModal){window.openAceSATVocabModal('practice');}else{document.getElementById('modal-acesat-vocab')?.classList.remove('hidden');}">
                   <span>Khám Phá & Luyện Từ Vựng Ngay ⚡</span>
                 </button>
                 <button type="button" class="btn-google-tonal btn-large" id="btn-hero-vocab-flashcard" onclick="if(window.openAceSATVocabModal){window.openAceSATVocabModal('practice');}else{document.getElementById('modal-acesat-vocab')?.classList.remove('hidden');}">
@@ -398,7 +398,7 @@
         <span class="tool-text">Sổ thử sai</span>
         <span class="badge" id="badge-error-count">0</span>
       </button>
-      <button class="tool-btn btn-vocab-tool" id="btn-open-vocab" title="Kho 1,000 Từ Vựng SAT (AceSAT Hub)" onclick="if(window.openAceSATVocabModal){window.openAceSATVocabModal('review');}else{document.getElementById('modal-acesat-vocab')?.classList.remove('hidden');}">
+      <button class="tool-btn btn-vocab-tool" id="btn-open-vocab" title="Kho 1,000 Từ Vựng SAT (AceSAT Hub)" onclick="if(window.openAceSATVocabModal){window.openAceSATVocabModal('practice');}else{document.getElementById('modal-acesat-vocab')?.classList.remove('hidden');}">
         <span class="tool-icon">📚</span>
         <span class="tool-text">Từ vựng</span>
       </button>
@@ -1346,48 +1346,14 @@
 
         <!-- Mode Navigation Tabs -->
         <div class="acesat-nav-tabs">
-          <button class="acesat-tab-btn active" data-tab="review">📖 Danh Sách (Review)</button>
-          <button class="acesat-tab-btn" data-tab="practice">🎴 Thẻ Lật 3D (Flashcards)</button>
+          <button class="acesat-tab-btn active" data-tab="practice">🎴 Thẻ Lật 3D (Flashcards)</button>
           <button class="acesat-tab-btn" data-tab="test">⚡ Kiểm Tra (Test Quiz)</button>
           <button class="acesat-tab-btn" data-tab="search">🔍 Tra Cứu Toàn Bộ</button>
+          <button class="acesat-tab-btn" data-tab="review">📖 Danh Sách (Review)</button>
         </div>
 
-        <!-- Tab Content 1: REVIEW -->
-        <div id="acesat-tab-review" class="acesat-tab-panel active">
-          <div class="acesat-panel-header">
-            <div class="panel-title-text">
-              <h4>Danh Sách Từ Vựng: <span id="acesat-review-list-title">List 1</span></h4>
-              <span class="panel-hint">Bấm vào loa hoặc từ để nghe phát âm tiếng Anh chuẩn</span>
-            </div>
-            <button id="acesat-speak-all-btn" class="acesat-btn-pill">
-              <span>🔊</span> Đọc toàn bộ danh sách
-            </button>
-          </div>
-          <div class="acesat-table-wrap">
-            <table class="acesat-vocab-table" id="acesat-vocab-table">
-              <thead>
-                <tr>
-                  <th style="width: 44px;">#</th>
-                  <th style="width: 170px;">Từ Vựng SAT</th>
-                  <th>Định Nghĩa (Nghĩa Trong Ngữ Cảnh)</th>
-                  <th style="width: 60px; text-align: center;">Nghe</th>
-                </tr>
-              </thead>
-              <tbody id="acesat-vocab-tbody"></tbody>
-            </table>
-          </div>
-          <div class="acesat-panel-footer">
-            <button id="acesat-btn-to-flashcards" class="acesat-action-btn btn-action-blue">
-              Luyện Thẻ Flashcard 3D ›
-            </button>
-            <button id="acesat-btn-to-test" class="acesat-action-btn btn-action-red">
-              Làm Bài Kiểm Tra List Này ›
-            </button>
-          </div>
-        </div>
-
-        <!-- Tab Content 2: PRACTICE (3D FLASHCARDS - GOOGLE UX DESIGN) -->
-        <div id="acesat-tab-practice" class="acesat-tab-panel">
+        <!-- Tab Content 1: PRACTICE (3D FLASHCARDS - GOOGLE UX DESIGN) -->
+        <div id="acesat-tab-practice" class="acesat-tab-panel active">
           <div class="acesat-panel-header">
             <div class="panel-title-text">
               <h4>Thẻ Ghi Nhớ 3D: <span id="acesat-practice-list-title">List 1</span></h4>
@@ -1485,7 +1451,7 @@
           </div>
         </div>
 
-        <!-- Tab Content 3: TEST (10 Questions Quiz) -->
+        <!-- Tab Content 2: TEST (10 Questions Quiz) -->
         <div id="acesat-tab-test" class="acesat-tab-panel">
           <div id="acesat-test-question-view">
             <div class="acesat-panel-header">
@@ -1560,7 +1526,7 @@
           </div>
         </div>
 
-        <!-- Tab Content 4: GLOBAL SEARCH -->
+        <!-- Tab Content 3: GLOBAL SEARCH -->
         <div id="acesat-tab-search" class="acesat-tab-panel">
           <div class="acesat-panel-header">
             <div class="panel-title-text">
@@ -1569,6 +1535,40 @@
             </div>
           </div>
           <div class="acesat-search-results-container" id="acesat-search-results-list"></div>
+        </div>
+
+        <!-- Tab Content 4: REVIEW (Danh Sách Từ Vựng) -->
+        <div id="acesat-tab-review" class="acesat-tab-panel">
+          <div class="acesat-panel-header">
+            <div class="panel-title-text">
+              <h4>Danh Sách Từ Vựng: <span id="acesat-review-list-title">List 1</span></h4>
+              <span class="panel-hint">Bấm vào loa hoặc từ để nghe phát âm tiếng Anh chuẩn</span>
+            </div>
+            <button id="acesat-speak-all-btn" class="acesat-btn-pill">
+              <span>🔊</span> Đọc toàn bộ danh sách
+            </button>
+          </div>
+          <div class="acesat-table-wrap">
+            <table class="acesat-vocab-table" id="acesat-vocab-table">
+              <thead>
+                <tr>
+                  <th style="width: 44px;">#</th>
+                  <th style="width: 170px;">Từ Vựng SAT</th>
+                  <th>Định Nghĩa (Nghĩa Trong Ngữ Cảnh)</th>
+                  <th style="width: 60px; text-align: center;">Nghe</th>
+                </tr>
+              </thead>
+              <tbody id="acesat-vocab-tbody"></tbody>
+            </table>
+          </div>
+          <div class="acesat-panel-footer">
+            <button id="acesat-btn-to-flashcards" class="acesat-action-btn btn-action-blue">
+              ‹ Luyện Thẻ Flashcard 3D
+            </button>
+            <button id="acesat-btn-to-test" class="acesat-action-btn btn-action-red">
+              Làm Bài Kiểm Tra List Này ›
+            </button>
+          </div>
         </div>
       </div>
     </div>

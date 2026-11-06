@@ -68,6 +68,7 @@
     populateListPicker();
     updateAcedCounterDisplay();
     renderReviewTable();
+    initPracticeCards();
   }
 
   function cacheDOM() {
@@ -589,7 +590,12 @@
 
       row.addEventListener('click', () => {
         switchList(item.listIndex);
-        switchTab('review');
+        const cardIdx = practiceWords.findIndex(w => w.word.toLowerCase() === item.word.toLowerCase());
+        if (cardIdx !== -1) {
+          currentCardIndex = cardIdx;
+        }
+        switchTab('practice');
+        renderCard();
         speakWord(item.word);
       });
 
@@ -598,7 +604,7 @@
   }
 
   // --- MODAL CONTROLLER & HOOKS ---
-  function openModal(defaultTab = 'review') {
+  function openModal(defaultTab = 'practice') {
     if (window.pauseTimer) window.pauseTimer();
     if (el.modal) el.modal.classList.remove('hidden');
     switchTab(defaultTab);
@@ -714,9 +720,9 @@
     }
 
     // External Open Triggers
-    if (el.btnOpenVocab) el.btnOpenVocab.addEventListener('click', () => openModal('review'));
-    if (el.btnHomeOpenVocab) el.btnHomeOpenVocab.addEventListener('click', () => openModal('review'));
-    if (el.btnHeroLaunchVocab) el.btnHeroLaunchVocab.addEventListener('click', () => openModal('review'));
+    if (el.btnOpenVocab) el.btnOpenVocab.addEventListener('click', () => openModal('practice'));
+    if (el.btnHomeOpenVocab) el.btnHomeOpenVocab.addEventListener('click', () => openModal('practice'));
+    if (el.btnHeroLaunchVocab) el.btnHeroLaunchVocab.addEventListener('click', () => openModal('practice'));
     if (el.btnHeroVocabFlashcard) el.btnHeroVocabFlashcard.addEventListener('click', () => openModal('practice'));
 
     // Global Keyboard Shortcuts when modal is open
