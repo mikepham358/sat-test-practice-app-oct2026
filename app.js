@@ -3680,6 +3680,18 @@ function setupEventListeners() {
     });
   }
 
+  const btnHomeOpenVocab = document.getElementById("btn-home-open-vocab");
+  if (btnHomeOpenVocab) {
+    btnHomeOpenVocab.addEventListener("click", () => {
+      if (window.openAceSATVocabModal) {
+        window.openAceSATVocabModal("review");
+      } else {
+        const modal = document.getElementById("modal-acesat-vocab");
+        if (modal) modal.classList.remove("hidden");
+      }
+    });
+  }
+
   // Notebook Add Entry Panel
   if (DOM.btnAddNewError) {
     DOM.btnAddNewError.addEventListener("click", () => {

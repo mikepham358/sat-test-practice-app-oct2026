@@ -6,6 +6,8 @@
 
 (function () {
   'use strict';
+  if (window.__ACESAT_INITIALIZED__) return;
+  window.__ACESAT_INITIALIZED__ = true;
 
   const STORAGE_KEY_ACED = 'vinschool_sat_aced_lists_v1';
   const STORAGE_KEY_ACTIVE_LIST = 'vinschool_sat_active_vocab_list_v1';
@@ -381,8 +383,6 @@
   function shufflePracticeCards() {
     practiceWords.sort(() => Math.random() - 0.5);
     currentCardIndex = 0;
-    renderCard();
-  }
     renderCard();
   }
 

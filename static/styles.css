@@ -5570,6 +5570,14 @@ body.resizing-split iframe {
 }
 
 /* ================= MODAL DIALOG STYLES ================= */
+#modal-acesat-vocab {
+  z-index: 2500 !important;
+}
+
+#modal-acesat-vocab:not(.hidden) {
+  display: flex !important;
+}
+
 .acesat-modal-card {
   max-width: 900px;
   width: 95%;

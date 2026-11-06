@@ -42,7 +42,7 @@
           </div>
         </div>
         <div class="home-nav-actions">
-          <button type="button" class="btn-home-vocab" id="btn-home-open-vocab" title="Kho 1,000 Từ Vựng SAT (AceSAT Hub)">
+          <button type="button" class="btn-home-vocab" id="btn-home-open-vocab" title="Kho 1,000 Từ Vựng SAT (AceSAT Hub)" onclick="if(window.openAceSATVocabModal){window.openAceSATVocabModal('review');}else{document.getElementById('modal-acesat-vocab')?.classList.remove('hidden');}">
             <span>📚</span>
             <span>AceSAT: 1,000 Từ Vựng</span>
             <span class="vocab-badge-count">100 Lists</span>
@@ -260,10 +260,10 @@
                 💡 <em>"Nắm vững từ vựng học thuật ngữ cảnh là chìa khóa vàng mở rộng phổ điểm 700+ cho phần thi Digital SAT Reading & Writing."</em>
               </p>
               <div class="vocab-hero-actions">
-                <button type="button" class="btn-google-primary btn-large" id="btn-hero-launch-vocab">
+                <button type="button" class="btn-google-primary btn-large" id="btn-hero-launch-vocab" onclick="if(window.openAceSATVocabModal){window.openAceSATVocabModal('review');}else{document.getElementById('modal-acesat-vocab')?.classList.remove('hidden');}">
                   <span>Khám Phá & Luyện Từ Vựng Ngay ⚡</span>
                 </button>
-                <button type="button" class="btn-google-tonal btn-large" id="btn-hero-vocab-flashcard">
+                <button type="button" class="btn-google-tonal btn-large" id="btn-hero-vocab-flashcard" onclick="if(window.openAceSATVocabModal){window.openAceSATVocabModal('practice');}else{document.getElementById('modal-acesat-vocab')?.classList.remove('hidden');}">
                   <span>🎴 Luyện Thẻ Flashcard 3D</span>
                 </button>
               </div>
@@ -398,7 +398,7 @@
         <span class="tool-text">Sổ thử sai</span>
         <span class="badge" id="badge-error-count">0</span>
       </button>
-      <button class="tool-btn btn-vocab-tool" id="btn-open-vocab" title="Kho 1,000 Từ Vựng SAT (AceSAT Hub)">
+      <button class="tool-btn btn-vocab-tool" id="btn-open-vocab" title="Kho 1,000 Từ Vựng SAT (AceSAT Hub)" onclick="if(window.openAceSATVocabModal){window.openAceSATVocabModal('review');}else{document.getElementById('modal-acesat-vocab')?.classList.remove('hidden');}">
         <span class="tool-icon">📚</span>
         <span class="tool-text">Từ vựng</span>
       </button>
@@ -1576,6 +1576,6 @@
 
   <!-- Scripts -->
   <script src="app.js"></script>
-  <script src="static/acesat-vocab.js"></script>
+  <script src="acesat-vocab.js"></script>
 </body>
 </html>
