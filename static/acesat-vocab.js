@@ -9,11 +9,13 @@
 
   const STORAGE_KEY_ACED = 'vinschool_sat_aced_lists_v1';
   const STORAGE_KEY_ACTIVE_LIST = 'vinschool_sat_active_vocab_list_v1';
+  const STORAGE_KEY_MASTERED = 'vinschool_sat_mastered_words_v1';
 
   let rawWordLists = [];
   let allWordsFlat = [];
   let currentListIndex = 0;
   let acedLists = new Set();
+  let masteredWords = new Set();
 
   // Practice state
   let practiceWords = [];
@@ -45,6 +47,9 @@
     try {
       const savedAced = localStorage.getItem(STORAGE_KEY_ACED);
       if (savedAced) acedLists = new Set(JSON.parse(savedAced));
+
+      const savedMastered = localStorage.getItem(STORAGE_KEY_MASTERED);
+      if (savedMastered) masteredWords = new Set(JSON.parse(savedMastered));
 
       const savedIdx = localStorage.getItem(STORAGE_KEY_ACTIVE_LIST);
       if (savedIdx !== null) currentListIndex = parseInt(savedIdx, 10) || 0;
@@ -86,7 +91,8 @@
       // Practice
       practiceTitle: document.getElementById('acesat-practice-list-title'),
       cardCurrentNum: document.getElementById('acesat-card-current-num'),
-      cardProgressFill: document.getElementById('acesat-card-progress-fill'),
+      cardPosIndicator: document.getElementById('card-pos-indicator'),
+      cardStepper: document.getElementById('acesat-card-stepper'),
       flashcard: document.getElementById('acesat-flashcard'),
       cardWordFront: document.getElementById('acesat-card-word-front'),
       frontSpeak: document.getElementById('acesat-front-speak'),
@@ -97,6 +103,9 @@
       btnFlip: document.getElementById('acesat-flip-btn'),
       btnPrevCard: document.getElementById('acesat-prev-card-btn'),
       btnNextCard: document.getElementById('acesat-next-card-btn'),
+      masteryToggleBtn: document.getElementById('acesat-mastery-toggle-btn'),
+      masteryStarIcon: document.getElementById('mastery-star-icon'),
+      masteryStarText: document.getElementById('mastery-star-text'),
 
       // Test Quiz
       testQuestionView: document.getElementById('acesat-test-question-view'),
@@ -270,7 +279,7 @@
     next();
   }
 
-  // --- 2. 3D FLASHCARDS ---
+  // --- 2. 3D FLASHCARDS (GOOGLE MATERIAL DESIGN 3) ---
   function initPracticeCards() {
     practiceWords = [...(rawWordLists[currentListIndex] || [])];
     currentCardIndex = 0;
@@ -278,19 +287,72 @@
     renderCard();
   }
 
+  function renderStepper() {
+    if (!el.cardStepper) return;
+    el.cardStepper.innerHTML = '';
+    practiceWords.forEach((item, idx) => {
+      const chip = document.createElement('div');
+      chip.className = 'stepper-chip';
+      if (idx === currentCardIndex) chip.classList.add('active');
+      const isMastered = masteredWords.has(item.word);
+      if (isMastered) chip.classList.add('is-mastered');
+
+      chip.textContent = idx === currentCardIndex ? `• ${idx + 1} •` : (idx + 1);
+      chip.title = `Từ ${idx + 1}: ${item.word}${isMastered ? ' (Đã thuộc ★)' : ''}`;
+
+      chip.addEventListener('click', (e) => {
+        e.stopPropagation();
+        currentCardIndex = idx;
+        renderCard();
+      });
+
+      el.cardStepper.appendChild(chip);
+    });
+  }
+
   function renderCard() {
     if (!practiceWords.length) return;
     const c = practiceWords[currentCardIndex];
     if (el.cardCurrentNum) el.cardCurrentNum.textContent = currentCardIndex + 1;
-    if (el.cardProgressFill) {
-      el.cardProgressFill.style.width = `${((currentCardIndex + 1) / practiceWords.length) * 100}%`;
-    }
+    if (el.cardPosIndicator) el.cardPosIndicator.textContent = `Từ ${currentCardIndex + 1}/10`;
+
     if (el.cardWordFront) el.cardWordFront.textContent = c.word;
     if (el.cardWordBack) el.cardWordBack.textContent = c.word;
     if (el.cardDefBack) el.cardDefBack.textContent = c.definition;
 
+    // Check Mastery State
+    const isMastered = masteredWords.has(c.word);
+    if (el.masteryToggleBtn) {
+      el.masteryToggleBtn.classList.toggle('is-active', isMastered);
+    }
+    if (el.masteryStarIcon) {
+      el.masteryStarIcon.textContent = isMastered ? '★' : '☆';
+    }
+    if (el.masteryStarText) {
+      el.masteryStarText.textContent = isMastered ? 'Đã thuộc từ này' : 'Đánh dấu đã thuộc';
+    }
+
+    renderStepper();
+
+    // Reset flip smoothly
     isCardFlipped = false;
     if (el.flashcard) el.flashcard.classList.remove('is-flipped');
+  }
+
+  function toggleMastery() {
+    if (!practiceWords.length) return;
+    const c = practiceWords[currentCardIndex];
+    if (masteredWords.has(c.word)) {
+      masteredWords.delete(c.word);
+    } else {
+      masteredWords.add(c.word);
+    }
+    try {
+      localStorage.setItem(STORAGE_KEY_MASTERED, JSON.stringify([...masteredWords]));
+    } catch (e) {
+      console.warn('LocalStorage error:', e);
+    }
+    renderCard();
   }
 
   function toggleFlipCard() {
@@ -319,6 +381,8 @@
   function shufflePracticeCards() {
     practiceWords.sort(() => Math.random() - 0.5);
     currentCardIndex = 0;
+    renderCard();
+  }
     renderCard();
   }
 
@@ -579,6 +643,7 @@
     if (el.btnNextCard) el.btnNextCard.addEventListener('click', nextCard);
     if (el.btnPrevCard) el.btnPrevCard.addEventListener('click', prevCard);
     if (el.btnShuffleCards) el.btnShuffleCards.addEventListener('click', shufflePracticeCards);
+    if (el.masteryToggleBtn) el.masteryToggleBtn.addEventListener('click', toggleMastery);
 
     if (el.frontSpeak) {
       el.frontSpeak.addEventListener('click', (e) => {
@@ -674,6 +739,13 @@
         } else if (e.key === 'ArrowLeft') {
           e.preventDefault();
           prevCard();
+        } else if (e.key === 's' || e.key === 'S') {
+          e.preventDefault();
+          const c = practiceWords[currentCardIndex];
+          if (c) speakWord(isCardFlipped ? `${c.word}: ${c.definition}` : c.word);
+        } else if (e.key === 'm' || e.key === 'M') {
+          e.preventDefault();
+          toggleMastery();
         }
       }
     });

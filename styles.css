@@ -5885,179 +5885,379 @@ body.resizing-split iframe {
 }
 
 /* ================= 3D FLASHCARDS ================= */
+/* ================= GOOGLE MATERIAL DESIGN 3 FLASHCARDS ================= */
 .acesat-card-progress-bar {
-  width: 100%;
-  height: 6px;
-  background: #f1f5f9;
-  border-radius: 3px;
-  overflow: hidden;
-  margin-bottom: 16px;
+  display: none; /* Replaced by Google Interactive Stepper */
 }
 
-.acesat-progress-fill {
-  height: 100%;
-  background: linear-gradient(90deg, #38bdf8 0%, #0284c7 100%);
-  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.acesat-progress-fill.red-fill {
-  background: linear-gradient(90deg, #f87171 0%, #ef4444 100%);
-}
-
-.acesat-card-scene {
-  perspective: 1200px;
-  min-height: 280px;
+/* 10-Dot Interactive Google Stepper */
+.acesat-stepper-container {
   display: flex;
-  margin-bottom: 16px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 4px 0 14px;
+  padding: 6px 10px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+}
+
+.stepper-chip {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 1.5px solid #cbd5e1;
+  background: #ffffff;
+  color: #64748b;
+  font-size: 11px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+}
+
+.stepper-chip:hover {
+  background: #e0f2fe;
+  color: #0369a1;
+  border-color: #38bdf8;
+  transform: scale(1.1);
+}
+
+.stepper-chip.active {
+  width: 44px;
+  border-radius: 13px;
+  background: #0284c7;
+  color: #ffffff;
+  border-color: #0284c7;
+  box-shadow: 0 2px 8px rgba(2, 132, 199, 0.35);
+}
+
+.stepper-chip.is-mastered {
+  border-color: #f59e0b;
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.stepper-chip.is-mastered.active {
+  background: #f59e0b;
+  color: #ffffff;
+  border-color: #f59e0b;
+}
+
+/* Guaranteed Height Scene (Resolves 0-Height Flexbox Absolute Bug) */
+.acesat-card-scene {
+  position: relative;
+  width: 100%;
+  height: 330px;
+  min-height: 320px;
+  perspective: 1200px;
+  -webkit-perspective: 1200px;
+  margin: 6px 0 16px;
 }
 
 .acesat-flashcard {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
-  position: relative;
   transform-style: preserve-3d;
-  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  -webkit-transform-style: preserve-3d;
+  transition: transform 0.55s cubic-bezier(0.34, 1.56, 0.64, 1);
   cursor: pointer;
+  outline: none;
+  border-radius: 24px;
 }
 
+.acesat-flashcard:focus-visible {
+  box-shadow: 0 0 0 3px #38bdf8;
+}
+
+/* Flipped State */
 .acesat-flashcard.is-flipped {
   transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
 }
 
+/* Card Faces */
 .acesat-card-face {
   position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-  border-radius: 20px;
-  padding: 24px;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  border-radius: 24px;
+  padding: 24px 26px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
+/* Front Face: Material 3 Surface */
 .acesat-card-front {
-  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-  color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+  border: 2px solid #e2e8f0;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08), 0 2px 6px rgba(15, 23, 42, 0.04);
+  transform: rotateY(0deg);
+  -webkit-transform: rotateY(0deg);
+  z-index: 2;
 }
 
+.acesat-flashcard:hover .acesat-card-front {
+  border-color: #cbd5e1;
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.12), 0 4px 10px rgba(15, 23, 42, 0.06);
+}
+
+/* Back Face: Material 3 Primary Container */
 .acesat-card-back {
-  background: linear-gradient(135deg, #082f49 0%, #0f172a 100%);
-  color: #ffffff;
+  background: linear-gradient(145deg, #f0f9ff 0%, #e0f2fe 100%);
+  border: 2px solid #0284c7;
+  box-shadow: 0 12px 30px rgba(2, 132, 199, 0.12), 0 2px 6px rgba(2, 132, 199, 0.06);
   transform: rotateY(180deg);
-  border: 1.5px solid #38bdf8;
+  -webkit-transform: rotateY(180deg);
+  z-index: 1;
 }
 
+/* Dynamic Z-Index on Flip to prevent WebKit ghosting */
+.acesat-flashcard.is-flipped .acesat-card-front {
+  pointer-events: none;
+  z-index: 1;
+}
+
+.acesat-flashcard.is-flipped .acesat-card-back {
+  pointer-events: auto;
+  z-index: 3;
+}
+
+/* Card Header Components */
 .face-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 12px;
+}
+
+.face-top-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .card-badge-sat {
   font-size: 11px;
   font-weight: 800;
-  letter-spacing: 0.8px;
-  background: rgba(56, 189, 248, 0.2);
-  color: #38bdf8;
+  letter-spacing: 0.6px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  border: 1px solid #bfdbfe;
   padding: 4px 10px;
-  border-radius: 8px;
+  border-radius: 10px;
 }
 
 .card-badge-def {
   font-size: 11px;
   font-weight: 800;
-  letter-spacing: 0.8px;
-  background: rgba(74, 222, 128, 0.2);
-  color: #4ade80;
+  letter-spacing: 0.6px;
+  background: #ecfdf5;
+  color: #047857;
+  border: 1px solid #a7f3d0;
   padding: 4px 10px;
+  border-radius: 10px;
+}
+
+.card-counter-tag {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #64748b;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  padding: 3px 8px;
   border-radius: 8px;
 }
 
+/* Audio Speak Button with Icon & Label */
 .acesat-card-speak-btn {
-  background: rgba(255, 255, 255, 0.12);
-  border: none;
-  color: #ffffff;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  font-size: 16px;
+  background: #ffffff;
+  border: 1.5px solid #cbd5e1;
+  color: #0369a1;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12.5px;
+  font-weight: 700;
   cursor: pointer;
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
+  gap: 6px;
   transition: all 0.15s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .acesat-card-speak-btn:hover {
-  background: #38bdf8;
-  color: #0f172a;
-  transform: scale(1.1);
-}
-
-.face-body {
-  text-align: center;
-  padding: 20px 0;
-}
-
-.face-body h3 {
-  font-size: 38px;
-  font-weight: 400;
-  letter-spacing: -0.5px;
-}
-
-.face-body h4 {
-  font-size: 18px;
-  font-weight: 600;
-  color: #38bdf8;
-  margin-bottom: 8px;
-}
-
-.face-body p {
-  font-size: 22px;
-  font-weight: 300;
-  line-height: 1.4;
-}
-
-.face-bottom {
-  text-align: center;
-  font-size: 12px;
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.acesat-card-nav-row {
-  display: flex;
-  gap: 12px;
-}
-
-.acesat-nav-btn {
-  flex: 1;
-  padding: 12px;
-  border-radius: 14px;
-  border: 1px solid #cbd5e1;
-  background: #f8fafc;
-  color: #334155;
-  font-size: 14px;
-  font-weight: 700;
-  cursor: pointer;
-  transition: all 0.15s ease;
-}
-
-.acesat-nav-btn:hover {
-  background: #e2e8f0;
-}
-
-.acesat-nav-btn.primary {
   background: #0284c7;
   color: #ffffff;
   border-color: #0284c7;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(2, 132, 199, 0.25);
+}
+
+.speak-icon {
+  font-size: 14px;
+}
+
+/* Card Body Typography */
+.face-body {
+  text-align: center;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.google-m3-word {
+  font-size: clamp(32px, 5.5vw, 44px);
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.8px;
+  line-height: 1.15;
+  margin-bottom: 8px;
+}
+
+.word-category-badge {
+  display: inline-flex;
+  background: #f1f5f9;
+  color: #475569;
+  font-size: 11.5px;
+  font-weight: 600;
+  padding: 3px 12px;
+  border-radius: 12px;
+}
+
+.google-m3-word-sub {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0284c7;
+  margin-bottom: 8px;
+}
+
+.google-m3-definition {
+  font-size: clamp(18px, 3.2vw, 24px);
+  font-weight: 600;
+  color: #0f172a;
+  line-height: 1.45;
+  max-width: 90%;
+  margin: 0 auto 12px;
+}
+
+.sat-context-tip {
+  background: rgba(2, 132, 199, 0.08);
+  border-left: 3px solid #0284c7;
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 12px;
+  color: #0369a1;
+  text-align: left;
+  max-width: 92%;
+}
+
+/* Bottom Hint Pill */
+.face-bottom {
+  display: flex;
+  justify-content: center;
+}
+
+.flip-hint-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #64748b;
+  background: rgba(15, 23, 42, 0.04);
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+.flip-icon {
+  font-size: 13px;
+  color: #0284c7;
+}
+
+/* Bottom Navigation Row */
+.acesat-card-nav-row {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1fr;
+  gap: 10px;
+}
+
+@media (max-width: 580px) {
+  .acesat-card-nav-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.acesat-nav-btn {
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1.5px solid #cbd5e1;
+  background: #ffffff;
+  color: #334155;
+  font-size: 13.5px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: all 0.15s ease;
+  user-select: none;
+}
+
+.acesat-nav-btn:hover {
+  background: #f8fafc;
+  border-color: #94a3b8;
+  transform: translateY(-1px);
+}
+
+.acesat-nav-btn.primary {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+  color: #ffffff;
+  border-color: #0284c7;
+  box-shadow: 0 2px 6px rgba(2, 132, 199, 0.25);
 }
 
 .acesat-nav-btn.primary:hover {
-  background: #0369a1;
+  background: #0284c7;
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.35);
+}
+
+.acesat-nav-btn.mastery-btn {
+  background: #fffbeb;
+  border-color: #fde68a;
+  color: #92400e;
+}
+
+.acesat-nav-btn.mastery-btn.is-active {
+  background: #f59e0b;
+  border-color: #f59e0b;
+  color: #ffffff;
+}
+
+.acesat-nav-btn kbd {
+  background: rgba(0, 0, 0, 0.08);
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 11px;
 }
 
 /* ================= TEST QUIZ STYLES ================= */

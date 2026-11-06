@@ -1386,58 +1386,102 @@
           </div>
         </div>
 
-        <!-- Tab Content 2: PRACTICE (3D FLASHCARDS) -->
+        <!-- Tab Content 2: PRACTICE (3D FLASHCARDS - GOOGLE UX DESIGN) -->
         <div id="acesat-tab-practice" class="acesat-tab-panel">
           <div class="acesat-panel-header">
             <div class="panel-title-text">
               <h4>Thẻ Ghi Nhớ 3D: <span id="acesat-practice-list-title">List 1</span></h4>
-              <span class="panel-hint">Thẻ <span id="acesat-card-current-num">1</span> / 10 • Nhấn Space hoặc nhấp vào thẻ để lật</span>
+              <span class="panel-hint">Thẻ <span id="acesat-card-current-num">1</span> / 10 • Chạm thẻ hoặc nhấn <kbd>Space</kbd> để lật • <kbd>←</kbd> <kbd>→</kbd> để chuyển từ</span>
             </div>
             <div class="practice-controls-right">
-              <button id="acesat-shuffle-cards-btn" class="acesat-btn-pill">🔀 Trộn thẻ</button>
-              <button id="acesat-flip-btn" class="acesat-btn-pill">🔄 Lật thẻ</button>
+              <button id="acesat-shuffle-cards-btn" class="acesat-btn-pill" title="Trộn ngẫu nhiên thứ tự thẻ">🔀 Trộn thẻ</button>
+              <button id="acesat-flip-btn" class="acesat-btn-pill" title="Lật thẻ xem định nghĩa">🔄 Lật thẻ</button>
             </div>
           </div>
 
-          <div class="acesat-card-progress-bar">
-            <div id="acesat-card-progress-fill" class="acesat-progress-fill"></div>
+          <!-- Google Stepper: 10-Dot Interactive Track -->
+          <div class="acesat-stepper-container" id="acesat-card-stepper" title="Nhấp vào số bất kỳ để nhảy thẳng tới từ đó">
+            <!-- 10 dots generated dynamically -->
           </div>
 
+          <!-- 3D Flashcard Scene with Guaranteed Height & Elevation -->
           <div class="acesat-card-scene">
-            <div id="acesat-flashcard" class="acesat-flashcard">
-              <!-- Front -->
+            <div id="acesat-flashcard" class="acesat-flashcard" role="button" tabindex="0" aria-label="Thẻ từ vựng SAT. Chạm để lật">
+              
+              <!-- Front Face: Material 3 Surface (Word) -->
               <div class="acesat-card-face acesat-card-front">
                 <div class="face-top">
-                  <span class="card-badge-sat">TỪ VỰNG SAT</span>
-                  <button class="acesat-card-speak-btn" id="acesat-front-speak" title="Nghe phát âm">🔊</button>
+                  <div class="face-top-left">
+                    <span class="card-badge-sat">📘 TỪ VỰNG SAT</span>
+                    <span class="card-counter-tag" id="card-pos-indicator">Từ 1/10</span>
+                  </div>
+                  <button class="acesat-card-speak-btn" id="acesat-front-speak" title="Nghe phát âm chuẩn Mỹ (Phím S)">
+                    <span class="speak-icon">🔊</span>
+                    <span class="speak-label">Nghe phát âm</span>
+                  </button>
                 </div>
+
                 <div class="face-body">
-                  <h3 id="acesat-card-word-front">Word</h3>
+                  <h3 id="acesat-card-word-front" class="google-m3-word">Word</h3>
+                  <div class="word-category-badge">
+                    <span>Học thuật • Digital SAT Reading & Writing</span>
+                  </div>
                 </div>
+
                 <div class="face-bottom">
-                  <span>👆 Nhấp vào thẻ hoặc nhấn Space để xem định nghĩa</span>
+                  <div class="flip-hint-pill">
+                    <span class="flip-icon">🔄</span>
+                    <span>Chạm vào thẻ hoặc nhấn <strong>Space</strong> để xem định nghĩa</span>
+                  </div>
                 </div>
               </div>
-              <!-- Back -->
+
+              <!-- Back Face: Material 3 Tonal Container (Definition) -->
               <div class="acesat-card-face acesat-card-back">
                 <div class="face-top">
-                  <span class="card-badge-def">ĐỊNH NGHĨA</span>
-                  <button class="acesat-card-speak-btn" id="acesat-back-speak" title="Nghe phát âm">🔊</button>
+                  <div class="face-top-left">
+                    <span class="card-badge-def">💡 ĐỊNH NGHĨA & NGỮ CẢNH</span>
+                    <span class="card-counter-tag">Nghĩa SAT</span>
+                  </div>
+                  <button class="acesat-card-speak-btn" id="acesat-back-speak" title="Nghe từ & định nghĩa">
+                    <span class="speak-icon">🔊</span>
+                    <span class="speak-label">Nghe từ & nghĩa</span>
+                  </button>
                 </div>
+
                 <div class="face-body">
-                  <h4 id="acesat-card-word-back">Word</h4>
-                  <p id="acesat-card-def-back">Definition</p>
+                  <h4 id="acesat-card-word-back" class="google-m3-word-sub">Word</h4>
+                  <p id="acesat-card-def-back" class="google-m3-definition">Definition</p>
+                  <div class="sat-context-tip">
+                    <span>🎯 <em>Mẹo SAT: Thường xuất hiện trong câu hỏi Context Clues và Phân tích cấu trúc đoạn văn.</em></span>
+                  </div>
                 </div>
+
                 <div class="face-bottom">
-                  <span>👆 Nhấp vào thẻ để lật lại từ vựng</span>
+                  <div class="flip-hint-pill">
+                    <span class="flip-icon">🔄</span>
+                    <span>Chạm vào thẻ để lật lại từ vựng</span>
+                  </div>
                 </div>
               </div>
+
             </div>
           </div>
 
+          <!-- Bottom Navigation & Action Bar -->
           <div class="acesat-card-nav-row">
-            <button id="acesat-prev-card-btn" class="acesat-nav-btn">‹ Thẻ Trước</button>
-            <button id="acesat-next-card-btn" class="acesat-nav-btn primary">Thẻ Kế Tiếp ›</button>
+            <button id="acesat-prev-card-btn" class="acesat-nav-btn" title="Thẻ trước (Phím mũi tên trái)">
+              <span class="nav-arrow">‹</span>
+              <span>Trước (<kbd>←</kbd>)</span>
+            </button>
+            <button id="acesat-mastery-toggle-btn" class="acesat-nav-btn mastery-btn" title="Đánh dấu đã thuộc từ này">
+              <span id="mastery-star-icon">☆</span>
+              <span id="mastery-star-text">Đánh dấu đã thuộc</span>
+            </button>
+            <button id="acesat-next-card-btn" class="acesat-nav-btn primary" title="Thẻ kế tiếp (Phím mũi tên phải)">
+              <span>Kế tiếp (<kbd>→</kbd>)</span>
+              <span class="nav-arrow">›</span>
+            </button>
           </div>
         </div>
 
